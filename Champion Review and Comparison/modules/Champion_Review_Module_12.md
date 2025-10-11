@@ -1,4 +1,3 @@
-
 ---
 
 ### 📘 `module_12_final_summary.md`
@@ -15,15 +14,16 @@ Recap all findings in prioritized format.
 **Output:**
 ```json
 "final_summary": {
-  "mastery_preference": "Helmsmasher (PvE/PvP), Warmaster (Clan Boss)",
-  "booking_impact": "High — improves cooldowns and burn uptime",
-  "damage_rotation": "A3 → A2 → A1 cycle with 80% burn uptime",
-  "turn_meter_stability": "Stable with Savage; moderate risk with Reflex",
-  "passive_impact": "Burn amplification and bonus effects",
-  "gear_stat_notes": "Accuracy, ATK%, Crit Rate, Speed",
-  "ally_synergy_impact": "Strong with Deacon Armstrong and Geomancer",
-  "draft_value": "Early pick in PvE and Arena",
-  "investment_value": "High — versatile and scalable",
-  "relentless_viability": "Moderate — viable with tuning",
-  "similar_owned_champions": ["Geomancer", "Deacon Armstrong"]
+  "mastery_preference": "<MASTERY PREFERENCE>",
+  "booking_impact": "<BOOKING IMPACT>",
+  "damage_rotation": "<DAMAGE ROTATION SUMMARY>",
+  "turn_meter_stability": "<TURN METER STABILITY>",
+  "passive_impact": "<PASSIVE IMPACT>",
+  "gear_stat_notes": "<GEAR/STAT NOTES>",
+  "ally_synergy_impact": "<ALLY SYNERGY IMPACT>",
+  "draft_value": "<DRAFT VALUE>",
+  "investment_value": "<INVESTMENT VALUE>",
+  "relentless_viability": "<RELENTLESS VIABILITY>",
+  "similar_owned_champions": ["<CHAMPION_1>", "<CHAMPION_2>"]
 }
+```

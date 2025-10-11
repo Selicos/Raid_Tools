@@ -1,4 +1,3 @@
-
 ---
 
 ### 📘 `module_2_skills.md`
@@ -16,49 +15,50 @@ Analyze skill behavior and model 10-turn rotation.
 ```json
 "skills": {
   "a1": {
-    "name": "Flame Eruption",
-    "type": "Single Target",
-    "hit_count": 1,
-    "cooldown": "None",
-    "multiplier": "3.8x ATK",
-    "notes": "Chance to place HP Burn"
+    "name": "<A1 SKILL NAME>",
+    "type": "<Single Target/AOE/Other>",
+    "hit_count": <NUMBER>,
+    "cooldown": "<COOLDOWN OR 'None'>",
+    "multiplier": "<MULTIPLIER AND STAT, e.g., '0.2x HP'>",
+    "notes": "<DESCRIPTION AND EFFECTS>"
   },
   "a2": {
-    "name": "Molten Rage",
-    "type": "AOE",
-    "hit_count": 1,
-    "cooldown": "4 / 3",
-    "multiplier": "4.5x ATK",
-    "notes": "Places HP Burn on all enemies"
+    "name": "<A2 SKILL NAME>",
+    "type": "<Single Target/AOE/Other>",
+    "hit_count": <NUMBER>,
+    "cooldown": "<COOLDOWN>",
+    "multiplier": "<MULTIPLIER AND STAT>",
+    "notes": "<DESCRIPTION AND EFFECTS>"
   },
   "a3": {
-    "name": "Infernal Chains",
-    "type": "AOE",
-    "hit_count": 1,
-    "cooldown": "5 / 4",
-    "multiplier": "5.0x ATK",
-    "notes": "Decreases DEF and applies HP Burn"
+    "name": "<A3 SKILL NAME>",
+    "type": "<Single Target/AOE/Other>",
+    "hit_count": <NUMBER>,
+    "cooldown": "<COOLDOWN>",
+    "multiplier": "<MULTIPLIER AND STAT>",
+    "notes": "<DESCRIPTION AND EFFECTS>"
   },
   "passive": {
-    "exists": true,
-    "impact": "Boosts burn damage and triggers bonus effects"
+    "exists": <true/false>,
+    "impact": "<PASSIVE EFFECTS OR 'None'>"
   },
   "booking": {
-    "impact": "High",
-    "notes": "Reduces cooldowns and improves burn uptime"
+    "impact": "<High/Medium/Low>",
+    "notes": "<BOOKING EFFECTS>"
   },
   "rotation": {
-    "optimal_cycle": ["A3", "A2", "A1", "A1", "A2", "A1", "A3", "A1", "A2", "A1"],
+    "optimal_cycle": [<LIST OF SKILLS IN ORDER>],
     "damage_per_turn": {
-      "a3": "25K–35K + burn",
-      "a2": "20K–30K + burn",
-      "a1": "10K–15K + burn"
+      "a3": "<VALUE OR DESCRIPTION>",
+      "a2": "<VALUE OR DESCRIPTION>",
+      "a1": "<VALUE OR DESCRIPTION>"
     },
-    "average_damage": "20K–30K per turn with burn procs",
+    "average_damage": "<VALUE OR DESCRIPTION>",
     "buff_debuff_uptime": {
-      "HP Burn": "80% uptime",
-      "DEF Down": "50% uptime"
+      "HP Burn": "<% OR DESCRIPTION>",
+      "DEF Down": "<% OR DESCRIPTION>"
     },
-    "extra_turn_frequency": "None — passive triggers only"
+    "extra_turn_frequency": "<DESCRIPTION OR 'None'>"
   }
 }
+```

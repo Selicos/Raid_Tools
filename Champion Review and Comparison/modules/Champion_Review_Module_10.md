@@ -11,13 +11,10 @@ Compare utility roles using OWNED champions and identify similar options.
 ```json
 "utility_comparison": [
   {
-    "champion": "Geomancer",
-    "role": "Passive DPS",
-    "comparison": "Strong passive damage and reflect mechanics; excels in Clan Boss and Hydra"
-  },
-  {
-    "champion": "Deacon Armstrong",
-    "role": "Support Controller",
-    "comparison": "Turn meter boost, DEF Down, and speed tuning; ideal for Arena and setup roles"
+    "champion": "<CHAMPION NAME>",
+    "role": "<ROLE>",
+    "comparison": "<COMPARISON NOTES>"
   }
+  // Add more champion comparisons as needed
 ]
+```

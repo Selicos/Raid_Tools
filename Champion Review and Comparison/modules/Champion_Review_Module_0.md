@@ -10,6 +10,7 @@ Initialize champion log and set ownership flag.
 **Output:**
 ```json
 {
-  "champion": "Artak",
-  "owned": true
+  "champion": "<CHAMPION NAME>",
+  "owned": <true/false>
 }
+```

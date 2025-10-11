@@ -1,4 +1,3 @@
-
 ---
 
 ### 📘 `module_8_intelligence.md`
@@ -17,13 +16,15 @@ Score synergy and guide PvP drafting strategy.
 ```json
 "intelligence": {
   "synergy_scores": {
-    "Geomancer": 7.5,
-    "Deacon Armstrong": 9.0
+    "<CHAMPION_1>": <SCORE>,
+    "<CHAMPION_2>": <SCORE>
+    // Add more champions as needed
   },
   "draft_logic": {
-    "early_pick": true,
-    "counter_pick": false,
-    "avoid": false,
-    "notes": "Artak is a strong early pick in PvE and PvP due to burn setup and AOE damage."
+    "early_pick": <true/false>,
+    "counter_pick": <true/false>,
+    "avoid": <true/false>,
+    "notes": "<NOTES ON DRAFT LOGIC>"
   }
 }
+```

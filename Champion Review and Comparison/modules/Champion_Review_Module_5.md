@@ -10,6 +10,7 @@ Evaluate Clan Boss performance using mastery simulation and rotation modeling.
 **Output:**
 ```json
 "clan_boss": {
-  "damage_per_turn": "55K–80K",
-  "notes": "Burn ticks stack with Warmaster procs for sustained damage. Reflex gear can increase uptime but may desync cooldowns."
+  "damage_per_turn": "<DAMAGE VALUE OR RANGE>",
+  "notes": "<NOTES ON DAMAGE, GEAR, OR ROTATION>"
 }
+```

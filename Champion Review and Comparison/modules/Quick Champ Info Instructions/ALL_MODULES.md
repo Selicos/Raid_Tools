@@ -1,5 +1,5 @@
 # Champion Review — All Modules
-Do not use this file. Use the separate module items in the modules dir.
+
 
 ---
 
@@ -17,9 +17,10 @@ Initialize champion log and set ownership flag.
 **Output:**
 ```json
 {
-  "champion": "Artak",
-  "owned": true
+  "champion": "<CHAMPION NAME>",
+  "owned": <true/false>
 }
+```
 
 
 ---
@@ -34,46 +35,62 @@ Initialize champion log and set ownership flag.
 ## Module 1: Overview & Initial Summary
 
 **Inputs:**
-- Champion role, archetype, gear sets, mastery, booking ROI
+- Champion role (e.g., "HP Nuker", "DEF Support", etc.)
+- Archetype (e.g., "Burn DPS / Debuff Specialist")
+- Gear sets (list best sets for each content type)
+- Mastery (best mastery for each content type)
+- Booking ROI (High/Medium/Low)
 
-**Goal:**
-Summarize champion identity and performance across content types.
+### Primary Damage Stat
+- [ ] ATK
+- [ ] HP
+- [ ] DEF
+- [ ] Hybrid (specify: __________)
+- [ ] Other (specify: __________)
+
+**Skill Scaling Details:**  
+List each skill by name and the stat(s) it scales from (e.g., "A1: HP", "A2: DEF", etc.).
 
 **Output:**
 ```json
 "overview": {
-  "role": "Attack",
-  "archetype": "Burn DPS / Debuff Specialist",
-  "best_mastery": {
-    "pve_pvp": "Helmsmasher",
-    "clan_boss": "Warmaster"
+  "role": "<REAL ROLE HERE>",
+  "archetype": "<REAL ARCHETYPE HERE>",
+  "primary_damage_stat": "<ATK/HP/DEF/Hybrid/Other>",
+  "skill_scaling": {
+    "A1": "<ATK/HP/DEF/Hybrid/Other>",
+    "A2": "<ATK/HP/DEF/Hybrid/Other>",
+    "A3": "<ATK/HP/DEF/Hybrid/Other>"
   },
-  "booking_roi": "High",
+  "best_mastery": {
+    "pve_pvp": "<REAL MASTERY>",
+    "clan_boss": "<REAL MASTERY>"
+  },
+  "booking_roi": "<REAL VALUE>",
   "gear_sets": {
-    "pvp_offense": ["Savage", "Cruel", "Perception"],
-    "pvp_defense": ["Stone Skin", "Swift Parry"],
-    "clan_boss": ["Reflex", "Relentless", "Accuracy"],
-    "hydra": ["Reflex", "Guardian", "Perception"],
-    "iron_twins": ["Perception", "Speed"],
-    "dungeons": ["Savage", "Cruel", "Accuracy"],
-    "solo_farming": ["Immortal", "Regen"]
+    "pvp_offense": [ ... ],
+    "pvp_defense": [ ... ],
+    "clan_boss": [ ... ],
+    "hydra": [ ... ],
+    "iron_twins": [ ... ],
+    "dungeons": [ ... ],
+    "solo_farming": [ ... ]
   },
   "gear_tradeoffs": [
-    { "set": "Reflex", "pros": "More burns", "cons": "Unpredictable cooldowns" },
-    { "set": "Savage", "pros": "Max damage", "cons": "Requires high Crit Rate" },
-    { "set": "Guardian", "pros": "Team sustain", "cons": "Lower personal damage" }
+    { "set": "<SET>", "pros": "<PROS>", "cons": "<CONS>" }
   ],
   "focus_stats": {
-    "arena_dungeons": ["ATK%", "Crit Rate", "Crit Damage", "Accuracy"],
-    "clan_boss": ["Accuracy", "Speed", "ATK%", "HP%"]
+    "arena_dungeons": [ ... ],
+    "clan_boss": [ ... ]
   },
   "accuracy_resistance": {
-    "hard_10_dungeons": "Accuracy required for burns",
-    "hydra": "High accuracy needed",
-    "iron_twins": "Accuracy required"
+    "hard_10_dungeons": "<REAL VALUE>",
+    "hydra": "<REAL VALUE>",
+    "iron_twins": "<REAL VALUE>"
   },
-  "best_dungeon_use": "Dragon HARD 10"
+  "best_dungeon_use": "<REAL VALUE>"
 }
+```
 
 
 ---
@@ -97,52 +114,53 @@ Analyze skill behavior and model 10-turn rotation.
 ```json
 "skills": {
   "a1": {
-    "name": "Flame Eruption",
-    "type": "Single Target",
-    "hit_count": 1,
-    "cooldown": "None",
-    "multiplier": "3.8x ATK",
-    "notes": "Chance to place HP Burn"
+    "name": "<A1 SKILL NAME>",
+    "type": "<Single Target/AOE/Other>",
+    "hit_count": <NUMBER>,
+    "cooldown": "<COOLDOWN OR 'None'>",
+    "multiplier": "<MULTIPLIER AND STAT, e.g., '0.2x HP'>",
+    "notes": "<DESCRIPTION AND EFFECTS>"
   },
   "a2": {
-    "name": "Molten Rage",
-    "type": "AOE",
-    "hit_count": 1,
-    "cooldown": "4 / 3",
-    "multiplier": "4.5x ATK",
-    "notes": "Places HP Burn on all enemies"
+    "name": "<A2 SKILL NAME>",
+    "type": "<Single Target/AOE/Other>",
+    "hit_count": <NUMBER>,
+    "cooldown": "<COOLDOWN>",
+    "multiplier": "<MULTIPLIER AND STAT>",
+    "notes": "<DESCRIPTION AND EFFECTS>"
   },
   "a3": {
-    "name": "Infernal Chains",
-    "type": "AOE",
-    "hit_count": 1,
-    "cooldown": "5 / 4",
-    "multiplier": "5.0x ATK",
-    "notes": "Decreases DEF and applies HP Burn"
+    "name": "<A3 SKILL NAME>",
+    "type": "<Single Target/AOE/Other>",
+    "hit_count": <NUMBER>,
+    "cooldown": "<COOLDOWN>",
+    "multiplier": "<MULTIPLIER AND STAT>",
+    "notes": "<DESCRIPTION AND EFFECTS>"
   },
   "passive": {
-    "exists": true,
-    "impact": "Boosts burn damage and triggers bonus effects"
+    "exists": <true/false>,
+    "impact": "<PASSIVE EFFECTS OR 'None'>"
   },
   "booking": {
-    "impact": "High",
-    "notes": "Reduces cooldowns and improves burn uptime"
+    "impact": "<High/Medium/Low>",
+    "notes": "<BOOKING EFFECTS>"
   },
   "rotation": {
-    "optimal_cycle": ["A3", "A2", "A1", "A1", "A2", "A1", "A3", "A1", "A2", "A1"],
+    "optimal_cycle": [<LIST OF SKILLS IN ORDER>],
     "damage_per_turn": {
-      "a3": "25K–35K + burn",
-      "a2": "20K–30K + burn",
-      "a1": "10K–15K + burn"
+      "a3": "<VALUE OR DESCRIPTION>",
+      "a2": "<VALUE OR DESCRIPTION>",
+      "a1": "<VALUE OR DESCRIPTION>"
     },
-    "average_damage": "20K–30K per turn with burn procs",
+    "average_damage": "<VALUE OR DESCRIPTION>",
     "buff_debuff_uptime": {
-      "HP Burn": "80% uptime",
-      "DEF Down": "50% uptime"
+      "HP Burn": "<% OR DESCRIPTION>",
+      "DEF Down": "<% OR DESCRIPTION>"
     },
-    "extra_turn_frequency": "None — passive triggers only"
+    "extra_turn_frequency": "<DESCRIPTION OR 'None'>"
   }
 }
+```
 
 
 ---
@@ -165,10 +183,11 @@ Define first-turn skill and priority order.
 **Output:**
 ```json
 "team_inputs": {
-  "first_turn_skill": "Infernal Chains",
-  "skill_priority": ["A3", "A2", "A1"],
-  "disabled_skills": []
+  "first_turn_skill": "<SKILL NAME>",
+  "skill_priority": ["<SKILL_1>", "<SKILL_2>", "<SKILL_3>"],
+  "disabled_skills": ["<SKILL_NAME_IF_ANY>"]
 }
+```
 
 
 ---
@@ -193,37 +212,28 @@ Simulate Warmaster and Helmsmasher damage across 4 battle scenarios.
 "mastery_simulation": {
   "scenarios": [
     {
-      "type": "Single Boss",
-      "mastery": "Warmaster",
-      "bonus_damage": "10K–14K per proc",
-      "notes": "Burn ticks stack with Warmaster procs for sustained damage"
+      "type": "<SCENARIO TYPE>",
+      "mastery": "<MASTERY NAME>",
+      "bonus_damage": "<BONUS DAMAGE VALUE OR RANGE>",
+      "notes": "<NOTES ON DAMAGE OR EFFECTS>"
     },
     {
-      "type": "Boss + 10 Minions",
-      "mastery": "Helmsmasher",
-      "bonus_damage": "22K–28K per AOE hit",
-      "notes": "Helmsmasher boosts AOE burn application damage"
-    },
-    {
-      "type": "Boss + 5 Minions",
-      "mastery": "Helmsmasher",
-      "bonus_damage": "18K–24K per AOE hit",
-      "notes": "Ideal for Dragon and Ice Golem waves"
-    },
-    {
-      "type": "Boss + 2 High-HP Minions",
-      "mastery": "Helmsmasher",
-      "bonus_damage": "15K–20K per AOE hit",
-      "notes": "Burns help chip down tanky adds"
+      "type": "<SCENARIO TYPE>",
+      "mastery": "<MASTERY NAME>",
+      "bonus_damage": "<BONUS DAMAGE VALUE OR RANGE>",
+      "notes": "<NOTES ON DAMAGE OR EFFECTS>"
     }
+    // Add more scenarios as needed
   ],
   "recommended_mastery": {
-    "clan_boss": "Warmaster",
-    "spider_hard": "Helmsmasher",
-    "hydra": "Warmaster",
-    "iron_twins": "Helmsmasher"
+    "clan_boss": "<MASTERY NAME>",
+    "spider_hard": "<MASTERY NAME>",
+    "hydra": "<MASTERY NAME>",
+    "iron_twins": "<MASTERY NAME>"
   }
 }
+```
+````
 
 
 ---
@@ -242,9 +252,10 @@ Evaluate Clan Boss performance using mastery simulation and rotation modeling.
 **Output:**
 ```json
 "clan_boss": {
-  "damage_per_turn": "55K–80K",
-  "notes": "Burn ticks stack with Warmaster procs for sustained damage. Reflex gear can increase uptime but may desync cooldowns."
+  "damage_per_turn": "<DAMAGE VALUE OR RANGE>",
+  "notes": "<NOTES ON DAMAGE, GEAR, OR ROTATION>"
 }
+```
 
 
 ---
@@ -268,24 +279,26 @@ Recommend allies and stat tuning based on synergy and gear priorities.
 **Output:**
 ```json
 "synergy": {
-  "recommended_buffs": ["Increase ATK", "Decrease DEF", "Speed Boost", "Turn Meter Fill"],
+  "recommended_buffs": ["<BUFF_1>", "<BUFF_2>", "..."],
   "support_champion_sets": [
-    ["Deacon Armstrong", "Geomancer"],
+    ["<CHAMPION_1>", "<CHAMPION_2>"],
     [],
     []
   ],
   "speed_tuning": {
-    "arena": "230–250",
-    "dungeons": "200–220",
-    "clan_boss": "170–190"
+    "arena": "<VALUE OR RANGE>",
+    "dungeons": "<VALUE OR RANGE>",
+    "clan_boss": "<VALUE OR RANGE>"
   },
   "gear_stat_priorities": {
-    "arena": ["Savage", "Cruel", "ATK%", "Crit Rate", "Crit Damage", "Accuracy"],
-    "clan_boss": ["Accuracy", "Speed", "HP%", "ATK%", "Survivability"],
-    "dungeons": ["Savage", "Cruel", "Accuracy", "ATK%", "Crit Rate"]
+    "arena": ["<STAT_1>", "<STAT_2>", "..."],
+    "clan_boss": ["<STAT_1>", "<STAT_2>", "..."],
+    "dungeons": ["<STAT_1>", "<STAT_2>", "..."]
   },
-  "relentless_viability": "Moderate — can help cycle burns faster but risks cooldown desync"
+  "relentless_viability": "<DESCRIPTION OR VALUE>"
 }
+```
+````
 
 
 ---
@@ -309,19 +322,17 @@ Assess long-term value and compare to similar OWNED champions.
 **Output:**
 ```json
 "investment": {
-  "value": "High",
-  "notes": "Artak offers strong burn-based damage, reliable debuff application, and PvE versatility.",
+  "value": "<High/Medium/Low>",
+  "notes": "<NOTES ON VALUE, VERSATILITY, ETC.>",
   "owned_comparison": [
     {
-      "champion": "Geomancer",
-      "comparison": "Geomancer has stronger passive damage and reflect mechanics, but Artak offers more active control and wave-clear."
-    },
-    {
-      "champion": "Deacon Armstrong",
-      "comparison": "Deacon is a setup specialist with excellent turn meter control and debuff support, but lacks direct damage."
+      "champion": "<CHAMPION NAME>",
+      "comparison": "<COMPARISON NOTES>"
     }
+    // Add more comparisons as needed
   ]
 }
+```
 
 
 ---
@@ -346,16 +357,18 @@ Score synergy and guide PvP drafting strategy.
 ```json
 "intelligence": {
   "synergy_scores": {
-    "Geomancer": 7.5,
-    "Deacon Armstrong": 9.0
+    "<CHAMPION_1>": <SCORE>,
+    "<CHAMPION_2>": <SCORE>
+    // Add more champions as needed
   },
   "draft_logic": {
-    "early_pick": true,
-    "counter_pick": false,
-    "avoid": false,
-    "notes": "Artak is a strong early pick in PvE and PvP due to burn setup and AOE damage."
+    "early_pick": <true/false>,
+    "counter_pick": <true/false>,
+    "avoid": <true/false>,
+    "notes": "<NOTES ON DRAFT LOGIC>"
   }
 }
+```
 
 
 ---
@@ -378,18 +391,19 @@ Evaluate turn meter stability and gear impact.
 **Output:**
 ```json
 "turn_meter": {
-  "extra_turn_effects": "None — passive only",
+  "extra_turn_effects": "<DESCRIPTION OR 'None'>",
   "gear_set_stability": {
-    "Reflex": "Unstable — risks cooldown desync",
-    "Relentless": "Moderate — can improve burn uptime if tuned",
-    "Savage": "Stable — no turn manipulation"
+    "Reflex": "<DESCRIPTION>",
+    "Relentless": "<DESCRIPTION>",
+    "Savage": "<DESCRIPTION>"
   },
   "rotation_desync_risks": {
-    "Reflex": "High",
-    "Relentless": "Medium",
-    "Savage": "Low"
+    "Reflex": "<RISK LEVEL OR DESCRIPTION>",
+    "Relentless": "<RISK LEVEL OR DESCRIPTION>",
+    "Savage": "<RISK LEVEL OR DESCRIPTION>"
   }
 }
+```
 
 
 ---
@@ -409,16 +423,13 @@ Compare utility roles using OWNED champions and identify similar options.
 ```json
 "utility_comparison": [
   {
-    "champion": "Geomancer",
-    "role": "Passive DPS",
-    "comparison": "Strong passive damage and reflect mechanics; excels in Clan Boss and Hydra"
-  },
-  {
-    "champion": "Deacon Armstrong",
-    "role": "Support Controller",
-    "comparison": "Turn meter boost, DEF Down, and speed tuning; ideal for Arena and setup roles"
+    "champion": "<CHAMPION NAME>",
+    "role": "<ROLE>",
+    "comparison": "<COMPARISON NOTES>"
   }
+  // Add more champion comparisons as needed
 ]
+```
 
 
 ---
@@ -441,14 +452,15 @@ Rate performance across content types using color-coded tiers.
 **Output:**
 ```json
 "ratings": {
-  "pvp": "A",
-  "clan_boss": "A-",
-  "hydra": "B+",
-  "iron_twins": "B",
-  "dungeons": "A",
-  "solo_farming": "B",
-  "relentless_viability": "Moderate"
+  "pvp": "<RATING>",
+  "clan_boss": "<RATING>",
+  "hydra": "<RATING>",
+  "iron_twins": "<RATING>",
+  "dungeons": "<RATING>",
+  "solo_farming": "<RATING>",
+  "relentless_viability": "<DESCRIPTION OR RATING>"
 }
+```
 
 
 ---
@@ -471,18 +483,19 @@ Recap all findings in prioritized format.
 **Output:**
 ```json
 "final_summary": {
-  "mastery_preference": "Helmsmasher (PvE/PvP), Warmaster (Clan Boss)",
-  "booking_impact": "High — improves cooldowns and burn uptime",
-  "damage_rotation": "A3 → A2 → A1 cycle with 80% burn uptime",
-  "turn_meter_stability": "Stable with Savage; moderate risk with Reflex",
-  "passive_impact": "Burn amplification and bonus effects",
-  "gear_stat_notes": "Accuracy, ATK%, Crit Rate, Speed",
-  "ally_synergy_impact": "Strong with Deacon Armstrong and Geomancer",
-  "draft_value": "Early pick in PvE and Arena",
-  "investment_value": "High — versatile and scalable",
-  "relentless_viability": "Moderate — viable with tuning",
-  "similar_owned_champions": ["Geomancer", "Deacon Armstrong"]
+  "mastery_preference": "<MASTERY PREFERENCE>",
+  "booking_impact": "<BOOKING IMPACT>",
+  "damage_rotation": "<DAMAGE ROTATION SUMMARY>",
+  "turn_meter_stability": "<TURN METER STABILITY>",
+  "passive_impact": "<PASSIVE IMPACT>",
+  "gear_stat_notes": "<GEAR/STAT NOTES>",
+  "ally_synergy_impact": "<ALLY SYNERGY IMPACT>",
+  "draft_value": "<DRAFT VALUE>",
+  "investment_value": "<INVESTMENT VALUE>",
+  "relentless_viability": "<RELENTLESS VIABILITY>",
+  "similar_owned_champions": ["<CHAMPION_1>", "<CHAMPION_2>"]
 }
+```
 
 
 ---
@@ -508,29 +521,18 @@ Build teams using only OWNED champions based on synergy and role matching.
 "synergy_engine": {
   "team_setups": [
     {
-      "name": "Arena Nuking Team",
-      "champions": ["Artak", "Deacon Armstrong"],
-      "strategy": "Deacon opens with TM boost and DEF Down → Artak follows with AOE burn"
-    },
-    {
-      "name": "Clan Boss Hybrid Team",
-      "champions": ["Geomancer", "Artak", "Deacon Armstrong"],
-      "strategy": "Geomancer handles passive damage, Artak adds burst, Deacon maintains rotation"
-    },
-    {
-      "name": "Hydra Control Setup",
-      "champions": ["Geomancer", "Deacon Armstrong", "Artak"],
-      "strategy": "Use Artak for wave-clear; rely on Geomancer for boss damage"
+      "name": "<TEAM NAME>",
+      "champions": ["<CHAMPION_1>", "<CHAMPION_2>", "..."],
+      "strategy": "<TEAM STRATEGY OR NOTES>"
     }
+    // Add more team setups as needed
   ],
   "similar_champions": [
     {
-      "champion": "Geomancer",
-      "similarity_reason": "Passive damage, PvE boss utility"
-    },
-    {
-      "champion": "Deacon Armstrong",
-      "similarity_reason": "Setup specialist, strong synergy"
+      "champion": "<CHAMPION NAME>",
+      "similarity_reason": "<REASON FOR SIMILARITY>"
     }
+    // Add more similar champions as needed
   ]
 }
+```

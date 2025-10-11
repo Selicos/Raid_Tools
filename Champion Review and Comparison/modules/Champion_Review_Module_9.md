@@ -1,4 +1,3 @@
-
 ---
 
 ### 📘 `module_9_turn_meter.md`
@@ -15,15 +14,16 @@ Evaluate turn meter stability and gear impact.
 **Output:**
 ```json
 "turn_meter": {
-  "extra_turn_effects": "None — passive only",
+  "extra_turn_effects": "<DESCRIPTION OR 'None'>",
   "gear_set_stability": {
-    "Reflex": "Unstable — risks cooldown desync",
-    "Relentless": "Moderate — can improve burn uptime if tuned",
-    "Savage": "Stable — no turn manipulation"
+    "Reflex": "<DESCRIPTION>",
+    "Relentless": "<DESCRIPTION>",
+    "Savage": "<DESCRIPTION>"
   },
   "rotation_desync_risks": {
-    "Reflex": "High",
-    "Relentless": "Medium",
-    "Savage": "Low"
+    "Reflex": "<RISK LEVEL OR DESCRIPTION>",
+    "Relentless": "<RISK LEVEL OR DESCRIPTION>",
+    "Savage": "<RISK LEVEL OR DESCRIPTION>"
   }
 }
+```

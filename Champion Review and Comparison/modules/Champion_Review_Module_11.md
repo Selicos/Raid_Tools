@@ -1,4 +1,3 @@
-
 ---
 
 ### 📘 `module_11_ratings.md`
@@ -15,11 +14,12 @@ Rate performance across content types using color-coded tiers.
 **Output:**
 ```json
 "ratings": {
-  "pvp": "A",
-  "clan_boss": "A-",
-  "hydra": "B+",
-  "iron_twins": "B",
-  "dungeons": "A",
-  "solo_farming": "B",
-  "relentless_viability": "Moderate"
+  "pvp": "<RATING>",
+  "clan_boss": "<RATING>",
+  "hydra": "<RATING>",
+  "iron_twins": "<RATING>",
+  "dungeons": "<RATING>",
+  "solo_farming": "<RATING>",
+  "relentless_viability": "<DESCRIPTION OR RATING>"
 }
+```

@@ -1,4 +1,3 @@
-
 ---
 
 ### 📘 `module_3_team_inputs.md`
@@ -15,7 +14,8 @@ Define first-turn skill and priority order.
 **Output:**
 ```json
 "team_inputs": {
-  "first_turn_skill": "Infernal Chains",
-  "skill_priority": ["A3", "A2", "A1"],
-  "disabled_skills": []
+  "first_turn_skill": "<SKILL NAME>",
+  "skill_priority": ["<SKILL_1>", "<SKILL_2>", "<SKILL_3>"],
+  "disabled_skills": ["<SKILL_NAME_IF_ANY>"]
 }
+```

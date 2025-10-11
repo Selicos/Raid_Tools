@@ -1,4 +1,3 @@
-
 ---
 
 ### 📘 `module_6_synergy.md`
@@ -16,21 +15,23 @@ Recommend allies and stat tuning based on synergy and gear priorities.
 **Output:**
 ```json
 "synergy": {
-  "recommended_buffs": ["Increase ATK", "Decrease DEF", "Speed Boost", "Turn Meter Fill"],
+  "recommended_buffs": ["<BUFF_1>", "<BUFF_2>", "..."],
   "support_champion_sets": [
-    ["Deacon Armstrong", "Geomancer"],
+    ["<CHAMPION_1>", "<CHAMPION_2>"],
     [],
     []
   ],
   "speed_tuning": {
-    "arena": "230–250",
-    "dungeons": "200–220",
-    "clan_boss": "170–190"
+    "arena": "<VALUE OR RANGE>",
+    "dungeons": "<VALUE OR RANGE>",
+    "clan_boss": "<VALUE OR RANGE>"
   },
   "gear_stat_priorities": {
-    "arena": ["Savage", "Cruel", "ATK%", "Crit Rate", "Crit Damage", "Accuracy"],
-    "clan_boss": ["Accuracy", "Speed", "HP%", "ATK%", "Survivability"],
-    "dungeons": ["Savage", "Cruel", "Accuracy", "ATK%", "Crit Rate"]
+    "arena": ["<STAT_1>", "<STAT_2>", "..."],
+    "clan_boss": ["<STAT_1>", "<STAT_2>", "..."],
+    "dungeons": ["<STAT_1>", "<STAT_2>", "..."]
   },
-  "relentless_viability": "Moderate — can help cycle burns faster but risks cooldown desync"
+  "relentless_viability": "<DESCRIPTION OR VALUE>"
 }
+```
+````

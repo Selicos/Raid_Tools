@@ -1,4 +1,3 @@
-
 ---
 
 ### 📘 `module_4_mastery_simulation.md`
@@ -17,34 +16,25 @@ Simulate Warmaster and Helmsmasher damage across 4 battle scenarios.
 "mastery_simulation": {
   "scenarios": [
     {
-      "type": "Single Boss",
-      "mastery": "Warmaster",
-      "bonus_damage": "10K–14K per proc",
-      "notes": "Burn ticks stack with Warmaster procs for sustained damage"
+      "type": "<SCENARIO TYPE>",
+      "mastery": "<MASTERY NAME>",
+      "bonus_damage": "<BONUS DAMAGE VALUE OR RANGE>",
+      "notes": "<NOTES ON DAMAGE OR EFFECTS>"
     },
     {
-      "type": "Boss + 10 Minions",
-      "mastery": "Helmsmasher",
-      "bonus_damage": "22K–28K per AOE hit",
-      "notes": "Helmsmasher boosts AOE burn application damage"
-    },
-    {
-      "type": "Boss + 5 Minions",
-      "mastery": "Helmsmasher",
-      "bonus_damage": "18K–24K per AOE hit",
-      "notes": "Ideal for Dragon and Ice Golem waves"
-    },
-    {
-      "type": "Boss + 2 High-HP Minions",
-      "mastery": "Helmsmasher",
-      "bonus_damage": "15K–20K per AOE hit",
-      "notes": "Burns help chip down tanky adds"
+      "type": "<SCENARIO TYPE>",
+      "mastery": "<MASTERY NAME>",
+      "bonus_damage": "<BONUS DAMAGE VALUE OR RANGE>",
+      "notes": "<NOTES ON DAMAGE OR EFFECTS>"
     }
+    // Add more scenarios as needed
   ],
   "recommended_mastery": {
-    "clan_boss": "Warmaster",
-    "spider_hard": "Helmsmasher",
-    "hydra": "Warmaster",
-    "iron_twins": "Helmsmasher"
+    "clan_boss": "<MASTERY NAME>",
+    "spider_hard": "<MASTERY NAME>",
+    "hydra": "<MASTERY NAME>",
+    "iron_twins": "<MASTERY NAME>"
   }
 }
+```
+````
