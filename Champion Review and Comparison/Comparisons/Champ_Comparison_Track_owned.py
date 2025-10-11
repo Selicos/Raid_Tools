@@ -3,9 +3,9 @@ import json
 import time
 import subprocess
 
-# Paths
-owned_file = r"C:\GIT\RAID_TOOLS\owned_champions.json"
-comparison_script = r"C:\GIT\RAID_TOOLS\Comparisons\Champ_comparison.py"
+# Paths (update to use capital C for Champions)
+owned_file = os.path.join(os.path.dirname(__file__), "..", "Champions", "owned_champions.json")
+comparison_script = os.path.join(os.path.dirname(__file__), "Champ_comparison.py")
 
 # Track last modified time
 def get_last_modified(path):

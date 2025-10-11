@@ -1,4 +1,3 @@
-
 ---
 
 ### 📘 `module_1_overview.md`
@@ -12,11 +11,27 @@
 **Goal:**
 Summarize champion identity and performance across content types.
 
+### Primary Damage Stat
+- [ ] ATK
+- [ ] HP
+- [ ] DEF
+- [ ] Hybrid (specify: __________)
+- [ ] Other (specify: __________)
+
+**Skill Scaling Details:**  
+List each skill and the stat(s) it scales from.
+
 **Output:**
 ```json
 "overview": {
   "role": "Attack",
   "archetype": "Burn DPS / Debuff Specialist",
+  "primary_damage_stat": "ATK",                // <-- NEW FIELD
+  "skill_scaling": {                           // <-- NEW FIELD
+    "A1": "ATK",
+    "A2": "ATK",
+    "A3": "ATK"
+  },
   "best_mastery": {
     "pve_pvp": "Helmsmasher",
     "clan_boss": "Warmaster"
@@ -47,3 +62,4 @@ Summarize champion identity and performance across content types.
   },
   "best_dungeon_use": "Dragon HARD 10"
 }
+```

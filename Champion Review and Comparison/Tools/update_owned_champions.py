@@ -2,11 +2,12 @@ import os
 import sys
 import importlib.util
 
-champion_dir = os.path.join("Champion Review and Comparison")
-champ_intake_path = os.path.join(champion_dir, "champ_intake.py")
+# Path to Champ_Intake.py in the parent directory
+champ_intake_path = os.path.join(os.path.dirname(__file__), "..", "Champ_Intake.py")
+champ_intake_path = os.path.abspath(champ_intake_path)
 
-# Load champ_intake.py as a module
-spec = importlib.util.spec_from_file_location("champ_intake", champ_intake_path)
+# Load Champ_Intake.py as a module
+spec = importlib.util.spec_from_file_location("Champ_Intake", champ_intake_path)
 champ_intake = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(champ_intake)
 

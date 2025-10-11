@@ -16,18 +16,18 @@ import subprocess
 import shutil
 from datetime import datetime, timedelta
 
-# Paths
-champion_dir = r"Champion Review and Comparison"
-champion_json_dir = os.path.join(champion_dir, "Champions")
-owned_list_path = os.path.join(champion_json_dir, "Owned Champions", "Owned_Champion_list.md")
-prompt_dir = os.path.join(champion_dir, "prompt")
+# Base directory for this script
+BASE_DIR = os.path.dirname(__file__)
+champion_json_dir = os.path.join(BASE_DIR, "Champions")
+owned_list_path = os.path.join(champion_json_dir, "Owned_Champions", "Owned_Champion_list.md")
+prompt_dir = os.path.join(BASE_DIR, "Prompt")
 
 def add_to_owned_list(champion_name, update_date=True):
     today = datetime.today().strftime("%Y-%m-%d")
     os.makedirs(os.path.dirname(owned_list_path), exist_ok=True)
     if not os.path.exists(owned_list_path):
         with open(owned_list_path, "w", encoding="utf-8") as f:
-            f.write("# Owned Champions\n\n")
+            f.write("# Owned_Champions\n\n")
 
     with open(owned_list_path, "r", encoding="utf-8") as f:
         lines = f.readlines()
@@ -69,10 +69,9 @@ def create_prompt_md(champion_name):
     target_filename = f"{champion_name}.md"
     target_lower = target_filename.lower()
 
-    for fname in os.listdir(prompt_dir):
-        if fname.lower() == target_lower:
-            print(f"📄 Prompt already exists: {os.path.join(prompt_dir, fname)}")
-            return os.path.join(prompt_dir, fname)
+    existing_path = os.path.join(prompt_dir, target_filename)
+    if os.path.exists(existing_path):
+        print(f"♻️ Overwriting existing prompt: {existing_path}")
 
     path = os.path.join(prompt_dir, target_filename)
     content = f"""# Champion Log Generation Prompt
@@ -80,23 +79,18 @@ def create_prompt_md(champion_name):
 Let's run through the modules for {champion_name}, and generate a log json file for review.
 
 Please output the full champion log in JSON format, including:
-- Modules 0–13
+- Modules 0–13 from the Champion Review and Comparison\\Modules folder. 
 - Overview, skills, synergy, mastery simulation, ratings, and final summary
 - Format for easy copy-paste into champions/{champion_name}.json
 
----
-
-📂 Please generate a full champion log for **{champion_name}** using Modules 0–13 located in:
-
-`Champion Review and Comparison/modules/`
-
-Use the structure and content of each file named `Champion_Review_Module_0.md` through `Champion_Review_Module_12.md`.  
+Use the structure and content of each file named `Champion_Review_Module_0.md` through `Champion_Review_Module_13.md` in `Champion Review and Comparison/modules/`.  
 Do not use inline templates or external descriptions.
 """
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
     print(f"✅ Prompt file created: {path}")
     return path
+
 
 def validate_json(champion_name):
     path = os.path.join(champion_json_dir, f"{champion_name}.json")
@@ -227,6 +221,18 @@ def run_smart_batch_from_owned_list(path=owned_list_path, fast_mode=False):
         for f in failed:
             print(f" - {f}")
 
+def generate_prompt_for_champion(champion_name):
+    modules_dir = os.path.join(os.path.dirname(__file__), "modules")
+    prompt = f"# Champion Log Generation Prompt for {champion_name}\n\n"
+    for i in range(0, 14):
+        module_file = os.path.join(modules_dir, f"Champion_Review_Module_{i}.md")
+        if os.path.exists(module_file):
+            with open(module_file, "r", encoding="utf-8") as f:
+                prompt += f"---\n## Module {i}\n" + f.read() + "\n\n"
+        else:
+            prompt += f"---\n## Module {i}\n(Missing module file)\n\n"
+    return prompt
+
 if __name__ == "__main__":
     print("🔍 Champion Intake")
     print("Enter a champion name to process individually.")
@@ -242,3 +248,8 @@ if __name__ == "__main__":
             print("❌ Cancelled. No champion processed.")
     else:
         run_champion_intake(user_input, fast_mode=False)
+        prompt = generate_prompt_for_champion(user_input)
+        prompt_path = os.path.join(os.path.dirname(__file__), f"{user_input}_prompt.md")
+        with open(prompt_path, "w", encoding="utf-8") as f:
+            f.write(prompt)
+        print(f"✅ Prompt for {user_input} written to {prompt_path}")
