@@ -157,19 +157,20 @@ def open_in_editor(path):
     except Exception as e:
         print(f"❌ Could not open in Notepad: {e}")
 
-def run_champion_intake(champion_name):
+def run_champion_intake(champion_name, fast_mode=False):
     create_json_placeholder(champion_name)
     md_path = create_prompt_md(champion_name)
     if validate_json(champion_name) and validate_md(champion_name):
         copy_prompt_to_clipboard(md_path)
-        open_in_editor(md_path)
+        if not fast_mode:
+            open_in_editor(md_path)
         add_to_owned_list(champion_name, update_date=True)
         return True
     else:
         print(f"⚠️ Validation failed for {champion_name}. Prompt not copied or opened.")
         return False
 
-def run_smart_batch_from_owned_list(path=owned_list_path):
+def run_smart_batch_from_owned_list(path=owned_list_path, fast_mode=False):
     if not os.path.exists(path):
         print(f"❌ Owned list not found: {path}")
         return
@@ -202,7 +203,7 @@ def run_smart_batch_from_owned_list(path=owned_list_path):
 
     for champ in champions_to_update:
         print(f"🔄 Processing: {champ}")
-        if run_champion_intake(champ):
+        if run_champion_intake(champ, fast_mode=fast_mode):
             success.append(champ)
         else:
             failed.append(champ)
@@ -220,7 +221,7 @@ def run_smart_batch_from_owned_list(path=owned_list_path):
 if __name__ == "__main__":
     mode = input("Use smart batch mode from owned list? (y/n): ").strip().lower()
     if mode == "y":
-        run_smart_batch_from_owned_list()
+        run_smart_batch_from_owned_list(fast_mode=False)
     else:
         name = input("Enter champion name: ").strip()
-        run_champion_intake(name)
+        run_champion_intake(name, fast_mode=False)
