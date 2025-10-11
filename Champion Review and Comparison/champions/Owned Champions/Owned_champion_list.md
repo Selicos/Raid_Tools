@@ -1,2 +1,6 @@
-## List of all owned champions and their corresponding log file in the parent directory.
-# This list should be alphabetically sorted as needed.
+# Owned Champions
+
+- Ithos | Last Updated: 2025-10-11
+- Artak | Last Updated: 2025-10-11
+- Geomancer | Last Updated: 2025-10-11
+- artak | Last Updated: 2025-10-11

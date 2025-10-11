@@ -1,11 +1,17 @@
 import os
+import json
+import pyperclip
+import subprocess
 from datetime import datetime
 
-champion_dir = r"Champion Review and Comparison\Champions"
-owned_list_path = os.path.join(champion_dir, "Owned Champions", "Owned_Champion_list.md")
+champion_dir = r"Champion Review and Comparison"
+champion_json_dir = os.path.join(champion_dir, "Champions")
+owned_list_path = os.path.join(champion_json_dir, "Owned Champions", "Owned_Champion_list.md")
+prompt_dir = os.path.join(champion_dir, "prompt")
 
 def add_to_owned_list(champion_name):
     today = datetime.today().strftime("%Y-%m-%d")
+    os.makedirs(os.path.dirname(owned_list_path), exist_ok=True)
     if not os.path.exists(owned_list_path):
         with open(owned_list_path, "w", encoding="utf-8") as f:
             f.write("# Owned Champions\n\n")
@@ -18,7 +24,8 @@ def add_to_owned_list(champion_name):
         print(f"✅ Added {champion_name} to owned list.")
 
 def create_json_placeholder(champion_name):
-    path = os.path.join(champion_dir, f"{champion_name}.json")
+    os.makedirs(champion_json_dir, exist_ok=True)
+    path = os.path.join(champion_json_dir, f"{champion_name}.json")
     if not os.path.exists(path):
         with open(path, "w", encoding="utf-8") as f:
             f.write("{\n  \"champion\": \"" + champion_name + "\",\n  \"owned\": true\n}")
@@ -26,12 +33,80 @@ def create_json_placeholder(champion_name):
     else:
         print(f"📁 JSON already exists for {champion_name}")
 
-def generate_prompt(champion_name):
-    prompt = f"Let's run through the modules for {champion_name}, and generate a log json file for review."
-    print("\n📋 Copilot Prompt:\n" + prompt)
+def create_prompt_md(champion_name):
+    os.makedirs(prompt_dir, exist_ok=True)
+    path = os.path.join(prompt_dir, f"{champion_name}.md")
+    if os.path.exists(path):
+        print(f"📄 Prompt already exists: {path}")
+        return path
+    content = f"""# Champion Log Generation Prompt
+
+Let's run through the modules for {champion_name}, and generate a log json file for review.
+
+Please output the full champion log in JSON format, including:
+- Modules 1–13
+- Overview, skills, synergy, mastery simulation, ratings, and final summary
+- Format for easy copy-paste into champions/{champion_name}.json
+"""
+    with open(path, "w", encoding="utf-8") as f:
+        f.write(content)
+    print(f"✅ Prompt file created: {path}")
+    return path
+
+def validate_json(champion_name):
+    path = os.path.join(champion_json_dir, f"{champion_name}.json")
+    if not os.path.exists(path):
+        print(f"❌ JSON file missing: {path}")
+        return False
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            json.load(f)
+        print(f"✅ Valid JSON: {path}")
+        return True
+    except Exception as e:
+        print(f"❌ Invalid JSON: {e}")
+        return False
+
+def validate_md(champion_name):
+    path = os.path.join(prompt_dir, f"{champion_name}.md")
+    if not os.path.exists(path):
+        print(f"❌ Markdown file missing: {path}")
+        return False
+    with open(path, "r", encoding="utf-8") as f:
+        content = f.read()
+        if "# Champion Log Generation Prompt" in content:
+            print(f"✅ Valid Markdown: {path}")
+            return True
+        else:
+            print(f"❌ Markdown header missing")
+            return False
+
+def copy_prompt_to_clipboard(path):
+    with open(path, "r", encoding="utf-8") as f:
+        pyperclip.copy(f.read())
+    print("📋 Prompt copied to clipboard.")
+
+def open_in_editor(path):
+    try:
+        subprocess.run(["code", path], check=True)
+        print(f"🚀 Opened in VS Code: {path}")
+    except FileNotFoundError:
+        print("⚠️ VS Code CLI not found. Falling back to Notepad...")
+        try:
+            subprocess.run(["notepad.exe", path], check=True)
+            print(f"📝 Opened in Notepad: {path}")
+        except Exception as e:
+            print(f"❌ Could not open in Notepad: {e}")
+    except Exception as e:
+        print(f"⚠️ Could not open in VS Code: {e}")
 
 if __name__ == "__main__":
     name = input("Enter champion name: ").strip()
     add_to_owned_list(name)
     create_json_placeholder(name)
-    generate_prompt(name)
+    md_path = create_prompt_md(name)
+    if validate_json(name) and validate_md(name):
+        copy_prompt_to_clipboard(md_path)
+        open_in_editor(md_path)
+    else:
+        print("⚠️ Validation failed. Prompt not copied or opened.")
