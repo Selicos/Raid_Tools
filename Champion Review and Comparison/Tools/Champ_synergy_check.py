@@ -1,7 +1,7 @@
 import json
 import os
 import sys
-
+# This may not work properly due to requiring copilot to create the log file in the first place
 # Directory for champion logs
 champion_dir = r"Champion Review and Comparison\Champions"
 

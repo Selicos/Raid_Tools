@@ -198,28 +198,15 @@ Simulate Warmaster and Helmsmasher damage across 4 battle scenarios.
 - Damage modeling from Module 4
 
 **Goal:**
-Evaluate Clan Boss performance and benchmark against OWNED champions.
+Evaluate Clan Boss performance using mastery simulation and rotation modeling.
 
 **Output:**
 ```json
 "clan_boss": {
   "damage_per_turn": "55K–80K",
-  "benchmarks": [
-    {
-      "champion": "Geomancer",
-      "comparison": "Superior passive damage and reflect mechanics"
-    },
-    {
-      "champion": "Deacon Armstrong",
-      "comparison": "Support role; boosts Artak’s damage via DEF Down and turn meter control"
-    }
-  ],
-  "passive_mastery_triggers": {
-    "Artak": "Burn ticks trigger passive effects and stack with Warmaster",
-    "Geomancer": "Passive reflects damage and scales with enemy attacks",
-    "Deacon Armstrong": "No direct damage; supports rotation and debuff uptime"
-  }
+  "notes": "Burn ticks stack with Warmaster procs for sustained damage. Reflex gear can increase uptime but may desync cooldowns."
 }
+
 
 ### 📘 `module_6_synergy.md`
 
