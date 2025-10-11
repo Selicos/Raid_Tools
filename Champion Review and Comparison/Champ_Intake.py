@@ -67,30 +67,53 @@ def create_json_placeholder(champion_name):
 def create_prompt_md(champion_name):
     os.makedirs(prompt_dir, exist_ok=True)
     target_filename = f"{champion_name}.md"
-    target_lower = target_filename.lower()
-
-    existing_path = os.path.join(prompt_dir, target_filename)
-    if os.path.exists(existing_path):
-        print(f"♻️ Overwriting existing prompt: {existing_path}")
-
     path = os.path.join(prompt_dir, target_filename)
-    content = f"""# Champion Log Generation Prompt
 
-Let's run through the modules for {champion_name}, and generate a log json file for review.
+    prompt = f"# Champion Log Generation Prompt for {champion_name}\n\n"
+    prompt += (
+        "You are to generate a complete champion log for {0} in JSON format, using the following module templates as structure and guidance. "
+        "Each module (0–13) is included below. For each, fill in the relevant information for {0}. Output a single JSON object with each module as a key (e.g., \"overview\", \"skills\", \"synergy\", etc.).\n\n"
+        "---\n"
+        "## Example output structure:\n"
+        "```json\n"
+        "{{\n"
+        "  \"champion\": \"{0}\",\n"
+        "  \"owned\": true,\n"
+        "  \"overview\": {{ ... }},\n"
+        "  \"skills\": {{ ... }},\n"
+        "  \"team_inputs\": {{ ... }},\n"
+        "  \"mastery_simulation\": {{ ... }},\n"
+        "  \"clan_boss\": {{ ... }},\n"
+        "  \"synergy\": {{ ... }},\n"
+        "  \"investment\": {{ ... }},\n"
+        "  \"intelligence\": {{ ... }},\n"
+        "  \"turn_meter\": {{ ... }},\n"
+        "  \"utility_comparison\": {{ ... }},\n"
+        "  \"ratings\": {{ ... }},\n"
+        "  \"final_summary\": {{ ... }},\n"
+        "  \"synergy_engine\": {{ ... }}\n"
+        "}}\n"
+        "```\n"
+        "---\n"
+        "Instructions:\n"
+        "- Fill in each section for {0} using the module templates below.\n"
+        "- Output only the final JSON object.\n\n"
+    ).format(champion_name)
 
-Please output the full champion log in JSON format, including:
-- Modules 0–13 from the Champion Review and Comparison\\Modules folder. 
-- Overview, skills, synergy, mastery simulation, ratings, and final summary
-- Format for easy copy-paste into champions/{champion_name}.json
+    modules_dir = os.path.join(os.path.dirname(__file__), "modules")
+    for i in range(0, 14):
+        module_file = os.path.join(modules_dir, f"Champion_Review_Module_{i}.md")
+        prompt += f"---\n## Module {i}\n"
+        if os.path.exists(module_file):
+            with open(module_file, "r", encoding="utf-8") as f:
+                prompt += f.read() + "\n\n"
+        else:
+            prompt += "(Missing module file)\n\n"
 
-Use the structure and content of each file named `Champion_Review_Module_0.md` through `Champion_Review_Module_13.md` in `Champion Review and Comparison/modules/`.  
-Do not use inline templates or external descriptions.
-"""
     with open(path, "w", encoding="utf-8") as f:
-        f.write(content)
+        f.write(prompt)
     print(f"✅ Prompt file created: {path}")
     return path
-
 
 def validate_json(champion_name):
     path = os.path.join(champion_json_dir, f"{champion_name}.json")

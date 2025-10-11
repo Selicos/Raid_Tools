@@ -29,10 +29,11 @@ Initialize champion log and set ownership flag.
 ## Module 1: Overview & Initial Summary
 
 **Inputs:**
-- Champion role, archetype, gear sets, mastery, booking ROI
-
-**Goal:**
-Summarize champion identity and performance across content types.
+- Champion role (e.g., "HP Nuker", "DEF Support", etc.)
+- Archetype (e.g., "Burn DPS / Debuff Specialist")
+- Gear sets (list best sets for each content type)
+- Mastery (best mastery for each content type)
+- Booking ROI (High/Medium/Low)
 
 ### Primary Damage Stat
 - [ ] ATK
@@ -42,48 +43,46 @@ Summarize champion identity and performance across content types.
 - [ ] Other (specify: __________)
 
 **Skill Scaling Details:**  
-List each skill and the stat(s) it scales from.
+List each skill by name and the stat(s) it scales from (e.g., "A1: HP", "A2: DEF", etc.).
 
 **Output:**
 ```json
 "overview": {
-  "role": "Attack",
-  "archetype": "Burn DPS / Debuff Specialist",
-  "primary_damage_stat": "ATK",                // <-- NEW FIELD
-  "skill_scaling": {                           // <-- NEW FIELD
-    "A1": "ATK",
-    "A2": "ATK",
-    "A3": "ATK"
+  "role": "<REAL ROLE HERE>",
+  "archetype": "<REAL ARCHETYPE HERE>",
+  "primary_damage_stat": "<ATK/HP/DEF/Hybrid/Other>",
+  "skill_scaling": {
+    "A1": "<ATK/HP/DEF/Hybrid/Other>",
+    "A2": "<ATK/HP/DEF/Hybrid/Other>",
+    "A3": "<ATK/HP/DEF/Hybrid/Other>"
   },
   "best_mastery": {
-    "pve_pvp": "Helmsmasher",
-    "clan_boss": "Warmaster"
+    "pve_pvp": "<REAL MASTERY>",
+    "clan_boss": "<REAL MASTERY>"
   },
-  "booking_roi": "High",
+  "booking_roi": "<REAL VALUE>",
   "gear_sets": {
-    "pvp_offense": ["Savage", "Cruel", "Perception"],
-    "pvp_defense": ["Stone Skin", "Swift Parry"],
-    "clan_boss": ["Reflex", "Relentless", "Accuracy"],
-    "hydra": ["Reflex", "Guardian", "Perception"],
-    "iron_twins": ["Perception", "Speed"],
-    "dungeons": ["Savage", "Cruel", "Accuracy"],
-    "solo_farming": ["Immortal", "Regen"]
+    "pvp_offense": [ ... ],
+    "pvp_defense": [ ... ],
+    "clan_boss": [ ... ],
+    "hydra": [ ... ],
+    "iron_twins": [ ... ],
+    "dungeons": [ ... ],
+    "solo_farming": [ ... ]
   },
   "gear_tradeoffs": [
-    { "set": "Reflex", "pros": "More burns", "cons": "Unpredictable cooldowns" },
-    { "set": "Savage", "pros": "Max damage", "cons": "Requires high Crit Rate" },
-    { "set": "Guardian", "pros": "Team sustain", "cons": "Lower personal damage" }
+    { "set": "<SET>", "pros": "<PROS>", "cons": "<CONS>" }
   ],
   "focus_stats": {
-    "arena_dungeons": ["ATK%", "Crit Rate", "Crit Damage", "Accuracy"],
-    "clan_boss": ["Accuracy", "Speed", "ATK%", "HP%"]
+    "arena_dungeons": [ ... ],
+    "clan_boss": [ ... ]
   },
   "accuracy_resistance": {
-    "hard_10_dungeons": "Accuracy required for burns",
-    "hydra": "High accuracy needed",
-    "iron_twins": "Accuracy required"
+    "hard_10_dungeons": "<REAL VALUE>",
+    "hydra": "<REAL VALUE>",
+    "iron_twins": "<REAL VALUE>"
   },
-  "best_dungeon_use": "Dragon HARD 10"
+  "best_dungeon_use": "<REAL VALUE>"
 }
 ```
 
