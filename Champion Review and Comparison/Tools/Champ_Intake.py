@@ -2,8 +2,10 @@ import os
 import json
 import pyperclip
 import subprocess
+import shutil
 from datetime import datetime
 
+# Paths
 champion_dir = r"Champion Review and Comparison"
 champion_json_dir = os.path.join(champion_dir, "Champions")
 owned_list_path = os.path.join(champion_json_dir, "Owned Champions", "Owned_Champion_list.md")
@@ -86,27 +88,68 @@ def copy_prompt_to_clipboard(path):
         pyperclip.copy(f.read())
     print("📋 Prompt copied to clipboard.")
 
-def open_in_editor(path):
-    try:
-        subprocess.run(["code", path], check=True)
-        print(f"🚀 Opened in VS Code: {path}")
-    except FileNotFoundError:
-        print("⚠️ VS Code CLI not found. Falling back to Notepad...")
-        try:
-            subprocess.run(["notepad.exe", path], check=True)
-            print(f"📝 Opened in Notepad: {path}")
-        except Exception as e:
-            print(f"❌ Could not open in Notepad: {e}")
-    except Exception as e:
-        print(f"⚠️ Could not open in VS Code: {e}")
+def print_copilot_hint():
+    print("💬 Copilot Chat: Paste the prompt and ask for full champion log generation.")
+    print("💡 Tip: In VS Code, open Copilot Chat (Ctrl+I or click the Copilot icon).")
 
-if __name__ == "__main__":
-    name = input("Enter champion name: ").strip()
-    add_to_owned_list(name)
-    create_json_placeholder(name)
-    md_path = create_prompt_md(name)
-    if validate_json(name) and validate_md(name):
+def open_in_editor(path):
+    code_path = shutil.which("code")
+
+    if code_path:
+        try:
+            subprocess.run([code_path, path], check=True)
+            print(f"🚀 Opened in VS Code: {path}")
+            print_copilot_hint()
+            return
+        except Exception as e:
+            print(f"⚠️ VS Code CLI failed: {e}")
+
+    full_vscode_path = r"C:\Users\%USERNAME%\AppData\Local\Programs\Microsoft VS Code\Code.exe"
+    full_vscode_path = os.path.expandvars(full_vscode_path)
+
+    if os.path.exists(full_vscode_path):
+        try:
+            subprocess.run([full_vscode_path, path], check=True)
+            print(f"🚀 Opened in VS Code via full path: {path}")
+            print_copilot_hint()
+            return
+        except Exception as e:
+            print(f"⚠️ VS Code full path failed: {e}")
+
+    print("⚠️ VS Code not available. Falling back to Notepad...")
+    try:
+        subprocess.run(["notepad.exe", path], check=True)
+        print(f"📝 Opened in Notepad: {path}")
+        print("💬 Copilot Chat: Copy the prompt from Notepad and paste it into Copilot Chat manually.")
+    except Exception as e:
+        print(f"❌ Could not open in Notepad: {e}")
+
+def run_champion_intake(champion_name):
+    add_to_owned_list(champion_name)
+    create_json_placeholder(champion_name)
+    md_path = create_prompt_md(champion_name)
+    if validate_json(champion_name) and validate_md(champion_name):
         copy_prompt_to_clipboard(md_path)
         open_in_editor(md_path)
     else:
-        print("⚠️ Validation failed. Prompt not copied or opened.")
+        print(f"⚠️ Validation failed for {champion_name}. Prompt not copied or opened.")
+
+def run_batch_from_file(file_path="champion_batch_list.txt"):
+    if not os.path.exists(file_path):
+        print(f"❌ Batch file not found: {file_path}")
+        return
+    with open(file_path, "r", encoding="utf-8") as f:
+        champions = [line.strip() for line in f if line.strip()]
+    print(f"📦 Running batch intake for {len(champions)} champions...\n")
+    for champ in champions:
+        print(f"🔄 Processing: {champ}")
+        run_champion_intake(champ)
+        print("-" * 40)
+
+if __name__ == "__main__":
+    mode = input("Run in batch mode from file? (y/n): ").strip().lower()
+    if mode == "y":
+        run_batch_from_file()
+    else:
+        name = input("Enter champion name: ").strip()
+        run_champion_intake(name)

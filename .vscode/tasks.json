@@ -4,7 +4,7 @@
       {
         "label": "Champion Intake",
         "type": "shell",
-        "command": "${config:python.pythonPath}",
+        "command": "python",
         "args": [
           "${workspaceFolder}/Champion Review and Comparison/Tools/champ_intake.py"
         ],
