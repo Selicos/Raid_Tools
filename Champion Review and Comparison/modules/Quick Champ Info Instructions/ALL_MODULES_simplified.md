@@ -1,5 +1,5 @@
 # Champion Log Generation Modules
-Do not use this file by default. USe the separate module items in the modules dir.
+Do not use this file. Use the separate module items in the modules dir.
 
 Use the following structure to generate a complete JSON-based champion log. Each module should be clearly labeled and contain the requested information.
 
@@ -88,6 +88,7 @@ Use the following structure to generate a complete JSON-based champion log. Each
 ---
 
 ## Module 13: JSON Output
+- Only run this module if told to putput to json in the prompt.
 - Output the full champion log in JSON format.
 - Include all modules above in structured fields.
 - Format for easy copy-paste into `champions/[ChampionName].json`

@@ -2,6 +2,8 @@
 import importlib.util
 import runpy
 import os
+import subprocess
+import json
 
 setup_path = os.path.join(os.path.dirname(__file__), "setup_environment.py")
 if importlib.util.find_spec("pyperclip") is None or not os.path.exists(setup_path):
@@ -9,7 +11,6 @@ if importlib.util.find_spec("pyperclip") is None or not os.path.exists(setup_pat
 else:
     runpy.run_path(setup_path)
 
-import json
 import pyperclip
 import subprocess
 import shutil
@@ -79,9 +80,18 @@ def create_prompt_md(champion_name):
 Let's run through the modules for {champion_name}, and generate a log json file for review.
 
 Please output the full champion log in JSON format, including:
-- Modules 1–13
+- Modules 0–13
 - Overview, skills, synergy, mastery simulation, ratings, and final summary
 - Format for easy copy-paste into champions/{champion_name}.json
+
+---
+
+📂 Please generate a full champion log for **{champion_name}** using Modules 0–13 located in:
+
+`Champion Review and Comparison/modules/`
+
+Use the structure and content of each file named `Champion_Review_Module_0.md` through `Champion_Review_Module_12.md`.  
+Do not use inline templates or external descriptions.
 """
     with open(path, "w", encoding="utf-8") as f:
         f.write(content)
@@ -217,11 +227,18 @@ def run_smart_batch_from_owned_list(path=owned_list_path, fast_mode=False):
         for f in failed:
             print(f" - {f}")
 
-# Entry point
 if __name__ == "__main__":
-    mode = input("Use smart batch mode from owned list? (y/n): ").strip().lower()
-    if mode == "y":
-        run_smart_batch_from_owned_list(fast_mode=False)
+    print("🔍 Champion Intake")
+    print("Enter a champion name to process individually.")
+    print("Leave blank to use the owned champion list.")
+
+    user_input = input("Champion name: ").strip()
+
+    if user_input == "":
+        confirm = input("⚠️ No champion entered. Run owned list instead? (y/n): ").strip().lower()
+        if confirm == "y":
+            run_smart_batch_from_owned_list(fast_mode=False)
+        else:
+            print("❌ Cancelled. No champion processed.")
     else:
-        name = input("Enter champion name: ").strip()
-        run_champion_intake(name, fast_mode=False)
+        run_champion_intake(user_input, fast_mode=False)

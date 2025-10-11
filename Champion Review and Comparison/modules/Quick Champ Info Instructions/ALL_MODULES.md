@@ -1,5 +1,5 @@
 # Champion Review — All Modules
-Do not use this file by default. USe the separate module items in the modules dir.
+Do not use this file. Use the separate module items in the modules dir.
 
 ---
 
