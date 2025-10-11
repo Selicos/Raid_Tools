@@ -1,0 +1,302 @@
+{
+  "champion": "Ithos",
+  "owned": true,
+  "overview": {
+    "role": "Updated Role",
+    "archetype": "Updated Archetype",
+    "best_mastery": {
+      "pve_pvp": "Helmsmasher",
+      "clan_boss": "Warmaster"
+    },
+    "booking_roi": "High",
+    "gear_sets": {
+      "pvp_offense": [
+        "Savage",
+        "Cruel"
+      ],
+      "clan_boss": [
+        "Reflex",
+        "Relentless"
+      ],
+      "dungeons": [
+        "Perception",
+        "Speed"
+      ]
+    },
+    "focus_stats": {
+      "arena_dungeons": [
+        "ATK%",
+        "Crit Rate",
+        "Speed"
+      ],
+      "clan_boss": [
+        "Accuracy",
+        "HP%",
+        "Speed"
+      ]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "Accuracy ~250\u2013300",
+      "hydra": "Accuracy ~350+",
+      "iron_twins": "Accuracy ~400+"
+    },
+    "best_dungeon_use": "Dragon HARD 10"
+  },
+  "skills": {
+    "a1": {
+      "name": "Gouge",
+      "type": "Single Target",
+      "hit_count": 2,
+      "cooldown": "None",
+      "multiplier": "2.0x ATK per hit"
+    },
+    "a2": {
+      "name": "Outburst",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "6 / 5",
+      "multiplier": "4.0x ATK"
+    },
+    "a3": {
+      "name": "Extinguish Life",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "6 / 4",
+      "multiplier": "5.5x ATK"
+    },
+    "passive": {
+      "exists": false,
+      "impact": "None"
+    },
+    "booking": {
+      "impact": "High",
+      "notes": "Reduces cooldowns and unlocks full AOE rotation"
+    },
+    "rotation": {
+      "optimal_cycle": [
+        "A3",
+        "A2",
+        "A1",
+        "A1",
+        "A3",
+        "A2"
+      ],
+      "damage_per_turn": {
+        "a3": "30K\u201340K",
+        "a2": "25K\u201335K",
+        "a1": "10K\u201315K per hit"
+      },
+      "average_damage": "25K\u201335K per turn",
+      "buff_debuff_uptime": {},
+      "extra_turn_frequency": "None"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Extinguish Life",
+    "skill_priority": [
+      "A3",
+      "A2",
+      "A1"
+    ],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Single Boss",
+        "mastery": "Warmaster",
+        "bonus_damage": "12K per proc",
+        "notes": "Only viable if built for sustain"
+      },
+      {
+        "type": "Boss + 10 Minions",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "25K per AOE hit",
+        "notes": "Excellent wave-clear"
+      },
+      {
+        "type": "Boss + 5 Minions",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "20K per AOE hit",
+        "notes": "Good for Ice Golem and Dragon"
+      },
+      {
+        "type": "Boss + 2 High-HP Minions",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "18K per AOE hit",
+        "notes": "Burn through tanky adds"
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Warmaster",
+      "spider_hard": "Helmsmasher",
+      "hydra": "Warmaster",
+      "iron_twins": "Not recommended"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "40K\u201360K",
+    "benchmarks": [
+      {
+        "champion": "Geomancer",
+        "comparison": "Superior passive damage and reflect mechanics"
+      },
+      {
+        "champion": "Deacon Armstrong",
+        "comparison": "Support role; boosts damage via DEF Down and TM control"
+      }
+    ],
+    "passive_mastery_triggers": {
+      "Ithos": "None",
+      "Geomancer": "Reflect damage scales with enemy attacks",
+      "Deacon Armstrong": "No direct damage; supports rotation"
+    }
+  },
+  "synergy": {
+    "recommended_buffs": [
+      "Increase ATK",
+      "Decrease DEF",
+      "Turn Meter Boost"
+    ],
+    "support_champion_sets": [
+      [
+        "Deacon Armstrong",
+        "Geomancer"
+      ],
+      [],
+      []
+    ],
+    "speed_tuning": {
+      "arena": "230\u2013250",
+      "dungeons": "200\u2013220",
+      "clan_boss": "170\u2013190"
+    },
+    "gear_stat_priorities": {
+      "arena": [
+        "Savage",
+        "ATK%",
+        "Crit Rate",
+        "Speed"
+      ],
+      "clan_boss": [
+        "Accuracy",
+        "Speed",
+        "ATK%"
+      ],
+      "dungeons": [
+        "Savage",
+        "Cruel",
+        "Accuracy",
+        "ATK%",
+        "Crit Rate"
+      ]
+    },
+    "relentless_viability": "Moderate"
+  },
+  "investment": {
+    "value": "High",
+    "notes": "Top-tier Arena nuker, strong wave-clear, limited boss utility"
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Geomancer": 7.5,
+      "Deacon Armstrong": 9.0
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": false,
+      "avoid": false,
+      "notes": "Strong early pick in PvE and PvP due to burst AOE"
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None",
+    "gear_set_stability": {
+      "Reflex": "Unstable",
+      "Relentless": "Moderate",
+      "Savage": "Stable"
+    },
+    "rotation_desync_risks": {
+      "Reflex": "High",
+      "Relentless": "Medium",
+      "Savage": "Low"
+    }
+  },
+  "utility_comparison": [
+    {
+      "champion": "Geomancer",
+      "role": "Passive DPS",
+      "comparison": "Strong passive damage and reflect mechanics"
+    },
+    {
+      "champion": "Deacon Armstrong",
+      "role": "Support Controller",
+      "comparison": "Turn meter boost, DEF Down, and speed tuning"
+    }
+  ],
+  "ratings": {
+    "pvp": "A",
+    "clan_boss": "B",
+    "hydra": "B",
+    "iron_twins": "C",
+    "dungeons": "A",
+    "solo_farming": "B",
+    "relentless_viability": "Moderate"
+  },
+  "final_summary": {
+    "mastery_preference": "Helmsmasher (PvE/PvP), Warmaster (Clan Boss)",
+    "booking_impact": "High \u2014 improves cooldowns and AOE uptime",
+    "damage_rotation": "A3 \u2192 A2 \u2192 A1 \u2192 A1 \u2192 A3 \u2192 A2",
+    "turn_meter_stability": "Stable with Savage; moderate risk with Relentless",
+    "passive_impact": "None",
+    "gear_stat_notes": "Savage + ATK% + Crit Rate + Speed",
+    "ally_synergy_impact": "Strong with Deacon Armstrong",
+    "draft_value": "Early pick in PvE and Arena",
+    "investment_value": "High",
+    "relentless_viability": "Moderate",
+    "similar_owned_champions": [
+      "Geomancer",
+      "Deacon Armstrong"
+    ]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Arena Nuking Team",
+        "champions": [
+          "Ithos",
+          "Deacon Armstrong"
+        ],
+        "strategy": "Deacon opens with Turn Meter boost and Decrease DEF \u2192 Ithos follows with Extinguish Life for AOE burst"
+      },
+      {
+        "name": "Dungeon Wave-Clear Team",
+        "champions": [
+          "Ithos",
+          "Geomancer",
+          "Deacon Armstrong"
+        ],
+        "strategy": "Ithos clears waves with AOE nukes, Geomancer handles boss damage, Deacon maintains rotation and debuffs"
+      },
+      {
+        "name": "Hydra Control Setup",
+        "champions": [
+          "Geomancer",
+          "Deacon Armstrong",
+          "Ithos"
+        ],
+        "strategy": "Use Ithos for wave-clear and burst; rely on Geomancer for passive damage and Deacon for TM control"
+      }
+    ],
+    "similar_champions": [
+      {
+        "champion": "Geomancer",
+        "similarity_reason": "Passive damage, PvE boss utility"
+      },
+      {
+        "champion": "Deacon Armstrong",
+        "similarity_reason": "Setup specialist, strong synergy with AOE nukers"
+      }
+    ]
+  }
+}
