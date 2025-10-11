@@ -21,6 +21,7 @@ Recommend allies and stat tuning based on synergy and gear priorities.
     [],
     []
   ],
+  "recommended_revivors": ["<REVIVER_1>", "<REVIVER_2>"],
   "speed_tuning": {
     "arena": "<VALUE OR RANGE>",
     "dungeons": "<VALUE OR RANGE>",
