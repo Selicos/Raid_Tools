@@ -8,3 +8,6 @@ Thank you for your interest in contributing!
 2. Run the setup script:
    ```sh
    python "Champion Review and Comparison/Setup_Environment.py"
+
+\\insert the rest of the prompt here
+

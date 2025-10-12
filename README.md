@@ -38,21 +38,58 @@ It includes tools for champion intake, prompt generation, review, skill cycle si
      source .venv/bin/activate
      ```
 
+
 3. **Run tools and Tests**
 
-   ```sh
-   # Intake a new champion
-   python "Champion Review and Comparison/Tools/champIntake.py"
+  ```sh
+  # Intake a new champion
+  python "Champion Review and Comparison/Tools/champIntake.py"
 
-   # Run cooldown analysis
-   python ChampionAnalysisTool/championAnalysis.py
+  # Run cooldown analysis
+  python ChampionAnalysisTool/championAnalysis.py
 
-   # Generate summary markdowns
-   python "Summarize Champion Results/jsonToMdPerChamp.py"
+  # Generate summary markdowns
+  python "Summarize Champion Results/jsonToMdPerChamp.py"
 
-   # Run all tests
-   python -m pytest
-   ```
+  # Run all tests
+  python -m pytest
+  ```
+
+---
+
+## Makefile: Simplified Commands
+
+You can use the provided `Makefile` to automate common tasks. This makes setup, testing, and running tools easier and more consistent.
+
+### Common Commands
+
+```sh
+# Set up the environment (venv, requirements)
+make setup
+
+# Run all tests
+make test
+
+# Lint code with flake8
+make lint
+
+# Format code with Black
+make format
+
+# Intake a new champion
+make intake
+
+# Run cooldown analysis
+make analysis
+
+# Generate summary markdowns
+make summary
+
+# Clean up venv and cache files
+make clean
+```
+
+Run `make help` to see all available commands.
 
 ---
 
@@ -113,7 +150,6 @@ Raid_Tools/
 ---
 
 ### 3. Summarize Champion Results Tool
-
 - **Purpose:** Generate readable summary markdowns for each champion, including skill order and expected damage from the cooldown analysis.
 
 - **Key Script (in `Summarize Champion Results/`):**
@@ -147,7 +183,44 @@ Raid_Tools/
 3. **Summary Generation**
    - Run `jsonToMdPerChamp.py` in `Summarize Champion Results/` to generate readable summaries for each champion, including skill order and expected damage.
 
-4. **Testing**
+
+## Getting Started Fast
+
+1. **Clone the repository and open a terminal in the repo root.**
+
+2. **Run the following command to set up everything:**
+
+  ```sh
+  make setup
+  ```
+  This will:
+  - Create a .venv virtual environment if it doesn't exist
+  - Install all required Python packages
+  - Check for the VS Code CLI
+
+3. **Run tools and tests with one command each:**
+
+  ```sh
+  make intake    # Intake a new champion
+  make analysis  # Run cooldown analysis
+  make summary   # Generate summary markdowns
+  make test      # Run all tests
+  ```
+
+4. **(Optional) Lint and format code:**
+
+  ```sh
+  make lint      # Run flake8 linter
+  make format    # Run Black formatter
+  ```
+
+5. **(Optional) Clean up environment and cache files:**
+
+  ```sh
+  make clean
+  ```
+
+Run `make help` to see all available commands.
    - Run `pytest` or execute the scripts in `Tests/` to validate data and paths.
 
 ---
