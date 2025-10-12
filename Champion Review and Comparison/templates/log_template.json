@@ -1,5 +1,6 @@
 ﻿{
   "champion": "ExampleChampion",
+  "rarity": "Legendary",
   "owned": true,
   "overview": {
     "role": "HP Burn DPS / Debuff Specialist",

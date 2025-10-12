@@ -58,10 +58,18 @@ def add_to_owned_list(champion_name, update_date=True):
 def create_json_placeholder(champion_name):
     os.makedirs(champion_json_dir, exist_ok=True)
     path = os.path.join(champion_json_dir, f"{champion_name}.json")
+    # Prompt for rarity
+    rarity = input(f"Enter rarity for {champion_name} (Rare/Epic/Legendary/Mythic): ").strip().capitalize()
+    if rarity not in ["Rare", "Epic", "Legendary", "Mythic"]:
+        rarity = "Unknown"
     # Always set owned to true by default
     with open(path, "w", encoding="utf-8") as f:
-        f.write("{\n  \"champion\": \"" + champion_name + "\",\n  \"owned\": true\n}")
-    print(f"📁 Placeholder JSON for {champion_name} created/updated with owned=true")
+        f.write("{\n"
+                f'  "champion": "{champion_name}",\n'
+                f'  "rarity": "{rarity}",\n'
+                '  "owned": true\n'
+                "}")
+    print(f"📁 Placeholder JSON for {champion_name} created/updated with owned=true and rarity={rarity}")
 
 def create_prompt_md(champion_name):
     os.makedirs(prompt_dir, exist_ok=True)
