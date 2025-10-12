@@ -7,25 +7,69 @@ It includes tools for champion intake, prompt generation, review, skill cycle si
 
 ---
 
+## Quick Start
+
+1. **Initialize the Environment**
+
+   Open a terminal in the repo root and run:
+
+   ```sh
+   python "Champion Review and Comparison/Setup_Environment.py"
+   ```
+   This will:
+   - Create a .venv virtual environment if it doesn't exist
+   - Install required Python packages (pyperclip, pytest)
+   - Check for the VS Code CLI
+   - Activate the Virtual Environment
+
+2. **Activate teh virtual environment**
+
+   - On Windows:
+     ```sh
+     .\.venv\Scripts\Activate
+     ```
+   - On macOS/Linux:
+     ```sh
+     source .venv/bin/activate
+     ```
+
+3. **Run tools and Tests**
+
+   ```sh
+   # Intake a new champion
+   python "Champion Review and Comparison/Tools/champIntake.py"
+
+   # Run cooldown analysis
+   python ChampionAnalysisTool/championAnalysis.py
+
+   # Generate summary markdowns
+   python "Summarize Champion Results/jsonToMdPerChamp.py"
+
+   # Run all tests
+   python -m pytest
+   ```
+
+---
+
 ## Folder Structure
 Raid_Tools/
 ├── Champion Review and Comparison/
-│ ├── Champions/
-│ ├── prompt/
-│ ├── Tools/
-│ ├── Summary/
-│ ├── templates/
-│ └── README.md
+│   ├── Champions/
+│   ├── prompt/
+│   ├── Tools/
+│   ├── Summary/
+│   ├── templates/
+│   └── README.md
 ├── ChampionAnalysisTool/
-│ ├── championAnalysis.py
-│ ├── cooldown_analysis/
-│ └── README.md
+│   ├── championAnalysis.py
+│   ├── cooldown_analysis/
+│   └── README.md
 ├── Summarize Champion Results/
-│ ├── jsonToMdPerChamp.py
-│ └── README.md
+│   ├── jsonToMdPerChamp.py
+│   └── README.md
 ├── Tests/
-│ ├── testChampionReviewAndComparison.py
-│ └── test_script_paths.py
+│   ├── testChampionReviewAndComparison.py
+│   └── test_script_paths.py
 └── README.md (this file)
 
 ---
@@ -107,19 +151,23 @@ Raid_Tools/
 
 ```sh
 # 1. Setup environment (if needed)
-python "Champion Review and Comparison/Tools/setupEnvironment.py"
+python "Champion Review and Comparison/Setup_Environment.py"
 
-# 2. Intake a new champion
+# 2. Activate the virtual environment
+# Windows:
+.\.venv\Scripts\Activate
+# macOS/Linux:
+source .venv/bin/activate
+
+# 3. Intake a new champion
 python "Champion Review and Comparison/Tools/champIntake.py"
 
-# 3. Run cooldown analysis
-python "ChampionAnalysisTool/championAnalysis.py"
+# 4. Run cooldown analysis
+python ChampionAnalysisTool/championAnalysis.py
 
-# 4. Generate summary markdowns
+# 5. Generate summary markdowns
 python "Summarize Champion Results/jsonToMdPerChamp.py"
 
-# 5. Run tests
-pytest
-# or
-python [test_script_paths.py](http://_vscodecontentref_/5)
+# 6. Run tests
+python -m pytest
 ```
