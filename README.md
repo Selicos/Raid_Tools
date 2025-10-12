@@ -27,7 +27,7 @@ It includes tools for champion intake, prompt generation, review, skill cycle si
    - Check for the VS Code CLI
    - Activate the Virtual Environment
 
-2. **Activate teh virtual environment**
+2. **Activate the virtual environment**
 
    - On Windows:
      ```sh
@@ -49,7 +49,7 @@ It includes tools for champion intake, prompt generation, review, skill cycle si
   python ChampionAnalysisTool/championAnalysis.py
 
   # Generate summary markdowns
-  python "Summarize Champion Results/jsonToMdPerChamp.py"
+  python ChampionSummary/generateChampionSummaries.py
 
   # Run all tests
   python -m pytest
@@ -106,9 +106,11 @@ Raid_Tools/
 │   ├── championAnalysis.py
 │   ├── cooldown_analysis/
 │   └── README.md
-├── Summarize Champion Results/
-│   ├── jsonToMdPerChamp.py
-│   └── README.md
+├── ChampionSummary/
+│   ├── generateChampionSummaries.py
+│   ├── readme.md
+│   └── Summary/
+│       └── [ChampionName].md
 ├── Tests/
 │   ├── testChampionReviewAndComparison.py
 │   └── test_script_paths.py
@@ -124,14 +126,13 @@ Raid_Tools/
 
 - **Key Scripts (in `Champion Review and Comparison/Tools/`):**
   - `champIntake.py` — Add a new champion, generate prompt, and create a placeholder JSON.
-  - `setupEnvironment.py` — Install required Python packages and check VS Code CLI.
+  - `Setup_Environment.py` — Install required Python packages and check VS Code CLI.
   - `cleanupDuplicateChampions.py` — Merge and clean up duplicate champion files.
   - `updateOwnedChampions.py` — Update champions missing timestamps or older than 30 days.
   - `champSynergyCheck.py` — (WIP) Analyze synergy between owned champions.
 
 - **Other Files:**
   - `templates/logTemplate.json` — Template for new champion JSON files.
-  - `Summary/` — Human-readable markdown summaries for each champion.
   - `prompt/` — Prompt files for Copilot Chat.
   - `Champions/Owned Champions/Owned_Champion_list.md` — List of owned champions and timestamps.
 
@@ -149,14 +150,14 @@ Raid_Tools/
 
 ---
 
-### 3. Summarize Champion Results Tool
+### 3. Champion Summary Tool
 - **Purpose:** Generate readable summary markdowns for each champion, including skill order and expected damage from the cooldown analysis.
 
-- **Key Script (in `Summarize Champion Results/`):**
-  - `jsonToMdPerChamp.py` — Generates summary markdowns for each champion.
+- **Key Script (in `ChampionSummary/`):**
+  - `generateChampionSummaries.py` — Generates summary markdowns for each champion.
 
 - **Output:**
-  - `Champion Review and Comparison/Summary/` — Contains summary markdowns for each champion.
+  - `ChampionSummary/Summary/` — Contains summary markdowns for each champion.
 
 ---
 
@@ -181,7 +182,7 @@ Raid_Tools/
    - Run `championAnalysis.py` in `ChampionAnalysisTool/` to simulate skill cycles and generate detailed markdown reports in `cooldown_analysis/`.
 
 3. **Summary Generation**
-   - Run `jsonToMdPerChamp.py` in `Summarize Champion Results/` to generate readable summaries for each champion, including skill order and expected damage.
+   - Run `generateChampionSummaries.py` in `ChampionSummary/` to generate readable summaries for each champion, including skill order and expected damage.
 
 
 ## Getting Started Fast
@@ -244,12 +245,8 @@ python "Champion Review and Comparison/Tools/champIntake.py"
 python ChampionAnalysisTool/championAnalysis.py
 
 # 5. Generate summary markdowns
-python "Summarize Champion Results/jsonToMdPerChamp.py"
+python ChampionSummary/generateChampionSummaries.py
 
 # 6. Run tests
 python -m pytest
 ```
-
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
-![Platform](https://img.shields.io/badge/platform-windows%20%7C%20linux%20%7C%20macos-blue)

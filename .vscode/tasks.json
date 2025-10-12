@@ -71,10 +71,10 @@
       "type": "shell",
       "command": "python",
       "args": [
-        "jsonToMdPerChamp.py"
+        "generateChampionSummaries.py"
       ],
       "options": {
-        "cwd": "${workspaceFolder}\\Summarize Champion Results"
+        "cwd": "${workspaceFolder}\\ChampionSummary"
       }
     }
   ]

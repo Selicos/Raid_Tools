@@ -25,7 +25,7 @@ analysis:
 
 # Generate champion summaries (now in ChampionSummary)
 summary:
-	python ChampionSummary/jsonToMdPerChamp.py
+	python ChampionSummary/generateChampionSummaries.py
 
 test:
 	python -m pytest

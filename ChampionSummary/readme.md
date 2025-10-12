@@ -1,8 +1,8 @@
-# Summarize Champion Results
+# Champion Summary
 
 ## Overview
 
-This tool generates human-readable summary markdown files for each champion, consolidating key information from champion JSON files and including skill order and expected damage results from the cooldown analysis tool.
+This tool generates human-readable summary markdown files for each champion, consolidating key information from champion JSON files and including skill order and expected damage results from the cooldown analysis tool. All output is written to `ChampionSummary/Summary/`.
 
 ---
 
@@ -18,10 +18,13 @@ This tool generates human-readable summary markdown files for each champion, con
 ---
 
 ## Folder Structure
-Summarize Champion Results/
-├── JSON_to_MD_Per_Champ.py
+ChampionSummary/
+├── generateChampionSummaries.py
+├── readme.md
+└── Summary/
+    └── [ChampionName].md
 
-- `JSON_to_MD_Per_Champ.py`: Script for generating summary markdowns for each champion, including analysis results.
+- `generateChampionSummaries.py`: Script for generating summary markdowns for each champion, including analysis results.
 
 ---
 
@@ -33,6 +36,5 @@ Summarize Champion Results/
    `../ChampionAnalysisTool/cooldown_analysis/`
 3. Run the summary script:
    ```sh
-   python JSON_to_MD_Per_Champ.py
-
-```
+   python generateChampionSummaries.py
+   ```
