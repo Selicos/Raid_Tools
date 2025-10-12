@@ -97,6 +97,7 @@ def create_prompt_md(champion_name):
         "Instructions:\n"
         "- Fill in each section for {0} using the module templates below.\n"
         "- Output only the final JSON object.\n\n"
+        "---\n"
     ).format(champion_name)
 
     modules_dir = os.path.join(os.path.dirname(__file__), "modules")
@@ -254,6 +255,17 @@ def generate_prompt_for_champion(champion_name):
         else:
             prompt += f"---\n## Module {i}\n(Missing module file)\n\n"
     return prompt
+
+def save_champion_json(champion_name, champion_data):
+    champions_dir = os.path.join(os.path.dirname(__file__), "Champions")
+    os.makedirs(champions_dir, exist_ok=True)
+    json_path = os.path.join(champions_dir, f"{champion_name}.json")
+    with open(json_path, "w", encoding="utf-8") as f:
+        json.dump(champion_data, f, indent=2)
+    print(f"Champion JSON saved to {json_path}")
+
+# Example usage after generating champion_data:
+# save_champion_json("Artak", champion_data)
 
 if __name__ == "__main__":
     print("🔍 Champion Intake")

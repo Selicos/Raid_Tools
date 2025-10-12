@@ -1,0 +1,250 @@
+{
+  "champion": "Michelangelo",
+  "owned": true,
+  "overview": {
+    "role": "DEF Support",
+    "archetype": "DEF-based Buffer & Cleanser",
+    "primary_damage_stat": "DEF",
+    "skill_scaling": {
+      "A1": "DEF",
+      "A2": "DEF",
+      "A3": "DEF"
+    },
+    "best_mastery": {
+      "pve_pvp": "Eagle Eye",
+      "clan_boss": "Bulwark"
+    },
+    "booking_roi": "Medium",
+    "gear_sets": {
+      "pvp_offense": ["Immunity", "Perception"],
+      "pvp_defense": ["Stone Skin", "Resilience"],
+      "clan_boss": ["Perception", "Speed"],
+      "hydra": ["Perception", "Guardian"],
+      "iron_twins": ["Perception", "Speed"],
+      "dungeons": ["Perception", "Speed"],
+      "solo_farming": ["Regeneration", "Immortal"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Immunity", "pros": "Prevents debuffs", "cons": "Lower DEF" },
+      { "set": "Stone Skin", "pros": "High survivability", "cons": "Lower support output" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["DEF%", "Speed", "RESIST", "ACC"],
+      "clan_boss": ["DEF%", "Speed", "RESIST"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "250+ Resistance",
+      "hydra": "350+ Resistance",
+      "iron_twins": "250+ Resistance"
+    },
+    "best_dungeon_use": "Ice Golem 20"
+  },
+  "skills": {
+    "a1": {
+      "name": "Chisel Strike",
+      "type": "Single Target",
+      "hit_count": 1,
+      "cooldown": "None",
+      "multiplier": "0.18x DEF",
+      "notes": "Attacks 1 enemy. 40% chance of placing a [Decrease ATK] debuff for 2 turns."
+    },
+    "a2": {
+      "name": "Masterpiece Guard",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "4 turns (3 when booked)",
+      "multiplier": "0.22x DEF",
+      "notes": "Places a [Block Debuffs] buff on all allies for 2 turns and heals all allies by 15% of Michelangelo's DEF."
+    },
+    "a3": {
+      "name": "Restoration Fresco",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "6 turns (4 when booked)",
+      "multiplier": "N/A",
+      "notes": "Removes all debuffs from all allies and places a [Increase DEF] buff for 2 turns."
+    },
+    "passive": {
+      "exists": true,
+      "impact": "Whenever an ally receives a debuff, has a 30% chance to remove it immediately."
+    },
+    "booking": {
+      "impact": "Medium",
+      "notes": "Reduces cooldowns and increases healing."
+    },
+    "rotation": {
+      "optimal_cycle": ["A3", "A2", "A1", "A1", "A2", "A1", "A3", "A1", "A2", "A1"],
+      "damage_per_turn": {
+        "a3": "N/A (utility)",
+        "a2": "Low (healing/buff)",
+        "a1": "Low (debuff)"
+      },
+      "average_damage": "Low, focus on support and cleansing",
+      "buff_debuff_uptime": {
+        "Block Debuffs": "40-60% uptime",
+        "Increase DEF": "40-60% uptime"
+      },
+      "extra_turn_frequency": "None"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Restoration Fresco",
+    "skill_priority": ["A3", "A2", "A1"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Arena Support",
+        "mastery": "Eagle Eye",
+        "bonus_damage": "N/A",
+        "notes": "Focus on accuracy and resistance for reliable cleansing"
+      },
+      {
+        "type": "Dungeon Sustain",
+        "mastery": "Bulwark",
+        "bonus_damage": "N/A",
+        "notes": "Improves team survivability and healing"
+      },
+      {
+        "type": "Clan Boss",
+        "mastery": "Bulwark",
+        "bonus_damage": "N/A",
+        "notes": "Sustains team with buffs and debuff removal"
+      },
+      {
+        "type": "Hydra",
+        "mastery": "Eagle Eye",
+        "bonus_damage": "N/A",
+        "notes": "Removes debuffs and keeps team alive"
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Bulwark",
+      "spider_hard": "Eagle Eye",
+      "hydra": "Eagle Eye",
+      "iron_twins": "Bulwark"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "Low (support only)",
+    "notes": "Not a damage dealer, but provides strong buffs and debuff removal."
+  },
+  "synergy": {
+    "recommended_buffs": ["Increase DEF", "Block Debuffs", "Healing"],
+    "support_champion_sets": [
+      ["Doompriest", "High Khatun"],
+      ["Arbiter", "Apothecary"],
+      []
+    ],
+    "recommended_revivors": ["Arbiter", "Doompriest"],
+    "speed_tuning": {
+      "arena": "220–240",
+      "dungeons": "200–220",
+      "clan_boss": "170–190"
+    },
+    "gear_stat_priorities": {
+      "arena": ["DEF%", "Speed", "RESIST"],
+      "clan_boss": ["DEF%", "Speed", "RESIST"],
+      "dungeons": ["DEF%", "Speed", "RESIST"]
+    },
+    "relentless_viability": "Low — not recommended"
+  },
+  "investment": {
+    "value": "Medium",
+    "notes": "Michelangelo is a reliable support for early and mid-game, but less impactful in late-game content.",
+    "owned_comparison": [
+      {
+        "champion": "Doompriest",
+        "comparison": "Doompriest offers passive healing and debuff removal, but less DEF buffing."
+      },
+      {
+        "champion": "Apothecary",
+        "comparison": "Apothecary provides more frequent healing but less cleansing."
+      }
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Doompriest": 9.0,
+      "High Khatun": 8.5
+    },
+    "draft_logic": {
+      "early_pick": false,
+      "counter_pick": true,
+      "avoid": false,
+      "notes": "Best used as a counter to heavy debuff or burst teams."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None",
+    "gear_set_stability": {
+      "Immunity": "Stable — prevents debuffs",
+      "Stone Skin": "Stable — maximizes survivability",
+      "Relentless": "Not recommended"
+    },
+    "rotation_desync_risks": {
+      "Immunity": "Low",
+      "Stone Skin": "Low",
+      "Relentless": "High"
+    }
+  },
+  "utility_comparison": [
+    {
+      "champion": "Doompriest",
+      "role": "Healer/Cleanser",
+      "comparison": "Doompriest is more passive, Michelangelo offers more active DEF buffing."
+    },
+    {
+      "champion": "Apothecary",
+      "role": "Speed Booster",
+      "comparison": "Apothecary has faster healing, Michelangelo has more cleansing and DEF buffs."
+    }
+  ],
+  "ratings": {
+    "pvp": "B+",
+    "clan_boss": "B",
+    "hydra": "B",
+    "iron_twins": "B",
+    "dungeons": "A-",
+    "solo_farming": "C",
+    "relentless_viability": "Low"
+  },
+  "final_summary": {
+    "mastery_preference": "Eagle Eye (Arena/Dungeons), Bulwark (Clan Boss)",
+    "booking_impact": "Medium — improves healing and cooldowns",
+    "damage_rotation": "A3 → A2 → A1 cycle for maximum support",
+    "turn_meter_stability": "Stable with Immunity/Stone Skin; high risk with Relentless",
+    "passive_impact": "Removes debuffs for team sustain",
+    "gear_stat_notes": "DEF%, Speed, RESIST",
+    "ally_synergy_impact": "Works well with speed boosters and revivers",
+    "draft_value": "Counter-pick for debuff/burst teams",
+    "investment_value": "Medium — good early/mid game",
+    "relentless_viability": "Low — not recommended",
+    "similar_owned_champions": ["Doompriest", "Apothecary"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Arena Support",
+        "champions": ["Michelangelo", "Doompriest", "High Khatun"],
+        "strategy": "High Khatun boosts speed, Michelangelo buffs and cleanses, Doompriest heals"
+      },
+      {
+        "name": "Dungeon Sustain",
+        "champions": ["Michelangelo", "Apothecary"],
+        "strategy": "Apothecary heals and boosts speed, Michelangelo buffs DEF and cleanses"
+      }
+    ],
+    "similar_champions": [
+      {
+        "champion": "Doompriest",
+        "similarity_reason": "Healer and cleanser"
+      },
+      {
+        "champion": "Apothecary",
+        "similarity_reason": "Speed booster and healer"
+      }
+    ]
+  }
+}

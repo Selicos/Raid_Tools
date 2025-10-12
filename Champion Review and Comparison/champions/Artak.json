@@ -1,0 +1,317 @@
+{
+  "champion": "Artak",
+  "owned": true,
+  "overview": {
+    "role": "Updated Role",
+    "archetype": "Updated Archetype",
+    "best_mastery": {
+      "pve_pvp": "Helmsmasher",
+      "clan_boss": "Warmaster"
+    },
+    "booking_roi": "High",
+    "gear_sets": {
+      "pvp_offense": [
+        "Savage",
+        "Cruel"
+      ],
+      "clan_boss": [
+        "Reflex",
+        "Relentless"
+      ],
+      "dungeons": [
+        "Perception",
+        "Speed"
+      ]
+    },
+    "focus_stats": {
+      "arena_dungeons": [
+        "ATK%",
+        "Crit Rate",
+        "Speed"
+      ],
+      "clan_boss": [
+        "Accuracy",
+        "HP%",
+        "Speed"
+      ]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "Accuracy ~250\u2013300",
+      "hydra": "Accuracy ~350+",
+      "iron_twins": "Accuracy ~400+"
+    },
+    "best_dungeon_use": "Dragon HARD 10"
+  },
+  "skills": {
+    "a1": {
+      "name": "Pyroclastic Claw",
+      "type": "Single Target",
+      "hit_count": 1,
+      "cooldown": "None",
+      "multiplier": "0.2x HP",
+      "notes": "Attacks 1 enemy. 50% chance of placing a [HP Burn] debuff for 2 turns."
+    },
+    "a2": {
+      "name": "Molten Rage",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "4 turns (3 when booked)",
+      "multiplier": "0.3x HP",
+      "notes": "Attacks all enemies. 100% chance of placing a [HP Burn] debuff for 2 turns."
+    },
+    "a3": {
+      "name": "Infernal Chains",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "5 turns (4 when booked)",
+      "multiplier": "0.35x HP",
+      "notes": "Attacks all enemies. 100% chance of placing a [Decrease DEF] and [HP Burn] debuff for 2 turns."
+    },
+    "passive": {
+      "exists": true,
+      "impact": "Whenever an enemy under [HP Burn] debuff is healed, decreases the amount healed by 50%."
+    },
+    "booking": {
+      "impact": "High",
+      "notes": "Reduces cooldowns and improves burn uptime."
+    },
+    "rotation": {
+      "optimal_cycle": [
+        "A3",
+        "A2",
+        "A1",
+        "A1",
+        "A2",
+        "A1",
+        "A3",
+        "A1",
+        "A2",
+        "A1"
+      ],
+      "damage_per_turn": {
+        "a3": "Varies + burn",
+        "a2": "Varies + burn",
+        "a1": "Varies + burn"
+      },
+      "average_damage": "Depends on HP and burn procs",
+      "buff_debuff_uptime": {
+        "HP Burn": "80% uptime",
+        "DEF Down": "50% uptime"
+      },
+      "extra_turn_frequency": "None \u2014 passive triggers only"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Infernal Chains",
+    "skill_priority": [
+      "A3",
+      "A2",
+      "A1"
+    ],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Single Boss",
+        "mastery": "Warmaster",
+        "bonus_damage": "10K\u201314K per proc",
+        "notes": "Burn ticks stack with Warmaster procs for sustained damage"
+      },
+      {
+        "type": "Boss + 10 Minions",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "22K\u201328K per AOE hit",
+        "notes": "Helmsmasher boosts AOE burn application damage"
+      },
+      {
+        "type": "Boss + 5 Minions",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "18K\u201324K per AOE hit",
+        "notes": "Ideal for Dragon and Ice Golem waves"
+      },
+      {
+        "type": "Boss + 2 High-HP Minions",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "15K\u201320K per AOE hit",
+        "notes": "Burns help chip down tanky adds"
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Warmaster",
+      "spider_hard": "Helmsmasher",
+      "hydra": "Warmaster",
+      "iron_twins": "Helmsmasher"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "55K\u201380K",
+    "notes": "Burn ticks stack with Warmaster procs for sustained damage. Reflex gear can increase uptime but may desync cooldowns."
+  },
+  "synergy": {
+    "recommended_buffs": [
+      "Increase ATK",
+      "Decrease DEF",
+      "Speed Boost",
+      "Turn Meter Fill"
+    ],
+    "support_champion_sets": [
+      [
+        "Deacon Armstrong",
+        "Geomancer"
+      ],
+      [
+        "Arbiter",
+        "Doompriest"
+      ],
+      []
+    ],
+    "recommended_revivors": [
+      "Arbiter",
+      "Doompriest"
+    ],
+    "speed_tuning": {
+      "arena": "230\u2013250",
+      "dungeons": "200\u2013220",
+      "clan_boss": "170\u2013190"
+    },
+    "gear_stat_priorities": {
+      "arena": [
+        "HP%",
+        "Crit Rate",
+        "Crit Damage",
+        "Accuracy",
+        "Speed"
+      ],
+      "clan_boss": [
+        "Accuracy",
+        "Speed",
+        "HP%",
+        "DEF%"
+      ],
+      "dungeons": [
+        "HP%",
+        "Crit Rate",
+        "Accuracy",
+        "Speed"
+      ]
+    },
+    "relentless_viability": "Moderate \u2014 can help cycle burns faster but risks cooldown desync"
+  },
+  "investment": {
+    "value": "High",
+    "notes": "Artak offers strong burn-based damage, reliable debuff application, and PvE versatility.",
+    "owned_comparison": [
+      {
+        "champion": "Geomancer",
+        "comparison": "Geomancer has stronger passive damage and reflect mechanics, but Artak offers more active control and wave-clear."
+      },
+      {
+        "champion": "Deacon Armstrong",
+        "comparison": "Deacon is a setup specialist with excellent turn meter control and debuff support, but lacks direct damage."
+      }
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Geomancer": 7.5,
+      "Deacon Armstrong": 9.0
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": false,
+      "avoid": false,
+      "notes": "Artak is a strong early pick in PvE and PvP due to burn setup and AOE damage."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None \u2014 passive only",
+    "gear_set_stability": {
+      "Reflex": "Unstable \u2014 risks cooldown desync",
+      "Relentless": "Moderate \u2014 can improve burn uptime if tuned",
+      "Savage": "Stable \u2014 no turn manipulation"
+    },
+    "rotation_desync_risks": {
+      "Reflex": "High",
+      "Relentless": "Medium",
+      "Savage": "Low"
+    }
+  },
+  "utility_comparison": [
+    {
+      "champion": "Geomancer",
+      "role": "Passive DPS",
+      "comparison": "Strong passive damage and reflect mechanics; excels in Clan Boss and Hydra"
+    },
+    {
+      "champion": "Deacon Armstrong",
+      "role": "Support Controller",
+      "comparison": "Turn meter boost, DEF Down, and speed tuning; ideal for Arena and setup roles"
+    }
+  ],
+  "ratings": {
+    "pvp": "A",
+    "clan_boss": "A-",
+    "hydra": "B+",
+    "iron_twins": "B",
+    "dungeons": "A",
+    "solo_farming": "B",
+    "relentless_viability": "Moderate"
+  },
+  "final_summary": {
+    "mastery_preference": "Helmsmasher (PvE/PvP), Warmaster (Clan Boss)",
+    "booking_impact": "High \u2014 improves cooldowns and burn uptime",
+    "damage_rotation": "A3 \u2192 A2 \u2192 A1 cycle with 80% burn uptime",
+    "turn_meter_stability": "Stable with Savage; moderate risk with Reflex",
+    "passive_impact": "Burn amplification and bonus effects",
+    "gear_stat_notes": "Accuracy, HP%, Crit Rate, Speed",
+    "ally_synergy_impact": "Strong with Deacon Armstrong and Geomancer",
+    "draft_value": "Early pick in PvE and Arena",
+    "investment_value": "High \u2014 versatile and scalable",
+    "relentless_viability": "Moderate \u2014 viable with tuning",
+    "similar_owned_champions": [
+      "Geomancer",
+      "Deacon Armstrong"
+    ]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Arena Nuking Team",
+        "champions": [
+          "Artak",
+          "Deacon Armstrong"
+        ],
+        "strategy": "Deacon opens with TM boost and DEF Down \u2192 Artak follows with AOE burn"
+      },
+      {
+        "name": "Clan Boss Hybrid Team",
+        "champions": [
+          "Geomancer",
+          "Artak",
+          "Deacon Armstrong"
+        ],
+        "strategy": "Geomancer handles passive damage, Artak adds burst, Deacon maintains rotation"
+      },
+      {
+        "name": "Hydra Control Setup",
+        "champions": [
+          "Geomancer",
+          "Deacon Armstrong",
+          "Artak"
+        ],
+        "strategy": "Use Artak for wave-clear; rely on Geomancer for boss damage"
+      }
+    ],
+    "similar_champions": [
+      {
+        "champion": "Geomancer",
+        "similarity_reason": "Passive damage, PvE boss utility"
+      },
+      {
+        "champion": "Deacon Armstrong",
+        "similarity_reason": "Setup specialist, strong synergy"
+      }
+    ]
+  }
+}

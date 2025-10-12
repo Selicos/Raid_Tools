@@ -1,10 +1,7 @@
-# Champion Review — All Modules
-
+# Champion Log Generation Prompt for Ithos
 
 ---
-
 ## Module 0
-
 ## Module 0: Champion Setup
 
 **Inputs:**
@@ -24,9 +21,7 @@ Initialize champion log and set ownership flag.
 
 
 ---
-
 ## Module 1
-
 ---
 
 ### 📘 `module_1_overview.md`
@@ -94,9 +89,7 @@ List each skill by name and the stat(s) it scales from (e.g., "A1: HP", "A2: DEF
 
 
 ---
-
 ## Module 2
-
 ---
 
 ### 📘 `module_2_skills.md`
@@ -164,9 +157,7 @@ Analyze skill behavior and model 10-turn rotation.
 
 
 ---
-
 ## Module 3
-
 ---
 
 ### 📘 `module_3_team_inputs.md`
@@ -191,9 +182,7 @@ Define first-turn skill and priority order.
 
 
 ---
-
 ## Module 4
-
 ---
 
 ### 📘 `module_4_mastery_simulation.md`
@@ -237,9 +226,7 @@ Simulate Warmaster and Helmsmasher damage across 4 battle scenarios.
 
 
 ---
-
 ## Module 5
-
 ## Module 5: Clan Boss Damage Tracking
 
 **Inputs:**
@@ -259,9 +246,7 @@ Evaluate Clan Boss performance using mastery simulation and rotation modeling.
 
 
 ---
-
 ## Module 6
-
 ---
 
 ### 📘 `module_6_synergy.md`
@@ -285,6 +270,7 @@ Recommend allies and stat tuning based on synergy and gear priorities.
     [],
     []
   ],
+  "recommended_revivors": ["<REVIVER_1>", "<REVIVER_2>"],
   "speed_tuning": {
     "arena": "<VALUE OR RANGE>",
     "dungeons": "<VALUE OR RANGE>",
@@ -302,9 +288,7 @@ Recommend allies and stat tuning based on synergy and gear priorities.
 
 
 ---
-
 ## Module 7
-
 ---
 
 ### 📘 `module_7_investment.md`
@@ -336,9 +320,7 @@ Assess long-term value and compare to similar OWNED champions.
 
 
 ---
-
 ## Module 8
-
 ---
 
 ### 📘 `module_8_intelligence.md`
@@ -372,9 +354,7 @@ Score synergy and guide PvP drafting strategy.
 
 
 ---
-
 ## Module 9
-
 ---
 
 ### 📘 `module_9_turn_meter.md`
@@ -407,9 +387,7 @@ Evaluate turn meter stability and gear impact.
 
 
 ---
-
 ## Module 10
-
 ## Module 10: Utility Comparison Champions
 
 **Inputs:**
@@ -433,9 +411,7 @@ Compare utility roles using OWNED champions and identify similar options.
 
 
 ---
-
 ## Module 11
-
 ---
 
 ### 📘 `module_11_ratings.md`
@@ -464,9 +440,7 @@ Rate performance across content types using color-coded tiers.
 
 
 ---
-
 ## Module 12
-
 ---
 
 ### 📘 `module_12_final_summary.md`
@@ -499,9 +473,7 @@ Recap all findings in prioritized format.
 
 
 ---
-
 ## Module 13
-
 ---
 
 ### 📘 `module_13_synergy_engine.md`
@@ -536,3 +508,5 @@ Build teams using only OWNED champions based on synergy and role matching.
   ]
 }
 ```
+
+

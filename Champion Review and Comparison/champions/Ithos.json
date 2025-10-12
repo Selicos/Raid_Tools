@@ -1,0 +1,250 @@
+{
+  "champion": "Ithos",
+  "owned": true,
+  "overview": {
+    "role": "ATK Nuker",
+    "archetype": "High-damage AOE Nuker",
+    "primary_damage_stat": "ATK",
+    "skill_scaling": {
+      "A1": "ATK",
+      "A2": "ATK",
+      "A3": "ATK"
+    },
+    "best_mastery": {
+      "pve_pvp": "Helmsmasher",
+      "clan_boss": "Warmaster"
+    },
+    "booking_roi": "High",
+    "gear_sets": {
+      "pvp_offense": ["Savage", "Cruel", "Lethal"],
+      "pvp_defense": ["Stone Skin", "Resilience"],
+      "clan_boss": ["Lifesteal", "Perception"],
+      "hydra": ["Perception", "Speed"],
+      "iron_twins": ["Perception", "Accuracy"],
+      "dungeons": ["Savage", "Cruel", "Perception"],
+      "solo_farming": ["Lifesteal", "Speed"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Savage", "pros": "Ignores DEF for max damage", "cons": "Requires high Crit Rate" },
+      { "set": "Stone Skin", "pros": "Survivability in Arena", "cons": "Lower damage" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["ATK%", "Crit Rate", "Crit Damage", "Speed"],
+      "clan_boss": ["ATK%", "Crit Rate", "Crit Damage", "Accuracy"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "200+ Accuracy",
+      "hydra": "250+ Accuracy",
+      "iron_twins": "250+ Accuracy"
+    },
+    "best_dungeon_use": "Fire Knight 25"
+  },
+  "skills": {
+    "a1": {
+      "name": "Abyssal Gaze",
+      "type": "Single Target",
+      "hit_count": 1,
+      "cooldown": "None",
+      "multiplier": "3.5x ATK",
+      "notes": "Attacks 1 enemy. 50% chance of placing a [Decrease DEF] debuff for 2 turns."
+    },
+    "a2": {
+      "name": "Outburst",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "4 turns (3 when booked)",
+      "multiplier": "4.0x ATK",
+      "notes": "Attacks all enemies. 50% chance of placing a [Decrease DEF] debuff for 2 turns."
+    },
+    "a3": {
+      "name": "Extraterrestrial",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "6 turns (4 when booked)",
+      "multiplier": "5.0x ATK",
+      "notes": "Attacks all enemies. Will ignore 50% of enemy DEF."
+    },
+    "passive": {
+      "exists": false,
+      "impact": "None"
+    },
+    "booking": {
+      "impact": "High",
+      "notes": "Reduces cooldowns and increases damage multipliers."
+    },
+    "rotation": {
+      "optimal_cycle": ["A3", "A2", "A1", "A1", "A2", "A1", "A3", "A1", "A2", "A1"],
+      "damage_per_turn": {
+        "a3": "Very high (AOE, ignores DEF)",
+        "a2": "High (AOE, DEF Down)",
+        "a1": "Moderate (single target, DEF Down)"
+      },
+      "average_damage": "Extremely high in Arena and waves",
+      "buff_debuff_uptime": {
+        "HP Burn": "0%",
+        "DEF Down": "50-70% uptime"
+      },
+      "extra_turn_frequency": "None"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Extraterrestrial",
+    "skill_priority": ["A3", "A2", "A1"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Arena Nuke",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "30K–60K per AOE hit",
+        "notes": "Helmsmasher procs can one-shot most enemies"
+      },
+      {
+        "type": "Dungeon Waves",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "25K–50K per AOE hit",
+        "notes": "High wave clear potential"
+      },
+      {
+        "type": "Clan Boss",
+        "mastery": "Warmaster",
+        "bonus_damage": "8K–12K per proc",
+        "notes": "Single target, not optimal but viable"
+      },
+      {
+        "type": "Hydra",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "20K–35K per AOE hit",
+        "notes": "Good for clearing Hydra heads"
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Warmaster",
+      "spider_hard": "Helmsmasher",
+      "hydra": "Helmsmasher",
+      "iron_twins": "Helmsmasher"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "20K–35K",
+    "notes": "Not optimal for Clan Boss, but can provide DEF Down and some damage if needed."
+  },
+  "synergy": {
+    "recommended_buffs": ["Increase ATK", "Increase Crit Rate", "Increase Crit Damage", "Speed Boost"],
+    "support_champion_sets": [
+      ["Arbiter", "Lydia the Deathsiren"],
+      ["Maneater", "Seeker"],
+      []
+    ],
+    "recommended_revivors": ["Arbiter", "Duchess Lilitu"],
+    "speed_tuning": {
+      "arena": "220–250",
+      "dungeons": "200–220",
+      "clan_boss": "170–190"
+    },
+    "gear_stat_priorities": {
+      "arena": ["ATK%", "Crit Rate", "Crit Damage", "Speed"],
+      "clan_boss": ["ATK%", "Crit Rate", "Crit Damage", "Accuracy"],
+      "dungeons": ["ATK%", "Crit Rate", "Crit Damage", "Speed"]
+    },
+    "relentless_viability": "Low — not recommended, as Ithos relies on skill order for maximum burst"
+  },
+  "investment": {
+    "value": "High",
+    "notes": "Ithos is a top-tier Arena nuker and strong for wave clearing in dungeons.",
+    "owned_comparison": [
+      {
+        "champion": "Trunda Giltmallet",
+        "comparison": "Trunda has higher AOE burst but less DEF ignore; Ithos is more consistent."
+      },
+      {
+        "champion": "Foli",
+        "comparison": "Foli is more versatile but Ithos has higher AOE damage."
+      }
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Arbiter": 9.5,
+      "Lydia the Deathsiren": 9.0
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": false,
+      "avoid": false,
+      "notes": "Ithos is a premium Arena nuker and strong early pick for offense."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None",
+    "gear_set_stability": {
+      "Reflex": "Not recommended — disrupts skill order",
+      "Relentless": "Not recommended — disrupts nuke rotation",
+      "Savage": "Stable — maximizes damage"
+    },
+    "rotation_desync_risks": {
+      "Reflex": "High",
+      "Relentless": "High",
+      "Savage": "Low"
+    }
+  },
+  "utility_comparison": [
+    {
+      "champion": "Trunda Giltmallet",
+      "role": "AOE Nuker",
+      "comparison": "Trunda has higher burst but Ithos is more reliable and ignores DEF."
+    },
+    {
+      "champion": "Foli",
+      "role": "Versatile Nuker",
+      "comparison": "Foli brings more utility, but Ithos has higher AOE damage."
+    }
+  ],
+  "ratings": {
+    "pvp": "S",
+    "clan_boss": "C",
+    "hydra": "B",
+    "iron_twins": "B",
+    "dungeons": "A",
+    "solo_farming": "B",
+    "relentless_viability": "Low"
+  },
+  "final_summary": {
+    "mastery_preference": "Helmsmasher (Arena/Dungeons), Warmaster (Clan Boss)",
+    "booking_impact": "High — reduces cooldowns and increases damage",
+    "damage_rotation": "A3 → A2 → A1 cycle for maximum AOE burst",
+    "turn_meter_stability": "Stable with Savage; high risk with Reflex/Relentless",
+    "passive_impact": "None",
+    "gear_stat_notes": "ATK%, Crit Rate, Crit Damage, Speed",
+    "ally_synergy_impact": "Excellent with Arbiter and Lydia for setup and buffs",
+    "draft_value": "Top-tier Arena nuker, strong early pick",
+    "investment_value": "High — remains relevant in endgame",
+    "relentless_viability": "Low — not recommended",
+    "similar_owned_champions": ["Trunda Giltmallet", "Foli"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Arena Nuke Team",
+        "champions": ["Ithos", "Arbiter", "Lydia the Deathsiren"],
+        "strategy": "Arbiter boosts TM, Lydia applies DEF Down, Ithos nukes"
+      },
+      {
+        "name": "Dungeon Wave Clear",
+        "champions": ["Ithos", "Lydia the Deathsiren"],
+        "strategy": "Lydia debuffs, Ithos clears waves"
+      }
+    ],
+    "similar_champions": [
+      {
+        "champion": "Trunda Giltmallet",
+        "similarity_reason": "Top-tier AOE nuker"
+      },
+      {
+        "champion": "Foli",
+        "similarity_reason": "High AOE damage, versatile nuker"
+      }
+    ]
+  }
+}

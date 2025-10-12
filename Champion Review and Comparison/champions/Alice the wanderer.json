@@ -1,0 +1,250 @@
+{
+  "champion": "Alice the Wanderer",
+  "owned": true,
+  "overview": {
+    "role": "Support Healer",
+    "archetype": "Turn Meter Booster & Cleanser",
+    "primary_damage_stat": "HP",
+    "skill_scaling": {
+      "A1": "HP",
+      "A2": "HP",
+      "A3": "HP"
+    },
+    "best_mastery": {
+      "pve_pvp": "Timely Intervention",
+      "clan_boss": "Spirit Haste"
+    },
+    "booking_roi": "Medium",
+    "gear_sets": {
+      "pvp_offense": ["Immunity", "Speed"],
+      "pvp_defense": ["Resilience", "Immunity"],
+      "clan_boss": ["Speed", "Immortal"],
+      "hydra": ["Speed", "Perception"],
+      "iron_twins": ["Speed", "Perception"],
+      "dungeons": ["Speed", "Immortal"],
+      "solo_farming": ["Regeneration", "Immortal"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Immunity", "pros": "Prevents debuffs", "cons": "Lower healing" },
+      { "set": "Speed", "pros": "More turns, more healing", "cons": "Lower survivability" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["HP%", "Speed", "RESIST", "ACC"],
+      "clan_boss": ["HP%", "Speed", "RESIST"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "250+ Resistance",
+      "hydra": "350+ Resistance",
+      "iron_twins": "250+ Resistance"
+    },
+    "best_dungeon_use": "Ice Golem 20"
+  },
+  "skills": {
+    "a1": {
+      "name": "Wanderer's Touch",
+      "type": "Single Target",
+      "hit_count": 1,
+      "cooldown": "None",
+      "multiplier": "0.18x HP",
+      "notes": "Attacks 1 enemy. Heals the ally with the lowest HP by 10% of Alice's max HP."
+    },
+    "a2": {
+      "name": "Soothing Step",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "4 turns (3 when booked)",
+      "multiplier": "0.22x HP",
+      "notes": "Heals all allies by 20% of Alice's max HP and removes 1 debuff from each."
+    },
+    "a3": {
+      "name": "Rabbit's Rally",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "6 turns (4 when booked)",
+      "multiplier": "N/A",
+      "notes": "Fills the Turn Meter of all allies by 20% and places a [Block Debuffs] buff for 2 turns."
+    },
+    "passive": {
+      "exists": true,
+      "impact": "Whenever an ally drops below 30% HP, places a [Continuous Heal] buff on them for 2 turns."
+    },
+    "booking": {
+      "impact": "Medium",
+      "notes": "Reduces cooldowns and increases healing."
+    },
+    "rotation": {
+      "optimal_cycle": ["A3", "A2", "A1", "A1", "A2", "A1", "A3", "A1", "A2", "A1"],
+      "damage_per_turn": {
+        "a3": "N/A (utility)",
+        "a2": "Low (healing)",
+        "a1": "Low (healing)"
+      },
+      "average_damage": "Low, focus on healing and support",
+      "buff_debuff_uptime": {
+        "Block Debuffs": "40-60% uptime",
+        "Continuous Heal": "Triggered as needed"
+      },
+      "extra_turn_frequency": "None"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Rabbit's Rally",
+    "skill_priority": ["A3", "A2", "A1"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Arena Support",
+        "mastery": "Timely Intervention",
+        "bonus_damage": "N/A",
+        "notes": "Provides emergency healing and TM boost"
+      },
+      {
+        "type": "Dungeon Sustain",
+        "mastery": "Spirit Haste",
+        "bonus_damage": "N/A",
+        "notes": "Improves healing and speed for dungeon runs"
+      },
+      {
+        "type": "Clan Boss",
+        "mastery": "Spirit Haste",
+        "bonus_damage": "N/A",
+        "notes": "Sustains team with heals and debuff removal"
+      },
+      {
+        "type": "Hydra",
+        "mastery": "Timely Intervention",
+        "bonus_damage": "N/A",
+        "notes": "Removes debuffs and keeps team alive"
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Spirit Haste",
+      "spider_hard": "Timely Intervention",
+      "hydra": "Timely Intervention",
+      "iron_twins": "Spirit Haste"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "Low (healing/support only)",
+    "notes": "Not a damage dealer, but provides strong healing and debuff removal."
+  },
+  "synergy": {
+    "recommended_buffs": ["Increase SPD", "Block Debuffs", "Continuous Heal"],
+    "support_champion_sets": [
+      ["Arbiter", "Doompriest"],
+      ["High Khatun", "Apothecary"],
+      []
+    ],
+    "recommended_revivors": ["Arbiter", "Doompriest"],
+    "speed_tuning": {
+      "arena": "220–240",
+      "dungeons": "200–220",
+      "clan_boss": "170–190"
+    },
+    "gear_stat_priorities": {
+      "arena": ["HP%", "Speed", "RESIST"],
+      "clan_boss": ["HP%", "Speed", "RESIST"],
+      "dungeons": ["HP%", "Speed", "RESIST"]
+    },
+    "relentless_viability": "Low — not recommended"
+  },
+  "investment": {
+    "value": "Medium",
+    "notes": "Alice the Wanderer is a reliable support for early and mid-game, but less impactful in late-game content.",
+    "owned_comparison": [
+      {
+        "champion": "Doompriest",
+        "comparison": "Doompriest offers passive healing and debuff removal, but less TM boost."
+      },
+      {
+        "champion": "Apothecary",
+        "comparison": "Apothecary provides more frequent TM boosts but less healing."
+      }
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Arbiter": 9.0,
+      "Doompriest": 8.5
+    },
+    "draft_logic": {
+      "early_pick": false,
+      "counter_pick": true,
+      "avoid": false,
+      "notes": "Best used as a counter to heavy debuff or burst teams."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None",
+    "gear_set_stability": {
+      "Immunity": "Stable — prevents debuffs",
+      "Speed": "Stable — maximizes support",
+      "Relentless": "Not recommended"
+    },
+    "rotation_desync_risks": {
+      "Immunity": "Low",
+      "Speed": "Low",
+      "Relentless": "High"
+    }
+  },
+  "utility_comparison": [
+    {
+      "champion": "Doompriest",
+      "role": "Healer/Cleanser",
+      "comparison": "Doompriest is more passive, Alice offers more active TM boost."
+    },
+    {
+      "champion": "Apothecary",
+      "role": "Speed Booster",
+      "comparison": "Apothecary has faster TM boost, Alice has more healing and cleansing."
+    }
+  ],
+  "ratings": {
+    "pvp": "B+",
+    "clan_boss": "B",
+    "hydra": "B",
+    "iron_twins": "B",
+    "dungeons": "A-",
+    "solo_farming": "C",
+    "relentless_viability": "Low"
+  },
+  "final_summary": {
+    "mastery_preference": "Timely Intervention (Arena/Dungeons), Spirit Haste (Clan Boss)",
+    "booking_impact": "Medium — improves healing and cooldowns",
+    "damage_rotation": "A3 → A2 → A1 cycle for maximum support",
+    "turn_meter_stability": "Stable with Speed/Immunity; high risk with Relentless",
+    "passive_impact": "Continuous Heal for emergency sustain",
+    "gear_stat_notes": "HP%, Speed, RESIST",
+    "ally_synergy_impact": "Works well with speed boosters and revivers",
+    "draft_value": "Counter-pick for debuff/burst teams",
+    "investment_value": "Medium — good early/mid game",
+    "relentless_viability": "Low — not recommended",
+    "similar_owned_champions": ["Doompriest", "Apothecary"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Arena Support",
+        "champions": ["Alice the Wanderer", "Arbiter", "Doompriest"],
+        "strategy": "Arbiter boosts TM, Alice provides healing and Block Debuffs, Doompriest cleanses"
+      },
+      {
+        "name": "Dungeon Sustain",
+        "champions": ["Alice the Wanderer", "High Khatun"],
+        "strategy": "High Khatun boosts speed, Alice heals and cleanses"
+      }
+    ],
+    "similar_champions": [
+      {
+        "champion": "Doompriest",
+        "similarity_reason": "Healer and cleanser"
+      },
+      {
+        "champion": "Apothecary",
+        "similarity_reason": "Speed booster and healer"
+      }
+    ]
+  }
+}

@@ -4,8 +4,50 @@
     {
       "label": "Run Champion Intake",
       "type": "shell",
-      "command": "python champ_intake.py",
-      "group": "build",
+      "command": "python",
+      "args": [
+        "Champion Review and Comparison\\Champ_Intake.py"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Run Champion Comparison Tracker",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "Champion Review and Comparison\\Comparisons\\Champ_Comparison_Track_owned.py"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      }
+    },
+    {
+      "label": "Cleanup Duplicate Champions",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "Champion Review and Comparison\\Tools\\cleanup_duplicate_champions.py"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
       "presentation": {
         "echo": true,
         "reveal": "always",
