@@ -1,10 +1,11 @@
 # Raid_Tools
 
-# 🛡️ Champion Intake & Review System
+# Champion Intake & Review System
 
-## 📦 Overview
+## Overview
 
-This system streamlines the intake, prompt generation, and review update process for Raid Shadow Legends champions. It supports single or batch processing, integrates with Copilot Chat, and auto-validates and timestamps each champion entry.
+This system streamlines the intake, prompt generation, review, analysis, and summary process for Raid Shadow Legends champions.  
+It supports single or batch processing, integrates with Copilot Chat, auto-validates and timestamps each champion entry, and provides skill cycle analysis and summary reports.
 
 1. Run task for Champion Intake OR initiate pythin script Champ_Intake. 
     This will generate and open a prompt md file and also generate a json for the champion.
@@ -14,7 +15,7 @@ This system streamlines the intake, prompt generation, and review update process
 
 ---
 
-## 🧰 Prerequisites
+## Prerequisites
 
 Before running the system, ensure you have:
 
@@ -27,27 +28,40 @@ Before running the system, ensure you have:
 
 ---
 
-## 📁 Required Folder Structure
+## Required Folder Structure
 
 Create the following structure inside your working directory:
 
-Champion Review and Comparison/ 
-├── Champions/ │ 
-|    ├── Owned Champions/
-|    │ └── Owned_Champion_list.md 
-|    │ └── [ChampionName].json 
-|    ├── prompt/ 
-|    │ └── [ChampionName].md 
-|    ├── Tools/
-|    | └── champ_intake.py 
-|    | └── setup_environment.py 
-|    | └── cleanup_duplicates.py
-
-
+Champion Review and Comparison/
+├── Champions/
+│   ├── Owned Champions/
+│   │   └── Owned_Champion_list.md
+│   │   └── [ChampionName].json
+│   ├── prompt/
+│   │   └── [ChampionName].md
+│   ├── Tools/
+│   │   ├── champ_intake.py
+│   │   ├── setup_environment.py
+│   │   ├── cleanup_duplicate_champions.py
+│   │   ├── update_owned_champions.py
+│   │   └── champ_synergy_check.py
+│   └── Summary/
+│       └── [ChampionName].md
+├── Tests/
+│   └── test_champion_review_and_comparison.py
+├── templates/
+│   └── log_template.json
+├── README.md
+Summarize Champion Results/
+├── JSON_to_MD_Per_Champ.py
+ChampionAnalysisTool/
+├── champion_analysis.py
+├── cooldown_analysis/
+│   └── [ChampionName].md
 
 ---
 
-## 📄 Required Files
+## Required Files
 
 | File                        | Purpose                                                                 |
 |-----------------------------|-------------------------------------------------------------------------|
@@ -60,49 +74,62 @@ Champion Review and Comparison/
 
 ---
 
-## 🚀 Initialization Steps
+## Key Files & Scripts
 
-1. **Clone or create your project folder**
-2. **Open in VS Code**
-3. **Ensure Python interpreter is selected**
-4. **Run setup script once:**
-    ```bash
-    python setup_environment.py
+| File/Folder                                 | Purpose                                                                 |
+|----------------------------------------------|-------------------------------------------------------------------------|
+| `champ_intake.py`                             | Main script for champion intake, prompt generation, and review updates  |
+| `setup_environment.py`                        | Ensures required Python packages and tools are installed                |
+| `cleanup_duplicate_champions.py`              | Detects and merges case-insensitive duplicates in JSON and prompt files |
+| `update_owned_champions.py`                   | Updates all champions older than 30 days or missing a timestamp         |
+| `champ_synergy_check.py`                      | (WIP) Analyze synergy across owned champions                            |
+| `Owned_Champion_list.md`                      | Tracks owned champions and last update timestamps                       |
+| `[ChampionName].json`                         | Champion log file (with rarity, overview, skills, etc.)                 |
+| `[ChampionName].md` (prompt/)                 | Prompt file for Copilot Chat to generate champion log                   |
+| `Summary/[ChampionName].md`                   | Human-readable summary for each champion                                |
+| `test_champion_review_and_comparison.py`      | Tests for champion JSON and prompt consistency                          |
+| `log_template.json` (templates/)              | Template for new champion JSON files                                    |
+| `champion_analysis.py` (ChampionAnalysisTool) | Standalone script for skill cycle simulation and analysis               |
+| `cooldown_analysis/[ChampionName].md`         | Detailed skill cycle analysis output                                    |
+| `JSON_to_MD_Per_Champ.py` (Summarize Champion Results) | Generates summary markdowns for each champion                  |
 
-5. **Run the champ_intake.py script to begin:**
-    python champ_intake.py
+---
 
-    You’ll be prompted: Use smart batch mode from owned list? (y/n):
-        y → Scans Owned_Champion_list.md and updates champions older than 30 days
-        n → Prompts for a single champion name
-    
-6. **Copy and paste the output of the script into Copilot, or set it up to add to Chat in VSCode:**
-    python cleanup_duplicates.py
-        Detects duplicate .json and .md files (case-insensitive)
-        Offers to merge them safely
+## Workflow
 
-## Scripts and Tool dir Summary
-Module Summaries
-champ_intake.py
-    Adds champion to owned list
-    Creates placeholder JSON
-    Generates prompt .md file
-    Validates both files
-    Copies prompt to clipboard
-    Opens in VS Code or Notepad
-    Updates timestamp if successful
-setup_environment.py
-    Installs required Python packages (e.g. pyperclip)
-    Checks for VS Code CLI availability
-    Ensures environment is ready before intake
-cleanup_duplicate_champions.py
-    Scans for case-insensitive duplicates in Champions/ and prompt/
-    Merges content into one file
-    Deletes redundant copies
-    Adds merge header for traceability
-Champ_synergy_check.py
-    WIP
-    To use copilot to compare owned champions from json and identify synergy across attacks, buffs, debuffs, and rotations.
-update_owned_champions.py
-    Run through owned champ list and update all older than 30 days, or without a date stamp.
-##
+1. **Champion Intake & Prompt Generation**
+   - Run `champ_intake.py` (from Tools or via VS Code task).
+   - Generates a prompt `.md` and a placeholder `.json` for the champion.
+   - Use Copilot Chat to generate or update the champion JSON based on the prompt.
+
+2. **Champion Review & Update**
+   - Edit the champion JSON as needed.
+   - Run `update_owned_champions.py` to refresh outdated entries.
+   - Use `cleanup_duplicate_champions.py` to merge duplicate files.
+
+3. **Skill Cycle Analysis**
+   - Run `champion_analysis.py` in `ChampionAnalysisTool/` to simulate skill cycles and generate detailed markdown reports in `cooldown_analysis/`.
+
+4. **Summary Generation**
+   - Run `JSON_to_MD_Per_Champ.py` in `Summarize Champion Results/` to generate readable summaries for each champion, including skill order and expected damage from the analysis tool.
+
+5. **Testing & Validation**
+   - Run tests in `Tests/` to ensure all champion JSONs and prompts are consistent and valid.
+
+---
+
+## Example Usage
+
+```sh
+# Setup environment
+python Champion Review and Comparison/Champions/Tools/setup_environment.py
+
+# Intake a new champion
+python Champion Review and Comparison/Champions/Tools/champ_intake.py
+
+# Run skill cycle analysis
+python [champion_analysis.py](http://_vscodecontentref_/1)
+
+# Generate summary markdowns
+python Summarize\ Champion\ Results/JSON_to_MD_Per_Champ.py
+```
