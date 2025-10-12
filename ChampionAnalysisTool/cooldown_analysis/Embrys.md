@@ -1,4 +1,16 @@
-# Embrys Skill Cycle Analysis
+# Embrys Skill Cycle Summary
+
+**Skill Order (Boss, 16 turns):**
+Nightmare Chains → Shadow Wave → Dark Embrace → Dark Embrace → Nightmare Chains → Shadow Wave → Dark Embrace → Dark Embrace → Nightmare Chains → Shadow Wave → Dark Embrace → Dark Embrace → Nightmare Chains → Shadow Wave → Dark Embrace → Dark Embrace
+
+**Total Estimated Damage (Boss, 16 turns):** 426000
+
+**Skill Order (Wave, 16 turns):**
+Nightmare Chains → Shadow Wave → Dark Embrace → Dark Embrace → Nightmare Chains → Shadow Wave → Dark Embrace → Dark Embrace → Nightmare Chains → Shadow Wave → Dark Embrace → Dark Embrace → Nightmare Chains → Shadow Wave → Dark Embrace → Dark Embrace
+
+**Total Estimated Damage (Wave, 16 turns):** 1362000
+
+## Embrys Skill Cycle Analysis
 
 **⚠️ Difference detected between expected and simulated cycle. Consider updating the champion JSON.**
 

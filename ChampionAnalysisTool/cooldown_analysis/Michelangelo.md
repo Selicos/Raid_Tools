@@ -1,4 +1,16 @@
-# Michelangelo Skill Cycle Analysis
+# Michelangelo Skill Cycle Summary
+
+**Skill Order (Boss, 16 turns):**
+Restoration Fresco → Masterpiece Guard → Chisel Strike → Chisel Strike → Restoration Fresco → Masterpiece Guard → Chisel Strike → Chisel Strike → Restoration Fresco → Masterpiece Guard → Chisel Strike → Chisel Strike → Restoration Fresco → Masterpiece Guard → Chisel Strike → Chisel Strike
+
+**Total Estimated Damage (Boss, 16 turns):** 11600
+
+**Skill Order (Wave, 16 turns):**
+Restoration Fresco → Masterpiece Guard → Chisel Strike → Chisel Strike → Restoration Fresco → Masterpiece Guard → Chisel Strike → Chisel Strike → Restoration Fresco → Masterpiece Guard → Chisel Strike → Chisel Strike → Restoration Fresco → Masterpiece Guard → Chisel Strike → Chisel Strike
+
+**Total Estimated Damage (Wave, 16 turns):** 29200
+
+## Michelangelo Skill Cycle Analysis
 
 **⚠️ Difference detected between expected and simulated cycle. Consider updating the champion JSON.**
 

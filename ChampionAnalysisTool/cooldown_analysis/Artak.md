@@ -1,4 +1,16 @@
-# Artak Skill Cycle Analysis
+# Artak Skill Cycle Summary
+
+**Skill Order (Boss, 16 turns):**
+Infernal Chains → Molten Rage → Pyroclastic Claw → Pyroclastic Claw → Infernal Chains → Molten Rage → Pyroclastic Claw → Pyroclastic Claw → Infernal Chains → Molten Rage → Pyroclastic Claw → Pyroclastic Claw → Infernal Chains → Molten Rage → Pyroclastic Claw → Pyroclastic Claw
+
+**Total Estimated Damage (Boss, 16 turns):** 210000
+
+**Skill Order (Wave, 16 turns):**
+Infernal Chains → Molten Rage → Pyroclastic Claw → Pyroclastic Claw → Infernal Chains → Molten Rage → Pyroclastic Claw → Pyroclastic Claw → Infernal Chains → Molten Rage → Pyroclastic Claw → Pyroclastic Claw → Infernal Chains → Molten Rage → Pyroclastic Claw → Pyroclastic Claw
+
+**Total Estimated Damage (Wave, 16 turns):** 730000
+
+## Artak Skill Cycle Analysis
 
 **⚠️ Difference detected between expected and simulated cycle. Consider updating the champion JSON.**
 

@@ -26,7 +26,7 @@ TURNS = 16
 
 # Directory containing champion JSON files and output
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-CHAMPIONS_DIR = os.path.join(BASE_DIR, "..", "Champion Review and Comparison", "Champions")
+CHAMPIONS_DIR = os.path.join(BASE_DIR, "Champion Review and Comparison", "Champions")
 COOLDOWN_ANALYSIS_DIR = os.path.join(os.path.dirname(__file__), "cooldown_analysis")
 os.makedirs(COOLDOWN_ANALYSIS_DIR, exist_ok=True)
 

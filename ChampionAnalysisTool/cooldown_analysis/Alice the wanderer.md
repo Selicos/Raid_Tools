@@ -1,4 +1,16 @@
-# Alice the wanderer Skill Cycle Analysis
+# Alice the wanderer Skill Cycle Summary
+
+**Skill Order (Boss, 16 turns):**
+Rabbit's Rally → Soothing Step → Wanderer's Touch → Wanderer's Touch → Rabbit's Rally → Soothing Step → Wanderer's Touch → Wanderer's Touch → Rabbit's Rally → Soothing Step → Wanderer's Touch → Wanderer's Touch → Rabbit's Rally → Soothing Step → Wanderer's Touch → Wanderer's Touch
+
+**Total Estimated Damage (Boss, 16 turns):** 116000
+
+**Skill Order (Wave, 16 turns):**
+Rabbit's Rally → Soothing Step → Wanderer's Touch → Wanderer's Touch → Rabbit's Rally → Soothing Step → Wanderer's Touch → Wanderer's Touch → Rabbit's Rally → Soothing Step → Wanderer's Touch → Wanderer's Touch → Rabbit's Rally → Soothing Step → Wanderer's Touch → Wanderer's Touch
+
+**Total Estimated Damage (Wave, 16 turns):** 292000
+
+## Alice the wanderer Skill Cycle Analysis
 
 **⚠️ Difference detected between expected and simulated cycle. Consider updating the champion JSON.**
 

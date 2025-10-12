@@ -19,16 +19,12 @@ def get_cooldown_analysis(champion_name):
         return None
     with open(md_path, encoding="utf-8") as f:
         lines = f.readlines()
-    # Extract key sections (example: everything from "## Scenario:" to next "##" or end)
+    # Extract everything from the top until the first '##' header (not including it)
     summary = []
-    in_section = False
     for line in lines:
-        if line.startswith("## Scenario:"):
-            in_section = True
-        if in_section:
-            summary.append(line)
-        if in_section and line.startswith("## Expected"):
+        if line.startswith("## "):
             break
+        summary.append(line)
     return "".join(summary).strip() if summary else None
 
 def create_json_placeholder(champion_name):

@@ -1,4 +1,16 @@
-# Ithos Skill Cycle Analysis
+# Ithos Skill Cycle Summary
+
+**Skill Order (Boss, 16 turns):**
+Extraterrestrial → Outburst → Abyssal Gaze → Abyssal Gaze → Extraterrestrial → Outburst → Abyssal Gaze → Abyssal Gaze → Extraterrestrial → Outburst → Abyssal Gaze → Abyssal Gaze → Extraterrestrial → Outburst → Abyssal Gaze → Abyssal Gaze
+
+**Total Estimated Damage (Boss, 16 turns):** 480000
+
+**Skill Order (Wave, 16 turns):**
+Extraterrestrial → Outburst → Abyssal Gaze → Abyssal Gaze → Extraterrestrial → Outburst → Abyssal Gaze → Abyssal Gaze → Extraterrestrial → Outburst → Abyssal Gaze → Abyssal Gaze → Extraterrestrial → Outburst → Abyssal Gaze → Abyssal Gaze
+
+**Total Estimated Damage (Wave, 16 turns):** 1560000
+
+## Ithos Skill Cycle Analysis
 
 **⚠️ Difference detected between expected and simulated cycle. Consider updating the champion JSON.**
 
