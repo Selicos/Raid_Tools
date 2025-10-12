@@ -34,6 +34,13 @@ def check_optional_tools(tools):
         if not shutil.which(cmd):
             print(f"⚠️ {name} not found. You may need to add it to your PATH.")
 
+def install_requirements_file(python_exe, requirements_path="requirements.txt"):
+    if os.path.isfile(requirements_path):
+        print(f"📦 Installing packages from {requirements_path} ...")
+        subprocess.check_call([python_exe, "-m", "pip", "install", "-r", requirements_path])
+    else:
+        print(f"⚠️  {requirements_path} not found. Skipping requirements file installation.")
+
 def run_setup():
     print("🔧 Running environment setup...")
 
@@ -42,6 +49,10 @@ def run_setup():
 
     print(f"🔎 Using Python interpreter: {python_exe}")
 
+    # Install from requirements.txt if present
+    install_requirements_file(python_exe)
+
+    # Ensure required packages are present (fallback)
     check_and_install_packages(python_exe, required_packages)
     check_optional_tools(optional_tools)
 
@@ -54,7 +65,7 @@ def run_setup():
     print("➡️  To run tools and tests, use:")
     print(f"   python -m pytest")
     print(f"   python ChampionAnalysisTool/championAnalysis.py")
-    print(f"   python Summarize\ Champion\ Results/jsonToMdPerChamp.py")
+    print(f"   python Summarize\\ Champion\\ Results/jsonToMdPerChamp.py")
     print(f"   python Champion Review and Comparison/Tools/champIntake.py")
 
 if __name__ == "__main__":

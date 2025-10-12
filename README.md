@@ -1,3 +1,8 @@
+
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
+![Platform](https://img.shields.io/badge/platform-windows%20%7C%20linux%20%7C%20macos-blue)
+
 # Raid Tools: Champion Review, Analysis, and Summary System
 
 ## Overview
@@ -171,3 +176,7 @@ python "Summarize Champion Results/jsonToMdPerChamp.py"
 # 6. Run tests
 python -m pytest
 ```
+
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
+![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
+![Platform](https://img.shields.io/badge/platform-windows%20%7C%20linux%20%7C%20macos-blue)

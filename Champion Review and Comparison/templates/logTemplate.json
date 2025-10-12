@@ -1,214 +1,217 @@
 ﻿{
-  "champion": "ExampleChampion",
-  "rarity": "Legendary",
+  "champion": "Sample Champion",
+  "rarity": "Rarity",
   "owned": true,
   "overview": {
-    "role": "HP Burn DPS / Debuff Specialist",
-    "archetype": "HP-based AOE Burner",
+    "role": "Support",
+    "archetype": "Healer/Buffer",
     "primary_damage_stat": "HP",
     "skill_scaling": {
-      "A1": "HP",
-      "A2": "HP",
-      "A3": "HP"
+      "A1": "HP"
     },
     "best_mastery": {
-      "pve_pvp": "Helmsmasher",
-      "clan_boss": "Warmaster"
+      "pve_pvp": "Rapid Response",
+      "clan_boss": "Tough Skin"
     },
-    "booking_roi": "High",
+    "booking_roi": "Medium",
     "gear_sets": {
-      "pvp_offense": ["Savage", "Perception", "Cruel"],
-      "pvp_defense": ["Stone Skin", "Resilience"],
-      "clan_boss": ["Reflex", "Relentless", "Perception"],
-      "hydra": ["Reflex", "Guardian", "Perception"],
+      "pvp_offense": ["Speed", "Perception"],
+      "pvp_defense": ["Resilience"],
+      "clan_boss": ["Speed", "Immortal"],
+      "hydra": ["Guardian", "Perception"],
       "iron_twins": ["Perception", "Speed"],
-      "dungeons": ["Savage", "Perception", "Accuracy"],
+      "dungeons": ["Speed", "Accuracy"],
       "solo_farming": ["Regeneration", "Immortal"]
     },
     "gear_tradeoffs": [
-      { "set": "Reflex", "pros": "More frequent burns", "cons": "Unpredictable cooldowns" }
+      { "set": "Speed", "pros": "Faster turns", "cons": "Lower survivability" }
     ],
     "focus_stats": {
-      "arena_dungeons": ["HP%", "Crit Rate", "Crit Damage", "Accuracy", "Speed"],
-      "clan_boss": ["Accuracy", "Speed", "HP%", "DEF%"]
+      "arena_dungeons": ["HP%", "Speed", "Accuracy"],
+      "clan_boss": ["HP%", "DEF%", "Speed"]
     },
     "accuracy_resistance": {
-      "hard_10_dungeons": "400+ Accuracy",
-      "hydra": "500+ Accuracy",
-      "iron_twins": "350+ Accuracy"
+      "hard_10_dungeons": "250+ Accuracy",
+      "hydra": "350+ Accuracy",
+      "iron_twins": "220+ Accuracy"
     },
-    "best_dungeon_use": "Dragon Hard 10"
+    "best_dungeon_use": "Dragon 20"
   },
   "skills": {
     "a1": {
-      "name": "Pyroclastic Claw",
+      "name": "Shield Bash",
       "type": "Single Target",
       "hit_count": 1,
       "cooldown": "None",
-      "multiplier": "0.2x HP",
-      "notes": "Attacks 1 enemy. 50% chance of placing a [HP Burn] debuff for 2 turns."
+      "multiplier": "0.15x HP",
+      "notes": "Attacks 1 enemy. 30% chance to place a 15% [Continuous Heal] buff on this Champion for 1 turn."
     },
     "a2": {
-      "name": "Molten Rage",
-      "type": "AOE",
-      "hit_count": 1,
-      "cooldown": "4 turns (3 when booked)",
-      "multiplier": "0.3x HP",
-      "notes": "Attacks all enemies. 100% chance of placing a [HP Burn] debuff for 2 turns."
+      "name": "",
+      "type": "",
+      "hit_count": null,
+      "cooldown": "",
+      "multiplier": "",
+      "notes": ""
     },
     "a3": {
-      "name": "Infernal Chains",
-      "type": "AOE",
-      "hit_count": 1,
-      "cooldown": "5 turns (4 when booked)",
-      "multiplier": "0.35x HP",
-      "notes": "Attacks all enemies. 100% chance of placing a [Decrease DEF] and [HP Burn] debuff for 2 turns."
+      "name": "",
+      "type": "",
+      "hit_count": null,
+      "cooldown": "",
+      "multiplier": "",
+      "notes": ""
     },
     "passive": {
-      "exists": true,
-      "impact": "Whenever an enemy under [HP Burn] debuff is healed, decreases the amount healed by 50%."
+      "name": "",
+      "description": ""
     },
     "booking": {
-      "impact": "High",
-      "notes": "Reduces cooldowns and improves burn uptime."
+      "impact": "",
+      "notes": ""
     },
     "rotation": {
-      "optimal_cycle": ["A3", "A2", "A1", "A1", "A2", "A1", "A3", "A1", "A2", "A1"],
-      "damage_per_turn": {
-        "a3": "Varies + burn",
-        "a2": "Varies + burn",
-        "a1": "Varies + burn"
-      },
-      "average_damage": "Depends on HP and burn procs",
-      "buff_debuff_uptime": {
-        "HP Burn": "80% uptime",
-        "DEF Down": "50% uptime"
-      },
-      "extra_turn_frequency": "None — passive triggers only"
+      "optimal_cycle": "",
+      "damage_per_turn": "",
+      "average_damage": "",
+      "buff_debuff_uptime": "",
+      "extra_turn_frequency": ""
     }
   },
   "team_inputs": {
-    "first_turn_skill": "Infernal Chains",
-    "skill_priority": ["A3", "A2", "A1"],
+    "first_turn_skill": "Shield Bash",
+    "skill_priority": ["A1"],
     "disabled_skills": []
   },
   "mastery_simulation": {
     "scenarios": [
       {
         "type": "Single Boss",
-        "mastery": "Warmaster",
-        "bonus_damage": "10K–14K per proc",
-        "notes": "Burn ticks stack with Warmaster procs for sustained damage"
+        "mastery": "Rapid Response",
+        "bonus_damage": "N/A",
+        "notes": "Focus on speed and healing for support role."
       }
     ],
     "recommended_mastery": {
-      "clan_boss": "Warmaster",
-      "spider_hard": "Helmsmasher",
-      "hydra": "Warmaster",
-      "iron_twins": "Helmsmasher"
+      "clan_boss": "Tough Skin",
+      "spider_hard": "Rapid Response",
+      "hydra": "Rapid Response",
+      "iron_twins": "Tough Skin"
     }
   },
   "clan_boss": {
-    "damage_per_turn": "55K–80K",
-    "notes": "Burn ticks stack with Warmaster procs for sustained damage."
+    "damage_per_turn": "10K–15K",
+    "notes": "Primarily provides healing and buffs."
   },
   "synergy": {
-    "recommended_buffs": ["Increase ATK", "Decrease DEF", "Speed Boost", "Turn Meter Fill"],
+    "recommended_buffs": ["Increase DEF", "Continuous Heal", "Speed Boost"],
     "support_champion_sets": [
-      ["Deacon Armstrong", "Geomancer"],
-      ["Arbiter", "Doompriest"],
-      []
+      ["Sample Champion", "Arbiter"],
+      ["Sample Champion", "Doompriest"]
     ],
     "recommended_revivors": ["Arbiter", "Doompriest"],
     "speed_tuning": {
-      "arena": "230–250",
-      "dungeons": "200–220",
+      "arena": "200–220",
+      "dungeons": "180–200",
       "clan_boss": "170–190"
     },
     "gear_stat_priorities": {
-      "arena": ["HP%", "Crit Rate", "Crit Damage", "Accuracy", "Speed"],
-      "clan_boss": ["Accuracy", "Speed", "HP%", "DEF%"],
-      "dungeons": ["HP%", "Crit Rate", "Accuracy", "Speed"]
+      "arena": ["HP%", "Speed", "Accuracy"],
+      "clan_boss": ["HP%", "DEF%", "Speed"],
+      "dungeons": ["HP%", "Speed", "Accuracy"]
     },
-    "relentless_viability": "Moderate — can help cycle burns faster but risks cooldown desync"
+    "relentless_viability": "Low — not recommended for support role"
   },
   "investment": {
-    "value": "High",
-    "notes": "Strong burn-based damage, reliable debuff application, and PvE versatility.",
+    "value": "Medium",
+    "notes": "Solid support for early and mid-game content.",
     "owned_comparison": [
       {
-        "champion": "Geomancer",
-        "comparison": "Geomancer has stronger passive damage, but ExampleChampion offers more active control."
+        "champion": "Doompriest",
+        "comparison": "Doompriest offers more passive healing, but Sample Champion provides more buffs."
       }
     ]
   },
   "intelligence": {
     "synergy_scores": {
-      "Geomancer": 7.5,
-      "Deacon Armstrong": 9.0
+      "Arbiter": 8.5,
+      "Doompriest": 8.0
     },
     "draft_logic": {
       "early_pick": true,
       "counter_pick": false,
       "avoid": false,
-      "notes": "Strong early pick in PvE and PvP due to burn setup and AOE damage."
+      "notes": "Good early pick for survivability and buffs."
     }
   },
   "turn_meter": {
-    "extra_turn_effects": "None — passive only",
+    "extra_turn_effects": "None",
     "gear_set_stability": {
-      "Reflex": "Unstable — risks cooldown desync",
-      "Relentless": "Moderate — can improve burn uptime if tuned",
-      "Savage": "Stable — no turn manipulation"
+      "Speed": "Stable",
+      "Perception": "Stable"
     },
     "rotation_desync_risks": {
-      "Reflex": "High",
-      "Relentless": "Medium",
-      "Savage": "Low"
+      "Speed": "Low",
+      "Perception": "Low"
     }
   },
   "utility_comparison": [
     {
-      "champion": "Geomancer",
-      "role": "Passive DPS",
-      "comparison": "Strong passive damage and reflect mechanics; excels in Clan Boss and Hydra"
+      "champion": "Doompriest",
+      "role": "Healer",
+      "comparison": "Doompriest offers more passive healing, Sample Champion provides more buffs."
     }
   ],
   "ratings": {
-    "pvp": "A",
-    "clan_boss": "A-",
-    "hydra": "B+",
+    "pvp": "B+",
+    "clan_boss": "B",
+    "hydra": "B",
     "iron_twins": "B",
-    "dungeons": "A",
-    "solo_farming": "B",
-    "relentless_viability": "Moderate"
+    "dungeons": "B+",
+    "solo_farming": "C",
+    "relentless_viability": "Low"
   },
   "final_summary": {
-    "mastery_preference": "Helmsmasher (PvE/PvP), Warmaster (Clan Boss)",
-    "booking_impact": "High — improves cooldowns and burn uptime",
-    "damage_rotation": "A3 → A2 → A1 cycle with 80% burn uptime",
-    "turn_meter_stability": "Stable with Savage; moderate risk with Reflex",
-    "passive_impact": "Burn amplification and bonus effects",
-    "gear_stat_notes": "Accuracy, HP%, Crit Rate, Speed",
-    "ally_synergy_impact": "Strong with Deacon Armstrong and Geomancer",
-    "draft_value": "Early pick in PvE and Arena",
-    "investment_value": "High — versatile and scalable",
-    "relentless_viability": "Moderate — viable with tuning",
-    "similar_owned_champions": ["Geomancer", "Deacon Armstrong"]
+    "mastery_preference": "Rapid Response (PvE/PvP), Tough Skin (Clan Boss)",
+    "booking_impact": "Medium — improves healing and buff uptime",
+    "damage_rotation": "A1 cycle with healing",
+    "turn_meter_stability": "Stable with Speed/Perception",
+    "passive_impact": "Continuous Heal application",
+    "gear_stat_notes": "HP%, Speed, Accuracy",
+    "ally_synergy_impact": "Strong with Arbiter and Doompriest",
+    "draft_value": "Early pick for support",
+    "investment_value": "Medium — useful for early/mid-game",
+    "relentless_viability": "Low — not recommended",
+    "similar_owned_champions": ["Doompriest", "Arbiter"]
   },
   "synergy_engine": {
     "team_setups": [
       {
-        "name": "Arena Nuking Team",
-        "champions": ["ExampleChampion", "Deacon Armstrong"],
-        "strategy": "Deacon opens with TM boost and DEF Down → ExampleChampion follows with AOE burn"
+        "name": "Early Game Support Team",
+        "champions": ["Sample Champion", "Arbiter"],
+        "strategy": "Arbiter boosts TM and heals, Sample Champion provides additional buffs and healing."
       }
     ],
     "similar_champions": [
       {
-        "champion": "Geomancer",
-        "similarity_reason": "Passive damage, PvE boss utility"
+        "champion": "Doompriest",
+        "similarity_reason": "Healer and buffer for early/mid-game"
       }
     ]
+  },
+  "ascension": 6,
+  "blessing": "Cruelty",
+  "factionGuardian": true,
+  "gearRecommendations": [
+    "Speed Set",
+    "Perception Set"
+  ],
+  "masterySuggestions": [
+    "Support Tree: Rapid Response",
+    "Defense Tree: Tough Skin"
+  ],
+  "llmAnalysis": {
+    "summary": "Sample Champion excels at keeping allies alive with heals and shields.",
+    "synergy": "Works well with counterattack champions."
   }
 }
