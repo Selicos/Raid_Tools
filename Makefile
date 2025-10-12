@@ -22,15 +22,21 @@ intake:
 analysis:
 	python ChampionAnalysisTool/championAnalysis.py
 
+
+# Generate champion summaries (now in ChampionSummary)
 summary:
-	python "Summarize Champion Results/jsonToMdPerChamp.py"
+	python ChampionSummary/jsonToMdPerChamp.py
 
 test:
 	python -m pytest
 
+
+# Run flake8 linter
 lint:
 	flake8 .
 
+
+# Run Black code formatter
 format:
 	black .
 

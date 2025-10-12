@@ -34,3 +34,5 @@ Summarize Champion Results/
 3. Run the summary script:
    ```sh
    python JSON_to_MD_Per_Champ.py
+
+```
