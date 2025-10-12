@@ -6,7 +6,7 @@
       "type": "shell",
       "command": "python",
       "args": [
-        "Champion Review and Comparison\\Champ_Intake.py"
+        "Champion Review and Comparison\\Tools\\champIntake.py"
       ],
       "group": {
         "kind": "build",
@@ -42,7 +42,7 @@
       "type": "shell",
       "command": "python",
       "args": [
-        "Champion Review and Comparison\\Tools\\cleanup_duplicate_champions.py"
+        "Champion Review and Comparison\\Tools\\cleanupDuplicateChampions.py"
       ],
       "group": {
         "kind": "build",
@@ -60,10 +60,21 @@
       "type": "shell",
       "command": "python",
       "args": [
-        "champion_analysis.py"
+        "championAnalysis.py"
       ],
       "options": {
         "cwd": "${workspaceFolder}\\ChampionAnalysisTool"
+      }
+    },
+    {
+      "label": "Generate Champion Summaries",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "jsonToMdPerChamp.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}\\Summarize Champion Results"
       }
     }
   ]
