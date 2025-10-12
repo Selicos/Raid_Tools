@@ -6,7 +6,11 @@
 
 This system streamlines the intake, prompt generation, and review update process for Raid Shadow Legends champions. It supports single or batch processing, integrates with Copilot Chat, and auto-validates and timestamps each champion entry.
 
-1. Run task for Champion Intake OR initiate pythin script Champ_Intake
+1. Run task for Champion Intake OR initiate pythin script Champ_Intake. 
+    This will generate and open a prompt md file and also generate a json for the champion.
+2. Ask Copilot Chat (Ctrl+Shift+I) to: “Based on the open prompt file, generate the champion JSON for [champion].”
+3. Copy the output json into the champion.json file generated in step 1.
+4. Run tests or cleanup as needed.
 
 ---
 
