@@ -17,6 +17,35 @@
       "problemMatcher": []
     },
     {
+      "label": "Bulk Import Owned Champions",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "Tools/import_owned_champions.py",
+        "--from-owned-list"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Batch Prompt Generation (All Owned)",
+      "type": "shell",
+      "command": "python",
+      "args": [
+        "Tools/import_owned_champions.py",
+        "--from-owned-list",
+        "--trigger-intake"
+      ],
+      "group": "build",
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
       "label": "Run Champion Comparison Tracker",
       "type": "shell",
   "command": "python ChampionIntake/Comparisons/Champ_Comparison_Track_owned.py",

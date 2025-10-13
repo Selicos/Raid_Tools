@@ -206,21 +206,45 @@ Open the workspace in VS Code and install all recommended extensions when prompt
 
 ## Tools and Scripts
 
-### 1. Champion Review and Comparison Tools
 
-- **Purpose:** Intake new champions, generate prompts, maintain champion logs, and validate data.
+### 1. Champion Management & Review Tools
 
-- **Key Scripts (in `Champion Review and Comparison/Tools/`):**
-  - `champIntake.py` — Add a new champion, generate prompt, and create a placeholder JSON.
-  - `Setup_Environment.py` — Install required Python packages and check VS Code CLI.
-  - `cleanupDuplicateChampions.py` — Merge and clean up duplicate champion files.
-  - `updateOwnedChampions.py` — Update champions missing timestamps or older than 30 days.
-  - `champSynergyCheck.py` — (WIP) Analyze synergy between owned champions.
+- **Purpose:** Intake new champions, generate prompts, maintain champion logs, validate data, and perform bulk import and batch prompt generation.
+
+- **Key Scripts:**
+  - `Tools/import_owned_champions.py` — Authoritative CLI for champion management, bulk import, and batch prompt generation from the owned list.
+  - `ChampionIntake/Champ_Intake.py` — Add a new champion, generate prompt, and create a placeholder JSON (single champion intake).
+  - `Tools/Setup_Environment.py` — Install required Python packages and check VS Code CLI.
+  - `Tools/cleanup_duplicate_champions.py` — Merge and clean up duplicate champion files.
+  - `ChampionIntake/Comparisons/Champ_Comparison_Track_owned.py` — Compare owned champions.
 
 - **Other Files:**
-  - `templates/logTemplate.json` — Template for new champion JSON files.
-  - `prompt/` — Prompt files for Copilot Chat.
-  - `Champions/Owned Champions/Owned_Champion_list.md` — List of owned champions and timestamps.
+  - `ChampionIntake/templates/logTemplate.json` — Template for new champion JSON files.
+  - `ChampionIntake/Prompt/` — Prompt files for Copilot Chat.
+  - `ChampionIntake/Champions/Owned_Champions/Owned_champion_list.md` — List of owned champions and timestamps.
+
+#### Champion Management CLI Usage
+
+Use `Tools/import_owned_champions.py` for all champion management, bulk import, and batch prompt generation workflows:
+
+```sh
+# Import owned champions from a file (default: ChampionIntake/Champions/Owned_Champions/Owned_champion_list.md)
+python Tools/import_owned_champions.py --from-owned-list
+
+# Trigger champion intake and prompt generation for all owned champions
+python Tools/import_owned_champions.py --from-owned-list --trigger-intake
+
+# Import a single champion by name and rarity
+python Tools/import_owned_champions.py --name "Arbiter" --rarity "Legendary"
+```
+
+See the script's help for all options:
+
+```sh
+python Tools/import_owned_champions.py --help
+```
+
+Do **not** use or reference `manage_champions.py` (this script does not exist) or any legacy paths.
 
 ---
 

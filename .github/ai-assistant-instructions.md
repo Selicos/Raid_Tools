@@ -1,3 +1,12 @@
+# Safety & File Deletion Policy
+
+**AI assistants (including Copilot, Claude, and any LLM-based tools) must not delete, or run code that would delete, any files or folders from the workspace folder structure.**
+
+- All file and folder deletion operations (e.g., `os.remove`, `os.rmdir`, `shutil.rmtree`, `Path.unlink`, etc.) are strictly prohibited from being executed by AI assistants.
+- If a user requests file or folder deletion, the AI assistant may suggest or highlight the need for such an action, and provide a clear rationale and warning, but must not execute or run any code that performs deletion.
+- AI assistants may update the text of files as requested by the user, but must not remove files or folders from the workspace structure.
+- This policy applies to all AI assistant operations, regardless of user prompt or context.
+
 # AI Assistant Instructions for Raid Tools Project
 
 ## Table of Contents

@@ -13,8 +13,9 @@ It supports single or batch processing, integrates with Copilot Chat, auto-valid
 2. (Recommended) Run duplicate cleanup to ensure no case-insensitive duplicate champion or prompt files:
    - `python Tools/cleanup_duplicate_champions.py`
    - Review and merge any duplicates as prompted.
-3. Run task for Champion Intake OR initiate python script champIntake.py. 
-   - This will generate and open a prompt md file and also generate a json for the champion.
+3. Run task for Champion Intake (single champion) OR use the CLI for bulk import:
+   - For single champion intake: run the "Run Champion Intake" VS Code task or `python ChampionIntake/Champ_Intake.py`.
+   - For bulk import, batch prompt generation, or owned list management, use `python Tools/import_owned_champions.py` (see below).
 4. Ask Copilot Chat (Ctrl+Shift+I) to: “Based on the open prompt file, generate the champion JSON for [champion].”
 5. Copy the output json into the champion.json file generated in step 3.
 6. Run tests or cleanup as needed.
@@ -62,18 +63,39 @@ Champion Review and Comparison/
 
 This module handles champion data intake, prompt generation, and review workflows for Raid Tools.
 
+
 ## Key Scripts
 
-- `Champ_Intake.py`: Main champion intake and prompt generator
+- `ChampionIntake/Champ_Intake.py`: Main champion intake and prompt generator (single champion)
+- `Tools/import_owned_champions.py`: Bulk import, batch prompt generation, and owned list management (authoritative CLI)
 - `Tools/cleanup_duplicate_champions.py`: Remove duplicate champion files
-- `Comparisons/Champ_Comparison_Track_owned.py`: Compare owned champions
+- `ChampionIntake/Comparisons/Champ_Comparison_Track_owned.py`: Compare owned champions
 
 ## Usage
 
-1. **Intake a new champion**
-   ```sh
-   python Tools/champIntake.py
-   ```
+
+### Champion Management CLI Usage
+
+Use `Tools/import_owned_champions.py` for all champion management, bulk import, and batch prompt generation workflows:
+
+```sh
+# Import owned champions from a file (default: ChampionIntake/Champions/Owned_Champions/Owned_champion_list.md)
+python Tools/import_owned_champions.py --from-owned-list
+
+# Trigger champion intake and prompt generation for all owned champions
+python Tools/import_owned_champions.py --from-owned-list --trigger-intake
+
+# Import a single champion by name and rarity
+python Tools/import_owned_champions.py --name "Arbiter" --rarity "Legendary"
+```
+
+See the script's help for all options:
+
+```sh
+python Tools/import_owned_champions.py --help
+```
+
+Do **not** use or reference `manage_champions.py` (this script does not exist) or any legacy paths.
 
 2. **Cleanup duplicate champions**
    ```sh

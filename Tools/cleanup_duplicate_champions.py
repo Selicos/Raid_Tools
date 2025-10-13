@@ -88,7 +88,8 @@ def merge_or_rename_duplicates(directory, extension, dry_run=True):
                         content = f.read()
                     with open(dst, "a", encoding="utf-8") as f:
                         f.write("\n\n# Merged from " + dup + "\n" + content)
-                    os.remove(src)
+                    # os.remove(src)  # File deletion disabled for safety
+                    print(f"⚠️ File deletion disabled: {dup} would have been removed after merging into {keep}")
                     print(f"✅ Merged {dup} → {keep}")
                 except Exception as e:
                     print(f"❌ Failed to merge {dup}: {e}")

@@ -1,4 +1,17 @@
+
+
 # GitHub Copilot Instructions for Raid Tools
+## Safety & File Deletion Policy
+
+
+**Copilot and Copilot Chat must not delete, or run code that would delete, any files or folders from the workspace folder structure.**
+
+- All file and folder deletion operations (e.g., `os.remove`, `os.rmdir`, `shutil.rmtree`, `Path.unlink`, etc.) are strictly prohibited from being executed by Copilot or Copilot Chat.
+- If a user requests file or folder deletion, Copilot may suggest or highlight the need for such an action, and provide a clear rationale and warning, but must not execute or run any code that performs deletion.
+- Copilot may update the text of files as requested by the user, but must not remove files or folders from the workspace structure.
+- This policy applies to all Copilot and AI assistant operations, regardless of user prompt or context.
+
+
 
 ## Handling Deprecated Scripts & Data Migrations
 
@@ -7,6 +20,35 @@
 - Provide migration scripts or instructions when possible.
 - Remove or archive legacy files after migration is validated.
 - Update the Index of Bad Ideas & Risky Features if deprecation or migration introduces risk.
+
+## Champion Management CLI Tool
+
+**The authoritative CLI tool for champion management, bulk import, and batch prompt generation is:**
+
+  Tools/import_owned_champions.py
+
+All documentation, tasks, and workflows must reference this script for champion intake, prompt generation, and owned list management. Do **not** reference `manage_champions.py` (this script does not exist) or any legacy paths.
+
+### Sample Usage
+
+```sh
+# Import owned champions from a file (default: ChampionIntake/Champions/Owned_Champions/Owned_champion_list.md)
+python Tools/import_owned_champions.py --from-owned-list
+
+# Trigger champion intake and prompt generation for all owned champions
+python Tools/import_owned_champions.py --from-owned-list --trigger-intake
+
+# Import a single champion by name and rarity
+python Tools/import_owned_champions.py --name "Arbiter" --rarity "Legendary"
+```
+
+See the script's help for all options:
+
+```sh
+python Tools/import_owned_champions.py --help
+```
+
+Update all documentation and tasks to use this script for champion management workflows.
 
 ## Issue & Feature Request Templates
 
