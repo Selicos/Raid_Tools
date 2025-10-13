@@ -24,6 +24,7 @@
 - **Dependencies:** Foundational files in place.
 - **Tests:** Add schema validation tests.
 - **README Updates:** Document schema validation.
+- **Status:** Complete. Schema validation and related tests are implemented and passing.
 
 #### b. Expand Automated Test Suite
 - **Purpose:** Comprehensive coverage for all tools and features.
@@ -32,6 +33,7 @@
 - **Dependencies:** Foundational files in place.
 - **Tests:** Add/expand tests for new features.
 - **README Updates:** Update testing instructions.
+- **Status:** Complete. Automated tests cover all major workflows, including config validation and owned list parsing.
 
 ---
 
@@ -46,6 +48,7 @@
 - **Dependencies:** Foundational files in place.
 - **Tests:** Add tests for extraction, sorting, and reporting.
 - **README Updates:** Document usage, options, and expected output.
+- **Status:** Not started. Next major feature after core automation.
 
 ---
 
@@ -60,6 +63,7 @@
 - **Dependencies:** Schema validation in place.
 - **Tests:** Update schema validation in `testChampionReviewAndComparison.py`.
 - **README Updates:** Document new field and workflow.
+- **Status:** In progress. Gear recommendations are partially included in JSON and summary outputs; further schema and UI integration planned.
 
 #### b. Track Ascension, Blessings, Faction Guardians
 - **Purpose:** More accurate champion analysis.
@@ -68,6 +72,7 @@
 - **Dependencies:** Schema validation in place.
 - **Tests:** Add tests for presence and correct handling of new fields.
 - **README Updates:** Update all relevant READMEs with new data fields.
+- **Status:** Not started.
 
 #### c. Masteries Optimization Suggestions
 - **Purpose:** Suggest optimal masteries for each champion.
@@ -76,6 +81,7 @@
 - **Dependencies:** Schema validation in place.
 - **Tests:** Validate presence and format in test scripts.
 - **README Updates:** Document in root and summary tool READMEs.
+- **Status:** Not started.
 
 #### d. Batch Processing
 - **Purpose:** Allow intake, analysis, and summary generation for multiple champions at once.
@@ -84,6 +90,7 @@
 - **Dependencies:** Champion data enhancements.
 - **Tests:** Batch processing tests.
 - **README Updates:** Add batch usage examples.
+- **Status:** Partially complete. Bulk import and summary generation support batch operations via the Champion Manager interface.
 
 ---
 
@@ -98,6 +105,7 @@
 - **Dependencies:** Champion data enhancements.
 - **Tests:** Add export tests.
 - **README Updates:** Add usage and description to root and tools READMEs.
+- **Status:** Not started.
 
 #### b. Synergy Analyzer
 - **Purpose:** Automatically detect and highlight champion synergies and combos.
@@ -106,6 +114,7 @@
 - **Dependencies:** Team builder tool.
 - **Tests:** Create `testSynergyAnalyzer.py`
 - **README Updates:** Document in root and tools READMEs.
+- **Status:** Not started.
 
 #### c. Artifact Optimizer Integration
 - **Purpose:** Suggest best gear from inventory for each champion.
@@ -114,9 +123,9 @@
 - **Dependencies:** Gear recommendations, team builder.
 - **Tests:** Add tests for gear import and matching.
 - **README Updates:** Add integration instructions.
+- **Status:** Not started.
 
 ---
-
 
 
 **Benefit:** Aligns the project with industry standards (schema validation, CI, pre-commit hooks, coverage, docs, packaging), improving reliability, maintainability, and contributor experience.
@@ -129,6 +138,7 @@
 - **Dependencies:** Add `pydantic` or `jsonschema`.
 - **Tests:** Add schema validation tests.
 - **README Updates:** Document schema validation and error handling.
+- **Status:** Complete. JSON schema validation is implemented and documented.
 
 #### b. Continuous Integration (CI)
 - **Purpose:** Run lint, test, and coverage on every push/PR.
@@ -137,6 +147,7 @@
 - **Dependencies:** None (uses existing tools).
 - **Tests:** CI runs all tests.
 - **README Updates:** Add badge and CI instructions.
+- **Status:** In progress. Basic CI is in place; coverage and badge integration planned.
 
 #### c. Pre-commit Hooks
 - **Purpose:** Enforce lint/format/test before commit.
@@ -145,6 +156,7 @@
 - **Dependencies:** Add `pre-commit`.
 - **Tests:** Pre-commit runs on staged files.
 - **README Updates:** Add setup instructions.
+- **Status:** Not started.
 
 #### d. Test Coverage Reporting
 - **Purpose:** Track and improve test coverage.
@@ -153,6 +165,7 @@
 - **Dependencies:** Add `pytest-cov`.
 - **Tests:** Coverage report in CI.
 - **README Updates:** Add badge and coverage instructions.
+- **Status:** Not started.
 
 #### e. Documentation Site
 - **Purpose:** Provide browsable docs for users and contributors.
@@ -160,6 +173,7 @@
 - **Scripts to Edit:** None.
 - **Dependencies:** Add `mkdocs`.
 - **README Updates:** Add link to docs.
+- **Status:** In progress. Docs folder and structure are in place; mkdocs integration planned.
 
 #### f. Optional: Champion Data as a Python Package
 - **Purpose:** Enable import, validation, and manipulation of champion data as a library.
@@ -168,6 +182,7 @@
 - **Dependencies:** Add `pydantic` or similar.
 - **Tests:** Add import/validation tests.
 - **README Updates:** Add usage examples.
+- **Status:** Not started.
 
 ---
 
@@ -181,6 +196,7 @@
 - **Dependencies:** Foundational improvements, champion data enhancements.
 - **Tests:** Add LLM selection tests.
 - **README Updates:** Document LLM selection.
+- **Status:** Not started.
 
 #### b. Integrate LLM for Champion Analysis
 - **Purpose:** Use LLM to analyze champion skills, stats, etc.
@@ -189,6 +205,7 @@
 - **Dependencies:** LLM selector module, champion data enhancements.
 - **Tests:** Add LLM integration tests.
 - **README Updates:** Document LLM integration.
+- **Status:** Not started.
 
 #### c. Review and Improve Prompt/Module for LLM
 - **Purpose:** Allow users to edit or approve the prompt before sending; modularize prompt templates.
@@ -196,6 +213,7 @@
 - **Dependencies:** LLM integration.
 - **Tests:** Add prompt module tests.
 - **README Updates:** Document prompt editing.
+- **Status:** Not started.
 
 #### d. Parse and Insert LLM Output
 - **Purpose:** Extract structured data from LLM output and update champion JSON.
@@ -203,6 +221,7 @@
 - **Dependencies:** LLM integration.
 - **Tests:** Add output parsing tests.
 - **README Updates:** Document output parsing.
+- **Status:** Not started.
 
 #### e. Testing
 - **Purpose:** Ensure LLM integration, prompt formatting, and output parsing work as intended.
@@ -210,10 +229,12 @@
 - **Dependencies:** LLM integration.
 - **Tests:** Add LLM integration tests.
 - **README Updates:** Document LLM testing.
+- **Status:** Not started.
 
 #### f. Documentation
 - **Purpose:** Document LLM setup, usage, and configuration.
 - **README Updates:** Update root and relevant tool READMEs.
+- **Status:** Not started.
 
 ---
 
@@ -226,6 +247,7 @@
 - **Dependencies:** Foundational improvements, champion data enhancements.
 - **Tests:** Add tests for scraping accuracy, schema compliance, and database operations.
 - **README Updates:** Add a section describing the champion database, scraping process, and how to use or update it. Document new dependencies (e.g., requests, BeautifulSoup, SQLAlchemy).
+- **Status:** Not started.
 
 ---
 
@@ -240,8 +262,6 @@
 - **Dependencies:** Champion data enhancements, encounter data.
 - **Tests:** Add tests for encounter logic, skill order optimization, and output accuracy.
 - **README Updates:** Add a section describing encounter-based simulation and how to use it. Document boss/minion data sources and update process.
+- **Status:** Not started.
 
 ---
-#### d. Parse and Insert LLM Output
-
-- **Purpose:** Extract structured data from LLM output and update champion JSON.
