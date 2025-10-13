@@ -5,12 +5,16 @@
 ---
 
 
+
+**Benefit:** Establishes a robust, maintainable base for all future features, ensuring the project is stable and easy to extend.
 ### 1. Foundational Improvements
 
 *All foundational improvements are complete.*
 
 ---
 
+
+**Benefit:** Guarantees code quality and data integrity by enforcing schema validation and expanding automated test coverage, reducing bugs and regressions.
 ### 2. Testing & Validation
 
 #### a. Implement Schema Validation
@@ -31,6 +35,8 @@
 
 ---
 
+
+**Benefit:** Enables fast, flexible analysis and reporting on champion data, making it easy to audit, compare, and extract insights from all champion files.
 ### 3. Champion JSON Query & Reporting Tool
 
 #### a. Query and Report on Champion JSON Components
@@ -43,6 +49,8 @@
 
 ---
 
+
+**Benefit:** Adds richer, more actionable data (gear, ascension, blessings, masteries, batch processing) to champion files, supporting deeper analysis and better recommendations.
 ### 4. Champion Data Enhancements
 
 #### a. Add Gear Recommendations
@@ -79,6 +87,8 @@
 
 ---
 
+
+**Benefit:** Improves data sharing (PDF/HTML export), enables synergy analysis, and lays groundwork for gear optimization, making the tool more useful for team building and sharing results.
 ### 5. Data Import/Export & Synergy
 
 #### a. Export to PDF/HTML
@@ -107,7 +117,63 @@
 
 ---
 
-### 6. LLM Integration for Champion Analysis
+
+
+**Benefit:** Aligns the project with industry standards (schema validation, CI, pre-commit hooks, coverage, docs, packaging), improving reliability, maintainability, and contributor experience.
+### 6. Best Practices & Modernization
+
+#### a. Schema Validation with Pydantic or JSONSchema
+- **Purpose:** Enforce and auto-validate champion JSON structure.
+- **Files/Paths:** `schemas/`, or a new `champion_data/` package.
+- **Scripts to Edit:** Intake, test, and reporting scripts.
+- **Dependencies:** Add `pydantic` or `jsonschema`.
+- **Tests:** Add schema validation tests.
+- **README Updates:** Document schema validation and error handling.
+
+#### b. Continuous Integration (CI)
+- **Purpose:** Run lint, test, and coverage on every push/PR.
+- **Files/Paths:** `.github/workflows/ci.yml`
+- **Scripts to Edit:** None (uses Makefile/test scripts).
+- **Dependencies:** None (uses existing tools).
+- **Tests:** CI runs all tests.
+- **README Updates:** Add badge and CI instructions.
+
+#### c. Pre-commit Hooks
+- **Purpose:** Enforce lint/format/test before commit.
+- **Files/Paths:** `.pre-commit-config.yaml`
+- **Scripts to Edit:** None.
+- **Dependencies:** Add `pre-commit`.
+- **Tests:** Pre-commit runs on staged files.
+- **README Updates:** Add setup instructions.
+
+#### d. Test Coverage Reporting
+- **Purpose:** Track and improve test coverage.
+- **Files/Paths:** Add `pytest-cov` to requirements.
+- **Scripts to Edit:** Test scripts.
+- **Dependencies:** Add `pytest-cov`.
+- **Tests:** Coverage report in CI.
+- **README Updates:** Add badge and coverage instructions.
+
+#### e. Documentation Site
+- **Purpose:** Provide browsable docs for users and contributors.
+- **Files/Paths:** `docs/`, `mkdocs.yml`
+- **Scripts to Edit:** None.
+- **Dependencies:** Add `mkdocs`.
+- **README Updates:** Add link to docs.
+
+#### f. Optional: Champion Data as a Python Package
+- **Purpose:** Enable import, validation, and manipulation of champion data as a library.
+- **Files/Paths:** `champion_data/`
+- **Scripts to Edit:** Intake, analysis, and reporting scripts.
+- **Dependencies:** Add `pydantic` or similar.
+- **Tests:** Add import/validation tests.
+- **README Updates:** Add usage examples.
+
+---
+
+
+**Benefit:** Leverages AI to automate and enhance champion analysis, enabling smarter recommendations, faster data entry, and more advanced features.
+### 7. LLM Integration for Champion Analysis
 
 #### a. Compare and Select LLM Options
 - **Purpose:** Evaluate available LLM APIs (e.g., OpenAI GPT-4, Azure OpenAI, Google Gemini, local LLMs like Llama.cpp).
@@ -163,6 +229,8 @@
 
 ---
 
+
+**Benefit:** Provides actionable, encounter-specific recommendations for skill usage and team composition, maximizing in-game performance and strategic planning.
 ### 8. Optimal Skill Order & Battle Simulation
 
 #### a. Simulate and Optimize Champion Skill Usage per Encounter

@@ -1,16 +1,16 @@
 # Champion: Alice the Wanderer
 
-**Role:** Support Healer
+**Role:** Attack Nuker / Cooldown Control
 
-**Archetype:** Turn Meter Booster & Cleanser
+**Archetype:** Single Target & AoE Damage / Skill Cooldown Manipulation
 
-**Best Mastery (Clan Boss):** Spirit Haste
+**Best Mastery (Clan Boss):** Warmaster
 
-**Booking ROI:** Medium
+**Booking ROI:** High
 
-**Best Dungeon Use:** Ice Golem 20
+**Best Dungeon Use:** Fire Knight, Doom Tower, Arena
 
-**Synergy (Relentless Viability):** Low — not recommended
+**Synergy (Relentless Viability):** Excellent for more frequent skill cycling and bonus damage.
 
-**Investment Notes:** Alice the Wanderer is a reliable support for early and mid-game, but less impactful in late-game content.
+**Investment Notes:** Top-tier for Arena, Doom Tower, and boss control. High value for cooldown manipulation and nuking.
 

@@ -1,0 +1,220 @@
+{
+  "champion": "Arbiter",
+  "owned": true,
+  "overview": {
+    "role": "Speed Lead / Reviver / Support",
+    "archetype": "Turn Meter Boost / Revive / Buff",
+    "primary_damage_stat": "ATK",
+    "skill_scaling": {
+      "A1": "ATK",
+      "A2": "ATK",
+      "A3": "ATK"
+    },
+    "best_mastery": {
+      "pve_pvp": "Eagle-Eye",
+      "clan_boss": "Eagle-Eye"
+    },
+    "booking_roi": "High",
+    "gear_sets": {
+      "pvp_offense": ["Speed", "Immunity", "Perception"],
+      "pvp_defense": ["Speed", "Immunity", "Resilience"],
+      "clan_boss": ["Speed", "Perception"],
+      "hydra": ["Speed", "Perception"],
+      "iron_twins": ["Speed", "Perception"],
+      "dungeons": ["Speed", "Perception"],
+      "solo_farming": ["Speed"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Immunity", "pros": "Prevents debuffs on open", "cons": "Lower base stats" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["SPD", "HP", "DEF", "RES"],
+      "clan_boss": ["SPD", "HP", "DEF", "RES"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "250+ RES",
+      "hydra": "350+ RES",
+      "iron_twins": "220+ RES"
+    },
+    "best_dungeon_use": "Arena, Faction Wars, All Dungeons"
+  },
+  "skills": {
+    "a1": {
+      "name": "Gust of Wind",
+      "type": "Single Target",
+      "hit_count": 1,
+      "cooldown": "None",
+      "multiplier": "3.5x ATK",
+      "notes": "Attacks 1 enemy. Has a 30% chance of placing a 25% [Weaken] debuff for 2 turns."
+    },
+    "a2": {
+      "name": "Enforced Humility",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "4 turns (bookable to 3)",
+      "multiplier": "4.0x ATK",
+      "notes": "Attacks all enemies. Has a 75% chance of decreasing the duration of all buffs on all enemies by 1 turn."
+    },
+    "a3": {
+      "name": "Mentor of Heroes",
+      "type": "Support",
+      "hit_count": 0,
+      "cooldown": "4 turns (bookable to 3)",
+      "multiplier": "N/A",
+      "notes": "Fills the Turn Meters of all allies by 30% and places a 50% [Increase ATK] buff on all allies for 2 turns. Places a [Revive On Death] buff on all allies for 2 turns if any ally is dead."
+    },
+    "passive": {
+      "exists": false,
+      "impact": "None"
+    },
+    "booking": {
+      "impact": "High",
+      "notes": "Books reduce cooldowns and increase debuff chance."
+    },
+    "rotation": {
+      "optimal_cycle": ["A3", "A2", "A1", "A1", "A3"],
+      "damage_per_turn": {
+        "a3": "Support (no damage)",
+        "a2": "Low (debuff utility)",
+        "a1": "Low (single target, Weaken)"
+      },
+      "average_damage": "Low",
+      "buff_debuff_uptime": {
+        "Weaken": "30-50%",
+        "Increase ATK": "100%"
+      },
+      "extra_turn_frequency": "None"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Mentor of Heroes",
+    "skill_priority": ["Mentor of Heroes", "Enforced Humility", "Gust of Wind"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Arena",
+        "mastery": "Eagle-Eye",
+        "bonus_damage": "Low",
+        "notes": "Focus is on speed and support, not damage."
+      },
+      {
+        "type": "Dungeons",
+        "mastery": "Eagle-Eye",
+        "bonus_damage": "Low",
+        "notes": "Turn meter boost and revive are more valuable than damage."
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Eagle-Eye",
+      "spider_hard": "Eagle-Eye",
+      "hydra": "Eagle-Eye",
+      "iron_twins": "Eagle-Eye"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "Low",
+    "notes": "Provides turn meter boost and revive, not a primary damage dealer."
+  },
+  "synergy": {
+    "recommended_buffs": ["Increase ATK", "Revive", "Turn Meter Boost"],
+    "support_champion_sets": [
+      ["Lydia the Deathsiren", "Krisk the Ageless"],
+      ["Duchess Lilitu", "Siphi the Lost Bride"],
+      []
+    ],
+    "recommended_revivors": ["Duchess Lilitu", "Siphi the Lost Bride"],
+    "speed_tuning": {
+      "arena": "300+",
+      "dungeons": "220+",
+      "clan_boss": "190-210"
+    },
+    "gear_stat_priorities": {
+      "arena": ["SPD", "HP", "DEF", "RES"],
+      "clan_boss": ["SPD", "HP", "DEF", "RES"],
+      "dungeons": ["SPD", "HP", "DEF", "RES"]
+    },
+    "relentless_viability": "Not recommended for Arbiter"
+  },
+  "investment": {
+    "value": "High",
+    "notes": "Top-tier for Arena, Faction Wars, and all PvE content. Essential for early and mid-game progression.",
+    "owned_comparison": [
+      {
+        "champion": "Lydia the Deathsiren",
+        "comparison": "Lydia is a debuffer, Arbiter is a speed lead and reviver."
+      }
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Lydia the Deathsiren": 9,
+      "Krisk the Ageless": 8,
+      "Duchess Lilitu": 9
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": false,
+      "avoid": false,
+      "notes": "Always a safe early pick for speed and revive. Not a damage dealer."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None",
+    "gear_set_stability": {
+      "Reflex": "Not recommended.",
+      "Relentless": "Not recommended.",
+      "Savage": "Not recommended."
+    },
+    "rotation_desync_risks": {
+      "Reflex": "N/A",
+      "Relentless": "N/A",
+      "Savage": "N/A"
+    }
+  },
+  "utility_comparison": [
+    {
+      "champion": "Lydia the Deathsiren",
+      "role": "Debuffer",
+      "comparison": "Lydia brings debuffs, Arbiter brings speed and revive."
+    }
+  ],
+  "ratings": {
+    "pvp": "S",
+    "clan_boss": "A",
+    "hydra": "A",
+    "iron_twins": "A",
+    "dungeons": "S",
+    "solo_farming": "B",
+    "relentless_viability": "D"
+  },
+  "final_summary": {
+    "mastery_preference": "Eagle-Eye for all content",
+    "booking_impact": "High — reduces cooldowns and increases debuff chance",
+    "damage_rotation": "Support-focused, not a damage dealer",
+    "turn_meter_stability": "Extremely stable with high speed",
+    "passive_impact": "None",
+    "gear_stat_notes": "Prioritize SPD, HP, DEF, RES",
+    "ally_synergy_impact": "Best with buffers, revivers, and debuffers",
+    "draft_value": "Top pick for Arena and progression",
+    "investment_value": "High",
+    "relentless_viability": "Low",
+    "similar_owned_champions": ["Lydia the Deathsiren"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Arena Speed Lead",
+        "champions": ["Arbiter", "Lydia the Deathsiren", "Krisk the Ageless"],
+        "strategy": "Speed boost, revive, and debuff for maximum control"
+      }
+    ],
+    "similar_champions": [
+      {
+        "champion": "Lydia the Deathsiren",
+        "similarity_reason": "Both are top-tier Arena and PvE support champions"
+      }
+    ]
+  }
+}

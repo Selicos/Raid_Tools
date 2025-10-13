@@ -19,7 +19,7 @@ from typing import Optional, Dict, Any, List
 champions_dir: str = os.path.join(
     os.path.dirname(__file__),
     "..",
-    "Champion Review and Comparison",
+    "ChampionIntake",
     "Champions",
 )
 summary_dir: str = os.path.join(os.path.dirname(__file__), "Summary")

@@ -1,0 +1,219 @@
+{
+  "champion": "Artak",
+  "owned": true,
+  "overview": {
+    "role": "HP Burn DPS / Debuff Specialist",
+    "archetype": "Burn / Control / Support",
+    "primary_damage_stat": "DEF",
+    "skill_scaling": {
+      "A1": "DEF",
+      "A2": "DEF",
+      "A3": "DEF"
+    },
+    "best_mastery": {
+      "pve_pvp": "Warmaster",
+      "clan_boss": "Warmaster"
+    },
+    "booking_roi": "High",
+    "gear_sets": {
+      "pvp_offense": ["Perception", "Accuracy", "Speed"],
+      "pvp_defense": ["Resilience", "Immortal"],
+      "clan_boss": ["Perception", "Immortal"],
+      "hydra": ["Perception", "Immortal"],
+      "iron_twins": ["Perception", "Immortal"],
+      "dungeons": ["Perception", "Immortal"],
+      "solo_farming": ["Regeneration", "Immortal"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Perception", "pros": "High accuracy, more burns", "cons": "Lower survivability" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["Accuracy", "Speed", "DEF", "HP"],
+      "clan_boss": ["Accuracy", "DEF", "HP", "Speed"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "250+ Accuracy",
+      "hydra": "350+ Accuracy",
+      "iron_twins": "220+ Accuracy"
+    },
+    "best_dungeon_use": "Spider, Dragon, Clan Boss"
+  },
+  "skills": {
+    "a1": {
+      "name": "Pyroclastic Claw",
+      "type": "Single Target",
+      "hit_count": 1,
+      "cooldown": "None",
+      "multiplier": "3.5x DEF",
+      "notes": "Attacks 1 enemy. Has a 50% chance of placing a [HP Burn] debuff for 2 turns."
+    },
+    "a2": {
+      "name": "Molten Rage",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "4 turns",
+      "multiplier": "3.7x DEF",
+      "notes": "Attacks all enemies. Has a 75% chance of placing a [HP Burn] debuff for 2 turns. Also places a 25% [Strengthen] buff on all allies for 2 turns."
+    },
+    "a3": {
+      "name": "Incinerate",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "5 turns",
+      "multiplier": "4.0x DEF",
+      "notes": "Attacks all enemies. Increases the duration of all [HP Burn] debuffs on all enemies by 1 turn, then instantly activates any [HP Burn] debuffs on each enemy."
+    },
+    "passive": {
+      "exists": true,
+      "impact": "Whenever an enemy under a [HP Burn] debuff attacks an ally, has a 100% chance of increasing the duration of all [HP Burn] debuffs on that enemy by 1 turn."
+    },
+    "booking": {
+      "impact": "High",
+      "notes": "Books increase damage, debuff chance, and reduce cooldowns."
+    },
+    "rotation": {
+      "optimal_cycle": ["A2", "A3", "A1", "A1", "A2"],
+      "damage_per_turn": {
+        "a3": "High (activates all HP Burns)",
+        "a2": "High (applies HP Burn to all)",
+        "a1": "Medium (single target HP Burn)"
+      },
+      "average_damage": "High",
+      "buff_debuff_uptime": {
+        "HP Burn": "90-100%",
+        "DEF Down": "0%"
+      },
+      "extra_turn_frequency": "None"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Molten Rage",
+    "skill_priority": ["Molten Rage", "Incinerate", "Pyroclastic Claw"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Clan Boss",
+        "mastery": "Warmaster",
+        "bonus_damage": "High",
+        "notes": "Frequent HP Burn activations and Warmaster procs."
+      },
+      {
+        "type": "Dungeons",
+        "mastery": "Warmaster",
+        "bonus_damage": "High",
+        "notes": "HP Burn ticks and Warmaster for boss damage."
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Warmaster",
+      "spider_hard": "Warmaster",
+      "hydra": "Warmaster",
+      "iron_twins": "Warmaster"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "Very High (with HP Burn uptime)",
+    "notes": "Top-tier for HP Burn teams. Consistent damage and support."
+  },
+  "synergy": {
+    "recommended_buffs": ["Strengthen", "Increase DEF", "Ally Protection"],
+    "support_champion_sets": [
+      ["Godseeker Aniri", "Duchess Lilitu"],
+      ["Krisk the Ageless", "Ursuga Warcaller"],
+      []
+    ],
+    "recommended_revivors": ["Godseeker Aniri", "Duchess Lilitu"],
+    "speed_tuning": {
+      "arena": "200+",
+      "dungeons": "180+",
+      "clan_boss": "170-190"
+    },
+    "gear_stat_priorities": {
+      "arena": ["Accuracy", "Speed", "DEF", "HP"],
+      "clan_boss": ["Accuracy", "DEF", "HP", "Speed"],
+      "dungeons": ["Accuracy", "Speed", "DEF", "HP"]
+    },
+    "relentless_viability": "Low — not recommended for burn specialists"
+  },
+  "investment": {
+    "value": "High",
+    "notes": "One of the best free login champions. High value for all PvE content.",
+    "owned_comparison": [
+      {
+        "champion": "Mordecai",
+        "comparison": "Artak is DEF-based and brings more support, Mordecai is ATK-based and pure burner."
+      }
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Godseeker Aniri": 9,
+      "Duchess Lilitu": 8
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": false,
+      "avoid": false,
+      "notes": "Excellent early pick for PvE and Clan Boss. Not a nuker for Arena."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None",
+    "gear_set_stability": {
+      "Reflex": "Can help cycle A2/A3 faster.",
+      "Relentless": "Not recommended.",
+      "Savage": "Not recommended."
+    },
+    "rotation_desync_risks": {
+      "Reflex": "Low",
+      "Relentless": "Low",
+      "Savage": "N/A"
+    }
+  },
+  "utility_comparison": [
+    {
+      "champion": "Mordecai",
+      "role": "HP Burn Specialist",
+      "comparison": "Mordecai is ATK-based, Artak is DEF-based and brings more support."
+    }
+  ],
+  "ratings": {
+    "pvp": "B",
+    "clan_boss": "A+",
+    "hydra": "A",
+    "iron_twins": "A",
+    "dungeons": "A+",
+    "solo_farming": "A",
+    "relentless_viability": "C"
+  },
+  "final_summary": {
+    "mastery_preference": "Warmaster for all PvE",
+    "booking_impact": "High — improves debuff chance and cooldowns",
+    "damage_rotation": "A2 to apply burns, A3 to activate, A1 for single target",
+    "turn_meter_stability": "Stable with Speed/Perception",
+    "passive_impact": "Extends HP Burn duration for maximum uptime",
+    "gear_stat_notes": "Focus on Accuracy, DEF, Speed, HP",
+    "ally_synergy_impact": "Best with revivers and DEF buffers",
+    "draft_value": "Top pick for PvE",
+    "investment_value": "High",
+    "relentless_viability": "Low",
+    "similar_owned_champions": ["Mordecai", "Drexthar Bloodtwin"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Clan Boss HP Burn",
+        "champions": ["Artak", "Godseeker Aniri", "Krisk the Ageless"],
+        "strategy": "Maximize HP Burn uptime and survivability"
+      }
+    ],
+    "similar_champions": [
+      {
+        "champion": "Mordecai",
+        "similarity_reason": "Both are top-tier HP Burn specialists"
+      }
+    ]
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "champion": "Alice the Wanderer",
+  "owned": true,
+  "overview": {
+    "role": "Attack Nuker / Cooldown Control",
+    "archetype": "Single Target & AoE Damage / Skill Cooldown Manipulation",
+    "primary_damage_stat": "ATK",
+    "skill_scaling": {
+      "A1": "ATK",
+      "A2": "ATK",
+      "A3": "ATK"
+    },
+    "best_mastery": {
+      "pve_pvp": "Helmsmasher",
+      "clan_boss": "Warmaster"
+    },
+    "booking_roi": "High",
+    "gear_sets": {
+      "pvp_offense": ["Lethal", "Savage", "Merciless", "Perception", "Stoneskin"],
+      "pvp_defense": ["Stoneskin", "Perception"],
+      "clan_boss": ["Cruel", "Perception"],
+      "hydra": ["Lethal", "Perception"],
+      "iron_twins": ["Merciless", "Perception"],
+      "dungeons": ["Lethal", "Savage", "Perception"],
+      "solo_farming": ["Lifesteal", "Relentless"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Relentless", "pros": "More skill cycles, more damage", "cons": "Lower base stats" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["C.RATE", "C.DMG", "ATK%", "ACC", "SPD"],
+      "clan_boss": ["C.RATE", "C.DMG", "ATK%", "ACC", "SPD"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "350+ ACC",
+      "hydra": "400+ ACC",
+      "iron_twins": "500+ ACC"
+    },
+    "best_dungeon_use": "Fire Knight, Doom Tower, Arena"
+  },
+  "skills": {
+    "a1": {
+      "name": "Vorpal Sword",
+      "type": "Single Target",
+      "hit_count": 2,
+      "cooldown": "None",
+      "multiplier": "1.7x ATK",
+      "notes": "Attacks 1 enemy 2 times. Places an extra hit if the target has any active skills on cooldown. Each hit has an 80% chance of decreasing the duration of a random buff on the target by 1 turn."
+    },
+    "a2": {
+      "name": "Clockwork Cyclone",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "4 (bookable to 3)",
+      "multiplier": "4.2x ATK",
+      "notes": "Attacks all enemies. 75% chance of increasing the cooldowns of all enemy skills by 2 turns. 75% chance of decreasing each target’s Turn Meter by 15%. If at least one of a target’s skills is increased to max cooldown, decreases their Turn Meter by 30% instead."
+    },
+    "a3": {
+      "name": "Queenslayer",
+      "type": "Single Target",
+      "hit_count": 1,
+      "cooldown": "4 (bookable to 3)",
+      "multiplier": "5x ATK",
+      "notes": "Attacks 1 enemy. Ignores 20% of the target’s DEF. If the initial target is killed, also attacks the enemy with the lowest HP, also ignoring 20% of their DEF."
+    },
+    "passive": {
+      "exists": true,
+      "impact": "Whenever this Champion attacks, inflicts 3% bonus damage to each target for each turn remaining on all of their skill’s cooldowns. Resets the cooldown of one of this Champion’s skills each time they kill an enemy (once per skill)."
+    },
+    "booking": {
+      "impact": "High",
+      "notes": "Books increase damage, debuff chance, and reduce cooldowns on A2 and A3."
+    },
+    "rotation": {
+      "optimal_cycle": ["A3", "A2", "A1", "A1", "A2"],
+      "damage_per_turn": {
+        "a3": "Very High (single target, ignore DEF)",
+        "a2": "High (AoE, plus control)",
+        "a1": "Medium (triple hit possible)"
+      },
+      "average_damage": "High",
+      "buff_debuff_uptime": {
+        "HP Burn": "0%",
+        "DEF Down": "0%",
+        "Increase DEF": "0%",
+        "Block Debuffs": "0%"
+      },
+      "extra_turn_frequency": "None (Relentless/Reflex can increase skill cycling)"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Clockwork Cyclone",
+    "skill_priority": ["Clockwork Cyclone", "Queenslayer", "Vorpal Sword"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Clan Boss",
+        "mastery": "Warmaster",
+        "bonus_damage": "Medium",
+        "notes": "Consistent procs due to frequent A1 usage, but not a top-tier Clan Boss DPS."
+      },
+      {
+        "type": "Arena",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "High",
+        "notes": "Helmsmasher enables DEF ignore on A3 for maximum nuking."
+      },
+      {
+        "type": "Dungeons",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "High",
+        "notes": "Synergizes with A2/A3 for boss control and burst."
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Warmaster",
+      "spider_hard": "Helmsmasher",
+      "hydra": "Warmaster",
+      "iron_twins": "Helmsmasher"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "Medium",
+    "notes": "Provides some utility and damage, but not a top-tier Clan Boss champion. Best used for cooldown control and bonus damage against bosses with skills on cooldown."
+  },
+  "synergy": {
+    "recommended_buffs": ["Increase ATK", "Turn Meter Boost", "Crowd Control"],
+    "support_champion_sets": [
+      ["Arbiter", "Lydia the Deathsiren"],
+      ["Krisk the Ageless", "Duchess Lilitu"],
+      []
+    ],
+    "recommended_revivors": ["Arbiter", "Duchess Lilitu"],
+    "speed_tuning": {
+      "arena": "250+",
+      "dungeons": "220+",
+      "clan_boss": "190-200"
+    },
+    "gear_stat_priorities": {
+      "arena": ["C.RATE", "C.DMG", "ATK%", "ACC", "SPD"],
+      "clan_boss": ["C.RATE", "C.DMG", "ATK%", "ACC", "SPD"],
+      "dungeons": ["C.RATE", "C.DMG", "ATK%", "ACC", "SPD"]
+    },
+    "relentless_viability": "Excellent for more frequent skill cycling and bonus damage."
+  },
+  "investment": {
+    "value": "High",
+    "notes": "Top-tier for Arena, Doom Tower, and boss control. High value for cooldown manipulation and nuking.",
+    "owned_comparison": [
+      {
+        "champion": "Trunda Giltmallet",
+        "comparison": "Alice offers more control and utility, Trunda is pure AoE nuker."
+      },
+      {
+        "champion": "Arbiter",
+        "comparison": "Arbiter is a reviver and speed booster, Alice is a nuker and control specialist."
+      }
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Arbiter": 9,
+      "Krisk the Ageless": 8,
+      "Lydia the Deathsiren": 8
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": false,
+      "avoid": false,
+      "notes": "Safe early pick for any team needing damage and cooldown control. Not a reviver, so pair with support."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None (Relentless/Reflex can increase skill cycling)",
+    "gear_set_stability": {
+      "Reflex": "Can help cycle A2/A3 faster.",
+      "Relentless": "Very strong for more frequent skill use.",
+      "Savage": "Best for maximizing A3 damage."
+    },
+    "rotation_desync_risks": {
+      "Reflex": "Low",
+      "Relentless": "Low",
+      "Savage": "N/A"
+    }
+  },
+  "utility_comparison": [
+    {
+      "champion": "Trunda Giltmallet",
+      "role": "AoE Nuker",
+      "comparison": "Trunda is pure AoE, Alice brings cooldown control and bonus damage."
+    },
+    {
+      "champion": "Arbiter",
+      "role": "Speed Lead / Reviver",
+      "comparison": "Arbiter offers revive and TM boost, Alice offers more damage and control."
+    }
+  ],
+  "ratings": {
+    "pvp": "A",
+    "clan_boss": "B",
+    "hydra": "A",
+    "iron_twins": "A",
+    "dungeons": "A",
+    "solo_farming": "B",
+    "relentless_viability": "A"
+  },
+  "final_summary": {
+    "mastery_preference": "Helmsmasher for PvE/PvP, Warmaster for Clan Boss",
+    "booking_impact": "High",
+    "damage_rotation": "High burst with A3, strong AoE with A2, bonus damage from passive",
+    "turn_meter_stability": "Very stable, especially with Relentless/Reflex",
+    "passive_impact": "Major, enables bonus damage and skill resets",
+    "gear_stat_notes": "Prioritize C.RATE, C.DMG, ATK%, ACC, SPD",
+    "ally_synergy_impact": "Works best with buffers, TM boosters, and revivers",
+    "draft_value": "High",
+    "investment_value": "High",
+    "relentless_viability": "Excellent",
+    "similar_owned_champions": ["Trunda Giltmallet", "Arbiter"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Arena Nuker + Control",
+        "champions": ["Alice the Wanderer", "Arbiter", "Lydia the Deathsiren"],
+        "strategy": "Speed boost, debuff, then nuke and control enemy cooldowns"
+      },
+      {
+        "name": "Doom Tower Boss Control",
+        "champions": ["Alice the Wanderer", "Krisk the Ageless", "Duchess Lilitu"],
+        "strategy": "Sustain, revive, and control boss skills with Alice's A2"
+      }
+    ],
+    "similar_champions": [
+      {
+        "champion": "Trunda Giltmallet",
+        "similarity_reason": "Both are top-tier nukers with high burst potential"
+      },
+      {
+        "champion": "Foley",
+        "similarity_reason": "Both have DEF ignore and bonus hit mechanics"
+      }
+    ]
+  }
+}

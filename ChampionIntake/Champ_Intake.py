@@ -1,9 +1,47 @@
+def generate_and_save_champion_json_from_prompt(champion_name):
+    """
+    Automate: read prompt, generate JSON (via LLM or parser), save to file.
+    """
+    prompt_path = os.path.join(prompt_dir, f"{champion_name}.md")
+    if not os.path.exists(prompt_path):
+        print(f"❌ Prompt file not found: {prompt_path}")
+        return False
+
+    with open(prompt_path, "r", encoding="utf-8") as f:
+        prompt_text = f.read()
+
+    # TODO: Replace this with a call to your LLM or parsing logic
+    # For example, call OpenAI API, local LLM, or deterministic parser
+    # champion_json = call_llm_to_generate_json(prompt_text)
+    champion_json = {
+        "champion": champion_name,
+        "owned": True,
+        "overview": {},
+        "skills": {},
+        "team_inputs": {},
+        "mastery_simulation": {},
+        "clan_boss": {},
+        "synergy": {},
+        "investment": {},
+        "intelligence": {},
+        "turn_meter": {},
+        "utility_comparison": [],
+        "ratings": {},
+        "final_summary": {},
+        "synergy_engine": {}
+    }
+    # Save the generated JSON
+    save_champion_json(champion_name, champion_json)
+    print(f"✅ Champion JSON generated and saved for {champion_name}")
+    return True
 # Ensure environment is ready
+
 import importlib.util
 import runpy
 import os
 import subprocess
 import json
+import sys
 
 setup_path = os.path.join(os.path.dirname(__file__), "setup_environment.py")
 if importlib.util.find_spec("pyperclip") is None or not os.path.exists(setup_path):
@@ -19,7 +57,7 @@ from datetime import datetime, timedelta
 # Base directory for this script
 BASE_DIR = os.path.dirname(__file__)
 champion_json_dir = os.path.join(BASE_DIR, "Champions")
-owned_list_path = os.path.join(champion_json_dir, "Owned_Champions", "Owned_Champion_list.md")
+owned_list_path = os.path.join(champion_json_dir, "Owned_Champions", "Owned_champion_list.md")
 prompt_dir = os.path.join(os.path.dirname(__file__), "Prompt")
 os.makedirs(prompt_dir, exist_ok=True)
 
@@ -58,11 +96,19 @@ def add_to_owned_list(champion_name, update_date=True):
 def create_json_placeholder(champion_name):
     os.makedirs(champion_json_dir, exist_ok=True)
     path = os.path.join(champion_json_dir, f"{champion_name}.json")
-    # Prompt for rarity
-    rarity = input(f"Enter rarity for {champion_name} (Rare/Epic/Legendary/Mythic): ").strip().capitalize()
-    if rarity not in ["Rare", "Epic", "Legendary", "Mythic"]:
-        rarity = "Unknown"
-    # Always set owned to true by default
+    # Accept rarity from command-line or prompt
+    rarity_map = {
+        "6": "Mythic", "mythic": "Mythic", "m": "Mythic",
+        "5": "Legendary", "legendary": "Legendary", "l": "Legendary",
+        "4": "Epic", "epic": "Epic", "e": "Epic",
+        "3": "Rare", "rare": "Rare", "r": "Rare"
+    }
+    rarity = None
+    if hasattr(create_json_placeholder, "rarity_override") and create_json_placeholder.rarity_override:
+        rarity = create_json_placeholder.rarity_override
+    else:
+        rarity = input(f"Enter rarity for {champion_name} (Rare/Epic/Legendary/Mythic or 3/4/5/6): ").strip().lower()
+    rarity = rarity_map.get(rarity, rarity.capitalize() if rarity else "Unknown")
     with open(path, "w", encoding="utf-8") as f:
         f.write("{\n"
                 f'  "champion": "{champion_name}",\n'
@@ -276,22 +322,43 @@ def save_champion_json(champion_name, champion_data):
 # save_champion_json("Artak", champion_data)
 
 if __name__ == "__main__":
-    print("🔍 Champion Intake")
-    print("Enter a champion name to process individually.")
-    print("Leave blank to use the owned champion list.")
+    # Usage: python Champ_Intake.py [champion_name] [rarity]
+    champion_name = None
+    rarity = None
+    if len(sys.argv) > 1:
+        champion_name = sys.argv[1].strip()
+    if len(sys.argv) > 2:
+        rarity = sys.argv[2].strip().lower()
 
-    user_input = input("Champion name: ").strip()
-
-    if user_input == "":
-        confirm = input("⚠️ No champion entered. Run owned list instead? (y/n): ").strip().lower()
-        if confirm == "y":
-            run_smart_batch_from_owned_list(fast_mode=False)
-        else:
-            print("❌ Cancelled. No champion processed.")
-    else:
-        run_champion_intake(user_input, fast_mode=False)
-        prompt = generate_prompt_for_champion(user_input)
-        prompt_path = os.path.join(prompt_dir, f"{user_input}_prompt.md")
+    if champion_name:
+        if rarity:
+            # Pass rarity override to create_json_placeholder
+            create_json_placeholder.rarity_override = rarity
+        run_champion_intake(champion_name, fast_mode=False)
+        prompt = generate_prompt_for_champion(champion_name)
+        prompt_path = os.path.join(prompt_dir, f"{champion_name}_prompt.md")
         with open(prompt_path, "w", encoding="utf-8") as f:
             f.write(prompt)
-        print(f"✅ Prompt for {user_input} written to {prompt_path}")
+        print(f"✅ Prompt for {champion_name} written to {prompt_path}")
+        # --- Automated champion JSON generation from prompt ---
+        generate_and_save_champion_json_from_prompt(champion_name)
+    else:
+        print("🔍 Champion Intake")
+        print("Enter a champion name to process individually.")
+        print("Leave blank to use the owned champion list.")
+        user_input = input("Champion name: ").strip()
+        if user_input == "":
+            confirm = input("⚠️ No champion entered. Run owned list instead? (y/n): ").strip().lower()
+            if confirm == "y":
+                run_smart_batch_from_owned_list(fast_mode=False)
+            else:
+                print("❌ Cancelled. No champion processed.")
+        else:
+            run_champion_intake(user_input, fast_mode=False)
+            prompt = generate_prompt_for_champion(user_input)
+            prompt_path = os.path.join(prompt_dir, f"{user_input}_prompt.md")
+            with open(prompt_path, "w", encoding="utf-8") as f:
+                f.write(prompt)
+            print(f"✅ Prompt for {user_input} written to {prompt_path}")
+            # --- Automated champion JSON generation from prompt ---
+            generate_and_save_champion_json_from_prompt(user_input)

@@ -1,16 +1,16 @@
 # Champion: Artak
 
-**Role:** Updated Role
+**Role:** HP Burn DPS / Debuff Specialist
 
-**Archetype:** Updated Archetype
+**Archetype:** Burn / Control / Support
 
 **Best Mastery (Clan Boss):** Warmaster
 
 **Booking ROI:** High
 
-**Best Dungeon Use:** Dragon HARD 10
+**Best Dungeon Use:** Spider, Dragon, Clan Boss
 
-**Synergy (Relentless Viability):** Moderate — can help cycle burns faster but risks cooldown desync
+**Synergy (Relentless Viability):** Low — not recommended for burn specialists
 
-**Investment Notes:** Artak offers strong burn-based damage, reliable debuff application, and PvE versatility.
+**Investment Notes:** One of the best free login champions. High value for all PvE content.
 

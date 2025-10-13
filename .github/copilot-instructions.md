@@ -25,6 +25,7 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 - **No Emojis:** Do not use emojis in code, documentation, markdown, or output
 - **Positive but Realistic:** Stay positive but when there is a better solution, tool, implementation, or approach, suggest it. Note when something is not possible or not recommended.
 - **Accessing external sites** Always allow access to Raid Shadow Legends Wiki, Ayumilove, Hellhades, and other relevant sites for champion data verification and research.
+- **File edits** directly edit files, but prefer line by line changes instead of text blocks to better compare versions/commits, and allow smaller overall changes in each save/commit/etc.
 
 ---
 

@@ -5,11 +5,11 @@ from datetime import datetime
 
 # Paths
 champions_dir = os.path.join(os.path.dirname(__file__), "..", "Champions")
-owned_file = os.path.join(champions_dir, "Owned_Champions", "Owned_Champion_list.md")
+owned_file = os.path.join(champions_dir, "Owned_Champions", "Owned_champion_list.md")
 
 def load_owned_list():
     if not os.path.exists(owned_file):
-        print("❌ Owned_Champion_list.md not found.")
+        print("❌ Owned_champion_list.md not found.")
         return []
     with open(owned_file, "r", encoding="utf-8") as f:
         lines = f.readlines()
