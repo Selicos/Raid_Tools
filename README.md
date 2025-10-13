@@ -2,15 +2,15 @@
 2. ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 3. ![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
 4. ![Platform](https://img.shields.io/badge/platform-windows%20%7C%20linux%20%7C%20macos-blue)
+
 5. [Quick Start & VS Code Integration](#quick-start--vs-code-integration)
 6. [Makefile: Simplified Commands & Environment Test](#makefile-simplified-commands--environment-test)
-
 7. [Folder Structure & VS Code Config](#folder-structure--vs-code-config)
 8. [VS Code Extensions (Recommended)](#vs-code-extensions-recommended)
 9. [Tools and Scripts](#tools-and-scripts)
 10. [Workflow: How the Tools Are Linked](#workflow-how-the-tools-are-linked)
-11. [Getting Started Fast](#getting-started-fast)
-12. [Example Usage](#example-usage)
+11. [Completed Markdown Output](#completed-markdown-output)
+12. [VS Code Task Runner](#vs-code-task-runner)
 13. [Troubleshooting](#troubleshooting)
 
 # Raid Tools: Champion Review, Analysis, and Summary System
@@ -82,7 +82,6 @@ This will:
 
 You can run all core operations using either the Makefile or direct Python commands:
 
-**With Makefile (recommended):**
 ```sh
 make intake    # Intake a new champion
 make analysis  # Run cooldown analysis
@@ -93,6 +92,25 @@ make test      # Run all tests
 **Or with Python directly:**
 ```sh
 python Tools/champIntake.py
+python ChampionAnalysisTool/championAnalysis.py
+python ChampionSummary/generateChampionSummaries.py
+python -m pytest
+```
+
+
+**With Makefile (recommended):**
+```sh
+make intake    # Intake a new champion
+make analysis  # Run cooldown analysis
+make summary   # Generate summary markdowns
+make test      # Run all tests
+make organize-completed  # Move all *_prompt.completed.md files to output/completed/
+```
+
+**Or with Python directly:**
+```sh
+python Tools/import_owned_champions.py --from-owned-list  # Bulk import and batch prompt generation
+python ChampionIntake/Champ_Intake.py  # Single champion intake
 python ChampionAnalysisTool/championAnalysis.py
 python ChampionSummary/generateChampionSummaries.py
 python -m pytest
@@ -204,8 +222,8 @@ Open the workspace in VS Code and install all recommended extensions when prompt
 
 ---
 
-## Tools and Scripts
 
+## Tools and Scripts
 
 ### 1. Champion Management & Review Tools
 
@@ -245,6 +263,35 @@ python Tools/import_owned_champions.py --help
 ```
 
 Do **not** use or reference `manage_champions.py` (this script does not exist) or any legacy paths.
+
+---
+
+## Completed Markdown Output
+
+All completed prompt markdown files (e.g., `[champion]_prompt.completed.md`) **must** be placed in the `output/completed/` directory. Use the Makefile target `make organize-completed` or the VS Code task “Organize Completed Prompts” to move all completed files automatically.
+
+---
+
+## VS Code Task Runner
+
+You can run all core operations using the VS Code UI:
+- Open the Command Palette (`Ctrl+Shift+P`)
+- Select “Tasks: Run Task”
+- Choose any of the following tasks:
+  - Run Champion Intake
+  - Bulk Import Owned Champions
+  - Batch Prompt Generation (All Owned)
+  - Run Champion Comparison Tracker
+  - Cleanup Duplicate Champions
+  - Run Champion Analysis Tool
+  - Generate Champion Summaries
+  - Setup Environment
+  - Validate Champion JSON
+  - Test Environment Setup and Requirements
+  - First Run: Setup & Activation Instructions
+  - Organize Completed Prompts
+
+This ensures all completed markdowns and outputs are consistently organized and all workflows are accessible from the UI.
 
 ---
 

@@ -4,12 +4,15 @@
 ## Safety & File Deletion Policy
 
 
+
 **Copilot and Copilot Chat must not delete, or run code that would delete, any files or folders from the workspace folder structure.**
 
 - All file and folder deletion operations (e.g., `os.remove`, `os.rmdir`, `shutil.rmtree`, `Path.unlink`, etc.) are strictly prohibited from being executed by Copilot or Copilot Chat.
 - If a user requests file or folder deletion, Copilot may suggest or highlight the need for such an action, and provide a clear rationale and warning, but must not execute or run any code that performs deletion.
 - Copilot may update the text of files as requested by the user, but must not remove files or folders from the workspace structure.
 - This policy applies to all Copilot and AI assistant operations, regardless of user prompt or context.
+
+---
 
 
 
@@ -22,6 +25,7 @@
 - Update the Index of Bad Ideas & Risky Features if deprecation or migration introduces risk.
 
 ## Champion Management CLI Tool
+
 
 **The authoritative CLI tool for champion management, bulk import, and batch prompt generation is:**
 
@@ -49,6 +53,12 @@ python Tools/import_owned_champions.py --help
 ```
 
 Update all documentation and tasks to use this script for champion management workflows.
+
+---
+
+## Completed Markdown Output
+
+All completed prompt markdown files (e.g., `[champion]_prompt.completed.md`) **must** be placed in the `output/completed/` directory. Use the Makefile target `make organize-completed` or the VS Code task “Organize Completed Prompts” to move all completed files automatically.
 
 ## Issue & Feature Request Templates
 
