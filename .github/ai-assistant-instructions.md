@@ -1,19 +1,112 @@
 # AI Assistant Instructions for Raid Tools Project
 
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [General Guidelines](#general-guidelines)
+3. [Change Management & Documentation](#change-management--documentation)
+4. [Testing & Validation](#testing--validation)
+5. [AI Model & Prompting](#ai-model--prompting)
+6. [Formatting & Style](#formatting--style)
+7. [Simplicity & Maintainability](#simplicity--maintainability)
+8. [Feedback & Review](#feedback--review)
+9. [Core Technical Standards](#core-technical-standards)
+10. [Project Architecture](#project-architecture)
+11. [Data Flow and Processing](#data-flow-and-processing)
+12. [AI Assistant Behavior Guidelines](#ai-assistant-behavior-guidelines)
+13. [Common Task Patterns](#common-task-patterns)
+14. [Automation and Workflow](#automation-and-workflow)
+15. [Quality Assurance](#quality-assurance)
+16. [Security and Best Practices](#security-and-best-practices)
+17. [Integration Guidelines](#integration-guidelines)
+18. [Troubleshooting Common Issues](#troubleshooting-common-issues)
+19. [Recent Changes & Updates](#recent-changes--updates)
+20. [Future Development Considerations](#future-development-considerations)
+21. [Contact and Contribution](#contact-and-contribution)
+22. [Handling Deprecated Scripts & Data Migrations](#handling-deprecated-scripts--data-migrations)
+
 ## Project Overview
 Raid Tools is a Python-based project for analyzing Raid Shadow Legends champion data. The project generates JSON champion profiles, performs skill cycle analysis, and creates human-readable markdown summaries. This project follows modern Python practices with comprehensive testing, automation, and documentation standards.
 
+## Handling Deprecated Scripts & Data Migrations
+
+- When deprecating scripts or migrating data formats, update all references in documentation, tasks, and scripts to use the new paths and formats.
+- Clearly mark deprecated scripts with comments and in the project tracking file.
+- Provide migration scripts or instructions when possible.
+- Remove or archive legacy files after migration is validated.
+- Update the Index of Bad Ideas & Risky Features if deprecation or migration introduces risk.
+
 **Optimized for:** Claude Sonnet 3.5/4.0, GPT-4, and other advanced coding LLMs with strong Python and project comprehension capabilities.
 
-## Core Technical Standards
+---
 
-### Language & Code Quality
-- **Python Version:** 3.9+ with type hints and f-string formatting
+## General Guidelines
+- **Always use the latest folder and script names; do not reference legacy paths (e.g., `Champion Review and Comparison/`).**
+If you find any legacy paths or references (such as `Champion Review and Comparison/`), update them to the new structure (e.g., `ChampionIntake/`, `ChampionSummary/`, `src/`, `data/`, `output/`).
+- **Language:** Python 3.9+ with type hints and f-string formatting
 - **Code Formatting:** Black formatter (line length 88 characters)
 - **Linting:** flake8 for code quality enforcement
 - **Testing Framework:** pytest with 90%+ coverage target
 - **Documentation:** Google-style docstrings for all public functions/classes
 - **File Naming:** snake_case.py for all Python files
+- **No Emojis:** Avoid emojis in code, documentation, or output
+- **Error Handling:** Use Python exceptions with clear, actionable messages
+- **Imports:** Use pathlib for file operations, organize imports logically
+- **Functions:** Keep functions focused and small, prefer composition over inheritance
+- **Cross-Platform:** All scripts must work on Windows, macOS, and Linux
+- **Virtual Environment:** Use .venv for isolation
+- **Dependencies:** Minimal, well-documented in requirements.txt
+- **Automation:** Makefile and VS Code tasks for common operations
+- **Chat Behavior:** Provide concise, relevant code snippets; continue to work on larger tasks up to 4 cycles without asking for confirmation if needed
+- **Positive but Realistic:** Stay positive but when there is a better solution, tool, implementation, or approach, suggest it. Note when something is not possible or not recommended.
+- **Accessing external sites:** Always allow access to Raid Shadow Legends Wiki, Ayumilove, Hellhades, and other relevant sites for champion data verification and research.
+- **File edits:** Directly edit files, but prefer line by line changes instead of text blocks to better compare versions/commits, and allow smaller overall changes in each save/commit/etc.
+
+---
+
+## Change Management & Documentation
+- Use line-by-line edits for clarity and easier review.
+- Commit messages must be clear, imperative, and reference the logical unit of work (see project tracking file for examples).
+- If a change affects documentation, update the relevant README or tracking file in the same commit.
+- When updating documentation, ensure all references to scripts, folders, and workflows are current. Remove or update legacy references.
+- When updating the project tracking file, always update the Index of Bad Ideas & Risky Features and keep section numbers sequential.
+- All markdown files should use consistent header levels and section numbering.
+- When adding new features, update all relevant documentation, tracking, and index files. Cross-reference related sections for clarity.
+
+---
+
+## Testing & Validation
+- All new features and bugfixes must include or update pytest tests.
+- Run `pytest` before committing.
+- If a change affects VS Code tasks or Makefile, validate with `test_tasks_json_and_scripts.py`.
+
+---
+
+## AI Model & Prompting
+- When generating code or documentation, prefer clarity and simplicity.
+- Avoid overengineering or adding unnecessary complexity.
+- For LLM/AI integration, only proceed if there is a clear, valuable use case.
+- Reference the project tracking file for current status and risks.
+
+---
+
+## Formatting & Style
+- Use Black and flake8 for all Python code. Run formatting and linting before committing.
+- All markdown files should use consistent header levels and section numbering.
+
+---
+
+## Simplicity & Maintainability
+- Favor simple, maintainable solutions. Avoid duplicating functionality already provided by external tools or libraries.
+
+---
+
+## Feedback & Review
+- When reviewing or updating planning files, consolidate repeated feedback and clarify section purposes.
+- If a change affects documentation, update all relevant files and cross-reference related sections.
+
+---
+
+## Core Technical Standards
 
 ### Development Environment
 - **Cross-Platform:** All scripts must work on Windows, macOS, and Linux
@@ -50,7 +143,7 @@ Current requirements include:
 ### Directory Structure
 ```
 Raid_Tools/
-├── Champion Review and Comparison/
+├── ChampionIntake/
 │   ├── Champ_Intake.py  # Champion data intake script
 │   ├── Tools/           # Data management and cleanup utilities
 │   ├── Champions/       # JSON champion data files
@@ -69,11 +162,11 @@ Raid_Tools/
 ```
 
 ### Key Scripts and Their Purposes
-- **Champ_Intake.py** — Main champion intake and prompt generation (located in `Champion Review and Comparison/`)
+- **Champ_Intake.py** — Main champion intake and prompt generation (located in `ChampionIntake/`)
 - **championAnalysis.py** — Skill cycle simulation and cooldown analysis
 - **generateChampionSummaries.py** — Convert analysis to readable markdown
 - **Setup_Environment.py** — Automated environment setup
-- **cleanup_duplicate_champions.py** — Merge duplicate champion files (located in `Champion Review and Comparison/Tools/`)
+- **cleanup_duplicate_champions.py** — Merge duplicate champion files (located in `Tools/`)
 - **Makefile** — Build automation and task management
 
 ---
@@ -145,7 +238,7 @@ Raid_Tools/
 # Use templates/logTemplate.json as the base structure
 # Validate against multiple sources: Raid Shadow Legends, Ayumilove, Hellhades
 # Ensure all required fields are present and correctly formatted
-# Save to Champion Review and Comparison/Champions/
+# Save to ChampionIntake/Champions/
 # Use Tools/validate_json.py to verify JSON structure after creation
 ```
 
