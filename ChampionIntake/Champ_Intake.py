@@ -10,19 +10,17 @@ def generate_and_save_champion_json_from_prompt(champion_name):
     with open(prompt_path, "r", encoding="utf-8") as f:
         prompt_text = f.read()
 
+    # Prevent overwriting existing champion JSON
+    json_path = os.path.join(champion_json_dir, f"{champion_name}.json")
+    if os.path.exists(json_path):
+        print(f"⚠️ Champion JSON already exists for {champion_name}. Skipping overwrite.")
+        return False
+
     # TODO: Replace this with a call to your LLM or parsing logic
     # For example, call OpenAI API, local LLM, or deterministic parser
     # champion_json = call_llm_to_generate_json(prompt_text)
     # Try to get rarity from placeholder or ask for it if not present
     rarity = None
-    json_path = os.path.join(champion_json_dir, f"{champion_name}.json")
-    if os.path.exists(json_path):
-        try:
-            with open(json_path, "r", encoding="utf-8") as jf:
-                champ_json = json.load(jf)
-                rarity = champ_json.get("rarity")
-        except Exception:
-            pass
     if not rarity:
         rarity = input(f"Enter rarity for {champion_name} (Rare/Epic/Legendary/Mythic or 3/4/5/6): ").strip().capitalize()
     champion_json = {
