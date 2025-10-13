@@ -2,18 +2,25 @@
 
 # Champion Intake & Review System
 
-## Overview
 
-This system streamlines the intake, prompt generation, review, analysis, and summary process for Raid Shadow Legends champions.  
 It supports single or batch processing, integrates with Copilot Chat, auto-validates and timestamps each champion entry, and provides skill cycle analysis and summary reports.
 
-1. Run task for Champion Intake OR initiate python script champIntake.py. 
-    This will generate and open a prompt md file and also generate a json for the champion.
-2. Ask Copilot Chat (Ctrl+Shift+I) to: “Based on the open prompt file, generate the champion JSON for [champion].”
-3. Copy the output json into the champion.json file generated in step 1.
-4. Run tests or cleanup as needed.
+1. Run environment setup:
+    - **After setup, activate the virtual environment before running any other Python scripts:**
+       - On Windows: `./.venv/Scripts/Activate`
+       - On macOS/Linux: `source .venv/bin/activate`
+    - For details, see the main README.md environment setup section.
+2. (Recommended) Run duplicate cleanup to ensure no case-insensitive duplicate champion or prompt files:
+   - `python Tools/cleanup_duplicate_champions.py`
+   - Review and merge any duplicates as prompted.
+3. Run task for Champion Intake OR initiate python script champIntake.py. 
+   - This will generate and open a prompt md file and also generate a json for the champion.
+4. Ask Copilot Chat (Ctrl+Shift+I) to: “Based on the open prompt file, generate the champion JSON for [champion].”
+5. Copy the output json into the champion.json file generated in step 3.
+6. Run tests or cleanup as needed.
 
 ---
+
 
 ## Prerequisites
 
@@ -21,7 +28,6 @@ Before running the system, ensure you have:
 
 - ✅ Python 3.9+ installed
 - ✅ VS Code installed
-- ✅ VS Code extensions:
   - Python
   - Copilot Chat (optional but recommended)
 - ✅ Internet access for package installation
@@ -38,7 +44,6 @@ Champion Review and Comparison/
 │   │   └── Owned_Champion_list.md
 │   │   └── [ChampionName].json
 │   ├── prompt/
-│   │   └── [ChampionName].md
 │   ├── Tools/
 │   │   ├── champIntake.py
 │   │   ├── Setup_Environment.py
@@ -52,58 +57,57 @@ Champion Review and Comparison/
 ├── templates/
 │   └── logTemplate.json
 ├── README.md
-ChampionSummary/
-├── generateChampionSummaries.py
-├── readme.md
-└── Summary/
-    └── [ChampionName].md
-ChampionAnalysisTool/
-├── championAnalysis.py
-├── cooldown_analysis/
-│   └── [ChampionName].md
 
----
+# Champion Intake & Review
 
-## Required Files
+This module handles champion data intake, prompt generation, and review workflows for Raid Tools.
 
-| File                        | Purpose                                                                 |
-|-----------------------------|-------------------------------------------------------------------------|
-| `champIntake.py`           | Main script for champion intake, prompt generation, and review updates |
-| `Setup_Environment.py`      | Ensures required Python packages and tools are installed               |
-| `cleanupDuplicateChampions.py`     | Detects and merges case-insensitive duplicates in JSON and prompt files|
-| `Owned_Champion_list.md`    | Tracks owned champions and last update timestamps                      |
-| `[ChampionName].json`       | Placeholder or completed champion log file                             |
-| `[ChampionName].md`         | Prompt file for Copilot Chat to generate champion log                  |
+## Key Scripts
 
----
+- `Champ_Intake.py`: Main champion intake and prompt generator
+- `Tools/cleanup_duplicate_champions.py`: Remove duplicate champion files
+- `Comparisons/Champ_Comparison_Track_owned.py`: Compare owned champions
 
-## Key Files & Scripts
+## Usage
 
-| File/Folder                                 | Purpose                                                                 |
-|----------------------------------------------|-------------------------------------------------------------------------|
-| `champIntake.py`                             | Main script for champion intake, prompt generation, and review updates  |
-| `Setup_Environment.py`                        | Ensures required Python packages and tools are installed                |
-| `cleanupDuplicateChampions.py`              | Detects and merges case-insensitive duplicates in JSON and prompt files |
-| `updateOwnedChampions.py`                   | Updates all champions older than 30 days or missing a timestamp         |
-| `champSynergyCheck.py`                      | (WIP) Analyze synergy across owned champions                            |
-| `Owned_Champion_list.md`                      | Tracks owned champions and last update timestamps                       |
-| `[ChampionName].json`                         | Champion log file (with rarity, overview, skills, etc.)                 |
-| `[ChampionName].md` (prompt/)                 | Prompt file for Copilot Chat to generate champion log                   |
-| `Summary/[ChampionName].md`                   | Human-readable summary for each champion                                |
-| `testChampionReviewAndComparison.py`      | Tests for champion JSON and prompt consistency                          |
-| `logTemplate.json` (templates/)              | Template for new champion JSON files                                    |
-| `championAnalysis.py` (ChampionAnalysisTool) | Standalone script for skill cycle simulation and analysis               |
-| `cooldown_analysis/[ChampionName].md`         | Detailed skill cycle analysis output                                    |
-| `generateChampionSummaries.py` (ChampionSummary) | Generates summary markdowns for each champion                  |
+1. **Intake a new champion**
+   ```sh
+   python Tools/champIntake.py
+   ```
 
----
+2. **Cleanup duplicate champions**
+   ```sh
+   python Tools/cleanup_duplicate_champions.py
+   ```
 
-## Workflow
+3. **Compare owned champions**
+   ```sh
+   python Comparisons/Champ_Comparison_Track_owned.py
+   ```
 
-1. **Champion Intake & Prompt Generation**
-   - Run `champIntake.py` (from Tools or via VS Code task).
-   - Generates a prompt `.md` and a placeholder `.json` for the champion.
-   - Use Copilot Chat to generate or update the champion JSON based on the prompt.
+## Data Structure
+
+- Champion JSON files: `Champions/`
+- Comparison scripts: `Comparisons/`
+- Prompt files: `Prompt/`
+- Templates: `templates/`
+
+## Testing & Makefile
+
+- All tests for this module are in `Tests/`
+- Run with `pytest` or `make test` from the repo root
+- Use the Makefile for common tasks (setup, test, format, intake)
+
+## VS Code & Environment Setup
+
+1. Clone the repository
+2. Run `python Tools/Setup_Environment.py` or `make setup` from the root
+3. Open the workspace in VS Code for best experience
+4. Ensure `.vscode/settings.json`, `.vscode/tasks.json`, and `.vscode/extensions.json` exist (see root README)
+5. Install all recommended extensions when prompted
+6. Run `make test` to validate your environment and project health
+
+See the root README for full environment and onboarding details, including the environment test and VS Code configuration.
 
 2. **Champion Review & Update**
    - Edit the champion JSON as needed.

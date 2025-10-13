@@ -15,8 +15,8 @@ Usage:
 
 Directories:
 -------------
-# Champions JSON: ChampionIntake\Champions
-# Prompt Markdown: ChampionIntake\Prompt
+# Champions JSON: ChampionIntake\\Champions
+# Prompt Markdown: ChampionIntake\\Prompt
 
 Notes:
 ------
@@ -31,6 +31,7 @@ champion_dir = r"ChampionIntake"
 champion_json_dir = os.path.join(champion_dir, "Champions")
 prompt_dir = os.path.join(champion_dir, "Prompt")
 
+
 def find_case_duplicates(directory, extension):
     """
     Find files in the given directory with the same name differing only by case.
@@ -42,6 +43,7 @@ def find_case_duplicates(directory, extension):
         base = f.lower()
         normalized[base].append(f)
     return {k: v for k, v in normalized.items() if len(v) > 1}
+
 
 def report_duplicates():
     """
@@ -66,6 +68,7 @@ def report_duplicates():
         for base, variants in md_dupes.items():
             print(f" - {base}: {variants}")
 
+
 def merge_or_rename_duplicates(directory, extension, dry_run=True):
     """
     For each set of duplicates, append the content of all but the first file to the first file,
@@ -89,6 +92,7 @@ def merge_or_rename_duplicates(directory, extension, dry_run=True):
                     print(f"✅ Merged {dup} → {keep}")
                 except Exception as e:
                     print(f"❌ Failed to merge {dup}: {e}")
+
 
 if __name__ == "__main__":
     # Check that directories exist before proceeding

@@ -1,72 +1,197 @@
-# setup_environment.py
-import subprocess
-import sys
-import shutil
+"""
+Setup_Environment.py
+
+Sets up the Python environment for Raid Tools project according to current requirements.
+
+- Python 3.9+
+- Installs all packages in requirements.txt
+- Installs Black, flake8, pytest if missing
+- Creates .venv if not present
+- Creates .vscode/settings.json, tasks.json, extensions.json with recommended config
+- Validates Makefile and README.md presence
+- Prompts user to open workspace in VS Code and install recommended extensions
+"""
+
 import os
+import sys
+import subprocess
+from pathlib import Path
 
-required_packages = ["pyperclip", "pytest"]
-optional_tools = {"VS Code CLI": "code"}
+REPO_ROOT = Path(__file__).resolve().parent.parent
+VENV_DIR = REPO_ROOT / ".venv"
+REQUIREMENTS = REPO_ROOT / "requirements.txt"
+VS_CODE_DIR = REPO_ROOT / ".vscode"
+MAKEFILE = REPO_ROOT / "Makefile"
+README = REPO_ROOT / "README.md"
 
-def create_and_activate_venv(venv_dir=".venv"):
-    if not os.path.isdir(venv_dir):
-        print(f"🔧 Creating virtual environment in {venv_dir} ...")
-        subprocess.check_call([sys.executable, "-m", "venv", venv_dir])
+RECOMMENDED_EXTENSIONS = [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-toolsai.jupyter",
+    "ms-azuretools.vscode-docker",
+]
+
+SETTINGS_JSON = VS_CODE_DIR / "settings.json"
+TASKS_JSON = VS_CODE_DIR / "tasks.json"
+EXTENSIONS_JSON = VS_CODE_DIR / "extensions.json"
+
+
+def run(cmd):
+    print(f"Running: {cmd}")
+    result = subprocess.run(cmd, shell=True)
+    if result.returncode != 0:
+        print(f"Error running: {cmd}")
+        sys.exit(result.returncode)
+
+
+def create_venv():
+    if not VENV_DIR.exists():
+        print("Creating virtual environment...")
+        run(f"python -m venv {VENV_DIR}")
     else:
-        print(f"✅ Virtual environment already exists in {venv_dir}")
+        print("Virtual environment already exists.")
 
-    # Determine the python executable in the venv
+
+def activate_venv():
+    # On Windows, activate using Scripts\activate.bat
+    # On Unix, activate using bin/activate
     if os.name == "nt":
-        python_exe = os.path.join(venv_dir, "Scripts", "python.exe")
+        activate_script = VENV_DIR / "Scripts" / "activate.bat"
+        if activate_script.exists():
+            print(f"To activate the virtual environment, run:")
+            print(f"    {activate_script}")
+        else:
+            print("activate.bat not found. Please check your venv setup.")
     else:
-        python_exe = os.path.join(venv_dir, "bin", "python")
-    return python_exe
+        activate_script = VENV_DIR / "bin" / "activate"
+        if activate_script.exists():
+            print(f"To activate the virtual environment, run:")
+            print(f"    source {activate_script}")
+        else:
+            print("activate script not found. Please check your venv setup.")
 
-def check_and_install_packages(python_exe, packages):
-    for pkg in packages:
-        try:
-            subprocess.check_call([python_exe, "-c", f"import {pkg}"])
-        except subprocess.CalledProcessError:
-            print(f"📦 Installing {pkg} ...")
-            subprocess.check_call([python_exe, "-m", "pip", "install", pkg])
 
-def check_optional_tools(tools):
-    for name, cmd in tools.items():
-        if not shutil.which(cmd):
-            print(f"⚠️ {name} not found. You may need to add it to your PATH.")
+def install_requirements():
+    pip_path = (
+        VENV_DIR / "Scripts" / "pip.exe"
+        if os.name == "nt"
+        else VENV_DIR / "bin" / "pip"
+    )
+    if not pip_path.exists():
+        pip_path = "pip"
+    # Ensure pip is upgraded before installing packages
+    run(f"{pip_path} install --upgrade pip")
+    # Install requirements and dev tools
+    run(f"{pip_path} install -r {REQUIREMENTS}")
+    run(f"{pip_path} install black flake8 pytest")
 
-def install_requirements_file(python_exe, requirements_path="requirements.txt"):
-    if os.path.isfile(requirements_path):
-        print(f"📦 Installing packages from {requirements_path} ...")
-        subprocess.check_call([python_exe, "-m", "pip", "install", "-r", requirements_path])
-    else:
-        print(f"⚠️  {requirements_path} not found. Skipping requirements file installation.")
 
-def run_setup():
-    print("🔧 Running environment setup...")
+def create_vscode_configs():
+    VS_CODE_DIR.mkdir(exist_ok=True)
+    if not SETTINGS_JSON.exists():
+        interpreter_path = str(
+            VENV_DIR / "Scripts" / "python.exe"
+            if os.name == "nt"
+            else VENV_DIR / "bin" / "python"
+        )
+        SETTINGS_JSON.write_text(
+            f"""{{
+  "python.defaultInterpreterPath": "{interpreter_path}",
+  "python.linting.enabled": true,
+  "python.linting.flake8Enabled": true,
+  "python.formatting.provider": "black"
+}}"""
+        )
+    if not TASKS_JSON.exists():
+        TASKS_JSON.write_text(
+            """{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Champion Intake",
+      "type": "shell",
+      "command": "python",
+      "args": ["ChampionIntake/Champ_Intake.py"],
+      "group": {"kind": "build", "isDefault": true}
+    },
+    {
+      "label": "Run Champion Comparison Tracker",
+      "type": "shell",
+      "command": "python",
+      "args": ["ChampionIntake/Comparisons/Champ_Comparison_Track_owned.py"],
+      "group": {"kind": "build", "isDefault": false}
+    },
+    {
+      "label": "Cleanup Duplicate Champions",
+      "type": "shell",
+      "command": "python",
+      "args": ["ChampionIntake/Tools/cleanup_duplicate_champions.py"],
+      "group": {"kind": "build", "isDefault": false}
+    },
+    {
+      "label": "Run Champion Analysis Tool",
+      "type": "shell",
+      "command": "python",
+      "args": ["championAnalysis.py"],
+      "options": {"cwd": "${workspaceFolder}/ChampionAnalysisTool"}
+    },
+    {
+      "label": "Generate Champion Summaries",
+      "type": "shell",
+      "command": "python",
+      "args": ["generateChampionSummaries.py"],
+      "options": {"cwd": "${workspaceFolder}/ChampionSummary"}
+    }
+  ]
+}"""
+        )
+    if not EXTENSIONS_JSON.exists():
+        EXTENSIONS_JSON.write_text(
+            """{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.vscode-pylance",
+    "ms-toolsai.jupyter",
+    "ms-azuretools.vscode-docker"
+  ]
+}"""
+        )
 
-    venv_dir = ".venv"
-    python_exe = create_and_activate_venv(venv_dir)
 
-    print(f"🔎 Using Python interpreter: {python_exe}")
+def validate_files():
+    missing = []
+    for f in [REQUIREMENTS, MAKEFILE, README]:
+        if not f.exists():
+            missing.append(str(f))
+    if missing:
+        print("Missing required files:", ", ".join(missing))
+        sys.exit(1)
 
-    # Install from requirements.txt if present
-    install_requirements_file(python_exe)
 
-    # Ensure required packages are present (fallback)
-    check_and_install_packages(python_exe, required_packages)
-    check_optional_tools(optional_tools)
+def main():
+    print("Raid Tools Environment Setup")
+    validate_files()
+    create_venv()
+    activate_venv()
+    install_requirements()
+    create_vscode_configs()
+    print(
+        "Setup complete. Open the workspace in VS Code and install all recommended extensions when prompted."
+    )
+    print("\n--- VS Code Integration ---")
+    print(
+        "If you open this folder in VS Code, it will detect the .venv and prompt you to use it as the Python interpreter."
+    )
+    print(
+        "If not prompted, use Ctrl+Shift+P > 'Python: Select Interpreter' and choose the .venv Python."
+    )
+    print(
+        "After selecting the interpreter, all VS Code terminals and tasks will use the virtual environment automatically."
+    )
+    print(
+        "You can run all tools and tests from the VS Code terminal or using the provided tasks."
+    )
 
-    print("\n✅ Environment ready.")
-    print(f"➡️  To activate your virtual environment, run:")
-    if os.name == "nt":
-        print(f"   .\\{venv_dir}\\Scripts\\Activate")
-    else:
-        print(f"   source {venv_dir}/bin/activate")
-    print("➡️  To run tools and tests, use:")
-    print(f"   python -m pytest")
-    print(f"   python ChampionAnalysisTool/championAnalysis.py")
-    print(f"   python Summarize\\ Champion\\ Results/jsonToMdPerChamp.py")
-    print(f"   python Champion Review and Comparison/Tools/champIntake.py")
 
 if __name__ == "__main__":
-    run_setup()
+    main()

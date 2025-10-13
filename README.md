@@ -1,7 +1,17 @@
-
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
 ![Platform](https://img.shields.io/badge/platform-windows%20%7C%20linux%20%7C%20macos-blue)
+2. [Quick Start & VS Code Integration](#quick-start--vs-code-integration)
+3. [Makefile: Simplified Commands & Environment Test](#makefile-simplified-commands--environment-test)
+
+4. [Folder Structure & VS Code Config](#folder-structure--vs-code-config)
+5. [VS Code Extensions (Recommended)](#vs-code-extensions-recommended)
+6. [Tools and Scripts](#tools-and-scripts)
+7. [Workflow: How the Tools Are Linked](#workflow-how-the-tools-are-linked)
+8. [Getting Started Fast](#getting-started-fast)
+9. [Example Usage](#example-usage)
+10. [Troubleshooting](#troubleshooting)
 
 # Raid Tools: Champion Review, Analysis, and Summary System
 
@@ -12,54 +22,85 @@ It includes tools for champion intake, prompt generation, review, skill cycle si
 
 ---
 
-## Quick Start
-
-1. **Initialize the Environment**
-
-   Open a terminal in the repo root and run:
-
-   ```sh
-   python "Champion Review and Comparison/Setup_Environment.py"
-   ```
-   This will:
-   - Create a .venv virtual environment if it doesn't exist
-   - Install required Python packages (pyperclip, pytest)
-   - Check for the VS Code CLI
-   - Activate the Virtual Environment
-
-2. **Activate the virtual environment**
-
-   - On Windows:
-     ```sh
-     .\.venv\Scripts\Activate
-     ```
-   - On macOS/Linux:
-     ```sh
-     source .venv/bin/activate
-     ```
 
 
-3. **Run tools and Tests**
+## Quick Start & VS Code Integration
 
+### 1. Environment Setup
+
+Open a terminal in the repo root and run:
+```sh
+python Tools/Setup_Environment.py
+```
+This will:
+- Create a `.venv` virtual environment if it doesn't exist
+- Install all required Python packages (see `requirements.txt`)
+- Create VS Code config files in `.vscode/`
+- Print instructions for activating the virtual environment
+
+### 2. VS Code Integration
+
+- Open the folder in VS Code. You will be prompted to select the `.venv` Python interpreter.
+- If not prompted, use `Ctrl+Shift+P` > `Python: Select Interpreter` and choose the `.venv` Python.
+- VS Code terminals and tasks will now use the virtual environment automatically.
+- Install all recommended extensions when prompted.
+
+### 3. Activate the Virtual Environment (CLI)
+
+- On Windows:
   ```sh
-  # Intake a new champion
-  python "Champion Review and Comparison/Tools/champIntake.py"
-
-  # Run cooldown analysis
-  python ChampionAnalysisTool/championAnalysis.py
-
-  # Generate summary markdowns
-  python ChampionSummary/generateChampionSummaries.py
-
-  # Run all tests
-  python -m pytest
+  .\.venv\Scripts\Activate
   ```
+- On macOS/Linux:
+  ```sh
+  source .venv/bin/activate
+  ```
+
+### 4. Run Tools and Tests
+
+You can run all core operations using either the Makefile or direct Python commands:
+
+**With Makefile (recommended):**
+```sh
+make intake    # Intake a new champion
+make analysis  # Run cooldown analysis
+make summary   # Generate summary markdowns
+make test      # Run all tests
+```
+
+**Or with Python directly:**
+```sh
+python Tools/champIntake.py
+python ChampionAnalysisTool/championAnalysis.py
+python ChampionSummary/generateChampionSummaries.py
+python -m pytest
+```
 
 ---
 
-## Makefile: Simplified Commands
+
+### Troubleshooting
+- If tests fail with "Not running inside a virtual environment", activate `.venv` before running tests.
+- If you see import errors for packages (e.g., `Pygments` vs `pygments`), check that package names in `requirements.txt` match their import names (usually lowercase).
+- For best experience, always use VS Code with the `.venv` interpreter selected.
+
+---
+
+
+## Makefile: Simplified Commands & Environment Test
+
 
 You can use the provided `Makefile` to automate common tasks. This makes setup, testing, and running tools easier and more consistent.
+
+### Environment & Project Health Test
+
+Run `make test` or `python -m pytest` to check:
+- All required Python packages are installed
+- All key project files and folders exist (including .vscode configs, Makefile, README)
+- The Python virtual environment is active
+- All packages in requirements.txt are importable
+
+If any check fails, review the error message and update your environment or project files as needed.
 
 ### Common Commands
 
@@ -93,7 +134,8 @@ Run `make help` to see all available commands.
 
 ---
 
-## Folder Structure
+## Folder Structure & VS Code Config
+
 Raid_Tools/
 ├── Champion Review and Comparison/
 │   ├── Champions/
@@ -114,7 +156,29 @@ Raid_Tools/
 ├── Tests/
 │   ├── testChampionReviewAndComparison.py
 │   └── test_script_paths.py
+├── .vscode/
+│   ├── settings.json   # Python interpreter, linting, formatting
+│   ├── tasks.json      # VS Code tasks for all core operations
+│   └── extensions.json # Recommended extensions
 └── README.md (this file)
+
+**VS Code Workspace Setup:**
+- The `.vscode` folder ensures all users have the same Python interpreter, linting, formatting, and task setup.
+- To save your workspace state (open files, layout, etc.), use `File > Save Workspace As...` in VS Code to create a `.code-workspace` file.
+- To reopen, double-click the `.code-workspace` file or open the folder in VS Code. VS Code will restore your environment, tasks, and recommended extensions.
+
+
+---
+
+## VS Code Extensions (Recommended)
+
+The following extensions are recommended for best experience:
+- Python (ms-python.python)
+- Pylance (ms-python.vscode-pylance)
+- Jupyter (ms-toolsai.jupyter)
+- Docker (ms-azuretools.vscode-docker)
+
+Open the workspace in VS Code and install all recommended extensions when prompted.
 
 ---
 
@@ -185,68 +249,4 @@ Raid_Tools/
    - Run `generateChampionSummaries.py` in `ChampionSummary/` to generate readable summaries for each champion, including skill order and expected damage.
 
 
-## Getting Started Fast
 
-1. **Clone the repository and open a terminal in the repo root.**
-
-2. **Run the following command to set up everything:**
-
-  ```sh
-  make setup
-  ```
-  This will:
-  - Create a .venv virtual environment if it doesn't exist
-  - Install all required Python packages
-  - Check for the VS Code CLI
-
-3. **Run tools and tests with one command each:**
-
-  ```sh
-  make intake    # Intake a new champion
-  make analysis  # Run cooldown analysis
-  make summary   # Generate summary markdowns
-  make test      # Run all tests
-  ```
-
-4. **(Optional) Lint and format code:**
-
-  ```sh
-  make lint      # Run flake8 linter
-  make format    # Run Black formatter
-  ```
-
-5. **(Optional) Clean up environment and cache files:**
-
-  ```sh
-  make clean
-  ```
-
-Run `make help` to see all available commands.
-   - Run `pytest` or execute the scripts in `Tests/` to validate data and paths.
-
----
-
-## Example Usage
-
-```sh
-# 1. Setup environment (if needed)
-python "Champion Review and Comparison/Setup_Environment.py"
-
-# 2. Activate the virtual environment
-# Windows:
-.\.venv\Scripts\Activate
-# macOS/Linux:
-source .venv/bin/activate
-
-# 3. Intake a new champion
-python "Champion Review and Comparison/Tools/champIntake.py"
-
-# 4. Run cooldown analysis
-python ChampionAnalysisTool/championAnalysis.py
-
-# 5. Generate summary markdowns
-python ChampionSummary/generateChampionSummaries.py
-
-# 6. Run tests
-python -m pytest
-```
