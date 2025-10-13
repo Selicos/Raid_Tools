@@ -1,4 +1,4 @@
-# Embrys — Champion Summary
+# Arbiter — Champion Summary
 
 ## Executive Summary
 - **Role:** N/A

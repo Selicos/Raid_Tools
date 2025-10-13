@@ -1,16 +1,36 @@
-# Champion: Artak
+# Artak — Champion Summary
 
-**Role:** HP Burn DPS / Debuff Specialist
+## Executive Summary
+- **Role:** N/A
+- **Archetype:** N/A
+- **Best Content:** N/A
+- **Booking ROI:** N/A
+- **Investment Notes:** N/A
+- **Synergy/Relentless Viability:** N/A
 
-**Archetype:** Burn / Control / Support
+## Recommended Gear & Stats
+- **Primary Stat:** N/A
+- **Focus Stats (Arena/Dungeons):** 
+- **Focus Stats (Clan Boss):** 
+- **Gear Sets (PvP Offense):** 
+- **Gear Sets (PvP Defense):** 
+- **Gear Sets (Clan Boss):** 
+- **Gear Sets (Dungeons):** 
+- **Gear Sets (Hydra):** 
+- **Gear Sets (Iron Twins):** 
+- **Gear Sets (Solo Farming):** 
+- **Gear Tradeoffs:**
 
-**Best Mastery (Clan Boss):** Warmaster
+## Skill & Attack Order
+- **Ideal Skill Order:** N/A
+- **Recommended Attack Order:** N/A
+- **First Turn Skill:** N/A
+- **Disabled Skills:** None
 
-**Booking ROI:** High
+### Skill Details
 
-**Best Dungeon Use:** Spider, Dragon, Clan Boss
-
-**Synergy (Relentless Viability):** Low — not recommended for burn specialists
-
-**Investment Notes:** One of the best free login champions. High value for all PvE content.
+## Mastery & Booking
+- **Best Mastery (PvE/PvP):** N/A
+- **Best Mastery (Clan Boss):** N/A
+- **Booking Impact:** N/A — 
 

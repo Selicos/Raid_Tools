@@ -1,16 +1,36 @@
-# Champion: Michelangelo
+# Michelangelo — Champion Summary
 
-**Role:** DEF Support
+## Executive Summary
+- **Role:** N/A
+- **Archetype:** N/A
+- **Best Content:** N/A
+- **Booking ROI:** N/A
+- **Investment Notes:** N/A
+- **Synergy/Relentless Viability:** N/A
 
-**Archetype:** DEF-based Buffer & Cleanser
+## Recommended Gear & Stats
+- **Primary Stat:** N/A
+- **Focus Stats (Arena/Dungeons):** 
+- **Focus Stats (Clan Boss):** 
+- **Gear Sets (PvP Offense):** 
+- **Gear Sets (PvP Defense):** 
+- **Gear Sets (Clan Boss):** 
+- **Gear Sets (Dungeons):** 
+- **Gear Sets (Hydra):** 
+- **Gear Sets (Iron Twins):** 
+- **Gear Sets (Solo Farming):** 
+- **Gear Tradeoffs:**
 
-**Best Mastery (Clan Boss):** Bulwark
+## Skill & Attack Order
+- **Ideal Skill Order:** N/A
+- **Recommended Attack Order:** N/A
+- **First Turn Skill:** N/A
+- **Disabled Skills:** None
 
-**Booking ROI:** Medium
+### Skill Details
 
-**Best Dungeon Use:** Ice Golem 20
-
-**Synergy (Relentless Viability):** Low — not recommended
-
-**Investment Notes:** Michelangelo is a reliable support for early and mid-game, but less impactful in late-game content.
+## Mastery & Booking
+- **Best Mastery (PvE/PvP):** N/A
+- **Best Mastery (Clan Boss):** N/A
+- **Booking Impact:** N/A — 
 

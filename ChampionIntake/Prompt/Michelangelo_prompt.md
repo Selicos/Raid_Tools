@@ -1,34 +1,5 @@
-# Champion Log Generation Prompt for Embrys
+# Champion Log Generation Prompt for Michelangelo
 
-You are to generate a complete champion log for Embrys in JSON format, using the following module templates as structure and guidance. Each module (0–13) is included below. For each, fill in the relevant information for Embrys. Output a single JSON object with each module as a key (e.g., "overview", "skills", "synergy", etc.).
-
----
-## Example output structure:
-```json
-{
-  "champion": "Embrys",
-  "owned": true,
-  "overview": { ... },
-  "skills": { ... },
-  "team_inputs": { ... },
-  "mastery_simulation": { ... },
-  "clan_boss": { ... },
-  "synergy": { ... },
-  "investment": { ... },
-  "intelligence": { ... },
-  "turn_meter": { ... },
-  "utility_comparison": { ... },
-  "ratings": { ... },
-  "final_summary": { ... },
-  "synergy_engine": { ... }
-}
-```
----
-Instructions:
-- Fill in each section for Embrys using the module templates below.
-- Output only the final JSON object.
-
----
 ---
 ## Module 0
 ## Module 0: Champion Setup
@@ -79,6 +50,7 @@ List each skill by name and the stat(s) it scales from (e.g., "A1: HP", "A2: DEF
 ```json
 "overview": {
   "role": "<REAL ROLE HERE>",
+  "rarity": "<REAL RARITY>",
   "archetype": "<REAL ARCHETYPE HERE>",
   "primary_damage_stat": "<ATK/HP/DEF/Hybrid/Other>",
   "skill_scaling": {

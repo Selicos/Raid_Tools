@@ -1,34 +1,5 @@
-# Champion Log Generation Prompt for Brogni
+# Champion Log Generation Prompt for Embrys
 
-You are to generate a complete champion log for Brogni in JSON format, using the following module templates as structure and guidance. Each module (0–13) is included below. For each, fill in the relevant information for Brogni. Output a single JSON object with each module as a key (e.g., "overview", "skills", "synergy", etc.).
-
----
-## Example output structure:
-```json
-{
-  "champion": "Brogni",
-  "owned": true,
-  "overview": { ... },
-  "skills": { ... },
-  "team_inputs": { ... },
-  "mastery_simulation": { ... },
-  "clan_boss": { ... },
-  "synergy": { ... },
-  "investment": { ... },
-  "intelligence": { ... },
-  "turn_meter": { ... },
-  "utility_comparison": { ... },
-  "ratings": { ... },
-  "final_summary": { ... },
-  "synergy_engine": { ... }
-}
-```
----
-Instructions:
-- Fill in each section for Brogni using the module templates below.
-- Output only the final JSON object.
-
----
 ---
 ## Module 0
 ## Module 0: Champion Setup

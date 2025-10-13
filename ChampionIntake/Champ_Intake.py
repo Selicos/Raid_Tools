@@ -13,8 +13,21 @@ def generate_and_save_champion_json_from_prompt(champion_name):
     # TODO: Replace this with a call to your LLM or parsing logic
     # For example, call OpenAI API, local LLM, or deterministic parser
     # champion_json = call_llm_to_generate_json(prompt_text)
+    # Try to get rarity from placeholder or ask for it if not present
+    rarity = None
+    json_path = os.path.join(champion_json_dir, f"{champion_name}.json")
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, "r", encoding="utf-8") as jf:
+                champ_json = json.load(jf)
+                rarity = champ_json.get("rarity")
+        except Exception:
+            pass
+    if not rarity:
+        rarity = input(f"Enter rarity for {champion_name} (Rare/Epic/Legendary/Mythic or 3/4/5/6): ").strip().capitalize()
     champion_json = {
         "champion": champion_name,
+        "rarity": rarity,
         "owned": True,
         "overview": {},
         "skills": {},
@@ -30,8 +43,32 @@ def generate_and_save_champion_json_from_prompt(champion_name):
         "final_summary": {},
         "synergy_engine": {}
     }
+
+    # --- Expand skill/attack order to 16 turns if possible ---
+    # If skills.rotation.optimal_cycle exists and is a list, expand it
+    skills = champion_json.get("skills", {})
+    rotation = skills.get("rotation", {})
+    optimal_cycle = rotation.get("optimal_cycle", [])
+    if optimal_cycle and isinstance(optimal_cycle, list):
+        expanded = []
+        seen = set()
+        idx = 0
+        # Try to repeat the cycle up to 16 turns, or until a repeat is detected
+        while len(expanded) < 16:
+            expanded.append(optimal_cycle[idx % len(optimal_cycle)])
+            idx += 1
+            # If the cycle repeats exactly (e.g., first N == next N), break
+            if len(expanded) >= 2 * len(optimal_cycle):
+                if expanded[-len(optimal_cycle):] == expanded[-2*len(optimal_cycle):-len(optimal_cycle)]:
+                    break
+        rotation["turn_sequence"] = expanded[:16]
+        skills["rotation"] = rotation
+        champion_json["skills"] = skills
+
     # Save the generated JSON
     save_champion_json(champion_name, champion_json)
+    # Update owned list with rarity
+    add_to_owned_list(champion_name, update_date=True)
     print(f"✅ Champion JSON generated and saved for {champion_name}")
     return True
 # Ensure environment is ready
@@ -74,16 +111,33 @@ def add_to_owned_list(champion_name, update_date=True):
     champ_lower = champion_name.lower()
     updated = False
 
+    # Try to get rarity from champion JSON if available
+    rarity = None
+    json_path = os.path.join(champion_json_dir, f"{champion_name}.json")
+    if os.path.exists(json_path):
+        try:
+            with open(json_path, "r", encoding="utf-8") as jf:
+                champ_json = json.load(jf)
+                rarity = champ_json.get("rarity")
+        except Exception:
+            pass
+
     for i, line in enumerate(lines):
         if line.startswith("- "):
             line_name = line[2:].split("|")[0].strip().lower()
             if line_name == champ_lower:
                 if update_date:
-                    lines[i] = f"- {champion_name} | Last Updated: {today}\n"
+                    if rarity:
+                        lines[i] = f"- {champion_name} | Rarity: {rarity} | Last Updated: {today}\n"
+                    else:
+                        lines[i] = f"- {champion_name} | Last Updated: {today}\n"
                     updated = True
                 break
     else:
-        lines.append(f"- {champion_name} | Last Updated: {today}\n")
+        if rarity:
+            lines.append(f"- {champion_name} | Rarity: {rarity} | Last Updated: {today}\n")
+        else:
+            lines.append(f"- {champion_name} | Last Updated: {today}\n")
         updated = True
 
     if updated:

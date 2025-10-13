@@ -1,10 +1,11 @@
 # Owned Champions
 
-- Ithos | Last Updated: 2025-10-11
-- Artak | Last Updated: 2025-10-11
+- Ithos | Rarity: Legendary | Last Updated: 2025-10-12
+- Artak | Rarity: Legendary | Last Updated: 2025-10-12
 - Geomancer | Last Updated: 2025-10-11
-- Embrys | Last Updated: 2025-10-11
-- Alice the wanderer | Last Updated: 2025-10-11
-- Michelangelo | Last Updated: 2025-10-11
-- Brogni | Last Updated: 2025-10-12
-- Arbiter | Last Updated: 2025-10-12
+- Embrys | Rarity: Mythic | Last Updated: 2025-10-12
+- Alice the wanderer | Last Updated: 2025-10-12
+- Michelangelo | Rarity: Legendary | Last Updated: 2025-10-12
+- Brogni | Rarity: Legendary | Last Updated: 2025-10-12
+- Arbiter | Rarity: Legendary | Last Updated: 2025-10-12
+- Alice | Rarity: Legendary | Last Updated: 2025-10-12

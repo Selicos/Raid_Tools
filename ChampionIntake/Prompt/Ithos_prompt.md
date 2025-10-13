@@ -50,6 +50,7 @@ List each skill by name and the stat(s) it scales from (e.g., "A1: HP", "A2: DEF
 ```json
 "overview": {
   "role": "<REAL ROLE HERE>",
+  "rarity": "<REAL RARITY>",
   "archetype": "<REAL ARCHETYPE HERE>",
   "primary_damage_stat": "<ATK/HP/DEF/Hybrid/Other>",
   "skill_scaling": {

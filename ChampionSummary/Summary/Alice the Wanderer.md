@@ -1,16 +1,36 @@
-# Champion: Alice the Wanderer
+# Alice the wanderer — Champion Summary
 
-**Role:** Attack Nuker / Cooldown Control
+## Executive Summary
+- **Role:** N/A
+- **Archetype:** N/A
+- **Best Content:** N/A
+- **Booking ROI:** N/A
+- **Investment Notes:** N/A
+- **Synergy/Relentless Viability:** N/A
 
-**Archetype:** Single Target & AoE Damage / Skill Cooldown Manipulation
+## Recommended Gear & Stats
+- **Primary Stat:** N/A
+- **Focus Stats (Arena/Dungeons):** 
+- **Focus Stats (Clan Boss):** 
+- **Gear Sets (PvP Offense):** 
+- **Gear Sets (PvP Defense):** 
+- **Gear Sets (Clan Boss):** 
+- **Gear Sets (Dungeons):** 
+- **Gear Sets (Hydra):** 
+- **Gear Sets (Iron Twins):** 
+- **Gear Sets (Solo Farming):** 
+- **Gear Tradeoffs:**
 
-**Best Mastery (Clan Boss):** Warmaster
+## Skill & Attack Order
+- **Ideal Skill Order:** N/A
+- **Recommended Attack Order:** N/A
+- **First Turn Skill:** N/A
+- **Disabled Skills:** None
 
-**Booking ROI:** High
+### Skill Details
 
-**Best Dungeon Use:** Fire Knight, Doom Tower, Arena
-
-**Synergy (Relentless Viability):** Excellent for more frequent skill cycling and bonus damage.
-
-**Investment Notes:** Top-tier for Arena, Doom Tower, and boss control. High value for cooldown manipulation and nuking.
+## Mastery & Booking
+- **Best Mastery (PvE/PvP):** N/A
+- **Best Mastery (Clan Boss):** N/A
+- **Booking Impact:** N/A — 
 
