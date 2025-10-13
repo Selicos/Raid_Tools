@@ -1,6 +1,6 @@
-{
-  "version": "2.0.0",
-  "tasks": [
+    {
+      "version": "2.0.0",
+      "tasks": [
     {
       "label": "Run Champion Intake",
       "type": "shell",
@@ -132,6 +132,17 @@
       "problemMatcher": [],
       "dependsOn": ["Setup Environment"],
       "dependsOrder": "sequence"
+    },
+    {
+      "label": "Organize Completed Prompts",
+      "type": "shell",
+      "command": "if not exist output\\completed mkdir output\\completed && move /Y *_prompt.completed.md output\\completed\\ 2>nul || echo No files to move.",
+      "group": "build",
+      "presentation": {
+        "reveal": "always"
+      },
+      "problemMatcher": [],
+      "detail": "Moves all *_prompt.completed.md files to output/completed/"
     }
   ],
   "inputs": [

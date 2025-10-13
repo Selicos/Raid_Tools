@@ -1,4 +1,3 @@
-# Makefile for Raid Tools
 
 .PHONY: help setup test lint format intake analysis summary clean
 
@@ -51,3 +50,11 @@ clean:
 	rmdir /S /Q Champion\ Review\ and\ Comparison\__pycache__ || true
 	rmdir /S /Q ChampionAnalysisTool\__pycache__ || true
 	rmdir /S /Q Summarize\ Champion\ Results\__pycache__ || true
+
+# Ensure all completed prompt markdown files are in output/completed
+.PHONY: organize-completed
+organize-completed:
+	@echo "Moving all *_prompt.completed.md files to output/completed/ ..."
+	if not exist output\completed mkdir output\completed
+	move /Y *_prompt.completed.md output\completed\ 2>nul || echo "No files to move."
+	@echo "Done."

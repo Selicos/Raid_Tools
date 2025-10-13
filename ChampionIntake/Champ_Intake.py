@@ -145,22 +145,19 @@ def add_to_owned_list(champion_name, update_date=True):
     else:
         print(f"✅ {champion_name} already up to date")
 
-def create_json_placeholder(champion_name):
+def create_json_placeholder(champion_name, rarity=None):
     os.makedirs(champion_json_dir, exist_ok=True)
     path = os.path.join(champion_json_dir, f"{champion_name}.json")
-    # Accept rarity from command-line or prompt
     rarity_map = {
         "6": "Mythic", "mythic": "Mythic", "m": "Mythic",
         "5": "Legendary", "legendary": "Legendary", "l": "Legendary",
         "4": "Epic", "epic": "Epic", "e": "Epic",
         "3": "Rare", "rare": "Rare", "r": "Rare"
     }
-    rarity = None
-    if hasattr(create_json_placeholder, "rarity_override") and create_json_placeholder.rarity_override:
-        rarity = create_json_placeholder.rarity_override
+    if rarity is None:
+        rarity = "Unknown"
     else:
-        rarity = input(f"Enter rarity for {champion_name} (Rare/Epic/Legendary/Mythic or 3/4/5/6): ").strip().lower()
-    rarity = rarity_map.get(rarity, rarity.capitalize() if rarity else "Unknown")
+        rarity = rarity_map.get(rarity.lower(), rarity.capitalize())
     with open(path, "w", encoding="utf-8") as f:
         f.write("{\n"
                 f'  "champion": "{champion_name}",\n'
@@ -291,11 +288,7 @@ def open_in_editor(path):
         print(f"❌ Could not open in Notepad: {e}")
 
 def run_champion_intake(champion_name, rarity=None, fast_mode=False):
-    if rarity:
-        create_json_placeholder.rarity_override = rarity
-    else:
-        create_json_placeholder.rarity_override = None
-    create_json_placeholder(champion_name)
+    create_json_placeholder(champion_name, rarity=rarity)
     md_path = create_prompt_md(champion_name)
     if validate_json(champion_name) and validate_md(champion_name):
         copy_prompt_to_clipboard(md_path)
@@ -390,11 +383,17 @@ if __name__ == "__main__":
     if len(sys.argv) > 2:
         rarity = sys.argv[2].strip().lower()
 
+    # Always prompt for a new champion first if not provided
+    if not champion_name:
+        print("🔍 Champion Intake")
+        print("Enter a champion name to process individually.")
+        print("Leave blank to use the owned champion list.")
+        champion_name = input("Champion name: ").strip()
+        if champion_name:
+            rarity = input("Rarity (Rare/Epic/Legendary/Mythic or 3/4/5/6): ").strip().lower()
+
     if champion_name:
-        if rarity:
-            # Pass rarity override to create_json_placeholder
-            create_json_placeholder.rarity_override = rarity
-        run_champion_intake(champion_name, fast_mode=False)
+        run_champion_intake(champion_name, rarity=rarity, fast_mode=False)
         prompt = generate_prompt_for_champion(champion_name)
         prompt_path = os.path.join(prompt_dir, f"{champion_name}_prompt.md")
         with open(prompt_path, "w", encoding="utf-8") as f:
@@ -403,22 +402,8 @@ if __name__ == "__main__":
         # --- Automated champion JSON generation from prompt ---
         generate_and_save_champion_json_from_prompt(champion_name)
     else:
-        print("🔍 Champion Intake")
-        print("Enter a champion name to process individually.")
-        print("Leave blank to use the owned champion list.")
-        user_input = input("Champion name: ").strip()
-        if user_input == "":
-            confirm = input("⚠️ No champion entered. Run owned list instead? (y/n): ").strip().lower()
-            if confirm == "y":
-                run_smart_batch_from_owned_list(fast_mode=False)
-            else:
-                print("❌ Cancelled. No champion processed.")
+        confirm = input("⚠️ No champion entered. Run owned list instead? (y/n): ").strip().lower()
+        if confirm == "y":
+            run_smart_batch_from_owned_list(fast_mode=False)
         else:
-            run_champion_intake(user_input, fast_mode=False)
-            prompt = generate_prompt_for_champion(user_input)
-            prompt_path = os.path.join(prompt_dir, f"{user_input}_prompt.md")
-            with open(prompt_path, "w", encoding="utf-8") as f:
-                f.write(prompt)
-            print(f"✅ Prompt for {user_input} written to {prompt_path}")
-            # --- Automated champion JSON generation from prompt ---
-            generate_and_save_champion_json_from_prompt(user_input)
+            print("❌ Cancelled. No champion processed.")
