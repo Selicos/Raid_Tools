@@ -82,61 +82,39 @@ This module handles champion data intake, prompt generation, and review workflow
 
 3. **Compare owned champions**
    ```sh
-   python Comparisons/Champ_Comparison_Track_owned.py
-   ```
 
-## Data Structure
+   # Champion Intake & Review System
 
-- Champion JSON files: `Champions/`
-- Comparison scripts: `Comparisons/`
-- Prompt files: `Prompt/`
-- Templates: `templates/`
+   This module streamlines champion intake, prompt generation, review, and summary for Raid Tools.
 
-## Testing & Makefile
+   ## Onboarding & Environment Setup
 
-- All tests for this module are in `Tests/`
-- Run with `pytest` or `make test` from the repo root
-- Use the Makefile for common tasks (setup, test, format, intake)
+   1. Run `python Tools/Setup_Environment.py` or `make setup` in the repo root.
+   2. Open the folder in VS Code and select the `.venv` Python interpreter if prompted.
+   3. Install all recommended extensions when prompted.
+   4. Activate the virtual environment before running scripts or tests.
+   5. Use the Makefile or VS Code tasks for all core operations (intake, cleanup, compare, test, etc.).
 
-## VS Code & Environment Setup
+   ## Usage
 
-1. Clone the repository
-2. Run `python Tools/Setup_Environment.py` or `make setup` from the root
-3. Open the workspace in VS Code for best experience
-4. Ensure `.vscode/settings.json`, `.vscode/tasks.json`, and `.vscode/extensions.json` exist (see root README)
-5. Install all recommended extensions when prompted
-6. Run `make test` to validate your environment and project health
+   - **Intake a new champion:**
+     - `python Tools/champIntake.py` or use the "Run Champion Intake" VS Code task.
+   - **Cleanup duplicate champions:**
+     - `python Tools/cleanup_duplicate_champions.py` or use the "Cleanup Duplicate Champions" task.
+   - **Compare owned champions:**
+     - `python ChampionIntake/Comparisons/Champ_Comparison_Track_owned.py` or use the "Run Champion Comparison Tracker" task.
+   - **Run all tests:**
+     - `pytest` or `make test` or use the "Test Environment Setup and Requirements" task.
 
-See the root README for full environment and onboarding details, including the environment test and VS Code configuration.
+   ## Data Structure
 
-2. **Champion Review & Update**
-   - Edit the champion JSON as needed.
-   - Run `updateOwnedChampions.py` to refresh outdated entries.
-   - Use `cleanupDuplicateChampions.py` to merge duplicate files.
+   - Champion JSON files: `Champions/`
+   - Comparison scripts: `Comparisons/`
+   - Prompt files: `Prompt/`
+   - Templates: `templates/`
 
-3. **Skill Cycle Analysis**
-   - Run `championAnalysis.py` in `ChampionAnalysisTool/` to simulate skill cycles and generate detailed markdown reports in `cooldown_analysis/`.
+   ## VS Code & Makefile
 
-4. **Summary Generation**
-   - Run `generateChampionSummaries.py` in `ChampionSummary/` to generate readable summaries for each champion, including skill order and expected damage from the analysis tool.
-
-5. **Testing & Validation**
-   - Run tests in `Tests/` to ensure all champion JSONs and prompts are consistent and valid.
-
----
-
-## Example Usage
-
-```sh
-# Setup environment
-python "Champion Review and Comparison/Setup_Environment.py"
-
-# Intake a new champion
-python "Champion Review and Comparison/Tools/champIntake.py"
-
-# Run skill cycle analysis
-python ChampionAnalysisTool/championAnalysis.py
-
-# Generate summary markdowns
-python ChampionSummary/generateChampionSummaries.py
-```
+   - The `.vscode` folder configures interpreter, linting, formatting, and tasks for all users.
+   - Use the Makefile for setup, test, lint, format, and all core operations.
+   - See the root README for full onboarding and troubleshooting details.

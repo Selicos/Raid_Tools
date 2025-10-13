@@ -15,6 +15,28 @@
 
 # Raid Tools: Champion Review, Analysis, and Summary System
 
+## Onboarding & Environment Setup (2025)
+
+**Quick Start:**
+1. Run `python Tools/Setup_Environment.py` (or `make setup`) in the repo root.
+2. Open the folder in VS Code. Select the `.venv` Python interpreter if prompted.
+3. Install all recommended extensions when prompted.
+4. Activate the virtual environment before running tests or scripts (see below).
+5. Use the Makefile or VS Code tasks for all core operations (intake, analysis, summary, test, lint, format).
+
+**Environment Test:**
+Run `make test` or `python -m pytest` to validate your environment, dependencies, and project structure. This checks Python version, virtualenv, required packages, Makefile, VS Code configs, and more.
+
+**VS Code Integration:**
+- The `.vscode` folder configures interpreter, linting, formatting, and tasks for all users.
+- Use the Source Control panel for git operations and the Run/Debug panel for tasks.
+
+**Activation:**
+- Windows: `.venv\Scripts\activate`
+- macOS/Linux: `source .venv/bin/activate`
+
+See the rest of this README for details on tools, folder structure, and troubleshooting.
+
 ## Overview
 
 This repository provides a complete workflow for reviewing, analyzing, and summarizing Raid Shadow Legends champions.
