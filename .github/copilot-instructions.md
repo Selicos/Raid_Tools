@@ -1,26 +1,5 @@
 # GitHub Copilot Instructions for Raid Tools
 
-## Table of Contents
-1. [Purpose](#purpose)
-2. [AI Model Recommendations](#ai-model-recommendations)
-3. [General Guidelines](#general-guidelines)
-4. [Change Management & Documentation](#change-management--documentation)
-5. [Testing & Validation](#testing--validation)
-6. [AI Model & Prompting](#ai-model--prompting)
-7. [Formatting & Style](#formatting--style)
-8. [Simplicity & Maintainability](#simplicity--maintainability)
-9. [Feedback & Review](#feedback--review)
-10. [Project Structure](#project-structure)
-11. [Key Scripts and Files](#key-scripts-and-files)
-12. [Task-Specific Guidance](#task-specific-guidance)
-13. [Best Practices](#best-practices)
-14. [Data Privacy & Security](#data-privacy--security)
-15. [LLM/AI Integration (Planned)](#llmai-integration-planned)
-16. [Issue & Feature Request Templates](#issue--feature-request-templates)
-17. [Attribution & License](#attribution--license)
-18. [Recent Changes & Updates](#recent-changes--updates)
-19. [Handling Deprecated Scripts & Data Migrations](#handling-deprecated-scripts--data-migrations)
-
 ## Handling Deprecated Scripts & Data Migrations
 
 - When deprecating scripts or migrating data formats, update all references in documentation, tasks, and scripts to use the new paths and formats.
