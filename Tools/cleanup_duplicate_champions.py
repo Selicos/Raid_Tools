@@ -14,9 +14,9 @@ Usage:
 - Merging appends duplicate content to the first file and deletes the duplicate.
 
 Directories:
-------------
-- Champions JSON: Champion Review and Comparison\Champions
-- Prompt Markdown: Champion Review and Comparison\prompt
+-------------
+# Champions JSON: ChampionIntake\Champions
+# Prompt Markdown: ChampionIntake\Prompt
 
 Notes:
 ------
@@ -27,10 +27,9 @@ Notes:
 import os
 from collections import defaultdict
 
-# Paths
-champion_dir = r"Champion Review and Comparison"
+champion_dir = r"ChampionIntake"
 champion_json_dir = os.path.join(champion_dir, "Champions")
-prompt_dir = os.path.join(champion_dir, "prompt")
+prompt_dir = os.path.join(champion_dir, "Prompt")
 
 def find_case_duplicates(directory, extension):
     """

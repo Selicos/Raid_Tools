@@ -5,6 +5,10 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 
 **Note for GitHub Copilot**: This file is the authoritative reference for GitHub Copilot and Copilot Chat. When working in VS Code, prioritize these instructions over other similar files in the repository.
 
+## AI Model Recommendations
+- **GPT-4.1**: Use for script development, code generation, project architecture, feature implementation, and general programming tasks
+- **Claude Sonnet 4**: Use for documentation review, file analysis, debugging complex issues, code refactoring, and comprehensive project evaluation
+
 ---
 
 ## General Guidelines
@@ -20,6 +24,7 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 - **Chat Behavior:** Provide concise, relevant code snippets; continue to work on larger tasks up to 4 cycles without asking for confirmation if needed
 - **No Emojis:** Do not use emojis in code, documentation, markdown, or output
 - **Positive but Realistic:** Stay positive but when there is a better solution, tool, implementation, or approach, suggest it. Note when something is not possible or not recommended.
+- **Accessing external sites** Always allow access to Raid Shadow Legends Wiki, Ayumilove, Hellhades, and other relevant sites for champion data verification and research.
 
 ---
 
@@ -49,6 +54,23 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 
 ## Copilot Chat Prompts & Example Usage
 
+### Model Selection Guidelines
+- **Use GPT-4o for:**
+  - Script development and code generation
+  - Feature implementation and new functionality
+  - Project architecture decisions
+  - Performance optimization
+  - Algorithm implementation
+  - JSON file creation and modification
+  - Champion data structure updates
+- **Use Claude Sonnet 4 for:**
+  - Documentation review and improvement
+  - File analysis and code structure evaluation
+  - Debugging complex issues and error investigation
+  - Code refactoring and cleanup
+  - Comprehensive project evaluation
+
+### Task-Specific Guidance
 - When asked to generate a new champion JSON, use the template in `templates/logTemplate.json`. Ignore examples or presets and focus on the template structure.
   - Confirm the champion skills and stats are correct before finalizing any outputs.
   - Reference the Raid Shadow Legends Site then check against Ayumilove and Hellhades for accuracy. If something contradicts, use whichever sites agree. 
@@ -58,15 +80,17 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 - When asked about project priorities or what to work on next, reference `Project tracking and new ideas.md` for the current roadmap and implementation order.
 
 ### Example Prompts
-- "Generate a new champion JSON for 'Arbiter' using the template."
-- "Add a pytest to validate all champion JSONs in the Champions folder."
-- "Create a script to batch-generate summaries for all champions."
-- "Refactor championAnalysis.py to use pathlib and add type hints."
-- "Add a test for the LLM integration module."
-- "Show an example of error handling for missing champion fields."
-- "Update the README to include the new ChampionSummary tool."
-- "What should I work on next according to the project tracking file?"
-- "Create a new feature branch for the next section in project tracking."
+- "Generate a new champion JSON for 'Arbiter' using the template." (GPT-4o)
+- "Add a pytest to validate all champion JSONs in the Champions folder." (GPT-4o)
+- "Create a script to batch-generate summaries for all champions." (GPT-4o)
+- "Refactor championAnalysis.py to use pathlib and add type hints." (Claude Sonnet 4)
+- "Add a test for the LLM integration module." (GPT-4o)
+- "Show an example of error handling for missing champion fields." (GPT-4o)
+- "Update the README to include the new ChampionSummary tool." (Claude Sonnet 4)
+- "What should I work on next according to the project tracking file?" (Claude Sonnet 4)
+- "Create a new feature branch for the next section in project tracking." (GPT-4o)
+- "Fix JSON formatting issues in Alice the Wanderer champion file." (GPT-4o)
+- "Generate new champion JSON for Artak using the template." (GPT-4o)
 
 ---
 

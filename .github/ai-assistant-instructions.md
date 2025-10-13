@@ -122,6 +122,12 @@ Raid_Tools/
 - Implement proper error handling with try/except blocks
 - Follow the established naming conventions and file organization
 - Update requirements.txt when adding new dependencies
+- **JSON Processing:** Use GPT-4o for JSON file creation, modification, and structural updates
+- **Template Compliance:** Ensure all champion JSONs follow the logTemplate.json structure
+- Use pathlib for file operations instead of os.path
+- Implement proper error handling with try/except blocks
+- Follow the established naming conventions and file organization
+- Update requirements.txt when adding new dependencies
 
 ### Testing Requirements
 - Write pytest tests for all new features and bug fixes
@@ -140,6 +146,15 @@ Raid_Tools/
 # Validate against multiple sources: Raid Shadow Legends, Ayumilove, Hellhades
 # Ensure all required fields are present and correctly formatted
 # Save to Champion Review and Comparison/Champions/
+# Use Tools/validate_json.py to verify JSON structure after creation
+```
+
+### JSON Validation and Fixing
+```python
+# Use Tools/validate_json.py for individual file validation
+# Run with --all flag to validate all champion JSON files
+# For corrupted files: identify specific line/column errors
+# Apply targeted fixes rather than full file replacement when possible
 ```
 
 ### Summary Generation
