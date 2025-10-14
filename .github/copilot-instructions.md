@@ -16,7 +16,7 @@ This is the required and only workflow for updating champion JSON logs in the Ra
    - Ensure the prompt markdown file is fully filled out, with all modules (0–13) completed in the required JSON structure.
 
 3. **Manual Validation of Champion Data**
-   - Before generating or updating the JSON, manually validate the champion's name, skills, stats, and role using authoritative online resources (e.g., Raid Shadow Legends Wiki, Ayumilove, Hellhades).
+   - Go to `input/Prompt/` and find the `[champion]_prompt.md` file for the desired champion.
    - Confirm the champion name is correct and matches authoritative sources. Also confirm all skill names, effects, multipliers, cooldowns, and stat priorities are accurate and up to date. Document the validation step in the workflow log or commit message.
 
 4. **Generate the JSON Log**
@@ -30,7 +30,7 @@ This is the required and only workflow for updating champion JSON logs in the Ra
 6. **Validation**
    - Run schema and test validation (e.g., with `pytest` or the `Validate Champion JSON` task) to confirm the JSON is valid and complete.
    - Only mark the champion as updated when the JSON passes all validation and matches the authoritative sources.
-
+   - Overwrite or update the corresponding file in `output/Champions/[champion].json` with the new, fully validated JSON log.
 7. **Repeat for All Champions**
    - Continue this process for each champion as needed, especially after prompt updates, new information, or game changes.
 
@@ -78,7 +78,8 @@ python Tools/import_owned_champions.py --from-owned-list
 
 # Trigger champion intake and prompt generation for all owned champions
 python Tools/import_owned_champions.py --from-owned-list --trigger-intake
-
+# Import owned champions from a file (default: input/Owned_Champions/Owned_champion_list.md)
+python Tools/import_owned_champions.py --from-owned-list
 # Import a single champion by name and rarity
 python Tools/import_owned_champions.py --name "Arbiter" --rarity "Legendary"
 ```
