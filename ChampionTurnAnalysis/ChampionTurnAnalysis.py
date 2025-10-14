@@ -1,5 +1,5 @@
 """
-Champion Skill Cycle Simulation and Analysis
+Champion Turn Cycle Simulation and Analysis
 
 This script loads champion JSON files, simulates skill usage over a turn cycle for both single-target (boss) and multi-target (wave) scenarios,
 calculates damage, healing, shield generation, and buff/debuff uptime, and outputs a detailed markdown report for each champion.
@@ -11,7 +11,7 @@ Improvements:
 - Type hints, docstrings, and improved comments.
 - Constants for buffs, debuffs, and turns.
 - Helper function for skill selection.
-- All output, cache, and documentation in the Cooldown_Analysis folder.
+- All output, cache, and documentation in the ChampionTurnAnalysis/cooldown_analysis folder.
 """
 
 import os
@@ -26,8 +26,8 @@ TURNS = 16
 
 # Directory containing champion JSON files and output
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
-CHAMPIONS_DIR = os.path.join(BASE_DIR, "data", "champions")
-COOLDOWN_ANALYSIS_DIR = os.path.join(BASE_DIR, "output", "cooldown_analysis")
+CHAMPIONS_DIR = os.path.join(BASE_DIR, "output", "Champions")
+COOLDOWN_ANALYSIS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "input", "cooldown_analysis"))
 os.makedirs(COOLDOWN_ANALYSIS_DIR, exist_ok=True)
 
 def load_champion_json(champion_name: str) -> dict:

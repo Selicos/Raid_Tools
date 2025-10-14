@@ -1,43 +1,4 @@
-## Champion Intake & Prompt Generation
 
-This folder contains all scripts, templates, and data for champion intake, prompt generation, and champion log management.
-### Key Scripts
-
-- `Champ_Intake.py`: Main script for champion intake and prompt generation (single champion)
-- `Comparisons/Champ_Comparison_Track_owned.py`: Compare all owned champions
-- `modules/merge_modules.py`: Merge review modules
-- `templates/logTemplate.json`: Template for new champion JSON
-### Champion Management CLI
-
-**Authoritative tool:** Use `Tools/import_owned_champions.py` for all bulk import, batch prompt generation, and owned list management. Do **not** use or reference `manage_champions.py` or any legacy scripts.
-Example usage:
-```sh
-python Tools/import_owned_champions.py --from-owned-list
-python Tools/import_owned_champions.py --from-owned-list --trigger-intake
-python Tools/import_owned_champions.py --name "Arbiter" --rarity "Legendary"
-```
-See `python Tools/import_owned_champions.py --help` for all options.
-
-### Prompt Files
-- All prompt files are in `Prompt/` and must be named `[champion]_prompt.md`.
-- All completed prompt markdowns (e.g., `[champion]_prompt.completed.md`) **must** be moved to `output/completed/`.
-- Use the Makefile target `make organize-completed` or the VS Code task “Organize Completed Prompts” to move all completed files automatically.
-### Champion JSONs
-
-- All champion logs are in `Champions/` and must follow the template in `templates/logTemplate.json`.
-### Automation
-
-- Use the Makefile or VS Code tasks for all core operations:
-  - `make intake`, `make analysis`, `make summary`, `make organize-completed`, etc.
-### Testing
-
-- All tests are in `Tests/` or `root_Tests/` and must be run with `pytest`.
-### No File/Folder Deletion
-
-- Copilot and all scripts must **never** delete files or folders. See `.github/copilot-instructions.md` for policy.
-# Raid_Tools
-
-# Champion Intake & Review System
 
 
 It supports single or batch processing, integrates with Copilot Chat, auto-validates and timestamps each champion entry, and provides skill cycle analysis and summary reports.
