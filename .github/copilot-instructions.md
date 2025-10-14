@@ -3,36 +3,57 @@
 
 # GitHub Copilot Instructions for Raid Tools
 
-## Champion JSON Update Workflow (Default and Only Workflow)
 
-This is the required and only workflow for updating champion JSON logs in the Raid Tools project. All previous, parallel, or batch/automated alternatives are deprecated. Follow these steps for every champion update:
+## Champion JSON Creation & Update Workflow (Authoritative)
+
+
+This is the only approved workflow for creating or updating champion JSON logs in the Raid Tools project. All previous, parallel, or batch/automated alternatives are deprecated. Follow these steps for every champion update:
+
+**Prompt File Handling:**
+- All in-progress or incomplete prompts are kept in `input/Prompt/`.
+- Once a prompt is fully validated and used to generate a JSON, the markdown file is moved to `output/completed_prompts/`.
+- Completed prompts in `output/completed_prompts/` serve as the authoritative, human-readable record for each champion and are used for review, notes, and as the source for JSON generation and downstream tools (summary, cooldown analysis, etc.).
+- This separation allows easy tracking of which champions are complete and which still need work.
 
 ### Steps
 
 1. **Locate the Prompt File**
-   - Go to `ChampionIntake/Prompt/` and find the `[champion]_prompt.md` file for the desired champion.
+   - Go to `input/Prompt/` and find the `[champion]_prompt.md` file for the desired champion.
 
 2. **Complete the Prompt**
    - Ensure the prompt markdown file is fully filled out, with all modules (0–13) completed in the required JSON structure.
+   - Do not proceed unless the prompt is 100% complete and accurate.
 
 3. **Manual Validation of Champion Data**
-   - Go to `input/Prompt/` and find the `[champion]_prompt.md` file for the desired champion.
-   - Confirm the champion name is correct and matches authoritative sources. Also confirm all skill names, effects, multipliers, cooldowns, and stat priorities are accurate and up to date. Document the validation step in the workflow log or commit message.
+   - Manually validate all champion data (name, skills, multipliers, cooldowns, stat priorities, etc.) using authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades, etc.).
+   - Only proceed if all data is correct and up to date. Document the validation step in the workflow log or commit message.
 
 4. **Generate the JSON Log**
-   - Use the content of the completed prompt markdown to generate a single JSON object, following the template and module keys provided in the prompt.
-   - Ensure the JSON reflects the validated champion name and data (skills, stats, multipliers, etc.) from the manual validation step.
+   - Use the content of the completed and validated prompt markdown to generate a single JSON object, following the template and module keys provided in the prompt (`data/templates/logTemplate.json`).
+   - The JSON must reflect the validated champion name and data exactly.
 
 5. **Update the Champion JSON**
-   - Overwrite or update the corresponding file in `ChampionIntake/Champions/[champion].json` with the new, fully validated JSON log.
+   - Overwrite or update the corresponding file in `output/Champions/[champion].json` with the new, fully validated JSON log.
    - Ensure no data is lost and the file matches the prompt structure and validated champion data and name exactly.
 
 6. **Validation**
-   - Run schema and test validation (e.g., with `pytest` or the `Validate Champion JSON` task) to confirm the JSON is valid and complete.
+   - Run validation with:
+     ```sh
+     python Tools/validate_json.py output/Champions/[champion].json
+     ```
+   - Confirm the script prints the champion name and rarity, and that the JSON is valid.
    - Only mark the champion as updated when the JSON passes all validation and matches the authoritative sources.
-   - Overwrite or update the corresponding file in `output/Champions/[champion].json` with the new, fully validated JSON log.
-7. **Repeat for All Champions**
+
+7. **Move Completed Prompt**
+   - After successful JSON creation and validation, move the completed prompt markdown file to `output/completed_prompts/` (if not already there). Do not remove it; this file is used for review, notes, and as the authoritative source for future updates.
+
+8. **Repeat for All Champions**
    - Continue this process for each champion as needed, especially after prompt updates, new information, or game changes.
+
+**Important:**
+- Never generate or overwrite a JSON for a champion if a completed prompt already exists in `output/completed_prompts/` for that champion. This prevents unnecessary overwrites and ensures completed prompts are not regenerated.
+- Never delete files or folders as part of this workflow.
+- Completed prompts in `output/completed_prompts/` are the authoritative, human-readable record for each champion and should always be preserved for review, notes, and as the source for all downstream tools.
 
 ---
 

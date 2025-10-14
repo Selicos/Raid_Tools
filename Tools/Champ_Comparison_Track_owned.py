@@ -4,7 +4,7 @@ import time
 import subprocess
 
 # Paths (update to use capital C for Champions)
-owned_file = os.path.join(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")), "data", "champions", "owned_champions.json")
+owned_file = os.path.join(os.path.dirname(__file__), "..", "Champions", "owned_champions.json")
 comparison_script = os.path.join(os.path.dirname(__file__), "Champ_comparison.py")
 
 # Track last modified time

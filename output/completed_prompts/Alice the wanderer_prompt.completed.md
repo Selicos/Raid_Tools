@@ -1,11 +1,41 @@
 # Champion Log Generation Prompt for Alice the Wanderer
 
+You are to generate a complete champion log for Alice the Wanderer in JSON format, using the following module templates as structure and guidance. Each module (0–13) is included below. For each, fill in the relevant information for Alice the Wanderer. Output a single JSON object with each module as a key (e.g., "overview", "skills", "synergy", etc.).
+
 ---
+## Example output structure:
+```json
+{
+  "champion": "Alice the Wanderer",
+  "owned": true,
+  "overview": { ... },
+  "skills": { ... },
+  "team_inputs": { ... },
+  "mastery_simulation": { ... },
+  "clan_boss": { ... },
+  "synergy": { ... },
+  "investment": { ... },
+  "intelligence": { ... },
+  "turn_meter": { ... },
+  "utility_comparison": { ... },
+  "ratings": { ... },
+  "final_summary": { ... },
+  "synergy_engine": { ... }
+}
+```
+---
+Instructions:
+- Fill in each section for Alice the Wanderer using the module templates below.
+- Output only the final JSON object.
+
+---
+---
+## Module 0
 ## Module 0: Champion Setup
 
 **Inputs:**
-- Champion name: Alice the Wanderer
-- Ownership status: OWNED
+- Champion name
+- Ownership status: OWNED or NOTOWNED
 
 **Goal:**
 Initialize champion log and set ownership flag.
@@ -13,330 +43,530 @@ Initialize champion log and set ownership flag.
 **Output:**
 ```json
 {
-  "champion": "Alice the Wanderer",
-  "owned": true
+  "champion": "<CHAMPION NAME>",
+  "owned": <true/false>,
+  "overview": {
+    "role": "<PLACEHOLDER_ROLE>",
+    "archetype": "<PLACEHOLDER_ARCHETYPE>",
+    "primary_damage_stat": "<PLACEHOLDER_STAT>",
+    "skill_scaling": {"A1": "<PLACEHOLDER_STAT>"},
+    "best_mastery": {"pve_pvp": "<PLACEHOLDER_MASTERY>", "clan_boss": "<PLACEHOLDER_MASTERY>"},
+    "booking_roi": "<PLACEHOLDER_VALUE>",
+    "gear_sets": {
+      "pvp_offense": ["<PLACEHOLDER_SET>", "<PLACEHOLDER_SET>"],
+      "pvp_defense": ["<PLACEHOLDER_SET>"],
+      "clan_boss": ["<PLACEHOLDER_SET>", "<PLACEHOLDER_SET>"],
+      "hydra": ["<PLACEHOLDER_SET>", "<PLACEHOLDER_SET>"],
+      "iron_twins": ["<PLACEHOLDER_SET>", "<PLACEHOLDER_SET>"],
+      "dungeons": ["<PLACEHOLDER_SET>", "<PLACEHOLDER_SET>"],
+      "solo_farming": ["<PLACEHOLDER_SET>", "<PLACEHOLDER_SET>"]
+    },
+    "gear_tradeoffs": [
+      { "set": "<PLACEHOLDER_SET>", "pros": "<PLACEHOLDER_PROS>", "cons": "<PLACEHOLDER_CONS>" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["<PLACEHOLDER_STAT>", "<PLACEHOLDER_STAT>", "<PLACEHOLDER_STAT>"],
+      "clan_boss": ["<PLACEHOLDER_STAT>", "<PLACEHOLDER_STAT>", "<PLACEHOLDER_STAT>"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "<PLACEHOLDER_VALUE>",
+      "hydra": "<PLACEHOLDER_VALUE>",
+      "iron_twins": "<PLACEHOLDER_VALUE>"
+    },
+    "best_dungeon_use": "<PLACEHOLDER_DUNGEON>"
+  }
 }
 ```
 
+
 ---
+## Module 1
+---
+
+### 📘 `module_1_overview.md`
+
+```markdown
 ## Module 1: Overview & Initial Summary
 
 **Inputs:**
-- Champion role: Support/HP Control
-- Archetype: Turn Meter Manipulator / Debuff Specialist
-- Gear sets: Relentless, Speed, Perception, Accuracy
-- Mastery: Eagle Eye (PvE/PvP), Warmaster (Clan Boss)
-- Booking ROI: High
+- Champion role (e.g., "HP Nuker", "DEF Support", etc.)
+- Archetype (e.g., "Burn DPS / Debuff Specialist")
+- Gear sets (list best sets for each content type)
+- Mastery (best mastery for each content type)
+- Booking ROI (High/Medium/Low)
 
 ### Primary Damage Stat
 - [ ] ATK
-- [x] HP
+- [ ] HP
 - [ ] DEF
-- [ ] Hybrid (specify: None)
-- [ ] Other (specify: None)
+- [ ] Hybrid (specify: __________)
+- [ ] Other (specify: __________)
 
-**Skill Scaling Details:**
-- A1: HP
-- A2: HP
-- A3: HP
+**Skill Scaling Details:**  
+List each skill by name and the stat(s) it scales from (e.g., "A1: HP", "A2: DEF", etc.).
 
 **Output:**
 ```json
 "overview": {
-  "role": "Support/HP Control",
-  "rarity": "Legendary",
-  "archetype": "Turn Meter Manipulator / Debuff Specialist",
-  "primary_damage_stat": "HP",
+  "role": "<REAL ROLE HERE>",
+  "rarity": "<REAL RARITY>",
+  "archetype": "<REAL ARCHETYPE HERE>",
+  "primary_damage_stat": "<ATK/HP/DEF/Hybrid/Other>",
   "skill_scaling": {
-    "A1": "HP",
-    "A2": "HP",
-    "A3": "HP"
+    "A1": "<ATK/HP/DEF/Hybrid/Other>",
+    "A2": "<ATK/HP/DEF/Hybrid/Other>",
+    "A3": "<ATK/HP/DEF/Hybrid/Other>"
   },
   "best_mastery": {
-    "pve_pvp": "Eagle Eye",
-    "clan_boss": "Warmaster"
+    "pve_pvp": "<REAL MASTERY>",
+    "clan_boss": "<REAL MASTERY>"
   },
-  "booking_roi": "High",
+  "booking_roi": "<REAL VALUE>",
   "gear_sets": {
-    "pvp_offense": ["Relentless", "Speed"],
-    "pvp_defense": ["Perception"],
-    "clan_boss": ["Relentless", "Immortal"],
-    "hydra": ["Relentless", "Speed"],
-    "iron_twins": ["Perception", "Speed"],
-    "dungeons": ["Speed", "Accuracy"],
-    "solo_farming": ["Relentless", "Immortal"]
+    "pvp_offense": [ ... ],
+    "pvp_defense": [ ... ],
+    "clan_boss": [ ... ],
+    "hydra": [ ... ],
+    "iron_twins": [ ... ],
+    "dungeons": [ ... ],
+    "solo_farming": [ ... ]
   },
   "gear_tradeoffs": [
-    { "set": "Relentless", "pros": "Extra turns, more debuffs", "cons": "Unreliable, can desync rotation" }
+    { "set": "<SET>", "pros": "<PROS>", "cons": "<CONS>" }
   ],
   "focus_stats": {
-    "arena_dungeons": ["HP", "Speed", "Accuracy"],
-    "clan_boss": ["HP", "Speed", "Accuracy"]
+    "arena_dungeons": [ ... ],
+    "clan_boss": [ ... ]
   },
   "accuracy_resistance": {
-    "hard_10_dungeons": "350+",
-    "hydra": "400+",
-    "iron_twins": "500+"
+    "hard_10_dungeons": "<REAL VALUE>",
+    "hydra": "<REAL VALUE>",
+    "iron_twins": "<REAL VALUE>"
   },
-  "best_dungeon_use": "Spider, Fire Knight"
+  "best_dungeon_use": "<REAL VALUE>"
 }
 ```
 
+
 ---
+## Module 2
+---
+
+### 📘 `module_2_skills.md`
+
+```markdown
 ## Module 2: Skill Summary & Rotation Analysis
 
 **Inputs:**
 - Skill names, cooldowns, multipliers, effects
 
+**Goal:**
+Analyze skill behavior and model 10-turn rotation.
+
 **Output:**
 ```json
 "skills": {
   "a1": {
-    "name": "Wanderer's Touch",
-    "type": "Single Target",
-    "hit_count": 1,
-    "cooldown": "None",
-    "multiplier": "0.18x HP",
-    "notes": "Attacks 1 enemy. 50% chance to place Decrease Speed for 2 turns."
+    "name": "<A1 SKILL NAME>",
+    "type": "<Single Target/AOE/Other>",
+    "hit_count": <NUMBER>,
+    "cooldown": "<COOLDOWN OR 'None'>",
+    "multiplier": "<MULTIPLIER AND STAT, e.g., '0.2x HP'>",
+    "notes": "<DESCRIPTION AND EFFECTS>"
   },
   "a2": {
-    "name": "Path of Mists",
-    "type": "AOE",
-    "hit_count": 1,
-    "cooldown": "3 turns",
-    "multiplier": "0.22x HP",
-    "notes": "Attacks all enemies. 75% chance to place Decrease Turn Meter by 20%."
+    "name": "<A2 SKILL NAME>",
+    "type": "<Single Target/AOE/Other>",
+    "hit_count": <NUMBER>,
+    "cooldown": "<COOLDOWN>",
+    "multiplier": "<MULTIPLIER AND STAT>",
+    "notes": "<DESCRIPTION AND EFFECTS>"
   },
   "a3": {
-    "name": "Lost in the Wilds",
-    "type": "AOE",
-    "hit_count": 1,
-    "cooldown": "5 turns",
-    "multiplier": "0.25x HP",
-    "notes": "Attacks all enemies. Places Block Buffs for 2 turns. Heals all allies by 10% of this Champion's HP."
+    "name": "<A3 SKILL NAME>",
+    "type": "<Single Target/AOE/Other>",
+    "hit_count": <NUMBER>,
+    "cooldown": "<COOLDOWN>",
+    "multiplier": "<MULTIPLIER AND STAT>",
+    "notes": "<DESCRIPTION AND EFFECTS>"
   },
   "passive": {
-    "exists": true,
-    "impact": "Whenever an enemy's Turn Meter is reduced, fills this Champion's Turn Meter by 5%."
+    "exists": <true/false>,
+    "impact": "<PASSIVE EFFECTS OR 'None'>"
   },
   "booking": {
-    "impact": "High",
-    "notes": "Books reduce cooldowns and increase debuff chances."
+    "impact": "<High/Medium/Low>",
+    "notes": "<BOOKING EFFECTS>"
   },
   "rotation": {
-    "optimal_cycle": ["A3", "A2", "A1", "A2", "A1", "A2", "A1", "A2", "A1", "A2"],
+    "optimal_cycle": [<LIST OF SKILLS IN ORDER>],
     "damage_per_turn": {
-      "a3": "~12,000",
-      "a2": "~9,000",
-      "a1": "~7,000"
+      "a3": "<VALUE OR DESCRIPTION>",
+      "a2": "<VALUE OR DESCRIPTION>",
+      "a1": "<VALUE OR DESCRIPTION>"
     },
-    "average_damage": "~9,000",
+    "average_damage": "<VALUE OR DESCRIPTION>",
     "buff_debuff_uptime": {
-      "HP Burn": "0%",
-      "DEF Down": "0%",
-      "Block Buffs": "80%"
+      "HP Burn": "<% OR DESCRIPTION>",
+      "DEF Down": "<% OR DESCRIPTION>"
     },
-    "extra_turn_frequency": "Relentless set can grant extra turns ~10% of the time."
+    "extra_turn_frequency": "<DESCRIPTION OR 'None'>"
   }
 }
 ```
 
+
 ---
+## Module 3
+---
+
+### 📘 `module_3_team_inputs.md`
+
+```markdown
 ## Module 3: Team Creator Inputs
+
+**Inputs:**
+- Skill priority logic from Module 2
+
+**Goal:**
+Define first-turn skill and priority order.
 
 **Output:**
 ```json
 "team_inputs": {
-  "first_turn_skill": "Lost in the Wilds",
-  "skill_priority": ["A3", "A2", "A1"],
-  "disabled_skills": []
+  "first_turn_skill": "<SKILL NAME>",
+  "skill_priority": ["<SKILL_1>", "<SKILL_2>", "<SKILL_3>"],
+  "disabled_skills": ["<SKILL_NAME_IF_ANY>"]
 }
 ```
 
+
 ---
+## Module 4
+---
+
+### 📘 `module_4_mastery_simulation.md`
+
+```markdown
 ## Module 4: Mastery Proc Simulation
+
+**Inputs:**
+- Skill rotation and multipliers from Module 2
+
+**Goal:**
+Simulate Warmaster and Helmsmasher damage across 4 battle scenarios.
 
 **Output:**
 ```json
 "mastery_simulation": {
   "scenarios": [
     {
-      "type": "Clan Boss",
-      "mastery": "Warmaster",
-      "bonus_damage": "~15,000 per proc",
-      "notes": "Procs on A2/A3 for high value."
+      "type": "<SCENARIO TYPE>",
+      "mastery": "<MASTERY NAME>",
+      "bonus_damage": "<BONUS DAMAGE VALUE OR RANGE>",
+      "notes": "<NOTES ON DAMAGE OR EFFECTS>"
     },
     {
-      "type": "Hydra",
-      "mastery": "Eagle Eye",
-      "bonus_damage": "~10,000 per proc",
-      "notes": "Focus on accuracy for debuffs."
+      "type": "<SCENARIO TYPE>",
+      "mastery": "<MASTERY NAME>",
+      "bonus_damage": "<BONUS DAMAGE VALUE OR RANGE>",
+      "notes": "<NOTES ON DAMAGE OR EFFECTS>"
     }
+    // Add more scenarios as needed
   ],
   "recommended_mastery": {
-    "clan_boss": "Warmaster",
-    "spider_hard": "Eagle Eye",
-    "hydra": "Eagle Eye",
-    "iron_twins": "Eagle Eye"
+    "clan_boss": "<MASTERY NAME>",
+    "spider_hard": "<MASTERY NAME>",
+    "hydra": "<MASTERY NAME>",
+    "iron_twins": "<MASTERY NAME>"
   }
 }
 ```
+````
+
 
 ---
+## Module 5
 ## Module 5: Clan Boss Damage Tracking
+
+**Inputs:**
+- OWNED champion list
+- Damage modeling from Module 4
+
+**Goal:**
+Evaluate Clan Boss performance using mastery simulation and rotation modeling.
 
 **Output:**
 ```json
 "clan_boss": {
-  "damage_per_turn": "~18,000",
-  "notes": "Best in support role, not primary damage dealer."
+  "damage_per_turn": "<DAMAGE VALUE OR RANGE>",
+  "notes": "<NOTES ON DAMAGE, GEAR, OR ROTATION>"
 }
 ```
 
+
 ---
+## Module 6
+---
+
+### 📘 `module_6_synergy.md`
+
+```markdown
 ## Module 6: Ally Synergy & Speed Tuning
+
+**Inputs:**
+- OWNED champion list
+- Buff needs from Modules 1 and 2
+
+**Goal:**
+Recommend allies and stat tuning based on synergy and gear priorities.
 
 **Output:**
 ```json
 "synergy": {
-  "recommended_buffs": ["Increase Speed", "Block Debuffs"],
+  "recommended_buffs": ["<BUFF_1>", "<BUFF_2>", "..."],
   "support_champion_sets": [
-    ["Arbiter", "Duchess Lilitu"],
-    ["Krisk", "Uugo"]
+    ["<CHAMPION_1>", "<CHAMPION_2>"],
+    [],
+    []
   ],
-  "recommended_revivors": ["Arbiter", "Duchess Lilitu"],
+  "recommended_revivors": ["<REVIVER_1>", "<REVIVER_2>"],
   "speed_tuning": {
-    "arena": "250-300",
-    "dungeons": "220-250",
-    "clan_boss": "175-190"
+    "arena": "<VALUE OR RANGE>",
+    "dungeons": "<VALUE OR RANGE>",
+    "clan_boss": "<VALUE OR RANGE>"
   },
   "gear_stat_priorities": {
-    "arena": ["Speed", "HP", "Accuracy"],
-    "clan_boss": ["HP", "Speed", "Accuracy"],
-    "dungeons": ["HP", "Speed", "Accuracy"]
+    "arena": ["<STAT_1>", "<STAT_2>", "..."],
+    "clan_boss": ["<STAT_1>", "<STAT_2>", "..."],
+    "dungeons": ["<STAT_1>", "<STAT_2>", "..."]
   },
-  "relentless_viability": "High for PvE, situational for PvP."
+  "relentless_viability": "<DESCRIPTION OR VALUE>"
 }
 ```
+````
+
 
 ---
+## Module 7
+---
+
+### 📘 `module_7_investment.md`
+
+```markdown
 ## Module 7: Investment Value & ROI
+
+**Inputs:**
+- OWNED champion list
+- Damage and utility data from Modules 1–6
+
+**Goal:**
+Assess long-term value and compare to similar OWNED champions.
 
 **Output:**
 ```json
 "investment": {
-  "value": "High",
-  "notes": "Versatile support, strong in all content, especially dungeons and Hydra.",
+  "value": "<High/Medium/Low>",
+  "notes": "<NOTES ON VALUE, VERSATILITY, ETC.>",
   "owned_comparison": [
-    { "champion": "Arbiter", "comparison": "Arbiter is faster, Alice offers more debuffs." },
-    { "champion": "Uugo", "comparison": "Uugo is better for Hydra, Alice is more versatile." }
+    {
+      "champion": "<CHAMPION NAME>",
+      "comparison": "<COMPARISON NOTES>"
+    }
+    // Add more comparisons as needed
   ]
 }
 ```
 
+
 ---
+## Module 8
+---
+
+### 📘 `module_8_intelligence.md`
+
+```markdown
 ## Module 8: Intelligence Score & Draft Recommendations
+
+**Inputs:**
+- Synergy data from Module 6
+- OWNED champion list
+
+**Goal:**
+Score synergy and guide PvP drafting strategy.
 
 **Output:**
 ```json
 "intelligence": {
   "synergy_scores": {
-    "Arbiter": 9,
-    "Krisk": 8,
-    "Uugo": 7
+    "<CHAMPION_1>": <SCORE>,
+    "<CHAMPION_2>": <SCORE>
+    // Add more champions as needed
   },
   "draft_logic": {
-    "early_pick": true,
-    "counter_pick": false,
-    "avoid": false,
-    "notes": "Excellent first pick for control teams."
+    "early_pick": <true/false>,
+    "counter_pick": <true/false>,
+    "avoid": <true/false>,
+    "notes": "<NOTES ON DRAFT LOGIC>"
   }
 }
 ```
 
+
 ---
+## Module 9
+---
+
+### 📘 `module_9_turn_meter.md`
+
+```markdown
 ## Module 9: Turn Meter Simulation & Gear Tradeoffs
+
+**Inputs:**
+- Skill rotation and gear sets from Modules 1–2
+
+**Goal:**
+Evaluate turn meter stability and gear impact.
 
 **Output:**
 ```json
 "turn_meter": {
-  "extra_turn_effects": "Relentless set grants extra turns, passive grants TM boost on enemy TM reduction.",
+  "extra_turn_effects": "<DESCRIPTION OR 'None'>",
   "gear_set_stability": {
-    "Reflex": "Can desync skill rotation.",
-    "Relentless": "High TM gain, but can desync.",
-    "Savage": "Not recommended."
+    "Reflex": "<DESCRIPTION>",
+    "Relentless": "<DESCRIPTION>",
+    "Savage": "<DESCRIPTION>"
   },
   "rotation_desync_risks": {
-    "Reflex": "Medium",
-    "Relentless": "High",
-    "Savage": "Low"
+    "Reflex": "<RISK LEVEL OR DESCRIPTION>",
+    "Relentless": "<RISK LEVEL OR DESCRIPTION>",
+    "Savage": "<RISK LEVEL OR DESCRIPTION>"
   }
 }
 ```
 
+
 ---
+## Module 10
 ## Module 10: Utility Comparison Champions
+
+**Inputs:**
+- OWNED champion list
+- Role and utility tags from Modules 1 and 7
+
+**Goal:**
+Compare utility roles using OWNED champions and identify similar options.
 
 **Output:**
 ```json
 "utility_comparison": [
-  { "champion": "Arbiter", "role": "Speed Lead/Revive", "comparison": "Arbiter is faster, Alice has more debuffs." },
-  { "champion": "Uugo", "role": "Hydra Support", "comparison": "Uugo is better for Hydra, Alice is more versatile." }
+  {
+    "champion": "<CHAMPION NAME>",
+    "role": "<ROLE>",
+    "comparison": "<COMPARISON NOTES>"
+  }
+  // Add more champion comparisons as needed
 ]
 ```
 
+
 ---
+## Module 11
+---
+
+### 📘 `module_11_ratings.md`
+
+```markdown
 ## Module 11: Color-Coded Ratings
+
+**Inputs:**
+- Data from Modules 1–9
+
+**Goal:**
+Rate performance across content types using color-coded tiers.
 
 **Output:**
 ```json
 "ratings": {
-  "pvp": "A",
-  "clan_boss": "B+",
-  "hydra": "A-",
-  "iron_twins": "B",
-  "dungeons": "A",
-  "solo_farming": "B",
-  "relentless_viability": "A"
+  "pvp": "<RATING>",
+  "clan_boss": "<RATING>",
+  "hydra": "<RATING>",
+  "iron_twins": "<RATING>",
+  "dungeons": "<RATING>",
+  "solo_farming": "<RATING>",
+  "relentless_viability": "<DESCRIPTION OR RATING>"
 }
 ```
 
+
 ---
+## Module 12
+---
+
+### 📘 `module_12_final_summary.md`
+
+```markdown
 ## Module 12: Final Summary
+
+**Inputs:**
+- All previous log blocks
+
+**Goal:**
+Recap all findings in prioritized format.
 
 **Output:**
 ```json
 "final_summary": {
-  "mastery_preference": "Eagle Eye for PvE/PvP, Warmaster for Clan Boss",
-  "booking_impact": "High",
-  "damage_rotation": "A3 > A2 > A1, with Relentless for extra turns",
-  "turn_meter_stability": "Passive and Relentless can cause desync, but high TM gain",
-  "passive_impact": "Significant TM gain on enemy TM reduction",
-  "gear_stat_notes": "Prioritize HP, Speed, Accuracy",
-  "ally_synergy_impact": "Works best with TM boosters and revivers",
-  "draft_value": "First pick for control teams",
-  "investment_value": "High",
-  "relentless_viability": "High for PvE",
-  "similar_owned_champions": ["Arbiter", "Uugo"]
+  "mastery_preference": "<MASTERY PREFERENCE>",
+  "booking_impact": "<BOOKING IMPACT>",
+  "damage_rotation": "<DAMAGE ROTATION SUMMARY>",
+  "turn_meter_stability": "<TURN METER STABILITY>",
+  "passive_impact": "<PASSIVE IMPACT>",
+  "gear_stat_notes": "<GEAR/STAT NOTES>",
+  "ally_synergy_impact": "<ALLY SYNERGY IMPACT>",
+  "draft_value": "<DRAFT VALUE>",
+  "investment_value": "<INVESTMENT VALUE>",
+  "relentless_viability": "<RELENTLESS VIABILITY>",
+  "similar_owned_champions": ["<CHAMPION_1>", "<CHAMPION_2>"]
 }
 ```
 
+
 ---
+## Module 13
+---
+
+### 📘 `module_13_synergy_engine.md`
+
+```markdown
 ## Module 13: Synergy Engine
+
+**Inputs:**
+- `owned_champions` list
+- All champion logs
+
+**Goal:**
+Build teams using only OWNED champions based on synergy and role matching.
 
 **Output:**
 ```json
 "synergy_engine": {
   "team_setups": [
     {
-      "name": "Control Team",
-      "champions": ["Alice the Wanderer", "Arbiter", "Krisk"],
-      "strategy": "Maximize TM control and debuffs."
+      "name": "<TEAM NAME>",
+      "champions": ["<CHAMPION_1>", "<CHAMPION_2>", "..."],
+      "strategy": "<TEAM STRATEGY OR NOTES>"
     }
+    // Add more team setups as needed
   ],
   "similar_champions": [
-    { "champion": "Arbiter", "similarity_reason": "Speed lead, revive, TM boost." },
-    { "champion": "Uugo", "similarity_reason": "Hydra support, debuffs." }
+    {
+      "champion": "<CHAMPION NAME>",
+      "similarity_reason": "<REASON FOR SIMILARITY>"
+    }
+    // Add more similar champions as needed
   ]
 }
 ```
+
+

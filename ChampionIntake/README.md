@@ -14,9 +14,24 @@ It supports single or batch processing, integrates with Copilot Chat, auto-valid
 3. Run task for Champion Intake (single champion) OR use the CLI for bulk import:
    - For single champion intake: run the "Run Champion Intake" VS Code task or `python ChampionIntake/Champ_Intake.py`.
    - For bulk import, batch prompt generation, or owned list management, use `python Tools/import_owned_champions.py` (see below).
+
 4. Ask Copilot Chat (Ctrl+Shift+I) to: “Based on the open prompt file, generate the champion JSON for [champion].”
-5. Copy the output json into the champion.json file generated in step 3.
-6. Run tests or cleanup as needed.
+5. Manually validate all champion data (name, skills, multipliers, cooldowns, stat priorities, etc.) using authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades, etc.).
+6. Only proceed if the prompt is 100% complete and accurate.
+7. Copy the output JSON into the champion.json file generated in step 3 (in `output/Champions/`).
+8. Run validation with:
+  ```sh
+  python Tools/validate_json.py output/Champions/[champion].json
+  ```
+  Confirm the script prints the champion name and rarity, and that the JSON is valid.
+9. After successful validation, move the completed prompt markdown to `output/completed_prompts/` (if not already there). Do not remove it; this file is used for review, notes, and as the authoritative source for future updates and all downstream tools.
+10. Never delete files or folders as part of this workflow.
+
+**Prompt File Handling:**
+- Incomplete or in-progress prompts are kept in `input/Prompt/`.
+- Once a prompt is fully validated and used to generate a JSON, the markdown file is moved to `output/completed_prompts/`.
+- Completed prompts in `output/completed_prompts/` are the authoritative, human-readable record for each champion and are used for review, notes, and as the source for JSON generation and all downstream tools (summary, cooldown analysis, etc.).
+- This separation allows easy tracking of which champions are complete and which still need work.
 
 ---
 

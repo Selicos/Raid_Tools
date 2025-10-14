@@ -1,5 +1,21 @@
 # Feature Expansion Breakdown for Raid Tools
 
+## Champion JSON Creation & Update Workflow (Authoritative)
+
+1. Locate the prompt file for the champion in `input/Prompt/`.
+2. Complete the prompt markdown, ensuring all modules (0–13) are filled out in the required JSON structure.
+3. Manually validate all champion data (name, skills, multipliers, cooldowns, stat priorities, etc.) using authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades, etc.).
+4. Only proceed if the prompt is 100% complete and accurate.
+5. Generate the JSON using the completed prompt markdown, following the template in `data/templates/logTemplate.json`.
+6. Overwrite or update the champion JSON in `output/Champions/` only after validation.
+7. Run validation with:
+	```sh
+	python Tools/validate_json.py output/Champions/[champion].json
+	```
+	Confirm the script prints the champion name and rarity, and that the JSON is valid.
+8. After successful validation, move the completed prompt markdown to `output/completed_prompts/`.
+9. Never delete files or folders as part of this workflow.
+
 ## Priority Summary (2025)
 
 ### Top 3 Most Critical / High-Impact Items
