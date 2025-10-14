@@ -104,7 +104,7 @@ make intake    # Intake a new champion
 make analysis  # Run cooldown analysis
 make summary   # Generate summary markdowns
 make test      # Run all tests
-make organize-completed  # Move all *_prompt.completed.md files to output/completed/
+make organize-completed  # Move all *_prompt.completed.md files to output/completed_prompts/
 ```
 
 **Or with Python directly:**
@@ -268,7 +268,7 @@ Do **not** use or reference `manage_champions.py` (this script does not exist) o
 
 ## Completed Markdown Output
 
-All completed prompt markdown files (e.g., `[champion]_prompt.completed.md`) **must** be placed in the `output/completed/` directory. Use the Makefile target `make organize-completed` or the VS Code task “Organize Completed Prompts” to move all completed files automatically.
+All completed prompt markdown files (e.g., `[champion]_prompt.completed.md`) **must** be placed in the `output/completed_prompts/` directory. Use the Makefile target `make organize-completed` or the VS Code task “Organize Completed Prompts” to move all completed files automatically.
 
 ---
 

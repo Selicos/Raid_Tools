@@ -1,0 +1,222 @@
+{
+  "champion": "Bad-el-Kazar",
+  "owned": true,
+  "overview": {
+    "role": "Support / Cleanser / Healer / Poisoner",
+    "rarity": "Legendary",
+    "archetype": "AoE Healer / Cleanser / Poisoner",
+    "primary_damage_stat": "ATK",
+    "skill_scaling": {
+      "A1": "ATK",
+      "A2": "None (utility)",
+      "A3": "Passive"
+    },
+    "best_mastery": {
+      "pve_pvp": "Warmaster (PvE/Clan Boss)",
+      "clan_boss": "Warmaster"
+    },
+    "booking_roi": "High (A2)",
+    "gear_sets": {
+      "pvp_offense": ["Speed", "Perception", "Immortal"],
+      "pvp_defense": ["Stoneskin", "Protection", "Untouchable"],
+      "clan_boss": ["Reflex", "Stalwart", "Immortal"],
+      "hydra": ["Reflex", "Perception"],
+      "iron_twins": ["Perception", "Speed"],
+      "dungeons": ["Reflex", "Relentless", "Immortal"],
+      "solo_farming": ["Reflex", "Immortal"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Reflex", "pros": "More frequent A2 (cleanse/poison)", "cons": "Lower survivability than Stalwart" },
+      { "set": "Stalwart", "pros": "Reduces AoE damage for Clan Boss", "cons": "Less A2 cycling" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["ACC", "SPD", "HP%", "DEF%", "RES"],
+      "clan_boss": ["ACC", "SPD", "HP%", "DEF%"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "~220+ ACC",
+      "hydra": "350+ ACC",
+      "iron_twins": "350+ ACC"
+    },
+    "best_dungeon_use": "Dragon, Ice Golem, Clan Boss, Faction Wars"
+  },
+  "skills": {
+    "a1": {
+      "name": "Dark Sphere",
+      "type": "AoE",
+      "hit_count": 1,
+      "cooldown": "None",
+      "multiplier": "2.8x ATK",
+      "notes": "Attacks all enemies. Heals this Champion and all allies by 20% of the damage inflicted."
+    },
+    "a2": {
+      "name": "Malice",
+      "type": "AoE Utility",
+      "hit_count": 0,
+      "cooldown": "3 turns (booked)",
+      "multiplier": "None",
+      "notes": "Removes all debuffs from all allies. Places two 15% [Continuous Heal] buffs on all allies for 2 turns. Places two 5% [Poison] debuffs on all enemies for 2 turns."
+    },
+    "a3": {
+      "name": "Aura",
+      "type": "Aura",
+      "hit_count": 0,
+      "cooldown": "Passive",
+      "multiplier": "None",
+      "notes": "Increases Ally C.RATE in all Battles by 25%."
+    },
+    "passive": {
+      "exists": true,
+      "impact": "All allies inflict 20% more damage against targets under [Poison] debuffs. (Does not affect Warmaster/Giant Slayer procs.)"
+    },
+    "booking": {
+      "impact": "High (A2)",
+      "notes": "A2 cooldown reduction is significant for more frequent healing, cleansing, and poisons."
+    },
+    "rotation": {
+      "optimal_cycle": ["A2", "A1", "A1", "A2", "A1", "A1"],
+      "damage_per_turn": {
+        "a1": "Moderate (AoE, heals team)",
+        "a2": "Utility (cleanse, heal, poison)",
+        "passive": "Boosts team damage vs Poisoned targets"
+      },
+      "average_damage": "Low (support focus)",
+      "buff_debuff_uptime": {
+        "Continuous Heal": "~100% with Reflex/Relentless",
+        "Poison": "~100% uptime on waves/bosses"
+      },
+      "extra_turn_frequency": "None (but frequent turns via Reflex/Relentless)"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Malice",
+    "skill_priority": ["Malice", "Dark Sphere"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Clan Boss",
+        "mastery": "Warmaster",
+        "bonus_damage": "~8-12k per proc",
+        "notes": "Procs on A1, boosting team healing and damage."
+      },
+      {
+        "type": "PvE Utility",
+        "mastery": "Lasting Gifts",
+        "bonus_damage": "N/A",
+        "notes": "Extends Continuous Heal and Poison buffs."
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Warmaster",
+      "dungeons": "Lasting Gifts",
+      "hydra": "Lasting Gifts",
+      "iron_twins": "Lasting Gifts"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "Low (support, not DPS)",
+    "notes": "Provides healing, cleansing, and poisons. Passive boosts team damage."
+  },
+  "synergy": {
+    "recommended_buffs": ["Continuous Heal", "Poison", "Cleanse"],
+    "support_champion_sets": [
+      ["Aox the Rememberer", "Ironclad"],
+      ["Scyl of the Drakes", "Duchess Lilitu"],
+      ["Godseeker Aniri", "Urogrim"]
+    ],
+    "recommended_revivors": ["Scyl of the Drakes", "Godseeker Aniri"],
+    "speed_tuning": {
+      "arena": "200-250+",
+      "dungeons": "180-220+",
+      "clan_boss": "170-200"
+    },
+    "gear_stat_priorities": {
+      "arena": ["ACC", "SPD", "HP%", "DEF%", "RES"],
+      "clan_boss": ["ACC", "SPD", "HP%", "DEF%"],
+      "dungeons": ["ACC", "SPD", "HP%", "DEF%"]
+    },
+    "relentless_viability": "High (frequent A2 for more healing/poison)"
+  },
+  "investment": {
+    "value": "Very High",
+    "notes": "Top-tier legendary for all content. Books are a great investment for A2.",
+    "owned_comparison": [
+      {"champion": "Urogrim", "comparison": "Urogrim is a faster solo farmer, Bad-el-Kazar is a better team support."},
+      {"champion": "Aox the Rememberer", "comparison": "Aox offers more debuffs, Bad-el-Kazar more healing and cleanse."}
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Aox the Rememberer": 9,
+      "Urogrim": 8,
+      "Ironclad": 7
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": true,
+      "avoid": false,
+      "notes": "Early pick for all PvE content, counter-pick vs heavy debuff teams."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None (but frequent turns via Reflex/Relentless)",
+    "gear_set_stability": {
+      "Reflex": "Can reduce cooldowns for more frequent A2.",
+      "Relentless": "Very strong for more A2 cycles.",
+      "Stalwart": "Best for Clan Boss survivability."
+    },
+    "rotation_desync_risks": {
+      "Reflex": "Low risk, generally beneficial.",
+      "Relentless": "Low risk, high reward.",
+      "Stalwart": "None, best for CB tanking."
+    }
+  },
+  "utility_comparison": [
+    {"champion": "Urogrim", "role": "Solo Farmer", "comparison": "Urogrim is faster for solo, Bad-el-Kazar is better for team support."},
+    {"champion": "Aox the Rememberer", "role": "Debuffer/Healer", "comparison": "Aox offers more debuffs, Bad-el-Kazar more healing and cleanse."},
+    {"champion": "Ironclad", "role": "Synergy Healer", "comparison": "Ironclad can trigger extra damage from Bad-el-Kazar's heals."}
+  ],
+  "ratings": {
+    "pvp": "A",
+    "clan_boss": "S",
+    "hydra": "A",
+    "iron_twins": "A",
+    "dungeons": "S",
+    "solo_farming": "A",
+    "relentless_viability": "S (Reflex/Relentless best for A2 cycling)"
+  },
+  "final_summary": {
+    "mastery_preference": "Warmaster for PvE/CB, Lasting Gifts for utility",
+    "booking_impact": "High (A2)",
+    "damage_rotation": "A1 for AoE heal, A2 for cleanse/poison, passive for team damage boost",
+    "turn_meter_stability": "Stable, frequent turns via Reflex/Relentless.",
+    "passive_impact": "Boosts all team damage vs Poisoned targets.",
+    "gear_stat_notes": "Prioritize ACC, SPD, HP%, DEF%, RES. Reflex/Relentless for A2 cycling.",
+    "ally_synergy_impact": "Excellent with Ironclad, Aox, Urogrim.",
+    "draft_value": "First-pick for all PvE content.",
+    "investment_value": "Very high, books are well spent.",
+    "relentless_viability": "S (Reflex/Relentless best for A2 cycling)",
+    "similar_owned_champions": ["Urogrim", "Aox the Rememberer", "Ironclad"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Clan Boss Support",
+        "champions": ["Bad-el-Kazar", "Aox the Rememberer", "Ironclad", "Godseeker Aniri"],
+        "strategy": "Cleanse, heal, and poison for max team damage."
+      },
+      {
+        "name": "Dungeon Solo Farming",
+        "champions": ["Bad-el-Kazar", "Urogrim", "Scyl of the Drakes"],
+        "strategy": "Solo farm with healing, cleanse, and poison."
+      }
+    ],
+    "similar_champions": [
+      {"champion": "Urogrim", "similarity_reason": "Solo farming, poison/heal."},
+      {"champion": "Aox the Rememberer", "similarity_reason": "Debuff/heal synergy."},
+      {"champion": "Ironclad", "similarity_reason": "Heal synergy for extra damage."}
+    ]
+  }
+}

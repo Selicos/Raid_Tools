@@ -1,0 +1,222 @@
+{
+  "champion": "Astralon",
+  "owned": true,
+  "overview": {
+    "role": "Attack Nuker / Control",
+    "rarity": "Legendary",
+    "archetype": "Arena Nuker / AoE Stun / Single Target Revive",
+    "primary_damage_stat": "ATK",
+    "skill_scaling": {
+      "A1": "ATK",
+      "A2": "ATK",
+      "A3": "ATK"
+    },
+    "best_mastery": {
+      "pve_pvp": "Helmsmasher (Arena)",
+      "clan_boss": "Warmaster"
+    },
+    "booking_roi": "High (A2/A3)",
+    "gear_sets": {
+      "pvp_offense": ["Savage", "Cruel", "Perception"],
+      "pvp_defense": ["Zeal", "Swift Parry"],
+      "clan_boss": ["Lifesteal", "Perception"],
+      "hydra": ["Perception", "Speed"],
+      "iron_twins": ["Perception", "Speed"],
+      "dungeons": ["Savage", "Perception"],
+      "solo_farming": ["Lifesteal", "Speed"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Savage", "pros": "Ignores DEF for max nuke potential", "cons": "Lower survivability" },
+      { "set": "Lifesteal", "pros": "Sustain for PvE and dungeons", "cons": "Lower damage ceiling" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["ATK%", "C.RATE", "C.DMG", "SPD", "ACC"],
+      "clan_boss": ["ATK%", "C.RATE", "C.DMG"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "~220+ ACC",
+      "hydra": "350+ ACC",
+      "iron_twins": "350+ ACC"
+    },
+    "best_dungeon_use": "Arena, Doom Tower, Faction Wars"
+  },
+  "skills": {
+    "a1": {
+      "name": "Hellbinder",
+      "type": "Single Target (2 hits)",
+      "hit_count": 2,
+      "cooldown": "None",
+      "multiplier": "1.7x ATK per hit",
+      "notes": "Attacks 1 enemy 2 times. 30% chance to place 60% [Decrease DEF] for 2 turns. Countess Lix will team up if in the same team."
+    },
+    "a2": {
+      "name": "Divine Immanence",
+      "type": "Single Target",
+      "hit_count": 1,
+      "cooldown": "3 turns (booked)",
+      "multiplier": "5.8x ATK",
+      "notes": "Attacks 1 enemy. Ignores [Increase DEF], [Strengthen], [Ally Protection]. Revives a random ally with 40% HP and places a [Shield] (20% MAX HP) for 2 turns if this attack kills. Also places a [Shield] on self if this attack kills."
+    },
+    "a3": {
+      "name": "Light of Sanctity",
+      "type": "AoE",
+      "hit_count": 1,
+      "cooldown": "4 turns (booked)",
+      "multiplier": "4x ATK",
+      "notes": "Removes all buffs from targets under [Veil]/[Perfect Veil], places 25% [Weaken] on those with Veil removed, then attacks all enemies. 75% chance of placing [Stun] on all enemies for 1 turn."
+    },
+    "passive": {
+      "exists": true,
+      "impact": "Fills turn meter by 3% every time an ally is hit. Decreases incoming damage by 25% if the attacker's ATK is lower than Astralon's."
+    },
+    "booking": {
+      "impact": "High",
+      "notes": "A2 and A3 gain significant cooldown reduction and effect chance."
+    },
+    "rotation": {
+      "optimal_cycle": ["A3", "A2", "A1", "A1", "A2", "A1", "A3"],
+      "damage_per_turn": {
+        "a3": "High (AoE nuke, control)",
+        "a2": "Very high (single target, ignores buffs, revive)",
+        "a1": "Moderate (debuff, synergy with Countess Lix)"
+      },
+      "average_damage": "High for Arena, moderate for PvE",
+      "buff_debuff_uptime": {
+        "Stun": "~75% on waves (with high ACC)",
+        "Decrease DEF": "~50% on single targets"
+      },
+      "extra_turn_frequency": "None (but frequent turns via passive)"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Light of Sanctity",
+    "skill_priority": ["Light of Sanctity", "Divine Immanence", "Hellbinder"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Arena Nuking",
+        "mastery": "Helmsmasher",
+        "bonus_damage": "~20-30% more damage on nukes",
+        "notes": "Procs on A2/A3 for maximum nuke potential."
+      },
+      {
+        "type": "PvE Control",
+        "mastery": "Warmaster",
+        "bonus_damage": "~8-12k per proc",
+        "notes": "Procs on AoE hits, boosting wave clear and boss damage."
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Warmaster",
+      "spider_hard": "Warmaster",
+      "hydra": "Warmaster",
+      "iron_twins": "Helmsmasher"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "Moderate (not a primary CB DPS)",
+    "notes": "Provides debuffs and control, but not a top CB damage dealer."
+  },
+  "synergy": {
+    "recommended_buffs": ["Stun", "Weaken", "Decrease DEF", "Revive", "Shield"],
+    "support_champion_sets": [
+      ["Countess Lix", "Lydia the Deathsiren"],
+      ["Arbiter", "Cardiel"],
+      ["Siphi the Lost Bride", "Duchess Lilitu"]
+    ],
+    "recommended_revivors": ["Arbiter", "Siphi the Lost Bride"],
+    "speed_tuning": {
+      "arena": "200-270+",
+      "dungeons": "180-220+",
+      "clan_boss": "170-200"
+    },
+    "gear_stat_priorities": {
+      "arena": ["ATK%", "C.RATE", "C.DMG", "SPD", "ACC"],
+      "clan_boss": ["ATK%", "C.RATE", "C.DMG"],
+      "dungeons": ["ATK%", "C.RATE", "C.DMG", "ACC"]
+    },
+    "relentless_viability": "Low, better in Savage/Cruel for nuking."
+  },
+  "investment": {
+    "value": "High",
+    "notes": "Top-tier legendary for Arena and control. Books are a great investment for A2/A3.",
+    "owned_comparison": [
+      {"champion": "Countess Lix", "comparison": "Synergy for extra attacks and debuffs."},
+      {"champion": "Lydia the Deathsiren", "comparison": "Lydia offers more debuffs, Astralon more control."}
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Countess Lix": 10,
+      "Lydia the Deathsiren": 8,
+      "Arbiter": 7
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": true,
+      "avoid": false,
+      "notes": "Early pick for Arena, counter-pick vs Veil/Perfect Veil teams."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None (but frequent turns via passive)",
+    "gear_set_stability": {
+      "Reflex": "Can reduce cooldowns for more frequent control.",
+      "Relentless": "Not recommended, as Astralon benefits more from Savage/Cruel.",
+      "Savage": "Best for Arena nuking."
+    },
+    "rotation_desync_risks": {
+      "Reflex": "Low risk, generally beneficial.",
+      "Relentless": "Medium risk, but less optimal than Savage.",
+      "Savage": "None, best for nuking."
+    }
+  },
+  "utility_comparison": [
+    {"champion": "Countess Lix", "role": "Debuffer/Support", "comparison": "Countess Lix offers more debuffs, Astralon more control and damage."},
+    {"champion": "Lydia the Deathsiren", "role": "Debuffer/Control", "comparison": "Lydia is more versatile, Astralon is a better nuker."},
+    {"champion": "Arbiter", "role": "Revive/Speed Lead", "comparison": "Arbiter offers more team utility, Astralon more damage."}
+  ],
+  "ratings": {
+    "pvp": "S",
+    "clan_boss": "B",
+    "hydra": "A",
+    "iron_twins": "A",
+    "dungeons": "A",
+    "solo_farming": "B",
+    "relentless_viability": "C (better in Savage/Cruel)"
+  },
+  "final_summary": {
+    "mastery_preference": "Helmsmasher for Arena, Warmaster for PvE",
+    "booking_impact": "High (A2/A3)",
+    "damage_rotation": "A3 for AoE stun, A2 for single target nuke/revive, A1 for DEF Down",
+    "turn_meter_stability": "Stable, frequent turns via passive.",
+    "passive_impact": "Frequent turns and damage reduction vs low ATK attackers.",
+    "gear_stat_notes": "Prioritize ATK%, C.RATE, C.DMG, ACC. Savage/Cruel for Arena.",
+    "ally_synergy_impact": "Excellent with Countess Lix and other debuffers.",
+    "draft_value": "First-pick for Arena/control teams.",
+    "investment_value": "High, books are well spent.",
+    "relentless_viability": "Low, best in Savage/Cruel.",
+    "similar_owned_champions": ["Countess Lix", "Lydia the Deathsiren", "Arbiter"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Arena Control",
+        "champions": ["Astralon", "Countess Lix", "Arbiter", "Lydia the Deathsiren"],
+        "strategy": "Open with A3 for AoE stun, Countess Lix for debuffs, Arbiter for speed/revive."
+      },
+      {
+        "name": "Doom Tower Waves",
+        "champions": ["Astralon", "Lydia the Deathsiren", "Siphi the Lost Bride"],
+        "strategy": "Control and debuff waves, revive as needed."
+      }
+    ],
+    "similar_champions": [
+      {"champion": "Countess Lix", "similarity_reason": "Synergy and debuffing."},
+      {"champion": "Lydia the Deathsiren", "similarity_reason": "Control and debuffing."},
+      {"champion": "Arbiter", "similarity_reason": "Revive and speed synergy."}
+    ]
+  }
+}

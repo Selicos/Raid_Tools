@@ -1,0 +1,227 @@
+{
+  "champion": "Aox the Rememberer",
+  "owned": true,
+  "overview": {
+    "role": "Support",
+    "rarity": "Epic",
+    "archetype": "Debuff Support / Healer",
+    "primary_damage_stat": "ATK",
+    "skill_scaling": {
+      "A1": "ATK",
+      "A2": "ATK",
+      "A3": "None (Debuff/Utility)"
+    },
+    "best_mastery": {
+      "pve_pvp": "Warmaster",
+      "clan_boss": "Warmaster"
+    },
+    "booking_roi": "High",
+    "gear_sets": {
+      "pvp_offense": ["Perception", "Speed"],
+      "pvp_defense": ["Immunity", "Bolster"],
+      "clan_boss": ["Regeneration", "Immortal"],
+      "hydra": ["Regeneration", "Perception"],
+      "iron_twins": ["Perception", "Speed"],
+      "dungeons": ["Regeneration", "Perception"],
+      "solo_farming": ["Regeneration", "Immortal"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Regeneration", "pros": "Self-sustain, great for solo and boss fights", "cons": "Lower team utility if not paired with Perception/Speed" },
+      { "set": "Perception", "pros": "Boosts ACC and SPD for debuffing", "cons": "Less healing than Regeneration" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["ACC", "SPD", "HP%"],
+      "clan_boss": ["ACC", "HP%", "DEF%"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "~250+ ACC",
+      "hydra": "~350+ ACC",
+      "iron_twins": "~350+ ACC"
+    },
+    "best_dungeon_use": "Ice Golem, Dragon, Doom Tower (Scarab King)"
+  },
+  "skills": {
+    "a1": {
+      "name": "Feathered Staff",
+      "type": "Single Target",
+      "hit_count": 2,
+      "cooldown": "None",
+      "multiplier": "2.1x ATK per hit",
+      "notes": "Each hit has a 10% (up to 30% with books) chance of placing a 5% Poison debuff for 2 turns."
+    },
+    "a2": {
+      "name": "Lore of Restoration",
+      "type": "Single Target + Team Heal",
+      "hit_count": 1,
+      "cooldown": "3 turns (booked)",
+      "multiplier": "5.7x ATK",
+      "notes": "Attacks 1 enemy. Heals all allies by 10% of their MAX HP, plus 2.5% per debuff on the target."
+    },
+    "a3": {
+      "name": "Weight of Aeons",
+      "type": "AOE Debuff",
+      "hit_count": 0,
+      "cooldown": "3 turns (booked)",
+      "multiplier": "None",
+      "notes": "Places 50% Decrease ATK on all enemies for 2 turns. 75% chance to decrease each enemy’s Turn Meter by 20%. If enemy has 50%+ TM after, places 30% Decrease C.RATE for 2 turns."
+    },
+    "passive": {
+      "exists": true,
+      "impact": "Increases the duration of 2 random debuffs on the attacker by 1 turn when attacked (once per hit)."
+    },
+    "booking": {
+      "impact": "High",
+      "notes": "Books increase Poison chance (A1), healing and cooldown (A2), debuff chance and cooldown (A3). All skills benefit."
+    },
+    "rotation": {
+      "optimal_cycle": ["A3", "A2", "A1", "A1", "A3", "A2", "A1", "A1"],
+      "damage_per_turn": {
+        "a3": "Debuff/utility only",
+        "a2": "Moderate single-target + team heal",
+        "a1": "Low-moderate, 2.1x ATK per hit, Poison chance"
+      },
+      "average_damage": "Low-moderate (main value is debuffing and healing)",
+      "buff_debuff_uptime": {
+        "Poison": "~30-50% uptime on single target",
+        "Decrease ATK": "High uptime (AOE, 3-turn cooldown)"
+      },
+      "extra_turn_frequency": "None"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Weight of Aeons",
+    "skill_priority": ["Weight of Aeons", "Lore of Restoration", "Feathered Staff"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Clan Boss (NM/UNM)",
+        "mastery": "Warmaster",
+        "bonus_damage": "~6-10k per proc",
+        "notes": "Procs on A1 and A2, increases overall damage and Poison output."
+      },
+      {
+        "type": "Doom Tower Boss",
+        "mastery": "Warmaster",
+        "bonus_damage": "~6-10k per proc",
+        "notes": "Useful for Scarab King, helps with debuff extension and sustain."
+      },
+      {
+        "type": "Arena/General PvE",
+        "mastery": "Warmaster",
+        "bonus_damage": "Low-moderate",
+        "notes": "Not a primary damage dealer, but Warmaster adds value."
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Warmaster",
+      "spider_hard": "Warmaster",
+      "hydra": "Warmaster",
+      "iron_twins": "Warmaster"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "Low-moderate (main value is debuff uptime, Poison, and healing)",
+    "notes": "Provides consistent Decrease ATK, Poison, and healing. Not a top damage dealer but excellent for team survivability."
+  },
+  "synergy": {
+    "recommended_buffs": ["Increase DEF", "Ally Protection", "Continuous Heal"],
+    "support_champion_sets": [
+      ["Bad-el-Kazar", "Frozen Banshee"],
+      ["Drexthar Bloodtwin", "Maulie Tankard"],
+      ["Rector Drath"]
+    ],
+    "recommended_revivors": ["Rector Drath", "Maulie Tankard"],
+    "speed_tuning": {
+      "arena": "220-250+",
+      "dungeons": "200-240+",
+      "clan_boss": "170-190"
+    },
+    "gear_stat_priorities": {
+      "arena": ["ACC", "SPD", "HP%", "DEF%"],
+      "clan_boss": ["ACC", "HP%", "DEF%", "SPD"],
+      "dungeons": ["ACC", "SPD", "HP%", "DEF%"]
+    },
+    "relentless_viability": "Viable for more frequent debuffing and healing, but can cause rotation desync."
+  },
+  "investment": {
+    "value": "High",
+    "notes": "Aox is a versatile support for Clan Boss, Dungeons, and Doom Tower. High ROI for early and mid-game accounts.",
+    "owned_comparison": [
+      { "champion": "Frozen Banshee", "comparison": "Higher Poison output, less healing and debuff utility." },
+      { "champion": "Maulie Tankard", "comparison": "Better reviver, less debuffing." }
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Bad-el-Kazar": 9,
+      "Frozen Banshee": 8,
+      "Maulie Tankard": 7
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": true,
+      "avoid": false,
+      "notes": "Aox is a strong early pick for sustain and debuffing. Counter-pick against heavy damage teams."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None",
+    "gear_set_stability": {
+      "Reflex": "Can reduce cooldowns for more frequent healing/debuffs.",
+      "Relentless": "More turns, but can desync skill rotation.",
+      "Savage": "Not recommended (no DEF Down, not a nuker)."
+    },
+    "rotation_desync_risks": {
+      "Reflex": "Low risk, generally beneficial.",
+      "Relentless": "Moderate risk, can throw off skill order.",
+      "Savage": "Not applicable."
+    }
+  },
+  "utility_comparison": [
+    { "champion": "Frozen Banshee", "role": "Poisoner", "comparison": "Higher Poison output, less healing and debuff utility." },
+    { "champion": "Maulie Tankard", "role": "Reviver/Support", "comparison": "Better reviver, less debuffing." },
+    { "champion": "Drexthar Bloodtwin", "role": "Burn/Support", "comparison": "More HP Burn, less healing." }
+  ],
+  "ratings": {
+    "pvp": "B",
+    "clan_boss": "A",
+    "hydra": "A",
+    "iron_twins": "B",
+    "dungeons": "A",
+    "solo_farming": "B",
+    "relentless_viability": "B (can be useful, but not always optimal)"
+  },
+  "final_summary": {
+    "mastery_preference": "Warmaster (PvE/CB)",
+    "booking_impact": "High (all skills benefit, especially A3/A2)",
+    "damage_rotation": "Low-moderate, main value is debuff uptime and healing",
+    "turn_meter_stability": "Stable with Speed/Perception/Regeneration; Relentless can desync",
+    "passive_impact": "Excellent for extending debuffs on bosses and in PvP",
+    "gear_stat_notes": "Prioritize ACC, SPD, HP%, DEF% for best results",
+    "ally_synergy_impact": "Pairs well with Poisoners and debuffers (e.g., Bad-el-Kazar)",
+    "draft_value": "High for sustain and debuff teams",
+    "investment_value": "High",
+    "relentless_viability": "Viable but not always optimal",
+    "similar_owned_champions": ["Frozen Banshee", "Maulie Tankard"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Clan Boss Debuff Team",
+        "champions": ["Aox the Rememberer", "Frozen Banshee", "Maulie Tankard", "Drexthar Bloodtwin"],
+        "strategy": "Maximize Poison, Decrease ATK, and healing for survivability."
+      },
+      {
+        "name": "Doom Tower Scarab King",
+        "champions": ["Aox the Rememberer", "Rector Drath", "Maulie Tankard"],
+        "strategy": "Sustain and debuff extension for boss control."
+      }
+    ],
+    "similar_champions": [
+      { "champion": "Frozen Banshee", "similarity_reason": "Single-target Poisoner, Clan Boss utility." },
+      { "champion": "Maulie Tankard", "similarity_reason": "Support/Reviver, sustain focus." }
+    ]
+  }
+}

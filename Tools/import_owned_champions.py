@@ -15,7 +15,7 @@ import re
 from datetime import datetime
 from pathlib import Path
 
-OWNED_LIST_MD = Path("data/owned/Owned_Champion_list.md")
+OWNED_LIST_MD = Path("input/Owned_Champions/Owned_Champion_list.md")
 RARITY_MAP = {"5": "Legendary", "4": "Epic", "3": "Rare", "2": "Uncommon", "1": "Common"}
 
 
@@ -136,7 +136,7 @@ def main():
     if args.from_owned_list:
         # Process all champions in the owned list and trigger intake for each
         base_dir = Path(__file__).parent.resolve()
-        prompt_dir = base_dir / "data" / "prompts"
+        prompt_dir = base_dir / "input" / "Prompt"
         prompt_dir.mkdir(parents=True, exist_ok=True)
         for champ, info in owned.items():
             prompt_file = prompt_dir / f"{champ}_prompt.md"
@@ -192,7 +192,7 @@ def main():
     # After updating, trigger intake for all champions in the owned list that do not have a prompt file
     if args.trigger_intake:
         base_dir = Path(__file__).parent.resolve()
-        prompt_dir = base_dir / "data" / "prompts"
+        prompt_dir = base_dir / "input" / "Prompt"
         prompt_dir.mkdir(parents=True, exist_ok=True)
         for champ in owned:
             prompt_file = prompt_dir / f"{champ}_prompt.md"

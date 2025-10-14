@@ -1,0 +1,222 @@
+{
+  "champion": "Archmage Hellmut",
+  "owned": true,
+  "overview": {
+    "role": "Support Controller",
+    "rarity": "Epic",
+    "archetype": "Turn Meter Control / Buff Feeder / Stun Specialist",
+    "primary_damage_stat": "ATK",
+    "skill_scaling": {
+      "A1": "ATK",
+      "A2": "ATK",
+      "A3": "None (Buff)"
+    },
+    "best_mastery": {
+      "pve_pvp": "Warmaster",
+      "clan_boss": "Warmaster"
+    },
+    "booking_roi": "High (A2/A3)",
+    "gear_sets": {
+      "pvp_offense": ["Speed", "Perception", "Relentless"],
+      "pvp_defense": ["Immunity", "Stoneskin"],
+      "clan_boss": ["Speed", "Lifesteal"],
+      "hydra": ["Speed", "Perception"],
+      "iron_twins": ["Speed", "Accuracy"],
+      "dungeons": ["Speed", "Perception"],
+      "solo_farming": ["Speed", "Lifesteal"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Relentless", "pros": "Extra turns for more control and buffs", "cons": "Unpredictable rotation, can desync team" },
+      { "set": "Speed", "pros": "Consistent turn cycling, reliable buff uptime", "cons": "Lower damage potential" }
+    ],
+    "focus_stats": {
+      "arena_dungeons": ["SPD", "ACC", "C.RATE", "HP%"],
+      "clan_boss": ["SPD", "ACC", "HP%"]
+    },
+    "accuracy_resistance": {
+      "hard_10_dungeons": "~250+ ACC",
+      "hydra": "350+ ACC",
+      "iron_twins": "400+ ACC"
+    },
+    "best_dungeon_use": "Doom Tower, Arena, Faction Wars"
+  },
+  "skills": {
+    "a1": {
+      "name": "Arcane Dynamo",
+      "type": "Single Target",
+      "hit_count": 1,
+      "cooldown": "None",
+      "multiplier": "4.8x ATK",
+      "notes": "Attacks 1 enemy. Fills this Champion’s Turn Meter by 10% (20% if critical)."
+    },
+    "a2": {
+      "name": "Timeslip",
+      "type": "Single Target + AoE (conditional)",
+      "hit_count": 1,
+      "cooldown": "3 turns (booked)",
+      "multiplier": "6x ATK (target), 3.5x ATK (AoE)",
+      "notes": "Attacks 1 enemy, then all others if first hit is critical. Each hit has 75% chance (booked) to place [Stun] for 1 turn. After attacking, decreases Turn Meter of each enemy without [Stun] by 20%."
+    },
+    "a3": {
+      "name": "Psychic Guidance",
+      "type": "AoE Buff",
+      "hit_count": 0,
+      "cooldown": "3 turns (booked)",
+      "multiplier": "None",
+      "notes": "Places 30% [Increase SPD], 30% [Increase C.RATE], and 30% [Increase C.DMG] on all allies for 2 turns."
+    },
+    "passive": {
+      "exists": true,
+      "impact": "Immune to Turn Meter decreasing effects."
+    },
+    "booking": {
+      "impact": "High",
+      "notes": "A2 and A3 gain significant cooldown reduction and effect chance."
+    },
+    "rotation": {
+      "optimal_cycle": ["A3", "A2", "A1", "A1", "A2", "A1", "A3"],
+      "damage_per_turn": {
+        "a3": "Buff only",
+        "a2": "High (AoE + control)",
+        "a1": "Moderate (single target, self TM boost)"
+      },
+      "average_damage": "Moderate overall, excels in control and buffing",
+      "buff_debuff_uptime": {
+        "Stun": ">80% on waves (with high ACC)",
+        "Increase SPD": "~100% with proper cycling"
+      },
+      "extra_turn_frequency": "None (unless using Relentless set)"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Psychic Guidance",
+    "skill_priority": ["Psychic Guidance", "Timeslip", "Arcane Dynamo"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "PvE waves",
+        "mastery": "Warmaster",
+        "bonus_damage": "~6-10k per proc",
+        "notes": "Procs on A2 AoE hits, boosting wave clear and boss damage."
+      },
+      {
+        "type": "Arena",
+        "mastery": "Eagle Eye",
+        "bonus_damage": "N/A",
+        "notes": "Focus on ACC for control, not direct damage."
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Warmaster",
+      "spider_hard": "Warmaster",
+      "hydra": "Warmaster",
+      "iron_twins": "Eagle Eye"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "Low-Medium (not a primary CB DPS)",
+    "notes": "Provides buffs and TM control, but not a top CB damage dealer."
+  },
+  "synergy": {
+    "recommended_buffs": ["Increase SPD", "Increase C.RATE", "Increase C.DMG", "Stun", "Turn Meter Control"],
+    "support_champion_sets": [
+      ["Seer", "Lydia the Deathsiren"],
+      ["Arbiter", "Deacon Armstrong"],
+      ["Bad-el-Kazar", "Scyl of the Drakes"]
+    ],
+    "recommended_revivors": ["Scyl of the Drakes", "Djamarsa"],
+    "speed_tuning": {
+      "arena": "250-320+",
+      "dungeons": "220-260+",
+      "clan_boss": "180-220"
+    },
+    "gear_stat_priorities": {
+      "arena": ["SPD", "ACC", "C.RATE", "C.DMG"],
+      "clan_boss": ["SPD", "ACC", "HP%"],
+      "dungeons": ["SPD", "ACC", "C.RATE"]
+    },
+    "relentless_viability": "High for PvE, can disrupt strict speed tunes in CB/Arena."
+  },
+  "investment": {
+    "value": "High",
+    "notes": "Top-tier epic for control, buffing, and speed teams. Books are a great investment.",
+    "owned_comparison": [
+      {"champion": "Deacon Armstrong", "comparison": "Deacon offers TM boost and DEF Down, but less control."},
+      {"champion": "Seer", "comparison": "Seer benefits from Hellmut’s buffs for nuking waves."}
+    ]
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Seer": 9,
+      "Arbiter": 8,
+      "Deacon Armstrong": 7
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": true,
+      "avoid": false,
+      "notes": "Early pick for speed/buff teams, counter-pick vs TM control teams."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "None (unless using Relentless set)",
+    "gear_set_stability": {
+      "Reflex": "Can reduce cooldowns for more frequent buffs/control.",
+      "Relentless": "Extra turns can desync team but increase control potential.",
+      "Savage": "Not recommended, as Hellmut is not a nuker."
+    },
+    "rotation_desync_risks": {
+      "Reflex": "Low risk, generally beneficial.",
+      "Relentless": "Medium-High risk in speed-tuned teams.",
+      "Savage": "N/A"
+    }
+  },
+  "utility_comparison": [
+    {"champion": "Deacon Armstrong", "role": "TM Control/Buff", "comparison": "Deacon is more accessible but less versatile."},
+    {"champion": "Seer", "role": "Wave Nuke", "comparison": "Seer relies on Hellmut’s buffs for max damage."},
+    {"champion": "Arbiter", "role": "Speed Lead/Revive", "comparison": "Arbiter offers revive and TM boost, but less control."}
+  ],
+  "ratings": {
+    "pvp": "S",
+    "clan_boss": "B",
+    "hydra": "A",
+    "iron_twins": "A",
+    "dungeons": "S",
+    "solo_farming": "B",
+    "relentless_viability": "A (PvE), C (strict speed tunes)"
+  },
+  "final_summary": {
+    "mastery_preference": "Warmaster for PvE, Eagle Eye for Arena/Control",
+    "booking_impact": "High (A2/A3)",
+    "damage_rotation": "A2 for control, A3 for buffs, A1 for TM cycling",
+    "turn_meter_stability": "Stable with Speed/Perception, variable with Relentless",
+    "passive_impact": "Immunity to TM reduction is strong in Arena and vs Valkyrie/Lyssandra",
+    "gear_stat_notes": "Prioritize SPD, ACC, C.RATE. Relentless for PvE, Speed for Arena/CB.",
+    "ally_synergy_impact": "Excellent with Seer, Arbiter, and other speed/buff teams.",
+    "draft_value": "First-pick for speed/buff/control teams.",
+    "investment_value": "High, books are well spent.",
+    "relentless_viability": "High for PvE, avoid in strict speed tunes.",
+    "similar_owned_champions": ["Deacon Armstrong", "Seer", "Arbiter"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Speed Nuke (Seer)",
+        "champions": ["Archmage Hellmut", "Seer", "Lydia the Deathsiren", "Arbiter"],
+        "strategy": "Buff up with A3, Seer nukes waves, Lydia for DEF Down/Weaken."
+      },
+      {
+        "name": "Arena Control",
+        "champions": ["Archmage Hellmut", "Arbiter", "Deacon Armstrong", "Scyl of the Drakes"],
+        "strategy": "Speed lead, TM boost, control with A2, revive with Scyl."
+      }
+    ],
+    "similar_champions": [
+      {"champion": "Deacon Armstrong", "similarity_reason": "TM control and speed utility."},
+      {"champion": "Arbiter", "similarity_reason": "Speed lead and buffing."},
+      {"champion": "Seer", "similarity_reason": "Synergizes with buffs for wave clear."}
+    ]
+  }
+}

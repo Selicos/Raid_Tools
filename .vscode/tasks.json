@@ -136,13 +136,13 @@
     {
       "label": "Organize Completed Prompts",
       "type": "shell",
-      "command": "if not exist output\\completed mkdir output\\completed && move /Y *_prompt.completed.md output\\completed\\ 2>nul || echo No files to move.",
+      "command": "if not exist output\\completed_prompts mkdir output\\completed_prompts && move /Y *_prompt.completed.md output\\completed_prompts\\ 2>nul || echo No files to move.",
       "group": "build",
       "presentation": {
         "reveal": "always"
       },
       "problemMatcher": [],
-      "detail": "Moves all *_prompt.completed.md files to output/completed/"
+      "detail": "Moves all *_prompt.completed.md files to output/completed_prompts/"
     }
   ],
   "inputs": [

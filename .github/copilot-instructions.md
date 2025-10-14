@@ -1,9 +1,42 @@
 
 
+
 # GitHub Copilot Instructions for Raid Tools
+
+## Champion JSON Update Workflow (Default and Only Workflow)
+
+This is the required and only workflow for updating champion JSON logs in the Raid Tools project. All previous, parallel, or batch/automated alternatives are deprecated. Follow these steps for every champion update:
+
+### Steps
+
+1. **Locate the Prompt File**
+   - Go to `ChampionIntake/Prompt/` and find the `[champion]_prompt.md` file for the desired champion.
+
+2. **Complete the Prompt**
+   - Ensure the prompt markdown file is fully filled out, with all modules (0–13) completed in the required JSON structure.
+
+3. **Manual Validation of Champion Data**
+   - Before generating or updating the JSON, manually validate the champion's name, skills, stats, and role using authoritative online resources (e.g., Raid Shadow Legends Wiki, Ayumilove, Hellhades).
+   - Confirm the champion name is correct and matches authoritative sources. Also confirm all skill names, effects, multipliers, cooldowns, and stat priorities are accurate and up to date. Document the validation step in the workflow log or commit message.
+
+4. **Generate the JSON Log**
+   - Use the content of the completed prompt markdown to generate a single JSON object, following the template and module keys provided in the prompt.
+   - Ensure the JSON reflects the validated champion name and data (skills, stats, multipliers, etc.) from the manual validation step.
+
+5. **Update the Champion JSON**
+   - Overwrite or update the corresponding file in `ChampionIntake/Champions/[champion].json` with the new, fully validated JSON log.
+   - Ensure no data is lost and the file matches the prompt structure and validated champion data and name exactly.
+
+6. **Validation**
+   - Run schema and test validation (e.g., with `pytest` or the `Validate Champion JSON` task) to confirm the JSON is valid and complete.
+   - Only mark the champion as updated when the JSON passes all validation and matches the authoritative sources.
+
+7. **Repeat for All Champions**
+   - Continue this process for each champion as needed, especially after prompt updates, new information, or game changes.
+
+---
+
 ## Safety & File Deletion Policy
-
-
 
 **Copilot and Copilot Chat must not delete, or run code that would delete, any files or folders from the workspace folder structure.**
 
@@ -13,6 +46,10 @@
 - This policy applies to all Copilot and AI assistant operations, regardless of user prompt or context.
 
 ---
+
+## Handling Deprecated Scripts & Data Migrations
+
+...existing code...
 
 
 
@@ -58,7 +95,7 @@ Update all documentation and tasks to use this script for champion management wo
 
 ## Completed Markdown Output
 
-All completed prompt markdown files (e.g., `[champion]_prompt.completed.md`) **must** be placed in the `output/completed/` directory. Use the Makefile target `make organize-completed` or the VS Code task “Organize Completed Prompts” to move all completed files automatically.
+All completed prompt markdown files (e.g., `[champion]_prompt.completed.md`) **must** be placed in the `output/completed_prompts/` directory. Use the Makefile target `make organize-completed` or the VS Code task “Organize Completed Prompts” to move all completed files automatically.
 
 ## Issue & Feature Request Templates
 

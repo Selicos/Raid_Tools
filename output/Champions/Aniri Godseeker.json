@@ -1,0 +1,201 @@
+{
+  "champion": "Godseeker Aniri",
+  "owned": true,
+  "overview": {
+    "role": "Epic DEF / Support / Reviver",
+    "rarity": "Epic",
+    "archetype": "Healer / Reviver / Buff Extender / Support",
+    "primary_damage_stat": "DEF",
+    "skill_scaling": {
+      "A1": "DEF",
+      "A2": "DEF",
+      "A3": "N/A (Revive)"
+    },
+    "best_mastery": {
+      "pve": "Warmaster",
+      "clan_boss": "Warmaster",
+      "pvp": "Timely Intervention"
+    },
+    "booking_roi": "High (A2/A3 cooldowns)",
+    "gear_sets": {
+      "pve": ["Speed", "Reflex", "Relentless", "Immortal", "Regeneration"],
+      "pvp": ["Stoneskin", "Untouchable", "Protection"],
+      "special": ["Curing (for more healing)"]
+    },
+    "gear_tradeoffs": [
+      { "set": "Reflex", "pros": "More A2/A3 cycles", "cons": "Lower stats overall" },
+      { "set": "Regeneration", "pros": "Self-sustain for solo/duo content", "cons": "Lower team healing" }
+    ],
+    "focus_stats": {
+      "all": ["SPD", "HP%", "DEF%", "RES", "ACC (if using A2 for buff reduction)"]
+    },
+    "accuracy_resistance": {
+      "arena": "350+ RES, 200+ ACC (if using A2)",
+      "clan_boss": "No ACC needed unless using A2 for buff reduction"
+    },
+    "best_dungeon_use": "Clan Boss, Doom Tower, Iron Twins, Sand Devil"
+  },
+  "skills": {
+    "a1": {
+      "name": "Blade of Blessings",
+      "type": "Single Target",
+      "hit_count": 1,
+      "cooldown": "None",
+      "multiplier": "3.6x DEF",
+      "notes": "Attacks 1 enemy. Heals lowest HP ally by 5% of their MAX HP (cannot heal self)."
+    },
+    "a2": {
+      "name": "Quest for Meaning",
+      "type": "AOE",
+      "hit_count": 1,
+      "cooldown": "4 turns (bookable to 3)",
+      "multiplier": "3x DEF",
+      "notes": "Attacks all enemies. Heals all allies by 15% of their MAX HP, decreases duration of all buffs on enemies by 1 turn, increases duration of all buffs on allies by 1 turn."
+    },
+    "a3": {
+      "name": "Rise of Glory",
+      "type": "Revive",
+      "hit_count": 0,
+      "cooldown": "7 turns (bookable to 4)",
+      "multiplier": "N/A",
+      "notes": "Revives a dead ally with 50% HP, fills their Turn Meter by 50%, resets all their skill cooldowns."
+    },
+    "passive": {
+      "exists": true,
+      "name": "Guardian Angel",
+      "effect": "Increases healing received by 10%. If an ally is about to take a fatal hit, places Revive on Death on them for 1 turn before damage is taken. 7-turn cooldown (bookable to 4)."
+    },
+    "booking": {
+      "impact": "High for A2/A3 cooldowns, not needed for A1 utility.",
+      "notes": "Books mainly needed for cooldowns and more healing."
+    },
+    "rotation": {
+      "optimal_cycle": ["A2", "A1", "A1", "A3", "A2", "A1"],
+      "damage_per_turn": {
+        "a1": "Low damage, single-target heal",
+        "a2": "Team heal, buff/debuff manipulation",
+        "a3": "Revive, not damage"
+      },
+      "average_damage": "Low, high utility",
+      "buff_debuff_uptime": {
+        "Buff Extension": "~80% with books",
+        "Buff Reduction": "Situational (needs ACC)"
+      },
+      "extra_turn_frequency": "Reflex/Relentless only"
+    }
+  },
+  "team_inputs": {
+    "first_turn_skill": "Quest for Meaning (A2)",
+    "skill_priority": ["A2 Quest for Meaning", "A3 Rise of Glory", "A1 Blade of Blessings"],
+    "disabled_skills": []
+  },
+  "mastery_simulation": {
+    "scenarios": [
+      {
+        "type": "Clan Boss",
+        "mastery": "Warmaster",
+        "bonus_damage": "Extra damage on A1, more healing for team",
+        "notes": "Best for unkillable or super tanky teams."
+      },
+      {
+        "type": "PvP",
+        "mastery": "Timely Intervention",
+        "bonus_damage": "N/A",
+        "notes": "Maximize revive and healing potential."
+      }
+    ],
+    "recommended_mastery": {
+      "clan_boss": "Warmaster",
+      "arena": "Timely Intervention",
+      "doom_tower": "Warmaster"
+    }
+  },
+  "clan_boss": {
+    "damage_per_turn": "Low (not a DPS)",
+    "notes": "Provides healing, buff extension, and revive. Not a primary damage dealer."
+  },
+  "synergy": {
+    "recommended_buffs": ["Increase DEF", "Block Debuffs", "Ally Protection", "Strengthen"],
+    "support_champion_sets": [
+      ["Krisk the Ageless", "Sandlashed Survivor"],
+      ["Duchess Lilitu", "Cardiel"]
+    ],
+    "recommended_revivors": ["Duchess Lilitu", "Cardiel"],
+    "speed_tuning": {
+      "clan_boss": "180–220 (speed-tuned)",
+      "arena": "250+"
+    },
+    "gear_stat_priorities": {
+      "pve": ["SPD", "HP%", "DEF%", "RES"],
+      "pvp": ["SPD", "HP%", "DEF%", "RES"]
+    },
+    "relentless_viability": "Good for more A2/A3 cycles, but not mandatory."
+  },
+  "investment": {
+    "value": "Very High",
+    "notes": "Top-tier for Clan Boss, Arena, Doom Tower, and Iron Twins."
+  },
+  "intelligence": {
+    "synergy_scores": {
+      "Krisk the Ageless": 9,
+      "Sandlashed Survivor": 8,
+      "Duchess Lilitu": 8
+    },
+    "draft_logic": {
+      "early_pick": true,
+      "counter_pick": true,
+      "avoid": false,
+      "notes": "First pick for support/revive teams."
+    }
+  },
+  "turn_meter": {
+    "extra_turn_effects": "Reflex/Relentless only",
+    "gear_set_stability": {
+      "Reflex": "More A2/A3, but less overall stats",
+      "Relentless": "More turns, but can desync"
+    },
+    "rotation_desync_risks": {
+      "Reflex": "Low",
+      "Relentless": "Medium"
+    }
+  },
+  "utility_comparison": [
+    { "champion": "Sandlashed Survivor", "role": "Buff Extender/Support", "comparison": "Sandlashed offers Ally Protection, Aniri offers revive and more healing." },
+    { "champion": "Duchess Lilitu", "role": "Reviver/Support", "comparison": "Duchess offers more protection, Aniri more healing and buff extension." }
+  ],
+  "ratings": {
+    "pve": "S",
+    "clan_boss": "S",
+    "hydra": "A",
+    "iron_twins": "A",
+    "dungeons": "A",
+    "solo_farming": "B",
+    "relentless_viability": "Medium"
+  },
+  "final_summary": {
+    "mastery_preference": "Warmaster for PvE, Timely Intervention for PvP",
+    "booking_impact": "High for A2/A3 cooldowns",
+    "damage_rotation": "A2 for heal/buff, A3 for revive, A1 for single-target heal",
+    "turn_meter_stability": "Stable with Speed/Reflex sets",
+    "passive_impact": "Unique preemptive revive, increases healing received",
+    "gear_stat_notes": "SPD, HP%, DEF%, RES, ACC (if using A2 for buff reduction)",
+    "ally_synergy_impact": "Works best with other buffers and revivers",
+    "draft_value": "First pick for support/revive teams",
+    "investment_value": "Very high for all PvE content",
+    "relentless_viability": "Medium",
+    "similar_owned_champions": ["Sandlashed Survivor", "Duchess Lilitu"]
+  },
+  "synergy_engine": {
+    "team_setups": [
+      {
+        "name": "Clan Boss Support Team",
+        "champions": ["Godseeker Aniri", "Krisk the Ageless", "Sandlashed Survivor", "Duchess Lilitu"],
+        "strategy": "Buff extension, healing, revive, and protection."
+      }
+    ],
+    "similar_champions": [
+      { "champion": "Sandlashed Survivor", "similarity_reason": "Both extend buffs and support team survival." },
+      { "champion": "Duchess Lilitu", "similarity_reason": "Both revive and support, but Aniri offers more healing." }
+    ]
+  }
+}

@@ -19,10 +19,10 @@ from typing import Optional, Dict, Any, List
 champions_dir: str = os.path.join(
     os.path.dirname(__file__),
     "..",
-    "ChampionIntake",
+    "output",
     "Champions",
 )
-summary_dir: str = os.path.join(os.path.dirname(__file__), "Summary")
+summary_dir: str = os.path.join(os.path.dirname(__file__), "..", "output", "Summary")
 cooldown_analysis_dir: str = os.path.join(
     champions_dir, "..", "ChampionAnalysisTool", "cooldown_analysis"
 )

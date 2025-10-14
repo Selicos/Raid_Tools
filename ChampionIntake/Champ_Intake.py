@@ -91,9 +91,9 @@ from datetime import datetime, timedelta
 
 # Base directory for this script
 BASE_DIR = os.path.dirname(__file__)
-champion_json_dir = os.path.join(BASE_DIR, "Champions")
-owned_list_path = os.path.join(champion_json_dir, "Owned_Champions", "Owned_champion_list.md")
-prompt_dir = os.path.join(os.path.dirname(__file__), "Prompt")
+champion_json_dir = os.path.join(BASE_DIR, "..", "output", "Champions")
+owned_list_path = os.path.join(BASE_DIR, "..", "input", "Owned_Champions", "Owned_champion_list.md")
+prompt_dir = os.path.join(BASE_DIR, "..", "input", "Prompt")
 os.makedirs(prompt_dir, exist_ok=True)
 
 def add_to_owned_list(champion_name, update_date=True):
@@ -148,6 +148,9 @@ def add_to_owned_list(champion_name, update_date=True):
 def create_json_placeholder(champion_name, rarity=None):
     os.makedirs(champion_json_dir, exist_ok=True)
     path = os.path.join(champion_json_dir, f"{champion_name}.json")
+    if os.path.exists(path):
+        print(f"⚠️ JSON for {champion_name} already exists. Skipping placeholder creation.")
+        return
     rarity_map = {
         "6": "Mythic", "mythic": "Mythic", "m": "Mythic",
         "5": "Legendary", "legendary": "Legendary", "l": "Legendary",
@@ -170,6 +173,9 @@ def create_prompt_md(champion_name):
     os.makedirs(prompt_dir, exist_ok=True)
     target_filename = f"{champion_name}_prompt.md"
     path = os.path.join(prompt_dir, target_filename)
+    if os.path.exists(path):
+        print(f"⚠️ Prompt file for {champion_name} already exists. Skipping creation.")
+        return path
 
     prompt = f"# Champion Log Generation Prompt for {champion_name}\n\n"
     prompt += (
@@ -287,13 +293,19 @@ def open_in_editor(path):
     except Exception as e:
         print(f"❌ Could not open in Notepad: {e}")
 
-def run_champion_intake(champion_name, rarity=None, fast_mode=False):
-    create_json_placeholder(champion_name, rarity=rarity)
+def run_champion_intake(champion_name, rarity=None, fast_mode=False, suppress_prompt_actions=False):
+    # Only create placeholder if JSON does not exist
+    json_path = os.path.join(champion_json_dir, f"{champion_name}.json")
+    if not os.path.exists(json_path):
+        create_json_placeholder(champion_name, rarity=rarity)
+    else:
+        print(f"⚠️ JSON for {champion_name} already exists. Skipping placeholder creation.")
     md_path = create_prompt_md(champion_name)
     if validate_json(champion_name) and validate_md(champion_name):
-        copy_prompt_to_clipboard(md_path)
-        if not fast_mode:
-            open_in_editor(md_path)
+        if not suppress_prompt_actions:
+            copy_prompt_to_clipboard(md_path)
+            if not fast_mode:
+                open_in_editor(md_path)
         add_to_owned_list(champion_name, update_date=True)
         return True
     else:
@@ -337,7 +349,7 @@ def run_smart_batch_from_owned_list(path=owned_list_path, fast_mode=False):
 
     for champ, rarity in champions_to_update:
         print(f"🔄 Processing: {champ} (Rarity: {rarity if rarity else 'Unknown'})")
-        if run_champion_intake(champ, rarity=rarity, fast_mode=fast_mode):
+        if run_champion_intake(champ, rarity=rarity, fast_mode=fast_mode, suppress_prompt_actions=True):
             success.append(champ)
         else:
             failed.append(champ)

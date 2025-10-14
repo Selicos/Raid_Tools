@@ -51,10 +51,10 @@ clean:
 	rmdir /S /Q ChampionAnalysisTool\__pycache__ || true
 	rmdir /S /Q Summarize\ Champion\ Results\__pycache__ || true
 
-# Ensure all completed prompt markdown files are in output/completed
+# Ensure all completed prompt markdown files are in output/completed_prompts
 .PHONY: organize-completed
 organize-completed:
-	@echo "Moving all *_prompt.completed.md files to output/completed/ ..."
-	if not exist output\completed mkdir output\completed
-	move /Y *_prompt.completed.md output\completed\ 2>nul || echo "No files to move."
+	@echo "Moving all *_prompt.completed.md files to output/completed_prompts/ ..."
+	if not exist output\completed_prompts mkdir output\completed_prompts
+	move /Y *_prompt.completed.md output\completed_prompts\ 2>nul || echo "No files to move."
 	@echo "Done."

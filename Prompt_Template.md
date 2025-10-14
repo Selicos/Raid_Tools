@@ -9,7 +9,7 @@ Keep this file up to date and reference it in all related documentation and scri
 Given a champion prompt file (see `ChampionIntake/Prompt/[champion]_prompt.md`), generate:
 
 1. **A fully completed JSON log** for the champion, using the structure and fields from `logTemplate.json`, filling in all required values with accurate, realistic, or best-guess data for this champion.
-2. **A completed Markdown file** (`[champion]_prompt.completed.md`) that fills out every module in the prompt, replacing all placeholders with real values, so it serves as a human-readable, step-by-step worked example for this champion. **This file must be placed in the `output/completed` directory.**
+2. **A completed Markdown file** (`[champion]_prompt.completed.md`) that fills out every module in the prompt, replacing all placeholders with real values, so it serves as a human-readable, step-by-step worked example for this champion. **This file must be placed in the `output/completed_prompts` directory.**
 3. Use the module-by-module breakdown in the prompt file for the `.md` structure.
 4. Ensure all fields are filled, and the JSON is valid.
 5. If any information is missing, use best-guess values based on Raid Shadow Legends sources (Wiki, Ayumilove, Hellhades).
@@ -20,7 +20,7 @@ Given a champion prompt file (see `ChampionIntake/Prompt/[champion]_prompt.md`),
 
 ## Example: Completed Markdown for <CHAMPION_NAME>
 
-Below is a worked example of a completed prompt markdown for any champion. Replace `<CHAMPION_NAME>` and all champion-specific values as appropriate. **When generating this file, always save it to `output/completed/[champion]_prompt.completed.md`.** All modules are filled with real values, following the template and prompt structure:
+Below is a worked example of a completed prompt markdown for any champion. Replace `<CHAMPION_NAME>` and all champion-specific values as appropriate. **When generating this file, always save it to `output/completed_prompts/[champion]_prompt.completed.md`.** All modules are filled with real values, following the template and prompt structure:
 
 ---
 # Champion Log Generation Prompt for <CHAMPION_NAME>
