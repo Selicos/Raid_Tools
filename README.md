@@ -288,7 +288,6 @@ All completed prompt markdown files (e.g., `[champion]_prompt.completed.md`) **m
   - If a champion name (and optionally rarity) is provided, generate or overwrite the prompt file in `input/Prompt/` using the template, unless a completed prompt already exists in `output/completed_prompts/` for that champion. If a completed prompt exists, skip prompt and JSON generation for that champion.
   - In batch mode (no champion provided), process all champions in the owned list, generating/overwriting prompt files in `input/Prompt/` for each, unless a completed prompt already exists for that champion.
   - Prompt files are always overwritten unless a completed prompt exists.
-  - No clipboard or copy-to-clipboard logic is used. In single champion mode, the prompt file may be opened in the editor; in batch mode, prompt files are not opened.
 
 2. **Complete the Prompt**
   - Fill out the prompt markdown file in `input/Prompt/`, ensuring all modules (0–20) are completed in the required JSON structure.

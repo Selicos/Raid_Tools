@@ -87,12 +87,11 @@ import json
 import sys
 
 setup_path = os.path.join(os.path.dirname(__file__), "setup_environment.py")
-if importlib.util.find_spec("pyperclip") is None or not os.path.exists(setup_path):
-    print("⚠️ Missing setup script or pyperclip. Please check your environment.")
+if not os.path.exists(setup_path):
+    print("⚠️ Missing setup script. Please check your environment.")
 else:
     runpy.run_path(setup_path)
 
-import pyperclip
 import subprocess
 import shutil
 from datetime import datetime, timedelta
@@ -236,10 +235,6 @@ def validate_md(champion_name):
             print(f"❌ Markdown header missing")
             return False
 
-def copy_prompt_to_clipboard(path):
-    with open(path, "r", encoding="utf-8") as f:
-        pyperclip.copy(f.read())
-    print("📋 Prompt copied to clipboard.")
 
 def print_copilot_hint():
     print("💬 Copilot Chat: Paste the prompt and ask for full champion log generation.")

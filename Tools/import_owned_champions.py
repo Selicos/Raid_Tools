@@ -135,17 +135,23 @@ def main():
     owned = read_owned_list()
     if args.from_owned_list:
         # Process all champions in the owned list and trigger intake for each
-        base_dir = Path(__file__).parent.resolve()
-        prompt_dir = base_dir / "input" / "Prompt"
+        repo_root = Path(__file__).parent.parent.resolve()
+        prompt_dir = repo_root / "input" / "Prompt"
+        completed_dir = repo_root / "output" / "completed_prompts"
         prompt_dir.mkdir(parents=True, exist_ok=True)
+        completed_dir.mkdir(parents=True, exist_ok=True)
         for champ, info in owned.items():
+            completed_prompt = completed_dir / f"{champ}_prompt.completed.md"
+            if completed_prompt.exists():
+                print(f"[SKIP] Completed prompt exists for {champ}, skipping intake.")
+                continue
             prompt_file = prompt_dir / f"{champ}_prompt.md"
             if not prompt_file.exists():
                 rarity_val = info.get('rarity', '')
                 rarity_num = [k for k, v in RARITY_MAP.items() if v == rarity_val]
                 rarity_arg = rarity_num[0] if rarity_num else rarity_val
                 print(f"Triggering intake for {champ} (rarity: {rarity_arg}) - prompt file not found.")
-                os.system(f"python src/Champ_Intake.py '{champ}' {rarity_arg}")
+                os.system(f"python ChampionIntake/Champ_Intake.py '{champ}' {rarity_arg}")
         print("Completed intake for all champions in the owned list.")
         return
 
@@ -189,19 +195,25 @@ def main():
             write_owned_list(owned)
             print(f"Added/updated: {name}")
 
-    # After updating, trigger intake for all champions in the owned list that do not have a prompt file
+    # After updating, trigger intake for all champions in the owned list that do not have a completed prompt
     if args.trigger_intake:
-        base_dir = Path(__file__).parent.resolve()
-        prompt_dir = base_dir / "input" / "Prompt"
+        repo_root = Path(__file__).parent.parent.resolve()
+        prompt_dir = repo_root / "input" / "Prompt"
+        completed_dir = repo_root / "output" / "completed_prompts"
         prompt_dir.mkdir(parents=True, exist_ok=True)
+        completed_dir.mkdir(parents=True, exist_ok=True)
         for champ in owned:
+            completed_prompt = completed_dir / f"{champ}_prompt.completed.md"
+            if completed_prompt.exists():
+                print(f"[SKIP] Completed prompt exists for {champ}, skipping intake.")
+                continue
             prompt_file = prompt_dir / f"{champ}_prompt.md"
             if not prompt_file.exists():
                 rarity_val = owned[champ]['rarity']
                 rarity_num = [k for k, v in RARITY_MAP.items() if v == rarity_val]
                 rarity_arg = rarity_num[0] if rarity_num else rarity_val
                 print(f"Triggering intake for {champ} (rarity: {rarity_arg}) - prompt file not found.")
-                os.system(f"python src/Champ_Intake.py '{champ}' {rarity_arg}")
+                os.system(f"python ChampionIntake/Champ_Intake.py '{champ}' {rarity_arg}")
 
 if __name__ == "__main__":
     main()
