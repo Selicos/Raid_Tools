@@ -11,27 +11,32 @@ It supports single or batch processing, integrates with Copilot Chat, auto-valid
 2. (Recommended) Run duplicate cleanup to ensure no case-insensitive duplicate champion or prompt files:
    - `python Tools/cleanup_duplicate_champions.py`
    - Review and merge any duplicates as prompted.
+
 3. Run task for Champion Intake (single champion) OR use the CLI for bulk import:
    - For single champion intake: run the "Run Champion Intake" VS Code task or `python ChampionIntake/Champ_Intake.py`.
    - For bulk import, batch prompt generation, or owned list management, use `python Tools/import_owned_champions.py` (see below).
+   - If a completed prompt already exists in `output/completed_prompts/` for a champion, prompt and JSON generation for that champion is skipped. This prevents unnecessary overwrites and ensures completed prompts are not regenerated.
+   - Prompt files in `input/Prompt/` are always overwritten unless a completed prompt exists.
+   - No clipboard or copy-to-clipboard logic is used. In single champion mode, the prompt file may be opened in the editor; in batch mode, prompt files are not opened.
 
-4. Ask Copilot Chat (Ctrl+Shift+I) to: “Based on the open prompt file, generate the champion JSON for [champion].”
+4. Complete the prompt markdown file in `input/Prompt/`, ensuring all modules (0–20) are completed in the required JSON structure.
 5. Manually validate all champion data (name, skills, multipliers, cooldowns, stat priorities, etc.) using authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades, etc.).
 6. Only proceed if the prompt is 100% complete and accurate.
-7. Copy the output JSON into the champion.json file generated in step 3 (in `output/Champions/`).
-8. Run validation with:
+7. After the prompt is fully completed and validated, move the markdown file to `output/completed_prompts/` as `[champion]_prompt.completed.md`. This file is the authoritative, human-readable record for the champion.
+8. Use the content of the completed prompt markdown to generate a single JSON object, following the template and module keys provided in the prompt (`data/templates/logTemplate.json`), including modules 0–20. Save the JSON to `output/Champions/[champion].json`.
+9. Run validation with:
   ```sh
   python Tools/validate_json.py output/Champions/[champion].json
   ```
   Confirm the script prints the champion name and rarity, and that the JSON is valid.
-9. After successful validation, move the completed prompt markdown to `output/completed_prompts/` (if not already there). Do not remove it; this file is used for review, notes, and as the authoritative source for future updates and all downstream tools.
 10. Never delete files or folders as part of this workflow.
 
 **Prompt File Handling:**
 - Incomplete or in-progress prompts are kept in `input/Prompt/`.
 - Once a prompt is fully validated and used to generate a JSON, the markdown file is moved to `output/completed_prompts/`.
 - Completed prompts in `output/completed_prompts/` are the authoritative, human-readable record for each champion and are used for review, notes, and as the source for JSON generation and all downstream tools (summary, cooldown analysis, etc.).
-- This separation allows easy tracking of which champions are complete and which still need work.
+- If a completed prompt already exists in `output/completed_prompts/` for a champion, prompt and JSON generation for that champion is skipped. This prevents unnecessary overwrites and ensures completed prompts are not regenerated.
+- Prompt files in `input/Prompt/` are always overwritten unless a completed prompt exists.
 
 ---
 
