@@ -1,3 +1,34 @@
+# Champion Prompt Markdown Workflow (Updated Oct 2025)
+
+## How to Process Champion Prompt Markdown Files
+
+1. **Canonical Data Source:**
+   - All champion data must be collected, validated, and stored as JSON using the canonical schema in `ChampionIntake/templates/Prompt_Template.json`.
+   - The JSON file is the single source of truth for all champion information, modules, and analysis.
+
+2. **Markdown Prompt Structure:**
+   - The structure and section headers for human-readable champion prompts are defined in `ChampionIntake/templates/Prompt_Template.md`.
+   - Each section in the markdown template corresponds to a module or field in the JSON template.
+
+3. **Prompt Generation Workflow:**
+   - When generating a completed prompt file for a champion:
+     1. **First, generate or update the champion's JSON file** using the canonical JSON template. Validate all data against preferred sources (Ayumilove > HellHades > others).
+     2. **Next, create the markdown prompt file** by copying the structure of `Prompt_Template.md`.
+     3. **Populate each section** in the markdown file by pulling in the corresponding data from the champion's JSON file, following the bullet points for detail and completeness.
+     4. **Reference the JSON template** in the markdown prompt for clarity and traceability.
+     5. **Save the completed prompt file** in `output/completed_prompts/` or the designated output directory.
+
+4. **Automation Guidance:**
+   - Intake scripts and tools should always:
+     - Use the JSON template for all data collection and validation.
+     - Use the markdown template only for human-readable output, never as a data source.
+     - Ensure that any updates to the JSON schema or markdown template are reflected in both the intake workflow and documentation.
+
+5. **Review and Validation:**
+   - All completed prompt files must be validated for accuracy, completeness, and adherence to the template structure.
+   - The JSON file should always be considered the authoritative record; the markdown prompt is for review and communication.
+
+---
 # Housekeeping & Repo Maintenance Checklist
 
 Use this checklist after any major code, process, or path update to ensure the repo remains clean, consistent, and maintainable.

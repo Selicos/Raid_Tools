@@ -1,6 +1,16 @@
 def generate_and_save_champion_json_from_prompt(champion_name):
+
     """
-    Automate: read prompt, generate JSON (via LLM or parser), save to file.
+    Champion Intake Workflow Instructions (Updated Oct 2025)
+
+    1. The intake script reads the list of owned champions from input/Owned_Champions/Owned_champion_list.md.
+    2. For each champion, it generates a prompt file in input/Prompt/ that walks through the canonical JSON template (ChampionIntake/templates/Prompt_Template.json) section by section.
+        - Each prompt file uses canonical field names and structure, and is formatted for easy LLM or human completion.
+        - The prompt file does NOT contain a completed markdown summary; it is only for data intake.
+    3. After the prompt is filled out (by LLM or human), the resulting JSON is saved to output/Champions/.
+    4. The summary script (not the intake script) reads the JSON and generates the completed prompt markdown file in output/completed_prompts/.
+
+    This ensures all champion data is collected in a modular, canonical JSON format, and all human-readable summaries are generated from validated JSON only.
     """
     prompt_path = os.path.join(prompt_dir, f"{champion_name}_prompt.md")
     if not os.path.exists(prompt_path):
@@ -179,25 +189,92 @@ def create_prompt_md(champion_name):
     path = os.path.join(prompt_dir, target_filename)
 
     # Always overwrite the prompt file
-    template_path = os.path.join(os.path.dirname(__file__), "templates", "Prompt_Template.md")
-    if not os.path.exists(template_path):
-        print(f"❌ Prompt template not found: {template_path}")
+    json_template_path = os.path.join(os.path.dirname(__file__), "templates", "Prompt_Template.json")
+    if not os.path.exists(json_template_path):
+        print(f"❌ JSON template not found: {json_template_path}")
         return None
-    with open(template_path, "r", encoding="utf-8") as f:
-        template = f.read()
+    with open(json_template_path, "r", encoding="utf-8") as f:
+        json_template = json.load(f)
 
-    prompt = f"# Champion Log Generation Prompt for {champion_name}\n\n"
+    prompt = f"# Champion Data Intake Prompt for {champion_name}\n\n"
     prompt += (
-        f"You are to generate a complete champion log for {champion_name} in JSON format, using the following template as structure and guidance. "
-        f"Fill in all modules (0–20) for {champion_name}. Output a single JSON object with each module as a key.\n\n"
-        "---\n"
-        "## Template:\n"
-        f"{template}\n"
-        "---\n"
-        "Instructions:\n"
-        f"- Fill in each section for {champion_name} using the template above.\n"
-        "- Output only the final JSON object.\n\n"
+        f"Please provide the following information for {champion_name}.\n"
+        "Fill in each section below. Use the field names and structure exactly as shown.\n"
+        "Respond in JSON format, matching the template.\n\n"
     )
+
+    def section(title, json_obj):
+        import json as pyjson
+        pretty = pyjson.dumps(json_obj, indent=2, ensure_ascii=False)
+        return f"## {title}\n\n```json\n{pretty}\n```\n"
+
+    # Section 1: Base Stats
+    if "base_stats" in json_template:
+        prompt += section("Base Stats", json_template["base_stats"])
+
+    # Section 2: Overview & Initial Summary
+    if "overview" in json_template:
+        prompt += section("Overview & Initial Summary", json_template["overview"])
+
+    # Section 3: Skill Summary & Rotation Analysis
+    if "skills" in json_template:
+        prompt += section("Skill Summary & Rotation Analysis", json_template["skills"])
+
+    # Section 4: Skill Book Requirements & Effects
+    if "books" in json_template:
+        prompt += section("Skill Book Requirements & Effects", json_template["books"])
+
+    # Section 5: Aura Details
+    if "aura" in json_template:
+        prompt += section("Aura Details", json_template["aura"])
+
+    # Section 6: AI Behavior & Skill Logic
+    if "ai_logic" in json_template:
+        prompt += section("AI Behavior & Skill Logic", json_template["ai_logic"])
+
+    # Section 7: Team Creator Inputs
+    if "team_inputs" in json_template:
+        prompt += section("Team Creator Inputs", json_template["team_inputs"])
+
+    # Section 8: Mastery Proc Simulation
+    if "mastery_proc_simulation" in json_template:
+        prompt += section("Mastery Proc Simulation", json_template["mastery_proc_simulation"])
+
+    # Section 9: Mastery Recommendation
+    if "recommended_mastery" in json_template:
+        prompt += section("Mastery Recommendation", json_template["recommended_mastery"])
+
+    # Section 10: Clan Boss Damage Tracking
+    if "clan_boss_damage" in json_template:
+        prompt += section("Clan Boss Damage Tracking", json_template["clan_boss_damage"])
+
+    # Section 11: Dungeon/Content Breakdown
+    if "content_breakdown" in json_template:
+        prompt += section("Dungeon/Content Breakdown", json_template["content_breakdown"])
+
+    # Section 12: Ally Synergy & Speed Tuning
+    if "synergy_speed" in json_template:
+        prompt += section("Ally Synergy & Speed Tuning", json_template["synergy_speed"])
+
+    # Section 13: Utility & Investment Value
+    if "utility_investment" in json_template:
+        prompt += section("Utility & Investment Value", json_template["utility_investment"])
+
+    # Section 14: Turn Meter Simulation & Gear Tradeoffs
+    if "turn_meter_gear" in json_template:
+        prompt += section("Turn Meter Simulation & Gear Tradeoffs", json_template["turn_meter_gear"])
+
+    # Section 15: Final Summary
+    if "final_summary" in json_template:
+        prompt += section("Final Summary", json_template["final_summary"])
+
+    # Section 16: Synergy Engine (Owned Champions Only)
+    if "synergy_engine" in json_template:
+        prompt += section("Synergy Engine (Owned Champions Only)", json_template["synergy_engine"])
+
+    # Section 17: Community Ratings & Notes
+    if "community" in json_template:
+        prompt += section("Community Ratings & Notes", json_template["community"])
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(prompt)
@@ -300,7 +377,6 @@ def run_smart_batch_from_owned_list(path=owned_list_path, fast_mode=False):
     with open(path, "r", encoding="utf-8") as f:
         lines = [line.strip() for line in f if line.strip().startswith("- ")]
 
-
     champions_to_update = []
     for line in lines:
         parts = [p.strip() for p in line[2:].split("|")]
@@ -311,20 +387,21 @@ def run_smart_batch_from_owned_list(path=owned_list_path, fast_mode=False):
                 rarity = p.split(":",1)[1].strip().capitalize()
         champions_to_update.append((name, rarity))
 
-    print(f"📦 Processing {len(champions_to_update)} champions from owned list...\n")
+    print(f"📦 Generating prompt files for {len(champions_to_update)} champions from owned list...\n")
     success, failed = [], []
 
     for champ, rarity in champions_to_update:
-        print(f"🔄 Processing: {champ} (Rarity: {rarity if rarity else 'Unknown'})")
-        # In batch mode, do not open or copy prompt files
-        if run_champion_intake(champ, rarity=rarity, fast_mode=True, suppress_prompt_actions=True):
+        print(f"🔄 Generating prompt for: {champ} (Rarity: {rarity if rarity else 'Unknown'})")
+        try:
+            create_prompt_md(champ)
             success.append(champ)
-        else:
+        except Exception as e:
+            print(f"❌ Failed to generate prompt for {champ}: {e}")
             failed.append(champ)
         print("-" * 40)
 
-    print("\n📊 Batch Summary")
-    print(f"✅ Updated: {len(success)} champions")
+    print("\n📊 Batch Prompt Generation Summary")
+    print(f"✅ Prompts generated: {len(success)} champions")
     print(f"❌ Failed: {len(failed)} champions")
     if failed:
         print("⚠️ Failed champions:")

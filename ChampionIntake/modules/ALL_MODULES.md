@@ -1,274 +1,358 @@
 
-# Champion Prompt Template (Logical Order)
 
-## 0. Champion Setup
+# Champion Prompt Modules (Canonical Structure)
+
+This file defines the canonical modules for champion prompt generation. Each module corresponds to a section in the markdown prompt template and a key in the JSON template. Use these as the authoritative reference for module file creation and intake script logic.
+
+---
+
+
+## Module 1: Base Stats
+
+**Inputs:**
+- All raw stats (HP, ATK, DEF, SPD, C.Rate, C.DMG, RES, ACC)
+- If mastery damage scales with HP, use updated HP values for simulation
+
+**Output:**
 ```json
-{
-  "champion": "<CHAMPION NAME>",
-  "owned": <true/false>
+"base_stats": {
+  "hp": null,
+  "atk": null,
+  "def": null,
+  "spd": null,
+  "c_rate": null,
+  "c_dmg": null,
+  "res": null,
+  "acc": null
 }
 ```
 
-## 1. Base Stats
-_Provide all raw stats for direct comparison and calculations. If mastery damage scales with HP, use updated HP values for simulation._
+
+## Module 2: Overview & Initial Summary
+
+**Inputs:**
+- Role classification
+- Rarity and archetype
+- Primary damage stat
+- Skill scaling (A1, A2, A3)
+- Recommended mastery (PvE, Clan Boss, PvP)
+- Booking ROI
+- Best gear sets by situation (PvE, PvP, Special)
+- Gear tradeoffs (pros/cons)
+- Focus stats by role
+- Accuracy and resistance requirements for HARD 10 dungeons, Hydra, and Iron Twins
+- Best dungeon use case based on skills, buffs/debuffs, and passive
+
+**Output:**
 ```json
-{
-  "base_stats": {
-    "hp": <NUMBER>,
-    "atk": <NUMBER>,
-    "def": <NUMBER>,
-    "spd": <NUMBER>,
-    "c_rate": <NUMBER>,
-    "c_dmg": <NUMBER>,
-    "res": <NUMBER>,
-    "acc": <NUMBER>
-  }
+"overview": {
+  "role": null,
+  "rarity": null,
+  "archetype": null,
+  "primary_damage_stat": null,
+  "skill_scaling": {"A1": null, "A2": null, "A3": null},
+  "best_mastery": {"pve": null, "clan_boss": null, "pvp": null},
+  "booking_roi": null,
+  "gear_sets": {"pve": [], "pvp": [], "special": []},
+  "gear_tradeoffs": [],
+  "focus_stats": {"all": [], "by_role": {"pvp": [], "clan_boss": [], "hydra": [], "iron_twins": [], "dungeons": [], "solo_farming": []}},
+  "accuracy_resistance": {"arena": null, "clan_boss": null, "hydra": null, "iron_twins": null, "hard_10": null},
+  "best_dungeon_use": null
 }
 ```
 
-## 2. Overview & Initial Summary
-_Capture role, archetype, stat focus, and gear/mastery recommendations. Provide best gear sets and stat priorities for each content type (PvP, Clan Boss, Hydra, Iron Twins, Dungeons, Solo Farming). Specify accuracy/resistance for HARD 10 dungeons, Hydra, and Iron Twins. Indicate best dungeon use case based on skills, buffs/debuffs, and passive._
+
+## Module 3: Skill Summary & Rotation Analysis
+
+**Inputs:**
+- Skill-by-skill breakdown (A1, A2, A3, Passive)
+- Hit count, cooldowns (booked/unbooked), multipliers, skill type
+- Passive skill impact if relevant
+- Compare booked vs unbooked cooldowns and note if booking is required
+- Most efficient damage rotation based on cooldowns and skill types
+- Stable turn order over 6–10 turns
+
+**Output:**
 ```json
-{
-  "role": "<ROLE>",
-  "rarity": "<RARITY>",
-  "archetype": "<ARCHETYPE>",
-  "primary_damage_stat": "<ATK/HP/DEF/Hybrid/Other>",
-  "skill_scaling": {"A1": "<STAT>", "A2": "<STAT>", "A3": "<STAT>"},
-  "best_mastery": {"pve": "<MASTERY>", "clan_boss": "<MASTERY>", "pvp": "<MASTERY>"},
-  "booking_roi": "<VALUE>",
-  "gear_sets": {"pve": ["<SET>"], "pvp": ["<SET>"], "special": ["<SET>"]},
-  "gear_tradeoffs": [{"set": "<SET>", "pros": "<PROS>", "cons": "<CONS>"}],
-  "focus_stats": {"all": ["<STAT>"], "by_role": {"pvp": ["<STAT>"], "clan_boss": ["<STAT>"], "hydra": ["<STAT>"], "iron_twins": ["<STAT>"], "dungeons": ["<STAT>"], "solo_farming": ["<STAT>"]}},
-  "accuracy_resistance": {"arena": "<VALUE>", "clan_boss": "<VALUE>", "hydra": "<VALUE>", "iron_twins": "<VALUE>", "hard_10": "<VALUE>"},
-  "best_dungeon_use": "<VALUE>"
+"skills": {
+  "a1": {"name": null, "type": null, "hit_count": null, "cooldown": {"booked": null, "unbooked": null}, "multiplier": null, "notes": null},
+  "a2": {"name": null, "type": null, "hit_count": null, "cooldown": {"booked": null, "unbooked": null}, "multiplier": null, "notes": null},
+  "a3": {"name": null, "type": null, "hit_count": null, "cooldown": {"booked": null, "unbooked": null}, "multiplier": null, "notes": null},
+  "passive": {"exists": null, "name": null, "effect": null},
+  "booking": {"impact": null, "notes": null},
+  "rotation": {"optimal_cycle": [], "stable_turn_order": []}
 }
 ```
 
-## 3. Skill Summary & Rotation Analysis
-_Detail each skill, multipliers, and optimal skill cycle. For each skill, include both booked and unbooked cooldowns. Note passive impact. Output stable turn order for 6–10 turns._
+
+## Module 4: Skill Book Requirements & Effects
+
+**Inputs:**
+- For each skill, list book investment and its impact
+- Compare booked vs unbooked cooldowns
+- Note if booking is required for optimal use
+
+**Output:**
 ```json
-{
-  "a1": {"name": "<NAME>", "type": "<TYPE>", "hit_count": <N>, "cooldown": {"booked": <N>, "unbooked": <N>}, "multiplier": "<MULT>", "notes": "<NOTES>"},
-  "a2": {"name": "<NAME>", "type": "<TYPE>", "hit_count": <N>, "cooldown": {"booked": <N>, "unbooked": <N>}, "multiplier": "<MULT>", "notes": "<NOTES>"},
-  "a3": {"name": "<NAME>", "type": "<TYPE>", "hit_count": <N>, "cooldown": {"booked": <N>, "unbooked": <N>}, "multiplier": "<MULT>", "notes": "<NOTES>"},
-  "passive": {"exists": <true/false>, "name": "<NAME>", "effect": "<EFFECT>"},
-  "booking": {"impact": "<IMPACT>", "notes": "<NOTES>"},
-  "rotation": {"optimal_cycle": ["<SKILL>"], "stable_turn_order": ["<SKILL>"]}
+"books": {
+  "a1": {"total": null, "effects": [], "cooldown": {"booked": null, "unbooked": null}, "booking_required": null},
+  "a2": {"total": null, "effects": [], "cooldown": {"booked": null, "unbooked": null}, "booking_required": null},
+  "a3": {"total": null, "effects": [], "cooldown": {"booked": null, "unbooked": null}, "booking_required": null},
+  "passive": {"total": null, "effects": [], "booking_required": null},
+  "notes": null
 }
 ```
 
-## 4. Skill Book Requirements & Effects
-_Quantify book investment and its impact. For each skill, include both booked and unbooked cooldowns, and whether booking is required for optimal use. Compare booked vs unbooked cooldowns._
+
+## Module 5: Aura Details
+
+**Inputs:**
+- List aura stat, amount, area, and any special notes
+
+**Output:**
 ```json
-{
-  "books": {
-    "a1": {"total": <N>, "effects": ["<EFFECT>"], "cooldown": {"booked": <N>, "unbooked": <N>}, "booking_required": <true/false>},
-    "a2": {"total": <N>, "effects": ["<EFFECT>"], "cooldown": {"booked": <N>, "unbooked": <N>}, "booking_required": <true/false>},
-    "a3": {"total": <N>, "effects": ["<EFFECT>"], "cooldown": {"booked": <N>, "unbooked": <N>}, "booking_required": <true/false>},
-    "passive": {"total": <N>, "effects": ["<EFFECT>"], "booking_required": <true/false>},
-    "notes": "<NOTES>"
-  }
+"aura": {
+  "stat": null,
+  "amount": null,
+  "area": null,
+  "notes": null
 }
 ```
 
-## 5. Aura Details
+
+## Module 6: AI Behavior & Skill Logic
+
+**Inputs:**
+- Describe AI skill usage priority
+- List any conditional logic for skill use
+
+**Output:**
 ```json
-{
-  "aura": {
-    "stat": "<STAT>",
-    "amount": <NUMBER>,
-    "area": "<AREA>",
-    "notes": "<NOTES>"
-  }
+"ai_logic": {
+  "priority": [],
+  "conditional_logic": []
 }
 ```
 
-## 6. AI Behavior & Skill Logic
+
+## Module 7: Team Creator Inputs
+
+**Inputs:**
+- First turn skill
+- Skill priority
+- Disabled skills
+
+**Output:**
 ```json
-{
-  "ai_logic": {
-    "priority": ["<SKILL>", "<SKILL>", "<SKILL>"],
-    "conditional_logic": ["<IF/THEN>", "<IF/THEN>"]
-  }
+"team_inputs": {
+  "first_turn_skill": null,
+  "skill_priority": [],
+  "disabled_skills": []
 }
 ```
 
-## 7. Team Creator Inputs
-```json
-{
-  "first_turn_skill": "<SKILL>",
-  "skill_priority": ["<SKILL>"],
-  "disabled_skills": ["<SKILL>"]
-}
-```
 
-## 8. Mastery Proc Simulation
-_Simulate mastery procs in four scenarios: (A) Single Boss, (B) Boss + 10 Minions (Spider’s Den HARD), (C) Boss + 5 Minions (2 cycles/10 turns), (D) Boss + 2 High-HP Minions (2 cycles/10 turns). For each, provide expected bonus damage per cycle for each mastery and recommend best mastery per boss type._
+## Module 8: Mastery Proc Simulation
+
+**Inputs:**
+- Simulate mastery damage across four scenarios:
+  - Single Boss
+  - Boss + 10 Minions (Spider’s Den HARD)
+  - Boss + 5 Minions (2 cycles/10 turns)
+  - Boss + 2 High-HP Minions (2 cycles/10 turns)
+- Expected bonus damage per cycle for each mastery
+- Recommend best mastery per boss type
+
+**Output:**
 ```json
-{
+"mastery_proc_simulation": {
   "scenarios": [
-    {"type": "Single Boss", "mastery": "<MASTERY>", "bonus_damage": "<VALUE>", "notes": "<NOTES>"},
-    {"type": "Boss + 10 Minions", "mastery": "<MASTERY>", "bonus_damage": "<VALUE>", "notes": "<NOTES>"},
-    {"type": "Boss + 5 Minions", "mastery": "<MASTERY>", "bonus_damage": "<VALUE>", "notes": "<NOTES>"},
-    {"type": "Boss + 2 High-HP Minions", "mastery": "<MASTERY>", "bonus_damage": "<VALUE>", "notes": "<NOTES>"}
+    {"type": null, "mastery": null, "bonus_damage": null, "notes": null},
+    {"type": null, "mastery": null, "bonus_damage": null, "notes": null},
+    {"type": null, "mastery": null, "bonus_damage": null, "notes": null},
+    {"type": null, "mastery": null, "bonus_damage": null, "notes": null}
   ],
-  "recommended_mastery": {"clan_boss": "<MASTERY>", "arena": "<MASTERY>", "doom_tower": "<MASTERY>"}
+  "recommended_mastery": {"clan_boss": null, "arena": null, "doom_tower": null}
 }
 ```
 
-## 9. Mastery Tree (Visual/JSON)
+
+## Module 9: Mastery Recommendation
+
+**Inputs:**
+- Note only the single best mastery for this champion
+
+**Output:**
 ```json
-{
-  "mastery_tree": {
-    "offense": ["<MASTERY>"],
-    "defense": ["<MASTERY>"],
-    "support": ["<MASTERY>"],
-    "notes": "<NOTES>"
-  }
-}
+"recommended_mastery": null
 ```
 
-## 10. Clan Boss Damage Tracking
-_Track and compare Clan Boss damage. Compare against benchmark attackers (e.g., Ninja, Michelangelo, Geomancer, Wukong) and estimate passive mastery triggers for benchmarks._
+
+## Module 10: Clan Boss Damage Tracking
+
+**Inputs:**
+- Damage per turn
+- Compare against benchmark attackers: Ninja, Michelangelo, Geomancer, Wukong
+- Estimate passive mastery triggers for benchmark champions
+
+**Output:**
 ```json
-{
-  "damage_per_turn": "<VALUE>",
-  "notes": "<NOTES>",
+"clan_boss_damage": {
+  "damage_per_turn": null,
+  "notes": null,
   "benchmark_comparison": [
-    {"champion": "Ninja", "damage_per_turn": "<VALUE>", "passive_triggers": "<ESTIMATE>"},
-    {"champion": "Michelangelo", "damage_per_turn": "<VALUE>", "passive_triggers": "<ESTIMATE>"},
-    {"champion": "Geomancer", "damage_per_turn": "<VALUE>", "passive_triggers": "<ESTIMATE>"},
-    {"champion": "Wukong", "damage_per_turn": "<VALUE>", "passive_triggers": "<ESTIMATE>"}
+    {"champion": "Ninja", "damage_per_turn": null, "passive_triggers": null},
+    {"champion": "Michelangelo", "damage_per_turn": null, "passive_triggers": null},
+    {"champion": "Geomancer", "damage_per_turn": null, "passive_triggers": null},
+    {"champion": "Wukong", "damage_per_turn": null, "passive_triggers": null}
   ]
 }
 ```
 
-## 11. Dungeon/Content Breakdown
-_Rate champion roles and notes for all major content. For each, specify best use case based on skills, buffs/debuffs, and passives._
+
+## Module 11: Dungeon/Content Breakdown
+
+**Inputs:**
+- Rate champion roles and notes for all major content
+- For each, specify best use case based on skills, buffs/debuffs, and passives
+
+**Output:**
 ```json
-{
-  "content_breakdown": {
-    "spider": {"role": "<ROLE>", "notes": "<NOTES>", "best_use_case": "<VALUE>"},
-    "dragon": {"role": "<ROLE>", "notes": "<NOTES>", "best_use_case": "<VALUE>"},
-    "fire_knight": {"role": "<ROLE>", "notes": "<NOTES>", "best_use_case": "<VALUE>"},
-    "ice_golem": {"role": "<ROLE>", "notes": "<NOTES>", "best_use_case": "<VALUE>"},
-    "doom_tower": {"role": "<ROLE>", "notes": "<NOTES>", "best_use_case": "<VALUE>"},
-    "hydra": {"role": "<ROLE>", "notes": "<NOTES>", "best_use_case": "<VALUE>"},
-    "iron_twins": {"role": "<ROLE>", "notes": "<NOTES>", "best_use_case": "<VALUE>"},
-    "sand_devil": {"role": "<ROLE>", "notes": "<NOTES>", "best_use_case": "<VALUE>"}
-  }
+"content_breakdown": {
+  "spider": {"role": null, "notes": null, "best_use_case": null},
+  "dragon": {"role": null, "notes": null, "best_use_case": null},
+  "fire_knight": {"role": null, "notes": null, "best_use_case": null},
+  "ice_golem": {"role": null, "notes": null, "best_use_case": null},
+  "doom_tower": {"role": null, "notes": null, "best_use_case": null},
+  "hydra": {"role": null, "notes": null, "best_use_case": null},
+  "iron_twins": {"role": null, "notes": null, "best_use_case": null},
+  "sand_devil": {"role": null, "notes": null, "best_use_case": null}
 }
 ```
 
-## 12. Ally Synergy & Speed Tuning
-_Recommend allies, buffs, and speed tuning. Prefer owned champions for team sets. Specify speed tuning per boss (max 300). Explicitly evaluate if Relentless/Extra Turn gear impacts mastery choice._
+
+## Module 12: Ally Synergy & Speed Tuning
+
+**Inputs:**
+- Recommended buffs
+- Up to 3 sets of good team member champions, preferring the owned list (leave blank if unknown)
+- Suggest speed tuning per boss (max 300)
+- Gear/stat priorities by role
+- Evaluate if Relentless/Extra Turn gear impacts mastery choice
+
+**Output:**
 ```json
-{
-  "recommended_buffs": ["<BUFF>"],
-  "support_champion_sets": [["<CHAMPION>"]],
-  "recommended_revivors": ["<CHAMPION>"],
-  "speed_tuning": {"clan_boss": "<VALUE>", "arena": "<VALUE>", "hydra": "<VALUE>", "iron_twins": "<VALUE>"},
-  "gear_stat_priorities": {"pve": ["<STAT>"], "pvp": ["<STAT>"]},
-  "relentless_viability": "<VALUE>",
-  "mastery_impact_of_gear": "<VALUE>"
+"synergy_speed": {
+  "recommended_buffs": [],
+  "support_champion_sets": [],
+  "recommended_revivors": [],
+  "speed_tuning": {"clan_boss": null, "arena": null, "hydra": null, "iron_twins": null},
+  "gear_stat_priorities": {"pve": [], "pvp": []},
+  "relentless_viability": null,
+  "mastery_impact_of_gear": null
 }
 ```
 
-## 13. Utility Comparison Champions
-_List similar champions and compare utility. Include benchmark champion list and compare investment value vs benchmarks._
+
+## Module 13: Utility & Investment Value
+
+**Inputs:**
+- Ask for benchmark champion list once
+- Allow updates
+- Rate investment value vs benchmark champions
+
+**Output:**
 ```json
-{
-  "benchmarks_used": ["<CHAMPION>", ...],
-  "utility_comparison": [
-    {"champion": "<CHAMPION>", "role": "<ROLE>", "comparison": "<NOTES>", "investment_value_vs_benchmark": "<VALUE>"}
-  ]
+"utility_investment": {
+  "benchmarks_used": [],
+  "utility_comparison": [],
+  "value": null,
+  "notes": null,
+  "benchmark_comparison": []
 }
 ```
 
-## 14. Investment Value & ROI
-_Assess long-term value and resource efficiency. Rate investment value vs benchmark champions._
+
+## Module 14: Turn Meter Simulation & Gear Tradeoffs
+
+**Inputs:**
+- Simulate turn meter effects and gear set stability
+- Evaluate if relentless/extra turn gear changes mastery choice
+
+**Output:**
 ```json
-{
-  "value": "<VALUE>",
-  "notes": "<NOTES>",
-  "benchmark_comparison": [
-    {"champion": "<CHAMPION>", "investment_value": "<VALUE>"}
-  ]
+"turn_meter_gear": {
+  "extra_turn_effects": null,
+  "gear_set_stability": {"Reflex": null, "Relentless": null},
+  "rotation_desync_risks": {"Reflex": null, "Relentless": null},
+  "mastery_impact_of_gear": null
 }
 ```
 
-## 15. Intelligence Score & Draft Recommendations
+
+## Module 15: Final Summary
+
+**Inputs:**
+- Mastery preference across content types
+- Cooldown impact
+- Best mastery overall
+- Stable turn order
+- Passive impact
+- Gear and stat notes
+- Ally synergy impact
+- Relentless viability
+- Investment value
+
+**Output:**
 ```json
-{
-  "synergy_scores": {"<CHAMPION>": <SCORE>},
-  "draft_logic": {"early_pick": <true/false>, "counter_pick": <true/false>, "avoid": <true/false>, "notes": "<NOTES>"}
+"final_summary": {
+  "mastery_preference": null,
+  "booking_impact": null,
+  "damage_rotation": null,
+  "turn_meter_stability": null,
+  "passive_impact": null,
+  "gear_stat_notes": null,
+  "ally_synergy_impact": null,
+  "draft_value": null,
+  "investment_value": null,
+  "relentless_viability": null,
+  "similar_owned_champions": [],
+  "best_mastery_overall": null,
+  "cooldown_impact": null,
+  "stable_turn_order": []
 }
 ```
 
-## 16. Turn Meter Simulation & Gear Tradeoffs
-_Simulate turn meter effects and gear set stability. Evaluate if relentless/extra turn gear changes mastery choice._
+
+## Module 16: Synergy Engine (Owned Champions Only)
+
+**Inputs:**
+- Provide team setups and similar champion synergy for owned champions only
+
+**Output:**
 ```json
-{
-  "extra_turn_effects": "<VALUE>",
-  "gear_set_stability": {"Reflex": "<VALUE>", "Relentless": "<VALUE>"},
-  "rotation_desync_risks": {"Reflex": "<VALUE>", "Relentless": "<VALUE>"},
-  "mastery_impact_of_gear": "<VALUE>"
+"synergy_engine": {
+  "team_setups": [],
+  "similar_champions": []
 }
 ```
 
-## 17. Color-Coded Ratings
+
+## Module 17: Community Ratings & Notes
+
+**Inputs:**
+- Community ratings and notes from Hellhades, Ayumilove, Reddit, etc.
+
+**Output:**
 ```json
-{
-  "pve": "<RATING>",
-  "clan_boss": "<RATING>",
-  "hydra": "<RATING>",
-  "iron_twins": "<RATING>",
-  "dungeons": "<RATING>",
-  "solo_farming": "<RATING>",
-  "relentless_viability": "<VALUE>"
+"community": {
+  "hellhades": null,
+  "ayumilove": null,
+  "reddit": null,
+  "notes": null
 }
 ```
 
-## 18. Final Summary
-_Recap all key findings and values. Summarize mastery preference, cooldown impact, best mastery, stable turn order, passive impact, gear/stat notes, ally synergy, relentless viability, and investment value._
-```json
-{
-  "mastery_preference": "<VALUE>",
-  "booking_impact": "<VALUE>",
-  "damage_rotation": "<VALUE>",
-  "turn_meter_stability": "<VALUE>",
-  "passive_impact": "<VALUE>",
-  "gear_stat_notes": "<VALUE>",
-  "ally_synergy_impact": "<VALUE>",
-  "draft_value": "<VALUE>",
-  "investment_value": "<VALUE>",
-  "relentless_viability": "<VALUE>",
-  "similar_owned_champions": ["<CHAMPION>"],
-  "best_mastery_overall": "<VALUE>",
-  "cooldown_impact": "<VALUE>",
-  "stable_turn_order": ["<SKILL>"]
-}
-```
+---
 
-## 19. Synergy Engine
-```json
-{
-  "team_setups": [{"name": "<TEAM>", "champions": ["<CHAMPION>"], "strategy": "<NOTES>"}],
-  "similar_champions": [{"champion": "<CHAMPION>", "similarity_reason": "<REASON>"}]
-}
-```
-
-## 20. Community Ratings & Notes
-```json
-{
-  "community": {
-    "hellhades": "<RATING>",
-    "ayumilove": "<RATING>",
-    "reddit": "<RATING>",
-    "notes": "<NOTES>"
-  }
-}
-```
-
-# End of Template
+For the canonical schema and field definitions, see: `ChampionIntake/templates/Prompt_Template.json`
