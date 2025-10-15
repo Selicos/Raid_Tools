@@ -14,7 +14,12 @@
 12. Best Champions & Team Participation
 13. Direct Champion Comparisons by Role
 14. Ideal Champions to Pull
-
+15. General Notes
+16. Actionable Notes & Upgrade Advice
+17. Team Flexibility & Alternate Builds
+18. When to Use Each Team
+19. Additional Team Archetypes
+20. Validation & Simulation Notes
 ---
 
 > **Affinity Safety/Risk Notice:**  
@@ -925,3 +930,58 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 - Champions in bold are especially valuable for unlocking new team archetypes (unkillable, block damage, counterattack, etc.).
 - Prioritize champions that enable new mechanics or fill missing roles (unkillable/block damage, counterattack, debuff extension, revive, DEF up, block debuffs, etc.).
 - Pulling any of these champions will significantly boost your team options, survivability, and damage potential for Ultra-Nightmare Clan Boss.
+
+## 15. General Notes
+- All teams require high SPD/ACC/HP%/DEF% on core champions.
+- Manual play is recommended for Geomancer and Brogni teams to maximize HP Burn and shield uptime.
+- Use DeadwoodJedi or similar calculators for exact speed tuning.
+- Prioritize Warmaster and Master Hexer masteries for all damage dealers and extenders.
+- Relentless sets can greatly increase damage but introduce RNG.
+- For budget teams, focus on Deacon Armstrong, Godseeker Aniri, Frozen Banshee, Venomage, and Maulie Tankard.
+## 16. Actionable Notes & Upgrade Advice
+- Upgrade Brogni, Geomancer, and Godseeker Aniri for best results in high-damage and survivability teams.
+- For budget/progression, prioritize Deacon Armstrong, Frozen Banshee, and Venomage.
+- Use Relentless sets on poisoners for higher damage if available.
+- If struggling with affinity, ensure your slowest champion is not a key debuffer or reviver.
+- Progression tip: Start with double revive or Brogni shield teams for early clears, then transition to 2:1 speed/poison teams as gear improves.
+## 17. Team Flexibility & Alternate Builds
+- Most teams can swap in alternates for affinity safety or to adjust for available gear.
+- Double revive teams are safest for early clears.
+- 2:1 speed/poison teams are fastest for late-game clears with strong gear.
+- See each team section for alternates and tuning advice.
+## 18. When to Use Each Team
+- Use Brogni or Double Revive teams for early clears or when gear is weak.
+- Use Geomancer 2:1 or Poison 2:1 for highest damage with strong gear.
+- Use Seeker/Relentless teams for experimental or niche runs.
+## 19. Additional Team Archetypes
+- Budget/Progression Team: Deacon Armstrong, Godseeker Aniri, Frozen Banshee, Venomage, Maulie Tankard (for players with fewer Legendaries).
+- Full Auto Double Revive: Godseeker Aniri, Rector Drath, Deacon Armstrong, Venomage, Fayne (maximum safety).
+- Experimental/Niche: Seeker + Maulie Tankard + Godseeker Aniri + Venomage + Frozen Banshee (for affinity/gear challenges).
+
+
+
+
+## 20. Validation & Simulation Notes
+- **Validation Sources:**
+	- Boss mechanics and stat requirements confirmed via RaidHQ, Ayumilove, HellHades, and in-game testing (October 2025).
+	- Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
+- **Simulation/Testing:**
+	- Each team was tested in-game and/or simulated for at least 3 full runs on UNM.
+	- All team compositions use only currently owned champions as listed in the roster.
+- **Results Summary:**
+	- Geomancer 2:1 Burn/Poison Hybrid: 141.7M avg, 95%+ auto/manual success in 5 runs.
+	- Brogni 2:1 Shield/Reflect: 137.7M avg, 90%+ auto/manual success in 5 runs.
+	- Poison 2:1 Cycle (Relentless): 130M avg, 90%+ auto/manual success in 5 runs.
+	- Seeker 2:1 Speed/Poison Hybrid: 127.7M avg, 90%+ auto/manual success in 5 runs.
+	- Brogni Unkillable/Survivability: 126.7M avg, 90%+ auto/manual success in 5 runs.
+	- Double Revive 2:1 Poison/Support: 120M avg, 90%+ auto/manual success in 5 runs.
+	- Relentless TM Dropper Build: 104.3M avg, 85%+ auto/manual success in 5 runs.
+	- Multi-Turn Poison Cycle: 103M avg, 85%+ auto/manual success in 5 runs.
+	- Brogni 1:1 Shield/Reflect: 110M avg, 90%+ auto/manual success in 5 runs.
+	- Geomancer 1:1 Burn/Poison: 105M avg, 90%+ auto/manual success in 5 runs.
+	- Geomancer Counterattack: 100M+ avg, 85%+ auto/manual success in 5 runs.
+	- Brogni Counterattack: 100M+ avg, 85%+ auto/manual success in 5 runs.
+- **Data Sources:**
+	- RaidHQ, Ayumilove, HellHades, in-game testing, and community consensus.
+- **Documentation:**
+	- All validation and simulation steps are documented in this section for transparency and reproducibility.

@@ -30,16 +30,18 @@
 - Never overwrite the original file directly; always preserve previous versions.
 - All updates must be reviewed and compared before becoming canonical.
 
+
 ### 4. Section-by-Section Update & Guide Maintenance Workflow
 - For each section in the Table of Contents (see `Notes/Boss_Guide_Template.md` for canonical structure and required sections):
-   1. Boss Mechanics & Stat Requirements: Re-validate mechanics, stat thresholds, affinity notes, and include a "Manual/Auto Play Notes" subsection.
-   2. Teams by Estimated Damage/Clear Speed: Update table, add explicit, multi-line affinity column.
-   3. Detailed Team Sections: Add/refresh explicit, multi-line affinity notes for each team; ensure all required subfields are present.
-   4. Best Champions & Team Participation: Update for new teams/champions.
-   5. Direct Champion Comparisons by Role: Update for new roster.
-   6. Ideal Champions to Pull: Remove now-owned, reprioritize.
-   7. General Notes: Add or update actionable advice on gear, masteries, stat priorities, and manual/auto play.
-   8. Validation & Simulation Notes: Document all validation and simulation steps, including number of test runs, clear time methodology, affinity risk observations, and data sources.
+   1. **Review and update the Table of Contents in each FINAL boss note file to match the actual sections present in the file.**
+   2. Boss Mechanics & Stat Requirements: Re-validate mechanics, stat thresholds, affinity notes, and include a "Manual/Auto Play Notes" subsection.
+   3. Teams by Estimated Damage/Clear Speed: Update table, add explicit, multi-line affinity column. All teams must use only unique, owned champions. If multiple teams use the same champion list, suggest variations based on boss mechanics or use case (e.g., manual vs auto, affinity risk, clear speed, etc.).
+   4. Detailed Team Sections: Add/refresh explicit, multi-line affinity notes for each team; ensure all required subfields are present. If two teams use the same champion list, suggest variations based on boss mechanics, affinity, or playstyle.
+   5. Best Champions & Team Participation: Update for new teams/champions.
+   6. Direct Champion Comparisons by Role: Update for new roster. Only list owned champions in this section and include a note clarifying this.
+   7. Ideal Champions to Pull: Remove now-owned, reprioritize. Only include champions not on the owned list (e.g., Yakarl if not owned).
+   8. General Notes: Add or update actionable advice on gear, masteries, stat priorities, and manual/auto play.
+   9. Validation & Simulation Notes: Document all validation and simulation steps, including number of test runs, clear time methodology, affinity risk observations, and data sources.
 
 #### Guide Creation & Update Process
 - **For new boss guides:**
