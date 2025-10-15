@@ -71,7 +71,7 @@ Every time the owned champion list changes, a new, fully re-analyzed Markdown fi
 - **Large changes:** If a change requires more than 20 lines of edits to a Markdown file, create a new file (e.g., with `_v2.md` suffix) for review and comparison, rather than overwriting the original.
 ## Conventions & Methodology
 - **Markdown-first:** All boss and team guides must be written in Markdown, following the standard template. JSON is for internal data only.
-- **Standard Template:** Every boss/team Markdown file must include:
+- **Standard Template:** Every boss/team Markdown file must include the sections and structure shown in `Notes/Boss_Guide_Template.md`. Use this template as the canonical reference for formatting, required sections, and placeholder data. The template includes:
    1. Table of Contents (with Boss Mechanics & Stat Requirements as section 1)
    2. Boss Mechanics & Stat Requirements (section 1)
    3. Teams by Estimated Damage/Clear Speed (table)
