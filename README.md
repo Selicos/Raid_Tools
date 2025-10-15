@@ -15,6 +15,10 @@
 
 # Raid Tools: Champion Review, Analysis, and Summary System
 
+> **Project-wide, workflow, and safety instructions:** See `.github/ai-assistant-instructions.md` (universal, authoritative).
+> 
+> **Copilot-specific quick reference:** See `.github/copilot-instructions.md` (always defers to the universal file for project-wide guidance).
+
 ## Onboarding & Environment Setup (2025)
 
 **Quick Start:**

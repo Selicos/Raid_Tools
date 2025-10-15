@@ -1,13 +1,161 @@
+# Housekeeping & Repo Maintenance Checklist
+
+Use this checklist after any major code, process, or path update to ensure the repo remains clean, consistent, and maintainable.
+
+## Housekeeping Steps
+
+- [ ] Confirm all VS Code tasks in `.vscode/tasks.json` point to current, existing scripts. Update or remove any tasks for missing or deprecated scripts.
+- [ ] Confirm `.github/ai-assistant-instructions.md` and `.github/copilot-instructions.md` are up to date with the current, advised workflow and guidelines as described in this file and in project chat/documentation.
+- [ ] Run the "Cleanup Test Output Directories" task to ensure no test output directories contain stale or unnecessary files.
+- [ ] Remove orphaned or deprecated scripts and files (not referenced in tasks, tests, or docs)
+- [ ] Remove unused or empty folders (except required workflow folders)
+- [ ] Clean up `requirements.txt` to include only packages actually used in the codebase
+- [ ] Remove any leftover dependencies from previous features (e.g., clipboard/pyperclip)
+- [ ] Run `pytest` and ensure all tests pass
+- [ ] Run the “Organize Completed Prompts” task to tidy prompt files
+- [ ] Confirm `.vscode/tasks.json` only references valid, existing scripts
+- [ ] Remove or update any tasks for deleted/missing scripts
+- [ ] Check for and remove any commented-out legacy code in scripts
+
+# Universal AI Assistant Instructions for Raid Tools Project
+
+> **Note:** This file is the authoritative, universal reference for all AI assistants (including Copilot, ChatGPT, Claude, Gemini, and any LLM-based tools) and all human contributors. For any project-wide, workflow, or safety instructions not explicitly covered in an assistant-specific file (e.g., `.github/copilot-instructions.md`), this file must be used as the source of truth.
+
+---
+
+## Table of Contents
+1. [Project Overview](#project-overview)
+2. [JSON Export Structure and Enforcement](#json-export-structure-and-enforcement)
+3. [Validation and Cross-Source Verification](#validation-and-cross-source-verification)
+4. [Prompt and Workflow Consistency](#prompt-and-workflow-consistency)
+5. [Safety and Non-Destructive Policy](#safety-and-non-destructive-policy)
+6. [Documentation and Test Alignment](#documentation-and-test-alignment)
+7. [Modular, Human-Readable Outputs](#modular-human-readable-outputs)
+8. [AI Model and Tooling Guidance](#ai-model-and-tooling-guidance)
+9. [Error Handling and Troubleshooting](#error-handling-and-troubleshooting)
+10. [Contribution and Review Process](#contribution-and-review-process)
+11. [Example Section for Common Tasks](#example-section-for-common-tasks)
+12. [General Guidelines](#general-guidelines)
+13. [Change Management & Documentation](#change-management--documentation)
+14. [Testing & Validation](#testing--validation)
+15. [AI Model & Prompting](#ai-model--prompting)
+16. [Formatting & Style](#formatting--style)
+17. [Simplicity & Maintainability](#simplicity--maintainability)
+18. [Feedback & Review](#feedback--review)
+19. [Core Technical Standards](#core-technical-standards)
+20. [Project Architecture](#project-architecture)
+21. [Data Flow and Processing](#data-flow-and-processing)
+22. [AI Assistant Behavior Guidelines](#ai-assistant-behavior-guidelines)
+23. [Common Task Patterns](#common-task-patterns)
+24. [Automation and Workflow](#automation-and-workflow)
+25. [Quality Assurance](#quality-assurance)
+26. [Security and Best Practices](#security-and-best-practices)
+27. [Integration Guidelines](#integration-guidelines)
+28. [Troubleshooting Common Issues](#troubleshooting-common-issues)
+29. [Recent Changes & Updates](#recent-changes--updates)
+30. [Future Development Considerations](#future-development-considerations)
+31. [Contact and Contribution](#contact-and-contribution)
+32. [Handling Deprecated Scripts & Data Migrations](#handling-deprecated-scripts--data-migrations)
+
+---
+
+## Project Overview
+Raid Tools is a Python-based project for analyzing Raid Shadow Legends champion data. The project generates JSON champion profiles, performs skill cycle analysis, and creates human-readable markdown summaries. This project follows modern Python practices with comprehensive testing, automation, and documentation standards.
+
+---
+
+## JSON Export Structure and Enforcement
+- All champion JSON exports must be strictly modular and nested.
+- Each module (e.g., `synergy`, `gear`, `summary`) must be a sub-object under a `modules` dictionary.
+- Only the allowed top-level keys (`champion`, `rarity`, `owned`, `modules`) are permitted.
+- Keys like `relentless_viability` and `mastery_impact_of_gear` must only appear within their relevant module object, never at the top level.
+- Reference the template in `ChampionIntake/templates/logTemplate.json` as the canonical structure.
+
+## Validation and Cross-Source Verification
+- All champion data (skills, stats, multipliers, cooldowns, etc.) must be validated against at least two authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades).
+- Document the validation process in prompts, commit messages, or workflow logs.
+
+## Prompt and Workflow Consistency
+- All prompt completions must use the template in `ChampionIntake/templates/Prompt_Template.md`.
+- Completed prompts must be moved to `output/completed_prompts/` and not overwritten unless re-validated.
+- JSONs must be generated only from validated, completed prompts.
+
+## Safety and Non-Destructive Policy
+- AI assistants must never delete files or folders, even if requested by a user.
+- All destructive actions must be confirmed and executed by a human.
+
+## Documentation and Test Alignment
+- Any new feature, script, or workflow change must be accompanied by updates to documentation and tests.
+- README and internal docs must always reflect the current workflow and file structure.
+
+## Modular, Human-Readable Outputs
+- All outputs (JSON, markdown, analysis) must be human-readable, modular, and suitable for both AI and human review.
+- Use clear headers, bullet points, and tables in markdown outputs.
+
+## AI Model and Tooling Guidance
+- Use the most advanced model available for prompt completion, JSON generation, and workflow tasks (e.g., GPT-4o, Claude Sonnet 4).
+- Use models with strong reasoning for documentation review, debugging, and refactoring.
+
+## Error Handling and Troubleshooting
+- Provide actionable error messages and suggest specific fixes.
+- Log and document any recurring issues for future reference.
+
+## Contribution and Review Process
+- All contributions must follow the project’s coding, documentation, and testing standards.
+- Use feature branches and descriptive commit messages.
+- Require code review for all pull requests.
+
+## Example Section for Common Tasks
+### Example: Champion JSON Structure
+```json
+{
+   "champion": "Example Champion",
+   "rarity": "Legendary",
+   "owned": true,
+   "modules": {
+      "synergy": {
+         "ally_support": true
+      },
+      "gear": {
+         "recommended_sets": ["Speed", "Accuracy"]
+      },
+      "summary": {
+         "overview": "A strong support champion for clan boss."
+      }
+   }
+}
+```
+### Example: Validation Log
+```
+Validated skills and multipliers against Raid Shadow Legends Wiki and Ayumilove. Both sources agree on cooldowns and multipliers. No discrepancies found.
+```
+### Example: Markdown Output
+```
+# Example Champion Summary
+
+## Executive Summary
+Example Champion is a top-tier support for Clan Boss, excelling in speed and debuff management.
+
+## Skill Breakdown
+- Skill 1: Attacks all enemies, places decrease defense.
+- Skill 2: Heals all allies, places block debuffs.
+
+## Usage Notes
+- Best in Speed and Accuracy sets.
+- Synergizes with turn meter boosters.
+```
+
+---
+...existing code...
+
 # Safety & File Deletion Policy
 
-**AI assistants (including Copilot, Claude, and any LLM-based tools) must not delete, or run code that would delete, any files or folders from the workspace folder structure.**
+**AI assistants (including Copilot, Claude, ChatGPT, Gemini, and any LLM-based tools) must not delete, or run code that would delete, any files or folders from the workspace folder structure.**
 
-- All file and folder deletion operations (e.g., `os.remove`, `os.rmdir`, `shutil.rmtree`, `Path.unlink`, etc.) are strictly prohibited from being executed by AI assistants.
+- All file and folder deletion operations (e.g., `os.remove`, `os.rmdir`, `shutil.rmtree`, `Path.unlink`, etc.) are strictly prohibited from being executed by any AI assistant.
 - If a user requests file or folder deletion, the AI assistant may suggest or highlight the need for such an action, and provide a clear rationale and warning, but must not execute or run any code that performs deletion.
 - AI assistants may update the text of files as requested by the user, but must not remove files or folders from the workspace structure.
-- This policy applies to all AI assistant operations, regardless of user prompt or context.
-
-# AI Assistant Instructions for Raid Tools Project
+- This policy applies to all AI assistant operations, regardless of user prompt, model, or context.
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
@@ -33,8 +181,17 @@
 21. [Contact and Contribution](#contact-and-contribution)
 22. [Handling Deprecated Scripts & Data Migrations](#handling-deprecated-scripts--data-migrations)
 
+
 ## Project Overview
 Raid Tools is a Python-based project for analyzing Raid Shadow Legends champion data. The project generates JSON champion profiles, performs skill cycle analysis, and creates human-readable markdown summaries. This project follows modern Python practices with comprehensive testing, automation, and documentation standards.
+
+---
+
+## Authority and Usage
+
+This file is the **universal, project-wide reference** for all AI assistants and contributors. If you are using Copilot, ChatGPT, Claude, Gemini, or any other LLM-based tool, and you encounter a situation not explicitly covered in your assistant-specific instructions, you must follow the guidance in this file.
+
+All assistant-specific instructions (e.g., `.github/copilot-instructions.md`) must include a note referencing this file as the fallback and authoritative source for any project-wide, workflow, or safety instructions.
 
 ## Handling Deprecated Scripts & Data Migrations
 
@@ -44,7 +201,7 @@ Raid Tools is a Python-based project for analyzing Raid Shadow Legends champion 
 - Remove or archive legacy files after migration is validated.
 - Update the Index of Bad Ideas & Risky Features if deprecation or migration introduces risk.
 
-**Optimized for:** Claude Sonnet 3.5/4.0, GPT-4, and other advanced coding LLMs with strong Python and project comprehension capabilities.
+**Optimized for:** Claude Sonnet 3.5/4.0, GPT-4, GPT-4o, ChatGPT, Gemini, and any advanced coding LLMs with strong Python and project comprehension capabilities.
 
 ---
 
@@ -91,6 +248,7 @@ If you find any legacy paths or references (such as `Champion Review and Compari
 ---
 
 ## AI Model & Prompting
+- These instructions apply to all AI assistants (Copilot, Claude, ChatGPT, Gemini, etc.) and all human contributors.
 - When generating code or documentation, prefer clarity and simplicity.
 - Avoid overengineering or adding unnecessary complexity.
 - For LLM/AI integration, only proceed if there is a clear, valuable use case.
@@ -294,15 +452,15 @@ Raid_Tools/
 - `make summary` — Generate markdown summaries
 - `make clean` — Clean up build artifacts and cache
 
-### VS Code Integration
-Available tasks via Command Palette or task runner:
+### VS Code & AI Assistant Integration
+Available tasks via Command Palette, task runner, or AI assistant interface:
 - "Run Champion Intake" — Execute data collection workflow
 - "Run Champion Comparison Tracker" — Compare owned champions
 - "Cleanup Duplicate Champions" — Remove duplicate entries
 - "Run Champion Analysis Tool" — Perform skill cycle analysis
 - "Generate Champion Summaries" — Create readable summaries
 
-### Claude/LLM Optimization
+### LLM/AI Optimization
 - **File Reading Strategy:** Read large meaningful chunks rather than small sections
 - **Tool Usage:** Use semantic_search for project understanding, file_search for specific patterns
 - **Code Generation:** Always include full context in code examples

@@ -1,3 +1,21 @@
+# Housekeeping & Repo Maintenance Checklist (Copilot)
+
+Use this checklist after any major code, process, or path update to ensure the repo remains clean, consistent, and maintainable.
+
+## Housekeeping Steps (Copilot)
+
+- [ ] Confirm all VS Code tasks in `.vscode/tasks.json` point to current, existing scripts. Update or remove any tasks for missing or deprecated scripts.
+- [ ] Confirm `.github/ai-assistant-instructions.md` and `.github/copilot-instructions.md` are up to date with the current, advised workflow and guidelines as described in `.github/ai-assistant-instructions.md` and project chat/documentation.
+- [ ] Run the "Cleanup Test Output Directories" task to ensure no test output directories contain stale or unnecessary files.
+- [ ] Remove orphaned or deprecated scripts and files (not referenced in tasks, tests, or docs)
+- [ ] Remove unused or empty folders (except required workflow folders)
+- [ ] Clean up `requirements.txt` to include only packages actually used in the codebase
+- [ ] Remove any leftover dependencies from previous features (e.g., clipboard/pyperclip)
+- [ ] Run `pytest` and ensure all tests pass
+- [ ] Run the “Organize Completed Prompts” task to tidy prompt files
+- [ ] Confirm `.vscode/tasks.json` only references valid, existing scripts
+- [ ] Remove or update any tasks for deleted/missing scripts
+- [ ] Check for and remove any commented-out legacy code in scripts
 # Housekeeping & Repo Maintenance Checklist
 
 Use this checklist after any major code, process, or path update to ensure the repo remains clean, consistent, and maintainable. Update this section as new best practices or requirements emerge.
@@ -32,70 +50,75 @@ Use this checklist after any major code, process, or path update to ensure the r
 
 
 
-# GitHub Copilot Instructions for Raid Tools
 
 
-## Champion JSON Creation & Update Workflow (Authoritative)
+# AI Assistant Instructions for Raid Tools (Universal, Verbose, and Project-Focused)
 
+## Project Goals
 
-This is the only approved workflow for creating or updating champion JSON logs in the Raid Tools project. All previous, parallel, or batch/automated alternatives are deprecated. Follow these steps for every champion update:
+Raid Tools is a modular, maintainable, and human-readable system for managing, analyzing, and documenting Raid Shadow Legends champion data. The project’s primary goals are:
 
-**Prompt File Handling:**
-- All in-progress or incomplete prompts are kept in `input/Prompt/`.
-- Once a prompt is fully validated and used to generate a JSON, the markdown file is moved to `output/completed_prompts/`.
-- Completed prompts in `output/completed_prompts/` serve as the authoritative, human-readable record for each champion and are used for review, notes, and as the source for JSON generation and downstream tools (summary, cooldown analysis, etc.).
-- If a completed prompt already exists in `output/completed_prompts/` for a champion, prompt and JSON generation for that champion is skipped. This prevents unnecessary overwrites and ensures completed prompts are not regenerated.
-- Prompt files in `input/Prompt/` are always overwritten when generating prompts for a champion, unless a completed prompt already exists.
+- To generate, validate, and maintain champion JSONs that are strictly modular and nested, supporting downstream tools and analysis.
+- To ensure all champion data is accurate, up-to-date, and validated against authoritative sources (e.g., Raid Shadow Legends Wiki, Ayumilove, Hellhades).
+- To provide a clear, auditable workflow for prompt completion, JSON generation, and champion analysis.
+- To keep all outputs (JSON, markdown, analysis) human-readable, modular, and suitable for both AI and human review.
+- To maintain a safe, non-destructive environment—no file or folder deletion by AI assistants.
 
-### Steps
+## Workflow Overview
 
+1. **Prompt Generation**
+   - Generate or update a prompt in `input/Prompt/` using the provided template (`prompt_template.md`).
+   - If a completed prompt already exists in `output/completed_prompts/`, skip prompt and JSON generation for that champion to avoid overwriting validated work.
 
-1. **Champion Intake (Prompt Generation)**
-   - If a champion name (and optionally rarity) is provided, generate or overwrite the prompt file in `input/Prompt/` using the template, unless a completed prompt already exists in `output/completed_prompts/` for that champion. If a completed prompt exists, skip prompt and JSON generation for that champion.
-   - In batch mode (no champion provided), process all champions in the owned list, generating/overwriting prompt files in `input/Prompt/` for each, unless a completed prompt already exists for that champion.
-   - Prompt files are always overwritten unless a completed prompt exists.
-   - No clipboard or copy-to-clipboard logic is used. In single champion mode, the prompt file may be opened in the editor; in batch mode, prompt files are not opened.
+2. **Prompt Completion**
+   - Complete all modules in the prompt template, using the required JSON structure and ensuring all fields are filled in a human-readable format.
+   - Validate all champion data (skills, stats, multipliers, cooldowns, etc.) using at least two authoritative sources.
+   - If JSON formatting issues are found, identify and suggest the change, but do not loop through making changes without prompting.
 
-2. **Complete the Prompt**
-   - Fill out the prompt markdown file in `input/Prompt/`, ensuring all modules (0–20) are completed in the required JSON structure.
-   - Do not proceed unless the prompt is 100% complete and accurate.
+3. **Move Completed Prompt**
+   - Once the prompt is fully completed and validated, move it to `output/completed_prompts/`. Overwrite existing files if needed to ensure the latest validated data is available.
 
-3. **Manual Validation of Champion Data**
-   - Manually validate all champion data (name, skills, multipliers, cooldowns, stat priorities, etc.) using authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades, etc.).
-   - Only proceed if all data is correct and up to date. Document the validation step in the workflow log or commit message.
-
-4. **Move Completed Prompt**
-   - After the prompt is fully completed and validated, move the markdown file to `output/completed_prompts/` as `[champion]_prompt.completed.md`. This file is the authoritative, human-readable record for the champion.
-
-5. **Generate the JSON Log**
-   - Use the content of the completed prompt markdown to generate a single JSON object, following the template and module keys provided in the prompt (`data/templates/logTemplate.json`), including modules 0–20.
-    - **All champion JSON exports must use a strict nested/module-based structure:**
-       - The top-level JSON must contain only these keys: `champion`, `rarity`, `owned`, and a `modules` dictionary.
-       - Each module (e.g., gear, synergy, summary, etc.) must be a nested object under a unique property in `modules` (e.g., `modules['1']`, `modules['2']`, etc.).
-       - No other properties are allowed at the top level.
-       - Keys like `relentless_viability` and `mastery_impact_of_gear` must only appear within their logical module object, not at the top level.
-       - The JSON structure must match the validated example (see `output/Champions/Abbess.json` after October 2025) for all future exports.
-   - The JSON must reflect the validated champion name and data exactly.
+4. **JSON Generation**
+   - Generate a single JSON file for the completed prompt, following all current JSON guidelines:
+     - The JSON must be modular and strictly nested, with each module as a sub-object under a `modules` dictionary.
+     - Only the allowed top-level keys (`champion`, `rarity`, `owned`, `modules`) are permitted.
+     - Keys like `relentless_viability` and `mastery_impact_of_gear` must only appear within their relevant module object, not at the top level.
    - Save the JSON to `output/Champions/[champion].json`.
 
-6. **Validation**
-   - Run validation with:
-     ```sh
-     python Tools/validate_json.py output/Champions/[champion].json
-     ```
-   - Confirm the script prints the champion name and rarity, and that the JSON is valid.
-   - Only mark the champion as updated when the JSON passes all validation and matches the authoritative sources.
+5. **Validation**
+   - Run the validation script: `python Tools/validate_json.py output/Champions/[champion].json`
+   - Confirm the JSON is valid, matches authoritative sources, and is suitable for downstream tools.
 
-7. **Repeat for All Champions**
-   - Continue this process for each champion as needed, especially after prompt updates, new information, or game changes. All new modules (14–20) are required for a complete prompt/JSON.
+6. **Repeat for All Champions**
+   - Repeat the above steps for all champions, ensuring all modules in the template are included and up to date.
 
-**Important:**
-- Never generate or overwrite a prompt or JSON for a champion if a completed prompt already exists in `output/completed_prompts/` for that champion. This prevents unnecessary overwrites and ensures completed prompts are not regenerated.
-- Prompt files in `input/Prompt/` are always overwritten unless a completed prompt exists.
-- Never delete files or folders as part of this workflow.
-- Completed prompts in `output/completed_prompts/` are the authoritative, human-readable record for each champion and should always be preserved for review, notes, and as the source for all downstream tools.
-- As of October 2025, all prompts and JSON logs must include modules 0–20 (see expanded template and module files for details).
-- **All champion JSON exports must use a nested/module-based structure. Keys like `relentless_viability` and `mastery_impact_of_gear` must only appear within their logical module object, not at the top level.**
+## Script & Tooling Guidelines
+
+- Use Python 3.9+ and ensure all scripts are formatted with Black and linted with flake8.
+- All public functions/classes must have Google-style docstrings for clarity and maintainability.
+- All new features and bugfixes must include or update pytest tests in the `Tests/` or `root_Tests/` folders.
+- Never delete files or folders as part of any AI assistant workflow.
+- Always use the latest folder and script names; do not reference legacy paths or clipboard logic.
+- Use the Makefile and VS Code tasks for consistent task execution and validation.
+
+## Formatting & Output Standards
+
+- Use clear, numbered sections and headers in all markdown and documentation.
+- Use fenced code blocks for JSON and code examples.
+- Use bullet points and tables for options, requirements, and value explanations.
+- Keep all outputs concise, explicit, and human-readable.
+
+## Data Validation & Safety
+
+- Always cross-check champion data with at least two authoritative sources.
+- Document validation steps in the prompt, commit message, or workflow log.
+- Never run or suggest file/folder deletion code. All destructive actions must be confirmed by a human.
+
+## Model & Assistant Guidance
+
+- These instructions are universal: they apply to any AI assistant (Copilot, Claude, ChatGPT, etc.) and all human contributors.
+- For prompt completion, JSON generation, and workflow tasks, use the most advanced model available (e.g., GPT-4o, Claude Sonnet 4, or equivalent).
+- For documentation review, file analysis, debugging, and large-scale refactoring, use models with strong reasoning and context capabilities.
 
 ---
 
@@ -113,6 +136,76 @@ This is the only approved workflow for creating or updating champion JSON logs i
 ## Handling Deprecated Scripts & Data Migrations
 
 ...existing code...
+# GitHub Copilot Instructions for Raid Tools
+
+> **Note:** This file provides Copilot-specific highlights and quick references. For all project-wide, workflow, or safety instructions not explicitly covered here, Copilot and Copilot Chat must reference `.github/ai-assistant-instructions.md` as the authoritative source.
+
+---
+
+## Table of Contents
+1. [Copilot-Specific Highlights](#copilot-specific-highlights)
+2. [Quick Reference: JSON Export Structure](#quick-reference-json-export-structure)
+3. [Quick Reference: Prompt and Workflow](#quick-reference-prompt-and-workflow)
+4. [General Guidelines (Copilot)](#general-guidelines-copilot)
+5. [Contribution and Review Process (Copilot)](#contribution-and-review-process-copilot)
+6. [Example Section for Common Tasks](#example-section-for-common-tasks)
+7. [Further Project Guidance](#further-project-guidance)
+
+---
+
+## Copilot-Specific Highlights
+- Use Python 3.9+ with type hints and f-strings
+- Format code with Black, lint with flake8
+- All public functions/classes must have Google-style docstrings
+- All new features and bugfixes must include or update pytest tests
+- Never delete files or folders as part of any Copilot workflow (see Safety in `.github/ai-assistant-instructions.md`)
+- Always use the latest folder and script names; do not reference legacy paths or clipboard logic
+- For any project-wide, workflow, or safety instructions, defer to `.github/ai-assistant-instructions.md`
+
+---
+
+## Quick Reference: JSON Export Structure
+- All champion JSON exports must use a nested/module-based structure.
+- Each module (e.g., `synergy`, `gear`, `summary`) must be a sub-object under a `modules` dictionary.
+- Only the allowed top-level keys (`champion`, `rarity`, `owned`, `modules`) are permitted.
+- Keys like `relentless_viability` and `mastery_impact_of_gear` must only appear within their relevant module object, not at the top level.
+- Reference the template in `ChampionIntake/templates/logTemplate.json` as the canonical structure.
+- For full details, see [JSON Export Structure and Enforcement](./ai-assistant-instructions.md#json-export-structure-and-enforcement)
+
+---
+
+## Quick Reference: Prompt and Workflow
+- All prompt completions must use the template in `ChampionIntake/templates/Prompt_Template.md`.
+- Completed prompts must be moved to `output/completed_prompts/` and not overwritten unless re-validated.
+- JSONs must be generated only from validated, completed prompts.
+- For full workflow, see [Prompt and Workflow Consistency](./ai-assistant-instructions.md#prompt-and-workflow-consistency)
+
+---
+
+## General Guidelines (Copilot)
+- See [General Guidelines](./ai-assistant-instructions.md#general-guidelines) for universal project standards
+- Use concise, relevant code snippets; continue to work on larger tasks up to 4 cycles without asking for confirmation if needed
+- Stay positive but realistic; suggest better solutions when possible
+- Directly edit files, prefer line-by-line changes for clarity
+- For all other standards, see `.github/ai-assistant-instructions.md`
+
+---
+
+## Contribution and Review Process (Copilot)
+- All contributions must follow the project’s coding, documentation, and testing standards (see [Contribution and Review Process](./ai-assistant-instructions.md#contribution-and-review-process))
+- Use feature branches and descriptive commit messages
+- Require code review for all pull requests
+
+---
+
+## Example Section for Common Tasks
+See [Example Section for Common Tasks](./ai-assistant-instructions.md#example-section-for-common-tasks) for JSON, validation, and markdown output examples.
+
+---
+
+## Further Project Guidance
+For all other project-wide, workflow, or safety instructions, always defer to `.github/ai-assistant-instructions.md` as the master reference.
+If in doubt, follow the universal instructions.
 
 
 
@@ -169,10 +262,13 @@ For features, describe the use case, requirements, and acceptance criteria.
 
 # GitHub Copilot Instructions for Raid Tools
 
+> **Note:** For any project-wide, workflow, or safety instructions not explicitly covered in this file, Copilot and Copilot Chat must reference `.github/ai-assistant-instructions.md` as the authoritative source.
+
 ## Purpose
 This file provides clear, project-specific instructions for GitHub Copilot and Copilot Chat to ensure high-quality, consistent, and maintainable code contributions to the Raid Tools project.
 
-**Note for GitHub Copilot**: This file is the authoritative reference for GitHub Copilot and Copilot Chat. When working in VS Code, prioritize these instructions over other similar files in the repository.
+
+**Note for GitHub Copilot**: This file is the authoritative reference for Copilot-specific behavior. For all project-wide, workflow, or safety instructions not directly covered here, Copilot and Copilot Chat must reference `.github/ai-assistant-instructions.md`.
 
 ## AI Model Recommendations
 - **GPT-4.1**: Use for script development, code generation, project architecture, feature implementation, and general programming tasks
@@ -180,7 +276,7 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 
 ---
 
-## General Guidelines
+## General Guidelines (Copilot-Specific)
 - **Language:** Python 3.9+ (use type hints and f-strings)
 - **Formatting:** Use Black for code formatting and flake8 for linting
 - **Testing:** Use pytest for all tests; place tests in the `Tests/` and `root_Tests/` folders
@@ -199,7 +295,7 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 
 ---
 
-## Change Management & Documentation
+## Change Management & Documentation (Copilot-Specific)
 - Use line-by-line edits for clarity and easier review.
 - Commit messages must be clear, imperative, and reference the logical unit of work (see project tracking file for examples).
 - If a change affects documentation, update the relevant README or tracking file in the same commit.
@@ -210,14 +306,14 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 
 ---
 
-## Testing & Validation
+## Testing & Validation (Copilot-Specific)
 - All new features and bugfixes must include or update pytest tests.
 - Run `pytest` before committing.
 - If a change affects VS Code tasks or Makefile, validate with `test_tasks_json_and_scripts.py`.
 
 ---
 
-## AI Model & Prompting
+## AI Model & Prompting (Copilot-Specific)
 - When generating code or documentation, prefer clarity and simplicity.
 - Avoid overengineering or adding unnecessary complexity.
 - For LLM/AI integration, only proceed if there is a clear, valuable use case.
@@ -225,24 +321,24 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 
 ---
 
-## Formatting & Style
+## Formatting & Style (Copilot-Specific)
 - Use Black and flake8 for all Python code. Run formatting and linting before committing.
 - All markdown files should use consistent header levels and section numbering.
 
 ---
 
-## Simplicity & Maintainability
+## Simplicity & Maintainability (Copilot-Specific)
 - Favor simple, maintainable solutions. Avoid duplicating functionality already provided by external tools or libraries.
 
 ---
 
-## Feedback & Review
+## Feedback & Review (Copilot-Specific)
 - When reviewing or updating planning files, consolidate repeated feedback and clarify section purposes.
 - If a change affects documentation, update all relevant files and cross-reference related sections.
 
 ---
 
-## Project Structure
+## Project Structure (Copilot-Specific)
 - `src/` — All main scripts and modules
 - `data/` — Champion JSONs, templates, and input files
 - `output/` — Markdown summaries, analysis, and logs
@@ -251,7 +347,7 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 - `.vscode/` — VS Code tasks and settings
 - `Makefile` — Automated tasks for setup, testing, formatting, and running tools
 
-### Key Scripts and Files
+### Key Scripts and Files (Copilot-Specific)
 - **import_owned_champions.py** — Bulk import and update of owned champions
 - **Champ_Intake.py** — Main champion intake and prompt generation
 - **championAnalysis.py** — Skill cycle simulation and analysis
@@ -261,9 +357,9 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 
 ---
 
-## Copilot Chat Prompts & Example Usage
+## Copilot Chat Prompts & Example Usage (Copilot-Specific)
 
-### Model Selection Guidelines
+### Model Selection Guidelines (Copilot-Specific)
 - **Use GPT-4o for:**
   - Script development and code generation
   - Feature implementation and new functionality
@@ -279,7 +375,7 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
   - Code refactoring and cleanup
   - Comprehensive project evaluation
 
-### Task-Specific Guidance
+### Task-Specific Guidance (Copilot-Specific)
 - When asked to generate a new champion JSON, use the template in `data/templates/logTemplate.json`. Ignore examples or presets and focus on the template structure.
   - Confirm the champion skills and stats are correct before finalizing any outputs.
   - Reference the Raid Shadow Legends Site then check against Ayumilove and Hellhades for accuracy. If something contradicts, use whichever sites agree. 
@@ -289,7 +385,7 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 
 ---
 
-## Best Practices
+## Best Practices (Copilot-Specific)
 - Keep functions small and focused; prefer composition over inheritance
 - Use pathlib for file paths when possible
 - Use environment variables for secrets/config (see `.env.example`)
@@ -301,7 +397,7 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 
 ---
 
-## Data Privacy & Security
+## Data Privacy & Security (Copilot-Specific)
 - Never commit secrets or credentials to the repository.
 - Use environment variables for all sensitive config (see `.env.example`).
 - Review third-party dependencies for security risks.
@@ -309,26 +405,26 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 
 ---
 
-## LLM/AI Integration (Planned)
+## LLM/AI Integration (Copilot-Specific)
 - If integrating LLMs, use modular design and keep API keys/secrets out of source code
 - Place LLM-related scripts in a dedicated folder (e.g., `LLMTools/`)
 - Document all prompts and expected outputs
 
 ---
 
-## Issue & Feature Request Templates
+## Issue & Feature Request Templates (Copilot-Specific)
 - Use the provided markdown templates for bug reports and feature requests (see `.github/ISSUE_TEMPLATE/`).
 - Include steps to reproduce, expected/actual behavior, and relevant logs for bugs.
 - For features, describe the use case, requirements, and acceptance criteria.
 
 ---
 
-## Attribution & License
+## Attribution & License (Copilot-Specific)
 - All contributions must comply with the CC BY-NC 4.0 license
 - Attribute original authors in significant new files or modules
 
 ---
 
-## Recent Changes & Updates
+## Recent Changes & Updates (Copilot-Specific)
 - All documentation, script references, and folder structures are up to date as of October 2025.
 - The project tracking file is the authoritative source for priorities, risks, and roadmap.

@@ -1,4 +1,5 @@
 
+> **For all project-wide, workflow, and safety instructions, see `.github/ai-assistant-instructions.md` (universal, authoritative).**
 
 
 It supports single or batch processing, integrates with Copilot Chat, auto-validates and timestamps each champion entry, and provides skill cycle analysis and summary reports.
