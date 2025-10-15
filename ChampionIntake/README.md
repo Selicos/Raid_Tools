@@ -76,6 +76,20 @@ Champion Review and Comparison/
 
 This module handles champion data intake, prompt generation, and review workflows for Raid Tools.
 
+## Module System (0–20)
+
+Champion prompts and JSON logs now use modules 0–20:
+- 0–13: Core champion review, skills, synergy, investment, etc.
+- 14: Base stats (HP, ATK, DEF, SPD, C.RATE, C.DMG, RES, ACC)
+- 15: Skill book requirements and effects
+- 16: Aura details
+- 17: AI behavior and skill logic
+- 18: Dungeon/content-specific breakdowns
+- 19: Mastery tree recommendations (visual/JSON)
+- 20: Community ratings/notes
+
+All prompt markdowns and JSON logs must include these modules for full compatibility.
+
 
 ## Key Scripts
 

@@ -283,12 +283,13 @@ All completed prompt markdown files (e.g., `[champion]_prompt.completed.md`) **m
 ## Champion JSON Creation & Update Workflow (Authoritative)
 
 1. Locate the prompt file for the champion in `input/Prompt/`.
-2. Complete the prompt markdown, ensuring all modules (0–13) are filled out in the required JSON structure.
+2. Complete the prompt markdown, ensuring all modules (0–20) are filled out in the required JSON structure.
 3. Manually validate all champion data (name, skills, multipliers, cooldowns, stat priorities, etc.) using authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades, etc.).
 4. Only proceed if the prompt is 100% complete and accurate.
-5. Generate the JSON using the completed prompt markdown, following the template in `data/templates/logTemplate.json`.
+5. Generate the JSON using the completed prompt markdown, following the template in `data/templates/logTemplate.json` (now including modules 0–20).
 6. Overwrite or update the champion JSON in `output/Champions/` only after validation.
-7. Run validation with:
+7. The prompt and JSON must include all new modules (14–20): base stats, books, aura, AI logic, dungeon breakdown, mastery tree, and community ratings.
+8. Run validation with:
   ```sh
   python Tools/validate_json.py output/Champions/[champion].json
   ```

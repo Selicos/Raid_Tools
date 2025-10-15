@@ -5,11 +5,11 @@
 - Abbess | Rarity: Legendary | Last Updated: 2025-10-14
 - Alure | Rarity: Epic | Last Updated: 2025-10-14
 - Alice the Wanderer | Rarity: Legendary | Last Updated: 2025-10-14
-- Aniri Godseeker | Rarity: Epic | Last Updated: 2025-10-14
+- Godseeker Aniri | Rarity: Epic | Last Updated: 2025-10-14
 - Apothecary | Rarity: Rare | Last Updated: 2025-10-14
 - Archmage Hellmut | Rarity: Epic | Last Updated: 2025-10-14
 - Arbiter | Rarity: Legendary | Last Updated: 2025-10-14
-- Artak | Rarity: Legendary | Last Updated: 2025-10-14
+- Artak | Last Updated: 2025-10-14
 - Aox the Rememberer | Rarity: Epic | Last Updated: 2025-10-14
 - Astralon | Rarity: Legendary | Last Updated: 2025-10-14
 - Bad-el-Kazar | Rarity: Legendary | Last Updated: 2025-10-14
