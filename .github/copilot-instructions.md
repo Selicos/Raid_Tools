@@ -188,7 +188,7 @@ This file provides clear, project-specific instructions for GitHub Copilot and C
 - **Positive but Realistic:** Stay positive but when there is a better solution, tool, implementation, or approach, suggest it. Note when something is not possible or not recommended.
 - **Accessing external sites:** Always allow access to Raid Shadow Legends Wiki, Ayumilove, Hellhades, and other relevant sites for champion data verification and research.
 - **File edits:** Directly edit files, but prefer line by line changes instead of text blocks to better compare versions/commits, and allow smaller overall changes in each save/commit/etc.
-- **Always use the latest folder and script names; do not reference legacy paths (e.g., `Champion Review and Comparison/`).**
+- **Always use the latest folder and script names; do not reference legacy paths or clipboard logic.**
 
 ---
 

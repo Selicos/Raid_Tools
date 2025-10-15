@@ -325,26 +325,22 @@ All completed prompt markdown files (e.g., `[champion]_prompt.completed.md`) **m
 
 ---
 
+
 ## VS Code Task Runner
 
 You can run all core operations using the VS Code UI:
 - Open the Command Palette (`Ctrl+Shift+P`)
 - Select “Tasks: Run Task”
-- Choose any of the following tasks:
-  - Run Champion Intake
-  - Bulk Import Owned Champions
-  - Batch Prompt Generation (All Owned)
-  - Run Champion Comparison Tracker
-  - Cleanup Duplicate Champions
-  - Run Champion Analysis Tool
-  - Generate Champion Summaries
-  - Setup Environment
-  - Validate Champion JSON
-  - Test Environment Setup and Requirements
+- Choose any of the following tasks (all tasks are tightly aligned with the current scripts and workflow):
+  - Run Champion Intake: `ChampionIntake/Champ_Intake.py` (single champion prompt/JSON)
+  - Run Champion Turn Analysis: `ChampionTurnAnalysis/ChampionTurnAnalysis.py` (cooldown analysis)
+  - Generate Champion Summaries: `ChampionSummary/generateChampionSummaries.py` (summary markdowns)
+  - Setup Environment: `Tools/Setup_Environment.py` (environment and config)
+  - Validate Champion JSON: `Tools/validate_json.py` (JSON validation)
   - First Run: Setup & Activation Instructions
-  - Organize Completed Prompts
+  - Organize Completed Prompts: Moves completed prompt files to `output/completed_prompts/`
 
-This ensures all completed markdowns and outputs are consistently organized and all workflows are accessible from the UI.
+This ensures all completed markdowns and outputs are consistently organized and all workflows are accessible from the UI. Periodically validate that all VS Code tasks match the actual scripts in the repo.
 
 ---
 
@@ -381,18 +377,27 @@ This ensures all completed markdowns and outputs are consistently organized and 
 
 ---
 
+
 ## Workflow: How the Tools Are Linked
 
 1. **Champion Intake & Review**
-   - Run `champIntake.py` to add a new champion and generate a prompt.
-   - Use Copilot Chat (optional) to help fill out the champion JSON.
-   - Update and review champion data as needed.
+  - Run `ChampionIntake/Champ_Intake.py` to add a new champion and generate a prompt.
+  - Use Copilot Chat (optional) to help fill out the champion JSON.
+  - Update and review champion data as needed.
 
 2. **Cooldown Analysis**
-   - Run `championAnalysis.py` in `ChampionAnalysisTool/` to simulate skill cycles and generate detailed markdown reports in `cooldown_analysis/`.
+  - Run `ChampionTurnAnalysis/ChampionTurnAnalysis.py` to simulate skill cycles and generate detailed markdown reports in `input/cooldown_analysis/`.
 
 3. **Summary Generation**
-   - Run `generateChampionSummaries.py` in `ChampionSummary/` to generate readable summaries for each champion, including skill order and expected damage.
+  - Run `ChampionSummary/generateChampionSummaries.py` to generate readable summaries for each champion, including skill order and expected damage.
+
+---
+
+## Recent Changes & Updates
+- All documentation, script references, and folder structures are up to date as of October 2025.
+- Batch intake now always processes all owned champions, regardless of last updated date.
+- All scripts, tasks, and documentation are now tightly aligned and validated. Legacy scripts, clipboard logic, and deprecated workflows have been removed.
+- The project tracking file is the authoritative source for priorities, risks, and roadmap.
 
 
 
