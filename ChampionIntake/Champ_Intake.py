@@ -304,31 +304,18 @@ def run_smart_batch_from_owned_list(path=owned_list_path, fast_mode=False):
     with open(path, "r", encoding="utf-8") as f:
         lines = [line.strip() for line in f if line.strip().startswith("- ")]
 
-    threshold = datetime.today() - timedelta(days=30)
+
     champions_to_update = []
-
-
     for line in lines:
         parts = [p.strip() for p in line[2:].split("|")]
         name = parts[0]
         rarity = None
-        date_str = None
         for p in parts[1:]:
             if p.lower().startswith("rarity:"):
                 rarity = p.split(":",1)[1].strip().capitalize()
-            if "Last Updated:" in p:
-                try:
-                    date_str = p.split("Last Updated:")[1].strip()
-                    last_updated = datetime.strptime(date_str, "%Y-%m-%d")
-                    if last_updated < threshold:
-                        champions_to_update.append((name, rarity))
-                except Exception as e:
-                    print(f"⚠️ Could not parse date for {name}: {e}")
-                    champions_to_update.append((name, rarity))
-        if date_str is None:
-            champions_to_update.append((name, rarity))
+        champions_to_update.append((name, rarity))
 
-    print(f"📦 Updating {len(champions_to_update)} champions...\n")
+    print(f"📦 Processing {len(champions_to_update)} champions from owned list...\n")
     success, failed = [], []
 
     for champ, rarity in champions_to_update:
