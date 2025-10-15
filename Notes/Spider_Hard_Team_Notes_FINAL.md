@@ -1,8 +1,8 @@
 # Hard Spider Teams (Owned Champions Only)
 
 ## Table of Contents
-1. Teams by Estimated Clear Speed & Consistency
-2. Key Boss Mechanics & Stat Requirements
+1. Boss Mechanics & Stat Requirements
+2. Teams by Estimated Clear Speed & Consistency
 3. High-Damage Nuker Teams
 4. Turn Meter Control & Crowd Control Teams
 5. Poison Explosion & High Poison Damage Teams
@@ -14,20 +14,42 @@
 
 ---
 
+## Boss Mechanics & Stat Requirements
+- **Boss: Hard Spider (Spider’s Den, Hard Mode)**
+- **Affinity:** Hard Spider can be Force, Magic, or Spirit affinity. Affinity impacts TM control, nukers, and survivability.
+  - **Force:** Risk for Magic nukers (e.g., Coldheart, Royal Guard).
+  - **Magic:** Risk for Force champions; can reduce damage or survivability.
+  - **Spirit:** Risk for key supports if weak affinity; Spirit spiderlings can inflict more poisons.
+- **Key Mechanics:**
+  - Immune to HP Burn (Hard mode only)
+  - Summons spiderlings that can inflict Poison and HP Burn
+  - High resistance and defense; requires high accuracy for debuffs
+  - TM reduction and crowd control are highly effective
+  - Cleanses debuffs periodically
+- **Required Stats:**
+  - Accuracy: 350–400+ (for debuffs/TM control)
+  - Speed: 220–250+ (for consistent TM cycling)
+  - HP%/DEF%: As high as possible for survivability
+  - Cleanse/Heal: Strongly recommended
+- **Special Notes:**
+  - Manual play is recommended for TM control and poison explosion teams to maximize burst and survivability
+
+---
+
 ## Teams by Estimated Clear Speed & Consistency
 
-| Team Name                        | Simulated Clear Time | Core Champions (Sample)                        | Key Mechanics & Notes                                      |
-|----------------------------------|:-------------------:|-----------------------------------------------|------------------------------------------------------------|
-| Triple Coldheart Speed Nuke      | 1:00                | Brogni, Tagoar, Coldheart, Coldheart, Coldheart       | Triple MAX HP, TM lock, shield, cleanse                    |
-| Double Coldheart TM Control      | 1:10                | Brogni, Godseeker Aniri, Coldheart, Coldheart, Tagoar | Double MAX HP, TM lock, shield, revive, cleanse            |
-| Double Coldheart + Royal Guard   | 1:05                | Brogni, Tagoar, Coldheart, Coldheart, Royal Guard     | Triple MAX HP, TM lock, shield, cleanse                    |
-| Double Coldheart + Poison Hybrid | 1:15                | Brogni, Tagoar, Coldheart, Coldheart, Venomage/Fayne  | Double MAX HP, TM lock, poison backup, shield, cleanse     |
-| Coldheart TM Control             | 1:20                | Brogni, Godseeker Aniri, Coldheart, Tagoar, Venomage  | TM control, shield, cleanse, poison                        |
-| Taurus Poison Explosion          | 1:40                | Taurus, Fayne, Narma the Returned, Tagoar, Brogni     | Poison burst, debuff extension, cleanse, shield            |
-| Full Poison Layering             | 2:00                | Venomage, Fayne, Taurus, Narma, Tagoar                | Poison uptime, burst, sustain                              |
-| Poison/Support Hybrid            | 2:10                | Venomage, Fayne, Taurus, Brogni, Godseeker Aniri      | Poison burst, sustain, revive                              |
-| Royal Guard Double Nuker         | 1:45                | Brogni, Godseeker Aniri, Royal Guard, Coldheart, Tagoar | Double MAX HP, TM control, shield, cleanse                 |
-| Full Sustain/Recovery            | 2:45                | Brogni, Godseeker Aniri, Tagoar, Rector Drath, Coldheart | Multiple revives, shields, cleanse, TM control             |
+| Team Name                        | Simulated Clear Time | Core Champions (Sample)                        | Key Mechanics & Notes                                      | Affinity Safety/Risk |
+|----------------------------------|:-------------------:|-----------------------------------------------|------------------------------------------------------------|---------------------|
+| Triple Coldheart Speed Nuke      | 1:00                | Brogni, Tagoar, Coldheart, Coldheart, Coldheart       | Triple MAX HP, TM lock, shield, cleanse                    | **Risk vs. Force (Coldheart weak affinity); Safe vs. Magic/Spirit** |
+| Double Coldheart TM Control      | 1:10                | Brogni, Godseeker Aniri, Coldheart, Coldheart, Tagoar | Double MAX HP, TM lock, shield, revive, cleanse            | **Risk vs. Force (Coldheart weak affinity); Safe vs. Magic/Spirit** |
+| Double Coldheart + Royal Guard   | 1:05                | Brogni, Tagoar, Coldheart, Coldheart, Royal Guard     | Triple MAX HP, TM lock, shield, cleanse                    | **Risk vs. Force (Coldheart weak affinity); Risk vs. Magic (Royal Guard weak affinity); Safe vs. Spirit** |
+| Double Coldheart + Poison Hybrid | 1:15                | Brogni, Tagoar, Coldheart, Coldheart, Venomage/Fayne  | Double MAX HP, TM lock, poison backup, shield, cleanse     | **Risk vs. Force (Coldheart weak affinity); Safe vs. Magic/Spirit** |
+| Coldheart TM Control             | 1:20                | Brogni, Godseeker Aniri, Coldheart, Tagoar, Venomage  | TM control, shield, cleanse, poison                        | **Risk vs. Force (Coldheart weak affinity); Safe vs. Magic/Spirit** |
+| Taurus Poison Explosion          | 1:40                | Taurus, Fayne, Narma the Returned, Tagoar, Brogni     | Poison burst, debuff extension, cleanse, shield            | **Safe for all affinities; minor risk if Taurus is weak affinity** |
+| Full Poison Layering             | 2:00                | Venomage, Fayne, Taurus, Narma, Tagoar                | Poison uptime, burst, sustain                              | **Safe for all affinities; minor risk if Taurus is weak affinity** |
+| Poison/Support Hybrid            | 2:10                | Venomage, Fayne, Taurus, Brogni, Godseeker Aniri      | Poison burst, sustain, revive                              | **Safe for all affinities; minor risk if Taurus is weak affinity** |
+| Royal Guard Double Nuker         | 1:45                | Brogni, Godseeker Aniri, Royal Guard, Coldheart, Tagoar | Double MAX HP, TM control, shield, cleanse                 | **Risk vs. Magic (Royal Guard weak affinity); Risk vs. Force (Coldheart weak affinity); Safe vs. Spirit** |
+| Full Sustain/Recovery            | 2:45                | Brogni, Godseeker Aniri, Tagoar, Rector Drath, Coldheart | Multiple revives, shields, cleanse, TM control             | **Safe for all affinities; minor risk if Coldheart is weak affinity** |
 
 ---
 
@@ -62,6 +84,11 @@
 
 **Weaknesses:** Very gear/stat intensive, little revive insurance, vulnerable if a Coldheart is lost
 
+**Affinity Safety/Risk:**
+- Force: **Risk** – Coldheart is weak affinity; reduced damage and higher chance of skill failure.
+- Magic: Safe for all roles.
+- Spirit: Safe for all roles.
+
 ---
 
 ### Team: Double Coldheart TM Control
@@ -75,6 +102,11 @@
 
 **Weaknesses:** Needs high accuracy and speed on both Coldhearts; less flexibility if one dies
 
+**Affinity Safety/Risk:**
+- Force: **Risk** – Both Coldhearts are weak affinity; TM control and damage can fail.
+- Magic: Safe for all roles.
+- Spirit: Safe for all roles.
+
 ---
 
 ### Team: Double Coldheart + Royal Guard
@@ -87,6 +119,11 @@
 **Strengths:** Triple MAX HP nukes, strong TM control, shield and cleanse
 
 **Weaknesses:** Needs high accuracy and speed on all nukers, less revive/extension
+
+**Affinity Safety/Risk:**
+- Force: **Risk** – Coldhearts are weak affinity; Royal Guard is neutral.
+- Magic: **Risk** – Royal Guard is weak affinity; Coldhearts are safe.
+- Spirit: Safe for all roles.
 
 ---
 

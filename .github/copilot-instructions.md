@@ -1,3 +1,6 @@
+### 7. Commit Message Formatting
+- Always use single quotes (') in commit messages to avoid breaking git commit commands that use double quotes ("").
+- Example: git commit -m 'Add affinity notes to Spider teams and update summary table'
 # Copilot & AI Agent Instructions for Raid Tools (Unified, Markdown-First, Oct 2025)
 
 > This file is the authoritative, codebase-specific guide for all AI coding agents. For universal project rules, see `.github/ai-assistant-instructions.md` (fallback for any ambiguity).
