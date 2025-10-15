@@ -1,46 +1,157 @@
 # Feature Expansion Breakdown for Raid Tools
 
-## Champion JSON Creation & Update Workflow (Authoritative)
 
-1. **Champion Intake (Prompt Generation)**
-	- If a champion name (and optionally rarity) is provided, generate or overwrite the prompt file in `input/Prompt/` using the template, unless a completed prompt already exists in `output/completed_prompts/` for that champion. If a completed prompt exists, skip prompt and JSON generation for that champion.
-	- In batch mode (no champion provided), process all champions in the owned list, generating/overwriting prompt files in `input/Prompt/` for each, unless a completed prompt already exists for that champion.
-	- Prompt files are always overwritten unless a completed prompt exists.
-	- No clipboard or copy-to-clipboard logic is used. In single champion mode, the prompt file may be opened in the editor; in batch mode, prompt files are not opened.
+## Roadmap & Feature Review (2025)
 
-2. **Complete the Prompt**
-	- Fill out the prompt markdown file in `input/Prompt/`, ensuring all modules (0–20) are completed in the required JSON structure.
-	- Do not proceed unless the prompt is 100% complete and accurate.
+### Top 3 Most Critical / High-Impact Items (Open)
+1. Champion JSON Query & Reporting Tool (see below)
+2. Add Gear Recommendations (complete integration)
+3. Continuous Integration (CI) — Coverage & Badge Integration
 
-3. **Manual Validation of Champion Data**
-	- Manually validate all champion data (name, skills, multipliers, cooldowns, stat priorities, etc.) using authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades, etc.).
-	- Only proceed if all data is correct and up to date. Document the validation step in the workflow log or commit message.
+### Top 3 Easiest / Quick-Win Items (Open)
+1. Pre-commit Hooks
+2. Test Coverage Reporting
+3. Documentation Site (mkdocs integration)
 
-4. **Move Completed Prompt**
-	- After the prompt is fully completed and validated, move the markdown file to `output/completed_prompts/` as `[champion]_prompt.completed.md`. This file is the authoritative, human-readable record for the champion.
+---
 
-5. **Generate the JSON Log**
-	- Use the content of the completed prompt markdown to generate a single JSON object, following the template and module keys provided in the prompt (`data/templates/logTemplate.json`), including modules 0–20.
-	- The JSON must reflect the validated champion name and data exactly.
-	- Save the JSON to `output/Champions/[champion].json`.
+## 1. Champion JSON Query & Reporting Tool  <!-- High-Impact: #1 -->
+<!-- Prioritized: This tool will provide immediate value for data quality, debugging, and future enhancements. -->
+### a. Query and Report on Champion JSON Components
+- **Purpose:** Provide a tool to query all champion JSON files for the presence and values of any component or feature, and generate a human-readable report. Supports searching for all components (using `logTemplate.json` as a baseline) and detecting additional fields in champion files. Can also search for a specific key (e.g., `rarity`) and sort the report by rarity.
+- **Files/Paths:** Use `logTemplate.json` as baseline; scan all champion JSONs.
+- **Scripts to Edit:** New script for query/reporting engine.
+- **Dependencies:** Foundational files in place.
+- **Tests:** Add tests for extraction, sorting, and reporting.
+- **README Updates:** Document usage, options, and expected output.
+- **Status:** Not started. Next major feature after core automation.
+<!-- Feedback: Good idea, but avoid making the tool too broad or slow. Focus on actionable queries and clear output. -->
 
-6. **Validation**
-	- Run validation with:
-	  ```sh
-	  python Tools/validate_json.py output/Champions/[champion].json
-	  ```
-	- Confirm the script prints the champion name and rarity, and that the JSON is valid.
-	- Only mark the champion as updated when the JSON passes all validation and matches the authoritative sources.
+---
 
-7. **Repeat for All Champions**
-	- Continue this process for each champion as needed, especially after prompt updates, new information, or game changes. All new modules (14–20) are required for a complete prompt/JSON.
+## 2. Champion Data Enhancements  <!-- High-Impact: #2 -->
+<!-- Prioritized: Gear recommendations are highly actionable and directly improve the value of summaries and analysis. -->
+### a. Add Gear Recommendations
+- **Purpose:** Suggest best gear sets and stat priorities for each champion.
+- **Files/Paths:** Update champion JSON schema to include a `gearRecommendations` field.
+- **Scripts to Edit:** `champIntake.py` (add prompt for gear recommendations), `jsonToMdPerChamp.py` (include gear info in summaries).
+- **Dependencies:** Schema validation in place.
+- **Tests:** Update schema validation in `testChampionReviewAndComparison.py`.
+- **README Updates:** Document new field and workflow.
+- **Status:** In progress. Gear recommendations are partially included in JSON and summary outputs; further schema and UI integration planned.
+<!-- Feedback: Good, but avoid overcomplicating with too many gear options. Focus on practical, high-value recommendations. -->
 
-**Important:**
-- Never generate or overwrite a prompt or JSON for a champion if a completed prompt already exists in `output/completed_prompts/` for that champion. This prevents unnecessary overwrites and ensures completed prompts are not regenerated.
-- Prompt files in `input/Prompt/` are always overwritten unless a completed prompt exists.
-- Never delete files or folders as part of this workflow.
-- Completed prompts in `output/completed_prompts/` are the authoritative, human-readable record for each champion and should always be preserved for review, notes, and as the source for all downstream tools.
-- As of October 2025, all prompts and JSON logs must include modules 0–20 (see expanded template and module files for details).
+---
+
+## 3. Continuous Integration (CI) — Coverage & Badge Integration  <!-- High-Impact: #3 -->
+<!-- Prioritized: Ensures code quality, prevents regressions, and builds trust for contributors. -->
+### a. Continuous Integration (CI)
+- **Purpose:** Run lint, test, and coverage on every push/PR.
+- **Files/Paths:** `.github/workflows/ci.yml`
+- **Scripts to Edit:** None (uses Makefile/test scripts).
+- **Dependencies:** None (uses existing tools).
+- **Tests:** CI runs all tests.
+- **README Updates:** Add badge and CI instructions.
+- **Status:** In progress. Basic CI is in place; coverage and badge integration planned.
+<!-- Feedback: Good. Add coverage and badge reporting for full value. -->
+
+---
+
+## 4. Pre-commit Hooks  <!-- Easy: #1 -->
+<!-- Quick-Win: Adding pre-commit hooks is straightforward and improves code quality with minimal effort. -->
+### a. Pre-commit Hooks
+- **Purpose:** Enforce lint/format/test before commit.
+- **Files/Paths:** `.pre-commit-config.yaml`
+- **Scripts to Edit:** None.
+- **Dependencies:** Add `pre-commit`.
+- **Tests:** Pre-commit runs on staged files.
+- **README Updates:** Add setup instructions.
+- **Status:** Not started.
+<!-- Feedback: Good. Only add if contributors are on board. -->
+
+---
+
+## 5. Test Coverage Reporting  <!-- Easy: #2 -->
+<!-- Quick-Win: Adding pytest-cov and updating CI to report coverage is a small change with clear benefits. -->
+### a. Test Coverage Reporting
+- **Purpose:** Track and improve test coverage.
+- **Files/Paths:** Add `pytest-cov` to requirements.
+- **Scripts to Edit:** Test scripts.
+- **Dependencies:** Add `pytest-cov`.
+- **Tests:** Coverage report in CI.
+- **README Updates:** Add badge and coverage instructions.
+- **Status:** Not started.
+<!-- Feedback: Good. Focus on meaningful coverage, not just numbers. -->
+
+---
+
+## 6. Documentation Site (mkdocs integration)  <!-- Easy: #3 -->
+<!-- Quick-Win: If docs folder and structure are in place, setting up mkdocs is a quick win for user and contributor experience. -->
+### a. Documentation Site
+- **Purpose:** Provide browsable docs for users and contributors.
+- **Files/Paths:** `docs/`, `mkdocs.yml`
+- **Scripts to Edit:** None.
+- **Dependencies:** Add `mkdocs`.
+- **README Updates:** Add link to docs.
+- **Status:** In progress. Docs folder and structure are in place; mkdocs integration planned.
+<!-- Feedback: Good. Only add if docs are kept up to date. -->
+
+---
+
+## 7. Champion Data Enhancements (Expansion Needed)
+*This section is a continuation of section 2, for features that are not yet prioritized or require further planning.*
+### a. Track Ascension, Blessings, Faction Guardians
+- **Purpose:** Track and report on champion ascension levels, blessings, and faction guardian status.
+- **Files/Paths:** Update champion JSON schema to include `ascension`, `blessings`, and `factionGuardians` fields.
+- **Scripts to Edit:** `champIntake.py` (add prompts for new fields), `jsonToMdPerChamp.py` (include new fields in summaries).
+- **Dependencies:** Schema validation in place.
+- **Tests:** Update schema validation tests.
+- **README Updates:** Document new fields and workflow.
+- **Status:** Not started.
+<!-- Feedback: Good expansion, but ensure it doesn't complicate the champion JSON too much. Consider making blessings and faction guardians optional or separate objects. -->
+
+### b. Masteries Optimization Suggestions
+- **Purpose:** Suggest optimal masteries for each champion based on their role and gear.
+- **Files/Paths:** Update champion JSON schema to include `masteries` field.
+- **Scripts to Edit:** `champIntake.py` (add prompt for masteries), `jsonToMdPerChamp.py` (include masteries in summaries).
+- **Dependencies:** Schema validation in place.
+- **Tests:** Update schema validation tests.
+- **README Updates:** Document new field and workflow.
+- **Status:** Not started.
+<!-- Feedback: Good, but avoid overcomplicating with too many mastery options. Focus on practical, high-value recommendations. -->
+
+### c. Batch Processing
+- **Purpose:** Enable processing of multiple champions or files in a single operation.
+- **Files/Paths:** Update scripts to support batch processing (e.g., `champIntake.py`, `jsonToMdPerChamp.py`).
+- **Scripts to Edit:** Modify existing scripts to handle lists of champions/files.
+- **Dependencies:** None.
+- **Tests:** Add tests for batch processing.
+- **README Updates:** Document batch processing usage and examples.
+- **Status:** Not started.
+<!-- Feedback: Good idea, but ensure it doesn't complicate the code or reduce performance. -->
+
+---
+
+## 8. Optimal Skill Order & Battle Simulation
+- **Purpose:** Determine and recommend the optimal skill order, expected damage, and buff/debuff support for each champion in the context of specific dungeon bosses, Cursed City, and Doom Tower battles.
+- **Files/Paths:** Use a single `encounters.json` file or a `encounters/` folder with one JSON per encounter.
+- **Scripts to Edit:** Simulation engine script, encounter data loader.
+- **Dependencies:** Champion data enhancements, encounter data.
+- **Tests:** Add tests for encounter logic, skill order optimization, and output accuracy.
+- **README Updates:** Add a section describing encounter-based simulation and how to use it. Document boss/minion data sources and update process.
+- **Status:** Not started.
+<!-- Feedback: Good, but only if encounter data is available and simulation logic is robust. -->
+
+---
+
+## Index of Bad Ideas & Risky Features
+
+1. PDF/HTML export: Large effort, consider using existing tools instead of custom code.
+2. Automated synergy detection: Extremely complex, may produce unreliable results. Try manual/semi-automated first.
+3. Artifact optimizer integration: Major project, may duplicate existing tools. Only if no good external solution.
+4. Champion data as a Python package: Overkill unless there is a strong use case.
+5. LLM integration: Major effort, may not provide reliable results. Only if clear, valuable use case.
+6. Automated scraping: Fragile, may violate site terms. Only with permission and robust error handling.
 
 ## Priority Summary (2025)
 

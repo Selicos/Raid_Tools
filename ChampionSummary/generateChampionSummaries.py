@@ -195,6 +195,10 @@ def main() -> None:
                 print(f"[Error] Could not load {filename}: {e}")
                 continue
             champ_name = champ.get("champion", filename.replace(".json", ""))
+            summary_path = os.path.join(summary_dir, f"{champ_name}.md")
+            if os.path.exists(summary_path):
+                print(f"[Skip] Summary already exists for {champ_name}, skipping.")
+                continue
             write_champion_summary_md(champ, champ_name)
 
 if __name__ == "__main__":
