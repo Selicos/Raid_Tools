@@ -1,63 +1,66 @@
-# Champion Prompt Intake & Summary Workflow (Updated Oct 2025)
+# Copilot & AI Agent Instructions for Raid Tools (Oct 2025)
 
-## Canonical Champion Data Workflow
+> This file is the authoritative, codebase-specific guide for all AI coding agents. For universal project rules, see `.github/ai-assistant-instructions.md` (fallback for any ambiguity).
 
-1. **Champion List Source:**
-   - The list of champions to process is read from `input/Owned_Champions/Owned_champion_list.md`.
+## Project Focus & Data Flow
 
-2. **Prompt File Generation (Intake Script):**
-   - For each champion in the owned list, the intake script generates a prompt file in `input/Prompt/`.
-   - Each prompt file walks through the canonical JSON template (`ChampionIntake/templates/Prompt_Template.json`) section by section, using canonical field names and structure.
-   - The prompt file is formatted for easy LLM or human completion and is not a completed summary.
+- **Primary workflow:** Process the canonical owned champion list (`input/Owned_Champions/Owned_champion_list.md`) to generate actionable, boss-specific team recommendations and summaries for Raid Shadow Legends.
+- **Boss context:** Default to Hard mode for all bosses (e.g., Clan Boss, Spider, Dragon, Fire Knight, etc.), but design for easy expansion to other difficulties and boss types.
+- **Champion data:** Always validate champion skills, stats, and mechanics using at least two authoritative online sources (Ayumilove, Hellhades, official Wiki). Document validation in prompts, commits, or logs.
+- **Output:** Generate modular, human-readable markdown guides and JSON summaries for each boss situation, using only owned champions. All outputs must be actionable and suitable for both AI and human review.
+- **No legacy workflows:** Remove or ignore all references to deprecated scripts, folders, or paths (e.g., `Champion Review and Comparison/`). Only use current, documented scripts and folder names.
 
-3. **JSON Data Creation:**
-   - After the prompt is filled out (by LLM or human), the resulting JSON is saved to `output/Champions/`.
-   - The JSON file must match the canonical schema and is the single source of truth for all champion information, modules, and analysis.
+## Essential Workflows
 
-4. **Completed Prompt Markdown Generation (Summary Script):**
-   - The summary script reads the champion JSON and generates a completed prompt markdown file in `output/completed_prompts/`.
-   - The markdown file uses the structure and section headers from `ChampionIntake/templates/Prompt_Template.md` and is for human-readable review only.
+- **Environment setup:** `python Tools/Setup_Environment.py` or `make setup` (creates `.venv`, installs requirements, sets up VS Code config)
+- **Champion list update:** Edit `input/Owned_Champions/Owned_champion_list.md` to reflect current roster. All downstream outputs are based on this file.
+- **Boss team generation:** For each boss, generate teams and guides using only owned champions, referencing validated skill/mechanic data from online sources.
+- **Markdown/JSON output:** All team guides and summaries must be modular, actionable, and human-readable. Use clear headers, tables, and role separation. Save outputs in the appropriate `Notes/` or `output/` subfolder.
+- **Validation:** Cross-check all champion and boss data with at least two sources. Use `Tools/validate_json.py` for JSON validation if applicable.
 
-5. **Validation & Review:**
-   - All JSON files must be validated for accuracy, completeness, and adherence to the template structure.
-   - The JSON file is always the authoritative record; the markdown prompt is for review and communication only.
+## Project Conventions
+
+- **Champion JSONs:** Use only allowed top-level keys (`champion`, `rarity`, `owned`, `modules`). All modules (e.g., `synergy`, `gear`, `summary`) are nested under `modules`.
+- **No file/folder deletion** by AI agents—never run or suggest destructive operations.
+- **Prompt/JSON overwrite policy:** Never overwrite a completed prompt in `output/completed_prompts/`. Prompts in `input/Prompt/` are always overwritten unless a completed prompt exists.
+- **Validation:** All champion data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki). Document validation in prompts or commits.
+- **No legacy paths:** Always use the latest folder/script names (e.g., `ChampionIntake/`, not `Champion Review and Comparison/`).
+- **Testing:** All new features require pytest tests in `Tests/` or `root_Tests/`.
+
+## Example: Boss Team Markdown Output
+
+```markdown
+# Hard Spider Teams (Owned Champions Only)
+
+## Table of Contents
+1. Teams by Estimated Clear Speed & Consistency
+2. Key Boss Mechanics & Stat Requirements
+3. High-Damage Nuker Teams
+...
+```
+
+## Example: Champion JSON Structure
+
+```json
+{
+   "champion": "Example Champion",
+   "rarity": "Legendary",
+   "owned": true,
+   "modules": {
+      "synergy": {"ally_support": true},
+      "gear": {"recommended_sets": ["Speed", "Accuracy"]},
+      "summary": {"overview": "A strong support champion for clan boss."}
+   }
+}
+```
+
+## Safety & Fallback
+
+- Never delete files/folders. For any ambiguous workflow, defer to `.github/ai-assistant-instructions.md`.
 
 ---
 
-# Housekeeping & Repo Maintenance Checklist
-
-Use this checklist after any major code, process, or path update to ensure the repo remains clean, consistent, and maintainable.
-
-## Housekeeping Steps
-
-- [ ] Confirm all VS Code tasks in `.vscode/tasks.json` point to current, existing scripts. Update or remove any tasks for missing or deprecated scripts.
-- [ ] Confirm `.github/ai-assistant-instructions.md` and `.github/copilot-instructions.md` are up to date with the current, advised workflow and guidelines as described in this file and in project chat/documentation.
-- [ ] Run the "Cleanup Test Output Directories" task to ensure no test output directories contain stale or unnecessary files.
-- [ ] Remove orphaned or deprecated scripts and files (not referenced in tasks, tests, or docs)
-- [ ] Remove unused or empty folders (except required workflow folders)
-- [ ] Clean up `requirements.txt` to include only packages actually used in the codebase
-- [ ] Remove any leftover dependencies from previous features (e.g., clipboard/pyperclip)
-- [ ] Run `pytest` and ensure all tests pass
-- [ ] Run the “Organize Completed Prompts” task to tidy prompt files
-- [ ] Confirm `.vscode/tasks.json` only references valid, existing scripts
-- [ ] Remove or update any tasks for deleted/missing scripts
-- [ ] Check for and remove any commented-out legacy code in scripts
-
-# Universal AI Assistant Instructions for Raid Tools Project
-
-> **Note:** This file is the authoritative, universal reference for all AI assistants (including Copilot, ChatGPT, Claude, Gemini, and any LLM-based tools) and all human contributors. For any project-wide, workflow, or safety instructions not explicitly covered in an assistant-specific file (e.g., `.github/copilot-instructions.md`), this file must be used as the source of truth.
-
----
-
-## Core Reference for All AI Assistants
-
-This file serves as the **core reference** for all AI assistants contributing to the Raid Tools project. It supersedes `.github/ai-assistant-instructions.md` and any other assistant-specific guidelines. All contributors, whether human or AI, must adhere to the instructions outlined here.
-
-- **Scope**: Applies to Copilot, ChatGPT, Claude, Gemini, and any other AI tools.
-- **Fallback**: If any ambiguity arises, this file takes precedence over other documentation.
-- **Updates**: Ensure this file is updated alongside any major changes to workflows, scripts, or project structure.
-
----
+# (Retain style, AI power, and housekeeping sections below as relevant)
 
 ## Table of Contents
 1. [Project Overview](#project-overview)
