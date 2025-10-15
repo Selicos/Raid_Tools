@@ -1,162 +1,102 @@
-    {
-      "version": "2.0.0",
-      "tasks": [
-    {
-      "label": "Run Champion Intake",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "ChampionIntake/Champ_Intake.py",
-        "${input:ChampName}",
-        "${input:Rarity}"
-      ],
-      "group": "build",
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Bulk Import Owned Champions",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "Tools/import_owned_champions.py",
-        "--from-owned-list"
-      ],
-      "group": "build",
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Batch Prompt Generation (All Owned)",
-      "type": "shell",
-      "command": "python",
-      "args": [
-        "Tools/import_owned_champions.py",
-        "--from-owned-list",
-        "--trigger-intake"
-      ],
-      "group": "build",
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Run Champion Comparison Tracker",
-      "type": "shell",
-  "command": "python ChampionIntake/Comparisons/Champ_Comparison_Track_owned.py",
-      "group": "build",
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Cleanup Duplicate Champions",
-      "type": "shell",
-  "command": "python Tools/cleanup_duplicate_champions.py",
-      "group": "build",
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Run Champion Analysis Tool",
-      "type": "shell",
-  "command": "python ChampionAnalysisTool/championAnalysis.py",
-      "group": "build",
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Generate Champion Summaries",
-      "type": "shell",
-  "command": "python ChampionSummary/generateChampionSummaries.py",
-      "group": "build",
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Setup Environment",
-      "type": "shell",
-  "command": "python Tools/Setup_Environment.py",
-      "group": {
-        "kind": "build",
-        "isDefault": false
-      },
-      "presentation": {
-        "reveal": "never"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Validate Champion JSON",
-      "type": "shell",
-  "command": "python Tools/validate_json.py",
-      "group": "build",
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "Test Environment Setup and Requirements",
-      "type": "shell",
-  "command": "python -m pytest root_Tests/test_env_setup_and_requirements.py",
-      "group": "test",
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": []
-    },
-    {
-      "label": "First Run: Setup & Activation Instructions",
-      "type": "shell",
-      "command": "echo To activate the virtual environment, run: .\\.venv\\Scripts\\Activate (Windows) or source .venv/bin/activate (macOS/Linux)",
-      "group": {
-        "kind": "build",
-        "isDefault": true
-      },
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": [],
-      "dependsOn": ["Setup Environment"],
-      "dependsOrder": "sequence"
-    },
-    {
-      "label": "Organize Completed Prompts",
-      "type": "shell",
-      "command": "if not exist output\\completed_prompts mkdir output\\completed_prompts && move /Y *_prompt.completed.md output\\completed_prompts\\ 2>nul || echo No files to move.",
-      "group": "build",
-      "presentation": {
-        "reveal": "always"
-      },
-      "problemMatcher": [],
-      "detail": "Moves all *_prompt.completed.md files to output/completed_prompts/"
-    }
-  ],
-  "inputs": [
-    {
-      "id": "ChampName",
-      "type": "promptString",
-      "description": "Enter the champion name",
-      "default": "Brogni"
-    },
-    {
-      "id": "Rarity",
-      "type": "promptString",
-      "description": "Enter rarity (6/Mythic, 5/Legendary, 4/Epic, 3/Rare)",
-      "default": "5"
-    }
-  ]
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Batch Prompt Generation (All Owned)",
+			"type": "shell",
+			"command": "python",
+			"args": [
+				"Tools/import_owned_champions.py",
+				"--from-owned-list",
+				"--trigger-intake"
+			],
+			"group": "build",
+			"presentation": {
+				"reveal": "always"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Generate Champion Summaries",
+			"type": "shell",
+			"command": "python ChampionSummary/generateChampionSummaries.py",
+			"group": "build",
+			"presentation": {
+				"reveal": "always"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Setup Environment",
+			"type": "shell",
+			"command": "python Tools/Setup_Environment.py",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"presentation": {
+				"reveal": "never"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Validate Champion JSON",
+			"type": "shell",
+			"command": "python Tools/validate_json.py",
+			"group": "build",
+			"presentation": {
+				"reveal": "always"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "First Run: Setup & Activation Instructions",
+			"type": "shell",
+			"command": "echo To activate the virtual environment, run: .\\.venv\\Scripts\\Activate (Windows) or source .venv/bin/activate (macOS/Linux)",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always"
+			},
+			"problemMatcher": [],
+			"dependsOn": [
+				"Setup Environment"
+			],
+			"dependsOrder": "sequence"
+		},
+		{
+			"label": "Organize Completed Prompts",
+			"type": "shell",
+			"command": "if not exist output\\completed_prompts mkdir output\\completed_prompts && move /Y *_prompt.completed.md output\\completed_prompts\\ 2>nul || echo No files to move.",
+			"group": "build",
+			"presentation": {
+				"reveal": "always"
+			},
+			"problemMatcher": [],
+			"detail": "Moves all *_prompt.completed.md files to output/completed_prompts/"
+		},
+		{
+			"label": "Organize Completed Prompts",
+			"type": "shell",
+			"command": "if not exist output\\completed_prompts mkdir output\\completed_prompts && move /Y *_prompt.completed.md output\\completed_prompts\\ 2>nul || echo No files to move.",
+			"problemMatcher": [],
+			"group": "build"
+		}
+	],
+	"inputs": [
+		{
+			"id": "ChampName",
+			"type": "promptString",
+			"description": "Enter the champion name",
+			"default": "Brogni"
+		},
+		{
+			"id": "Rarity",
+			"type": "promptString",
+			"description": "Enter rarity (6/Mythic, 5/Legendary, 4/Epic, 3/Rare)",
+			"default": "5"
+		}
+	]
 }

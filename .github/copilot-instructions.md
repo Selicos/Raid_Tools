@@ -1,3 +1,34 @@
+# Housekeeping & Repo Maintenance Checklist
+
+Use this checklist after any major code, process, or path update to ensure the repo remains clean, consistent, and maintainable. Update this section as new best practices or requirements emerge.
+
+## Housekeeping Steps
+
+- [ ] Remove orphaned or deprecated scripts and files (not referenced in tasks, tests, or docs)
+- [ ] Remove unused or empty folders (except required workflow folders)
+- [ ] Clean up `requirements.txt` to include only packages actually used in the codebase
+- [ ] Remove any leftover dependencies from previous features (e.g., clipboard/pyperclip)
+- [ ] Run `pytest` and ensure all tests pass
+- [ ] Run the “Organize Completed Prompts” task to tidy prompt files
+- [ ] Confirm `.vscode/tasks.json` only references valid, existing scripts
+- [ ] Remove or update any tasks for deleted/missing scripts
+- [ ] Check for and remove any commented-out legacy code in scripts
+
+## Documentation & Test Updates
+
+- [ ] Update `README.md` to match current repo structure, scripts, and workflow
+- [ ] Update `.github/copilot-instructions.md` and internal docs to reference only current scripts, folders, and steps
+- [ ] Remove any mention of deprecated workflows, scripts, or clipboard logic
+- [ ] Add or update tests for any new scripts or features
+- [ ] Periodically review and update test lists to match tasks and scripts
+
+## General Best Practices
+
+- [ ] Run all tests before every commit
+- [ ] Keep documentation and tests tightly aligned with code and workflow
+- [ ] Regularly review for any remaining legacy references or unused code
+
+---
 
 
 
