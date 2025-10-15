@@ -13,11 +13,77 @@
 12. [VS Code Task Runner](#vs-code-task-runner)
 13. [Troubleshooting](#troubleshooting)
 
-# Raid Tools: Champion Review, Analysis, and Summary System
+
+# Raid Tools: Boss & Team Markdown Guide System
 
 > **Project-wide, workflow, and safety instructions:** See `.github/ai-assistant-instructions.md` (universal, authoritative).
 > 
 > **Copilot-specific quick reference:** See `.github/copilot-instructions.md` (always defers to the universal file for project-wide guidance).
+
+## Major Workflow Update (October 2025)
+
+**Markdown is now the primary and canonical output format for all boss and team guides.**
+All new content, recommendations, and team breakdowns must be delivered as modular, human-readable Markdown files, following the standard template below. JSON is for internal data only.
+
+### Standard Boss/Team Markdown Template
+
+```markdown
+# [Boss Name] Teams (Owned Champions Only)
+
+## Table of Contents
+1. Boss Mechanics & Stat Requirements
+2. Teams by Estimated Damage/Clear Speed
+3. [Team Type 1]
+4. [Team Type 2]
+...
+N. Best Champions & Team Participation
+N+1. Direct Champion Comparisons by Role
+N+2. Ideal Champions to Pull
+
+---
+
+## Boss Mechanics & Stat Requirements
+- [Boss mechanics, immunities, stat thresholds, unique challenges, etc.]
+
+---
+
+## Teams by Estimated Damage/Clear Speed
+| Team Name | Simulated Damage/Clear Time | Core Champions | Key Mechanics & Notes |
+|---|:---:|---|---|
+| ... | ... | ... | ... |
+
+---
+
+## [Team Type Section]
+### Team: [Team Name]
+**Core Roles:** ...
+**Optimal Combo:** ...
+**Alternates:** ...
+**Speed Tuning:** ...
+**Gear:** ...
+**Masteries:** ...
+**Manual/Auto:** ...
+**Strengths:** ...
+**Weaknesses:** ...
+**Simulated Damage/Clear Time:** ...
+
+---
+
+## Best Champions & Team Participation
+| Champion | Role(s) | Best Teams | Notes |
+|---|---|---|---|
+
+---
+
+## Direct Champion Comparisons by Role
+...
+
+---
+
+## Ideal Champions to Pull
+- [List and rationale for each boss/team]
+```
+
 
 ## Onboarding & Environment Setup (2025)
 
@@ -43,8 +109,16 @@ See the rest of this README for details on tools, folder structure, and troubles
 
 ## Overview
 
-This repository provides a complete workflow for reviewing, analyzing, and summarizing Raid Shadow Legends champions.
-It includes tools for champion intake, prompt generation, review, skill cycle simulation, and summary report generation.
+
+This repository now provides a complete workflow for reviewing, analyzing, and summarizing Raid Shadow Legends boss teams and champion usage, with a focus on actionable Markdown guides for each boss and level. All new guides must follow the template above and include:
+- Boss mechanics & stat requirements
+- Teams by estimated damage/clear speed (with simulation summaries)
+- Detailed team breakdowns (roles, speed tuning, gear, masteries, manual/auto, strengths/weaknesses)
+- Best champions & team participation
+- Direct champion comparisons by role
+- Indexed list of ideal champions to pull for upgrades
+
+JSON and Python scripts are still supported for internal data and automation, but Markdown is the primary output for all human and AI review.
 
 ---
 
@@ -270,62 +344,37 @@ Do **not** use or reference `manage_champions.py` (this script does not exist) o
 
 ---
 
+
 ## Completed Markdown Output
 
+All completed boss/team Markdown files (e.g., `UltraNightmare_ClanBoss_Teams_OWNED_ONLY.md`, `Hard_Spider_Team_Notes.md`) **must** be placed in the `Notes/` or `output/` directory. These Markdown files are the authoritative, human-readable record for each boss and are used for review, team planning, and as the source for all downstream tools.
 
-
-All completed prompt markdown files (e.g., `[champion]_prompt.completed.md`) **must** be placed in the `output/completed_prompts/` directory. Use the Makefile target `make organize-completed` or the VS Code task “Organize Completed Prompts” to move all completed files automatically.
-
-**Prompt File Handling:**
-- Incomplete or in-progress prompts are kept in `input/Prompt/`.
-- Once a prompt is fully validated and used to generate a JSON, the markdown file is moved to `output/completed_prompts/`.
-- Completed prompts in `output/completed_prompts/` are the authoritative, human-readable record for each champion and are used for review, notes, and as the source for JSON generation and all downstream tools (summary, cooldown analysis, etc.).
-- If a completed prompt already exists in `output/completed_prompts/` for a champion, prompt and JSON generation for that champion is skipped. This prevents unnecessary overwrites and ensures completed prompts are not regenerated.
-- Prompt files in `input/Prompt/` are always overwritten when generating prompts for a champion, unless a completed prompt already exists.
+**File Handling:**
+- Incomplete or in-progress Markdown files can be staged in a working directory or with a `_v2.md` suffix for review.
+- Once a Markdown file is fully validated and follows the template, move it to `Notes/` or `output/` as the canonical version.
+- Completed Markdown files are the authoritative record for each boss and should always be preserved for review, notes, and as the source for all downstream tools.
 
 ---
 
-## Champion JSON Creation & Update Workflow (Authoritative)
 
+## Boss/Team Markdown Creation & Update Workflow (Authoritative)
 
-1. **Champion Intake (Prompt Generation)**
-  - If a champion name (and optionally rarity) is provided, generate or overwrite the prompt file in `input/Prompt/` using the template, unless a completed prompt already exists in `output/completed_prompts/` for that champion. If a completed prompt exists, skip prompt and JSON generation for that champion.
-  - In batch mode (no champion provided), process all champions in the owned list, generating/overwriting prompt files in `input/Prompt/` for each, unless a completed prompt already exists for that champion.
-  - Prompt files are always overwritten unless a completed prompt exists.
+1. **Boss/Team Markdown Creation**
+  - For each boss or dungeon, create a Markdown file in `Notes/` or `output/` using the standard template above.
+  - All teams, recommendations, and summaries must be based on the current owned champion list and validated with at least two authoritative sources (Ayumilove, Hellhades, Wiki).
 
-2. **Complete the Prompt**
-  - Fill out the prompt markdown file in `input/Prompt/`, ensuring all modules (0–20) are completed in the required JSON structure.
-  - Do not proceed unless the prompt is 100% complete and accurate.
+2. **Simulation & Validation**
+  - Run at least 3 simulations for each team (if possible) and summarize results in the Markdown file.
+  - Manually validate all boss mechanics, stat requirements, and team recommendations.
+  - Document validation in the Markdown file or commit message.
 
-3. **Manual Validation of Champion Data**
-  - Manually validate all champion data (name, skills, multipliers, cooldowns, stat priorities, etc.) using authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades, etc.).
-  - Only proceed if all data is correct and up to date. Document the validation step in the workflow log or commit message.
-
-4. **Move Completed Prompt**
-  - After the prompt is fully completed and validated, move the markdown file to `output/completed_prompts/` as `[champion]_prompt.completed.md`. This file is the authoritative, human-readable record for the champion.
-
-5. **Generate the JSON Log**
-  - Use the content of the completed prompt markdown to generate a single JSON object, following the template and module keys provided in the prompt (`data/templates/logTemplate.json`), including modules 0–20.
-  - The JSON must reflect the validated champion name and data exactly.
-  - Save the JSON to `output/Champions/[champion].json`.
-
-6. **Validation**
-  - Run validation with:
-    ```sh
-    python Tools/validate_json.py output/Champions/[champion].json
-    ```
-  - Confirm the script prints the champion name and rarity, and that the JSON is valid.
-  - Only mark the champion as updated when the JSON passes all validation and matches the authoritative sources.
-
-7. **Repeat for All Champions**
-  - Continue this process for each champion as needed, especially after prompt updates, new information, or game changes. All new modules (14–20) are required for a complete prompt/JSON.
+3. **Review & Finalization**
+  - Once the Markdown file is complete and validated, move it to `Notes/` or `output/` as the canonical version.
+  - Do not overwrite or delete completed Markdown files unless updating for new game content or major changes.
 
 **Important:**
-- Never generate or overwrite a prompt or JSON for a champion if a completed prompt already exists in `output/completed_prompts/` for that champion. This prevents unnecessary overwrites and ensures completed prompts are not regenerated.
-- Prompt files in `input/Prompt/` are always overwritten unless a completed prompt exists.
 - Never delete files or folders as part of this workflow.
-- Completed prompts in `output/completed_prompts/` are the authoritative, human-readable record for each champion and should always be preserved for review, notes, and as the source for all downstream tools.
-- As of October 2025, all prompts and JSON logs must include modules 0–20 (see expanded template and module files for details).
+- Completed Markdown files are the authoritative, human-readable record for each boss and should always be preserved for review, notes, and as the source for all downstream tools.
 
 ---
 
@@ -382,18 +431,20 @@ This ensures all completed markdowns and outputs are consistently organized and 
 ---
 
 
+
 ## Workflow: How the Tools Are Linked
 
-1. **Champion Intake & Review**
-  - Run `ChampionIntake/Champ_Intake.py` to add a new champion and generate a prompt.
-  - Use Copilot Chat (optional) to help fill out the champion JSON.
-  - Update and review champion data as needed.
+1. **Boss/Team Markdown Creation**
+  - Use the owned champion list and validated boss/champion data to create a Markdown file for each boss or dungeon, following the standard template.
+  - Summarize all team recommendations, mechanics, and simulation results in Markdown.
 
-2. **Cooldown Analysis**
-  - Run `ChampionTurnAnalysis/ChampionTurnAnalysis.py` to simulate skill cycles and generate detailed markdown reports in `input/cooldown_analysis/`.
+2. **(Optional) Champion Intake & Review**
+  - Use `ChampionIntake/Champ_Intake.py` and related scripts for internal champion data management and JSON generation, if needed for automation or analysis.
 
-3. **Summary Generation**
-  - Run `ChampionSummary/generateChampionSummaries.py` to generate readable summaries for each champion, including skill order and expected damage.
+3. **(Optional) Cooldown Analysis & Summary Generation**
+  - Use `ChampionTurnAnalysis/ChampionTurnAnalysis.py` and `ChampionSummary/generateChampionSummaries.py` for detailed skill cycle analysis and champion summaries, if needed.
+
+**Note:** Markdown is the primary output for all human and AI review. JSON and Python scripts are for internal data and automation only.
 
 ---
 

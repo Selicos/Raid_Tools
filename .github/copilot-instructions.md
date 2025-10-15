@@ -1,3 +1,117 @@
+# Copilot & AI Agent Instructions for Raid Tools (Unified, Markdown-First, Oct 2025)
+
+> This file is the authoritative, codebase-specific guide for all AI coding agents. For universal project rules, see `.github/ai-assistant-instructions.md` (fallback for any ambiguity).
+## Quick Reference: Markdown-First Boss/Team Guide Workflow
+
+- **Primary Output:** All boss and team guides must be written in Markdown, following the standard template below. JSON is for internal data only.
+- **Template:** Every boss/team Markdown file must include:
+   1. Table of Contents (with Boss Mechanics & Stat Requirements as section 1)
+   2. Boss Mechanics & Stat Requirements (section 1)
+   3. Teams by Estimated Damage/Clear Speed (table)
+   4. Detailed Team Sections (each with: core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results)
+   5. Best Champions & Team Participation (table)
+   6. Direct Champion Comparisons by Role (table or summary)
+   7. Ideal Champions to Pull (indexed, actionable list)
+- **Validation:** All champion and boss data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki). Document validation in Markdown or commit.
+- **Simulation:** Run at least 3 simulations for each team and summarize results in the Markdown file.
+- **File Handling:** Completed Markdown files are authoritative and must be preserved in `Notes/` or `output/`.
+- **No Deletion:** Never delete files or folders as part of this workflow. If a change requires more than 20 lines of edits, create a new file (e.g., with `_v2.md` suffix) instead of overwriting the original.
+## Project Focus & Data Flow
+- **Main workflow:** Use `input/Owned_Champions/Owned_champion_list.md` to generate boss-specific, actionable Markdown (`.md`) outputs for Raid Shadow Legends. Markdown is now the primary and canonical output format for all boss and team guides.
+- **Boss context:** Default to Hard mode for all bosses; design for easy expansion to other difficulties and boss types.
+- **Champion data:** Always validate skills/mechanics with at least two online sources (Ayumilove, Hellhades, Wiki). Document validation in Markdown or commit messages.
+- **Output:** Modular, human-readable Markdown for each boss, using only owned champions. All outputs must follow the standard template and include boss mechanics, simulation summaries, and an indexed list of ideal champions to pull for upgrades.
+- **No legacy workflows:** Remove or ignore all references to deprecated scripts, folders, or paths (e.g., `Champion Review and Comparison/`). Only use current, documented scripts and folder names.
+## Essential Workflows
+- **Setup:** `python Tools/Setup_Environment.py` or `make setup` (creates `.venv`, installs requirements, sets up VS Code config)
+- **Champion list update:** Edit `input/Owned_Champions/Owned_champion_list.md` to reflect current roster.
+- **Team generation:** For each boss, generate Markdown guides using only owned champions, referencing validated data and following the standard template.
+- **Markdown output:** All team guides and summaries must be modular, actionable, and human-readable. Use clear headers, tables, and role separation. Save outputs in the appropriate `Notes/` or `output/` subfolder. JSON is optional and only for internal data, not for primary documentation.
+- **Validation:** Cross-check all champion and boss data with at least two sources. Document validation in the Markdown file or commit message.
+- **Large changes:** If a change requires more than 20 lines of edits to a Markdown file, create a new file (e.g., with `_v2.md` suffix) for review and comparison, rather than overwriting the original.
+## Conventions & Methodology
+- **Markdown-first:** All boss and team guides must be written in Markdown, following the standard template. JSON is for internal data only.
+- **Standard Template:** Every boss/team Markdown file must include:
+   1. Table of Contents (with Boss Mechanics & Stat Requirements as section 1)
+   2. Boss Mechanics & Stat Requirements (section 1)
+   3. Teams by Estimated Damage/Clear Speed (table)
+   4. Detailed Team Sections (each with: core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results)
+   5. Best Champions & Team Participation (table)
+   6. Direct Champion Comparisons by Role (table or summary)
+   7. Ideal Champions to Pull (indexed, actionable list)
+- **No file/folder deletion:** AI agents must never delete files or folders—never run or suggest destructive operations. If a file must be replaced with a large change, create a new file instead.
+- **Prompt/JSON overwrite policy:** Never overwrite a completed prompt in `output/completed_prompts/`. Prompts in `input/Prompt/` are always overwritten unless a completed prompt exists.
+- **Validation:** All champion data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki). Document validation in Markdown or commit.
+- **No legacy paths:** Always use the latest folder/script names (e.g., `ChampionIntake/`, not `Champion Review and Comparison/`).
+- **Testing:** All new features require pytest tests in `Tests/` or `root_Tests/`.
+- **Formatting:** All Markdown files must use consistent header levels and section numbering. Use Black and flake8 for Python code. Use line-by-line edits for clarity and easier review. Prefer creating a new file for large changes.
+## AI Assistant Behavior
+- **Markdown-first:** All outputs must be Markdown unless otherwise specified. Use the standard template for all boss/team guides.
+- **Persistence:** Continue working on multi-step tasks for up to 4 cycles without asking for confirmation.
+- **Proactivity:** Suggest better solutions, tools, or implementations when applicable.
+- **Completeness:** Ensure full task completion before moving to next items.
+- **Context Awareness:** Leverage conversation history and project context for informed decisions.
+- **Tool Usage:** Prefer built-in tools over manual commands when available.
+- **Code Generation:** Always include type hints and docstrings for new functions. Use pathlib for file operations. Implement proper error handling with try/except blocks. Update requirements.txt when adding new dependencies.
+- **Formatting:** Use clear, modular, human-readable Markdown. Use consistent header levels, section numbering, and tables. Prefer line-by-line edits for small changes and new files for large changes.
+- **No Deletion:** Never delete files or folders. For large changes, create a new file for review and comparison.
+## Example: Boss Team Markdown Output
+```markdown
+# [Boss Name] Teams (Owned Champions Only)
+
+## Table of Contents
+1. Boss Mechanics & Stat Requirements
+2. Teams by Estimated Damage/Clear Speed
+3. [Team Type 1]
+4. [Team Type 2]
+...
+N. Best Champions & Team Participation
+N+1. Direct Champion Comparisons by Role
+N+2. Ideal Champions to Pull
+
+---
+
+## Boss Mechanics & Stat Requirements
+- [Boss mechanics, immunities, stat thresholds, unique challenges, etc.]
+
+---
+
+## Teams by Estimated Damage/Clear Speed
+| Team Name | Simulated Damage/Clear Time | Core Champions | Key Mechanics & Notes |
+|---|:---:|---|---|
+| ... | ... | ... | ... |
+
+---
+
+## [Team Type Section]
+### Team: [Team Name]
+**Core Roles:** ...
+**Optimal Combo:** ...
+**Alternates:** ...
+**Speed Tuning:** ...
+**Gear:** ...
+**Masteries:** ...
+**Manual/Auto:** ...
+**Strengths:** ...
+**Weaknesses:** ...
+**Simulated Damage/Clear Time:** ...
+
+---
+
+## Best Champions & Team Participation
+| Champion | Role(s) | Best Teams | Notes |
+|---|---|---|---|
+
+---
+
+## Direct Champion Comparisons by Role
+...
+
+---
+
+## Ideal Champions to Pull
+- [List and rationale for each boss/team]
+```
 # Copilot & AI Agent Instructions for Raid Tools (Oct 2025)
 
 > This file is the authoritative, codebase-specific guide for all AI coding agents. For universal project rules, see `.github/ai-assistant-instructions.md` (fallback for any ambiguity).

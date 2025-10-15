@@ -1,19 +1,39 @@
-# Ultra-Nightmare Clan Boss Teams (Owned Champions Only)
-
 ## Table of Contents
-1. Teams by Estimated Damage
-2. 2:1 Speed Tune Teams
-3. Geomancer-Focused & Brogni Teams
-4. Shield/Support Teams
-5. High-Damage Team Variations
-6. Poison-Focused Teams
-7. HP Burn/Hybrid Teams
-8. Turn Meter/Speed Manipulation Teams
-9. Gimmick/Niche Mechanic Teams
-10. High-Survivability/Counterattack Teams
-11. Best Champions & Team Participation
-12. Direct Champion Comparisons by Role
-13. Ideal Champions to Pull
+1. Boss Mechanics & Stat Requirements
+2. Teams by Estimated Damage
+3. 2:1 Speed Tune Teams
+4. Geomancer-Focused & Brogni Teams
+5. Shield/Support Teams
+6. High-Damage Team Variations
+7. Poison-Focused Teams
+8. HP Burn/Hybrid Teams
+9. Turn Meter/Speed Manipulation Teams
+10. Gimmick/Niche Mechanic Teams
+11. High-Survivability/Counterattack Teams
+12. Best Champions & Team Participation
+13. Direct Champion Comparisons by Role
+14. Ideal Champions to Pull
+
+---
+
+## Boss Mechanics & Stat Requirements
+- **Boss: Ultra-Nightmare Clan Boss (UNM)**
+- **Key Mechanics:**
+  - Affinity changes (Spirit, Force, Magic, Void)
+  - High HP, DEF, and damage scaling by turn
+  - Applies Stun, Decrease Speed, and other debuffs
+  - Immune to Turn Meter reduction and crowd control
+  - Requires high survivability, debuff uptime, and speed tuning
+- **Required Stats:**
+  - Speed: 250–280+ (for 2:1 teams)
+  - Accuracy: 230–250+ (for debuffs)
+  - HP%/DEF%: As high as possible for survivability
+  - Crit Rate/Damage: For damage dealers
+  - Lifesteal/Leech: For sustain
+- **Special Notes:**
+  - Manual play can maximize HP Burn and shield uptime
+  - Speed tuning is critical for 2:1 and counterattack teams
+  - Use DeadwoodJedi or similar calculators for exact speed tuning
 
 ---
 
