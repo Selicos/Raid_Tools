@@ -23,6 +23,7 @@ def generate_and_save_champion_json_from_prompt(champion_name):
     rarity = None
     if not rarity:
         rarity = input(f"Enter rarity for {champion_name} (Rare/Epic/Legendary/Mythic or 3/4/5/6): ").strip().capitalize()
+    # As of October 2025, all modules 0–20 are required for prompt/JSON logs
     champion_json = {
         "champion": champion_name,
         "rarity": rarity,
@@ -39,7 +40,14 @@ def generate_and_save_champion_json_from_prompt(champion_name):
         "utility_comparison": [],
         "ratings": {},
         "final_summary": {},
-        "synergy_engine": {}
+        "synergy_engine": {},
+        "base_stats": {},
+        "books": {},
+        "aura": {},
+        "ai_logic": {},
+        "content_breakdown": {},
+        "mastery_tree": {},
+        "community": {}
     }
 
     # --- Expand skill/attack order to 16 turns if possible ---
@@ -173,51 +181,27 @@ def create_prompt_md(champion_name):
     os.makedirs(prompt_dir, exist_ok=True)
     target_filename = f"{champion_name}_prompt.md"
     path = os.path.join(prompt_dir, target_filename)
-    if os.path.exists(path):
-        print(f"⚠️ Prompt file for {champion_name} already exists. Skipping creation.")
-        return path
+
+    # Always overwrite the prompt file
+    template_path = os.path.join(os.path.dirname(__file__), "templates", "Prompt_Template.md")
+    if not os.path.exists(template_path):
+        print(f"❌ Prompt template not found: {template_path}")
+        return None
+    with open(template_path, "r", encoding="utf-8") as f:
+        template = f.read()
 
     prompt = f"# Champion Log Generation Prompt for {champion_name}\n\n"
     prompt += (
-        "You are to generate a complete champion log for {0} in JSON format, using the following module templates as structure and guidance. "
-        "Each module (0–13) is included below. For each, fill in the relevant information for {0}. Output a single JSON object with each module as a key (e.g., \"overview\", \"skills\", \"synergy\", etc.).\n\n"
+        f"You are to generate a complete champion log for {champion_name} in JSON format, using the following template as structure and guidance. "
+        f"Fill in all modules (0–20) for {champion_name}. Output a single JSON object with each module as a key.\n\n"
         "---\n"
-        "## Example output structure:\n"
-        "```json\n"
-        "{{\n"
-        "  \"champion\": \"{0}\",\n"
-        "  \"owned\": true,\n"
-        "  \"overview\": {{ ... }},\n"
-        "  \"skills\": {{ ... }},\n"
-        "  \"team_inputs\": {{ ... }},\n"
-        "  \"mastery_simulation\": {{ ... }},\n"
-        "  \"clan_boss\": {{ ... }},\n"
-        "  \"synergy\": {{ ... }},\n"
-        "  \"investment\": {{ ... }},\n"
-        "  \"intelligence\": {{ ... }},\n"
-        "  \"turn_meter\": {{ ... }},\n"
-        "  \"utility_comparison\": {{ ... }},\n"
-        "  \"ratings\": {{ ... }},\n"
-        "  \"final_summary\": {{ ... }},\n"
-        "  \"synergy_engine\": {{ ... }}\n"
-        "}}\n"
-        "```\n"
+        "## Template:\n"
+        f"{template}\n"
         "---\n"
         "Instructions:\n"
-        "- Fill in each section for {0} using the module templates below.\n"
+        f"- Fill in each section for {champion_name} using the template above.\n"
         "- Output only the final JSON object.\n\n"
-        "---\n"
-    ).format(champion_name)
-
-    modules_dir = os.path.join(os.path.dirname(__file__), "modules")
-    for i in range(0, 14):
-        module_file = os.path.join(modules_dir, f"Champion_Review_Module_{i}.md")
-        prompt += f"---\n## Module {i}\n"
-        if os.path.exists(module_file):
-            with open(module_file, "r", encoding="utf-8") as f:
-                prompt += f.read() + "\n\n"
-        else:
-            prompt += "(Missing module file)\n\n"
+    )
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(prompt)
@@ -295,6 +279,12 @@ def open_in_editor(path):
 
 def run_champion_intake(champion_name, rarity=None, fast_mode=False, suppress_prompt_actions=False):
     # Only create placeholder if JSON does not exist
+    completed_prompt_dir = os.path.join("output", "completed_prompts")
+    completed_prompt_path = os.path.join(completed_prompt_dir, f"{champion_name}_prompt.completed.md")
+    if os.path.exists(completed_prompt_path):
+        print(f"✅ Completed prompt already exists for {champion_name}. Skipping prompt and JSON generation.")
+        return True
+
     json_path = os.path.join(champion_json_dir, f"{champion_name}.json")
     if not os.path.exists(json_path):
         create_json_placeholder(champion_name, rarity=rarity)
@@ -302,14 +292,13 @@ def run_champion_intake(champion_name, rarity=None, fast_mode=False, suppress_pr
         print(f"⚠️ JSON for {champion_name} already exists. Skipping placeholder creation.")
     md_path = create_prompt_md(champion_name)
     if validate_json(champion_name) and validate_md(champion_name):
-        if not suppress_prompt_actions:
-            copy_prompt_to_clipboard(md_path)
-            if not fast_mode:
-                open_in_editor(md_path)
+        # Only open the prompt file for single champion mode (not batch)
+        if not suppress_prompt_actions and not fast_mode:
+            open_in_editor(md_path)
         add_to_owned_list(champion_name, update_date=True)
         return True
     else:
-        print(f"⚠️ Validation failed for {champion_name}. Prompt not copied or opened.")
+        print(f"⚠️ Validation failed for {champion_name}. Prompt not opened.")
         return False
 
 def run_smart_batch_from_owned_list(path=owned_list_path, fast_mode=False):
@@ -349,7 +338,8 @@ def run_smart_batch_from_owned_list(path=owned_list_path, fast_mode=False):
 
     for champ, rarity in champions_to_update:
         print(f"🔄 Processing: {champ} (Rarity: {rarity if rarity else 'Unknown'})")
-        if run_champion_intake(champ, rarity=rarity, fast_mode=fast_mode, suppress_prompt_actions=True):
+        # In batch mode, do not open or copy prompt files
+        if run_champion_intake(champ, rarity=rarity, fast_mode=True, suppress_prompt_actions=True):
             success.append(champ)
         else:
             failed.append(champ)
