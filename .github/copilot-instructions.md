@@ -1,62 +1,49 @@
 # Copilot & AI Agent Instructions for Raid Tools (Unified, Markdown-First, Oct 2025)
 
 > This file is the authoritative, codebase-specific guide for all AI coding agents. For universal project rules, see `.github/ai-assistant-instructions.md` (fallback for any ambiguity).
-## Quick Reference: Markdown-First Boss/Team Guide Workflow
-## Update & Staging Policy for Owned Champion Changes
+## Copilot & AI Agent Instructions (Consolidated, Oct 2025)
 
-When the owned champion list (`input/Owned_Champions/Owned_champion_list.md`) is updated, all boss/team Markdown files must be updated as follows:
+### 1. Markdown-First, Modular Workflow
+- All boss/team guides must be written in Markdown, using the standard template.
+- JSON is for internal data only; Markdown is the canonical output for all guides.
 
-1. **Staging in Separate File:**
-   - All updates must be staged in a new file (e.g., with `_v2.md` or date-stamped suffix) for review and comparison. Never overwrite the original file directly.
-   - The new file must be saved in the same directory as the original (e.g., `Notes/` or `output/`).
+### 2. Affinity Safety/Risk Requirements
+- Every boss/team Markdown file must:
+  - Include explicit affinity information in the "Boss Mechanics & Stat Requirements" section.
+  - For each team in the summary table and detailed section, add a clear "Affinity Safety/Risk" note.
+  - Affinity notes must specify which affinities are safe, which are risky, and why (e.g., Spirit stun, weak affinity for key roles).
+  - Avoid recommending weak affinity champions for key roles unless justified and explained.
+- Example affinity note format for teams:
+  ```
+  **Affinity Safety/Risk:**
+  - Void: Safe for all roles.
+  - Force: Safe unless [specific champion] is Magic affinity.
+  - Magic: Risk if [specific champion] is Force affinity.
+  - Spirit: Risk if slowest champion is a key role (e.g., Geomancer, Brogni, main revive, etc.); Spirit stun can break team cycle.
+  ```
 
-2. **Section-by-Section Update & Analysis:**
-   - For each section in the standard Table of Contents, perform a fresh analysis and update:
-     1. **Boss Mechanics & Stat Requirements:**
-        - Re-validate boss mechanics, stat thresholds, and unique challenges based on the new roster.
-        - Note any changes in stat requirements or mechanics due to new champion options.
-     2. **Teams by Estimated Damage/Clear Speed:**
-        - Re-run simulations and update the summary table with new teams, damage, and clear speed estimates.
-        - Clearly mark new or improved teams enabled by new champions.
-     3. **Detailed Team Sections:**
-        - For each team, update core roles, optimal combos, alternates, speed tuning, gear, masteries, manual/auto notes, strengths, weaknesses, and simulated results.
-        - Add new teams or variants enabled by new champions; remove or archive obsolete teams.
-     4. **Best Champions & Team Participation:**
-        - Update the participation table to reflect new team compositions and champion roles.
-        - Highlight new champions and their impact.
-     5. **Direct Champion Comparisons by Role:**
-        - Re-analyze and update role-based comparisons, including new champions and their strengths/weaknesses.
-     6. **Ideal Champions to Pull:**
-        - Revise the list of ideal champions to pull, removing any now-owned champions and reprioritizing based on new team options.
+### 3. Update & Staging Policy
+- When the owned champion list changes, all boss/team Markdown files must be updated and staged in a new file (e.g., `_v2.md` or date-stamped).
+- Never overwrite the original file directly; always preserve previous versions.
+- All updates must be reviewed and compared before becoming canonical.
 
-3. **Validation & Documentation:**
-   - All new data, team mechanics, and champion roles must be validated with at least two sources (Ayumilove, Hellhades, Wiki).
-   - Document all validation and simulation steps in the new Markdown file or commit message.
+### 4. Section-by-Section Update
+- For each section in the Table of Contents:
+  1. Boss Mechanics & Stat Requirements: Re-validate mechanics, stat thresholds, and affinity notes.
+  2. Teams by Estimated Damage/Clear Speed: Update table, add affinity column.
+  3. Detailed Team Sections: Add/refresh affinity notes for each team.
+  4. Best Champions & Team Participation: Update for new teams/champions.
+  5. Direct Champion Comparisons by Role: Update for new roster.
+  6. Ideal Champions to Pull: Remove now-owned, reprioritize.
 
-4. **Review & Comparison:**
-   - The new file must be reviewed and compared to the previous version before replacing or archiving the old file.
-   - Only after review and approval should the new file become canonical.
+### 5. Validation & Documentation
+- All champion and boss data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki).
+- Document all validation and simulation steps in the Markdown file or commit message.
+- Run at least 3 simulations for each team and summarize results.
 
-5. **No Deletion:**
-   - Never delete the original file as part of this process. Always preserve previous versions for audit and rollback.
-
-**Summary:**
-Every time the owned champion list changes, a new, fully re-analyzed Markdown file must be staged for review, with all sections updated and validated. This ensures traceability, accuracy, and safe review of all team advice outputs.
-
-- **Primary Output:** All boss and team guides must be written in Markdown, following the standard template below. JSON is for internal data only.
-- **Template:** Every boss/team Markdown file must include:
-   1. Table of Contents (with Boss Mechanics & Stat Requirements as section 1)
-   2. Boss Mechanics & Stat Requirements (section 1, must include explicit Affinity info: specify affinity for the current rotation, note if it changes, and highlight that affinity can make or break certain teams)
-   3. Teams by Estimated Damage/Clear Speed (table)
-   4. Detailed Team Sections (each with: core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results; must highlight affinity safety or risk for each team if relevant)
-   5. Best Champions & Team Participation (table)
-   6. Direct Champion Comparisons by Role (table or summary)
-   7. Ideal Champions to Pull (indexed, actionable list)
-- **Validation:** All champion and boss data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki). Document validation in Markdown or commit.
-- **Simulation:** Run at least 3 simulations for each team and summarize results in the Markdown file.
-- **Affinity:** All boss/team Markdown outputs must include explicit affinity information in the Boss Mechanics & Stat Requirements section, and highlight affinity safety/risk for each team in the detailed team sections. Avoid recommending weak affinity champions for key roles (cleanse, block debuffs, damage) unless justified.
-- **File Handling:** Completed Markdown files are authoritative and must be preserved in `Notes/` or `output/`.
-- **No Deletion:** Never delete files or folders as part of this workflow. If a change requires more than 20 lines of edits, create a new file (e.g., with `_v2.md` suffix) instead of overwriting the original.
+### 6. No Deletion Policy
+- Never delete files or folders as part of this workflow.
+- For large changes, create a new file for review and comparison.
 ## Project Focus & Data Flow
 - **Main workflow:** Use `input/Owned_Champions/Owned_champion_list.md` to generate boss-specific, actionable Markdown (`.md`) outputs for Raid Shadow Legends. Markdown is now the primary and canonical output format for all boss and team guides.
 - **Boss context:** Default to Hard mode for all bosses; design for easy expansion to other difficulties and boss types.
@@ -86,6 +73,12 @@ Every time the owned champion list changes, a new, fully re-analyzed Markdown fi
 - **No legacy paths:** Always use the latest folder/script names (e.g., `ChampionIntake/`, not `Champion Review and Comparison/`).
 - **Testing:** All new features require pytest tests in `Tests/` or `root_Tests/`.
 - **Formatting:** All Markdown files must use consistent header levels and section numbering. Use Black and flake8 for Python code. Use line-by-line edits for clarity and easier review. Prefer creating a new file for large changes.
+- **Affinity review** All teams should be reviewed for affinity safety/risk. Include explicit affinity information in the Boss Mechanics & Stat Requirements section, and highlight affinity considerations in each team's detailed section.
+- **Affinity Safety/Risk:**
+   - Void: Safe for all roles.
+   - Force: Safe unless [specific champion] is Magic affinity.
+   - Magic: Risk if [specific champion] is Force affinity.
+   - Spirit: Risk if slowest champion is a key role (e.g., Geomancer, Brogni, main revive, etc.); Spirit stun can break team cycle.
 ## AI Assistant Behavior
 - **Markdown-first:** All outputs must be Markdown unless otherwise specified. Use the standard template for all boss/team guides.
 - **Persistence:** Continue working on multi-step tasks for up to 4 cycles without asking for confirmation.
@@ -96,6 +89,7 @@ Every time the owned champion list changes, a new, fully re-analyzed Markdown fi
 - **Code Generation:** Always include type hints and docstrings for new functions. Use pathlib for file operations. Implement proper error handling with try/except blocks. Update requirements.txt when adding new dependencies.
 - **Formatting:** Use clear, modular, human-readable Markdown. Use consistent header levels, section numbering, and tables. Prefer line-by-line edits for small changes and new files for large changes.
 - **No Deletion:** Never delete files or folders. For large changes, create a new file for review and comparison.
+
 ## Example: Boss Team Markdown Output
 ```markdown
 # [Boss Name] Teams (Owned Champions Only)

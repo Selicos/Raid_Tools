@@ -1,3 +1,4 @@
+
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements
 2. Teams by Estimated Damage
@@ -16,8 +17,22 @@
 
 ---
 
+> **Affinity Safety/Risk Notice:**  
+All team recommendations and stat requirements in this guide include explicit affinity safety/risk notes. Affinity (Spirit, Force, Magic, Void) can make or break certain teams, especially for key roles (cleanse, block debuffs, damage). Always check the current Clan Boss affinity and review the "Affinity Safety/Risk" notes for each team before committing resources.
+
+---
+
 ## Boss Mechanics & Stat Requirements
 - **Boss: Ultra-Nightmare Clan Boss (UNM)**
+- **Affinity:** Ultra-Nightmare Clan Boss alternates between Void, Spirit, Force, and Magic affinities on a set rotation.  
+  - **Void:** No affinity weaknesses; all teams are safe.
+  - **Spirit:** Places Decrease Speed debuff, targets slowest champion for stun. Can disrupt speed-tuned teams and block debuff/block teams.
+  - **Force:** Weak affinity for Magic champions; can reduce damage and survivability for Magic nukers.
+  - **Magic:** Places Decrease DEF, can block debuffs. Weak affinity for Force champions.
+- **Stat thresholds (for 2-key/1-key):** 4,200+ DEF, 70k+ HP, 250+ SPD (unkillable teams may vary), 230+ ACC for debuffs, 250+ RES for debuff resistance.
+- **Key mechanics:** Stun, AOE, debuff spread, affinity-specific debuffs (see above).
+- **Unique challenges:** Affinity can disrupt key roles (e.g., Spirit affinity targets slowest champion for stun, Magic affinity can block debuffs).
+- **Always check the "Affinity Safety/Risk" column for each team below.**
 - **Key Mechanics:**
   - Affinity changes (Spirit, Force, Magic, Void)
   - High HP, DEF, and damage scaling by turn
@@ -39,21 +54,21 @@
 
 ## Teams by Estimated Damage
 
-| Team Name | Simulated Damage (Avg) | Core Champions (Sample) | Key Mechanics & Notes |
-|---|:---:|---|---|
-| Geomancer 2:1 Burn/Poison Hybrid | 141.7M | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | **Strengths:** Top damage, HP Burn reflects, 2:1 speed tune, strong poison uptime. **Weaknesses:** Requires manual play for Geomancer HP Burn, high gear/stat requirements. **When to Use:** Best for maximizing damage with current roster. |
-| Brogni 2:1 Shield/Reflect | 137.7M | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | **Strengths:** High survivability, shields, reflect damage, 2:1 speed. **Weaknesses:** Needs Brogni manual shield timing, gear intensive. **When to Use:** For safe, high-damage runs with strong support. |
-| Poison 2:1 Cycle (Relentless) | 130M | Deacon Armstrong, Godseeker Aniri, Fayne, Venomage, Frozen Banshee | **Strengths:** Relentless procs, high poison uptime, flexible. **Weaknesses:** Relies on RNG from Relentless, can be inconsistent. **When to Use:** If you have good Relentless sets and want high poison output. |
-| Seeker 2:1 Speed/Poison Hybrid | 127.7M | Seeker, Godseeker Aniri, Fayne, Venomage, Frozen Banshee | **Strengths:** Seeker TM boost, flexible poisoners, 2:1 speed. **Weaknesses:** Needs careful speed tuning, less survivability. **When to Use:** For speed-tuned, high-damage teams with Seeker. |
-| Brogni Unkillable/Survivability | 126.7M | Brogni, Godseeker Aniri, Maulie Tankard, Deacon Armstrong, Venomage | **Strengths:** Unkillable mechanics, shields, DEF up, strong support. **Weaknesses:** Lower damage ceiling, requires manual Brogni. **When to Use:** For safe, long runs or if struggling with survivability. |
-| Double Revive 2:1 Poison/Support | 120M | Deacon Armstrong, Godseeker Aniri, Rector Drath, Fayne, Venomage | **Strengths:** Double revive, high uptime, safe for auto. **Weaknesses:** Lower damage, less burst. **When to Use:** For reliable, safe runs with revive insurance. |
-| Relentless TM Dropper Build | 104.3M | Deacon Armstrong, Seeker, Godseeker Aniri, Fayne, Venomage | **Strengths:** TM manipulation, Relentless procs, flexible. **Weaknesses:** Relies on Relentless RNG, can be inconsistent. **When to Use:** If you have strong Relentless gear and want to experiment. |
-| Multi-Turn Poison Cycle | 103M | Fayne, Venomage, Frozen Banshee, Godseeker Aniri, Deacon Armstrong | **Strengths:** High poison uptime, multi-turn cycles, flexible. **Weaknesses:** Lower survivability, needs careful debuff management. **When to Use:** For maximizing poison damage with available poisoners. |
-| Brogni 1:1 Shield/Reflect | 110M | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | **Strengths:** Consistent shields, 1:1 speed, high survivability. **Weaknesses:** Lower burst damage, needs Brogni manual shield. **When to Use:** For safe, consistent runs with less gear stress. |
-| Geomancer 1:1 Burn/Poison | 105M | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | **Strengths:** Consistent HP Burn/poison, 1:1 speed, easy to manual. **Weaknesses:** Lower ceiling than 2:1, but very reliable. **When to Use:** For reliable, consistent damage with less tuning. |
-| Geomancer Counterattack | 100M+ | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | **Strengths:** Counterattack synergy, HP Burn, high uptime. **Weaknesses:** Needs counterattack setup, manual play. **When to Use:** For counterattack builds with Geomancer. |
-| Brogni Counterattack | 100M+ | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | **Strengths:** Counterattack, shields, high survivability. **Weaknesses:** Lower burst, needs manual Brogni. **When to Use:** For counterattack teams with Brogni. |
-| Any above team with minor swaps | 80M+ | See above | **Strengths:** All teams above can be flexed with alternate poisoners, revivers, or TM boosters and still achieve 80M+ with good gear and tuning. |
+| Team Name | Simulated Damage (Avg) | Core Champions (Sample) | Key Mechanics & Notes | Affinity Safety/Risk |
+|---|:---:|---|---|---|
+| Geomancer 2:1 Burn/Poison Hybrid | 141.7M | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | **Strengths:** Top damage, HP Burn reflects, 2:1 speed tune, strong poison uptime. **Weaknesses:** Requires manual play for Geomancer HP Burn, high gear/stat requirements. **When to Use:** Best for maximizing damage with current roster. | Safe on Void/Force/Magic; Spirit: risk if Geomancer is slowest (stun target) |
+| Brogni 2:1 Shield/Reflect | 137.7M | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | **Strengths:** High survivability, shields, reflect damage, 2:1 speed. **Weaknesses:** Needs Brogni manual shield timing, gear intensive. **When to Use:** For safe, high-damage runs with strong support. | Safe on Void/Force/Magic; Spirit: risk if Brogni is slowest (stun target) |
+| Poison 2:1 Cycle (Relentless) | 130M | Deacon Armstrong, Godseeker Aniri, Fayne, Venomage, Frozen Banshee | **Strengths:** Relentless procs, high poison uptime, flexible. **Weaknesses:** Relies on RNG from Relentless, can be inconsistent. **When to Use:** If you have good Relentless sets and want high poison output. | Safe on Void/Force/Magic; Spirit: risk if key poisoner is slowest |
+| Seeker 2:1 Speed/Poison Hybrid | 127.7M | Seeker, Godseeker Aniri, Fayne, Venomage, Frozen Banshee | **Strengths:** Seeker TM boost, flexible poisoners, 2:1 speed. **Weaknesses:** Needs careful speed tuning, less survivability. **When to Use:** For speed-tuned, high-damage teams with Seeker. | Safe on Void/Force/Magic; Spirit: risk if Seeker is slowest |
+| Brogni Unkillable/Survivability | 126.7M | Brogni, Godseeker Aniri, Maulie Tankard, Deacon Armstrong, Venomage | **Strengths:** Unkillable mechanics, shields, DEF up, strong support. **Weaknesses:** Lower damage ceiling, requires manual Brogni. **When to Use:** For safe, long runs or if struggling with survivability. | Safe on Void/Force/Magic; Spirit: risk if Brogni or Maulie is slowest |
+| Double Revive 2:1 Poison/Support | 120M | Deacon Armstrong, Godseeker Aniri, Rector Drath, Fayne, Venomage | **Strengths:** Double revive, high uptime, safe for auto. **Weaknesses:** Lower damage, less burst. **When to Use:** For reliable, safe runs with revive insurance. | Safe on Void/Force/Magic; Spirit: risk if revive is slowest |
+| Relentless TM Dropper Build | 104.3M | Deacon Armstrong, Seeker, Godseeker Aniri, Fayne, Venomage | **Strengths:** TM manipulation, Relentless procs, flexible. **Weaknesses:** Relies on Relentless RNG, can be inconsistent. **When to Use:** If you have strong Relentless gear and want to experiment. | Safe on Void/Force/Magic; Spirit: risk if TM booster is slowest |
+| Multi-Turn Poison Cycle | 103M | Fayne, Venomage, Frozen Banshee, Godseeker Aniri, Deacon Armstrong | **Strengths:** High poison uptime, multi-turn cycles, flexible. **Weaknesses:** Lower survivability, needs careful debuff management. **When to Use:** For maximizing poison damage with available poisoners. | Safe on Void/Force/Magic; Spirit: risk if key poisoner is slowest |
+| Brogni 1:1 Shield/Reflect | 110M | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | **Strengths:** Consistent shields, 1:1 speed, high survivability. **Weaknesses:** Lower burst damage, needs Brogni manual shield. **When to Use:** For safe, consistent runs with less gear stress. | Safe on Void/Force/Magic; Spirit: risk if Brogni is slowest |
+| Geomancer 1:1 Burn/Poison | 105M | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | **Strengths:** Consistent HP Burn/poison, 1:1 speed, easy to manual. **Weaknesses:** Lower ceiling than 2:1, but very reliable. **When to Use:** For reliable, consistent damage with less tuning. | Safe on Void/Force/Magic; Spirit: risk if Geomancer is slowest |
+| Geomancer Counterattack | 100M+ | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | **Strengths:** Counterattack synergy, HP Burn, high uptime. **Weaknesses:** Needs counterattack setup, manual play. **When to Use:** For counterattack builds with Geomancer. | Safe on Void/Force/Magic; Spirit: risk if Geomancer is slowest |
+| Brogni Counterattack | 100M+ | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | **Strengths:** Counterattack, shields, high survivability. **Weaknesses:** Lower burst, needs manual Brogni. **When to Use:** For counterattack teams with Brogni. | Safe on Void/Force/Magic; Spirit: risk if Brogni is slowest |
+| Any above team with minor swaps | 80M+ | See above | **Strengths:** All teams above can be flexed with alternate poisoners, revivers, or TM boosters and still achieve 80M+ with good gear and tuning. | Affinity risk depends on slowest champion role |
 
 **General Notes:**
 - All teams require high SPD/ACC/HP%/DEF% on core champions.
@@ -89,6 +104,12 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Simulated Damage:** 141.7M
 
+**Affinity Safety/Risk:**
+- **Void:** Safe for all roles.
+- **Force:** Safe for all roles.
+- **Magic:** Safe for all roles.
+- **Spirit:** **Risk** – If Geomancer is the slowest champion, Spirit stun can break the team cycle or remove HP Burn. Always ensure your slowest champion is not a key debuffer or damage dealer.
+
 ---
 
 ### Team 2: Brogni 2:1 Shield/Reflect
@@ -111,6 +132,12 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 **Weaknesses:** Needs Brogni manual shield timing, gear intensive.
 
 **Simulated Damage:** 137.7M
+
+**Affinity Safety/Risk:**
+- **Void:** Safe for all roles.
+- **Force:** Safe for all roles.
+- **Magic:** Safe for all roles.
+- **Spirit:** **Risk** – If Brogni is the slowest champion, Spirit stun can break shield cycles and reduce survivability. Ensure your slowest champion is not Brogni or a key support.
 
 ---
 
@@ -135,6 +162,12 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Simulated Damage:** 130M
 
+**Affinity Safety/Risk:**
+- **Void:** Safe for all roles.
+- **Force:** Safe for all roles.
+- **Magic:** Safe for all roles.
+- **Spirit:** **Risk** – If a key poisoner (Fayne, Venomage, Frozen Banshee) is the slowest, Spirit stun can break poison uptime and reduce damage. Try to make a non-essential champion the slowest.
+
 ---
 
 ### Team 4: Seeker 2:1 Speed/Poison Hybrid
@@ -158,6 +191,12 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Simulated Damage:** 127.7M
 
+**Affinity Safety/Risk:**
+- **Void:** Safe for all roles.
+- **Force:** Safe for all roles.
+- **Magic:** Safe for all roles.
+- **Spirit:** **Risk** – If Seeker is the slowest, Spirit stun can break the 2:1 speed cycle. Ensure Seeker is not the slowest, or use a backup TM booster.
+
 ---
 
 ### Team 5: Double Revive 2:1 Poison/Support
@@ -180,6 +219,12 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 **Weaknesses:** Lower damage, less burst.
 
 **Simulated Damage:** 120M
+
+**Affinity Safety/Risk:**
+- **Void:** Safe for all roles.
+- **Force:** Safe for all roles.
+- **Magic:** Safe for all roles.
+- **Spirit:** **Risk** – If a reviver (Godseeker Aniri or Rector Drath) is the slowest, Spirit stun can prevent timely revives and break the team. Make a non-revive champion the slowest if possible.
 
 ---
 
