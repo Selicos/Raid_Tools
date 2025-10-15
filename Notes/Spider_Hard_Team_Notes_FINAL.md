@@ -57,11 +57,18 @@
 
 - **Boss: Hard Spider (Spider’s Den, Hard Mode)**
 - **Key Mechanics:**
-  - Immune to HP Burn (Hard mode only)
-  - Summons spiderlings frequently; spiderlings deal heavy damage and can inflict poisons
-  - Boss can heal from spiderling deaths (on some stages)
-  - High resistance, high HP, high defense
-  - TM reduction and crowd control are highly effective
+- **HP Burn Immunity:** On Hard Mode, *Skavag is immune to HP Burn* and will heal if HP Burn is applied.
+- **Frequent Spiderling Summons:** Spiderlings spawn regularly and deal **heavy single-target damage**, often focusing on the lowest HP champion. They also apply **Poisons**, which stack quickly.
+- **Healing from Spiderling Deaths:** On certain stages, *Skavag heals when spiderlings die*, making AoE nukes risky.
+- **High Base Stats:** The boss has **extremely high HP, Defense, and Resistance**, requiring strong debuff accuracy and survivability.
+- **Turn Meter Control & Crowd Control:** *Skavag is vulnerable to Turn Meter reduction and crowd control*, making Coldheart, Alure, and AoE stunners highly effective.
+- **STrategy notes:**
+  - Avoid HP Burners — they heal the boss on Hard Mode.
+  - Use **crowd control**, **provokes**, or **taunts** to delay spiderling damage.
+  - **Cleanse & Heal** are essential to counteract Poison stacking.
+  - **Turn Meter Control** is highly effective — Coldheart, Alure, Armiger excel.
+  - Manual play may be required to time spiderling kills and avoid boss healing.
+  - Revivers and emergency healers are valuable for recovery after spiderling bursts.
 - **Required Stats:**
   - Accuracy: 350–400+ (for debuffs/TM control)
   - Speed: 220–250+ (to cycle skills before spiderlings move)

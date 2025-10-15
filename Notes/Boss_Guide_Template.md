@@ -19,41 +19,37 @@
 ---
 
 ## Boss Mechanics & Stat Requirements
+15. General Notes
+16. Validation & Simulation Notes
 - **Boss:** Ultra-Nightmare Clan Boss (UNM)
-- **Key Mechanics:**
   - [List boss mechanics, immunities, affinity changes, unique challenges]
   - **Affinity:** [Specify affinity for the current rotation; note if it changes. Affinity can make or break certain teams.]
-- **Required Stats:**
-  - Speed: [e.g., 250–280+ for 2:1 teams]
   - Accuracy: [e.g., 230–250+ for debuffs]
   - Resistance: [If using resist strategy or to block debuffs; may require very high stats, especially if affinity is unfavorable]
-  - HP%/DEF%: [as high as possible for survivability]
   - Crit Rate/Damage: [for damage dealers]
   - Lifesteal/Leech: [for sustain]
 - **Special Notes:**
   - Affinity issues: [Note which champions are weak/strong vs. current affinity; avoid weak affinity cleansers or block debuffs]
   - Manual play may be required for skill timing, especially for cleanses/block debuffs. Prefer full auto teams if possible.
   - Speed tuning is essential for debuff uptime and survival. Check champion skill cooldown when checking speed tune advice and attack order for each champion and the team overall.
-  - [Manual/auto play notes, and information about unique boss mechanics to now (3 items), speed tuning importance, calculator recommendations]
+
+### Manual/Auto Play Notes
+- [When manual play is required, AI preset tips, affinity-specific tuning, etc.]
 
 ---
 
-## Teams by Estimated Damage
 
-| Team Name | Simulated Damage (Avg) | Core Champions (Sample) | Key Mechanics & Notes |
-|---|:---:|---|---|
-| [Team 1 Name] | [Damage] | [Champion List] | [Strengths, weaknesses, when to use] |
-| ... | ... | ... | ... |
+|---|:---:|---|---|---|
+| [Team 1 Name] | [Damage] | [Champion List] | [Strengths, weaknesses, when to use] | **Affinity Safety/Risk:**<br>- Void: Safe for all roles.<br>- Magic: Risk for Force champions (weak hits, unreliable debuffs).<br>- Force: Risk for Magic champions (weak hits, unreliable debuffs).<br>- Spirit: Risk for Force champions (weak hits, unreliable debuffs). |
+| ... | ... | ... | ... | ... |
 
 **General Notes:**
-- [General advice on stats, gear, masteries, manual/auto, etc.]
+- [Advice on gear, masteries, stat priorities, manual/auto play, etc.]
 
 ---
 
 ## 2:1 Speed Tune Teams
-
 [Short intro: These teams take two turns for every one Clan Boss turn, maximizing debuff uptime, skill cycling, and overall damage.]
-
 
 ### Team 1: [Team Name]
 <!-- When writing team sections, highlight affinity safety or risk for each team if relevant. -->
@@ -81,7 +77,6 @@
 
 ## Geomancer-Focused & Brogni Teams
 
-### Team 1: [Team Name]
 **Core Roles:** ...
 
 **Optimal Combo:** ...
@@ -106,7 +101,6 @@
 
 ## Shield/Support Teams
 
-### Team 1: [Team Name]
 **Core Roles:** ...
 
 **Optimal Combo:** ...
@@ -131,7 +125,6 @@
 
 ## High-Damage Team Variations
 
-### Team 1: [Team Name]
 **Core Roles:** ...
 
 **Optimal Combo:** ...
@@ -156,7 +149,6 @@
 
 ## Poison-Focused Teams
 
-### Team 1: [Team Name]
 **Core Roles:** ...
 
 **Optimal Combo:** ...
@@ -181,7 +173,6 @@
 
 ## HP Burn/Hybrid Teams
 
-### Team 1: [Team Name]
 **Core Roles:** ...
 
 **Optimal Combo:** ...
@@ -206,7 +197,6 @@
 
 ## Turn Meter/Speed Manipulation Teams
 
-### Team 1: [Team Name]
 **Core Roles:** ...
 
 **Optimal Combo:** ...
@@ -231,7 +221,6 @@
 
 ## Gimmick/Niche Mechanic Teams
 
-### Team 1: [Team Name]
 **Core Roles:** ...
 
 **Optimal Combo:** ...
@@ -256,7 +245,6 @@
 
 ## High-Survivability/Counterattack Teams
 
-### Team 1: [Team Name]
 **Core Roles:** ...
 
 **Optimal Combo:** ...
@@ -281,7 +269,6 @@
 
 ## Best Champions & Team Participation
 
-| Champion | Role(s) | Best Teams | Notes |
 |---|---|---|---|
 | [Champion] | [Roles] | [Teams] | [Notes] |
 | ... | ... | ... | ... |
@@ -290,53 +277,40 @@
 
 ## Direct Champion Comparisons by Role
 
-### HP Burn Champions
 - [Champion]: [Notes]
 
 ### TM Boosters
 - [Champion]: [Notes]
-
 ### Shield/Reflect Champions
 - [Champion]: [Notes]
-
 ### Buff Extenders
 - [Champion]: [Notes]
-
 ### Poisoners
 - [Champion]: [Notes]
-
 ### Revivers
 - [Champion]: [Notes]
-
 ### DEF/Support Champions
 - [Champion]: [Notes]
-
 ### Notable Alternates
 - [Champion]: [Notes]
-
 ---
 
-## Ideal Champions to Pull (by Role)
 
-### Unkillable/Block Damage Enablers
 - [Champion 1]
 - [Champion 2]
 
 ### HP Burn/Poison Damage Dealers
-- [Champion 1]
-- [Champion 2]
 
 ### Speed/Turn Meter Manipulation
-- [Champion 1]
-- [Champion 2]
 
 ### Buff Extension/Revive/Support
-- [Champion 1]
-- [Champion 2]
 
 ### Debuff/Weaken/DEF Down/ATK Down
-- [Champion 1]
-- [Champion 2]
 
 **Notes:**
-- [Instructions for prioritizing pulls, rationale, and formatting.]
+---
+
+- Number of simulations/test runs per team (minimum 3 recommended)
+- Affinity safety/risk notes based on observed weak hit rates and debuff reliability
+- Data sources used for validation (Hellhades, Ayumilove, in-game testing)
+

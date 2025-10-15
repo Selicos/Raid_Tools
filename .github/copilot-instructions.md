@@ -30,18 +30,44 @@
 - Never overwrite the original file directly; always preserve previous versions.
 - All updates must be reviewed and compared before becoming canonical.
 
-### 4. Section-by-Section Update
-- For each section in the Table of Contents:
-  1. Boss Mechanics & Stat Requirements: Re-validate mechanics, stat thresholds, and affinity notes.
-  2. Teams by Estimated Damage/Clear Speed: Update table, add affinity column.
-  3. Detailed Team Sections: Add/refresh affinity notes for each team.
-  4. Best Champions & Team Participation: Update for new teams/champions.
-  5. Direct Champion Comparisons by Role: Update for new roster.
-  6. Ideal Champions to Pull: Remove now-owned, reprioritize.
+### 4. Section-by-Section Update & Guide Maintenance Workflow
+- For each section in the Table of Contents (see `Notes/Boss_Guide_Template.md` for canonical structure and required sections):
+   1. Boss Mechanics & Stat Requirements: Re-validate mechanics, stat thresholds, affinity notes, and include a "Manual/Auto Play Notes" subsection.
+   2. Teams by Estimated Damage/Clear Speed: Update table, add explicit, multi-line affinity column.
+   3. Detailed Team Sections: Add/refresh explicit, multi-line affinity notes for each team; ensure all required subfields are present.
+   4. Best Champions & Team Participation: Update for new teams/champions.
+   5. Direct Champion Comparisons by Role: Update for new roster.
+   6. Ideal Champions to Pull: Remove now-owned, reprioritize.
+   7. General Notes: Add or update actionable advice on gear, masteries, stat priorities, and manual/auto play.
+   8. Validation & Simulation Notes: Document all validation and simulation steps, including number of test runs, clear time methodology, affinity risk observations, and data sources.
+
+#### Guide Creation & Update Process
+- **For new boss guides:**
+   1. Copy the latest `Notes/Boss_Guide_Template.md` as the starting point.
+   2. Populate each section with boss-specific and team-specific information, using only owned champions and validated data.
+   3. Ensure all sections are present, numbered, and formatted per the template, including explicit affinity notes and validation/simulation documentation.
+
+- **For updating existing FINAL boss guides:**
+   1. Create a new draft file (e.g., `BossName_Team_Notes_DRAFT.md` or with a date-stamp) rather than editing the FINAL file directly.
+   2. Compare the FINAL file section-by-section to the current template, adding or updating any missing or outdated sections (Manual/Auto Play Notes, General Notes, explicit Affinity Safety/Risk, Validation & Simulation Notes, etc.).
+   3. Update all team recommendations and analysis based on the current owned champion list, verifying that all team data and analysis is correct for the boss and available options.
+   4. Recommend additional teams if new champions have been added since the last update.
+   5. Stage the draft for review and comparison before replacing the FINAL file.
+
+- **For all guides:**
+   - Use the template as the canonical reference for structure, content, and formatting.
+   - Document all validation and simulation steps in the "Validation & Simulation Notes" section at the end of each guide.
+   - Ensure all guides use consistent section numbering and explicit affinity notes.
+   - Review and update guides regularly as the owned champion list or game mechanics change.
 
 ### 5. Validation & Documentation
 - All champion and boss data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki).
-- Document all validation and simulation steps in the Markdown file or commit message.
+- Every boss/team Markdown file must include a **'Validation & Simulation Notes'** section at the end, or explicit documentation of simulation/validation steps for each team. This section should state:
+   - Number of simulations or test runs performed (minimum 3 per team recommended)
+   - How clear times and success rates were determined (average, fastest, manual/auto, etc.)
+   - Affinity safety/risk notes are based on observed weak hit rates and debuff reliability
+   - Data sources used for validation (e.g., Hellhades, Ayumilove, in-game testing)
+- Document all validation and simulation steps in the Markdown file or commit message for transparency and reproducibility.
 - Run at least 3 simulations for each team and summarize results.
 
 ### 6. No Deletion Policy
@@ -64,24 +90,64 @@
 - **Markdown-first:** All boss and team guides must be written in Markdown, following the standard template. JSON is for internal data only.
 - **Standard Template:** Every boss/team Markdown file must include the sections and structure shown in `Notes/Boss_Guide_Template.md`. Use this template as the canonical reference for formatting, required sections, and placeholder data. The template includes:
    1. Table of Contents (with Boss Mechanics & Stat Requirements as section 1)
-   2. Boss Mechanics & Stat Requirements (section 1)
-   3. Teams by Estimated Damage/Clear Speed (table)
-   4. Detailed Team Sections (each with: core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results)
+   2. Boss Mechanics & Stat Requirements (with Manual/Auto Play Notes)
+   3. Teams by Estimated Damage/Clear Speed (table, with explicit, multi-line Affinity Safety/Risk column)
+   4. Detailed Team Sections (each with: core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results, explicit affinity safety/risk)
    5. Best Champions & Team Participation (table)
    6. Direct Champion Comparisons by Role (table or summary)
    7. Ideal Champions to Pull (indexed, actionable list)
+   8. General Notes (gear, masteries, stat priorities, manual/auto advice)
+   9. Validation & Simulation Notes (test runs, clear time methodology, affinity risk, data sources)
 - **No file/folder deletion:** AI agents must never delete files or folders—never run or suggest destructive operations. If a file must be replaced with a large change, create a new file instead.
 - **Prompt/JSON overwrite policy:** Never overwrite a completed prompt in `output/completed_prompts/`. Prompts in `input/Prompt/` are always overwritten unless a completed prompt exists.
 - **Validation:** All champion data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki). Document validation in Markdown or commit.
 - **No legacy paths:** Always use the latest folder/script names (e.g., `ChampionIntake/`, not `Champion Review and Comparison/`).
 - **Testing:** All new features require pytest tests in `Tests/` or `root_Tests/`.
 - **Formatting:** All Markdown files must use consistent header levels and section numbering. Use Black and flake8 for Python code. Use line-by-line edits for clarity and easier review. Prefer creating a new file for large changes.
-- **Affinity review** All teams should be reviewed for affinity safety/risk. Include explicit affinity information in the Boss Mechanics & Stat Requirements section, and highlight affinity considerations in each team's detailed section.
+- **Affinity review** All teams should be reviewed for affinity safety/risk. Include explicit affinity information in the Boss Mechanics & Stat Requirements section, and highlight affinity considerations in each team's detailed section using the multi-line format from the template.
 - **Affinity Safety/Risk:**
    - Void: Safe for all roles.
    - Force: Safe unless [specific champion] is Magic affinity.
    - Magic: Risk if [specific champion] is Force affinity.
    - Spirit: Risk if slowest champion is a key role (e.g., Geomancer, Brogni, main revive, etc.); Spirit stun can break team cycle.
+
+
+# Boss Guide Creation & Update Workflow
+
+**Summary:**
+All boss and team guides must use `Notes/Boss_Guide_Template.md` as the single source of truth for required sections, structure, and formatting. Always start from the template for new guides, and use it as the reference when updating existing guides. This ensures consistency, completeness, and actionable documentation across all bosses.
+
+## For New Boss Guides
+1. Copy the latest `Notes/Boss_Guide_Template.md` as the starting point, and name the new file using the format `BOSSNAME_Difficulty_Team_Notes.md` (e.g., `FireKnight_Hard_Team_Notes.md`).
+2. Populate each section with boss-specific and team-specific information, using only owned champions and validated data.
+3. Ensure all sections are present, numbered, and formatted per the template, including explicit affinity notes and validation/simulation documentation.
+
+## For Updating Existing FINAL Boss Guides
+1. Create a new draft file (e.g., `BOSSNAME_Difficulty_Team_Notes_DRAFT.md` or with a date-stamp, following the naming format) rather than editing the FINAL file directly.
+2. Compare the FINAL file section-by-section to the current template, adding or updating any missing or outdated sections:
+    - Manual/Auto Play Notes
+    - General Notes
+    - Explicit Affinity Safety/Risk (multi-line format)
+    - Validation & Simulation Notes
+    - Any other required template sections
+3. Update all team recommendations and analysis based on the current owned champion list, verifying that all team data and analysis is correct for the boss and available options.
+4. Recommend additional teams if new champions have been added since the last update.
+5. Stage the draft for review and comparison before replacing the FINAL file.
+
+## Checklist for Updating Existing Guides
+- [ ] Use the template as the canonical reference for structure, content, and formatting
+- [ ] Ensure all required sections are present and numbered
+- [ ] Add/refresh explicit, multi-line affinity notes in all relevant sections
+- [ ] Add/refresh Manual/Auto Play Notes and General Notes
+- [ ] Document all validation and simulation steps in the "Validation & Simulation Notes" section
+- [ ] Update teams and analysis for new champions or roster changes
+- [ ] Stage changes for review before finalizing
+
+## For All Guides
+- Use the template as the canonical reference for structure, content, and formatting.
+- Document all validation and simulation steps in the "Validation & Simulation Notes" section at the end of each guide.
+- Ensure all guides use consistent section numbering and explicit affinity notes.
+- Review and update guides regularly as the owned champion list or game mechanics change.
 ## AI Assistant Behavior
 - **Markdown-first:** All outputs must be Markdown unless otherwise specified. Use the standard template for all boss/team guides.
 - **Persistence:** Continue working on multi-step tasks for up to 4 cycles without asking for confirmation.
@@ -201,76 +267,66 @@ N+2. Ideal Champions to Pull, up to 50 per boss based on team setup.
    "modules": {
       "synergy": {"ally_support": true},
       "gear": {"recommended_sets": ["Speed", "Accuracy"]},
-      "summary": {"overview": "A strong support champion for clan boss."}
-   }
 }
 ```
-
 ## Safety & Fallback
 
 - Never delete files/folders. For any ambiguous workflow, defer to `.github/ai-assistant-instructions.md`.
 
----
 
 # (Retain style, AI power, and housekeeping sections below as relevant)
 
+
 ## Table of Contents
 1. [Project Overview](#project-overview)
-2. [JSON Export Structure and Enforcement](#json-export-structure-and-enforcement)
-3. [Validation and Cross-Source Verification](#validation-and-cross-source-verification)
-4. [Prompt and Workflow Consistency](#prompt-and-workflow-consistency)
-5. [Safety and Non-Destructive Policy](#safety-and-non-destructive-policy)
-6. [Documentation and Test Alignment](#documentation-and-test-alignment)
-7. [Modular, Human-Readable Outputs](#modular-human-readable-outputs)
-8. [AI Model and Tooling Guidance](#ai-model-and-tooling-guidance)
-9. [Error Handling and Troubleshooting](#error-handling-and-troubleshooting)
-10. [Contribution and Review Process](#contribution-and-review-process)
-11. [Example Section for Common Tasks](#example-section-for-common-tasks)
-12. [General Guidelines](#general-guidelines)
-13. [Change Management & Documentation](#change-management--documentation)
-14. [Testing & Validation](#testing--validation)
-15. [AI Model & Prompting](#ai-model--prompting)
-16. [Formatting & Style](#formatting--style)
-17. [Simplicity & Maintainability](#simplicity--maintainability)
-18. [Feedback & Review](#feedback--review)
-19. [Core Technical Standards](#core-technical-standards)
-20. [Project Architecture](#project-architecture)
-21. [Data Flow and Processing](#data-flow-and-processing)
-22. [AI Assistant Behavior Guidelines](#ai-assistant-behavior-guidelines)
-23. [Common Task Patterns](#common-task-patterns)
-24. [Automation and Workflow](#automation-and-workflow)
-25. [Quality Assurance](#quality-assurance)
-26. [Security and Best Practices](#security-and-best-practices)
-27. [Integration Guidelines](#integration-guidelines)
-28. [Troubleshooting Common Issues](#troubleshooting-common-issues)
-29. [Recent Changes & Updates](#recent-changes--updates)
-30. [Future Development Considerations](#future-development-considerations)
-31. [Contact and Contribution](#contact-and-contribution)
-32. [Handling Deprecated Scripts & Data Migrations](#handling-deprecated-scripts--data-migrations)
+2. [Boss Guide Creation & Update Workflow](#boss-guide-creation--update-workflow)
+3. [JSON Export Structure and Enforcement](#json-export-structure-and-enforcement)
+4. [Validation and Cross-Source Verification](#validation-and-cross-source-verification)
+8. [Modular, Human-Readable Outputs](#modular-human-readable-outputs)
+9. [AI Model and Tooling Guidance](#ai-model-and-tooling-guidance)
+11. [Contribution and Review Process](#contribution-and-review-process)
+12. [Example Section for Common Tasks](#example-section-for-common-tasks)
+13. [General Guidelines](#general-guidelines)
+14. [Change Management & Documentation](#change-management--documentation)
+15. [Testing & Validation](#testing--validation)
+16. [AI Model & Prompting](#ai-model--prompting)
+17. [Formatting & Style](#formatting--style)
+18. [Simplicity & Maintainability](#simplicity--maintainability)
+19. [Feedback & Review](#feedback--review)
+20. [Core Technical Standards](#core-technical-standards)
+22. [Data Flow and Processing](#data-flow-and-processing)
+23. [AI Assistant Behavior Guidelines](#ai-assistant-behavior-guidelines)
+24. [Common Task Patterns](#common-task-patterns)
+25. [Automation and Workflow](#automation-and-workflow)
+27. [Security and Best Practices](#security-and-best-practices)
+28. [Integration Guidelines](#integration-guidelines)
+29. [Troubleshooting Common Issues](#troubleshooting-common-issues)
+30. [Recent Changes & Updates](#recent-changes--updates)
+31. [Future Development Considerations](#future-development-considerations)
+32. [Contact and Contribution](#contact-and-contribution)
 
 ---
 
 ## Project Overview
 Raid Tools is a Python-based project for analyzing Raid Shadow Legends champion data. The project generates JSON champion profiles, performs skill cycle analysis, and creates human-readable markdown summaries. This project follows modern Python practices with comprehensive testing, automation, and documentation standards.
 
----
-
 ## JSON Export Structure and Enforcement
 - All champion JSON exports must be strictly modular and nested.
 - Each module (e.g., `synergy`, `gear`, `summary`) must be a sub-object under a `modules` dictionary.
 - Only the allowed top-level keys (`champion`, `rarity`, `owned`, `modules`) are permitted.
-- Keys like `relentless_viability` and `mastery_impact_of_gear` must only appear within their relevant module object, never at the top level.
-- Reference the template in `ChampionIntake/templates/logTemplate.json` as the canonical structure.
+
 
 ## Validation and Cross-Source Verification
-- All champion data (skills, stats, multipliers, cooldowns, etc.) must be validated against at least two authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades).
-- Document the validation process in prompts, commit messages, or workflow logs.
+
+### Boss Mechanic Validation (2025+)
+- For all boss mechanic updates, use RaidHQ (https://raidhq.gg/) as the primary source if available.
+- Cross-check with Ayumilove, HellHades, and in-game data for confirmation.
+- Document the validation source(s) in the Markdown guide and commit message.
 
 ## Prompt and Workflow Consistency
-- All prompt completions must use the template in `ChampionIntake/templates/Prompt_Template.md`.
-- For now, ignore the completed prompt file and directory. Only generate the JSON response.
 - Use the generated JSON in the summary generation script to create a markdown file for review.
 - Data source priority for champion skill and stat information: Ayumilove (text) > HellHades > other sources.
+- For boss mechanics, use RaidHQ as primary, then Ayumilove/HellHades/in-game as fallback.
 - JSONs must be generated only from validated, completed prompts.
 
 ## Safety and Non-Destructive Policy
@@ -278,14 +334,6 @@ Raid Tools is a Python-based project for analyzing Raid Shadow Legends champion 
 - All destructive actions must be confirmed and executed by a human.
 
 ## Documentation and Test Alignment
-- Any new feature, script, or workflow change must be accompanied by updates to documentation and tests.
-- README and internal docs must always reflect the current workflow and file structure.
-
-## Modular, Human-Readable Outputs
-- All outputs (JSON, markdown, analysis) must be human-readable, modular, and suitable for both AI and human review.
-- Use clear headers, bullet points, and tables in markdown outputs.
-
-## AI Model and Tooling Guidance
 - Use the most advanced model available for prompt completion, JSON generation, and workflow tasks (e.g., GPT-4o, Claude Sonnet 4).
 - Use models with strong reasoning for documentation review, debugging, and refactoring.
 
@@ -314,19 +362,8 @@ Raid Tools is a Python-based project for analyzing Raid Shadow Legends champion 
       },
       "summary": {
          "overview": "A strong support champion for clan boss."
-      }
-   }
-}
-```
-### Example: Validation Log
-```
-Validated skills and multipliers against Raid Shadow Legends Wiki and Ayumilove. Both sources agree on cooldowns and multipliers. No discrepancies found.
 ```
 ### Example: Markdown Output
-```
-# Example Champion Summary
-
-## Executive Summary
 Example Champion is a top-tier support for Clan Boss, excelling in speed and debuff management.
 
 ## Skill Breakdown
