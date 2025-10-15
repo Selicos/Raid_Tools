@@ -102,48 +102,77 @@ def create_vscode_configs():
   "python.formatting.provider": "black"
 }}"""
         )
-    if not TASKS_JSON.exists():
+        # Always write the current tasks.json content
         TASKS_JSON.write_text(
-            """{
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Run Champion Intake",
-      "type": "shell",
-      "command": "python",
-      "args": ["ChampionIntake/Champ_Intake.py"],
-      "group": {"kind": "build", "isDefault": true}
-    },
-    {
-      "label": "Run Champion Comparison Tracker",
-      "type": "shell",
-      "command": "python",
-      "args": ["ChampionIntake/Comparisons/Champ_Comparison_Track_owned.py"],
-      "group": {"kind": "build", "isDefault": false}
-    },
-    {
-      "label": "Cleanup Duplicate Champions",
-      "type": "shell",
-      "command": "python",
-      "args": ["ChampionIntake/Tools/cleanup_duplicate_champions.py"],
-      "group": {"kind": "build", "isDefault": false}
-    },
-    {
-      "label": "Run Champion Analysis Tool",
-      "type": "shell",
-      "command": "python",
-      "args": ["championAnalysis.py"],
-      "options": {"cwd": "${workspaceFolder}/ChampionAnalysisTool"}
-    },
-    {
-      "label": "Generate Champion Summaries",
-      "type": "shell",
-      "command": "python",
-      "args": ["generateChampionSummaries.py"],
-      "options": {"cwd": "${workspaceFolder}/ChampionSummary"}
-    }
-  ]
-}"""
+                '{\n'
+                '  "version": "2.0.0",\n'
+                '  "tasks": [\n'
+                '    {\n'
+                '      "label": "Run Champion Intake",\n'
+                '      "type": "shell",\n'
+                '      "command": "python ChampionIntake/Champ_Intake.py",\n'
+                '      "group": "build",\n'
+                '      "presentation": { "reveal": "always" },\n'
+                '      "problemMatcher": []\n'
+                '    },\n'
+                '    {\n'
+                '      "label": "Run Champion Turn Analysis",\n'
+                '      "type": "shell",\n'
+                '      "command": "python ChampionTurnAnalysis/ChampionTurnAnalysis.py",\n'
+                '      "group": "build",\n'
+                '      "presentation": { "reveal": "always" },\n'
+                '      "problemMatcher": []\n'
+                '    },\n'
+                '    {\n'
+                '      "label": "Generate Champion Summaries",\n'
+                '      "type": "shell",\n'
+                '      "command": "python ChampionSummary/generateChampionSummaries.py",\n'
+                '      "group": "build",\n'
+                '      "presentation": { "reveal": "always" },\n'
+                '      "problemMatcher": []\n'
+                '    },\n'
+                '    {\n'
+                '      "label": "Setup Environment",\n'
+                '      "type": "shell",\n'
+                '      "command": "python Tools/Setup_Environment.py",\n'
+                '      "group": { "kind": "build", "isDefault": false },\n'
+                '      "presentation": { "reveal": "never" },\n'
+                '      "problemMatcher": []\n'
+                '    },\n'
+                '    {\n'
+                '      "label": "Validate JSON",\n'
+                '      "type": "shell",\n'
+                '      "command": "python Tools/validate_json.py",\n'
+                '      "group": "build",\n'
+                '      "presentation": { "reveal": "always" },\n'
+                '      "problemMatcher": []\n'
+                '    },\n'
+                '    {\n'
+                '      "label": "First Run: Setup & Activation Instructions",\n'
+                '      "type": "shell",\n'
+                '      "command": "echo To activate the virtual environment, run: .\\.venv\\Scripts\\Activate (Windows) or source .venv/bin/activate (macOS/Linux)",\n'
+                '      "group": { "kind": "build", "isDefault": true },\n'
+                '      "presentation": { "reveal": "always" },\n'
+                '      "problemMatcher": [],\n'
+                '      "dependsOn": [ "Setup Environment" ],\n'
+                '      "dependsOrder": "sequence"\n'
+                '    }\n'
+                '  ],\n'
+                '  "inputs": [\n'
+                '    {\n'
+                '      "id": "ChampName",\n'
+                '      "type": "promptString",\n'
+                '      "description": "Enter the champion name",\n'
+                '      "default": "Brogni"\n'
+                '    },\n'
+                '    {\n'
+                '      "id": "Rarity",\n'
+                '      "type": "promptString",\n'
+                '      "description": "Enter rarity (6/Mythic, 5/Legendary, 4/Epic, 3/Rare)",\n'
+                '      "default": "5"\n'
+                '    }\n'
+                '  ]\n'
+                '}\n'
         )
     if not EXTENSIONS_JSON.exists():
         EXTENSIONS_JSON.write_text(

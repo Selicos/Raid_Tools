@@ -1,6 +1,26 @@
 {
 	"version": "2.0.0",
-	"tasks": [
+			"tasks": [
+				{
+					"label": "Run Champion Intake",
+					"type": "shell",
+					"command": "python ChampionIntake/Champ_Intake.py",
+					"group": "build",
+					"presentation": {
+						"reveal": "always"
+					},
+					"problemMatcher": []
+				},
+			{
+				"label": "Run Champion Turn Analysis",
+				"type": "shell",
+				"command": "python ChampionTurnAnalysis/ChampionTurnAnalysis.py",
+				"group": "build",
+				"presentation": {
+					"reveal": "always"
+				},
+				"problemMatcher": []
+			},
 		{
 			"label": "Generate Champion Summaries",
 			"type": "shell",
@@ -25,7 +45,7 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "Validate Champion JSON",
+			"label": "Validate JSON",
 			"type": "shell",
 			"command": "python Tools/validate_json.py",
 			"group": "build",
@@ -50,24 +70,6 @@
 				"Setup Environment"
 			],
 			"dependsOrder": "sequence"
-		},
-		{
-			"label": "Organize Completed Prompts",
-			"type": "shell",
-			"command": "if not exist output\\completed_prompts mkdir output\\completed_prompts && move /Y *_prompt.completed.md output\\completed_prompts\\ 2>nul || echo No files to move.",
-			"group": "build",
-			"presentation": {
-				"reveal": "always"
-			},
-			"problemMatcher": [],
-			"detail": "Moves all *_prompt.completed.md files to output/completed_prompts/"
-		},
-		{
-			"label": "Organize Completed Prompts",
-			"type": "shell",
-			"command": "if not exist output\\completed_prompts mkdir output\\completed_prompts && move /Y *_prompt.completed.md output\\completed_prompts\\ 2>nul || echo No files to move.",
-			"problemMatcher": [],
-			"group": "build"
 		}
 	],
 	"inputs": [
