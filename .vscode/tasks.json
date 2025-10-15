@@ -2,21 +2,6 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
-			"label": "Batch Prompt Generation (All Owned)",
-			"type": "shell",
-			"command": "python",
-			"args": [
-				"Tools/import_owned_champions.py",
-				"--from-owned-list",
-				"--trigger-intake"
-			],
-			"group": "build",
-			"presentation": {
-				"reveal": "always"
-			},
-			"problemMatcher": []
-		},
-		{
 			"label": "Generate Champion Summaries",
 			"type": "shell",
 			"command": "python ChampionSummary/generateChampionSummaries.py",
