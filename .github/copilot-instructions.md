@@ -2,6 +2,46 @@
 
 > This file is the authoritative, codebase-specific guide for all AI coding agents. For universal project rules, see `.github/ai-assistant-instructions.md` (fallback for any ambiguity).
 ## Quick Reference: Markdown-First Boss/Team Guide Workflow
+## Update & Staging Policy for Owned Champion Changes
+
+When the owned champion list (`input/Owned_Champions/Owned_champion_list.md`) is updated, all boss/team Markdown files must be updated as follows:
+
+1. **Staging in Separate File:**
+   - All updates must be staged in a new file (e.g., with `_v2.md` or date-stamped suffix) for review and comparison. Never overwrite the original file directly.
+   - The new file must be saved in the same directory as the original (e.g., `Notes/` or `output/`).
+
+2. **Section-by-Section Update & Analysis:**
+   - For each section in the standard Table of Contents, perform a fresh analysis and update:
+     1. **Boss Mechanics & Stat Requirements:**
+        - Re-validate boss mechanics, stat thresholds, and unique challenges based on the new roster.
+        - Note any changes in stat requirements or mechanics due to new champion options.
+     2. **Teams by Estimated Damage/Clear Speed:**
+        - Re-run simulations and update the summary table with new teams, damage, and clear speed estimates.
+        - Clearly mark new or improved teams enabled by new champions.
+     3. **Detailed Team Sections:**
+        - For each team, update core roles, optimal combos, alternates, speed tuning, gear, masteries, manual/auto notes, strengths, weaknesses, and simulated results.
+        - Add new teams or variants enabled by new champions; remove or archive obsolete teams.
+     4. **Best Champions & Team Participation:**
+        - Update the participation table to reflect new team compositions and champion roles.
+        - Highlight new champions and their impact.
+     5. **Direct Champion Comparisons by Role:**
+        - Re-analyze and update role-based comparisons, including new champions and their strengths/weaknesses.
+     6. **Ideal Champions to Pull:**
+        - Revise the list of ideal champions to pull, removing any now-owned champions and reprioritizing based on new team options.
+
+3. **Validation & Documentation:**
+   - All new data, team mechanics, and champion roles must be validated with at least two sources (Ayumilove, Hellhades, Wiki).
+   - Document all validation and simulation steps in the new Markdown file or commit message.
+
+4. **Review & Comparison:**
+   - The new file must be reviewed and compared to the previous version before replacing or archiving the old file.
+   - Only after review and approval should the new file become canonical.
+
+5. **No Deletion:**
+   - Never delete the original file as part of this process. Always preserve previous versions for audit and rollback.
+
+**Summary:**
+Every time the owned champion list changes, a new, fully re-analyzed Markdown file must be staged for review, with all sections updated and validated. This ensures traceability, accuracy, and safe review of all team advice outputs.
 
 - **Primary Output:** All boss and team guides must be written in Markdown, following the standard template below. JSON is for internal data only.
 - **Template:** Every boss/team Markdown file must include:
@@ -19,7 +59,7 @@
 ## Project Focus & Data Flow
 - **Main workflow:** Use `input/Owned_Champions/Owned_champion_list.md` to generate boss-specific, actionable Markdown (`.md`) outputs for Raid Shadow Legends. Markdown is now the primary and canonical output format for all boss and team guides.
 - **Boss context:** Default to Hard mode for all bosses; design for easy expansion to other difficulties and boss types.
-- **Champion data:** Always validate skills/mechanics with at least two online sources (Ayumilove, Hellhades, Wiki). Document validation in Markdown or commit messages.
+- **Champion data:** Always validate skills/mechanics with at least two online sources (Ayumilove, Hellhades, etc). Document validation in Markdown or commit messages.
 - **Output:** Modular, human-readable Markdown for each boss, using only owned champions. All outputs must follow the standard template and include boss mechanics, simulation summaries, and an indexed list of ideal champions to pull for upgrades.
 - **No legacy workflows:** Remove or ignore all references to deprecated scripts, folders, or paths (e.g., `Champion Review and Comparison/`). Only use current, documented scripts and folder names.
 ## Essential Workflows
@@ -67,7 +107,7 @@
 ...
 N. Best Champions & Team Participation
 N+1. Direct Champion Comparisons by Role
-N+2. Ideal Champions to Pull
+N+2. Ideal Champions to Pull, up to 50 per boss based on team setup.
 
 ---
 
