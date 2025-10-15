@@ -37,7 +37,25 @@ def load_champion_json(champion_name: str) -> dict:
     for fname in os.listdir(CHAMPIONS_DIR):
         if fname.lower() == f"{champion_name.lower()}.json":
             with open(os.path.join(CHAMPIONS_DIR, fname), encoding="utf-8") as f:
-                return json.load(f)
+                data = json.load(f)
+                # If using new template, flatten for backward compatibility
+                if "skills" in data and isinstance(data["skills"], dict):
+                    return data
+                # If using new modular template, convert to expected structure
+                # (skills, overview, team_inputs, etc. at top level)
+                result = {}
+                # Copy top-level keys if present
+                for k in ["skills", "overview", "team_inputs", "books", "aura", "ai_logic", "mastery_proc_simulation", "clan_boss_damage", "content_breakdown", "synergy_speed", "utility_investment", "turn_meter_gear", "final_summary", "community"]:
+                    if k in data:
+                        result[k] = data[k]
+                # For legacy keys, try to map from new template
+                if "base_stats" in data:
+                    result["base_stats"] = data["base_stats"]
+                if "overview" in data:
+                    for k, v in data["overview"].items():
+                        if k not in result:
+                            result[k] = v
+                return result
     raise FileNotFoundError(f"Champion JSON not found: {champion_name}")
 
 def extract_attacks_and_cooldowns(champion_data: dict) -> List[dict]:
@@ -47,8 +65,8 @@ def extract_attacks_and_cooldowns(champion_data: dict) -> List[dict]:
     skills = champion_data.get("skills", {})
     attacks = []
     for key in ["a1", "a2", "a3", "a4", "a5", "a6"]:
-        if key in skills:
-            skill = skills[key]
+        skill = skills.get(key, {})
+        if skill:
             # Advanced parsing placeholder
             parsed = parse_skill_description(skill.get("notes", ""))
             bonus_hits = parsed.get("bonus_hits", 0)
@@ -58,13 +76,13 @@ def extract_attacks_and_cooldowns(champion_data: dict) -> List[dict]:
                 "cooldown": parse_cooldown(skill.get("cooldown", "")),
                 "order": key,
                 "multiplier": skill.get("multiplier", ""),
-                "hit_count": skill.get("hit_count", 1),
+                "hit_count": skill.get("hit_count", 1) or 1,
                 "type": skill.get("type", "Single Target"),
                 "bonus_hits": bonus_hits,
                 "extra_turn": extra_turn,
                 "buffs": extract_buffs(skill),
                 "debuffs": extract_debuffs(skill),
-                "notes": skill.get("notes", "").lower()
+                "notes": (skill.get("notes") or "").lower()
             })
     return attacks
 
@@ -325,16 +343,21 @@ def run_champion_analysis():
             champion_name = os.path.splitext(fname)[0]
             try:
                 champion_data = load_champion_json(champion_name)
-                role = champion_data.get("overview", {}).get("role", "")
-                stats = champion_data.get("overview", {}).get("base_stats", None)
+                # Use modular structure if present
+                overview = champion_data.get("overview", {})
+                role = overview.get("role", "")
+                stats = overview.get("base_stats", None) or champion_data.get("base_stats", None)
                 attacks = extract_attacks_and_cooldowns(champion_data)
-                expected_order = champion_data.get("skills", {}).get("rotation", {}).get("optimal_cycle", [])
-                skill_priority = champion_data.get("team_inputs", {}).get("skill_priority", None)
-                disabled_skills = champion_data.get("team_inputs", {}).get("disabled_skills", None)
+                skills = champion_data.get("skills", {})
+                rotation = skills.get("rotation", {}) if isinstance(skills, dict) else {}
+                expected_order = rotation.get("optimal_cycle", [])
+                team_inputs = champion_data.get("team_inputs", {})
+                skill_priority = team_inputs.get("skill_priority", None)
+                disabled_skills = team_inputs.get("disabled_skills", None)
                 expected_names = []
                 for atk in expected_order:
                     for a in attacks:
-                        if a["order"].lower() == atk.lower() or a["name"].lower() == atk.lower():
+                        if a["order"].lower() == str(atk).lower() or a["name"].lower() == str(atk).lower():
                             expected_names.append(a["name"])
                             break
                 scenario_descs = {}

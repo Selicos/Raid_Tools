@@ -2,7 +2,7 @@
 
 # Alphabetized
 
-- Abbess | Rarity: Legendary | Last Updated: 2025-10-14
+- Abbess | Last Updated: 2025-10-14
 - Alure | Rarity: Epic | Last Updated: 2025-10-14
 - Alice the Wanderer | Rarity: Legendary | Last Updated: 2025-10-14
 - Godseeker Aniri | Rarity: Epic | Last Updated: 2025-10-14

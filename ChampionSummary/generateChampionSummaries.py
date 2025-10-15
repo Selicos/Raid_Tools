@@ -67,6 +67,9 @@ def write_champion_summary_md(champ: Dict[str, Any], champ_name: str) -> None:
     investment = champ.get('investment', {})
     skills = champ.get('skills', {})
     team_inputs = champ.get('team_inputs', {})
+    # Fallbacks for new template keys
+    if not overview and 'base_stats' in champ:
+        overview = {k: champ.get(k) for k in ['role', 'rarity', 'archetype', 'primary_damage_stat', 'skill_scaling', 'best_mastery', 'booking_roi', 'gear_sets', 'gear_tradeoffs', 'focus_stats', 'accuracy_resistance', 'best_dungeon_use'] if k in champ}
     md = f"# {champ_name} — Champion Summary\n\n"
     md += f"## Executive Summary\n"
     md += f"- **Role:** {overview.get('role', 'N/A')}\n"
@@ -78,15 +81,31 @@ def write_champion_summary_md(champ: Dict[str, Any], champ_name: str) -> None:
 
     md += f"## Recommended Gear & Stats\n"
     md += f"- **Primary Stat:** {overview.get('primary_damage_stat', 'N/A')}\n"
-    md += f"- **Focus Stats (Arena/Dungeons):** {', '.join(overview.get('focus_stats', {}).get('arena_dungeons', []))}\n"
-    md += f"- **Focus Stats (Clan Boss):** {', '.join(overview.get('focus_stats', {}).get('clan_boss', []))}\n"
-    md += f"- **Gear Sets (PvP Offense):** {', '.join(overview.get('gear_sets', {}).get('pvp_offense', []))}\n"
-    md += f"- **Gear Sets (PvP Defense):** {', '.join(overview.get('gear_sets', {}).get('pvp_defense', []))}\n"
-    md += f"- **Gear Sets (Clan Boss):** {', '.join(overview.get('gear_sets', {}).get('clan_boss', []))}\n"
-    md += f"- **Gear Sets (Dungeons):** {', '.join(overview.get('gear_sets', {}).get('dungeons', []))}\n"
-    md += f"- **Gear Sets (Hydra):** {', '.join(overview.get('gear_sets', {}).get('hydra', []))}\n"
-    md += f"- **Gear Sets (Iron Twins):** {', '.join(overview.get('gear_sets', {}).get('iron_twins', []))}\n"
-    md += f"- **Gear Sets (Solo Farming):** {', '.join(overview.get('gear_sets', {}).get('solo_farming', []))}\n"
+    # Try both new and legacy focus_stats keys
+    focus_stats = overview.get('focus_stats', {})
+    if isinstance(focus_stats, dict):
+        md += f"- **Focus Stats (Arena/Dungeons):** {', '.join(focus_stats.get('arena_dungeons', focus_stats.get('all', [])))}\n"
+        md += f"- **Focus Stats (Clan Boss):** {', '.join(focus_stats.get('clan_boss', []))}\n"
+    else:
+        md += f"- **Focus Stats (Arena/Dungeons):** N/A\n"
+        md += f"- **Focus Stats (Clan Boss):** N/A\n"
+    gear_sets = overview.get('gear_sets', {})
+    if isinstance(gear_sets, dict):
+        md += f"- **Gear Sets (PvP Offense):** {', '.join(gear_sets.get('pvp_offense', gear_sets.get('pvp', [])))}\n"
+        md += f"- **Gear Sets (PvP Defense):** {', '.join(gear_sets.get('pvp_defense', []))}\n"
+        md += f"- **Gear Sets (Clan Boss):** {', '.join(gear_sets.get('clan_boss', []))}\n"
+        md += f"- **Gear Sets (Dungeons):** {', '.join(gear_sets.get('dungeons', gear_sets.get('pve', [])))}\n"
+        md += f"- **Gear Sets (Hydra):** {', '.join(gear_sets.get('hydra', []))}\n"
+        md += f"- **Gear Sets (Iron Twins):** {', '.join(gear_sets.get('iron_twins', []))}\n"
+        md += f"- **Gear Sets (Solo Farming):** {', '.join(gear_sets.get('solo_farming', []))}\n"
+    else:
+        md += f"- **Gear Sets (PvP Offense):** N/A\n"
+        md += f"- **Gear Sets (PvP Defense):** N/A\n"
+        md += f"- **Gear Sets (Clan Boss):** N/A\n"
+        md += f"- **Gear Sets (Dungeons):** N/A\n"
+        md += f"- **Gear Sets (Hydra):** N/A\n"
+        md += f"- **Gear Sets (Iron Twins):** N/A\n"
+        md += f"- **Gear Sets (Solo Farming):** N/A\n"
     md += f"- **Gear Tradeoffs:**\n"
     for gt in overview.get('gear_tradeoffs', []):
         md += f"    - {gt.get('set', '')}: Pros: {gt.get('pros', '')}; Cons: {gt.get('cons', '')}\n"
@@ -138,8 +157,13 @@ def write_champion_summary_md(champ: Dict[str, Any], champ_name: str) -> None:
         md += f"- **Passive:** {skills.get('passive', {}).get('impact', '')}\n"
     md += f"\n"
     md += f"## Mastery & Booking\n"
-    md += f"- **Best Mastery (PvE/PvP):** {overview.get('best_mastery', {}).get('pve_pvp', 'N/A')}\n"
-    md += f"- **Best Mastery (Clan Boss):** {overview.get('best_mastery', {}).get('clan_boss', 'N/A')}\n"
+    best_mastery = overview.get('best_mastery', {})
+    if isinstance(best_mastery, dict):
+        md += f"- **Best Mastery (PvE/PvP):** {best_mastery.get('pve_pvp', best_mastery.get('pve', 'N/A'))}\n"
+        md += f"- **Best Mastery (Clan Boss):** {best_mastery.get('clan_boss', 'N/A')}\n"
+    else:
+        md += f"- **Best Mastery (PvE/PvP):** N/A\n"
+        md += f"- **Best Mastery (Clan Boss):** N/A\n"
     md += f"- **Booking Impact:** {skills.get('booking', {}).get('impact', 'N/A')} — {skills.get('booking', {}).get('notes', '')}\n"
     md += f"\n"
     cooldown_summary = get_cooldown_analysis(champ_name)

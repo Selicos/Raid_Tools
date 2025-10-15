@@ -87,7 +87,9 @@ Raid Tools is a Python-based project for analyzing Raid Shadow Legends champion 
 
 ## Prompt and Workflow Consistency
 - All prompt completions must use the template in `ChampionIntake/templates/Prompt_Template.md`.
-- Completed prompts must be moved to `output/completed_prompts/` and not overwritten unless re-validated.
+- For now, ignore the completed prompt file and directory. Only generate the JSON response.
+- Use the generated JSON in the summary generation script to create a markdown file for review.
+- Data source priority for champion skill and stat information: Ayumilove (text) > HellHades > other sources.
 - JSONs must be generated only from validated, completed prompts.
 
 ## Safety and Non-Destructive Policy
@@ -596,3 +598,34 @@ Available tasks via Command Palette, task runner, or AI assistant interface:
 - Follow the CC BY-NC 4.0 license for all contributions
 - Attribute original authors in significant modifications
 - Maintain project coding standards and documentation quality
+
+---
+
+
+# Champion Prompt Workflow (Updated Oct 2025)
+
+## Workflow for Processing Champion Prompts
+
+1. **Prompt Generation**:
+   - Use the template in `ChampionIntake/templates/Prompt_Template.md`.
+   - Skip JSON generation if a validated prompt already exists in `output/completed_prompts/`.
+
+2. **Prompt Completion**:
+   - Ensure all fields are human-readable and validated.
+   - Validate skills, stats, multipliers, and cooldowns using authoritative sources in this order: Ayumilove (text), then HellHades, then other sources.
+
+3. **JSON Generation**:
+   - Generate the JSON response first, using the template structure.
+   - Ignore the completed prompt file and directory for now.
+   - Use the generated JSON in the summary generation script to create a markdown file for review.
+   - Ensure the structure is modular and adheres to the template.
+
+4. **Validation**:
+   - Use `Tools/validate_json.py` to validate JSON files.
+   - Confirm data accuracy and suitability for downstream tools.
+
+5. **Output Organization**:
+   - Ensure all outputs are human-readable and modular.
+   - Completed prompt files are JSON, not markdown, and reside in `output/completed_prompts/`.
+
+---
