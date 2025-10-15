@@ -1,12 +1,27 @@
 
 
 
+# Champion Prompt Template (Markdown)
+
+> **Note:** For each section, pull in the corresponding information from the champion's JSON prompt file as defined in `Prompt_Template.json`. Use the bullet points as guidance for the level of detail and content expected.
+
+
+## 1. Base Stats
+_(Populate with the `base_stats` section from the JSON template)_
 
 # Champion Prompt Template (Markdown)
 
 > **Note:** For each section, pull in the corresponding information from the champion's JSON prompt file as defined in `Prompt_Template.json`. Use the bullet points as guidance for the level of detail and content expected.
 
 ---
+
+## 0. Champion Name
+_(Populate with the `champion` field from the JSON template)_
+- Champion name (exactly as in game)
+
+## 0.1 Owned Status
+_(Populate with the `owned` field from the JSON template)_
+- Is this champion owned? (true/false)
 
 ## 1. Base Stats
 _(Populate with the `base_stats` section from the JSON template)_

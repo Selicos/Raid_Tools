@@ -188,7 +188,6 @@ def create_prompt_md(champion_name):
     target_filename = f"{champion_name}_prompt.md"
     path = os.path.join(prompt_dir, target_filename)
 
-    # Always overwrite the prompt file
     json_template_path = os.path.join(os.path.dirname(__file__), "templates", "Prompt_Template.json")
     if not os.path.exists(json_template_path):
         print(f"❌ JSON template not found: {json_template_path}")
@@ -208,73 +207,11 @@ def create_prompt_md(champion_name):
         pretty = pyjson.dumps(json_obj, indent=2, ensure_ascii=False)
         return f"## {title}\n\n```json\n{pretty}\n```\n"
 
-    # Section 1: Base Stats
-    if "base_stats" in json_template:
-        prompt += section("Base Stats", json_template["base_stats"])
-
-    # Section 2: Overview & Initial Summary
-    if "overview" in json_template:
-        prompt += section("Overview & Initial Summary", json_template["overview"])
-
-    # Section 3: Skill Summary & Rotation Analysis
-    if "skills" in json_template:
-        prompt += section("Skill Summary & Rotation Analysis", json_template["skills"])
-
-    # Section 4: Skill Book Requirements & Effects
-    if "books" in json_template:
-        prompt += section("Skill Book Requirements & Effects", json_template["books"])
-
-    # Section 5: Aura Details
-    if "aura" in json_template:
-        prompt += section("Aura Details", json_template["aura"])
-
-    # Section 6: AI Behavior & Skill Logic
-    if "ai_logic" in json_template:
-        prompt += section("AI Behavior & Skill Logic", json_template["ai_logic"])
-
-    # Section 7: Team Creator Inputs
-    if "team_inputs" in json_template:
-        prompt += section("Team Creator Inputs", json_template["team_inputs"])
-
-    # Section 8: Mastery Proc Simulation
-    if "mastery_proc_simulation" in json_template:
-        prompt += section("Mastery Proc Simulation", json_template["mastery_proc_simulation"])
-
-    # Section 9: Mastery Recommendation
-    if "recommended_mastery" in json_template:
-        prompt += section("Mastery Recommendation", json_template["recommended_mastery"])
-
-    # Section 10: Clan Boss Damage Tracking
-    if "clan_boss_damage" in json_template:
-        prompt += section("Clan Boss Damage Tracking", json_template["clan_boss_damage"])
-
-    # Section 11: Dungeon/Content Breakdown
-    if "content_breakdown" in json_template:
-        prompt += section("Dungeon/Content Breakdown", json_template["content_breakdown"])
-
-    # Section 12: Ally Synergy & Speed Tuning
-    if "synergy_speed" in json_template:
-        prompt += section("Ally Synergy & Speed Tuning", json_template["synergy_speed"])
-
-    # Section 13: Utility & Investment Value
-    if "utility_investment" in json_template:
-        prompt += section("Utility & Investment Value", json_template["utility_investment"])
-
-    # Section 14: Turn Meter Simulation & Gear Tradeoffs
-    if "turn_meter_gear" in json_template:
-        prompt += section("Turn Meter Simulation & Gear Tradeoffs", json_template["turn_meter_gear"])
-
-    # Section 15: Final Summary
-    if "final_summary" in json_template:
-        prompt += section("Final Summary", json_template["final_summary"])
-
-    # Section 16: Synergy Engine (Owned Champions Only)
-    if "synergy_engine" in json_template:
-        prompt += section("Synergy Engine (Owned Champions Only)", json_template["synergy_engine"])
-
-    # Section 17: Community Ratings & Notes
-    if "community" in json_template:
-        prompt += section("Community Ratings & Notes", json_template["community"])
+    for key, value in json_template.items():
+        if key in ["champion", "owned"]:
+            continue  # These are top-level fields, not sections
+        pretty_title = key.replace("_", " ").title()
+        prompt += section(pretty_title, value)
 
     with open(path, "w", encoding="utf-8") as f:
         f.write(prompt)
@@ -392,8 +329,14 @@ def run_smart_batch_from_owned_list(path=owned_list_path, fast_mode=False):
 
     for champ, rarity in champions_to_update:
         print(f"🔄 Generating prompt for: {champ} (Rarity: {rarity if rarity else 'Unknown'})")
+        json_path = os.path.join(champion_json_dir, f"{champ}.json")
+        if os.path.exists(json_path):
+            print(f"⚠️ JSON for {champ} already exists. Skipping prompt generation.")
+            continue
         try:
             create_prompt_md(champ)
+            # Optionally validate JSON if generated (if you want to add this step, call validate_json here)
+            add_to_owned_list(champ, update_date=True)
             success.append(champ)
         except Exception as e:
             print(f"❌ Failed to generate prompt for {champ}: {e}")

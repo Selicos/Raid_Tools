@@ -1,5 +1,5 @@
 {
-  "champion": "Champion Name",
+  "champion": "Abbess",
   "owned": true,
   "base_stats": {
     "hp": null,
@@ -13,7 +13,7 @@
   },
   "overview": {
     "role": null,
-    "rarity": null,
+    "rarity": "Legendary",
     "archetype": null,
     "primary_damage_stat": null,
     "skill_scaling": {"A1": null, "A2": null, "A3": null},
