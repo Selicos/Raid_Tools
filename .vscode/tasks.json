@@ -12,9 +12,9 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "Run Champion Turn Analysis",
+			"label": "Generate Champion Summaries",
 			"type": "shell",
-			"command": "python ChampionTurnAnalysis/ChampionTurnAnalysis.py",
+			"command": "python ChampionSummary/generateChampionSummaries.py",
 			"group": "build",
 			"presentation": {
 				"reveal": "always"
@@ -22,9 +22,19 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "Generate Champion Summaries",
+			"label": "Run Skill Turn Analysis",
 			"type": "shell",
-			"command": "python ChampionSummary/generateChampionSummaries.py",
+			"command": "python ChampionSkillTurnAnalysis/ChampionSkillTurnAnalysis.py",
+			"group": "build",
+			"presentation": {
+				"reveal": "always"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Cleanup Test Output Directories",
+			"type": "shell",
+			"command": "python Tools/cleanup_test_output_dirs.py",
 			"group": "build",
 			"presentation": {
 				"reveal": "always"

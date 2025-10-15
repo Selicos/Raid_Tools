@@ -27,7 +27,7 @@ TURNS = 16
 # Directory containing champion JSON files and output
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 CHAMPIONS_DIR = os.path.join(BASE_DIR, "output", "Champions")
-COOLDOWN_ANALYSIS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "input", "cooldown_analysis"))
+COOLDOWN_ANALYSIS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "output", "SkillTurnAnalysis"))
 os.makedirs(COOLDOWN_ANALYSIS_DIR, exist_ok=True)
 
 def load_champion_json(champion_name: str) -> dict:
