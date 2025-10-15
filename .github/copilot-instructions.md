@@ -69,10 +69,12 @@ This is the only approved workflow for creating or updating champion JSON logs i
 
 5. **Generate the JSON Log**
    - Use the content of the completed prompt markdown to generate a single JSON object, following the template and module keys provided in the prompt (`data/templates/logTemplate.json`), including modules 0–20.
-   - **All champion JSON exports must use a nested/module-based structure:**
-     - Each module (e.g., gear, synergy, summary, etc.) must be a nested object under a unique property (e.g., `modules['1']`, `modules['2']`, etc.).
-     - Keys like `relentless_viability` and `mastery_impact_of_gear` must only appear within their logical module object, not at the top level.
-     - The top-level JSON must only contain the champion name, rarity, owned status, and a `modules` dictionary containing all module objects.
+    - **All champion JSON exports must use a strict nested/module-based structure:**
+       - The top-level JSON must contain only these keys: `champion`, `rarity`, `owned`, and a `modules` dictionary.
+       - Each module (e.g., gear, synergy, summary, etc.) must be a nested object under a unique property in `modules` (e.g., `modules['1']`, `modules['2']`, etc.).
+       - No other properties are allowed at the top level.
+       - Keys like `relentless_viability` and `mastery_impact_of_gear` must only appear within their logical module object, not at the top level.
+       - The JSON structure must match the validated example (see `output/Champions/Abbess.json` after October 2025) for all future exports.
    - The JSON must reflect the validated champion name and data exactly.
    - Save the JSON to `output/Champions/[champion].json`.
 

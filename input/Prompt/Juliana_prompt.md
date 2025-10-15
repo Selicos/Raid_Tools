@@ -1,7 +1,19 @@
+# Champion Log Generation Prompt for Juliana
 
+You are to generate a complete champion log for Juliana in JSON format, using the following template as structure and guidance. Fill in all modules (0–20) for Juliana. Output a single JSON object with each module as a key.
 
+---
+## Template:
 
-# Champion Prompt Template (Simplified, Oct 2025)
+# Champion Prompt Template (Logical Order)
+
+## 0. Champion Setup
+```json
+{
+  "champion": "<CHAMPION NAME>",
+  "owned": <true/false>
+}
+```
 
 ## 1. Base Stats
 _Provide all raw stats for direct comparison and calculations. If mastery damage scales with HP, use updated HP values for simulation._
@@ -111,11 +123,15 @@ _Simulate mastery procs in four scenarios: (A) Single Boss, (B) Boss + 10 Minion
 }
 ```
 
-## 9. Mastery Recommendation
-_Note only the single best mastery for this champion. Full tree analysis will be handled by a separate tool._
+## 9. Mastery Tree (Visual/JSON)
 ```json
 {
-  "recommended_mastery": "<MASTERY>"
+  "mastery_tree": {
+    "offense": ["<MASTERY>"],
+    "defense": ["<MASTERY>"],
+    "support": ["<MASTERY>"],
+    "notes": "<NOTES>"
+  }
 }
 ```
 
@@ -165,14 +181,21 @@ _Recommend allies, buffs, and speed tuning. Prefer owned champions for team sets
 }
 ```
 
-## 13. Utility & Investment Value
-_Summarize utility comparison, benchmarks, and investment value/ROI in one section._
+## 13. Utility Comparison Champions
+_List similar champions and compare utility. Include benchmark champion list and compare investment value vs benchmarks._
 ```json
 {
   "benchmarks_used": ["<CHAMPION>", ...],
   "utility_comparison": [
     {"champion": "<CHAMPION>", "role": "<ROLE>", "comparison": "<NOTES>", "investment_value_vs_benchmark": "<VALUE>"}
-  ],
+  ]
+}
+```
+
+## 14. Investment Value & ROI
+_Assess long-term value and resource efficiency. Rate investment value vs benchmark champions._
+```json
+{
   "value": "<VALUE>",
   "notes": "<NOTES>",
   "benchmark_comparison": [
@@ -181,9 +204,15 @@ _Summarize utility comparison, benchmarks, and investment value/ROI in one secti
 }
 ```
 
+## 15. Intelligence Score & Draft Recommendations
+```json
+{
+  "synergy_scores": {"<CHAMPION>": <SCORE>},
+  "draft_logic": {"early_pick": <true/false>, "counter_pick": <true/false>, "avoid": <true/false>, "notes": "<NOTES>"}
+}
+```
 
-
-## 14. Turn Meter Simulation & Gear Tradeoffs
+## 16. Turn Meter Simulation & Gear Tradeoffs
 _Simulate turn meter effects and gear set stability. Evaluate if relentless/extra turn gear changes mastery choice._
 ```json
 {
@@ -194,9 +223,20 @@ _Simulate turn meter effects and gear set stability. Evaluate if relentless/extr
 }
 ```
 
+## 17. Color-Coded Ratings
+```json
+{
+  "pve": "<RATING>",
+  "clan_boss": "<RATING>",
+  "hydra": "<RATING>",
+  "iron_twins": "<RATING>",
+  "dungeons": "<RATING>",
+  "solo_farming": "<RATING>",
+  "relentless_viability": "<VALUE>"
+}
+```
 
-
-## 15. Final Summary
+## 18. Final Summary
 _Recap all key findings and values. Summarize mastery preference, cooldown impact, best mastery, stable turn order, passive impact, gear/stat notes, ally synergy, relentless viability, and investment value._
 ```json
 {
@@ -217,11 +257,15 @@ _Recap all key findings and values. Summarize mastery preference, cooldown impac
 }
 ```
 
-## 16. Synergy Engine (Owned Champions Only)
-_This section is generated only for champions on the owned list. Not required in every prompt._
+## 19. Synergy Engine
+```json
+{
+  "team_setups": [{"name": "<TEAM>", "champions": ["<CHAMPION>"], "strategy": "<NOTES>"}],
+  "similar_champions": [{"champion": "<CHAMPION>", "similarity_reason": "<REASON>"}]
+}
+```
 
-
-## 17. Community Ratings & Notes
+## 20. Community Ratings & Notes
 ```json
 {
   "community": {
@@ -234,3 +278,9 @@ _This section is generated only for champions on the owned list. Not required in
 ```
 
 # End of Template
+
+---
+Instructions:
+- Fill in each section for Juliana using the template above.
+- Output only the final JSON object.
+
