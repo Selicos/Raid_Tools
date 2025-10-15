@@ -16,64 +16,61 @@ def generate_and_save_champion_json_from_prompt(champion_name):
         print(f"⚠️ Champion JSON already exists for {champion_name}. Skipping overwrite.")
         return False
 
-    # TODO: Replace this with a call to your LLM or parsing logic
-    # For example, call OpenAI API, local LLM, or deterministic parser
-    # champion_json = call_llm_to_generate_json(prompt_text)
-    # Try to get rarity from placeholder or ask for it if not present
+    # Parse the prompt file for module sections and build a nested/module-based JSON structure
+    import re
     rarity = None
+    # Try to extract rarity from prompt or ask for it
+    rarity_match = re.search(r'"rarity"\s*:\s*"(\w+)"', prompt_text, re.IGNORECASE)
+    if rarity_match:
+        rarity = rarity_match.group(1).capitalize()
     if not rarity:
         rarity = input(f"Enter rarity for {champion_name} (Rare/Epic/Legendary/Mythic or 3/4/5/6): ").strip().capitalize()
-    # As of October 2025, all modules 0–20 are required for prompt/JSON logs
+
+    # Find all module sections in the prompt (## Module N)
+    module_pattern = re.compile(r'^## Module (\d+)[^\n]*\n(.*?)(?=^## Module |\Z)', re.MULTILINE | re.DOTALL)
+    modules = {str(i): {} for i in range(21)}
+    for match in module_pattern.finditer(prompt_text):
+        module_num = match.group(1)
+        module_content = match.group(2).strip()
+        # Try to extract the JSON object for this module
+        json_match = re.search(r'```json\s*(\{[\s\S]*?\})\s*```', module_content)
+        if json_match:
+            try:
+                module_json = json.loads(json_match.group(1))
+                modules[module_num] = module_json
+            except Exception as e:
+                print(f"⚠️ Failed to parse JSON for module {module_num}: {e}")
+                modules[module_num] = {"error": "Invalid JSON"}
+        else:
+            modules[module_num] = {"notes": module_content}
+
+    # Build the champion JSON as a dictionary of modules
     champion_json = {
         "champion": champion_name,
         "rarity": rarity,
         "owned": True,
-        "overview": {},
-        "skills": {},
-        "team_inputs": {},
-        "mastery_simulation": {},
-        "clan_boss": {},
-        "synergy": {},
-        "investment": {},
-        "intelligence": {},
-        "turn_meter": {},
-        "utility_comparison": [],
-        "ratings": {},
-        "final_summary": {},
-        "synergy_engine": {},
-        "base_stats": {},
-        "books": {},
-        "aura": {},
-        "ai_logic": {},
-        "content_breakdown": {},
-        "mastery_tree": {},
-        "community": {}
+        "modules": modules
     }
 
-    # --- Expand skill/attack order to 16 turns if possible ---
-    # If skills.rotation.optimal_cycle exists and is a list, expand it
-    skills = champion_json.get("skills", {})
-    rotation = skills.get("rotation", {})
+    # Optionally, expand skill/attack order to 16 turns if possible (inside the relevant module)
+    skills_mod = modules.get("1", {})  # Example: skills module is module 1
+    rotation = skills_mod.get("rotation", {})
     optimal_cycle = rotation.get("optimal_cycle", [])
     if optimal_cycle and isinstance(optimal_cycle, list):
         expanded = []
-        seen = set()
         idx = 0
-        # Try to repeat the cycle up to 16 turns, or until a repeat is detected
         while len(expanded) < 16:
             expanded.append(optimal_cycle[idx % len(optimal_cycle)])
             idx += 1
-            # If the cycle repeats exactly (e.g., first N == next N), break
             if len(expanded) >= 2 * len(optimal_cycle):
                 if expanded[-len(optimal_cycle):] == expanded[-2*len(optimal_cycle):-len(optimal_cycle)]:
                     break
         rotation["turn_sequence"] = expanded[:16]
-        skills["rotation"] = rotation
-        champion_json["skills"] = skills
+        skills_mod["rotation"] = rotation
+        modules["1"] = skills_mod
 
     # Save the generated JSON
     save_champion_json(champion_name, champion_json)
-    # Update owned list with rarity
     add_to_owned_list(champion_name, update_date=True)
     print(f"✅ Champion JSON generated and saved for {champion_name}")
     return True
@@ -280,10 +277,9 @@ def run_champion_intake(champion_name, rarity=None, fast_mode=False, suppress_pr
         print(f"✅ Completed prompt already exists for {champion_name}. Skipping prompt and JSON generation.")
         return True
 
+    # Do not create a sample/placeholder JSON here; let the Copilot workflow handle JSON creation
     json_path = os.path.join(champion_json_dir, f"{champion_name}.json")
-    if not os.path.exists(json_path):
-        create_json_placeholder(champion_name, rarity=rarity)
-    else:
+    if os.path.exists(json_path):
         print(f"⚠️ JSON for {champion_name} already exists. Skipping placeholder creation.")
     md_path = create_prompt_md(champion_name)
     if validate_json(champion_name) and validate_md(champion_name):

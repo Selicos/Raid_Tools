@@ -9,7 +9,7 @@
 - Apothecary | Rarity: Rare | Last Updated: 2025-10-14
 - Archmage Hellmut | Rarity: Epic | Last Updated: 2025-10-14
 - Arbiter | Rarity: Legendary | Last Updated: 2025-10-14
-- Artak | Last Updated: 2025-10-14
+- Artak | Rarity: Unknown | Last Updated: 2025-10-14
 - Aox the Rememberer | Rarity: Epic | Last Updated: 2025-10-14
 - Astralon | Rarity: Legendary | Last Updated: 2025-10-14
 - Bad-el-Kazar | Rarity: Legendary | Last Updated: 2025-10-14
