@@ -46,14 +46,15 @@ Every time the owned champion list changes, a new, fully re-analyzed Markdown fi
 - **Primary Output:** All boss and team guides must be written in Markdown, following the standard template below. JSON is for internal data only.
 - **Template:** Every boss/team Markdown file must include:
    1. Table of Contents (with Boss Mechanics & Stat Requirements as section 1)
-   2. Boss Mechanics & Stat Requirements (section 1)
+   2. Boss Mechanics & Stat Requirements (section 1, must include explicit Affinity info: specify affinity for the current rotation, note if it changes, and highlight that affinity can make or break certain teams)
    3. Teams by Estimated Damage/Clear Speed (table)
-   4. Detailed Team Sections (each with: core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results)
+   4. Detailed Team Sections (each with: core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results; must highlight affinity safety or risk for each team if relevant)
    5. Best Champions & Team Participation (table)
    6. Direct Champion Comparisons by Role (table or summary)
    7. Ideal Champions to Pull (indexed, actionable list)
 - **Validation:** All champion and boss data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki). Document validation in Markdown or commit.
 - **Simulation:** Run at least 3 simulations for each team and summarize results in the Markdown file.
+- **Affinity:** All boss/team Markdown outputs must include explicit affinity information in the Boss Mechanics & Stat Requirements section, and highlight affinity safety/risk for each team in the detailed team sections. Avoid recommending weak affinity champions for key roles (cleanse, block debuffs, damage) unless justified.
 - **File Handling:** Completed Markdown files are authoritative and must be preserved in `Notes/` or `output/`.
 - **No Deletion:** Never delete files or folders as part of this workflow. If a change requires more than 20 lines of edits, create a new file (e.g., with `_v2.md` suffix) instead of overwriting the original.
 ## Project Focus & Data Flow

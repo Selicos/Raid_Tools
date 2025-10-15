@@ -22,14 +22,19 @@
 - **Boss:** Ultra-Nightmare Clan Boss (UNM)
 - **Key Mechanics:**
   - [List boss mechanics, immunities, affinity changes, unique challenges]
+  - **Affinity:** [Specify affinity for the current rotation; note if it changes. Affinity can make or break certain teams.]
 - **Required Stats:**
   - Speed: [e.g., 250–280+ for 2:1 teams]
   - Accuracy: [e.g., 230–250+ for debuffs]
+  - Resistance: [If using resist strategy or to block debuffs; may require very high stats, especially if affinity is unfavorable]
   - HP%/DEF%: [as high as possible for survivability]
   - Crit Rate/Damage: [for damage dealers]
   - Lifesteal/Leech: [for sustain]
 - **Special Notes:**
-  - [Manual/auto play notes, affinity issues or advice, and information about unique boss mechanics to now (3 items), speed tuning importance, calculator recommendations]
+  - Affinity issues: [Note which champions are weak/strong vs. current affinity; avoid weak affinity cleansers or block debuffs]
+  - Manual play may be required for skill timing, especially for cleanses/block debuffs. Prefer full auto teams if possible.
+  - Speed tuning is essential for debuff uptime and survival. Check champion skill cooldown when checking speed tune advice and attack order for each champion and the team overall.
+  - [Manual/auto play notes, and information about unique boss mechanics to now (3 items), speed tuning importance, calculator recommendations]
 
 ---
 
@@ -49,7 +54,9 @@
 
 [Short intro: These teams take two turns for every one Clan Boss turn, maximizing debuff uptime, skill cycling, and overall damage.]
 
+
 ### Team 1: [Team Name]
+<!-- When writing team sections, highlight affinity safety or risk for each team if relevant. -->
 **Core Roles:** [e.g., HP Burn, TM Booster, Buff Extender, Poisoners, Support/Revive]
 
 **Optimal Combo:** [Champion List]
