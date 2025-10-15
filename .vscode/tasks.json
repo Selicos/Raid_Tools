@@ -1,26 +1,26 @@
 {
 	"version": "2.0.0",
-			"tasks": [
-				{
-					"label": "Run Champion Intake",
-					"type": "shell",
-					"command": "python ChampionIntake/Champ_Intake.py",
-					"group": "build",
-					"presentation": {
-						"reveal": "always"
-					},
-					"problemMatcher": []
-				},
-			{
-				"label": "Run Champion Turn Analysis",
-				"type": "shell",
-				"command": "python ChampionTurnAnalysis/ChampionTurnAnalysis.py",
-				"group": "build",
-				"presentation": {
-					"reveal": "always"
-				},
-				"problemMatcher": []
+	"tasks": [
+		{
+			"label": "Run Champion Intake",
+			"type": "shell",
+			"command": "python ChampionIntake/Champ_Intake.py",
+			"group": "build",
+			"presentation": {
+				"reveal": "always"
 			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Run Champion Turn Analysis",
+			"type": "shell",
+			"command": "python ChampionTurnAnalysis/ChampionTurnAnalysis.py",
+			"group": "build",
+			"presentation": {
+				"reveal": "always"
+			},
+			"problemMatcher": []
+		},
 		{
 			"label": "Generate Champion Summaries",
 			"type": "shell",
@@ -70,6 +70,12 @@
 				"Setup Environment"
 			],
 			"dependsOrder": "sequence"
+		},
+		{
+			"label": "Organize Completed Prompts",
+			"type": "shell",
+			"command": "echo Organize completed prompts (placeholder)",
+			"group": "build"
 		}
 	],
 	"inputs": [
