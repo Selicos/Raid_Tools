@@ -3,50 +3,53 @@
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements
 2. Teams by Estimated Damage/Clear Speed
-3. Team: Speed Clear (Manual/Auto)
-4. Team: Double HP Burn
-5. Team: Full Poison
-6. Team: Wave Control/Farm
-7. Team: Fastest Auto Poison/Burn/HP Burn (Consolidated)
-8. Team: Safe Sustain/Revive (Consolidated)
-9. Team: Speed Clear/Poison Explosion (Consolidated)
-10. Best Champions & Team Participation
-11. Direct Champion Comparisons by Role
-12. Ideal Champions to Pull
-13. General Notes
-14. Validation & Simulation Notes
+3. Detailed Team Sections (by Archetype)
+    - Speed Clear (Manual/Auto)
+    - Double HP Burn
+    - Full Poison
+    - Wave Control/Farm
+    - Fastest Auto Poison/Burn/HP Burn (Consolidated)
+    - Safe Sustain/Revive (Consolidated)
+    - Speed Clear/Poison Explosion (Consolidated)
+4. Best Champions & Team Participation
+5. Direct Champion Comparisons by Role
+6. Ideal Champions to Pull
+7. General Notes
+8. Actionable Notes & Upgrade Advice
+9. Team Flexibility & Alternate Builds
+10. When to Use Each Team
+11. Additional Team Archetypes
+12. Validation & Simulation Notes
 
 ---
 
 ## 1. Boss Mechanics & Stat Requirements
-
 ### Manual/Auto Play Notes
 - Most teams can run on full auto with correct AI presets, especially for boss stages. However, manual play may be required for:
-  - Skill timing on waves (e.g., saving cleanse or shield for boss)
-  - Affinity-specific tuning (e.g., avoiding weak affinity cleansers on Magic/Force stages)
-  - Poison explosion teams (manual for fastest clears)
-  - Early clears or undergeared teams (manual revive/cleanse timing)
+    - Skill timing on waves (e.g., saving cleanse or shield for boss)
+    - Affinity-specific tuning (e.g., avoiding weak affinity cleansers on Magic/Force stages)
+    - Poison explosion teams (manual for fastest clears)
+    - Early clears or undergeared teams (manual revive/cleanse timing)
 - For tournament farming, manual play can optimize wave clear speed, but is not required for safe clears.
 
 - **Boss:** Dragon (Dragon’s Lair, Hard Mode)
 - **Affinities:** Rotates by stage (Magic, Force, Spirit, Void)
 - **Key Mechanics:**
-  - AoE attacks, places Poisons, and applies HP Burn (Scorch) to all.
-  - Immune to Turn Meter reduction on Hard.
-  - Only Poison and HP Burn deal significant damage.
-  - High damage output; requires strong healing or shielding.
-  - Stat thresholds: 250–300+ Accuracy, 220+ Speed, 3.5k+ DEF, 40k+ HP.
+    - AoE attacks, places Poisons, and applies HP Burn (Scorch) to all.
+    - Immune to Turn Meter reduction on Hard.
+    - Only Poison and HP Burn deal significant damage.
+    - High damage output; requires strong healing or shielding.
+    - Stat thresholds: 250–300+ Accuracy, 220+ Speed, 3.5k+ DEF, 40k+ HP.
 - **Affinity Safety/Risk:**
-  - Void: Safe for all roles.
-  - Magic: Risk for Force champions (weak hits).
-  - Force: Risk for Magic champions (weak hits).
-  - Spirit: Risk for Force champions (weak hits).
+    - Void: Safe for all roles.
+    - Magic: Risk for Force champions (weak hits).
+    - Force: Risk for Magic champions (weak hits).
+    - Spirit: Risk for Force champions (weak hits).
 - **Special Notes:** On Hard, Dragon’s Scorch cannot be resisted; prioritize cleansing, healing, or block debuffs.
 
 ---
 
 ## 2. Teams by Estimated Damage/Clear Speed
-
 | Team Name                        | Simulated Damage/Clear Time | Core Champions (Sample)                                 | Key Mechanics & Notes                                                      | Affinity Safety/Risk |
 |----------------------------------|:--------------------------:|--------------------------------------------------------|----------------------------------------------------------------------------|---------------------|
 | Speed Clear (Manual/Auto)        | 1:10–2:00                  | Taurus, Elenaril, Mithrala, Stag Knight, Lua           | Poison explosion, DEF down, shield, wave clear, fastest with some manual   | **Affinity Safety/Risk:**<br>- Void: Safe for all roles.<br>- Magic: Risk for Force champions (weak hits, unreliable debuffs).<br>- Force: Risk for Magic champions (weak hits, unreliable debuffs).<br>- Spirit: Risk for Force champions (weak hits, unreliable debuffs). |
@@ -59,7 +62,8 @@
 
 ---
 
-## 3. Team: Speed Clear (Manual/Auto)
+## 3. Detailed Team Sections (by Archetype)
+### Speed Clear (Manual/Auto)
 **Core Roles:** Poisoner, Poison Exploder, DEF Down, Shield, Wave Clear
 **Optimal Combo:** Taurus (poison stack), Elenaril (poison explode), Mithrala Lifebane (cleanse, shield), Stag Knight (DEF down, speed down), Lua (wave clear)
 **Alternates:** Fayne, Dark Kael, Taya, Crohnam, Narma the Returned, Geomancer, Venomage
@@ -79,9 +83,7 @@
 - Force: Risk for Magic champions (e.g., Lua) as main damage.
 - Spirit: Risk for Force champions as main damage.
 
----
-
-## 4. Team: Double HP Burn
+### Double HP Burn
 **Core Roles:** HP Burn, Cleanser/Shield, Revive, Poisoner, Support
 **Optimal Combo:** Drexthar Bloodtwin (HP Burn, tank), Geomancer (HP Burn, boss damage), Mithrala Lifebane (cleanse, shield), Godseeker Aniri (revive, heal), Venomage (poison, DEF down)
 **Alternates:** Narma the Returned, Elenaril, Ninja, Bad-el-Kazar, Rector Drath, Broadmaw
@@ -101,9 +103,7 @@
 - Force: Risk for Magic champions (e.g., Mithrala) as main damage.
 - Spirit: Risk for Force champions as main damage.
 
----
-
-## 5. Team: Full Poison
+### Full Poison
 **Core Roles:** Poisoner, Cleanser/Healer, DEF Down, Support
 **Optimal Combo:** Kalvalax (passive poisons), Frozen Banshee (poison sensitivity), Venomage (poison, DEF down), Narma the Returned (poison, heal), Bad-el-Kazar (cleanse, heal)
 **Alternates:** Fayne, Taurus, Elenaril, Dark Kael, Aox the Rememberer, Artak, Mithrala Lifebane, Godseeker Aniri
@@ -123,9 +123,7 @@
 - Force: Risk for Magic champions (e.g., Frozen Banshee) as main damage.
 - Spirit: Risk for Force champions as main damage.
 
----
-
-## 6. Team: Wave Control/Farm
+### Wave Control/Farm
 **Core Roles:** Wave Nuker, DEF Down, Cleanser/Shield, Support
 **Optimal Combo:** Lua (wave clear), Skullcrown (wave clear), Ithos (wave clear), Mithrala Lifebane (cleanse, shield), Stag Knight (DEF down, speed down)
 **Alternates:** Astralon, Brakus the Shifter, Archmage Hellmut, Crohnam, Venomage, Godseeker Aniri
@@ -145,9 +143,7 @@
 - Force: Risk for Magic champions (e.g., Lua) as main damage.
 - Spirit: Risk for Force champions as main damage.
 
----
-
-## 7. Team: Fastest Auto Poison/Burn/HP Burn (Consolidated)
+### Fastest Auto Poison/Burn/HP Burn (Consolidated)
 **Core Roles:** Poisoner, HP Burn, Cleanser/Shield, Support
 **Optimal Combo:**
 - Poisoners: Kalvalax (passive poisons), Frozen Banshee (poison sensitivity), Venomage (poison, DEF down), Narma the Returned, Fayne, Taurus, Elenaril, Dark Kael
@@ -169,9 +165,7 @@
 - Force: Risk for Magic champions as main damage.
 - Spirit: Risk for Force champions as main damage.
 
----
-
-## 8. Team: Safe Sustain/Revive (Consolidated)
+### Safe Sustain/Revive (Consolidated)
 **Core Roles:** Cleanser, Healer, Reviver, HP Burn, Poisoner, Support
 **Optimal Combo:**
 - Cleanse/Heal: Bad-el-Kazar, Mithrala Lifebane, Mausoleum Mage, Lady Annabelle
@@ -194,9 +188,7 @@
 - Force: Risk for Magic champions as main damage.
 - Spirit: Risk for Force champions as main damage.
 
----
-
-## 9. Team: Speed Clear/Poison Explosion (Consolidated)
+### Speed Clear/Poison Explosion (Consolidated)
 **Core Roles:** Poisoner, Poison Exploder, DEF Down, Shield, Wave Clear
 **Optimal Combo:**
 - Poison Stack: Taurus, Fayne, Narma the Returned, Venomage, Frozen Banshee
@@ -222,7 +214,7 @@
 
 ---
 
-## 10. Best Champions & Team Participation
+## 4. Best Champions & Team Participation
 | Champion            | Role(s)                | Best Teams                                | Notes                                      |
 |---------------------|------------------------|-------------------------------------------|--------------------------------------------|
 | Kalvalax            | Poisoner               | Fastest Auto, Full Poison                 | Passive poisons, speeds up runs            |
@@ -247,8 +239,7 @@
 
 ---
 
-## 11. Direct Champion Comparisons by Role
-
+## 5. Direct Champion Comparisons by Role
 *Only owned champions are compared below.*
 
 **Poisoners:**  
@@ -284,8 +275,7 @@
 
 ---
 
-## 12. Ideal Champions to Pull
-
+## 6. Ideal Champions to Pull
 *Only recommend champions not currently owned. Reference the owned champion list file.*
 
 **Top Poisoners:** Dracomorph, Tomb Lord, Xel'Toth (for more poison/DEF down options)
@@ -301,8 +291,7 @@ These champions would enable faster clears, more affinity-safe runs, or allow fo
 
 ---
 
-## 13. General Notes
-
+## 7. General Notes
 - Prioritize high accuracy (250–300+), speed (220+), and survivability (3.5k+ DEF, 40k+ HP).
 - Use affinity-safe champions for key roles on each stage.
 - Manual play may be needed for affinity-specific tuning or revive timing.
@@ -313,7 +302,7 @@ These champions would enable faster clears, more affinity-safe runs, or allow fo
 
 ---
 
-## 14. Actionable Notes & Upgrade Advice
+## 8. Actionable Notes & Upgrade Advice
 - Prioritize building Kalvalax, Mithrala, Geomancer for fastest clears.
 - Use Frozen Banshee for budget poison teams; gear for high ACC and speed.
 - Upgrade Taurus and Elenaril for poison explosion teams; Mithrala for shield/cleanse.
@@ -322,7 +311,7 @@ These champions would enable faster clears, more affinity-safe runs, or allow fo
 
 ---
 
-## 15. Team Flexibility & Alternate Builds
+## 9. Team Flexibility & Alternate Builds
 - Teams can flex between poison, HP Burn, and wave clearers depending on affinity and gear.
 - Swap in alternates for affinity safety or faster clears (e.g., Crohnam for Magic, Lua for Force).
 - Use revive/cleanse teams for survivability, speed/poison teams for farming.
@@ -330,7 +319,7 @@ These champions would enable faster clears, more affinity-safe runs, or allow fo
 
 ---
 
-## 16. When to Use Each Team
+## 10. When to Use Each Team
 - Speed clear teams: Best for tournament farming and fastest clears (manual recommended).
 - HP Burn teams: Best for affinity-agnostic clears and high boss damage.
 - Full poison teams: Fastest clears if affinity is favorable and gear is strong.
@@ -340,7 +329,7 @@ These champions would enable faster clears, more affinity-safe runs, or allow fo
 
 ---
 
-## 17. Additional Team Archetypes
+## 11. Additional Team Archetypes
 - Full Revive/Cleanse Teams: Mithrala, Godseeker, Scyl, Rector Drath, Bad-el-Kazar for maximum sustain and recovery.
 - Poison Explosion Teams: Taurus, Elenaril, Narma, Lua for burst damage and fast clears.
 - Budget Poison Teams: Frozen Banshee, Venomage, Bad-el-Kazar, Apothecary for accessible clears.
@@ -348,27 +337,22 @@ These champions would enable faster clears, more affinity-safe runs, or allow fo
 
 ---
 
-## 18. Validation & Simulation Notes
-
+## 12. Validation & Simulation Notes
 - **Validation Sources:**
-  - Boss mechanics and stat requirements confirmed via RaidHQ (https://raidhq.gg/raid/articles/hard-mode-dungeon-bosses-tainted-draco-dragon-s-lair), Ayumilove, HellHades, and in-game testing (October 2025).
-  - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
-
+    - Boss mechanics and stat requirements confirmed via RaidHQ (https://raidhq.gg/raid/articles/hard-mode-dungeon-bosses-tainted-draco-dragon-s-lair), Ayumilove, HellHades, and in-game testing (October 2025).
+    - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
 - **Simulation/Testing:**
-  - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
-  - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
-
+    - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
+    - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
 - **Results Summary:**
-  - Speed Clear (Manual/Auto): 1:10–2:00 clear, 90%+ auto success in 5 runs.
-  - Double HP Burn: 2:00–3:30 clear, 90%+ auto success in 5 runs.
-  - Full Poison: 1:30–2:30 clear, 90%+ auto success in 5 runs.
-  - Wave Control/Farm: 1:00–1:40 clear, 90%+ auto success in 5 runs.
-  - Fastest Auto Poison/Burn/HP Burn: 1:30–2:30 clear, 90%+ auto success in 5 runs.
-  - Safe Sustain/Revive: 3:00–4:30 clear, 95%+ auto success in 5 runs.
-  - Speed Clear/Poison Explosion: 1:00–2:00 clear, 90%+ manual success in 5 runs.
-
+    - Speed Clear (Manual/Auto): 1:10–2:00 clear, 90%+ auto success in 5 runs.
+    - Double HP Burn: 2:00–3:30 clear, 90%+ auto success in 5 runs.
+    - Full Poison: 1:30–2:30 clear, 90%+ auto success in 5 runs.
+    - Wave Control/Farm: 1:00–1:40 clear, 90%+ auto success in 5 runs.
+    - Fastest Auto Poison/Burn/HP Burn: 1:30–2:30 clear, 90%+ auto success in 5 runs.
+    - Safe Sustain/Revive: 3:00–4:30 clear, 95%+ auto success in 5 runs.
+    - Speed Clear/Poison Explosion: 1:00–2:00 clear, 90%+ manual success in 5 runs.
 - **Data Sources:**
-  - RaidHQ, Ayumilove, HellHades, in-game testing, and community consensus.
-
+    - RaidHQ, Ayumilove, HellHades, in-game testing, and community consensus.
 - **Documentation:**
-  - All validation and simulation steps are documented in this section for transparency and reproducibility.
+    - All validation and simulation steps are documented in this section for transparency and reproducibility.

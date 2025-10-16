@@ -1,6 +1,5 @@
 # Fire Knight (Hard) Teams (Owned Champions Only) — DRAFT
 
-
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements
 2. Teams by Estimated Damage/Clear Speed
@@ -21,7 +20,6 @@
 ---
 
 ## 1. Boss Mechanics & Stat Requirements
-
 
 ### Validated Mechanics (Hard Mode)
 
@@ -56,7 +54,6 @@
 
 ---
 
-
 ## 2. Teams by Estimated Damage/Clear Speed
 
 | Team Name | Simulated Damage/Clear Time | Core Champions | Key Mechanics & Notes | Affinity Safety/Risk |
@@ -68,49 +65,57 @@
 
 ---
 
-## 3. [Team Type 1]
+## 3. Team: Ninja Freeze Ally Attack (No Yakarl)
 
-
-
-### Team: Ninja Freeze Ally Attack (No Yakarl)
 **Core Roles:**
 - Freeze: Ninja (A2)
 - Ally Attack: Maulie Tankard
 - TM Boost/Revive: Arbiter
 - Counterattack: Skullcrusher
 - Decrease DEF/ATK: Stag Knight
+
 **Optimal Combo:** Ninja (A2 Freeze), Maulie (Ally Attack), Arbiter (TM boost/revive), Skullcrusher (Counterattack), Stag Knight (DEF/ATK down)
+
 **Alternates:**
 - Freeze: Broadmaw (A2)
 - Ally Attack: None
 - TM Boost: Apothecary
 - Counterattack: None
 - Decrease DEF/ATK: Tayrel, Venomage
+
 **Speed Tuning:**
 - Ninja: 260–270+ SPD
 - Maulie/Skullcrusher: 250–260 SPD
 - Arbiter: 270+ SPD (if possible)
 - Stag Knight: 250+ SPD
+
 **Gear:**
 - Ninja: Relentless/Reflex, ACC, SPD, ATK
 - Maulie: Speed, HP, ACC
 - Arbiter: Speed, HP, ACC
 - Skullcrusher: Speed, HP/DEF
 - Stag Knight: Speed, ACC, HP/DEF
+
 **Masteries:**
 - Ninja: Support (Sniper, Master Hexer), Offense (Warmaster)
 - Maulie/Arbiter: Support, Defense
 - Skullcrusher: Defense, Support
 - Stag Knight: Support, Defense
+
 **Manual/Auto:**
 - Auto possible with correct AI (Ninja prioritize Freeze, Maulie Ally Attack, Arbiter TM boost, Skullcrusher Counterattack, Stag Knight DEF/ATK down). Manual for skill cycling if Freeze is resisted.
+
 **Strengths:**
 - Good shield break, strong debuffs, revive safety net, reliable Freeze TM control.
+
 **Weaknesses:**
 - Freeze not on A1, less reliable than Yakarl team, needs skill cycling/Relentless.
+
 **Actionable Notes:**
 - Use Relentless/Reflex on Ninja for more Freeze cycles. Set AI to open with Freeze. Manual play recommended for affinity risk or if Freeze is resisted.
+
 **Simulated Damage/Clear Time:** ~3:30–5:30 (auto, 90%+ success in 5 runs)
+
 **Affinity Safety/Risk:**
 - Void: Safe for all roles.
 - Force: Safe unless Ninja is Magic affinity.
@@ -119,45 +124,57 @@
 
 ---
 
-### Team: Ninja Freeze + Ally Attack
+## 4. Team: Ninja Freeze + Ally Attack
+
 **Core Roles:**
 - Freeze: Ninja (A2)
 - Ally Attack: Maulie Tankard
 - TM Boost/Revive: Arbiter
 - Decrease DEF/ATK: Stag Knight
 - Counterattack: Skullcrusher
+
 **Optimal Combo:** Ninja (A2 Freeze), Maulie (Ally Attack), Arbiter (TM boost/revive), Stag Knight (DEF/ATK down), Skullcrusher (Counterattack)
+
 **Alternates:**
 - Freeze: Yakarl (A1), Broadmaw (A2)
 - Ally Attack: None
 - TM Boost: Apothecary
 - Decrease DEF/ATK: Tayrel, Venomage
 - Counterattack: None
+
 **Speed Tuning:**
 - Ninja: 260–270+ SPD
 - Maulie/Skullcrusher: 250–260 SPD
 - Arbiter: 270+ SPD (if possible)
 - Stag Knight: 250+ SPD
+
 **Gear:**
 - Ninja: Relentless/Reflex, ACC, SPD, ATK
 - Maulie: Speed, HP, ACC
 - Arbiter: Speed, HP, ACC
 - Stag Knight: Speed, ACC, HP/DEF
 - Skullcrusher: Speed, HP/DEF
+
 **Masteries:**
 - Ninja: Support (Sniper, Master Hexer), Offense (Warmaster)
 - Maulie/Arbiter: Support, Defense
 - Stag Knight: Support, Defense
 - Skullcrusher: Defense, Support
+
 **Manual/Auto:**
 - Auto possible with correct AI (Ninja prioritize Freeze, Maulie Ally Attack, Arbiter TM boost, Stag Knight DEF/ATK down, Skullcrusher Counterattack). Manual for skill cycling if Freeze is resisted.
+
 **Strengths:**
 - Good shield break, strong debuffs, revive safety net.
+
 **Weaknesses:**
 - Freeze not on A1, less reliable than Yakarl team, needs skill cycling/Relentless.
+
 **Actionable Notes:**
 - Use Relentless/Reflex on Ninja for more Freeze cycles. Set AI to open with Freeze. Manual play recommended for affinity risk or if Freeze is resisted.
+
 **Simulated Damage/Clear Time:** ~4:00–6:00 (auto, 90%+ success in 5 runs)
+
 **Affinity Safety/Risk:**
 - Void: Safe for all roles.
 - Force: Safe unless Ninja is Magic affinity.
@@ -166,45 +183,57 @@
 
 ---
 
-### Team: Broadmaw Freeze + Multi-Hit
+## 5. Team: Broadmaw Freeze + Multi-Hit
+
 **Core Roles:**
 - Freeze: Broadmaw (A2)
 - Ally Attack: Maulie Tankard
 - TM Boost/Revive: Arbiter
 - Multi-hit: Coldheart
 - Decrease DEF/ATK: Stag Knight
+
 **Optimal Combo:** Broadmaw (A2 Freeze), Maulie (Ally Attack), Arbiter (TM boost/revive), Coldheart (multi-hit), Stag Knight (DEF/ATK down)
+
 **Alternates:**
 - Freeze: Ninja (A2), Yakarl (A1)
 - Ally Attack: None
 - TM Boost: Apothecary
 - Multi-hit: Ninja, Stag Knight
 - Decrease DEF/ATK: Tayrel, Venomage
+
 **Speed Tuning:**
 - Broadmaw: 260+ SPD
 - Maulie/Coldheart: 250–260 SPD
 - Arbiter: 270+ SPD (if possible)
 - Stag Knight: 250+ SPD
+
 **Gear:**
 - Broadmaw: Relentless/Reflex, ACC, SPD, HP/DEF
 - Maulie: Speed, HP, ACC
 - Arbiter: Speed, HP, ACC
 - Coldheart: Speed, ACC, ATK
 - Stag Knight: Speed, ACC, HP/DEF
+
 **Masteries:**
 - Broadmaw: Support (Sniper, Master Hexer), Defense
 - Maulie/Arbiter: Support, Defense
 - Coldheart: Offense, Support
 - Stag Knight: Support, Defense
+
 **Manual/Auto:**
 - Manual required for skill cycling (Freeze not on A1). Auto possible with Relentless/Reflex and correct AI.
+
 **Strengths:**
 - Budget option, good shield break, strong debuffs.
+
 **Weaknesses:**
 - Freeze not on A1, less reliable, more manual required.
+
 **Actionable Notes:**
 - Use Relentless/Reflex on Broadmaw for more Freeze cycles. Set AI to open with Freeze. Manual play required for skill cycling and affinity risk.
+
 **Simulated Damage/Clear Time:** ~5:00–7:00 (manual, 80%+ success in 5 runs)
+
 **Affinity Safety/Risk:**
 - Void: Safe for all roles.
 - Force: Safe unless Broadmaw is Magic affinity.
@@ -213,44 +242,56 @@
 
 ---
 
-### Team: Fayne Poison Debuff Team
+## 6. Team: Fayne Poison Debuff Team
+
 **Core Roles:**
 - Multi-hit: Fayne
 - Ally Attack: Maulie Tankard
 - TM Boost/Revive: Arbiter
 - Decrease DEF/ATK: Stag Knight
 - Heal/Cleanse: Bad-el-Kazar
+
 **Optimal Combo:** Fayne (multi-hit/poisons/DEF/ATK down), Maulie (Ally Attack), Arbiter (TM boost/revive), Stag Knight (DEF/ATK down), Bad-el-Kazar (heal/cleanse/poison boost)
+
 **Alternates:**
 - Multi-hit: Ninja, Coldheart
 - Ally Attack: None
 - TM Boost: Apothecary
 - Heal: Apothecary, Rector Drath, Vrask
+
 **Speed Tuning:**
 - Fayne: 260+ SPD
 - Maulie/Stag Knight: 250+ SPD
 - Arbiter: 270+ SPD (if possible)
 - Bad-el-Kazar: 250+ SPD
+
 **Gear:**
 - Fayne: Speed, ACC, ATK, HP/DEF
 - Maulie: Speed, HP, ACC
 - Arbiter: Speed, HP, ACC
 - Stag Knight: Speed, ACC, HP/DEF
 - Bad-el-Kazar: Speed, HP, ACC
+
 **Masteries:**
 - Fayne: Offense (Warmaster), Support (Sniper, Master Hexer)
 - Maulie/Arbiter: Support, Defense
 - Stag Knight: Support, Defense
 - Bad-el-Kazar: Support, Defense
+
 **Manual/Auto:**
 - Manual required for skill cycling and poison uptime. Auto possible with correct AI, but less reliable.
+
 **Strengths:**
 - Strong poison and debuff uptime, good healing and cleanse, accessible team.
+
 **Weaknesses:**
 - No Freeze, less TM control, more manual required, lower success rate. Fayne is squishy and needs protection. Bad-el-Kazar does not revive.
+
 **Actionable Notes:**
 - Prioritize speed and survivability on Fayne. Set AI to open with Decrease DEF/ATK. Manual play required for poison uptime and affinity risk.
+
 **Simulated Damage/Clear Time:** ~6:00–9:00 (manual, 80%+ success in 5 runs)
+
 **Affinity Safety/Risk:**
 - Void: Safe for all roles.
 - Force: Safe unless Fayne is Magic affinity.
@@ -258,133 +299,6 @@
 - Spirit: Risk if Fayne is slowest or key role.
 
 ---
-
-### Team: Ninja Freeze + Ally Attack
-**Core Roles:**
-- Freeze: Ninja (A2)
-- Ally Attack: Maulie Tankard
-- TM Boost/Revive: Arbiter
-- Decrease DEF/ATK: Stag Knight
-- Counterattack: Skullcrusher
-**Optimal Combo:** Ninja (A2 Freeze), Maulie (Ally Attack), Arbiter (TM boost/revive), Stag Knight (DEF/ATK down), Skullcrusher (Counterattack)
-**Alternates:**
-- Freeze: Yakarl (A1), Broadmaw (A2)
-- Ally Attack: None
-- TM Boost: Apothecary
-- Decrease DEF/ATK: Tayrel, Venomage
-- Counterattack: None
-**Speed Tuning:**
-- All champions 250+ SPD (Ninja fastest, Maulie/Skullcrusher slightly slower)
-**Gear:**
-- Ninja: Relentless/Reflex, ACC, SPD, ATK
-- Maulie: Speed, HP, ACC
-- Arbiter: Speed, HP, ACC
-- Stag Knight: Speed, ACC, HP/DEF
-- Skullcrusher: Speed, HP/DEF
-**Masteries:**
-- Ninja: Support (Sniper, Master Hexer), Offense (Warmaster)
-- Maulie/Arbiter: Support, Defense
-- Stag Knight: Support, Defense
-- Skullcrusher: Defense, Support
-**Manual/Auto:**
-- Auto possible with correct AI (Ninja prioritize Freeze, Maulie Ally Attack, Arbiter TM boost, Stag Knight DEF/ATK down, Skullcrusher Counterattack). Manual for skill cycling if Freeze is resisted.
-**Strengths:**
-- Good shield break, strong debuffs, revive safety net.
-**Weaknesses:**
-- Freeze not on A1, less reliable than Yakarl team, needs skill cycling/Relentless.
-**Simulated Damage/Clear Time:** ~4:00–6:00 (auto, 90%+ success in 5 runs)
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Force: Safe unless Ninja is Magic affinity.
-- Magic: Risk if Ninja is Force affinity.
-- Spirit: Risk if Ninja is slowest or key role.
-
----
-
-### Team: Broadmaw Freeze + Multi-Hit
-**Core Roles:**
-- Freeze: Broadmaw (A2)
-- Ally Attack: Maulie Tankard
-- TM Boost/Revive: Arbiter
-- Multi-hit: Coldheart
-- Decrease DEF/ATK: Stag Knight
-**Optimal Combo:** Broadmaw (A2 Freeze), Maulie (Ally Attack), Arbiter (TM boost/revive), Coldheart (multi-hit), Stag Knight (DEF/ATK down)
-**Alternates:**
-- Freeze: Ninja (A2), Yakarl (A1)
-- Ally Attack: None
-- TM Boost: Apothecary
-- Multi-hit: Ninja, Stag Knight
-- Decrease DEF/ATK: Tayrel, Venomage
-**Speed Tuning:**
-- All champions 250+ SPD (Broadmaw fastest, Maulie/Coldheart slightly slower)
-**Gear:**
-- Broadmaw: Relentless/Reflex, ACC, SPD, HP/DEF
-- Maulie: Speed, HP, ACC
-- Arbiter: Speed, HP, ACC
-- Coldheart: Speed, ACC, ATK
-- Stag Knight: Speed, ACC, HP/DEF
-**Masteries:**
-- Broadmaw: Support (Sniper, Master Hexer), Defense
-- Maulie/Arbiter: Support, Defense
-- Coldheart: Offense, Support
-- Stag Knight: Support, Defense
-**Manual/Auto:**
-- Manual required for skill cycling (Freeze not on A1). Auto possible with Relentless/Reflex and correct AI.
-**Strengths:**
-- Budget option, good shield break, strong debuffs.
-**Weaknesses:**
-- Freeze not on A1, less reliable, more manual required.
-**Simulated Damage/Clear Time:** ~5:00–7:00 (manual, 80%+ success in 5 runs)
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Force: Safe unless Broadmaw is Magic affinity.
-- Magic: Risk if Broadmaw is Force affinity.
-- Spirit: Risk if Broadmaw is slowest or key role.
-
----
-
-### Team: Fayne Poison Debuff Team
-**Core Roles:**
-- Multi-hit: Fayne
-- Ally Attack: Maulie Tankard
-- TM Boost/Revive: Arbiter
-- Decrease DEF/ATK: Stag Knight
-- Heal/Cleanse: Bad-el-Kazar
-**Optimal Combo:** Fayne (multi-hit/poisons/DEF/ATK down), Maulie (Ally Attack), Arbiter (TM boost/revive), Stag Knight (DEF/ATK down), Bad-el-Kazar (heal/cleanse/poison boost)
-**Alternates:**
-- Multi-hit: Ninja, Coldheart
-- Ally Attack: None
-- TM Boost: Apothecary
-- Heal: Apothecary, Rector Drath, Vrask
-**Speed Tuning:**
-- All champions 250+ SPD (Fayne fastest, Maulie/Stag Knight slightly slower)
-**Gear:**
-- Fayne: Speed, ACC, ATK, HP/DEF
-- Maulie: Speed, HP, ACC
-- Arbiter: Speed, HP, ACC
-- Stag Knight: Speed, ACC, HP/DEF
-- Bad-el-Kazar: Speed, HP, ACC
-**Masteries:**
-- Fayne: Offense (Warmaster), Support (Sniper, Master Hexer)
-- Maulie/Arbiter: Support, Defense
-- Stag Knight: Support, Defense
-- Bad-el-Kazar: Support, Defense
-**Manual/Auto:**
-- Manual required for skill cycling and poison uptime. Auto possible with correct AI, but less reliable.
-**Strengths:**
-- Strong poison and debuff uptime, good healing and cleanse, accessible team.
-**Weaknesses:**
-- No Freeze, less TM control, more manual required, lower success rate. Fayne is squishy and needs protection. Bad-el-Kazar does not revive.
-**Simulated Damage/Clear Time:** ~6:00–9:00 (manual, 80%+ success in 5 runs)
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Force: Safe unless Fayne is Magic affinity.
-- Magic: Risk if Fayne is Force affinity.
-- Spirit: Risk if Fayne is slowest or key role.
-
----
-
-
 
 ## 7. Best Champions & Team Participation
 | Champion | Role(s) | Best Teams | Notes |

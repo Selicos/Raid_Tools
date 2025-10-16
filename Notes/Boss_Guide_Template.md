@@ -4,15 +4,9 @@
 1. Boss Mechanics & Stat Requirements
 2. Teams by Estimated Damage/Clear Speed
 3. Detailed Team Sections (by Archetype)
-    - 2:1 Speed Tune Teams
-    - Geomancer-Focused & Brogni Teams
-    - Shield/Support Teams
-    - High-Damage Team Variations
-    - Poison-Focused Teams
-    - HP Burn/Hybrid Teams
-    - Turn Meter/Speed Manipulation Teams
-    - Gimmick/Niche Mechanic Teams
-    - High-Survivability/Counterattack Teams
+    - Archetype 1
+    - Archetype 2
+    - etc
 4. Best Champions & Team Participation
 5. Direct Champion Comparisons by Role (only list owned champions; include a note clarifying this)
 6. Ideal Champions to Pull (only list champions not on the owned list, e.g., Yakarl if not owned)
@@ -49,6 +43,7 @@
 | [Team 1 Name] | [Damage] | [Champion List] | [Strengths, weaknesses, when to use] | **Affinity Safety/Risk:**<br>- Void: Safe for all roles.<br>- Magic: Risk for Force champions (weak hits, unreliable debuffs).<br>- Force: Risk for Magic champions (weak hits, unreliable debuffs).<br>- Spirit: Risk for Force champions (weak hits, unreliable debuffs). |
 | ... | ... | ... | ... | ... |
 
+note: use simulation data for each team generated and update this section when all teams are generated, detailed, and simulated. Prefer fast and reliable teams for major bosses and high damage and reliability for clan boss.
 ---
 
 ## 3. Detailed Team Sections (by Archetype)

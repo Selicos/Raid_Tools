@@ -3,21 +3,26 @@
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements
 2. Teams by Estimated Damage/Clear Speed
-3. Defensive Cleanse
-4. Poison/HP Burn Mix
-5. F2P Epic Core
-6. Affinity Safe Mix
-7. Nia Cleanse Hybrid
-8. Maulie Block Debuffs
-9. Speed Burn Poison
-10. Mithrala Speed Cleanse
-11. Block Debuffs Sustain
-12. Double Cleanse Safety
-13. Best Champions & Team Participation
-14. Direct Champion Comparisons by Role
-15. Ideal Champions to Pull
-16. General Notes
-17. Validation & Simulation Notes
+3. Detailed Team Sections (by Archetype)
+    - Defensive Cleanse
+    - Poison/HP Burn Mix
+    - F2P Epic Core
+    - Affinity Safe Mix
+    - Nia Cleanse Hybrid
+    - Maulie Block Debuffs
+    - Speed Burn Poison
+    - Mithrala Speed Cleanse
+    - Block Debuffs Sustain
+    - Double Cleanse Safety
+4. Best Champions & Team Participation
+5. Direct Champion Comparisons by Role
+6. Ideal Champions to Pull
+7. General Notes
+8. Actionable Notes & Upgrade Advice
+9. Team Flexibility & Alternate Builds
+10. When to Use Each Team
+11. Additional Team Archetypes
+12. Validation & Simulation Notes
 
 ---
 
@@ -25,27 +30,27 @@
 - **Boss:** Iron Twins Fortress (Hard)
 - **Affinities:** Rotates by stage (Magic, Force, Spirit, Void)
 - **Key Mechanics:**
-  - **Ironbrand Debuff:** Stacks increase boss damage taken; must be cleansed, blocked, or resisted to prevent wipe.
-  - **High Damage:** Both single-target and AoE; can wipe teams if not prepared.
-  - **Self-Cleanses:** Boss removes debuffs and buffs self.
-  - **Immunities:** Immune to TM reduction and crowd control.
-  - **Stat Thresholds:**
-    - Speed: 240–260+ (support), 220–240+ (damage dealers)
-    - Accuracy: 250–300+ (for debuffers)
-    - Resistance: 400+ (if using resist strategy)
-    - HP: 40k+ (45k+ preferred)
-    - Defense: 3.5k+ (4k+ preferred)
-    - Crit Rate/Damage: For damage dealers
+    - **Ironbrand Debuff:** Stacks increase boss damage taken; must be cleansed, blocked, or resisted to prevent wipe.
+    - **High Damage:** Both single-target and AoE; can wipe teams if not prepared.
+    - **Self-Cleanses:** Boss removes debuffs and buffs self.
+    - **Immunities:** Immune to TM reduction and crowd control.
+    - **Stat Thresholds:**
+        - Speed: 240–260+ (support), 220–240+ (damage dealers)
+        - Accuracy: 250–300+ (for debuffers)
+        - Resistance: 400+ (if using resist strategy)
+        - HP: 40k+ (45k+ preferred)
+        - Defense: 3.5k+ (4k+ preferred)
+        - Crit Rate/Damage: For damage dealers
 - **Affinity Safety/Risk:**
-  - Void: Safe for all roles.
-  - Magic: Risk for Force cleansers/block debuffs (weak hits, unreliable debuffs).
-  - Force: Risk for Magic cleansers/block debuffs (weak hits, unreliable debuffs).
-  - Spirit: Risk for Force cleansers/block debuffs (weak hits, unreliable debuffs).
+    - Void: Safe for all roles.
+    - Magic: Risk for Force cleansers/block debuffs (weak hits, unreliable debuffs).
+    - Force: Risk for Magic cleansers/block debuffs (weak hits, unreliable debuffs).
+    - Spirit: Risk for Force cleansers/block debuffs (weak hits, unreliable debuffs).
 - **Special Notes:**
-  - Ironbrand prevention is ideal: Bring at least one cleanser or block debuffs champion, or build for very high resistance. Cycle block debuffs if possible.
-  - Speed is more important than raw damage for most teams; prioritize speed and skill cycling over pure nuking unless the right champions are available.
-  - Manual play may be required for skill timing, especially for cleanses/block debuffs. Prefer full auto teams if possible.
-  - Speed tuning is essential for debuff uptime and survival. Check champion skill cooldowns and attack order for each champion and the team overall.
+    - Ironbrand prevention is ideal: Bring at least one cleanser or block debuffs champion, or build for very high resistance. Cycle block debuffs if possible.
+    - Speed is more important than raw damage for most teams; prioritize speed and skill cycling over pure nuking unless the right champions are available.
+    - Manual play may be required for skill timing, especially for cleanses/block debuffs. Prefer full auto teams if possible.
+    - Speed tuning is essential for debuff uptime and survival. Check champion skill cooldowns and attack order for each champion and the team overall.
 
 ### Manual/Auto Play Notes
 - Manual play may be required for skill timing, especially for cleanses/block debuffs. Full auto is possible with correct AI presets and high sustain, but manual intervention may be needed for skill order and affinity safety.
@@ -68,7 +73,8 @@
 
 ---
 
-## 3. Defensive Cleanse
+## 3. Detailed Team Sections (by Archetype)
+### Defensive Cleanse
 ### Team: Defensive Cleanse
 **Core Roles:** Cleanse, Speed, HP Burn, Healing, Sustain
 **Optimal Combo:** Mithrala Lifebane, Apothecary, Artak, Rector Drath, Vogoth
@@ -89,9 +95,7 @@
 - Force: Risk for Magic cleansers.
 - Spirit: Risk for Force cleansers.
 
----
-
-## 4. Poison/HP Burn Mix
+### Poison/HP Burn Mix
 ### Team: Poison/HP Burn Mix
 **Core Roles:** Poison, HP Burn, Healing, Revive, Speed
 **Optimal Combo:** Bad-el-Kazar, Geomancer, Ninja, Apothecary, Godseeker Aniri
@@ -112,9 +116,7 @@
 - Force: Risk for Magic poisoners.
 - Spirit: Risk for Force poisoners.
 
----
-
-## 5. F2P Epic Core
+### F2P Epic Core
 ### Team: F2P Epic Core
 **Core Roles:** Block Debuffs, Speed, HP Burn, Healing, Sustain
 **Optimal Combo:** Mausoleum Mage, Deacon Armstrong, Geomancer, Apothecary, Vogoth
@@ -135,9 +137,7 @@
 - Force: Risk for Magic block debuffs.
 - Spirit: Risk for Force block debuffs.
 
----
-
-## 6. Affinity Safe Mix
+### Affinity Safe Mix
 ### Team: Affinity Safe Mix
 **Core Roles:** Cleanse, HP Burn, Healing, Revive, Affinity Safety
 **Optimal Combo:** Mithrala Lifebane, Godseeker Aniri, Geomancer, Rector Drath, Vogoth
@@ -158,9 +158,7 @@
 - Force: Risk for Magic cleansers.
 - Spirit: Risk for Force cleansers.
 
----
-
-## 7. Nia Cleanse Hybrid
+### Nia Cleanse Hybrid
 ### Team: Nia Cleanse Hybrid
 **Core Roles:** Cleanser, Speed, HP Burn, Healing, Sustain
 **Optimal Combo:** White Dryad Nia, Arbiter, Geomancer, Ninja, Vogoth
@@ -181,9 +179,7 @@
 - Force: Risk for Magic cleansers.
 - Spirit: Risk for Force cleansers.
 
----
-
-## 8. Maulie Block Debuffs
+### Maulie Block Debuffs
 ### Team: Maulie Block Debuffs
 **Core Roles:** Block Debuffs, Speed, HP Burn, Healing, Revive
 **Optimal Combo:** Maulie Tankard, Deacon Armstrong, Geomancer, Ninja, Lady Annabelle
@@ -204,9 +200,7 @@
 - Force: Risk for Magic block debuffs.
 - Spirit: Risk for Force block debuffs.
 
----
-
-## 9. Speed Burn Poison
+### Speed Burn Poison
 ### Team: Speed Burn Poison
 **Core Roles:** Speed, HP Burn, Poison, Healing, Revive
 **Optimal Combo:** Arbiter, Geomancer, Ninja, Bad-el-Kazar, Apothecary
@@ -227,9 +221,7 @@
 - Force: Risk for Magic speed leads.
 - Spirit: Risk for Force speed leads.
 
----
-
-## 10. Mithrala Speed Cleanse
+### Mithrala Speed Cleanse
 ### Team: Mithrala Speed Cleanse
 **Core Roles:** Cleanser/Block Debuffs, Speed Lead, HP Burn, Revive, Damage Dealer
 **Optimal Combo:** Mithrala Lifebane, Arbiter, Geomancer, Godseeker Aniri, Ninja
@@ -250,9 +242,7 @@
 - Force: Risk for Magic cleansers.
 - Spirit: Risk for Force cleansers.
 
----
-
-## 11. Block Debuffs Sustain
+### Block Debuffs Sustain
 ### Team: Block Debuffs Sustain
 **Core Roles:** Block Debuffs, Speed, HP Burn, Poison, Healing, Revive
 **Optimal Combo:** Mausoleum Mage, Deacon Armstrong, Geomancer, Ninja, Bad-el-Kazar
@@ -273,9 +263,7 @@
 - Force: Risk for Magic block debuffs.
 - Spirit: Risk for Force block debuffs.
 
----
-
-## 12. Double Cleanse Safety
+### Double Cleanse Safety
 ### Team: Double Cleanse Safety
 **Core Roles:** Cleanse, Speed, HP Burn, Healing, Revive, Affinity Safety
 **Optimal Combo:** Godseeker Aniri, Apothecary, Geomancer, Artak, Rector Drath
@@ -298,7 +286,7 @@
 
 ---
 
-## 13. Best Champions & Team Participation
+## 4. Best Champions & Team Participation
 | Champion            | Role(s)                        | Best Teams                        | Notes |
 |---------------------|--------------------------------|-----------------------------------|-------|
 | Mithrala Lifebane   | Cleanser, Block Debuffs, Support| Mithrala Speed Cleanse, Defensive Cleanse, Affinity Safe Mix | Affinity safe, strong cleanse, shield, block debuffs |
@@ -322,8 +310,7 @@
 
 ---
 
-## 14. Direct Champion Comparisons by Role
-
+## 5. Direct Champion Comparisons by Role
 ### Cleanser/Healer
 - Mithrala Lifebane: Best all-around cleanser, affinity safe, shields, block debuffs. Core to fastest and safest teams.
 - Godseeker Aniri: Cleanse, revive, healing, affinity safe. Key to double cleanse and revive teams.
@@ -357,8 +344,7 @@
 
 ---
 
-## 15. Ideal Champions to Pull
-
+## 6. Ideal Champions to Pull
 ### Cleanser/Healer
 - Skytouched Shaman (block debuffs, cleanse, healing, affinity safe)
 - Doompriest (passive cleanse, healing, affinity safe)
@@ -384,7 +370,7 @@
 
 ---
 
-## 16. General Notes
+## 7. General Notes
 - Speed and skill cycling are prioritized over raw damage for Hard mode clears.
 - All teams require at least one cleanser or block debuffs champion for Ironbrand prevention.
 - Gear: Speed, Perception, Immortal, Relentless for supports; Accuracy, Speed, Lifesteal for damage dealers.
@@ -394,7 +380,7 @@
 
 ---
 
-## 17. Actionable Notes & Upgrade Advice
+## 8. Actionable Notes & Upgrade Advice
 - Build Mithrala, Arbiter, Geomancer for speed/cleanse and boss control.
 - Use Mausoleum Mage for block debuffs; prioritize high resistance for Ironbrand prevention.
 - Upgrade Godseeker Aniri and Rector Drath for revive/cleanse teams.
@@ -403,7 +389,7 @@
 
 ---
 
-## 18. Team Flexibility & Alternate Builds
+## 9. Team Flexibility & Alternate Builds
 - Flex between cleanse/block debuffs, HP Burn/poison, and F2P epic teams depending on affinity and gear.
 - Swap in alternates for affinity safety or budget options.
 - Use double cleanse teams for maximum safety, speed/HP Burn teams for fastest clears.
@@ -411,7 +397,7 @@
 
 ---
 
-## 19. When to Use Each Team
+## 10. When to Use Each Team
 - Speed cleanse teams: Best for fastest clears and boss control.
 - Block debuffs teams: Safest for progression and undergeared accounts.
 - F2P epic teams: Most accessible for all players.
@@ -420,32 +406,32 @@
 
 ---
 
-## 20. Additional Team Archetypes
+## 11. Additional Team Archetypes
 - Double Cleanse Teams: Godseeker Aniri, Apothecary, Mithrala, Nia for maximum safety and recovery.
 - High Resistance Teams: Build for 400+ resistance to block Ironbrand and debuffs.
 - Experimental Teams: Try combinations with Lady Annabelle, Vogoth, Nia for specific stages or affinity risk.
 
 ---
 
-## 21. Validation & Simulation Notes
+## 12. Validation & Simulation Notes
 - **Validation Sources:**
-  - Boss mechanics and stat requirements confirmed via RaidHQ, Ayumilove, HellHades, and in-game testing (October 2025).
-  - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
+    - Boss mechanics and stat requirements confirmed via RaidHQ, Ayumilove, HellHades, and in-game testing (October 2025).
+    - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
 - **Simulation/Testing:**
-  - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
-  - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
+    - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
+    - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
 - **Results Summary:**
-  - Mithrala Speed Cleanse: ~3:30–4:30 clear, 95%+ auto success in 5 runs.
-  - Block Debuffs Sustain: ~4:00–5:00 clear, 90%+ auto success in 5 runs.
-  - F2P Epic Core: ~5:30–6:30 clear, 85%+ auto success in 5 runs.
-  - Double Cleanse Safety: ~4:30–5:30 clear, 90%+ auto/manual success in 5 runs.
-  - Affinity Safe Mix: ~5:00–6:00 clear, 90%+ auto/manual success in 5 runs.
-  - Speed Burn Poison: ~3:30–4:30 clear, 90%+ auto success in 5 runs.
-  - Nia Cleanse Hybrid: ~4:00–5:00 clear, 85%+ auto/manual success in 5 runs.
-  - Maulie Block Debuffs: ~4:30–5:30 clear, 85%+ auto/manual success in 5 runs.
-  - Defensive Cleanse: ~5:00–6:00 clear, 90%+ auto/manual success in 5 runs.
-  - Poison/HP Burn Mix: ~4:30–5:30 clear, 90%+ auto/manual success in 5 runs.
+    - Mithrala Speed Cleanse: ~3:30–4:30 clear, 95%+ auto success in 5 runs.
+    - Block Debuffs Sustain: ~4:00–5:00 clear, 90%+ auto success in 5 runs.
+    - F2P Epic Core: ~5:30–6:30 clear, 85%+ auto success in 5 runs.
+    - Double Cleanse Safety: ~4:30–5:30 clear, 90%+ auto/manual success in 5 runs.
+    - Affinity Safe Mix: ~5:00–6:00 clear, 90%+ auto/manual success in 5 runs.
+    - Speed Burn Poison: ~3:30–4:30 clear, 90%+ auto success in 5 runs.
+    - Nia Cleanse Hybrid: ~4:00–5:00 clear, 85%+ auto/manual success in 5 runs.
+    - Maulie Block Debuffs: ~4:30–5:30 clear, 85%+ auto/manual success in 5 runs.
+    - Defensive Cleanse: ~5:00–6:00 clear, 90%+ auto/manual success in 5 runs.
+    - Poison/HP Burn Mix: ~4:30–5:30 clear, 90%+ auto/manual success in 5 runs.
 - **Data Sources:**
-  - RaidHQ, Ayumilove, HellHades, in-game testing, and community consensus.
+    - RaidHQ, Ayumilove, HellHades, in-game testing, and community consensus.
 - **Documentation:**
-  - All validation and simulation steps are documented in this section for transparency and reproducibility.
+    - All validation and simulation steps are documented in this section for transparency and reproducibility.

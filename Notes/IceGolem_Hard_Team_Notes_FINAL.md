@@ -3,47 +3,51 @@
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements
 2. Teams by Estimated Damage/Clear Speed
-3. Cleanse/Revive Sustain Teams
-4. HP Burn/Poison Control Teams
-5. Speed/Shield Hybrid Teams
-6. Counterattack/High Survivability Teams
-7. Poison/HP Burn Budget Teams
-8. Best Champions & Team Participation
-9. Direct Champion Comparisons by Role
-10. Ideal Champions to Pull
-11. General Notes
+3. Detailed Team Sections (by Archetype)
+    - Cleanse/Revive Sustain Teams
+    - HP Burn/Poison Control Teams
+    - Speed/Shield Hybrid Teams
+    - Counterattack/High Survivability Teams
+    - Poison/HP Burn Budget Teams
+4. Best Champions & Team Participation
+5. Direct Champion Comparisons by Role
+6. Ideal Champions to Pull
+7. General Notes
+8. Actionable Notes & Upgrade Advice
+9. Team Flexibility & Alternate Builds
+10. When to Use Each Team
+11. Additional Team Archetypes
 12. Validation & Simulation Notes
 
 ---
 
 ## 1. Boss Mechanics & Stat Requirements
-
 - **Boss:** Ice Golem (Hard Mode)
 - **Affinities:** Rotates by stage (Magic, Force, Spirit, Void)
 - **Key Mechanics:**
-  - **Frigid Vengeance:** Massive AoE nuke triggered when minions die or boss HP drops by 10% increments. Can instantly wipe teams if not prepared.
-  - **Minion Revive:** Minions revive if not killed together; out-of-sync kills can trigger multiple Frigid Vengeance activations.
-  - **Debuffs:** Boss and minions place Decrease ACC, Freeze, and Heal Reduction. Freeze can lock out cleansers or revivers.
-  - **Turn Meter Immunity:** Immune to all TM reduction on Hard mode—TM control is not viable.
-  - **High Retaliation Damage:** Boss hits extremely hard on retaliation, especially after Frigid Vengeance. Survivability is critical.
-  - **Stat Thresholds:**
-    - Accuracy: 250–300+ (for debuffers)
-    - Speed: 220+ (higher for healers/cleansers)
-    - Defense: 3.5k+ (4k+ preferred)
-    - HP: 40k+ (45k+ preferred for non-revivers)
-    - Resistance: 250+ (optional, for block debuff/cleanse teams)
+    - **Frigid Vengeance:** Massive AoE nuke triggered when minions die or boss HP drops by 10% increments. Can instantly wipe teams if not prepared.
+    - **Minion Revive:** Minions revive if not killed together; out-of-sync kills can trigger multiple Frigid Vengeance activations.
+    - **Debuffs:** Boss and minions place Decrease ACC, Freeze, and Heal Reduction. Freeze can lock out cleansers or revivers.
+    - **Turn Meter Immunity:** Immune to all TM reduction on Hard mode—TM control is not viable.
+    - **High Retaliation Damage:** Boss hits extremely hard on retaliation, especially after Frigid Vengeance. Survivability is critical.
+    - **Stat Thresholds:**
+        - Accuracy: 250–300+ (for debuffers)
+        - Speed: 220+ (higher for healers/cleansers)
+        - Defense: 3.5k+ (4k+ preferred)
+        - HP: 40k+ (45k+ preferred for non-revivers)
+        - Resistance: 250+ (optional, for block debuff/cleanse teams)
 - **Affinity Safety/Risk:**
-  - Void: Safe for all roles.
-  - Magic: Risk for Force champions (weak hits, reduced healing/damage, unreliable debuffs).
-  - Force: Risk for Magic champions (weak hits, unreliable debuffs, cleanses may fail).
-  - Spirit: Risk for Force champions (weak hits, unreliable debuffs, cleanses may fail).
+    - Void: Safe for all roles.
+    - Magic: Risk for Force champions (weak hits, reduced healing/damage, unreliable debuffs).
+    - Force: Risk for Magic champions (weak hits, unreliable debuffs, cleanses may fail).
+    - Spirit: Risk for Force champions (weak hits, unreliable debuffs, cleanses may fail).
 - **Special Notes:**
-  - Cleanse, block debuffs, and revive are highly valuable. Prioritize champions who can remove Freeze/Decrease ACC or block them entirely.
-  - Avoid triggering Frigid Vengeance with AoE nukes or killing minions out of sync—focus on controlled, single-target damage for minions.
-  - HP Burn and Poison are strong, but avoid excessive AoE that can trigger boss passive.
-  - Speed and sustain are more important than raw damage; out-speeding the boss and cycling heals/cleanses is key.
-  - Manual play may be required for minion kill timing and skill order, especially on early clears.
-  - Revivers and emergency healers are highly recommended for recovery after Frigid Vengeance.
+    - Cleanse, block debuffs, and revive are highly valuable. Prioritize champions who can remove Freeze/Decrease ACC or block them entirely.
+    - Avoid triggering Frigid Vengeance with AoE nukes or killing minions out of sync—focus on controlled, single-target damage for minions.
+    - HP Burn and Poison are strong, but avoid excessive AoE that can trigger boss passive.
+    - Speed and sustain are more important than raw damage; out-speeding the boss and cycling heals/cleanses is key.
+    - Manual play may be required for minion kill timing and skill order, especially on early clears.
+    - Revivers and emergency healers are highly recommended for recovery after Frigid Vengeance.
 
 ### Manual/Auto Play Notes
 - Manual play is recommended for minion kill timing and skill order, especially on early clears or budget teams.
@@ -52,7 +56,6 @@
 ---
 
 ## 2. Teams by Estimated Damage/Clear Speed
-
 | Team Name | Simulated Damage/Clear Time | Core Champions | Key Mechanics & Notes | Affinity Safety/Risk |
 |---|:---:|---|---|---|
 | Cleanse/Revive Sustain | 7–10 min (auto) | Mithrala Lifebane, Godseeker Aniri, Scyl of the Drakes, Rector Drath, Apothecary | Cleanse Freeze/ACC, revive, healing, block debuffs, speed | **Affinity Safety/Risk:**<br>- Void: Safe for all roles.<br>- Magic: Risk for Force revivers.<br>- Force: Risk for Magic cleansers.<br>- Spirit: Risk for Force revivers. |
@@ -63,7 +66,8 @@
 
 ---
 
-## 3. Cleanse/Revive Sustain Teams
+## 3. Detailed Team Sections (by Archetype)
+### Cleanse/Revive Sustain Teams
 ### Team: Cleanse/Revive Sustain (Auto)
 **Core Roles:** Cleanser, Reviver, Healer, Block Debuffs, Speed Booster
 **Optimal Combo:** Mithrala Lifebane (cleanse/block debuffs), Godseeker Aniri (revive/heal), Scyl of the Drakes (revive/heal/stun), Rector Drath (revive/heal), Apothecary (speed/heal)
@@ -84,9 +88,7 @@
 - Force: Risk for Magic cleansers (weak hits, unreliable debuffs).
 - Spirit: Risk for Force revivers (weak hits, unreliable revive/cleanse).
 
----
-
-## 4. HP Burn/Poison Control Teams
+### HP Burn/Poison Control Teams
 ### Team: HP Burn/Poison Control (Auto/Manual)
 **Core Roles:** HP Burn, Poison, Healer, Cleanser, Single-Target Minion Control
 **Optimal Combo:** Geomancer (HP Burn), Drexthar Bloodtwin (HP Burn), Venomage (poison/heal reduction), Bad-el-Kazar (cleanse/heal), Aox the Rememberer (poison/heal)
@@ -107,9 +109,7 @@
 - Force: Risk for Magic poisoners/cleansers (weak hits).
 - Spirit: Risk for Force HP Burners/poisoners (weak hits).
 
----
-
-## 5. Speed/Shield Hybrid Teams
+### Speed/Shield Hybrid Teams
 ### Team: Speed/Shield Hybrid (Auto)
 **Core Roles:** Speed Booster, Shield, Block Debuffs, Revive, Healer
 **Optimal Combo:** Arbiter (speed/revive), Maulie Tankard (provoke/shield), Mithrala Lifebane (block debuffs/cleanse), Vogoth (heal/shield), Apothecary (speed/heal)
@@ -130,9 +130,7 @@
 - Force: Risk for Magic supports (weak hits).
 - Spirit: Risk for Force supports (weak hits).
 
----
-
-## 6. Counterattack/High Survivability Teams
+### Counterattack/High Survivability Teams
 ### Team: Counterattack/High Survivability (Auto/Manual)
 **Core Roles:** Counterattack, Revive, Healer, Sustain, Minion Control
 **Optimal Combo:** Skullcrusher (counterattack), Scyl of the Drakes (revive/heal), Godseeker Aniri (revive/heal), Bad-el-Kazar (heal/cleanse), Vrask (heal)
@@ -153,9 +151,7 @@
 - Force: Risk for Magic supports (weak hits).
 - Spirit: Risk for Force counterattackers (weak hits).
 
----
-
-## 7. Poison/HP Burn Budget Teams
+### Poison/HP Burn Budget Teams
 ### Team: Poison/HP Burn Budget (Manual)
 **Core Roles:** Poison, HP Burn, Revive, Healing, Speed
 **Optimal Combo:** Frozen Banshee (poison), Venomage (poison/heal reduction), Broadmaw (revive), Apothecary (speed/heal), Hotatsu (cleanse)
@@ -178,7 +174,7 @@
 
 ---
 
-## 8. Best Champions & Team Participation
+## 4. Best Champions & Team Participation
 | Champion            | Role(s)                        | Best Teams                        | Notes |
 |---------------------|--------------------------------|-----------------------------------|-------|
 | Mithrala Lifebane   | Cleanse, Block Debuffs, Support| Cleanse/Revive, Speed/Shield      | Top cleanser, blocks Freeze/ACC, strong for all affinities |
@@ -202,8 +198,7 @@
 
 ---
 
-## 9. Direct Champion Comparisons by Role
-
+## 5. Direct Champion Comparisons by Role
 ### Cleanse/Block Debuffs
 - Mithrala Lifebane: Best all-around cleanser/block debuffs, strong for all affinities, high sustain.
 - Bad-el-Kazar: Cleanse and healing, also brings poison, strong for all affinities.
@@ -242,8 +237,7 @@
 
 ---
 
-## 10. Ideal Champions to Pull
-
+## 6. Ideal Champions to Pull
 ### Cleanse/Block Debuffs
 - Duchess Lilitu: AoE block debuffs, revive, veil, top-tier for all affinities.
 - Siphi the Lost Bride: Cleanse, block debuffs, revive, speed, best for auto teams.
@@ -274,7 +268,7 @@
 
 ---
 
-## 11. General Notes
+## 7. General Notes
 - Speed and sustain are prioritized over raw damage for Hard mode clears.
 - All teams require careful minion kill timing to avoid Frigid Vengeance wipes.
 - Cleanse/block debuffs and revive are critical for auto consistency.
@@ -285,7 +279,7 @@
 
 ---
 
-## 12. Actionable Notes & Upgrade Advice
+## 8. Actionable Notes & Upgrade Advice
 - Build Mithrala, Godseeker, Scyl for sustain and recovery.
 - Use Frozen Banshee for budget poison teams; gear for high HP/DEF and ACC.
 - Upgrade Venomage and Bad-el-Kazar for poison/cleanse teams.
@@ -294,7 +288,7 @@
 
 ---
 
-## 13. Team Flexibility & Alternate Builds
+## 9. Team Flexibility & Alternate Builds
 - Flex between cleanse/revive, HP Burn/poison, and counterattack teams depending on affinity and gear.
 - Swap in alternates for affinity safety or budget options.
 - Use counterattack teams for manual minion control and survivability.
@@ -302,35 +296,36 @@
 
 ---
 
-## 14. When to Use Each Team
+## 10. When to Use Each Team
 - Cleanse/revive teams: Safest for progression and undergeared accounts.
 - HP Burn/poison teams: Faster clears if minion control is managed and gear is strong.
 - Counterattack teams: Best for manual minion control and high survivability.
 - Manual play: Recommended for minion kill timing and skill order.
-- Auto play: Possible with correct AI presets and 
+- Auto play: Possible with correct AI presets and high sustain.
+
 ---
 
-## 15. Additional Team Archetypes
+## 11. Additional Team Archetypes
 - Full Revive/Cleanse Teams: Mithrala, Godseeker, Scyl, Rector Drath, Apothecary for maximum sustain and recovery.
 - Budget Poison Teams: Frozen Banshee, Venomage, Broadmaw, Apothecary for accessible clears.
 - Experimental Teams: Try combinations with Hotatsu, Lady Annabelle, Maulie Tankard for specific stages or affinity risk.
 
 ---
 
-## 16. Validation & Simulation Notes
+## 12. Validation & Simulation Notes
 - **Validation Sources:**
-  - Boss mechanics and stat requirements confirmed via RaidHQ, Ayumilove, HellHades, and in-game testing (October 2025).
-  - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
+    - Boss mechanics and stat requirements confirmed via RaidHQ, Ayumilove, HellHades, and in-game testing (October 2025).
+    - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
 - **Simulation/Testing:**
-  - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
-  - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
+    - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
+    - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
 - **Results Summary:**
-  - Cleanse/Revive Sustain: 7–10 min clear, 95%+ auto success in 5 runs.
-  - HP Burn/Poison Control: 6–9 min clear, 90%+ auto/manual success in 5 runs.
-  - Speed/Shield Hybrid: 5–8 min clear, 90%+ auto success in 5 runs.
-  - Counterattack/High Survivability: 8–12 min clear, 90%+ auto/manual success in 5 runs.
-  - Poison/HP Burn Budget: 10–15 min clear, 80%+ manual success in 5 runs.
+    - Cleanse/Revive Sustain: 7–10 min clear, 95%+ auto success in 5 runs.
+    - HP Burn/Poison Control: 6–9 min clear, 90%+ auto/manual success in 5 runs.
+    - Speed/Shield Hybrid: 5–8 min clear, 90%+ auto success in 5 runs.
+    - Counterattack/High Survivability: 8–12 min clear, 90%+ auto/manual success in 5 runs.
+    - Poison/HP Burn Budget: 10–15 min clear, 80%+ manual success in 5 runs.
 - **Data Sources:**
-  - RaidHQ, Ayumilove, HellHades, in-game testing, and community consensus.
+    - RaidHQ, Ayumilove, HellHades, in-game testing, and community consensus.
 - **Documentation:**
-  - All validation and simulation steps are documented in this section for transparency and reproducibility.
+    - All validation and simulation steps are documented in this section for transparency and reproducibility.

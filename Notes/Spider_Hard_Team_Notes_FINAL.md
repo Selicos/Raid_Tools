@@ -3,48 +3,53 @@
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements
 2. Teams by Estimated Clear Speed & Consistency
-3. High-Damage Nuker Teams
-4. Turn Meter Control & Crowd Control Teams
-5. Poison Explosion & High Poison Damage Teams
-6. Shield/Support & Sustain Teams
-7. Cleanse/Revive/Recovery Teams
-8. Best Champions & Team Participation
-9. Direct Champion Comparisons by Role
-10. Ideal Champions to Pull
-11. General Notes
+3. Detailed Team Sections (by Archetype)
+    - High-Damage Nuker Teams
+    - Turn Meter Control & Crowd Control Teams
+    - Poison Explosion & High Poison Damage Teams
+    - Shield/Support & Sustain Teams
+    - Cleanse/Revive/Recovery Teams
+4. Best Champions & Team Participation
+5. Direct Champion Comparisons by Role
+6. Ideal Champions to Pull
+7. General Notes
+8. Actionable Notes & Upgrade Advice
+9. Team Flexibility & Alternate Builds
+10. When to Use Each Team
+11. Additional Team Archetypes
 12. Validation & Simulation Notes
 
 ---
 
 ## 1. Boss Mechanics & Stat Requirements
-- **Boss:** Hard Spider (Spider’s Den, Hard Mode)
-- **Affinities:** Rotates by stage (Force, Magic, Spirit)
-- **Key Mechanics:**
-  - **HP Burn Immunity:** Skavag is immune to HP Burn and will heal if HP Burn is applied.
-  - **Frequent Spiderling Summons:** Spiderlings spawn regularly, deal heavy single-target damage, and apply Poisons.
-  - **Healing from Spiderling Deaths:** On certain stages, Skavag heals when spiderlings die, making AoE nukes risky.
-  - **High Base Stats:** Extremely high HP, Defense, and Resistance; requires strong debuff accuracy and survivability.
-  - **Turn Meter Control & Crowd Control:** Skavag is vulnerable to TM reduction and crowd control; Coldheart, Alure, and AoE stunners are highly effective.
-  - **Periodic Debuff Cleanse:** Boss cleanses debuffs periodically.
-  - **Stat Thresholds:**
-    - Accuracy: 350–400+ (for debuffs/TM control)
-    - Speed: 220–250+ (for consistent TM cycling)
-    - HP: 40k+ (45k+ preferred)
-    - Defense: 3.5k+ (4k+ preferred)
-    - Resistance: 350+ (for support/cleanser if aiming to resist poisons)
-    - Enemy MAX HP: High value for boss nuking (Coldheart, Royal Guard, Septimus)
-- **Affinity Safety/Risk:**
-  - Void: Safe for all roles.
-  - Force: Risk for Magic nukers (e.g., Coldheart, Royal Guard).
-  - Magic: Risk for Force champions; can reduce damage or survivability.
-  - Spirit: Risk for key supports if weak affinity; Spirit spiderlings can inflict more poisons.
-- **Special Notes:**
-  - Avoid HP Burners — they heal the boss on Hard Mode.
-  - Use crowd control, provokes, or taunts to delay spiderling damage.
-  - Cleanse & Heal are essential to counteract Poison stacking.
-  - Turn Meter Control is highly effective — Coldheart, Alure, Armiger excel.
-  - Manual play may be required to time spiderling kills and avoid boss healing.
-  - Revivers and emergency healers are valuable for recovery after spiderling bursts.
+**Boss:** Hard Spider (Spider’s Den, Hard Mode)
+**Affinities:** Rotates by stage (Force, Magic, Spirit)
+**Key Mechanics:**
+    - **HP Burn Immunity:** Skavag is immune to HP Burn and will heal if HP Burn is applied.
+    - **Frequent Spiderling Summons:** Spiderlings spawn regularly, deal heavy single-target damage, and apply Poisons.
+    - **Healing from Spiderling Deaths:** On certain stages, Skavag heals when spiderlings die, making AoE nukes risky.
+    - **High Base Stats:** Extremely high HP, Defense, and Resistance; requires strong debuff accuracy and survivability.
+    - **Turn Meter Control & Crowd Control:** Skavag is vulnerable to TM reduction and crowd control; Coldheart, Alure, and AoE stunners are highly effective.
+    - **Periodic Debuff Cleanse:** Boss cleanses debuffs periodically.
+    - **Stat Thresholds:**
+        - Accuracy: 350–400+ (for debuffs/TM control)
+        - Speed: 220–250+ (for consistent TM cycling)
+        - HP: 40k+ (45k+ preferred)
+        - Defense: 3.5k+ (4k+ preferred)
+        - Resistance: 350+ (for support/cleanser if aiming to resist poisons)
+        - Enemy MAX HP: High value for boss nuking (Coldheart, Royal Guard, Septimus)
+**Affinity Safety/Risk:**
+    - Void: Safe for all roles.
+    - Force: Risk for Magic nukers (e.g., Coldheart, Royal Guard).
+    - Magic: Risk for Force champions; can reduce damage or survivability.
+    - Spirit: Risk for key supports if weak affinity; Spirit spiderlings can inflict more poisons.
+**Special Notes:**
+    - Avoid HP Burners — they heal the boss on Hard Mode.
+    - Use crowd control, provokes, or taunts to delay spiderling damage.
+    - Cleanse & Heal are essential to counteract Poison stacking.
+    - Turn Meter Control is highly effective — Coldheart, Alure, Armiger excel.
+    - Manual play may be required to time spiderling kills and avoid boss healing.
+    - Revivers and emergency healers are valuable for recovery after spiderling bursts.
 
 ### Manual/Auto Play Notes
 - Manual play is recommended for TM control and poison explosion teams to maximize burst and survivability. Full auto is possible with correct AI presets and high sustain, but manual intervention may be needed for skill order and affinity safety.
@@ -67,7 +72,8 @@
 
 ---
 
-## 3. High-Damage Nuker Teams
+## 3. Detailed Team Sections (by Archetype)
+### High-Damage Nuker Teams
 ### Team: Triple Coldheart Speed Nuke
 **Core Roles:** Triple Enemy MAX HP Nukers (Coldheart x3), Shield (Brogni), Cleanse/Heal (Tagoar)
 **Optimal Combo:** Brogni, Tagoar, Coldheart, Coldheart, Coldheart
@@ -87,9 +93,7 @@
 - Magic: Safe for all roles.
 - Spirit: Safe for all roles.
 
----
-
-## 4. Turn Meter Control & Crowd Control Teams
+### Turn Meter Control & Crowd Control Teams
 ### Team: Double Coldheart TM Control
 **Core Roles:** Double Enemy MAX HP Nukers (Coldheart x2), Shield (Brogni), Cleanse/Heal (Tagoar), Buff Extension/Revive (Godseeker Aniri)
 **Optimal Combo:** Brogni, Godseeker Aniri, Coldheart, Coldheart, Tagoar
@@ -109,9 +113,7 @@
 - Magic: Safe for all roles.
 - Spirit: Safe for all roles.
 
----
-
-## 5. Poison Explosion & High Poison Damage Teams
+### Poison Explosion & High Poison Damage Teams
 ### Team: Taurus Poison Explosion
 **Core Roles:** Poison Exploder (Taurus), Poison Layer (Fayne), Debuff Extension (Narma the Returned), Cleanse/Heal (Tagoar), Shield/Support (Brogni)
 **Optimal Combo:** Taurus, Fayne, Narma the Returned, Tagoar, Brogni
@@ -130,9 +132,7 @@
 - Void: Safe for all roles.
 - Minor risk if Taurus is weak affinity.
 
----
-
-## 6. Shield/Support & Sustain Teams
+### Shield/Support & Sustain Teams
 ### Team: Full Sustain/Recovery
 **Core Roles:** Shield (Brogni), Buff Extension/Revive (Godseeker Aniri), Cleanse/Heal (Tagoar), Support/Revive (Rector Drath), TM Control (Coldheart)
 **Optimal Combo:** Brogni, Godseeker Aniri, Tagoar, Rector Drath, Coldheart
@@ -151,9 +151,7 @@
 - Void: Safe for all roles.
 - Minor risk if Coldheart is weak affinity.
 
----
-
-## 7. Cleanse/Revive/Recovery Teams
+### Cleanse/Revive/Recovery Teams
 ### Team: Cleanse & Recovery
 **Core Roles:** Cleanse/Heal (Tagoar), Shield (Brogni), Buff Extension (Godseeker Aniri), Revive (Rector Drath), TM Control (Coldheart)
 **Optimal Combo:** Tagoar, Brogni, Godseeker Aniri, Rector Drath, Coldheart
@@ -174,7 +172,7 @@
 
 ---
 
-## 8. Best Champions & Team Participation
+## 4. Best Champions & Team Participation
 | Champion            | Role(s)                        | Best Teams                        | Notes |
 |---------------------|--------------------------------|-----------------------------------|-------|
 | Brogni              | Shield, Support                | All teams                         | Core shield, reflect, and sustain |
@@ -192,8 +190,7 @@
 
 ---
 
-## 9. Direct Champion Comparisons by Role
-
+## 5. Direct Champion Comparisons by Role
 ### Shield/Support
 - Brogni, Mithrala, Maulie Tankard
 
@@ -214,7 +211,7 @@
 
 ---
 
-## 10. Ideal Champions to Pull
+## 6. Ideal Champions to Pull
 - Prince Kymar (reset, TM control, speed farming)
 - Siphi the Lost Bride (revive, cleanse, sustain)
 - Lydia the Deathsiren (DEF down, Weaken, speed)
@@ -225,7 +222,7 @@
 
 ---
 
-## 11. General Notes
+## 7. General Notes
 - All teams require high SPD/ACC/HP%/DEF% on core champions.
 - Manual play is recommended for TM control and poison explosion teams to maximize burst and survivability.
 - Use DeadwoodJedi or similar calculators for exact speed tuning if pushing for fastest clears.
@@ -236,8 +233,8 @@
 - For speed farming, invest in multiple Coldhearts and Royal Guard if available.
 
 ---
-## Actionable Notes & Upgrade Advice
 
+## 8. Actionable Notes & Upgrade Advice
 - If you have only one Coldheart, focus on hybrid TM control/poison teams for best results.
 - With two or more Coldhearts, prioritize double/triple MAX HP nuke teams for fastest clears.
 - Taurus-based poison explosion teams are best for burst clears but require high accuracy and careful timing.
@@ -248,8 +245,7 @@
 
 ---
 
-## Team Flexibility & Alternate Builds
-
+## 9. Team Flexibility & Alternate Builds
 - All teams can flex between poison, TM control, and sustain depending on available champions and gear.
 - If you have strong Relentless sets, use them on Coldheart, Venomage, Fayne, and Godseeker Aniri for more skill cycles.
 - For progression, use double revive teams (Godseeker + Rector) for maximum safety.
@@ -258,8 +254,7 @@
 
 ---
 
-## 14. When to Use Each Team
-
+## 10. When to Use Each Team
 - Use triple/double Coldheart teams for fastest clears and tournament farming.
 - Use Taurus poison explosion teams for burst clears if you have high accuracy and skill cycling.
 - Use hybrid poison/TM control teams for reliable clears with less gear/stat requirements.
@@ -267,33 +262,32 @@
 
 ---
 
-## 15. Additional Team Archetypes
-
+## 11. Additional Team Archetypes
 - **Spiderling Control/CC Teams:** Maulie Tankard, Scyl of the Drakes, Archmage Hellmut. Focus on controlling spiderlings with provoke, stuns, or turn meter manipulation to reduce incoming damage and poison stacks.
 - **Full Cleanse/Block Debuffs Teams:** Mithrala, Mausoleum Mage, Tagoar. Prioritize cleanse and block debuffs to counteract poison stacking and spiderling debuffs.
 - **Niche/Experimental Teams:** Loki the Deceiver, Embrys, Sun Wukong. Test unique mechanics or experimental strategies for specific stages or affinity rotations.
 
 ---
 
-## 16. Validation & Simulation Notes
+## 12. Validation & Simulation Notes
 - **Validation Sources:**
-  - Boss mechanics and stat requirements confirmed via RaidHQ, Ayumilove, HellHades, and in-game testing (October 2025).
-  - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
+    - Boss mechanics and stat requirements confirmed via RaidHQ, Ayumilove, HellHades, and in-game testing (October 2025).
+    - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
 - **Simulation/Testing:**
-  - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
-  - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
+    - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
+    - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
 - **Results Summary:**
-  - Triple Coldheart Speed Nuke: 1:00 clear, 95%+ manual/auto success in 5 runs.
-  - Double Coldheart TM Control: 1:10 clear, 90%+ manual/auto success in 5 runs.
-  - Double Coldheart + Royal Guard: 1:05 clear, 90%+ manual/auto success in 5 runs.
-  - Double Coldheart + Poison Hybrid: 1:15 clear, 90%+ manual/auto success in 5 runs.
-  - Coldheart TM Control: 1:20 clear, 90%+ manual/auto success in 5 runs.
-  - Taurus Poison Explosion: 1:40 clear, 85%+ manual/auto success in 5 runs.
-  - Full Poison Layering: 2:00 clear, 85%+ manual/auto success in 5 runs.
-  - Poison/Support Hybrid: 2:10 clear, 85%+ manual/auto success in 5 runs.
-  - Royal Guard Double Nuker: 1:45 clear, 90%+ manual/auto success in 5 runs.
-  - Full Sustain/Recovery: 2:45 clear, 95%+ manual/auto success in 5 runs.
+    - Triple Coldheart Speed Nuke: 1:00 clear, 95%+ manual/auto success in 5 runs.
+    - Double Coldheart TM Control: 1:10 clear, 90%+ manual/auto success in 5 runs.
+    - Double Coldheart + Royal Guard: 1:05 clear, 90%+ manual/auto success in 5 runs.
+    - Double Coldheart + Poison Hybrid: 1:15 clear, 90%+ manual/auto success in 5 runs.
+    - Coldheart TM Control: 1:20 clear, 90%+ manual/auto success in 5 runs.
+    - Taurus Poison Explosion: 1:40 clear, 85%+ manual/auto success in 5 runs.
+    - Full Poison Layering: 2:00 clear, 85%+ manual/auto success in 5 runs.
+    - Poison/Support Hybrid: 2:10 clear, 85%+ manual/auto success in 5 runs.
+    - Royal Guard Double Nuker: 1:45 clear, 90%+ manual/auto success in 5 runs.
+    - Full Sustain/Recovery: 2:45 clear, 95%+ manual/auto success in 5 runs.
 - **Data Sources:**
-  - RaidHQ, Ayumilove, HellHades, in-game testing, and community consensus.
+    - RaidHQ, Ayumilove, HellHades, in-game testing, and community consensus.
 - **Documentation:**
-  - All validation and simulation steps are documented in this section for transparency and reproducibility.
+    - All validation and simulation steps are documented in this section for transparency and reproducibility.
