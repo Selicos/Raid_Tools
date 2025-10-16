@@ -67,103 +67,18 @@
 
 ## 2. Teams by Estimated Damage/Clear Speed
 
-| Team Name | Simulated Damage/Clear Time | Core Champions | Key Mechanics & Notes | Affinity Safety/Risk |
-|---|:---:|---|---|---|
-| Mithrala Speed Cleanse | ~3:30–4:30 | 
-
-**Leader:** Mithrala Lifebane (Aura: 80 RES in all battles)<br>Arbiter, Geomancer, Godseeker Aniri, Ninja | 
-**Core Roles:** Cleanse, Block Debuffs, Speed, HP Burn, Revive, Damage<br>
-**Optimal Combo:** Mithrala Lifebane (cleanse/block debuffs, aura), Arbiter (speed, revive), Geomancer (HP burn, damage), Godseeker Aniri (cleanse, revive), Ninja (damage, HP burn backup)<br>
-**Alternates:** Mausoleum Mage (block debuffs), Deacon Armstrong (speed), Lady Annabelle (heal/sustain)<br>
-**Key Mechanics:** Cleanse/block debuffs, speed cycling, HP burn, revive, strong single-target damage.<br>
-**Trial/Mechanic Coverage:** Cleanse, Block Debuffs, HP Burn, Revive<br>
-**Skill/Turn Order Notes:**<br>- Mithrala: Open with cleanse/block debuffs, then shield.<br>- Arbiter: Speed boost first, revive as needed.<br>- Geomancer: HP burn on cooldown.<br>- Godseeker: Cleanse/revive as needed.<br>- Ninja: Focus on A2/A3 for damage.<br>
-**Speed Tuning:** 250–260+ (support), 220–240+ (damage dealers)<br>
-**Gear:** Speed, Perception, Immortal, Accuracy, Lifesteal<br>
-**Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster<br>
-**Manual/Auto:** Fully auto possible; manual for skill order optimization if needed<br>
-**Strengths:** High consistency, strong cleanse/block debuffs, revive safety net, fast clear<br>
-**Weaknesses:** Relies on Mithrala for affinity safety; weak if affinity is unfavorable<br>
-**Simulated Results:** 3 runs, ~3:30–4:30 clear, 95%+ auto success<br>
-**Affinity Safety/Risk:**<br>- Void: Safe for all roles.<br>- Magic: Risk for Force cleansers.<br>- Force: Risk for Magic cleansers.<br>- Spirit: Risk for Force cleansers.<br>
-**Actionable Advice:** Set Mithrala as leader for aura and affinity safety. Use AI presets to open with cleanse/block debuffs. Prioritize speed and accuracy on supports.<br>
-**Troubleshooting:** If fails, check speed tuning and skill order. Swap in alternates for affinity or gear gaps. |
-| Block Debuffs Sustain | ~4:00–5:00 | 
-
-**Leader:** Mausoleum Mage (Aura: 25% DEF in Faction Crypts)<br>Deacon Armstrong, Geomancer, Ninja, Bad-el-Kazar |
-**Core Roles:** Block Debuffs, Speed, HP Burn, Poison, Healing, Revive, Damage<br>
-**Optimal Combo:** Mausoleum Mage (block debuffs, aura), Deacon Armstrong (speed, TM boost), Geomancer (HP burn, damage), Ninja (damage, HP burn backup), Bad-el-Kazar (poison, healing, revive)<br>
-**Alternates:** Godseeker Aniri (revive), Arbiter (speed/revive), Lady Annabelle (heal/sustain)<br>
-**Key Mechanics:** Block debuffs, speed cycling, HP burn, poison, healing, revive<br>
-**Trial/Mechanic Coverage:** Block Debuffs, HP Burn, Poison, Healing, Revive<br>
-**Skill/Turn Order Notes:**<br>- Mausoleum Mage: Open with block debuffs.<br>- Deacon: Speed boost first, TM boost on cooldown.<br>- Geomancer: HP burn on cooldown.<br>- Ninja: Focus on A2/A3 for damage.<br>- Bad-el-Kazar: Poison/cleanse on cooldown, revive as needed.<br>
-**Speed Tuning:** 250–260+ (support), 220–240+ (damage dealers)<br>
-**Gear:** Speed, Perception, Immortal, Accuracy, Lifesteal<br>
-**Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster<br>
-**Manual/Auto:** Fully auto possible; manual for skill order optimization if needed<br>
-**Strengths:** High safety, strong block debuffs, healing, revive<br>
-**Weaknesses:** Lower damage, slower clear, Faction Crypts aura (not global)<br>
-**Simulated Results:** 3 runs, ~4:00–5:00 clear, 95%+ auto success<br>
-**Affinity Safety/Risk:**<br>- Void: Safe for all roles.<br>- Magic: Risk for Force block debuffs.<br>- Force: Risk for Magic block debuffs.<br>- Spirit: Risk for Force block debuffs.<br>
-**Actionable Advice:** Set Mausoleum Mage as leader for DEF aura (if no better option). Use AI presets to open with block debuffs. Prioritize speed and accuracy on supports.<br>
-**Troubleshooting:** If fails, check block debuff uptime and speed tuning. Use alternates for affinity or gear gaps. |
-| F2P Epic Core | ~5:30–6:30 | 
-
-**Leader:** Mausoleum Mage (Aura: 25% DEF in Faction Crypts)<br>Deacon Armstrong, Geomancer, Apothecary, Vogoth |
-**Core Roles:** Block Debuffs, Speed, HP Burn, Healing, Sustain<br>
-**Optimal Combo:** Mausoleum Mage (block debuffs, aura), Deacon Armstrong (speed, TM boost), Geomancer (HP burn, damage), Apothecary (speed, healing), Vogoth (sustain, healing)<br>
-**Alternates:** Godseeker Aniri (revive), Lady Annabelle (heal/sustain), Bad-el-Kazar (poison/heal)<br>
-**Key Mechanics:** Block debuffs, speed cycling, HP burn, healing, sustain<br>
-**Trial/Mechanic Coverage:** Block Debuffs, HP Burn, Healing, Sustain<br>
-**Skill/Turn Order Notes:**<br>- Mausoleum Mage: Open with block debuffs.<br>- Deacon: Speed boost first, TM boost on cooldown.<br>- Geomancer: HP burn on cooldown.<br>- Apothecary: Speed boost/heal as needed.<br>- Vogoth: Passive healing.<br>
-**Speed Tuning:** 250–260+ (support), 220–240+ (damage dealers)<br>
-**Gear:** Speed, Perception, Immortal, Accuracy, Lifesteal<br>
-**Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster<br>
-**Manual/Auto:** Fully auto possible; manual for skill order optimization if needed<br>
-**Strengths:** All-epic, accessible, high sustain, block debuffs<br>
-**Weaknesses:** Lower damage, Faction Crypts aura (not global), no revive<br>
-**Simulated Results:** 3 runs, ~5:30–6:30 clear, 90%+ auto success<br>
-**Affinity Safety/Risk:**<br>- Void: Safe for all roles.<br>- Magic: Risk for Force block debuffs.<br>- Force: Risk for Magic block debuffs.<br>- Spirit: Risk for Force block debuffs.<br>
-**Actionable Advice:** Set Mausoleum Mage as leader for DEF aura (if no better option). Use AI presets to open with block debuffs. Prioritize speed and accuracy on supports.<br>
-**Troubleshooting:** If fails, check block debuff uptime and speed tuning. Use alternates for affinity or gear gaps. |
-| Double Cleanse Safety | ~4:30–5:30 | 
-
-**Leader:** Godseeker Aniri (Aura: 60 DEF in all battles)<br>Apothecary, Geomancer, Artak, Rector Drath |
-**Core Roles:** Cleanse, Speed, HP Burn, Healing, Revive, Affinity Safety<br>
-**Optimal Combo:** Godseeker Aniri (cleanse, revive, aura), Apothecary (speed, healing), Geomancer (HP burn, damage), Artak (HP burn, backup cleanse), Rector Drath (cleanse, healing, revive)<br>
-**Alternates:** Mithrala Lifebane (cleanse/block debuffs), Lady Annabelle (heal/sustain), Arbiter (speed/revive)<br>
-**Key Mechanics:** Double cleanse, speed cycling, HP burn, healing, revive, affinity safety<br>
-**Trial/Mechanic Coverage:** Cleanse, HP Burn, Healing, Revive, Affinity Safety<br>
-**Skill/Turn Order Notes:**<br>- Godseeker: Open with cleanse, revive as needed.<br>- Apothecary: Speed boost/heal as needed.<br>- Geomancer: HP burn on cooldown.<br>- Artak: HP burn/cleanse on cooldown.<br>- Rector Drath: Cleanse/heal as needed.<br>
-**Speed Tuning:** 250–260+ (support), 220–240+ (damage dealers)<br>
-**Gear:** Speed, Perception, Immortal, Accuracy, Lifesteal<br>
-**Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster<br>
-**Manual/Auto:** Fully auto possible; manual for skill order optimization if needed<br>
-**Strengths:** High affinity safety, double cleanse, strong healing/revive<br>
-**Weaknesses:** Lower damage, slower clear<br>
-**Simulated Results:** 3 runs, ~4:30–5:30 clear, 95%+ auto success<br>
-**Affinity Safety/Risk:**<br>- Void: Safe for all roles.<br>- Magic: Risk for Force cleansers.<br>- Force: Risk for Magic cleansers.<br>- Spirit: Risk for Force cleansers.<br>
-**Actionable Advice:** Set Godseeker as leader for DEF aura. Use AI presets to open with cleanse. Prioritize speed and accuracy on supports.<br>
-**Troubleshooting:** If fails, check cleanse uptime and speed tuning. Use alternates for affinity or gear gaps. |
-| Affinity Safe Mix | ~5:00–6:00 | 
-
-**Leader:** Mithrala Lifebane (Aura: 80 RES in all battles)<br>Godseeker Aniri, Geomancer, Rector Drath, Vogoth |
-**Core Roles:** Cleanse, HP Burn, Healing, Revive, Affinity Safety<br>
-**Optimal Combo:** Mithrala Lifebane (cleanse/block debuffs, aura), Godseeker Aniri (cleanse, revive), Geomancer (HP burn, damage), Rector Drath (cleanse, healing, revive), Vogoth (sustain, healing)<br>
-**Alternates:** Apothecary (speed/heal), Lady Annabelle (heal/sustain), Arbiter (speed/revive)<br>
-**Key Mechanics:** Cleanse, HP burn, healing, revive, affinity safety<br>
-**Trial/Mechanic Coverage:** Cleanse, HP Burn, Healing, Revive, Affinity Safety<br>
-**Skill/Turn Order Notes:**<br>- Mithrala: Open with cleanse/block debuffs.<br>- Godseeker: Cleanse/revive as needed.<br>- Geomancer: HP burn on cooldown.<br>- Rector Drath: Cleanse/heal as needed.<br>- Vogoth: Passive healing.<br>
-**Speed Tuning:** 250–260+ (support), 220–240+ (damage dealers)<br>
-**Gear:** Speed, Perception, Immortal, Accuracy, Lifesteal<br>
-**Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster<br>
-**Manual/Auto:** Fully auto possible; manual for skill order optimization if needed<br>
-**Strengths:** High affinity safety, strong healing/revive, good sustain<br>
-**Weaknesses:** Lower damage, slower clear<br>
-**Simulated Results:** 3 runs, ~5:00–6:00 clear, 95%+ auto success<br>
-**Affinity Safety/Risk:**<br>- Void: Safe for all roles.<br>- Magic: Risk for Force cleansers.<br>- Force: Risk for Magic cleansers.<br>- Spirit: Risk for Force cleansers.<br>
-**Actionable Advice:** Set Mithrala as leader for aura and affinity safety. Use AI presets to open with cleanse/block debuffs. Prioritize speed and accuracy on supports.<br>
-**Troubleshooting:** If fails, check cleanse uptime and speed tuning. Use alternates for affinity or gear gaps. |
+| Team Name                | Simulated Damage/Clear Time | Core Champions (Leader in Bold)         | Key Mechanics & Notes                | Affinity Safety/Risk |
+|--------------------------|:--------------------------:|-----------------------------------------|--------------------------------------|---------------------|
+| Mithrala Speed Cleanse   | ~3:30–4:30                 | **Mithrala Lifebane**, Arbiter, Geomancer, Godseeker Aniri, Ninja | Cleanse, block debuffs, speed, HP burn, revive, strong single-target damage. | Safe for all on Void; risk for Force/Magic cleansers on rotation |
+| Affinity Safe Mix        | ~5:00–6:00                 | **Mithrala Lifebane**, Godseeker Aniri, Geomancer, Rector Drath, Vogoth | Cleanse, HP burn, healing, revive, affinity safety. | Safe for all; best for rotation days |
+| Defensive Cleanse        | ~5:00–6:00                 | **Mithrala Lifebane**, Apothecary, Artak, Rector Drath, Vogoth | Cleanse, speed, HP burn, healing, sustain. | Safe for all; slower clear |
+| F2P Epic Core            | ~5:30–6:30                 | **Mausoleum Mage**, Deacon Armstrong, Geomancer, Apothecary, Vogoth | Block debuffs, speed, HP burn, healing, sustain. | Risk for block debuffs on Magic/Force/Spirit |
+| Poison/HP Burn Mix       | ~4:30–5:30                 | **Bad-el-Kazar**, Geomancer, Ninja, Apothecary, Godseeker Aniri | Poison, HP burn, healing, revive, speed. | Risk for poisoners on Magic/Force/Spirit |
+| Speed Burn Poison        | ~3:30–4:30                 | **Arbiter**, Geomancer, Ninja, Bad-el-Kazar, Apothecary | Speed, HP burn, poison, healing, revive. | Risk for speed lead on Magic/Force/Spirit |
+| Nia Cleanse Hybrid       | ~4:00–5:00                 | **Arbiter**, White Dryad Nia, Geomancer, Ninja, Vogoth | Cleanse, speed, HP burn, healing, sustain. | Risk for cleansers on Magic/Force/Spirit |
+| Maulie Block Debuffs     | ~4:30–5:30                 | **Maulie Tankard**, Deacon Armstrong, Geomancer, Ninja, Lady Annabelle | Block debuffs, speed, HP burn, healing, revive. | Risk for block debuffs on Magic/Force/Spirit |
+| Block Debuffs Sustain    | ~4:00–5:00                 | **Mausoleum Mage**, Deacon Armstrong, Geomancer, Ninja, Bad-el-Kazar | Block debuffs, speed, HP burn, poison, healing, revive. | Risk for block debuffs on Magic/Force/Spirit |
+| Double Cleanse Safety    | ~4:30–5:30                 | **Godseeker Aniri**, Apothecary, Geomancer, Artak, Rector Drath | Cleanse, speed, HP burn, healing, revive, affinity safety. | Safe for all; best for rotation days |
 | Speed Burn Poison | ~3:30–4:30 | 
 
 **Leader:** Arbiter (Aura: 30% SPD in all battles)<br>Geomancer, Ninja, Bad-el-Kazar, Apothecary |
