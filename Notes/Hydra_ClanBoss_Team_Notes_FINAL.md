@@ -53,6 +53,7 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 - **Poison Cloud:** Blocks all damage except HP Burn. HP Burn is the most reliable damage source.
 - **True Fear:** Applied by Head of Torment, can shut down teams without Veil/Perfect Veil or Block Debuffs.
 - **Cleanses:** Head of Decay can remove all debuffs from the other heads, requiring block buffs or skill timing.
+- **Mischief Target & Buff Order:** The Head of Mischief always targets the champion with the most buffs. Designate a high-RESIST champion as your Mischief Target to absorb Mischief’s attacks and prevent key buffs from being stolen. Build with 500+ RESIST for Nightmare, 400+ for Brutal. Avoid placing key buffs on multiple champions.
 
 ### Stat Requirements (Nightmare/Brutal/Hard/Normal)
 - **Accuracy:**
@@ -129,7 +130,6 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 **Simulated Damage/Clear Time:** 15–25M per key (Hard/Brutal), 8–15M (Nightmare, depending on rotation)
 
 **Affinity Safety/Risk:**
-**Affinity Safety/Risk:**
 - Void: Safe for all roles
 - Force: Risk if Mithrala or Rector are Magic affinity vs Force heads
 - Magic: Risk if Uugo is Force affinity vs Magic heads
@@ -177,7 +177,6 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 - Magic: Risk if Norog is Force affinity vs Magic heads
 - Spirit: Risk if Ithos is key damage and Spirit head is present
 - Always check weekly rotation for affinity matchups
-*All other sections will be built out in order, using only owned champions and validated Hydra mechanics. Review this structure before proceeding to team building and section population.*
 
 ---
 
