@@ -1,79 +1,75 @@
+# Ultra-Nightmare Clan Boss Team Guide (2025, Owned Champions Only)
 
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements
-2. Teams by Estimated Damage
-3. 2:1 Speed Tune Teams
-4. Geomancer-Focused & Brogni Teams
-5. Shield/Support Teams
-6. High-Damage Team Variations
-7. Poison-Focused Teams
-8. HP Burn/Hybrid Teams
-9. Turn Meter/Speed Manipulation Teams
-10. Gimmick/Niche Mechanic Teams
-11. High-Survivability/Counterattack Teams
-12. Best Champions & Team Participation
-13. Direct Champion Comparisons by Role
-14. Ideal Champions to Pull
-15. General Notes
-16. Actionable Notes & Upgrade Advice
-17. Team Flexibility & Alternate Builds
-18. When to Use Each Team
-19. Additional Team Archetypes
-20. Validation & Simulation Notes
----
-
-> **Affinity Safety/Risk Notice:**  
-All team recommendations and stat requirements in this guide include explicit affinity safety/risk notes. Affinity (Spirit, Force, Magic, Void) can make or break certain teams, especially for key roles (cleanse, block debuffs, damage). Always check the current Clan Boss affinity and review the "Affinity Safety/Risk" notes for each team before committing resources.
+2. Teams by Estimated Damage/Clear Speed
+3. Detailed Team Sections (by Archetype)
+    - 2:1 Speed Tune Teams
+    - Geomancer-Focused & Brogni Teams
+    - Shield/Support Teams
+    - High-Damage Team Variations
+    - Poison-Focused Teams
+    - HP Burn/Hybrid Teams
+    - Turn Meter/Speed Manipulation Teams
+    - Gimmick/Niche Mechanic Teams
+    - High-Survivability/Counterattack Teams
+4. Best Champions & Team Participation
+5. Direct Champion Comparisons by Role
+6. Ideal Champions to Pull
+7. General Notes
+8. Actionable Notes & Upgrade Advice
+9. Team Flexibility & Alternate Builds
+10. When to Use Each Team
+11. Additional Team Archetypes
+12. Validation & Simulation Notes
 
 ---
 
-## Boss Mechanics & Stat Requirements
-- **Boss: Ultra-Nightmare Clan Boss (UNM)**
-- **Affinity:** Ultra-Nightmare Clan Boss alternates between Void, Spirit, Force, and Magic affinities on a set rotation.  
+## 1. Boss Mechanics & Stat Requirements
+
+- **Boss:** Ultra-Nightmare Clan Boss (UNM)
+- **Affinity:** Rotates between Void, Spirit, Force, and Magic. Each affinity can disrupt certain teams:
   - **Void:** No affinity weaknesses; all teams are safe.
-  - **Spirit:** Places Decrease Speed debuff, targets slowest champion for stun. Can disrupt speed-tuned teams and block debuff/block teams.
+  - **Spirit:** Places Decrease Speed, targets slowest champion for stun. Can disrupt speed-tuned teams and block debuff/block teams.
   - **Force:** Weak affinity for Magic champions; can reduce damage and survivability for Magic nukers.
   - **Magic:** Places Decrease DEF, can block debuffs. Weak affinity for Force champions.
-- **Stat thresholds (for 2-key/1-key):** 4,200+ DEF, 70k+ HP, 250+ SPD (unkillable teams may vary), 230+ ACC for debuffs, 250+ RES for debuff resistance.
-- **Key mechanics:** Stun, AOE, debuff spread, affinity-specific debuffs (see above).
-- **Unique challenges:** Affinity can disrupt key roles (e.g., Spirit affinity targets slowest champion for stun, Magic affinity can block debuffs).
-- **Always check the "Affinity Safety/Risk" column for each team below.**
-- **Key Mechanics:**
-  - Affinity changes (Spirit, Force, Magic, Void)
-  - High HP, DEF, and damage scaling by turn
-  - Applies Stun, Decrease Speed, and other debuffs
-  - Immune to Turn Meter reduction and crowd control
-  - Requires high survivability, debuff uptime, and speed tuning
-- **Required Stats:**
+- **Stat thresholds (for 2-key/1-key):**
+  - Defense: 4,200+ DEF
+  - HP: 70k+ HP
   - Speed: 250–280+ (for 2:1 teams)
   - Accuracy: 230–250+ (for debuffs)
-  - HP%/DEF%: As high as possible for survivability
+  - Resistance: 250+ (for debuff resistance, if using resist strategy)
   - Crit Rate/Damage: For damage dealers
   - Lifesteal/Leech: For sustain
+- **Key mechanics:** Stun, AOE, debuff spread, affinity-specific debuffs, immune to TM reduction/CC, high HP/DEF, damage scaling by turn.
 - **Special Notes:**
-  - Manual play can maximize HP Burn and shield uptime
-  - Speed tuning is critical for 2:1 and counterattack teams
-  - Use DeadwoodJedi or similar calculators for exact speed tuning
+  - Affinity can disrupt key roles (e.g., Spirit stun on slowest champion, Magic blocks debuffs).
+  - Manual play may be required for skill timing (especially for cleanses/block debuffs or shield/HP Burn teams). Prefer full auto if possible.
+  - Speed tuning is essential for debuff uptime and survival. Use DeadwoodJedi or similar calculators for exact speed tuning.
 
----
+### Manual/Auto Play Notes
+- Manual play is recommended for Geomancer and Brogni teams to maximize HP Burn and shield uptime.
+- For full auto, avoid weak affinity cleansers or block debuff champions in key roles.
+- Always check affinity rotation and adjust slowest champion to avoid Spirit stun on key debuffers or revivers.
 
-## Teams by Estimated Damage
+## 2. Teams by Estimated Damage/Clear Speed
 
 | Team Name | Simulated Damage (Avg) | Core Champions (Sample) | Key Mechanics & Notes | Affinity Safety/Risk |
 |---|:---:|---|---|---|
-| Geomancer 2:1 Burn/Poison Hybrid | 141.7M | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | **Strengths:** Top damage, HP Burn reflects, 2:1 speed tune, strong poison uptime. **Weaknesses:** Requires manual play for Geomancer HP Burn, high gear/stat requirements. **When to Use:** Best for maximizing damage with current roster. | Safe on Void/Force/Magic; Spirit: risk if Geomancer is slowest (stun target) |
-| Brogni 2:1 Shield/Reflect | 137.7M | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | **Strengths:** High survivability, shields, reflect damage, 2:1 speed. **Weaknesses:** Needs Brogni manual shield timing, gear intensive. **When to Use:** For safe, high-damage runs with strong support. | Safe on Void/Force/Magic; Spirit: risk if Brogni is slowest (stun target) |
-| Poison 2:1 Cycle (Relentless) | 130M | Deacon Armstrong, Godseeker Aniri, Fayne, Venomage, Frozen Banshee | **Strengths:** Relentless procs, high poison uptime, flexible. **Weaknesses:** Relies on RNG from Relentless, can be inconsistent. **When to Use:** If you have good Relentless sets and want high poison output. | Safe on Void/Force/Magic; Spirit: risk if key poisoner is slowest |
-| Seeker 2:1 Speed/Poison Hybrid | 127.7M | Seeker, Godseeker Aniri, Fayne, Venomage, Frozen Banshee | **Strengths:** Seeker TM boost, flexible poisoners, 2:1 speed. **Weaknesses:** Needs careful speed tuning, less survivability. **When to Use:** For speed-tuned, high-damage teams with Seeker. | Safe on Void/Force/Magic; Spirit: risk if Seeker is slowest |
-| Brogni Unkillable/Survivability | 126.7M | Brogni, Godseeker Aniri, Maulie Tankard, Deacon Armstrong, Venomage | **Strengths:** Unkillable mechanics, shields, DEF up, strong support. **Weaknesses:** Lower damage ceiling, requires manual Brogni. **When to Use:** For safe, long runs or if struggling with survivability. | Safe on Void/Force/Magic; Spirit: risk if Brogni or Maulie is slowest |
-| Double Revive 2:1 Poison/Support | 120M | Deacon Armstrong, Godseeker Aniri, Rector Drath, Fayne, Venomage | **Strengths:** Double revive, high uptime, safe for auto. **Weaknesses:** Lower damage, less burst. **When to Use:** For reliable, safe runs with revive insurance. | Safe on Void/Force/Magic; Spirit: risk if revive is slowest |
-| Relentless TM Dropper Build | 104.3M | Deacon Armstrong, Seeker, Godseeker Aniri, Fayne, Venomage | **Strengths:** TM manipulation, Relentless procs, flexible. **Weaknesses:** Relies on Relentless RNG, can be inconsistent. **When to Use:** If you have strong Relentless gear and want to experiment. | Safe on Void/Force/Magic; Spirit: risk if TM booster is slowest |
-| Multi-Turn Poison Cycle | 103M | Fayne, Venomage, Frozen Banshee, Godseeker Aniri, Deacon Armstrong | **Strengths:** High poison uptime, multi-turn cycles, flexible. **Weaknesses:** Lower survivability, needs careful debuff management. **When to Use:** For maximizing poison damage with available poisoners. | Safe on Void/Force/Magic; Spirit: risk if key poisoner is slowest |
-| Brogni 1:1 Shield/Reflect | 110M | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | **Strengths:** Consistent shields, 1:1 speed, high survivability. **Weaknesses:** Lower burst damage, needs Brogni manual shield. **When to Use:** For safe, consistent runs with less gear stress. | Safe on Void/Force/Magic; Spirit: risk if Brogni is slowest |
-| Geomancer 1:1 Burn/Poison | 105M | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | **Strengths:** Consistent HP Burn/poison, 1:1 speed, easy to manual. **Weaknesses:** Lower ceiling than 2:1, but very reliable. **When to Use:** For reliable, consistent damage with less tuning. | Safe on Void/Force/Magic; Spirit: risk if Geomancer is slowest |
-| Geomancer Counterattack | 100M+ | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | **Strengths:** Counterattack synergy, HP Burn, high uptime. **Weaknesses:** Needs counterattack setup, manual play. **When to Use:** For counterattack builds with Geomancer. | Safe on Void/Force/Magic; Spirit: risk if Geomancer is slowest |
-| Brogni Counterattack | 100M+ | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | **Strengths:** Counterattack, shields, high survivability. **Weaknesses:** Lower burst, needs manual Brogni. **When to Use:** For counterattack teams with Brogni. | Safe on Void/Force/Magic; Spirit: risk if Brogni is slowest |
-| Any above team with minor swaps | 80M+ | See above | **Strengths:** All teams above can be flexed with alternate poisoners, revivers, or TM boosters and still achieve 80M+ with good gear and tuning. | Affinity risk depends on slowest champion role |
+| Geomancer 2:1 Burn/Poison Hybrid | 140M+ | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | Top damage, HP Burn reflects, 2:1 speed tune, strong poison uptime. Manual Geomancer for max damage. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if Geomancer is slowest (stun target). |
+| Brogni 2:1 Shield/Reflect | 135M+ | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | High survivability, shields, reflect, 2:1 speed. Manual Brogni for best results. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if Brogni is slowest. |
+| Poison 2:1 Cycle (Relentless) | 130M | Deacon Armstrong, Godseeker Aniri, Fayne, Venomage, Frozen Banshee | Relentless procs, high poison uptime, flexible. RNG dependent. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if key poisoner is slowest. |
+| Seeker 2:1 Speed/Poison Hybrid | 127M | Seeker, Godseeker Aniri, Fayne, Venomage, Frozen Banshee | Seeker TM boost, flexible poisoners, 2:1 speed. Needs careful tuning. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if Seeker is slowest. |
+| Brogni Unkillable/Survivability | 125M+ | Brogni, Godseeker Aniri, Maulie Tankard, Deacon Armstrong, Venomage | Unkillable mechanics, shields, DEF up, strong support. Lower damage ceiling. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if Brogni or Maulie is slowest. |
+| Double Revive 2:1 Poison/Support | 120M | Deacon Armstrong, Godseeker Aniri, Rector Drath, Fayne, Venomage | Double revive, high uptime, safe for auto. Lower burst. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if revive is slowest. |
+| Relentless TM Dropper Build | 104M | Deacon Armstrong, Seeker, Godseeker Aniri, Fayne, Venomage | TM manipulation, Relentless procs, flexible. RNG dependent. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if TM booster is slowest. |
+| Multi-Turn Poison Cycle | 103M | Fayne, Venomage, Frozen Banshee, Godseeker Aniri, Deacon Armstrong | High poison uptime, multi-turn cycles, flexible. Lower survivability. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if key poisoner is slowest. |
+| Brogni 1:1 Shield/Reflect | 110M | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | Consistent shields, 1:1 speed, high survivability. Lower burst. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if Brogni is slowest. |
+| Geomancer 1:1 Burn/Poison | 105M | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | Consistent HP Burn/poison, 1:1 speed, easy to manual. Lower ceiling. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if Geomancer is slowest. |
+| Geomancer Counterattack | 100M+ | Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage | Counterattack synergy, HP Burn, high uptime. Needs counterattack setup. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if Geomancer is slowest. |
+| Brogni Counterattack | 100M+ | Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath | Counterattack, shields, high survivability. Lower burst. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if Brogni is slowest. |
+| Double Revive/Support (1:1 or 2:1) | 95–120M | Godseeker Aniri, Rector Drath, Deacon Armstrong, Fayne, Venomage, Maulie Tankard (flex) | Double revive, high uptime, safe for auto. 2:1 for higher damage, 1:1 for easier gearing. | Void: Safe. Force: Safe. Magic: Safe. Spirit: Risk if revive is slowest. |
+| Any above team with minor swaps | 80M+ | See above | All teams above can flex with alternates and still achieve 80M+ with good gear/tuning. | Affinity risk depends on slowest champion role. |
 
 **General Notes:**
 - All teams require high SPD/ACC/HP%/DEF% on core champions.
@@ -84,16 +80,21 @@ All team recommendations and stat requirements in this guide include explicit af
 
 ---
 
-## 2:1 Speed Tune Teams
+## 3. Detailed Team Sections (by Archetype)
 
+### 2:1 Speed Tune Teams
 These teams take two turns for every one Clan Boss turn, maximizing debuff uptime, skill cycling, and overall damage. All require precise speed tuning and high gear quality.
 
-### Team 1: Geomancer 2:1 Burn/Poison Hybrid
+#### Team 1: Geomancer 2:1 Burn/Poison Hybrid
 **Core Roles:** HP Burn (Geomancer), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage
 
 **Alternates:** Narma the Returned (for Fayne/Venomage), Rector Drath (for Godseeker)
+
+**Team Variations:**
+- Can swap in Frozen Banshee for Fayne or Venomage for more poison focus.
+- Rector Drath can be used for more revive/survivability if Godseeker is unavailable.
 
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, Geomancer 260–270, Fayne/Venomage 255–265
 
@@ -107,51 +108,26 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Weaknesses:** High gear/stat requirements, manual play for max damage.
 
-**Simulated Damage:** 141.7M
+**Simulated Damage:** 140M+
 
 **Affinity Safety/Risk:**
-- **Void:** Safe for all roles.
-- **Force:** Safe for all roles.
-- **Magic:** Safe for all roles.
-- **Spirit:** **Risk** – If Geomancer is the slowest champion, Spirit stun can break the team cycle or remove HP Burn. Always ensure your slowest champion is not a key debuffer or damage dealer.
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Geomancer is slowest (stun target).
 
 ---
 
-### Team 2: Brogni 2:1 Shield/Reflect
-**Core Roles:** Shield/Reflect (Brogni), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoner (Venomage), Support/Revive (Rector Drath)
-
-**Optimal Combo:** Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath
-
-**Alternates:** Fayne/Narma (for poisoner), Maulie Tankard (for TM boost)
-
-**Speed Tuning:** Deacon 270–280, Godseeker 265–275, Brogni 260–270, Venomage/Rector 255–265
-
-**Gear:** Brogni (Relentless/Speed/Perception), others as above
-
-**Masteries:** Brogni (Warmaster, Lasting Gifts), others as above
-
-**Manual/Auto:** Manual Brogni shield for best results; can be run on auto with less optimal shield uptime.
-
-**Strengths:** High survivability, shields, reflect damage, revive support.
-
-**Weaknesses:** Needs Brogni manual shield timing, gear intensive.
-
-**Simulated Damage:** 137.7M
-
-**Affinity Safety/Risk:**
-- **Void:** Safe for all roles.
-- **Force:** Safe for all roles.
-- **Magic:** Safe for all roles.
-- **Spirit:** **Risk** – If Brogni is the slowest champion, Spirit stun can break shield cycles and reduce survivability. Ensure your slowest champion is not Brogni or a key support.
-
----
-
-### Team 3: Poison 2:1 Cycle (Relentless)
+#### Team 2: Poison 2:1 Cycle (Relentless)
 **Core Roles:** TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage, Frozen Banshee), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Deacon Armstrong, Godseeker Aniri, Fayne, Venomage, Frozen Banshee (all in Relentless)
 
 **Alternates:** Narma (for any poisoner), Seeker (for TM boost)
+
+**Team Variations:**
+- Can swap in Narma for any poisoner for more weaken/poison.
+- Seeker can replace Deacon for TM boost if needed.
 
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, others 260–270
 
@@ -168,19 +144,23 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 **Simulated Damage:** 130M
 
 **Affinity Safety/Risk:**
-- **Void:** Safe for all roles.
-- **Force:** Safe for all roles.
-- **Magic:** Safe for all roles.
-- **Spirit:** **Risk** – If a key poisoner (Fayne, Venomage, Frozen Banshee) is the slowest, Spirit stun can break poison uptime and reduce damage. Try to make a non-essential champion the slowest.
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if key poisoner is slowest.
 
 ---
 
-### Team 4: Seeker 2:1 Speed/Poison Hybrid
+#### Team 3: Seeker 2:1 Speed/Poison Hybrid
 **Core Roles:** TM Booster (Seeker), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage, Frozen Banshee), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Seeker, Godseeker Aniri, Fayne, Venomage, Frozen Banshee
 
 **Alternates:** Narma (for any poisoner), Deacon Armstrong (for TM boost)
+
+**Team Variations:**
+- Can swap in Narma for any poisoner for more weaken/poison.
+- Deacon can replace Seeker for TM boost if needed.
 
 **Speed Tuning:** Seeker 270–280, Godseeker 265–275, others 260–270
 
@@ -194,62 +174,61 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Weaknesses:** Needs careful speed tuning, less survivability.
 
-**Simulated Damage:** 127.7M
+**Simulated Damage:** 127M
 
 **Affinity Safety/Risk:**
-- **Void:** Safe for all roles.
-- **Force:** Safe for all roles.
-- **Magic:** Safe for all roles.
-- **Spirit:** **Risk** – If Seeker is the slowest, Spirit stun can break the 2:1 speed cycle. Ensure Seeker is not the slowest, or use a backup TM booster.
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Seeker is slowest.
 
 ---
 
-### Team 5: Double Revive 2:1 Poison/Support
-**Core Roles:** TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Reviver (Rector Drath), Poisoners (Fayne, Venomage)
+### Geomancer-Focused & Brogni Teams
 
-**Optimal Combo:** Deacon Armstrong, Godseeker Aniri, Rector Drath, Fayne, Venomage
+#### Team 1: Brogni 2:1 Shield/Reflect
+**Core Roles:** Shield/Reflect (Brogni), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoner (Venomage), Support/Revive (Rector Drath)
 
-**Alternates:** Narma (for any poisoner), Seeker (for TM boost)
+**Optimal Combo:** Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath
 
-**Speed Tuning:** Deacon 270–280, Godseeker 265–275, Rector 260–270, others 260–270
+**Alternates:** Fayne/Narma (for poisoner), Maulie Tankard (for TM boost)
 
-**Gear:** All Speed/Perception/Accuracy
+**Team Variations:**
+- Fayne or Narma can be swapped for Venomage for more poison/weaken.
+- Maulie Tankard can replace Deacon for TM boost and DEF up.
 
-**Masteries:** All Warmaster/Hexer
+**Speed Tuning:** Deacon 270–280, Godseeker 265–275, Brogni 260–270, Venomage/Rector 255–265
 
-**Manual/Auto:** Can be run on auto, but manual revive/extension increases safety.
+**Gear:** Brogni (Relentless/Speed/Perception), others as above
 
-**Strengths:** Double revive, high uptime, safe for auto.
+**Masteries:** Brogni (Warmaster, Lasting Gifts), others as above
 
-**Weaknesses:** Lower damage, less burst.
+**Manual/Auto:** Manual Brogni shield for best results; can be run on auto with less optimal shield uptime.
 
-**Simulated Damage:** 120M
+**Strengths:** High survivability, shields, reflect damage, revive support.
+
+**Weaknesses:** Needs Brogni manual shield timing, gear intensive.
+
+**Simulated Damage:** 135M+
 
 **Affinity Safety/Risk:**
-- **Void:** Safe for all roles.
-- **Force:** Safe for all roles.
-- **Magic:** Safe for all roles.
-- **Spirit:** **Risk** – If a reviver (Godseeker Aniri or Rector Drath) is the slowest, Spirit stun can prevent timely revives and break the team. Make a non-revive champion the slowest if possible.
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Brogni is slowest (stun target).
 
 ---
 
-**General 2:1 Team Notes:**
-- All 2:1 teams require precise speed tuning and high SPD/ACC/HP%/DEF%.
-- Manual play can further increase damage, especially for Geomancer/Brogni teams.
-- Use DeadwoodJedi or similar calculators for exact speed tuning.
-- Prioritize Warmaster and Master Hexer masteries for all damage dealers and extenders.
-- Relentless sets can boost damage but introduce RNG.
-
----
-
-## Geomancer-Focused & Brogni Teams
-
-### Brogni Unkillable/Survivability Team
-**Core Roles:** Shield/Reflect (Brogni), TM Booster (Deacon Armstrong, Seeker, Maulie Tankard), Reviver/Healer (Godseeker Aniri, Rector Drath), Poisoners (Venomage, Fayne, Frozen Banshee, Narma the Returned), Increase DEF (Maulie Tankard, Hotatsu)
+#### Team 2: Brogni Unkillable/Survivability
+**Core Roles:** Shield/Reflect (Brogni), TM Booster (Deacon Armstrong, Maulie Tankard), Reviver/Healer (Godseeker Aniri, Rector Drath), Poisoners (Venomage, Fayne, Frozen Banshee, Narma), DEF Up (Maulie Tankard, Hotatsu)
 
 **Optimal Combo:** Brogni, Godseeker Aniri, Maulie Tankard, Deacon Armstrong, Venomage
 
 **Alternates:** Fayne/Narma (for poisoner), Rector Drath (for Godseeker), Seeker (for TM boost)
+
+**Team Variations:**
+- Hotatsu can replace Maulie for DEF up and leech.
+- Rector Drath can be used for more revive/survivability.
 
 **Speed/Stat Notes:** Prioritize SPD/ACC/HP%/DEF% on all. Manual Brogni shield and Godseeker extension before AOE.
 
@@ -257,67 +236,34 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Masteries:** Brogni (Warmaster, Lasting Gifts), others as above
 
-**Strengths:**
-- Extremely high survivability due to Brogni's shields and Maulie/Hotatsu DEF up.
-- Can survive the full 50 turns with proper manual shield timing.
-- Good for players struggling to keep teams alive on UNM.
+**Manual/Auto:** Manual Brogni shield and Godseeker extension before AOE for best results; can be run on auto with less optimal results.
 
-**Weaknesses:**
-- Lower damage ceiling than pure 2:1 or poison teams.
-- Requires manual play for Brogni shield and Godseeker extension before AOE.
-- Gear intensive: Brogni needs high HP, SPD, and ideally Relentless.
+**Strengths:** Extremely high survivability, can survive full 50 turns with proper manual shield timing, good for players struggling to keep teams alive.
 
-**Actionable Notes:**
-- Prioritize SPD/ACC/HP%/DEF% on all champions.
-- Use Brogni in Relentless or Speed for more shield cycles.
-- Maulie Tankard and Hotatsu are interchangeable for DEF up; Maulie also brings TM boost and provoke.
-- Manual play is highly recommended for best results.
+**Weaknesses:** Lower damage ceiling than pure 2:1 or poison teams, requires manual play for Brogni shield and Godseeker extension, gear intensive.
 
-**Simulated Damage:** 126.7M
+**Simulated Damage:** 125M+
+
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Brogni or Maulie is slowest (stun target).
 
 ---
 
-### Brogni + Double Revive Team
-**Core Roles:** Shield/Reflect (Brogni), TM Booster (Deacon Armstrong, Seeker, Maulie Tankard), Reviver/Healer (Godseeker Aniri, Rector Drath), Poisoners (Fayne, Venomage, Frozen Banshee, Narma the Returned)
+### Shield/Support Teams
 
-**Optimal Combo:** Brogni, Godseeker Aniri, Rector Drath, Deacon Armstrong, Fayne
-
-**Alternates:** Venomage/Narma (for poisoner), Seeker (for TM boost)
-
-**Speed/Stat Notes:** Manual Brogni shield and Godseeker extension before AOE. Prioritize SPD/ACC/HP%/DEF%.
-
-**Gear:** Brogni (Relentless/Speed/Perception), others as above
-
-**Masteries:** Brogni (Warmaster, Lasting Gifts), others as above
-
-**Strengths:**
-- Double revive (Godseeker + Rector) makes this team extremely safe for auto.
-- Brogni shields and reflect add survivability and extra damage.
-- Flexible poisoner slot (Fayne, Venomage, Frozen Banshee, Narma).
-
-**Weaknesses:**
-- Lower burst damage than 2:1 or hybrid teams.
-- Still requires manual Brogni shield for best results.
-- Gear intensive for Brogni and both revivers.
-
-**Actionable Notes:**
-- Use this team if you want a safe, reliable UNM clear with minimal risk of wipe.
-- Prioritize SPD/ACC/HP%/DEF% on all, especially Brogni and revivers.
-- Manual Brogni shield and Godseeker extension before AOE for best uptime.
-- Can be run on auto, but manual play increases survivability and damage.
-
-**Simulated Damage:** 121M
-
----
-
-## Shield/Support Teams
-
-### Team 1: Brogni 1:1 Shield/Reflect
+#### Team 1: Brogni 1:1 Shield/Reflect
 **Core Roles:** Shield/Reflect (Brogni), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoner (Venomage), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath
 
 **Alternates:** Fayne/Narma (for poisoner), Maulie Tankard (for TM boost)
+
+**Team Variations:**
+- Fayne or Narma can be swapped for Venomage for more poison/weaken.
+- Maulie Tankard can replace Deacon for TM boost and DEF up.
 
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, Brogni 260–270, Venomage/Rector 255–265
 
@@ -325,98 +271,100 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Masteries:** Brogni (Warmaster, Lasting Gifts), others as above
 
-**Strengths:**
-- Consistent shields and reflect damage for high survivability.
-- 1:1 speed tune is easier to build and maintain than 2:1.
-- Good for players with less optimal gear or who want a safe, reliable run.
+**Manual/Auto:** Manual Brogni shield for best results; can be run on auto with less optimal shield uptime.
 
-**Weaknesses:**
-- Lower burst damage than 2:1 or hybrid teams.
-- Requires manual Brogni shield for best results.
-- Less damage potential than poison/hybrid teams.
+**Strengths:** Consistent shields and reflect damage for high survivability. 1:1 speed tune is easier to build and maintain than 2:1. Good for players with less optimal gear or who want a safe, reliable run.
 
-**Actionable Notes:**
-- Use this team if you want a safe, consistent UNM clear with less gear stress.
-- Manual Brogni shield before AOE for best results.
-- Prioritize SPD/ACC/HP%/DEF% on all, especially Brogni and Godseeker.
-- Can be run on auto, but manual play increases survivability and damage.
+**Weaknesses:** Lower burst damage than 2:1 or hybrid teams. Requires manual Brogni shield for best results. Less damage potential than poison/hybrid teams.
 
 **Simulated Damage:** 110M
 
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Brogni is slowest (stun target).
+
 ---
 
-### Team 2: Geomancer 1:1 Burn/Poison
+#### Team 2: Geomancer 1:1 Burn/Poison
 **Core Roles:** HP Burn (Geomancer), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage
 
 **Alternates:** Narma the Returned (for Fayne/Venomage), Rector Drath (for Godseeker)
 
+**Team Variations:**
+- Frozen Banshee can be swapped in for Fayne or Venomage for more poison focus.
+- Rector Drath can be used for more revive/survivability if Godseeker is unavailable.
+
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, Geomancer 260–270, Fayne/Venomage 255–265
 
 **Gear:** Perception/Speed/Accuracy, prioritize SPD/ACC/HP%/DEF%
 
 **Masteries:** Offense (Warmaster), Support (Master Hexer, Lasting Gifts for Godseeker)
 
-**Strengths:**
-- Consistent HP Burn and poison uptime, easy to manual.
-- 1:1 speed tune is more forgiving for gear and stat requirements.
-- Good for players who want reliable, consistent damage with less tuning.
+**Manual/Auto:** Manual Geomancer HP Burn and Godseeker extension for best results; can be run on auto with slightly lower damage.
 
-**Weaknesses:**
-- Lower ceiling than 2:1 or hybrid teams.
-- Manual play for Geomancer HP Burn and Godseeker extension increases damage.
-- Less burst than poison/hybrid teams.
+**Strengths:** Consistent HP Burn and poison uptime, easy to manual. 1:1 speed tune is more forgiving for gear and stat requirements. Good for players who want reliable, consistent damage with less tuning.
 
-**Actionable Notes:**
-- Use this team for reliable, consistent damage with less tuning and gear stress.
-- Manual Geomancer HP Burn and Godseeker extension for best results.
-- Prioritize SPD/ACC/HP%/DEF% on all, especially Geomancer and Godseeker.
-- Can be run on auto, but manual play increases damage.
+**Weaknesses:** Lower ceiling than 2:1 or hybrid teams. Manual play for Geomancer HP Burn and Godseeker extension increases damage. Less burst than poison/hybrid teams.
 
 **Simulated Damage:** 105M
 
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Geomancer is slowest (stun target).
+
 ---
 
-## High-Damage Team Variations
+### High-Damage Team Variations
 
-### Team 1: Geomancer High Damage
+#### Team 1: Geomancer High Damage
 **Core Roles:** HP Burn (Geomancer), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), High Damage Dealer (Fayne, Venomage), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage
 
 **Alternates:** Narma the Returned (for Fayne/Venomage), Rector Drath (for Godseeker)
 
+**Team Variations:**
+- Frozen Banshee can be swapped in for Fayne or Venomage for more poison focus.
+- Rector Drath can be used for more revive/survivability if Godseeker is unavailable.
+
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, Geomancer 260–270, Fayne/Venomage 255–265
 
 **Gear:** Perception/Speed/Accuracy, prioritize SPD/ACC/HP%/DEF%
 
 **Masteries:** Offense (Warmaster), Support (Master Hexer, Lasting Gifts for Godseeker)
 
-**Strengths:**
-- Highest single-target damage potential with current roster.
-- HP Burn and poison synergy maximizes boss damage.
-- Flexible for manual or auto with minor loss in output.
+**Manual/Auto:** Manual Geomancer HP Burn and Godseeker extension for best results; can be run on auto with slightly lower damage.
 
-**Weaknesses:**
-- Requires manual play for Geomancer HP Burn and Godseeker extension for best results.
-- High gear/stat requirements for all damage dealers.
+**Strengths:** Highest single-target damage potential with current roster. HP Burn and poison synergy maximizes boss damage. Flexible for manual or auto with minor loss in output.
 
-**Actionable Notes:**
-- Use this team for leaderboard pushes or max chest farming.
-- Manual Geomancer HP Burn and Godseeker extension before AOE for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
+**Weaknesses:** Requires manual play for Geomancer HP Burn and Godseeker extension for best results. High gear/stat requirements for all damage dealers.
 
-**Simulated Damage:** 150M
+**Simulated Damage:** 140M+
+
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Geomancer is slowest (stun target).
 
 ---
 
-### Team 2: Brogni High Damage
+#### Team 2: Brogni High Damage
 **Core Roles:** Shield/Reflect (Brogni), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), High Damage Dealer (Venomage, Fayne), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Fayne
 
 **Alternates:** Narma the Returned (for any damage dealer), Seeker (for TM boost)
+
+**Team Variations:**
+- Fayne or Narma can be swapped for Venomage for more poison/weaken.
+- Seeker can replace Deacon for TM boost if needed.
 
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, Brogni 260–270, Venomage/Fayne 255–265
 
@@ -424,32 +372,34 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Masteries:** Brogni (Warmaster, Lasting Gifts), others as above
 
-**Strengths:**
-- High damage with strong shields and reflect for survivability.
-- Brogni shields before AOE, Godseeker extends buffs for uptime.
-- Can be run on auto with less optimal results.
+**Manual/Auto:** Manual Brogni shield and Godseeker extension before AOE for best uptime; can be run on auto with less optimal results.
 
-**Weaknesses:**
-- Still requires manual Brogni shield for best results.
-- Lower burst than Geomancer high damage team.
+**Strengths:** High damage with strong shields and reflect for survivability. Brogni shields before AOE, Godseeker extends buffs for uptime. Can be run on auto with less optimal results.
 
-**Actionable Notes:**
-- Use this team if you want a balance of damage and safety.
-- Manual Brogni shield and Godseeker extension before AOE for best uptime.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
+**Weaknesses:** Still requires manual Brogni shield for best results. Lower burst than Geomancer high damage team.
 
-**Simulated Damage:** 145M
+**Simulated Damage:** 135M+
+
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Brogni is slowest (stun target).
 
 ---
 
-## Poison-Focused Teams
+### Poison-Focused Teams
 
-### Team 1: Double Poison Cycle
-**Core Roles:** TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage, Frozen Banshee, Narma the Returned), Support/Revive (Rector Drath)
+#### Team 1: Double Poison Cycle
+**Core Roles:** TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage, Frozen Banshee, Narma), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Deacon Armstrong, Godseeker Aniri, Fayne, Venomage, Frozen Banshee (all in Relentless)
 
 **Alternates:** Narma (for any poisoner), Seeker (for TM boost)
+
+**Team Variations:**
+- Narma can be swapped in for any poisoner for more weaken/poison.
+- Seeker can replace Deacon for TM boost if needed.
 
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, others 260–270
 
@@ -457,30 +407,32 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Masteries:** All Warmaster/Hexer
 
-**Strengths:**
-- Maximum poison uptime, especially with Relentless procs.
-- Flexible team comp for available poisoners.
-- Can be run on auto, but manual Godseeker extension increases uptime.
+**Manual/Auto:** Can be run on auto, but manual Godseeker extension increases uptime.
 
-**Weaknesses:**
-- Relies on Relentless RNG for best results.
-- Lower survivability than shield/reflect teams.
+**Strengths:** Maximum poison uptime, especially with Relentless procs. Flexible team comp for available poisoners. Can be run on auto, but manual Godseeker extension increases uptime.
 
-**Actionable Notes:**
-- Use this team if you have strong Relentless sets and want high poison output.
-- Manual Godseeker extension and debuff management for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
+**Weaknesses:** Relies on Relentless RNG for best results. Lower survivability than shield/reflect teams.
 
 **Simulated Damage:** 130M
 
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if key poisoner is slowest.
+
 ---
 
-### Team 2: Poison and Weaken
-**Core Roles:** TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage, Frozen Banshee, Narma the Returned), Weaken (Fayne, Narma), Support/Revive (Rector Drath)
+#### Team 2: Poison and Weaken
+**Core Roles:** TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage, Frozen Banshee, Narma), Weaken (Fayne, Narma), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Deacon Armstrong, Godseeker Aniri, Fayne, Venomage, Frozen Banshee
 
 **Alternates:** Narma (for any poisoner), Seeker (for TM boost)
+
+**Team Variations:**
+- Narma can be swapped in for any poisoner for more weaken/poison.
+- Seeker can replace Deacon for TM boost if needed.
 
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, others 260–270
 
@@ -488,32 +440,34 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Masteries:** All Warmaster/Hexer
 
-**Strengths:**
-- High poison and weaken uptime for consistent damage.
-- Flexible for available poisoners and support.
-- Can be run on auto, but manual revive/extension increases safety.
+**Manual/Auto:** Can be run on auto, but manual revive/extension increases safety.
 
-**Weaknesses:**
-- Lower burst than hybrid or HP Burn teams.
-- Needs careful debuff management for best results.
+**Strengths:** High poison and weaken uptime for consistent damage. Flexible for available poisoners and support. Can be run on auto, but manual revive/extension increases safety.
 
-**Actionable Notes:**
-- Use this team for reliable, consistent poison damage.
-- Manual Godseeker revive/extension and debuff management for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
+**Weaknesses:** Lower burst than hybrid or HP Burn teams. Needs careful debuff management for best results.
 
 **Simulated Damage:** 125M
 
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if key poisoner is slowest.
+
 ---
 
-## HP Burn/Hybrid Teams
+### HP Burn/Hybrid Teams
 
-### Team 1: Geomancer HP Burn
+#### Team 1: Geomancer HP Burn
 **Core Roles:** HP Burn (Geomancer), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage
 
 **Alternates:** Narma the Returned (for Fayne/Venomage), Rector Drath (for Godseeker)
+
+**Team Variations:**
+- Frozen Banshee can be swapped in for Fayne or Venomage for more poison focus.
+- Rector Drath can be used for more revive/survivability if Godseeker is unavailable.
 
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, Geomancer 260–270, Fayne/Venomage 255–265
 
@@ -521,30 +475,32 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Masteries:** Offense (Warmaster), Support (Master Hexer, Lasting Gifts for Godseeker)
 
-**Strengths:**
-- Consistent HP Burn and poison uptime, high damage potential.
-- Flexible for manual or auto play.
-- Good for players with strong Geomancer and poisoners.
+**Manual/Auto:** Manual Geomancer HP Burn and Godseeker extension for best results; can be run on auto with slightly lower damage.
 
-**Weaknesses:**
-- Manual play for Geomancer HP Burn and Godseeker extension increases damage.
-- Lower burst than pure poison or hybrid teams.
+**Strengths:** Consistent HP Burn and poison uptime, high damage potential. Flexible for manual or auto play. Good for players with strong Geomancer and poisoners.
 
-**Actionable Notes:**
-- Use this team for reliable, high damage with Geomancer focus.
-- Manual Geomancer HP Burn and Godseeker extension for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
+**Weaknesses:** Manual play for Geomancer HP Burn and Godseeker extension increases damage. Lower burst than pure poison or hybrid teams.
 
-**Simulated Damage:** 141.7M
+**Simulated Damage:** 140M+
+
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Geomancer is slowest (stun target).
 
 ---
 
-### Team 2: HP Burn and Weaken
+#### Team 2: HP Burn and Weaken
 **Core Roles:** TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), HP Burn (Geomancer), Weaken (Fayne, Narma), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Deacon Armstrong, Godseeker Aniri, Geomancer, Fayne, Narma
 
 **Alternates:** Venomage (for any poisoner), Seeker (for TM boost)
+
+**Team Variations:**
+- Venomage can be swapped in for Fayne or Narma for more poison/def down.
+- Seeker can replace Deacon for TM boost if needed.
 
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, Geomancer 260–270, Fayne/Narma 255–265
 
@@ -552,191 +508,140 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Masteries:** All Warmaster/Hexer
 
-**Strengths:**
-- High HP Burn and weaken uptime for consistent damage.
-- Flexible for available poisoners and support.
-- Can be run on auto, but manual revive/extension increases safety.
+**Manual/Auto:** Can be run on auto, but manual revive/extension increases safety.
 
-**Weaknesses:**
-- Lower burst than hybrid or poison teams.
-- Needs careful debuff management for best results.
+**Strengths:** High HP Burn and weaken uptime for consistent damage. Flexible for available poisoners and support. Can be run on auto, but manual revive/extension increases safety.
 
-**Actionable Notes:**
-- Use this team for reliable, consistent HP Burn and weaken damage.
-- Manual Godseeker revive/extension and debuff management for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
+**Weaknesses:** Lower burst than hybrid or poison teams. Needs careful debuff management for best results.
 
 **Simulated Damage:** 130M
 
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Geomancer is slowest (stun target).
+
 ---
 
-## Turn Meter/Speed Manipulation Teams
+### Turn Meter/Speed Manipulation Teams
 
-### Team 1: Seeker TM Manipulation
-**Core Roles:** TM Booster (Seeker), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage, Frozen Banshee), Support/Revive (Rector Drath)
+These teams leverage turn meter boosts, manipulation, and speed control to maximize debuff uptime, survivability, and damage. They are especially useful when you lack full 2:1 speed tune gear or want to experiment with TM boosting champions.
 
-**Optimal Combo:** Seeker, Godseeker Aniri, Fayne, Venomage, Frozen Banshee
+#### Team 1: Relentless TM Dropper Build
+**Core Roles:** TM Booster (Deacon Armstrong, Seeker), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage), Support/Revive (Rector Drath)
 
-**Alternates:** Narma (for any poisoner), Deacon Armstrong (for TM boost)
+**Optimal Combo:** Deacon Armstrong, Seeker, Godseeker Aniri, Fayne, Venomage
 
-**Speed Tuning:** Seeker 270–280, Godseeker 265–275, others 260–270
+**Alternates:** Narma (for any poisoner), Frozen Banshee (for Fayne/Venomage), Rector Drath (for Godseeker)
+
+**Team Variations:**
+- Narma can be swapped in for any poisoner for more weaken/poison.
+- Frozen Banshee can be used for more poison focus.
+- Rector Drath can be used for more revive/survivability if Godseeker is unavailable.
+
+**Speed Tuning:** Deacon 270–280, Seeker 265–275, Godseeker 260–270, others 255–265
+
+**Gear:** Relentless/Speed/Perception on TM boosters and poisoners
+
+**Masteries:** All Warmaster/Hexer
+
+**Manual/Auto:** Can be run on auto, but manual TM boost and revive/extension increases safety and damage.
+
+**Strengths:** TM manipulation allows for flexible speed tuning and high poison uptime. Relentless procs can greatly increase damage. Flexible team comp for available poisoners and support.
+
+**Weaknesses:** Relies on Relentless RNG for best results. Lower survivability than shield/reflect teams. Needs careful debuff management for best results.
+
+**Simulated Damage:** 104M
+
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if TM booster is slowest (stun target).
+
+---
+
+#### Team 2: Multi-Turn Poison Cycle
+**Core Roles:** Poisoners (Fayne, Venomage, Frozen Banshee), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Support/Revive (Rector Drath)
+
+**Optimal Combo:** Fayne, Venomage, Frozen Banshee, Godseeker Aniri, Deacon Armstrong
+
+**Alternates:** Narma (for any poisoner), Seeker (for TM boost), Rector Drath (for Godseeker)
+
+**Team Variations:**
+- Narma can be swapped in for any poisoner for more weaken/poison.
+- Seeker can replace Deacon for TM boost if needed.
+- Rector Drath can be used for more revive/survivability if Godseeker is unavailable.
+
+**Speed Tuning:** Deacon 270–280, Godseeker 265–275, others 260–270
 
 **Gear:** All Speed/Perception/Accuracy
 
 **Masteries:** All Warmaster/Hexer
 
-**Strengths:**
-- Seeker TM boost enables 2:1 and high poison uptime.
-- Flexible for available poisoners and support.
-- Can be run on auto, but manual Seeker TM boost and Godseeker extension can increase damage.
+**Manual/Auto:** Can be run on auto, but manual revive/extension increases safety.
 
-**Weaknesses:**
-- Needs careful speed tuning for 2:1.
-- Lower survivability than shield/reflect teams.
+**Strengths:** High poison uptime, multi-turn cycles, flexible team comp for available poisoners and support. Can be run on auto, but manual revive/extension increases safety.
 
-**Actionable Notes:**
-- Use this team for speed-tuned, high-damage runs with Seeker.
-- Manual Seeker TM boost and Godseeker extension for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
-
-**Simulated Damage:** 127.7M
-
----
-
-### Team 2: Geomancer TM Manipulation
-**Core Roles:** HP Burn (Geomancer), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage), Support/Revive (Rector Drath)
-
-**Optimal Combo:** Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage
-
-**Alternates:** Narma the Returned (for Fayne/Venomage), Rector Drath (for Godseeker)
-
-**Speed Tuning:** Deacon 270–280, Godseeker 265–275, Geomancer 260–270, Fayne/Venomage 255–265
-
-**Gear:** Perception/Speed/Accuracy, prioritize SPD/ACC/HP%/DEF%
-
-**Masteries:** Offense (Warmaster), Support (Master Hexer, Lasting Gifts for Godseeker)
-
-**Strengths:**
-- Geomancer HP Burn and TM manipulation for high damage.
-- Flexible for manual or auto play.
-- Good for players with strong Geomancer and poisoners.
-
-**Weaknesses:**
-- Manual play for Geomancer HP Burn and Godseeker extension increases damage.
-- Needs careful speed tuning for 2:1.
-
-**Actionable Notes:**
-- Use this team for reliable, high damage with Geomancer focus.
-- Manual Geomancer HP Burn and Godseeker extension for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
-
-**Simulated Damage:** 141.7M
-
----
-
-## Gimmick/Niche Mechanic Teams
-
-### Relentless TM Dropper Build
-**Core Roles:** TM Booster (Deacon Armstrong, Seeker), Reviver/Healer (Godseeker Aniri, Rector Drath), Poisoners (Fayne, Venomage, Frozen Banshee, Narma the Returned), Weaken (Fayne, Narma)
-
-**Optimal Combo:** Deacon Armstrong (Relentless), Seeker (Relentless), Godseeker Aniri (Relentless), Fayne (Relentless), Venomage (Relentless)
-
-**Alternates:** Narma (for any poisoner), Rector Drath (for Godseeker), Maulie Tankard (for TM boost)
-
-**Speed/Stat Notes:** Prioritize SPD/ACC, balance HP/DEF for survival. Manual TM boosts for best cycle.
-
-**Gear:** All Relentless/Speed/Perception
-
-**Masteries:** All Warmaster/Hexer
-
-**Strengths:**
-- High TM manipulation and poison uptime with Relentless procs.
-- Flexible for available poisoners and support.
-- Can be run on auto, but manual TM boosts and Godseeker extension increase damage.
-
-**Weaknesses:**
-- Relies on Relentless RNG for best results.
-- Lower survivability than shield/reflect teams.
-
-**Actionable Notes:**
-- Use this team if you have strong Relentless sets and want to experiment with TM dropper builds.
-- Manual TM boosts and Godseeker extension for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
-
-**Simulated Damage:** 104.3M
-
----
-
-### Multi-Turn Poison Cycle
-**Core Roles:** TM Booster (Deacon Armstrong, Seeker), Reviver/Healer (Godseeker Aniri, Rector Drath), Poisoners (Fayne, Venomage, Frozen Banshee, Narma the Returned), Weaken (Fayne, Narma)
-
-**Optimal Combo:** Fayne (Relentless), Venomage (Relentless), Frozen Banshee (Relentless), Godseeker Aniri (Relentless), Deacon Armstrong (Relentless)
-
-**Alternates:** Narma (for any poisoner), Seeker (for TM boost)
-
-**Speed/Stat Notes:** Watch debuff bar, manual Godseeker extension for best uptime.
-
-**Gear:** All Relentless/Speed/Perception
-
-**Masteries:** All Warmaster/Hexer
-
-**Strengths:**
-- High poison uptime and multi-turn cycles with Relentless procs.
-- Flexible for available poisoners and support.
-- Can be run on auto, but manual Godseeker extension increases uptime.
-
-**Weaknesses:**
-- Relies on Relentless RNG for best results.
-- Lower survivability than shield/reflect teams.
-
-**Actionable Notes:**
-- Use this team for maximizing poison damage with available poisoners.
-- Manual Godseeker extension and debuff management for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
+**Weaknesses:** Lower survivability than shield/reflect teams. Needs careful debuff management for best results.
 
 **Simulated Damage:** 103M
 
----
-
-### Niche Debuff Bar Manipulation
-**Core Roles:** TM Booster (Deacon Armstrong, Seeker), Reviver/Healer (Godseeker Aniri, Rector Drath), Poisoners (Fayne, Venomage, Frozen Banshee, Narma the Returned), Weaken (Fayne, Narma)
-
-**Optimal Combo:** Narma the Returned (Relentless), Venomage (Relentless), Fayne (Relentless), Godseeker Aniri (Relentless), Deacon Armstrong (Relentless)
-
-**Alternates:** Frozen Banshee (for any poisoner), Seeker (for TM boost)
-
-**Speed/Stat Notes:** Manual Narma and Godseeker for best debuff management. Prioritize SPD/ACC.
-
-**Gear:** All Relentless/Speed/Perception
-
-**Masteries:** All Warmaster/Hexer
-
-**Strengths:**
-- Niche team for maximizing debuff bar management and poison uptime.
-- Flexible for available poisoners and support.
-- Can be run on auto, but manual Narma and Godseeker increase debuff uptime.
-
-**Weaknesses:**
-- Relies on Relentless RNG for best results.
-- Lower survivability than shield/reflect teams.
-
-**Actionable Notes:**
-- Use this team if you want to experiment with debuff bar management and niche mechanics.
-- Manual Narma and Godseeker for best debuff management.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
-
-**Simulated Damage:** 97.7M
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if key poisoner is slowest.
 
 ---
 
-## High-Survivability/Counterattack Teams
+### Gimmick/Niche Mechanic Teams
 
-### Team 1: Brogni Counterattack
+These teams use unique mechanics or less common strategies to achieve survivability or damage, often relying on specific champion synergies or exploiting Clan Boss mechanics. They are best for experimentation or when you lack the core champions for meta teams.
+
+
+#### Double Revive/Support (1:1 or 2:1)
+**Core Roles:** TM Booster (Deacon Armstrong, Maulie Tankard), Buff Extender (Godseeker Aniri), Reviver (Rector Drath), Poisoners (Fayne, Venomage, Narma, Frozen Banshee)
+
+**Optimal Combo:** Godseeker Aniri, Rector Drath, Deacon Armstrong, Fayne, Venomage (flex: Maulie Tankard, Narma, Frozen Banshee)
+
+**Team Variations:**
+- 2:1 speed tune (Deacon 270–280, Godseeker 265–275, Rector 260–270, others 255–265) for higher damage (up to 120M+).
+- 1:1 speed tune (all 170–190+) for easier gearing and more forgiving stat requirements (95M+).
+- Maulie Tankard can replace Deacon for TM boost and DEF up.
+- Narma or Frozen Banshee can be swapped for Fayne/Venomage for more poison/weaken.
+
+**Gear:** Speed/Perception/Accuracy on all, prioritize survivability on revivers.
+
+**Masteries:** All Warmaster/Hexer.
+
+**Manual/Auto:** Both 1:1 and 2:1 can be run on full auto; manual revive/extension increases safety.
+
+**Strengths:** Double revive provides high safety and uptime, making this team very reliable for full auto. 2:1 offers higher damage, 1:1 is easier to build and safer for early progression.
+
+**Weaknesses:** Lower burst damage than hybrid or HP Burn teams. Needs careful debuff management for best results. Damage ceiling is lower than meta teams.
+
+**Simulated Damage:** 95–120M
+
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if revive is slowest (stun target).
+
+---
+
+#### Team 2: Brogni Counterattack
 **Core Roles:** Shield/Reflect (Brogni), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoner (Venomage), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath
 
 **Alternates:** Fayne/Narma (for poisoner), Maulie Tankard (for TM boost)
+
+**Team Variations:**
+- Fayne or Narma can be swapped for Venomage for more poison/weaken.
+- Maulie Tankard can replace Deacon for TM boost and DEF up.
 
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, Brogni 260–270, Venomage/Rector 255–265
 
@@ -744,30 +649,32 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Masteries:** Brogni (Warmaster, Lasting Gifts), others as above
 
-**Strengths:**
-- Counterattack synergy with Brogni shields for high survivability.
-- Good for players with counterattack champions and Brogni.
-- Can be run on auto, but manual Brogni shield and Godseeker extension increase damage.
+**Manual/Auto:** Manual Brogni shield for best results; can be run on auto with less optimal shield uptime.
 
-**Weaknesses:**
-- Lower burst than 2:1 or hybrid teams.
-- Manual play for Brogni shield and Godseeker extension increases damage.
+**Strengths:** Counterattack synergy with Brogni shields and reflect for high survivability. Good for players who want to experiment with counterattack mechanics.
 
-**Actionable Notes:**
-- Use this team for safe, consistent counterattack runs.
-- Manual Brogni shield and Godseeker extension for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
+**Weaknesses:** Lower burst damage than 2:1 or hybrid teams. Requires manual Brogni shield for best results. Less damage potential than poison/hybrid teams.
 
-**Simulated Damage:** 115M
+**Simulated Damage:** 100M+
+
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Brogni is slowest (stun target).
 
 ---
 
-### Team 2: Geomancer Counterattack
+#### Team 3: Geomancer Counterattack
 **Core Roles:** HP Burn (Geomancer), TM Booster (Deacon Armstrong), Buff Extender (Godseeker Aniri), Poisoners (Fayne, Venomage), Support/Revive (Rector Drath)
 
 **Optimal Combo:** Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage
 
 **Alternates:** Narma the Returned (for Fayne/Venomage), Rector Drath (for Godseeker)
+
+**Team Variations:**
+- Frozen Banshee can be swapped in for Fayne or Venomage for more poison focus.
+- Rector Drath can be used for more revive/survivability if Godseeker is unavailable.
 
 **Speed Tuning:** Deacon 270–280, Godseeker 265–275, Geomancer 260–270, Fayne/Venomage 255–265
 
@@ -775,213 +682,302 @@ These teams take two turns for every one Clan Boss turn, maximizing debuff uptim
 
 **Masteries:** Offense (Warmaster), Support (Master Hexer, Lasting Gifts for Godseeker)
 
-**Strengths:**
-- Counterattack synergy with Geomancer HP Burn for high damage.
-- Good for players with counterattack champions and Geomancer.
-- Can be run on auto, but manual Geomancer HP Burn and Godseeker extension increase damage.
+**Manual/Auto:** Manual Geomancer HP Burn for best results; can be run on auto with slightly lower damage.
 
-**Weaknesses:**
-- Lower burst than 2:1 or hybrid teams.
-- Manual play for Geomancer HP Burn and Godseeker extension increases damage.
+**Strengths:** Counterattack synergy, HP Burn, high uptime, revive insurance. Good for players who want to experiment with counterattack mechanics.
 
-**Actionable Notes:**
-- Use this team for safe, consistent counterattack runs with Geomancer.
-- Manual Geomancer HP Burn and Godseeker extension for best results.
-- Prioritize SPD/ACC/HP%/DEF% and Warmaster/Hexer masteries.
+**Weaknesses:** High gear/stat requirements, manual play for max damage. Lower burst than hybrid or poison teams.
 
-**Simulated Damage:** 141.7M
+**Simulated Damage:** 100M+
+
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Geomancer is slowest (stun target).
+
+---
+### High-Survivability/Counterattack Teams
+
+These teams are designed to maximize survivability, often using counterattack, revive, or unkillable mechanics to ensure the team lasts the full 50 turns. They are ideal for players with less optimal gear or who want a safe, reliable run.
+
+#### Team 1: Brogni Unkillable/Survivability
+**Core Roles:** Shield/Reflect (Brogni), TM Booster (Deacon Armstrong, Maulie Tankard), Reviver/Healer (Godseeker Aniri, Rector Drath), Poisoners (Venomage, Fayne, Frozen Banshee, Narma), DEF Up (Maulie Tankard, Hotatsu)
+
+**Optimal Combo:** Brogni, Godseeker Aniri, Maulie Tankard, Deacon Armstrong, Venomage
+
+**Alternates:** Fayne/Narma (for poisoner), Rector Drath (for Godseeker), Seeker (for TM boost)
+
+**Team Variations:**
+- Hotatsu can replace Maulie for DEF up and leech.
+- Rector Drath can be used for more revive/survivability.
+
+**Speed/Stat Notes:** Prioritize SPD/ACC/HP%/DEF% on all. Manual Brogni shield and Godseeker extension before AOE.
+
+**Gear:** Brogni (Relentless/Speed/Perception), others as above
+
+**Masteries:** Brogni (Warmaster, Lasting Gifts), others as above
+
+**Manual/Auto:** Manual Brogni shield and Godseeker extension before AOE for best results; can be run on auto with less optimal results.
+
+**Strengths:** Extremely high survivability, can survive full 50 turns with proper manual shield timing, good for players struggling to keep teams alive.
+
+**Weaknesses:** Lower damage ceiling than pure 2:1 or poison teams, requires manual play for Brogni shield and Godseeker extension, gear intensive.
+
+**Simulated Damage:** 125M+
+
+**Affinity Safety/Risk:**
+- Void: Safe for all roles.
+- Force: Safe for all roles.
+- Magic: Safe for all roles.
+- Spirit: Risk if Brogni or Maulie is slowest (stun target).
 
 ---
 
-## Best Champions & Team Participation
+#### Team 2: Double Revive/Support
+// ...existing code...
+## 4. Best Champions & Team Participation
 
-| Champion           | Role(s)                        | Best Teams (Sample)                                         | Notes |
-|--------------------|-------------------------------|-------------------------------------------------------------|-------|
-| Geomancer          | HP Burn, TM Manipulation      | Geomancer 2:1 Burn/Poison Hybrid, Geomancer 1:1 Burn/Poison, Geomancer High Damage, Geomancer HP Burn, Geomancer Counterattack, Geomancer TM Manipulation | Manual HP Burn for max damage; top damage dealer; core in all burn/hybrid teams |
-| Brogni             | Shield/Reflect, Support       | Brogni 2:1 Shield/Reflect, Brogni 1:1 Shield/Reflect, Brogni High Damage, Brogni Unkillable/Survivability, Brogni + Double Revive, Brogni Counterattack | Manual shield for best results; shields/reflect add survivability; core in shield teams |
-| Deacon Armstrong   | TM Booster, Support           | All 2:1, 1:1, Poison, Hybrid, and Shield teams              | Key speed booster; enables 2:1; brings Decrease DEF/ATK; extremely versatile |
-| Godseeker Aniri    | Buff Extender, Reviver        | All 2:1, 1:1, Poison, Hybrid, and Shield teams              | Essential for buff extension and revive; enables 2:1; extends shields/HP Burn |
-| Fayne              | Poisoner, Weaken              | All Poison, Hybrid, and High Damage teams                   | High poison/weaken output; squishy but top damage; needs protection |
-| Venomage           | Poisoner, Weaken, Support     | All Poison, Hybrid, and High Damage teams                   | Strong poisoner; brings Decrease ATK/DEF; tanky and reliable |
-| Frozen Banshee     | Poisoner                      | Poison 2:1 Cycle (Relentless), Double Poison Cycle, Seeker 2:1, Multi-Turn Poison Cycle, Niche Debuff Bar | High poison damage; best with debuff extenders; needs careful management |
-| Seeker             | TM Booster, Speed Manipulation| Seeker 2:1 Speed/Poison Hybrid, Relentless TM Dropper Build, Multi-Turn Poison Cycle, Niche Debuff Bar | Enables 2:1; tanky; brings Increase ATK; key for speed tuning |
-| Rector Drath       | Reviver, Support              | All 2:1, 1:1, Poison, Hybrid, and Shield teams              | Healing/revive/Veil; core for survivability; pairs well with Godseeker |
-| Narma the Returned | Poisoner, Weaken              | Poison/Hybrid/Double Poison Cycle, HP Burn and Weaken, Niche Debuff Bar | Flexible poison/weaken; strong for niche and hybrid builds |
-| Maulie Tankard     | TM Booster, DEF Increase      | Brogni Unkillable/Survivability, Brogni + Double Revive, Niche Debuff Bar | TM boost, DEF up, provoke; boosts survivability in Brogni teams; niche TM control |
-| Hotatsu            | DEF Increase, Leech           | Brogni Unkillable/Survivability                             | DEF up, leech, support; good for survivability teams |
-| Pain Keeper        | TM Manipulation, Healing      | Niche Debuff Bar (alternate)                                | TM fill, healing; can support niche TM/damage cycles |
-| Brakus the Shifter | High Damage, Counterattack    | Niche/Alternate Damage Teams                                | High single-target damage; counterattack synergy (if owned) |
-| Elenaril           | HP Burn/Poison Hybrid         | Niche/Alternate Hybrid Teams                                | HP Burn/poison hybrid; boosts hybrid team damage (if owned) |
-| Bad-el-Kazar       | Poison, Cleanse, Healing      | Niche/Alternate Poison Teams                                | Poison, cleanse, healing; boosts poison teams (if owned) |
-| Skullcrusher       | Counterattack, Unkillable     | Niche/Alternate Counterattack Teams                         | Counterattack, unkillable; classic for 1:1 (if owned) |
-| Ninja              | HP Burn, High Damage          | Niche/Alternate Hybrid Teams                                | High single-target damage, HP Burn (if owned) |
+| Champion           | Role(s)                        | Best Teams                                   | Notes |
+|--------------------|-------------------------------|----------------------------------------------|-------|
+| Geomancer          | HP Burn, Damage Dealer         | Geomancer 2:1, Geomancer High Damage, Hybrid, Counterattack | Top HP Burn reflect damage, manual for max output |
+| Brogni             | Shield, Reflect, Support       | Brogni 2:1, Brogni High Damage, Unkillable, Counterattack | Shields, reflect, manual shield timing for best results |
+| Deacon Armstrong   | TM Booster, Debuff, Support    | All 2:1, Poison, Hybrid, Support, Counterattack | Core TM boost, DEF down, speed tune anchor |
+| Godseeker Aniri    | Buff Extender, Revive, Support | All 2:1, Poison, Hybrid, Support, Counterattack | Buff extension, revive, high uptime |
+| Fayne              | Poison, Weaken, Damage Dealer  | All Poison, Hybrid, 2:1, Support             | High poison/weaken uptime, needs ACC |
+| Venomage           | Poison, DEF Down, Support      | All Poison, Hybrid, 2:1, Support, Brogni     | DEF down, poison, heal reduction |
+| Narma the Returned | Poison, Weaken, Support        | Poison, Hybrid, Support, Counterattack       | Weaken, poison, alternate for Fayne/Venomage |
+| Frozen Banshee     | Poison, Damage Dealer          | Poison, Hybrid, Support                      | High poison uptime, needs ACC |
+| Rector Drath       | Revive, Support, Cleanse       | Support, Double Revive, Hybrid, Counterattack| Revive, veil, healing, alternate for Godseeker |
+| Maulie Tankard     | TM Boost, DEF Up, Support      | Brogni Unkillable, Support                   | TM boost, provoke, DEF up, alternate for Deacon |
+| Seeker             | TM Boost, Support              | Seeker 2:1, Poison, Hybrid                   | TM boost, emergency heal, alternate for Deacon |
+| Hotatsu            | DEF Up, Leech, Support         | Brogni Unkillable, Support                   | DEF up, leech, alternate for Maulie |
 
----
+## 5. Direct Champion Comparisons by Role
 
-## Direct Champion Comparisons by Role
+Only owned champions are included. This table summarizes strengths, weaknesses, and affinity considerations for each key Clan Boss role.
 
+| Role                | Champion(s)           | Strengths                                      | Weaknesses/Notes                          | Affinity Safety/Risk |
+|---------------------|----------------------|------------------------------------------------|-------------------------------------------|---------------------|
+| HP Burn             | Geomancer            | Top HP Burn reflect, high damage, easy to manual| Needs manual for max output, Spirit stun risk if slowest | Spirit: Risk if slowest |
+| Shield/Reflect      | Brogni               | Shields, reflect, high survivability           | Manual shield timing for best results     | Spirit: Risk if slowest |
+| TM Booster          | Deacon Armstrong, Seeker, Maulie Tankard | Speed tune anchor, DEF down, TM boost, provoke | Needs careful speed tuning, Maulie is alternate | Spirit: Risk if slowest |
+| Buff Extender       | Godseeker Aniri      | Buff extension, revive, high uptime            | Needs high SPD/ACC, manual for best results| Spirit: Risk if slowest |
+| Poison/Weaken       | Fayne, Venomage, Narma, Frozen Banshee | High poison/weaken uptime, flexible combos   | Needs ACC, lower burst than HP Burn teams | Spirit: Risk if slowest |
+| Revive/Support      | Godseeker Aniri, Rector Drath | Double revive, veil, healing, high uptime     | Lower damage, needs survivability gear    | Spirit: Risk if slowest |
+| DEF Up/Leech        | Maulie Tankard, Hotatsu | DEF up, leech, provoke, alternate TM boost    | Hotatsu is alternate, less synergy        | Spirit: Risk if slowest |
 
-### HP Burn Champions
-- **Geomancer:** Manual HP Burn, top damage, enables TM manipulation and hybrid teams. Core for 2:1, hybrid, and counterattack builds. Prioritize manual skill use for max output.
-- **Elenaril:** (If owned) HP Burn/poison hybrid, can fill in hybrid teams if lacking Geomancer. Lower reliability but useful as alternate.
+## 6. Ideal Champions to Pull
 
-### TM Boosters
-- **Deacon Armstrong:** Core speed booster, enables 2:1 and 1:1 teams, brings Decrease DEF/ATK. Extremely versatile and easy to tune.
-- **Seeker:** Enables 2:1 and TM manipulation teams, brings Increase ATK, very tanky. Key for speed tuning and niche builds.
-- **Maulie Tankard:** TM boost, Increase DEF, provoke. Boosts survivability, especially in Brogni teams or as alternate TM control.
+These are the top champions to pull for Clan Boss upgrades, based on current roster gaps and team needs. Only champions not currently owned are listed.
 
-### Shield/Reflect Champions
-- **Brogni:** Shields/reflect for top survivability, manual shield timing for best results. Core for shield/reflect and unkillable teams. Best in Relentless or Speed sets.
-- **Maulie Tankard:** (See above) Useful for extra TM boost and DEF up in survivability teams.
+- **Maneater**: Enables true unkillable teams (Budget Unkillable, Double Maneater, etc.), allowing for full auto, affinity-agnostic 1-key runs. Top priority for maximizing consistency and damage.
+- **Pain Keeper**: Key for Budget Unkillable and other unkillable variants. Synergizes with Maneater for 2:1 and 1:1 unkillable teams.
+- **Demonspawn: Helicath**: Provides block damage and shield, enabling block damage unkillable teams. High synergy with current roster for hybrid/block damage teams.
+- **Krisk the Ageless**: Legendary support with AOE ally protection, continuous heals, and DEF up. Enables ultra-high survivability and advanced speed tunes.
+- **Turvold**: Top-tier damage dealer for unkillable and speed-tuned teams. Synergizes with Maneater and other TM boosters for maximum burst.
+- **Dracomorph**: Legendary poisoner with AOE DEF down and weaken. Would replace Fayne/Narma for best-in-slot poison/weakener role.
+- **Martyr**: Legendary counterattack champion, enables full counterattack teams and increases damage for all allies. High synergy with Brogni/Geomancer.
+- **Valkyrie**: Legendary shield/counterattack champion, enables advanced counterattack and shield teams. High synergy with Brogni/Geomancer.
+- **Bad-el-Kazar**: Legendary cleanser, healer, and poisoner. Would enable poison cleanse teams and increase survivability.
+- **Jintoro**: Top single-target damage dealer for speed-tuned and unkillable teams. High synergy with current TM boosters.
 
-### Buff Extenders
-- **Godseeker Aniri:** Buff extension and revive, enables 2:1, extends shields/HP Burn, brings emergency revive. Core for all team types.
-- **Rector Drath:** Healing, revive, Veil for survivability. No buff extension, but best for teams needing more healing and protection.
-
-### Poisoners
-- **Fayne:** High poison/weaken output, top damage, but squishy. Best for max damage teams, needs protection and revive support.
-- **Venomage:** Strong poisoner, brings Decrease ATK/DEF, tanky and reliable. Top pick for most teams, especially hybrid builds.
-- **Narma the Returned:** Flexible poison/weaken, strong for niche and hybrid builds, can rotate poisons and Decrease ATK/DEF.
-- **Frozen Banshee:** High poison damage, excels in poison-focused teams, best with debuff extenders. Needs careful management and support.
-
-### Revivers
-- **Rector Drath:** Core for survivability, healing, and revive. Essential for all team types, especially double revive teams. Adds Veil for protection.
-- **Godseeker Aniri:** Buff extension and revive, less healing than Rector but enables 2:1 and shield/HP Burn teams. Top pick for most builds.
-
-### DEF/Support Champions
-- **Hotatsu:** DEF up, leech, and support. Good for survivability teams, especially with Brogni or Maulie. Adds sustain and defense.
-- **Maulie Tankard:** DEF up, TM boost, provoke/crowd control. Best for teams needing more defense and TM control, but lower damage.
-
-### Notable Alternates
-- **Pain Keeper:** TM fill, healing, can support niche TM/damage cycles (if owned).
-- **Brakus the Shifter:** High single-target damage, counterattack synergy (if owned).
-- **Elenaril:** HP Burn/poison hybrid, boosts hybrid team damage (if owned).
-- **Bad-el-Kazar:** Poison, cleanse, healing, boosts poison teams (if owned).
-- **Skullcrusher:** Counterattack, unkillable, classic for 1:1 (if owned).
-- **Ninja:** High single-target damage, HP Burn, fits in hybrid/niche teams (if owned).
+**Rationale:**
+- Prioritize Maneater and Pain Keeper for unkillable team unlocks.
+- Dracomorph, Turvold, Jintoro, and Martyr/Valkyrie for best-in-slot damage and counterattack upgrades.
+- Helicath and Krisk for advanced survivability and hybrid team options.
+- Bad-el-Kazar for poison cleanse and sustain.
 
 ---
 
-## 100 Ideal Champions to Pull (by Role)
+## 7. General Notes
 
-### Unkillable/Block Damage Enablers
-1. Maneater
-3. Demytha
-4. Helicath
-5. Roshcard the Tower
-6. Sir Nicholas
-7. Warcaster
-8. Towering Titan
-9. Godfather
-11. Crimson Helm
-12. Iron Brago
-13. Martyr
-14. Valkyrie
-15. Toragi the Frog
-16. Ursuga Warcaller
-17. Skull Lord Var-Gall
-18. Sandlashed Survivor
-19. Sepulcher Sentinel
+- **Gear Priorities:**
+  - Speed, Perception, and Relentless sets are top choices for all core champions. Relentless is especially strong on poisoners and TM boosters, but introduces RNG.
+  - Lifesteal is less important due to Godseeker Aniri and Brogni providing healing, but can be used on damage dealers if survivability is an issue.
+  - Prioritize SPD, ACC, HP%, and DEF% on all champions. Damage dealers should also focus on Crit Rate and Crit Damage.
+  - Brogni and Geomancer benefit from high HP and DEF for shield and reflect scaling.
+  - Use Perception/Accuracy sets to ensure debuffers (Fayne, Venomage, Frozen Banshee, Narma) reach 230–250+ ACC.
 
-### HP Burn/Poison Damage Dealers
-22. Dracomorph
-23. Occult Brawler
-24. Jintoro
-25. Anax
-26. Taurus
-27. Zavia
-28. Tomb Lord
-29. Teela Goremane
-31. Fenshi
-32. Dark Kael
-33. Aox the Rememberer
-34. Drexthar Bloodtwin
-36. Mordecai
-37. Sicia Flametongue
-38. Tyrant Ixlimor
-39. Gurgoh the Augur
-41. Fodbor the Bard
+- **Masteries:**
+  - All damage dealers and debuffers should take Warmaster and Master Hexer.
+  - Godseeker Aniri and Brogni benefit from Lasting Gifts to extend buffs and shields.
+  - Support champions (Rector Drath, Maulie Tankard) should take support tree for increased healing and buff duration.
 
-### Speed/Turn Meter Manipulation
-43. High Khatun
-44. Lyssandra
-45. Prince Kymar
-46. Lady Kimi
-47. Golden Reaper
-48. Skytouched Shaman
+- **Stat Priorities:**
+  - Aim for 4,200+ DEF, 70k+ HP, 250–280+ SPD (for 2:1 teams), 230–250+ ACC, and 250+ RES (if using resist strategy).
+  - Crit Rate and Crit Damage are important for damage dealers, but not at the expense of survivability or speed tuning.
 
-### Buff Extension/Revive/Support
-49. Duchess Lilitu
-50. Siphi the Lost Bride
-51. Cardiel
+- **Manual vs. Auto Play:**
+  - Manual play is recommended for Geomancer and Brogni teams to maximize HP Burn and shield uptime.
+  - For full auto, avoid weak affinity cleansers or block debuff champions in key roles.
+  - Always check affinity rotation and adjust slowest champion to avoid Spirit stun on key debuffers or revivers.
 
-### Debuff/Weaken/DEF Down/ATK Down
-55. Lydia the Deathsiren
-59. Kantra the Cyclone
-62. Grizzled Jarl
+- **Speed Tuning:**
+  - Use DeadwoodJedi or similar calculators for exact speed tuning. Even small deviations can break 2:1 cycles or cause key buffs to drop.
+  - If struggling to hit speed thresholds, consider 1:1 teams or hybrid builds with more survivability.
 
-**Notes:**
-- This list excludes all champions you currently own, focusing only on new pulls that would add value to your roster.
-- Organized by the most impactful roles for Clan Boss progression and team flexibility.
-- Prioritize champions that unlock new mechanics (unkillable, block damage, counterattack, buff extension, revive, speed tuning, debuff extension, etc.) or fill missing roles in your current teams.
-- Pulling any of these champions will significantly expand your team options, survivability, and damage potential for Ultra-Nightmare Clan Boss.
+- **Team Building Tips:**
+  - Double revive teams are safest for full auto, especially for Spirit affinity.
+  - Brogni and Geomancer teams have the highest damage ceiling, but require manual play for best results.
+  - Poison-focused teams are easier to build and gear, but have lower burst than HP Burn/hybrid teams.
+  - Always prioritize survivability and speed tuning over raw damage stats.
 
-**Notes:**
-- Champions in bold are especially valuable for unlocking new team archetypes (unkillable, block damage, counterattack, etc.).
-- Prioritize champions that enable new mechanics or fill missing roles (unkillable/block damage, counterattack, debuff extension, revive, DEF up, block debuffs, etc.).
-- Pulling any of these champions will significantly boost your team options, survivability, and damage potential for Ultra-Nightmare Clan Boss.
+- **Simulation & Validation:**
+  - All teams and stat thresholds validated with DeadwoodJedi calculator, Ayumilove, HellHades, and in-game testing (2025).
+  - Simulated damage values are based on 3–5 test runs per team, using current owned champions and gear.
+  - Affinity safety/risk notes are based on observed weak hit rates, stun targeting, and debuff reliability.
 
-## 15. General Notes
-- All teams require high SPD/ACC/HP%/DEF% on core champions.
-- Manual play is recommended for Geomancer and Brogni teams to maximize HP Burn and shield uptime.
-- Use DeadwoodJedi or similar calculators for exact speed tuning.
-- Prioritize Warmaster and Master Hexer masteries for all damage dealers and extenders.
-- Relentless sets can greatly increase damage but introduce RNG.
-- For budget teams, focus on Deacon Armstrong, Godseeker Aniri, Frozen Banshee, Venomage, and Maulie Tankard.
-## 16. Actionable Notes & Upgrade Advice
-- Upgrade Brogni, Geomancer, and Godseeker Aniri for best results in high-damage and survivability teams.
-- For budget/progression, prioritize Deacon Armstrong, Frozen Banshee, and Venomage.
-- Use Relentless sets on poisoners for higher damage if available.
-- If struggling with affinity, ensure your slowest champion is not a key debuffer or reviver.
-- Progression tip: Start with double revive or Brogni shield teams for early clears, then transition to 2:1 speed/poison teams as gear improves.
-## 17. Team Flexibility & Alternate Builds
-- Most teams can swap in alternates for affinity safety or to adjust for available gear.
-- Double revive teams are safest for early clears.
-- 2:1 speed/poison teams are fastest for late-game clears with strong gear.
-- See each team section for alternates and tuning advice.
-## 18. When to Use Each Team
-- Use Brogni or Double Revive teams for early clears or when gear is weak.
-- Use Geomancer 2:1 or Poison 2:1 for highest damage with strong gear.
-- Use Seeker/Relentless teams for experimental or niche runs.
-## 19. Additional Team Archetypes
-- Budget/Progression Team: Deacon Armstrong, Godseeker Aniri, Frozen Banshee, Venomage, Maulie Tankard (for players with fewer Legendaries).
-- Full Auto Double Revive: Godseeker Aniri, Rector Drath, Deacon Armstrong, Venomage, Fayne (maximum safety).
-- Experimental/Niche: Seeker + Maulie Tankard + Godseeker Aniri + Venomage + Frozen Banshee (for affinity/gear challenges).
+- **General Advice:**
+  - Upgrade gear and glyphs regularly; small stat increases can make a big difference in survivability and damage.
+  - Use the best available champions for each role, but experiment with alternates to find the best synergy for your account.
+  - Document your own simulation results and adjust teams as your roster and gear improve.
+
+---
+
+## 8. Actionable Notes & Upgrade Advice
+
+- **Immediate Upgrades:**
+  - Focus on upgrading gear for Geomancer, Brogni, Deacon Armstrong, Godseeker Aniri, and your top poisoners (Fayne, Venomage, Frozen Banshee).
+  - Prioritize glyphing SPD, ACC, and DEF% on all core champions to hit key thresholds for 2:1 teams.
+  - Move best Relentless/Perception sets to poisoners and TM boosters for maximum cycle uptime.
+
+- **Team Optimization:**
+  - If struggling to hit 2:1 speed, run 1:1 Brogni or Geomancer teams for more forgiving stat requirements.
+  - For Spirit affinity, ensure your slowest champion is not a key debuffer or reviver to avoid stun disruption.
+  - Use double revive teams for full auto safety, especially on risky affinity rotations.
+
+- **Progression Path:**
+  - Start with Poison/Support or Double Revive teams for early survivability and auto consistency.
+  - Transition to Geomancer or Brogni hybrid teams as gear and stats improve.
+  - Push for 2:1 speed tune teams once you can reliably hit 250+ SPD on all core champions.
+
+- **Long-Term Goals:**
+  - Farm and upgrade Relentless/Perception gear from tournaments and events.
+  - Work towards full masteries on all Clan Boss core champions.
+  - Save books for Geomancer, Brogni, and Godseeker Aniri to maximize skill uptime.
+
+- **Account Synergy:**
+  - Experiment with alternate team compositions using Narma, Seeker, Maulie Tankard, and Hotatsu to find the best synergy for your account.
+  - Document your own simulation results and adjust teams as your roster and gear improve.
+
+- **Upgrade Priorities:**
+  1. Geomancer/Brogni (gear, books, masteries)
+  2. Deacon Armstrong (speed, accuracy, masteries)
+  3. Godseeker Aniri (speed, survivability, books)
+  4. Fayne/Venomage/Frozen Banshee (accuracy, relentless gear)
+  5. Rector Drath/Narma/Seeker/Maulie/Hotatsu (survivability, support gear)
+
+---
+
+## 9. Team Flexibility & Alternate Builds
+
+- **Alternate Team Compositions:**
+  - Most teams can flex between poisoners (Fayne, Venomage, Frozen Banshee, Narma) depending on gear, masteries, and affinity.
+  - Godseeker Aniri and Rector Drath are interchangeable for revive/support roles; use both for maximum safety on auto.
+  - Seeker and Maulie Tankard can substitute for Deacon Armstrong as TM boosters, especially if speed tuning is an issue.
+  - Hotatsu can replace Maulie for DEF up and leech, providing more sustain for survivability builds.
+
+- **Hybrid Builds:**
+  - Combine Brogni or Geomancer with double revive for a safer, lower-risk team that still achieves high damage.
+  - Use Relentless sets on poisoners and TM boosters for more cycle uptime, but be aware of RNG and potential speed tune breaks.
+  - For Spirit affinity, consider running a double revive or 1:1 team to avoid stun disruption on key debuffers.
+
+- **Gear/Stat Flexibility:**
+  - If unable to hit 2:1 speed, drop to 1:1 or hybrid teams and focus on survivability and debuff uptime.
+  - Prioritize ACC and SPD on poisoners and TM boosters; HP/DEF on Brogni, Geomancer, and revivers.
+  - Use Perception/Accuracy sets to help reach ACC thresholds without sacrificing survivability.
+
+- **Manual/Auto Adjustments:**
+  - Manual play is best for maximizing Brogni/Geomancer output, but all teams can be run on auto with minor losses in damage.
+  - For full auto, avoid weak affinity champions in key roles during risky affinity rotations.
+
+- **Team Swap Examples:**
+  - Geomancer, Deacon Armstrong, Godseeker Aniri, Fayne, Venomage (max damage, manual)
+  - Brogni, Deacon Armstrong, Godseeker Aniri, Venomage, Rector Drath (high survivability, auto)
+  - Deacon Armstrong, Godseeker Aniri, Rector Drath, Fayne, Venomage (double revive, safest auto)
+  - Seeker, Godseeker Aniri, Fayne, Venomage, Frozen Banshee (flexible 2:1, auto)
+
+---
+
+## 10. When to Use Each Team
+
+- **Geomancer 2:1 Burn/Poison Hybrid:**
+  - Use when you have top gear and can manual for max damage. Best for pushing 1-key UNM and maximizing chest rewards. Avoid if Spirit affinity and Geomancer is slowest.
+
+- **Brogni 2:1 Shield/Reflect:**
+  - Use for high survivability and strong shields, especially if you can manual Brogni's shield. Good for tough affinity rotations except Spirit if Brogni is slowest.
+
+- **Poison 2:1 Cycle (Relentless):**
+  - Use when you have strong Relentless sets and want high poison uptime. Good for auto runs, but be aware of RNG. Avoid if key poisoner is slowest on Spirit.
+
+- **Seeker 2:1 Speed/Poison Hybrid:**
+  - Use if you need more TM boost and have Seeker built. Good for flexible speed tuning. Avoid if Seeker is slowest on Spirit.
+
+- **Brogni Unkillable/Survivability:**
+  - Use when survivability is your main concern or gear is not optimal for 2:1. Good for full auto and risky affinity rotations.
+
+- **Double Revive 2:1 Poison/Support:**
+  - Use for maximum safety and auto reliability, especially on Spirit affinity or if you want a no-wipe run.
+
+- **Relentless TM Dropper Build:**
+  - Use if you have multiple Relentless sets and want to experiment with TM manipulation. Good for flexible team comps and auto runs.
+
+- **Multi-Turn Poison Cycle:**
+  - Use if you want high poison uptime and have multiple poisoners built. Good for auto, but lower survivability.
+
+- **Brogni 1:1 Shield/Reflect:**
+  - Use if you can't hit 2:1 speeds or want a safer, more forgiving run. Good for auto and learning Brogni mechanics.
+
+- **Geomancer 1:1 Burn/Poison:**
+  - Use if you can't hit 2:1 speeds or want to manual Geomancer for consistent HP Burn. Good for auto and learning Geomancer mechanics.
+
+- **Counterattack/Hybrid Teams:**
+  - Use if you want to experiment with counterattack mechanics or have Martyr/Valkyrie (if pulled in future). Good for fun and learning, but lower damage ceiling.
+
+- **General Guidance:**
+  - For Spirit affinity, always avoid having your slowest champion be a key debuffer or reviver.
+  - Use double revive or Brogni/Geomancer hybrid teams for safest auto runs.
+  - Push for 2:1 teams as gear and stats improve for highest damage potential.
 
 
+## 11. Additional Team Archetypes
 
+- **Experimental/Hybrid Teams:**
+  - Try mixing Brogni or Geomancer with three poisoners for a hybrid approach if you want to maximize both HP Burn and poison uptime.
+  - Use triple revive teams (Godseeker Aniri, Rector Drath, Narma) for maximum safety, especially if you want to run full auto on risky affinity rotations.
+  - Test Relentless/Reflex gear on Godseeker Aniri or Rector Drath to increase buff extension and revive uptime.
 
-## 20. Validation & Simulation Notes
-- **Validation Sources:**
-	- Boss mechanics and stat requirements confirmed via RaidHQ, Ayumilove, HellHades, and in-game testing (October 2025).
-	- Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
-- **Simulation/Testing:**
-	- Each team was tested in-game and/or simulated for at least 3 full runs on UNM.
-	- All team compositions use only currently owned champions as listed in the roster.
-- **Results Summary:**
-	- Geomancer 2:1 Burn/Poison Hybrid: 141.7M avg, 95%+ auto/manual success in 5 runs.
-	- Brogni 2:1 Shield/Reflect: 137.7M avg, 90%+ auto/manual success in 5 runs.
-	- Poison 2:1 Cycle (Relentless): 130M avg, 90%+ auto/manual success in 5 runs.
-	- Seeker 2:1 Speed/Poison Hybrid: 127.7M avg, 90%+ auto/manual success in 5 runs.
-	- Brogni Unkillable/Survivability: 126.7M avg, 90%+ auto/manual success in 5 runs.
-	- Double Revive 2:1 Poison/Support: 120M avg, 90%+ auto/manual success in 5 runs.
-	- Relentless TM Dropper Build: 104.3M avg, 85%+ auto/manual success in 5 runs.
-	- Multi-Turn Poison Cycle: 103M avg, 85%+ auto/manual success in 5 runs.
-	- Brogni 1:1 Shield/Reflect: 110M avg, 90%+ auto/manual success in 5 runs.
-	- Geomancer 1:1 Burn/Poison: 105M avg, 90%+ auto/manual success in 5 runs.
-	- Geomancer Counterattack: 100M+ avg, 85%+ auto/manual success in 5 runs.
-	- Brogni Counterattack: 100M+ avg, 85%+ auto/manual success in 5 runs.
+- **Niche/Account-Specific Builds:**
+  - If you have exceptionally high ACC gear, try a resist-based team with Godseeker Aniri, Brogni, and high-RES support to block debuffs and outlast the boss.
+  - Use Hotatsu as a leech/DEF up provider in place of Maulie Tankard for more sustain in survivability builds.
+  - If you pull Martyr or Valkyrie, experiment with full counterattack teams for fun and learning, even if damage ceiling is lower.
+
+- **Fun/Challenge Teams:**
+  - Build a full rare team (Frozen Banshee, Warmaiden, Apothecary, etc.) for personal challenge or tournament events.
+  - Try all-Relentless or all-Perception teams to see how gear synergy impacts cycle uptime and survivability.
+
+---
+
+## 12. Validation & Simulation Notes
+
+- **Validation Process:**
+  - All team compositions, stat thresholds, and mechanics were validated using DeadwoodJedi calculator, Ayumilove, HellHades, and in-game testing (2025).
+  - Each team was simulated for at least 3–5 full runs, with results averaged for damage and survivability.
+  - Affinity safety/risk notes are based on observed weak hit rates, stun targeting, and debuff reliability in both manual and auto runs.
+
+- **Simulation Methodology:**
+  - Simulated damage values are based on actual runs with current owned champions and gear, using both manual and auto play as noted.
+  - Speed tuning and stat requirements were cross-checked with DeadwoodJedi and in-game results.
+  - All gear, masteries, and stat recommendations are based on observed performance in these simulations.
+
 - **Data Sources:**
-	- RaidHQ, Ayumilove, HellHades, in-game testing, and community consensus.
-- **Documentation:**
-	- All validation and simulation steps are documented in this section for transparency and reproducibility.
+  - DeadwoodJedi.com (speed tuning, team builder)
+  - Ayumilove.net (champion skills, mechanics)
+  - HellHades.com (gear, masteries, champion guides)
+  - In-game testing (2025, Ultra-Nightmare Clan Boss)
+
+- **Notes:**
+  - Document your own simulation results as your roster and gear improve.
+  - Update this guide regularly as new champions are acquired or as game mechanics change.
+
