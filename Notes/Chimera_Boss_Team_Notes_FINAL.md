@@ -84,9 +84,20 @@
 
 ## 1a. Chimera Trials: Owned Champion Mapping (Per-Trial Table)
 
-| Trial Type                | Owned Champions Who Can Fulfill This Trial | Affinity Safety/Risk Notes | Special Notes (Skill Order, Speed, etc.) |
-|---------------------------|-------------------------------------------|----------------------------|------------------------------------------|
----
+
+| Trial Type                | Owned Champions Who Can Fulfill This Trial                                                                 | Affinity Safety/Risk Notes                                                                 | Special Notes (Skill Order, Speed, etc.)                                  |
+|--------------------------|----------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|
+| Poisons                  | Bad-el-Kazar, Venomage, Elenaril, Narma, Kalvalax, Fayne, Taurus, Taya, Aox the Rememberer, Dark Kael     | Magic/Spirit/Force; avoid weak affinity on key turns                                       | Manual for trial timing; prioritize poisoners on boss turns               |
+| Block Debuffs            | Mithrala, Godseeker, Lady Annabelle                                                                      | Void/Magic/Spirit; avoid weak affinity on key turns                                        | Manual timing for trial credit; set AI to open with block debuffs         |
+| Survive/No Deaths        | Godseeker, Scyl, Maulie, Rector Drath, Broadmaw, Vogoth, Vrask, Norog, Black Knight, Lady Annabelle      | All; avoid weak affinity on main sustain/revive roles                                       | Speed tune for sustain; prioritize revive and shield skills                |
+| HP Burn                  | Ninja, Drexthar, Brakus, Artak, Crohnam                                                                 | Magic/Force/Spirit; avoid weak affinity on key turns                                       | Manual for minion waves; time HP burn for trial credit                    |
+| 1M+ Hit                  | Ninja, Brakus, Coldheart, Lua, Queen Eva, Astralon, Cleopterix                                           | Magic/Force/Void/Spirit; avoid weak affinity on main nuker                                 | Stack buffs/debuffs, manual burst for trial; use ATK/CRIT DMG gear        |
+| Minion Clear             | Ninja, Coldheart, Lua, Queen Eva, Astralon, Cleopterix, Skullcrown                                       | Magic/Force/Void/Spirit; avoid weak affinity on main AOE/targeters                         | Manual targeting, AOE/HP burn for minion waves                            |
+| Revive                   | Godseeker, Scyl, Maulie, Rector Drath, Broadmaw                                                          | Magic/Force/Spirit; avoid weak affinity on main revive                                      | Manual revive after a death for trial; speed tune for revive uptime       |
+| Shield                   | Mithrala, Maulie, Lady Annabelle, Norog, Black Knight                                                    | Void/Force/Spirit; avoid weak affinity on main shield role                                  | Manual shield before boss AoE; set AI to prioritize shield                 |
+| Cleanse                  | Bad-el-Kazar, Mithrala, Apothecary                                                                       | Magic/Void/Spirit; avoid weak affinity on main cleanser                                     | Manual after heavy debuff turns; set AI to prioritize cleanse              |
+| Sustain/Healing          | Godseeker, Mithrala, Apothecary, Venomage, Vogoth, Vrask, Lady Annabelle, Aox the Rememberer, Kalvalax   | All; avoid weak affinity on main healer                                                     | Speed tune for healing uptime; prioritize healing skills                   |
+
 
 ## 1b. Chimera Trials: Combo Table (Champions Who Can Fulfill Multiple Trials)
 

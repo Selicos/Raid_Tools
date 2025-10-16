@@ -464,7 +464,7 @@
   - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10.
   - Clear times and success rates are based on the average of 3–5 runs per team, using auto where possible and manual for skill cycling or affinity risk.
   - Affinity safety/risk notes are based on observed weak hit rates, debuff reliability, and Spirit stun behavior.
-  - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
+  - All team compositions use only currently owned champions as listed in the roster (see input/Input/Owned_champion_list.md).
 
 - **Results Summary:**
   - Ninja Freeze Ally Attack (No Yakarl): ~3:30–5:30 clear, 90%+ auto success in 5 runs.

@@ -318,7 +318,7 @@
     - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
 - **Simulation/Testing:**
     - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
-    - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
+    - All team compositions use only currently owned champions as listed in the roster (see input/Input/Owned_champion_list.md).
 - **Results Summary:**
     - Cleanse/Revive Sustain: 7–10 min clear, 95%+ auto success in 5 runs.
     - HP Burn/Poison Control: 6–9 min clear, 90%+ auto/manual success in 5 runs.

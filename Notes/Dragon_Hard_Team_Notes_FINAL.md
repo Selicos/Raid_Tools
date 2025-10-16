@@ -343,7 +343,7 @@ These champions would enable faster clears, more affinity-safe runs, or allow fo
     - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
 - **Simulation/Testing:**
     - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
-    - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
+    - All team compositions use only currently owned champions as listed in the roster (see input/Input/Owned_champion_list.md).
 - **Results Summary:**
     - Speed Clear (Manual/Auto): 1:10–2:00 clear, 90%+ auto success in 5 runs.
     - Double HP Burn: 2:00–3:30 clear, 90%+ auto success in 5 runs.

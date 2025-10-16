@@ -547,7 +547,7 @@ Below are the top non-owned champions to target for Hydra upgrades, organized by
 
 ## 12. Validation & Simulation Notes
 
-- All team recommendations and champion roles are based strictly on the current owned champion list (see input/Owned_Champions/Owned_champion_list.md).
+- All team recommendations and champion roles are based strictly on the current owned champion list (see input/Input/Owned_champion_list.md).
 - Team mechanics, stat requirements, and boss abilities were validated using RaidHQ, Ayumilove, HellHades, and in-game testing (October 2025).
 - Each team was simulated in-game and/or with community-validated calculators for at least 3 runs per team, using the hardest available difficulty for the roster.
 - Estimated damage and clear times are based on average of 3+ runs per team, with manual play for skill timing and devour recovery.

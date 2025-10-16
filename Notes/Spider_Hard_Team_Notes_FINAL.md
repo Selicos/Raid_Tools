@@ -275,7 +275,7 @@
     - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
 - **Simulation/Testing:**
     - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
-    - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
+    - All team compositions use only currently owned champions as listed in the roster (see input/Input/Owned_champion_list.md).
 - **Results Summary:**
     - Triple Coldheart Speed Nuke: 1:00 clear, 95%+ manual/auto success in 5 runs.
     - Double Coldheart TM Control: 1:10 clear, 90%+ manual/auto success in 5 runs.

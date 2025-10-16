@@ -419,7 +419,7 @@
     - Champion skills, cooldowns, and mechanics cross-checked with Ayumilove and HellHades.
 - **Simulation/Testing:**
     - Each team was tested in-game and/or simulated for at least 3 full runs on Hard Stage 10–15.
-    - All team compositions use only currently owned champions as listed in the roster (see input/Owned_Champions/Owned_champion_list.md).
+    - All team compositions use only currently owned champions as listed in the roster (see input/Input/Owned_champion_list.md).
 - **Results Summary:**
     - Mithrala Speed Cleanse: ~3:30–4:30 clear, 95%+ auto success in 5 runs.
     - Block Debuffs Sustain: ~4:00–5:00 clear, 90%+ auto success in 5 runs.
