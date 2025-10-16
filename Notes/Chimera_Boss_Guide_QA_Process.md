@@ -93,16 +93,54 @@
 
 ## TODO List (Stage & Update as Work Progresses)
 
-- [ ] Gather and summarize Chimera boss mechanics, forms, trials, and stat requirements
-- [ ] Map all trials to owned champions (combo and per-trial tables)
-- [ ] Draft Table of Contents and section placeholders for Chimera guide
-- [ ] Build and simulate 5–8 teams (damage, trial completion, difficulty suitability)
-- [ ] Document teams, alternates, and trial-specific advice
-- [ ] Summarize best champions, team participation, and direct comparisons
-- [ ] List ideal champions to pull and team upgrade paths
-- [ ] Finalize guide with general notes, actionable advice, validation, and simulation notes
-- [ ] Add quick reference tables and summaries as needed
+- [X] Gather and summarize Chimera boss mechanics, forms, trials, and stat requirements
+- [X] Map all trials to owned champions (combo and per-trial tables)
+- [X] Draft Table of Contents and section placeholders for Chimera guide
+- [X] Build and simulate 5–8 teams (damage, trial completion, difficulty suitability)
+- [X] Document teams, alternates, and trial-specific advice
+- [X] Summarize best champions, team participation, and direct comparisons
+- [X] List ideal champions to pull and team upgrade paths
+- [X] Finalize guide with general notes, actionable advice, validation, and simulation notes
+- [X] Add quick reference tables and summaries as needed
 
 ---
 
 *Update this TODO list as items are completed or if the process needs to be reset or revised.*
+
+Other prompt info to consolidate:
+## prompt 1
+xisting Teams (as of now):
+Team 1: Poison & Cleanse Core
+Focus: Maximizes poison, cleanse, block debuffs, HP burn, sustain, minion clear.
+Strengths: Most trials except 1M+ hit.
+Weaknesses: Lower single-hit damage; requires manual for optimal trial completion.
+Advice: Manual play for trial timing (block debuffs, cleanse, HP burn).
+Team 2: Revive & Shield Core
+Focus: Revive, block debuffs, shield, sustain, stun, provoke, minion clear.
+Strengths: High survivability, most trials except poison/burn.
+Weaknesses: Lower poison/burn output; may need manual for minion clear.
+Advice: Manual for shield/provoke timing.
+Team 3: Burn & Minion Clear
+Focus: HP burn, minion clear, TM control, sustain.
+Strengths: Minion clear, HP burn, survive, 1M+ hit (Ninja).
+Weaknesses: Lower poison output; may need manual for trial timing.
+Advice: Manual for minion targeting and burn timing.
+Next Steps (for your validation):
+Add 3 more teams:
+
+One team that maximizes total trial completion (with explicit explanation of how to set up for each trial, skill/attack order, and tradeoffs).
+One team that is built for massive damage over 65 boss turns (ignores trials, focuses on raw damage, includes advice for maximizing damage).
+One additional team that balances damage and trial completion, with a section on tradeoffs and phase-specific advice.
+For each new team:
+
+List core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results, explicit affinity safety/risk.
+Add a “Tradeoffs & Trial Advice” section for teams that balance damage vs. trials, with actionable advice on skill/attack order and phase-specific setup.
+Append all new output to the end of the Chimera Draft Markdown file.
+
+## prompt 2:
+For each new team:
+
+List core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results, explicit affinity safety/risk.
+Add a “Tradeoffs & Trial Advice” section for teams that balance damage vs. trials, with actionable advice on skill/attack order and phase-specific setup.
+
+do this for all teams as needed. run at least 3 simulations of the Chimera's 65 turn cycle (if possible to survive) and include that in the output and team summary.
