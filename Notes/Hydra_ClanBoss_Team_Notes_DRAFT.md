@@ -6,19 +6,30 @@
 - Magic: Risk if Burangiri is Force affinity vs Magic heads
 - Spirit: Risk if Archmage is key TM booster and Spirit head is present
 - Always check weekly rotation for affinity matchups
-# Hydra Clan Boss Team Guide (2025, Owned Champions Only)
 
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements
 2. Teams by Estimated Damage/Clear Speed
 3. Detailed Team Sections (by Archetype)
-4. Best Champions & Team Participation
-5. Direct Champion Comparisons by Role
-6. Ideal Champions to Pull
-7. General Notes
-8. Actionable Notes & Upgrade Advice
-9. Team Flexibility & Alternate Builds
-10. When to Use Each Team9. Team Flexibility & Alternate Builds
+    3.1 Team 1: Balanced HP Burn & Cleanse Core (Auto-Friendly, High Survivability)
+    3.2 Team 2: Decapitation & High Damage (HP Burn/Poison Hybrid, Fast Devour Recovery)
+    3.3 Team 3: TM Control, Support, and Cleanse (Sustain/Disrupt, No Overlap)
+    3.4 Team 4: High Damage Poison/Burn (Max Key Push, Unique Set)
+    3.5 Team 5: Cleanse/Revive/Support (Survivability Focus, Unique Set)
+    3.6 Team 6: Niche/Disruptive (TM Control, Debuff Spread, Unique Set)
+4. Optimized Team Sets for Hydra (No Overlap)
+    4.1 Set 1: Max Survivability & Control (Hard/Brutal)
+    4.2 Set 2: Max Damage Hybrid (Hard/Brutal/Normal)
+    4.3 Set 3: Progression & Niche/Alternate (Normal/Hard/Backup)
+5. Best Champions & Team Participation
+6. Direct Champion Comparisons by Role
+7. Ideal Champions to Pull
+8. General Notes
+9. Actionable Notes & Upgrade Advice
+10. Team Flexibility & Alternate Builds
+11. When to Use Each Team
+12. Additional Team Archetypes & Niche Strategies
+13. Validation & Simulation Notes
 
 ---
 
@@ -223,6 +234,134 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 **Strengths:** Disruptive, good for specific rotations, strong debuff spread, block buffs, revive
 **Weaknesses:** Lower damage, less reliable on higher difficulties, niche utility
 **Simulated Damage/Clear Time:** 6–12M per key (Normal/Hard)
+
+---
+
+# Optimized Hydra Team Set 1: Max Survivability & Control (Ideal for Hard/Brutal)
+-------------------------------------------------------------------------------
+
+### Team 1: Balanced HP Burn & Cleanse Core
+
+-   **Champions:** Mithrala Lifebane, Geomancer, Godseeker Aniri, Rector Drath, Uugo, Maulie Tankard
+-   **Ideal Difficulty:** Hard/Brutal
+-   **Core Roles:** HP Burn, Cleanse, Revive, Block Debuffs, Support, Damage Dealer
+-   **Speed Tuning:** 220--250+ (Mithrala and Godseeker slightly faster for cleanse/revive cycles)
+-   **Gear:** Perception, Speed, Relentless, Regeneration, Immortal, Resilience. Mithrala: high RES/ACC; Geomancer: high ACC/HP/DEF; Godseeker/Rector: high HP/DEF/RES; Uugo: ACC/HP; Maulie: RES/HP
+-   **Masteries:** Support/Defense trees for survivability and ACC; Geomancer can use Warmaster for damage
+-   **Manual/Auto:** Fully auto possible on Hard/Brutal; manual skill timing recommended for Nightmare or tough rotations
+-   **Strengths:** High survivability, multiple revivers, strong HP Burn uptime, block buffs, veil for Torment, cleanse for debuffs, good for all rotations
+-   **Weaknesses:** Lower burst damage, can struggle to free devoured champions quickly on Nightmare, reliant on HP Burn for damage
+-   **Simulated Damage/Clear Time:** 15--25M per key (Hard/Brutal), 8--15M (Nightmare, depending on rotation)
+
+### Team 2: Decapitation & High Damage Hybrid
+
+-   **Champions:** Drexthar Bloodtwin, Elenaril, Narma the Returned, Scyl of the Drakes, Quargan the Crowned, Skullcrusher
+-   **Ideal Difficulty:** Hard/Brutal
+-   **Core Roles:** HP Burn, Poison, Cleanse, Block Buffs, Damage Dealer, Support
+-   **Speed Tuning:** 220--240+ (Scyl fastest for revive/CC, Drexthar/Elenaril for HP Burn uptime)
+-   **Gear:** Perception, Speed, Relentless, Immortal, Resilience. Drexthar: ACC/HP/DEF; Elenaril: ACC/ATK/HP; Narma: ACC/HP; Scyl: HP/DEF/RES; Quargan: HP/RES; Skullcrusher: DEF/RES
+-   **Masteries:** Support/Defense for survivability; Warmaster/Giant Slayer for damage dealers
+-   **Manual/Auto:** Auto possible on Hard/Brutal; manual for Nightmare or tough rotations
+-   **Strengths:** High decapitation speed, strong HP Burn/Poison hybrid damage, revive, block buffs, counterattack for more hits
+-   **Weaknesses:** Less healing than Team 1, can be vulnerable to burst damage, relies on counterattack for devour recovery
+-   **Simulated Damage/Clear Time:** 12--22M per key (Hard/Brutal), 7--13M (Nightmare)
+
+### Team 3: TM Control, Support, and Cleanse
+
+-   **Champions:** Archmage Hellmut, Bad-el-Kazar, Kantra the Cyclone, Norog, Lady Annabelle, Ithos
+-   **Ideal Difficulty:** Hard
+-   **Core Roles:** Turn Meter Control, Cleanse, Block Debuffs, Support, Damage Dealer, Revive
+-   **Speed Tuning:** 220--250+ (Archmage and Bad-el-Kazar fastest for cleanse/provoke)
+-   **Gear:** Speed, Perception, Immortal, Resilience. Archmage: SPD/ACC; Bad-el-Kazar: HP/RES; Kantra: ACC/HP; Norog: HP/DEF; Lady Annabelle: HP/RES; Ithos: ATK/CRIT
+-   **Masteries:** Support/Defense for sustain; Offense for Ithos
+-   **Manual/Auto:** Auto possible on Hard; manual for higher difficulties or tough rotations
+-   **Strengths:** High sustain, strong cleanse, block buffs, provoke, and debuff spread; good for rotations with heavy debuffs
+-   **Weaknesses:** Lower overall damage, can struggle to decapitate quickly, less HP Burn/Poison output
+-   **Simulated Damage/Clear Time:** 10--18M per key (Hard), 6--12M (Brutal)
+
+# Optimized Hydra Team Set 2: Max Damage Hybrid (Ideal for Hard/Brutal/Normal)
+----------------------------------------------------------------------------
+
+### Team 1: High Damage Poison/Burn Hybrid
+
+-   **Champions:** Kalvalax, Artak, Fayne, Venomage, Taya, Vogoth
+-   **Ideal Difficulty:** Hard/Brutal
+-   **Core Roles:** Poison, HP Burn, Decrease DEF, Weaken, Cleanse, Support
+-   **Speed Tuning:** 220--240+ (Kalvalax fastest for poison uptime, Artak/Fayne for debuff cycles)
+-   **Gear:** Perception, Speed, Toxic, Immortal, Resilience. Kalvalax: SPD/ACC/HP; Artak: ACC/HP/DEF; Fayne: ACC/ATK/HP; Venomage: ACC/HP; Taya: ACC/ATK; Vogoth: HP/RES
+-   **Masteries:** Support/Defense for sustain; Offense for Fayne/Taya
+-   **Manual/Auto:** Auto possible on Hard/Brutal; manual for Nightmare or tough rotations
+-   **Strengths:** Extremely high poison/HP Burn output, strong debuff coverage, good healing, can push max chest on lower difficulties
+-   **Weaknesses:** Less revive, can be vulnerable to burst, needs careful manual play for devour recovery
+-   **Simulated Damage/Clear Time:** 18--30M per key (Hard/Brutal), 10--18M (Nightmare)
+
+### Team 2: Cleanse/Revive/Support (Survivability Focus)
+
+-   **Champions:** Broadmaw, Hotatsu, Lady Annabelle, Vrask, Mausoleum Mage, Runekeeper Dazdurk
+-   **Ideal Difficulty:** Hard/Normal
+-   **Core Roles:** Cleanse, Revive, Block Debuffs, Support, Ally Protect, Heals
+-   **Speed Tuning:** 220--250+ (Broadmaw/Hotatsu fastest for revive/cleanse)
+-   **Gear:** Speed, Immortal, Resilience, Regeneration. Broadmaw: HP/RES; Hotatsu: HP/RES; Lady Annabelle: HP/RES; Vrask: HP/RES; Mausoleum Mage: HP/RES; Runekeeper Dazdurk: HP/RES
+-   **Masteries:** Support/Defense for all
+-   **Manual/Auto:** Auto possible on Hard/Normal; manual for higher difficulties
+-   **Strengths:** Maximum survivability, multiple revivers, strong cleanse, block debuffs, good for learning rotations and safe keys
+-   **Weaknesses:** Lower damage, can struggle to decapitate quickly, not ideal for max chest on higher difficulties
+-   **Simulated Damage/Clear Time:** 8--15M per key (Hard), 5--10M (Normal)
+
+### Team 3: Niche/Disruptive/Control
+
+-   **Champions:** Lua, Stag Knight, Kinagashi, Burangiri, Seeker, Skullcrown
+-   **Ideal Difficulty:** Normal/Hard
+-   **Core Roles:** TM Control, Debuff Spread, Block Buffs, Support, Damage Dealer, Revive
+-   **Speed Tuning:** 220--240+ (Lua/Seeker fastest for TM boost)
+-   **Gear:** Speed, Perception, Resilience. Lua: ATK/CRIT; Stag Knight: ACC/HP; Kinagashi: HP/RES; Burangiri: HP/RES; Seeker: HP/DEF; Skullcrown: ATK/CRIT
+-   **Masteries:** Support/Defense for sustain; Offense for Lua/Skullcrown
+-   **Manual/Auto:** Auto possible on Normal/Hard; manual for higher difficulties
+-   **Strengths:** Disruptive, good for specific rotations, strong debuff spread, block buffs, revive
+-   **Weaknesses:** Lower damage, less reliable on higher difficulties, niche utility
+-   **Simulated Damage/Clear Time:** 6--12M per key (Normal/Hard)
+
+# Optimized Hydra Team Set 3: Progression & Niche/Alternate (Ideal for Normal/Hard/Backup)
+----------------------------------------------------------------------------------------
+
+### Team 1: Poison/Burn Alternates & Support
+
+-   **Champions:** Fenshi, Taurus, Frozen Banshee, Aox the Rememberer, Apothecary, Vrask
+-   **Ideal Difficulty:** Normal/Hard
+-   **Core Roles:** Poison, HP Burn, Support, Heals, Cleanse
+-   **Speed Tuning:** 220--240+ (Apothecary fastest for speed/heal cycles)
+-   **Gear:** Toxic, Perception, Speed, Immortal. Fenshi: ACC/ATK; Taurus: ACC/HP; Frozen Banshee: ACC/HP; Aox: HP/RES; Apothecary: SPD/HP; Vrask: HP/RES
+-   **Masteries:** Support/Defense for sustain; Offense for Fenshi/Taurus
+-   **Manual/Auto:** Auto possible on Normal/Hard; manual for higher difficulties
+-   **Strengths:** Good poison uptime, strong healing, easy to build, accessible for early Hydra keys
+-   **Weaknesses:** Lower damage ceiling, less revive, not ideal for higher difficulties
+-   **Simulated Damage/Clear Time:** 6--14M per key (Normal/Hard)
+
+### Team 2: Revive/Control/Disruptive
+
+-   **Champions:** Kinagashi, Lady Annabelle, Hotatsu, Seeker, Skullcrown, Runekeeper Dazdurk
+-   **Ideal Difficulty:** Normal/Hard
+-   **Core Roles:** Revive, Heals, Block Debuffs, TM Boost, Damage, Support
+-   **Speed Tuning:** 220--240+ (Seeker fastest for TM boost, Kinagashi/Annabelle for revive)
+-   **Gear:** Speed, Immortal, Resilience. Kinagashi: HP/RES; Lady Annabelle: HP/RES; Hotatsu: HP/RES; Seeker: HP/DEF; Skullcrown: ATK/CRIT; Runekeeper: HP/RES
+-   **Masteries:** Support/Defense for sustain; Offense for Skullcrown
+-   **Manual/Auto:** Auto possible on Normal/Hard; manual for higher difficulties
+-   **Strengths:** Multiple revivers, strong healing, TM boost, flexible for learning rotations
+-   **Weaknesses:** Lower damage, less debuff coverage, not ideal for max chest
+-   **Simulated Damage/Clear Time:** 6--12M per key (Normal/Hard)
+
+### Team 3: Niche/Utility/Experimental
+
+-   **Champions:** Burangiri, Nia, Tagoar, Mistrider Daithi, Juliana, Rian the Conjurer
+-   **Ideal Difficulty:** Normal/Hard/Experimental
+-   **Core Roles:** Provoke, Support, Cleanse, Debuff Spread, Damage, Utility
+-   **Speed Tuning:** 220--240+ (Nia/Tagoar fastest for support/cleanse)
+-   **Gear:** Speed, Perception, Resilience. Burangiri: HP/RES; Nia: HP/RES; Tagoar: HP/RES; Mistrider: ACC/ATK; Juliana: ACC/ATK; Rian: ACC/HP
+-   **Masteries:** Support/Defense for sustain; Offense for Juliana/Mistrider
+-   **Manual/Auto:** Manual recommended for experimental setups or learning new mechanics
+-   **Strengths:** Flexible, can test new mechanics or fill gaps for weekly rotations, good for roster depth
+-   **Weaknesses:** Not optimized for high damage, may require manual play, niche utility
+-   **Simulated Damage/Clear Time:** 4--10M per key (Normal/Hard/Experimental)
 
 ---
 
