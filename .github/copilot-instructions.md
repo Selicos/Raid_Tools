@@ -129,6 +129,10 @@ A: It looks good for now, yes
 
 # Project-Wide Copilot & AI Agent Standards
 
+- In all chat responses, process and include a "Why/what/outcome:" statement to identify the context, reasoning, and intended result of the response. 
+- Use this logic for replies, but do not include this statement in the final output unless specifically requested.
+- Replies should still be concise and informative, unless asked to be verbose.
+
 ## Markdown-First, Modular Workflow
 - All boss/team guides must be written in Markdown, using the standard template (`Tools/Boss_Guide_Template.md`).
 - JSON is for internal data only; Markdown is the canonical output for all guides.
