@@ -121,20 +121,129 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 **Core Roles:** HP Burn, Cleanse, Revive, Block Debuffs, Support, Damage Dealer
 **Optimal Combo:** Mithrala Lifebane (HP Burn/Cleanse/Support), Geomancer (HP Burn/Damage), Godseeker Aniri (Revive/Heals), Rector Drath (Veil/Revive/Heals), Uugo (Block Buffs/Decr DEF), Maulie Tankard (Provoke/Support)
 **Alternates:** Bad-el-Kazar, Scyl of the Drakes, Aox the Rememberer, Quargan the Crowned, Hotatsu, Lady Annabelle
-**Speed Tuning:** 220–250+ (Mithrala and Godseeker slightly faster for cleanse/revive cycles)
 **Gear:** Perception, Speed, Relentless, Regeneration, Immortal, Resilience. Mithrala: high RES/ACC; Geomancer: high ACC/HP/DEF; Godseeker/Rector: high HP/DEF/RES; Uugo: ACC/HP; Maulie: RES/HP
 **Masteries:** Support/Defense trees for survivability and ACC; Geomancer can use Warmaster for damage
-**Manual/Auto:** Fully auto possible on Hard/Brutal; manual skill timing recommended for Nightmare or tough rotations
 **Strengths:** High survivability, multiple revivers, strong HP Burn uptime, block buffs, veil for Torment, cleanse for debuffs, good for all rotations
 **Weaknesses:** Lower burst damage, can struggle to free devoured champions quickly on Nightmare, reliant on HP Burn for damage
-**Simulated Damage/Clear Time:** 15–25M per key (Hard/Brutal), 8–15M (Nightmare, depending on rotation)
 
-**Affinity Safety/Risk:**
-- Void: Safe for all roles
-- Force: Risk if Mithrala or Rector are Magic affinity vs Force heads
-- Magic: Risk if Uugo is Force affinity vs Magic heads
-- Spirit: Risk if Geomancer is key damage and Spirit head is present (weak hits)
-- Always check weekly rotation for affinity matchups
+**Speed Tuning & Turn Order:**
+1. **Mithrala Lifebane (250-260 SPD)** - Goes first to cleanse debuffs before team acts (especially True Fear, Poison). High RES (450+) makes her Mischief Target.
+2. **Godseeker Aniri (245-255 SPD)** - Second for revive/heal if team takes early damage. Fast enough to cycle revive before devours.
+3. **Rector Drath (240-250 SPD)** - Third for Veil application (blocks True Fear from Torment). Backup revive if Godseeker is devoured.
+4. **Uugo (235-245 SPD)** - Fourth to apply Block Buffs before heads act (stops Decay cleanse, Mischief buff steal). Needs 400+ ACC (Nightmare).
+5. **Geomancer (230-240 SPD)** - Fifth for HP Burn application after Uugo blocks buffs. High ACC (400+ Nightmare) and HP (70k+) for reflect damage.
+6. **Maulie Tankard (225-235 SPD)** - Last for provoke and TM control after key debuffs land. High RES (450+) if designated Mischief Target alternate.
+
+**Rationale:** Mithrala cleanses first to remove True Fear/Poison before team acts. Godseeker/Rector provide safety net for early deaths. Uugo blocks buffs before heads cleanse or steal. Geomancer applies HP Burn after block buffs. Maulie controls heads after setup complete. All champions need 220+ SPD minimum for turn cycling before devour mechanics escalate.
+
+**Manual/Auto Compromise:**
+
+**Nightmare (Manual Recommended):**
+- Manual: 10-15M damage, 8-10 trials completed, 50-60 turn clear time
+- Auto: 6-10M damage, 5-7 trials completed, 70-90 turn clear time
+- Difference: Manual enables precise Veil timing for Torment, cleanse cycling for True Fear, and Uugo Block Buffs before Decay cleanses. Auto may waste Veil, miss cleanse windows, or fail Block Buffs timing (30-40% damage loss).
+- AI Limitation: Godseeker/Rector may revive before Veil is applied, leading to True Fear deaths. Uugo may use Block Buffs too early or too late.
+
+**Brutal (Manual or Auto):**
+- Manual: 18-25M damage, 10-12 trials completed, 40-50 turn clear time
+- Auto: 14-20M damage, 7-9 trials completed, 55-70 turn clear time
+- Difference: Manual allows devour focus fire and precise cleanse timing. Auto is viable with good gear (all 400+ ACC, 55k+ HP, 3.5k+ DEF), but expect 20-25% damage loss.
+- AI Limitation: May waste Geomancer HP Burn on heads about to be decapitated. Maulie provoke may target wrong head.
+
+**Hard (Manual or Auto):**
+- Manual: 20-28M damage, 12-14 trials completed, 35-45 turn clear time
+- Auto: 16-24M damage, 9-11 trials completed, 45-60 turn clear time
+- Difference: Auto is fully viable on Hard with good gear (350+ ACC, 50k HP, 3k+ DEF). Manual provides 15-20% damage boost via better devour recovery and cleanse timing.
+- AI Limitation: Minor. Auto may miss 1-2 trials due to suboptimal skill usage.
+
+**Normal (Auto Recommended):**
+- Manual: 25-32M damage, 14-16 trials completed, 30-40 turn clear time
+- Auto: 22-30M damage, 12-14 trials completed, 35-50 turn clear time
+- Difference: Minimal. Auto is fully safe on Normal (300+ ACC, 45k HP). Manual provides 10-12% damage boost but not necessary.
+- AI Limitation: None significant. Team outsustains and outdamages Normal mechanics.
+
+**Turn-by-Turn Skill Usage:**
+
+**Nightmare (Manual, 50-60 Turns, High Mechanic Intensity):**
+
+*Phase 1 (Turns 1-15): Setup & Survival*
+1. **Turn 1:** Mithrala A3 (AoE cleanse), Godseeker A3 (AoE buffs + continuous heal), Rector A3 (Veil), Uugo A3 (Block Buffs), Geomancer A3 (HP Burn on all heads), Maulie A2 (Provoke Decay/Mischief)
+2. **Turn 2-5:** Mithrala A1/A2 (maintain HP Burn + cleanse), Godseeker A1/A2 (heal + support), Rector A1/A2 (heal + buffs), Uugo A2 (Decrease DEF), Geomancer A1 (reflect damage stacks), Maulie A1/A3 (TM control + provoke)
+3. **Turn 6-10:** Repeat cycle. Watch for first devour (usually Turn 8-10). Focus fire devoured champion's head with Geomancer A1 + Uugo A2.
+4. **Turn 11-15:** Decay Head will cleanse debuffs around Turn 12. Reapply Uugo A3 (Block Buffs) BEFORE Decay acts. If True Fear lands, Mithrala A3 cleanses immediately. Rector A3 Veil if Torment head is active.
+
+*Phase 2 (Turns 16-30): Decapitation & Devour Management*
+5. **Turn 16-20:** First head decapitation target: Decay (if present) or Mischief. Geomancer HP Burn + Uugo Decrease DEF + all A1 attacks. If devour occurs, focus fire that head with Geomancer A1 (high single-target).
+6. **Turn 21-25:** Second devour likely. If Godseeker/Rector devoured, use backup revive (whichever is free). Mithrala A3 cleanses every 3-4 turns to maintain uptime.
+7. **Turn 26-30:** Second head decapitation. Target Torment (if present) or highest threat. Maintain Veil uptime with Rector A3 every 4 turns.
+
+*Phase 3 (Turns 31-45): Sustain & Additional Decapitations*
+8. **Turn 31-40:** Third devour. Prioritize freeing damage dealers (Geomancer, Uugo). If Wrath head active, watch Fury stacks—apply Decrease ATK or prepare Block Damage from Godseeker.
+9. **Turn 41-45:** Third head decapitation. Target Wrath or Blight (if Poison Cloud is limiting HP Burn damage). Maulie provoke controls remaining heads.
+
+*Phase 4 (Turns 46-60): Final Push & Cleanup*
+10. **Turn 46-60:** Final heads. Maintain HP Burn uptime with Geomancer/Mithrala. Cleanse cycling with Mithrala A3 every 3-4 turns. If low on HP, Godseeker A3 + Rector A2/A3 heal. Focus fire remaining heads with all champions.
+
+**Key Trials (Nightmare):**
+- HP Burn Trial (10+ stacks): Geomancer A3 + Mithrala A2 every cycle.
+- Block Buffs Trial (15+ blocks): Uugo A3 every 4 turns.
+- Veil Trial (apply 10+ times): Rector A3 every 4 turns.
+- Revive Trial (revive 5+ times): Godseeker A3 + Rector A3 as needed.
+- Cleanse Trial (cleanse 20+ debuffs): Mithrala A3 every 3-4 turns.
+
+**Brutal (Manual or Auto, 40-50 Turns, Moderate Mechanic Intensity):**
+
+*Phase 1 (Turns 1-12): Setup & Early Damage*
+- Same as Nightmare Turn 1-15, but devour occurs Turn 10-12 instead of 8-10. Mechanic intensity lower (Decay cleanses every 15 turns instead of 12, Wrath Fury buildup 20% slower).
+
+*Phase 2 (Turns 13-25): Decapitation*
+- First head down by Turn 18-20. Second head down by Turn 24-26. Focus Decay → Torment → Mischief in priority order.
+
+*Phase 3 (Turns 26-40): Sustain & Final Heads*
+- Third head down by Turn 32-35. Final head by Turn 40-45. Cleanse/Veil/Block Buffs cycles maintain safety.
+
+**Key Trials (Brutal):** Same as Nightmare but with 15-20% more lenient timing.
+
+**Hard (Manual or Auto, 35-45 Turns, Low Mechanic Intensity):**
+
+*Phase 1 (Turns 1-10): Setup*
+- Same Turn 1 setup. Devour occurs Turn 12-15. Decay cleanses every 18-20 turns. Wrath Fury buildup 40% slower than Nightmare.
+
+*Phase 2 (Turns 11-20): Decapitation*
+- First head down by Turn 15-18. Second head down by Turn 22-25.
+
+*Phase 3 (Turns 21-35): Final Push*
+- Third head down by Turn 28-32. Final head by Turn 35-40.
+
+**Key Trials (Hard):** Same as Brutal but timing is 20-25% more lenient. Auto can complete 9-11 trials reliably.
+
+**Normal (Auto, 30-40 Turns, Very Low Mechanic Intensity):**
+
+*Phase 1 (Turns 1-10): Setup & Burst*
+- Same Turn 1 setup. Devour occurs Turn 15-18. Decay cleanses every 25 turns. Wrath Fury buildup 60% slower than Nightmare.
+
+*Phase 2 (Turns 11-25): Fast Decapitations*
+- First two heads down by Turn 18-22. Third head by Turn 26-30. Final head by Turn 32-38.
+
+**Key Trials (Normal):** Auto completes 12-14 trials. Minimal manual intervention needed.
+
+**Affinity Safety/Risk (Per Difficulty):**
+
+**Nightmare:**
+- Mithrala (Magic): MEDIUM RISK vs Force heads (Wrath, Vengeance). May miss cleanse (weak hit) 15-20% of turns. Backup: Bad-el-Kazar (Force) for Force head weeks.
+- Rector Drath (Magic): MEDIUM RISK vs Force heads. Veil may miss application (weak hit) 15-20%. Backup: None owned (Siphi/Duchess ideal).
+- Uugo (Force): MEDIUM RISK vs Magic heads (Decay, Mischief). Block Buffs may miss (weak hit) 15-20%. Backup: Norog (Force, passive Block Buffs but less reliable).
+- Geomancer (Force): LOW RISK. HP Burn from reflect damage (passive) not affected by weak hits. Direct attacks may miss but reflect damage carries team.
+- Godseeker (Void): SAFE. No affinity risk.
+- Maulie (Force): LOW RISK vs Magic heads. Provoke may miss but not critical role.
+
+**Brutal/Hard/Normal:**
+- Affinity risk decreases by 5-10% per difficulty tier down (Brutal 10-15% miss rate, Hard 5-10%, Normal <5%). Same champions at risk, but impact less severe. Recommend keeping affinity-safe alternates for rotation adaptation.
+
+**Overall Risk Assessment:**
+- **Nightmare:** MEDIUM RISK (3/6 champions have weak affinity potential). Check weekly rotation. If Force heads dominate, swap Mithrala → Bad-el, Rector → Godseeker primary healer + Scyl backup.
+- **Brutal/Hard:** LOW-MEDIUM RISK. Most weeks safe, but plan alternates for Force-heavy rotations.
+- **Normal:** LOW RISK. Affinity rarely matters due to low mechanic intensity.
 
 ---
 
@@ -142,20 +251,131 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 **Core Roles:** HP Burn, Poison, Cleanse, Block Buffs, Damage Dealer, Support
 **Optimal Combo:** Drexthar Bloodtwin (HP Burn/Provoke), Elenaril (HP Burn/Poison), Narma the Returned (Poison/Decr ATK/Weaken), Scyl of the Drakes (Revive/Heals/CC), Quargan the Crowned (Block Debuffs/Support), Skullcrusher (Ally Protect/Counterattack)
 **Alternates:** Artak, Fenshi, Fayne, Lady Annabelle, Hotatsu, Vogoth
-**Speed Tuning:** 220–240+ (Scyl fastest for revive/CC, Drexthar/Elenaril for HP Burn uptime)
 **Gear:** Perception, Speed, Relentless, Immortal, Resilience. Drexthar: ACC/HP/DEF; Elenaril: ACC/ATK/HP; Narma: ACC/HP; Scyl: HP/DEF/RES; Quargan: HP/RES; Skullcrusher: DEF/RES
 **Masteries:** Support/Defense for survivability; Warmaster/Giant Slayer for damage dealers
-**Manual/Auto:** Auto possible on Hard/Brutal; manual for Nightmare or tough rotations
 **Strengths:** High decapitation speed, strong HP Burn/Poison hybrid damage, revive, block buffs, counterattack for more hits
 **Weaknesses:** Less healing than Team 1, can be vulnerable to burst damage, relies on counterattack for devour recovery
-**Simulated Damage/Clear Time:** 12–22M per key (Hard/Brutal), 7–13M (Nightmare)
 
-**Affinity Safety/Risk:**
-- Void: Safe for all roles
-- Force: Risk if Elenaril or Quargan are Magic affinity vs Force heads
-- Magic: Risk if Drexthar or Skullcrusher are Force affinity vs Magic heads
-- Spirit: Risk if Narma is key poisoner and Spirit head is present
-- Always check weekly rotation for affinity matchups
+**Speed Tuning & Turn Order:**
+1. **Scyl of the Drakes (250-260 SPD)** - Goes first for revive/heal if team takes early damage. Stun may disrupt heads (limited utility due to immunities).
+2. **Quargan the Crowned (245-255 SPD)** - Second for Block Debuffs before heads act (blocks True Fear, Poison). High RES (450+) if designated Mischief Target.
+3. **Drexthar Bloodtwin (240-250 SPD)** - Third for provoke (controls Decay/Mischief) and HP Burn (passive + A3). Needs 400+ ACC (Nightmare).
+4. **Elenaril (235-245 SPD)** - Fourth for HP Burn + Poison on heads. High ACC (400+ Nightmare) and ATK (4k+) for damage scaling.
+5. **Narma the Returned (230-240 SPD)** - Fifth for Poison + Decrease ATK/Weaken after HP Burn lands. High ACC (400+ Nightmare).
+6. **Skullcrusher (225-235 SPD)** - Last for Ally Protect (boosts team survivability) and Counterattack buff (enables extra hits for devour recovery). High DEF (4.5k+) to tank damage.
+
+**Rationale:** Scyl goes first to revive/heal early deaths. Quargan blocks debuffs before heads act. Drexthar provokes key heads (Decay/Mischief) and applies HP Burn. Elenaril/Narma layer HP Burn + Poison for high damage. Skullcrusher enables counterattack for extra hits (critical for freeing devoured champions quickly). All champions need 220+ SPD minimum.
+
+**Manual/Auto Compromise:**
+
+**Nightmare (Manual Required):**
+- Manual: 9-13M damage, 7-9 trials completed, 55-65 turn clear time
+- Auto: 5-8M damage, 4-6 trials completed, 80-100 turn clear time
+- Difference: Manual enables precise Skullcrusher Counterattack timing (apply before devour turns), Drexthar provoke targeting (Decay/Mischief priority), and Elenaril HP Burn + Poison synergy. Auto wastes Counterattack or uses Elenaril skills suboptimally (40-45% damage loss).
+- AI Limitation: Skullcrusher may use Counterattack too early (wasted) or too late (devour not recovered). Elenaril may use A3 without A2 Poison setup. Drexthar provoke may target wrong head.
+
+**Brutal (Manual Recommended):**
+- Manual: 16-22M damage, 9-11 trials completed, 45-55 turn clear time
+- Auto: 11-16M damage, 6-8 trials completed, 60-75 turn clear time
+- Difference: Manual allows Counterattack timing for devour recovery and Elenaril HP Burn/Poison combo for high damage. Auto viable with very good gear (all 400+ ACC, 55k+ HP, 3.5k+ DEF for Skullcrusher), but expect 30-35% damage loss.
+- AI Limitation: Counterattack timing and Elenaril synergy suboptimal on auto. May miss 2-3 trials due to wasted skills.
+
+**Hard (Manual or Auto):**
+- Manual: 18-25M damage, 11-13 trials completed, 40-50 turn clear time
+- Auto: 14-20M damage, 8-10 trials completed, 50-65 turn clear time
+- Difference: Auto viable on Hard with good gear (350+ ACC, 50k HP, 3k+ DEF for Skullcrusher). Manual provides 20-25% damage boost via Counterattack timing and Elenaril synergy.
+- AI Limitation: Moderate. Auto may miss 2-3 trials and some devour recoveries may be slower.
+
+**Normal (Auto Viable):**
+- Manual: 22-30M damage, 13-15 trials completed, 35-45 turn clear time
+- Auto: 18-26M damage, 10-12 trials completed, 40-55 turn clear time
+- Difference: Auto is viable on Normal (300+ ACC, 45k HP). Manual provides 15-18% damage boost via Counterattack timing but not critical.
+- AI Limitation: Minor. Team outsustains Normal mechanics even with suboptimal AI.
+
+**Turn-by-Turn Skill Usage:**
+
+**Nightmare (Manual, 55-65 Turns, High Mechanic Intensity):**
+
+*Phase 1 (Turns 1-15): Setup & Survival*
+1. **Turn 1:** Scyl A3 (AoE heal + buffs), Quargan A3 (Block Debuffs), Drexthar A3 (AoE HP Burn + provoke), Elenaril A2 (Poison on all heads), Narma A3 (Poison + Decrease ATK/Weaken), Skullcrusher A2 (Ally Protect + Counterattack)
+2. **Turn 2-5:** Scyl A1/A2 (heal + stun attempts), Quargan A1/A2 (support), Drexthar A1/A2 (HP Burn from passive + provoke), Elenaril A1/A3 (HP Burn + nuke), Narma A1/A2 (Poison uptime), Skullcrusher A1 (counterattack enabled)
+3. **Turn 6-10:** Repeat cycle. Watch for first devour (usually Turn 8-10). Counterattack from Skullcrusher enables team to focus fire devoured champion's head with extra hits.
+4. **Turn 11-15:** Decay Head will cleanse debuffs around Turn 12. Drexthar provoke Decay to delay cleanse. Reapply HP Burn + Poison immediately after cleanse. Quargan A3 Block Debuffs every 4 turns.
+
+*Phase 2 (Turns 16-30): Decapitation & Devour Management*
+5. **Turn 16-20:** First head decapitation target: Decay (if present) or Torment. Elenaril A3 (nuke with HP Burn + Poison synergy) + Narma A3 + all A1 attacks. If devour occurs, Counterattack from Skullcrusher enables rapid recovery (team gets 2x hits per turn).
+6. **Turn 21-25:** Second devour likely. If Scyl devoured, prioritize freeing her first (only reviver). Drexthar provoke controls Mischief/Decay.
+7. **Turn 26-30:** Second head decapitation. Target Mischief (if present) or highest threat. Maintain HP Burn/Poison uptime with Drexthar A3 + Elenaril A2/A3 every 3-4 turns.
+
+*Phase 3 (Turns 31-50): Sustain & Additional Decapitations*
+8. **Turn 31-40:** Third devour. Prioritize freeing damage dealers (Elenaril, Narma). If Wrath head active, Narma A3 (Decrease ATK) reduces Fury nuke damage. Quargan Block Debuffs maintains safety.
+9. **Turn 41-50:** Third head decapitation. Target Wrath or Blight. Scyl A3 heal cycle maintains HP. Skullcrusher A2 Counterattack every 5 turns.
+
+*Phase 4 (Turns 51-65): Final Push & Cleanup*
+10. **Turn 51-65:** Final heads. Maintain HP Burn/Poison uptime with Drexthar + Elenaril + Narma. Counterattack from Skullcrusher maximizes hits for fast cleanup. Scyl revive if needed.
+
+**Key Trials (Nightmare):**
+- HP Burn Trial (10+ stacks): Drexthar passive + A3 + Elenaril A3 every cycle.
+- Poison Trial (15+ stacks): Elenaril A2 + Narma A3/A1 every cycle.
+- Decrease ATK Trial (apply 12+ times): Narma A3 every 4 turns.
+- Weaken Trial (apply 10+ times): Narma A3 every 4 turns.
+- Block Debuffs Trial (apply 10+ times): Quargan A3 every 4 turns.
+- Counterattack Trial (apply 8+ times): Skullcrusher A2 every 5 turns.
+- Revive Trial (revive 3+ times): Scyl A3 as needed.
+
+**Brutal (Manual or Auto, 45-55 Turns, Moderate Mechanic Intensity):**
+
+*Phase 1 (Turns 1-12): Setup & Early Damage*
+- Same as Nightmare Turn 1-15, but devour occurs Turn 10-12 instead of 8-10. Decay cleanses every 15 turns instead of 12. Counterattack timing less critical (devour recovery 20% easier).
+
+*Phase 2 (Turns 13-25): Decapitation*
+- First head down by Turn 18-20. Second head down by Turn 24-27. Focus Decay → Torment → Mischief in priority order. Elenaril A3 nuke deals 15-20% more damage than Nightmare due to lower head HP.
+
+*Phase 3 (Turns 26-45): Sustain & Final Heads*
+- Third head down by Turn 32-36. Final head by Turn 42-50. HP Burn/Poison damage carries team.
+
+**Key Trials (Brutal):** Same as Nightmare but with 15-20% more lenient timing. Counterattack enables 9-11 trial completions on manual.
+
+**Hard (Manual or Auto, 40-50 Turns, Low Mechanic Intensity):**
+
+*Phase 1 (Turns 1-10): Setup*
+- Same Turn 1 setup. Devour occurs Turn 12-15. Decay cleanses every 18-20 turns. Wrath Fury buildup 40% slower than Nightmare.
+
+*Phase 2 (Turns 11-20): Decapitation*
+- First head down by Turn 15-18. Second head down by Turn 22-26. Counterattack enables fast devour recovery (team rarely loses champions).
+
+*Phase 3 (Turns 21-40): Final Push*
+- Third head down by Turn 28-33. Final head by Turn 38-45. Auto can complete 8-10 trials with good gear.
+
+**Key Trials (Hard):** Same as Brutal but timing is 20-25% more lenient.
+
+**Normal (Auto, 35-45 Turns, Very Low Mechanic Intensity):**
+
+*Phase 1 (Turns 1-10): Setup & Burst*
+- Same Turn 1 setup. Devour occurs Turn 15-18. Decay cleanses every 25 turns. Team easily outsustains mechanics.
+
+*Phase 2 (Turns 11-25): Fast Decapitations*
+- First two heads down by Turn 18-23. Third head by Turn 27-32. Final head by Turn 35-42. Counterattack speeds up cleanup significantly.
+
+**Key Trials (Normal):** Auto completes 10-12 trials. Minimal manual intervention needed.
+
+**Affinity Safety/Risk (Per Difficulty):**
+
+**Nightmare:**
+- Drexthar (Force): MEDIUM RISK vs Magic heads (Decay, Mischief). Provoke may miss (weak hit) 15-20%. HP Burn from passive not affected. Backup: Artak (Force, HP Burn + support).
+- Elenaril (Magic): MEDIUM RISK vs Force heads (Wrath, Vengeance). HP Burn/Poison may miss (weak hit) 15-20%. Backup: Fenshi (Epic, high Poison output).
+- Narma (Force): MEDIUM RISK vs Magic heads. Poison/Decrease ATK may miss (weak hit) 15-20%. Backup: Fayne (Magic, high Poison + Decrease DEF).
+- Scyl (Force): LOW RISK vs Magic heads. Revive/heal not affected by weak hits. Stun attempts may miss but not critical role.
+- Quargan (Magic): MEDIUM RISK vs Force heads. Block Debuffs may miss (weak hit) 15-20%. Backup: Hotatsu (Force, Block Debuffs + Leech).
+- Skullcrusher (Epic): CHECK AFFINITY. If weak vs head affinity, Counterattack/Ally Protect may miss application. Backup: Vogoth (Epic, heals + Ally Protect).
+
+**Brutal/Hard/Normal:**
+- Affinity risk decreases by 5-10% per difficulty tier down (Brutal 10-15% miss rate, Hard 5-10%, Normal <5%). Same champions at risk, but impact less severe. Recommend keeping affinity-safe alternates for rotation adaptation.
+
+**Overall Risk Assessment:**
+- **Nightmare:** MEDIUM-HIGH RISK (4/6 champions have weak affinity potential). Check weekly rotation. If Magic heads dominate, swap Drexthar → Artak, Narma → Fayne. If Force heads dominate, swap Elenaril → Fenshi, Quargan → Hotatsu.
+- **Brutal/Hard:** MEDIUM RISK. Plan alternates for Magic/Force-heavy rotations.
+- **Normal:** LOW RISK. Affinity rarely matters.
 
 ---
 
@@ -163,20 +383,103 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 **Core Roles:** Turn Meter Control, Cleanse, Block Debuffs, Support, Damage Dealer, Revive
 **Optimal Combo:** Maulie Tankard (Provoke/Support), Bad-el-Kazar (Cleanse/Heals/Poison), Kantra the Cyclone (Debuff Spread/Support), Norog (Block Buffs/Support), Lady Annabelle (Heals/Revive), Ithos (Damage Dealer)
 **Alternates:** Archmage Hellmut, Apothecary, Lua, Stag Knight, Kinagashi, Burangiri
-**Speed Tuning:** 220–250+ (Maulie and Bad-el-Kazar fastest for cleanse/provoke)
 **Gear:** Speed, Perception, Immortal, Resilience. Maulie: HP/RES; Bad-el-Kazar: HP/RES; Kantra: ACC/HP; Norog: HP/DEF; Lady Annabelle: HP/RES; Ithos: ATK/CRIT
 **Masteries:** Support/Defense for sustain; Offense for Ithos
-**Manual/Auto:** Auto possible on Hard; manual for higher difficulties or tough rotations
 **Strengths:** High sustain, strong cleanse, block buffs, provoke, and debuff spread; good for rotations with heavy debuffs
 **Weaknesses:** Lower overall damage, can struggle to decapitate quickly, less HP Burn/Poison output
-**Simulated Damage/Clear Time:** 10–18M per key (Hard), 6–12M (Brutal)
 
-**Affinity Safety/Risk:**
-- Void: Safe for all roles
-- Force: Risk if Lady Annabelle or Kantra are Magic affinity vs Force heads
-- Magic: Risk if Norog is Force affinity vs Magic heads
-- Spirit: Risk if Ithos is key damage and Spirit head is present
-- Always check weekly rotation for affinity matchups
+**Speed Tuning & Turn Order:**
+1. **Maulie Tankard (250-260 SPD)** - Goes first for provoke (controls Decay/Mischief/Torment) and TM reduction. High RES (450+) for Mischief Target.
+2. **Bad-el-Kazar (245-255 SPD)** - Second for cleanse + continuous heal before team acts. High RES (400+) and HP (70k+) for survivability.
+3. **Norog (240-250 SPD)** - Third for passive Block Buffs (always active) and DEF aura. High HP/DEF (65k HP, 3.5k+ DEF).
+4. **Lady Annabelle (235-245 SPD)** - Fourth for heals + revive if team takes early damage. High HP/RES (65k HP, 400+ RES).
+5. **Kantra the Cyclone (230-240 SPD)** - Fifth for debuff spread (copies debuffs from heads to all other heads). Needs debuffs present first (Bad-el Poison, etc.). High ACC (400+ Nightmare).
+6. **Ithos (225-235 SPD)** - Last for high single-target nuke (freeing devoured, decapitation). High ATK/CRIT (4.5k ATK, 100% CR, 250% CD).
+
+**Rationale:** Maulie provokes first to control key heads (Decay/Mischief) and reduce TM. Bad-el cleanses + heals immediately after. Norog's passive Block Buffs is always active (no timing needed). Lady Annabelle provides backup healing and revive safety net. Kantra spreads debuffs after Bad-el applies Poison. Ithos nukes for devour recovery and decapitation. All champions need 220+ SPD minimum.
+
+**Manual/Auto Compromise:**
+
+**Brutal (Manual Recommended):**
+- Manual: 10-15M damage, 8-10 trials completed, 50-60 turn clear time
+- Auto: 6-10M damage, 5-7 trials completed, 70-85 turn clear time
+- Difference: Manual enables precise Maulie provoke targeting (Decay/Mischief priority), Kantra debuff spread timing (after Bad-el applies Poison), and Ithos nuke for devour recovery. Auto may waste provoke, miss debuff spread windows, or use Ithos nuke suboptimally (40-45% damage loss).
+- AI Limitation: Maulie may provoke wrong head. Kantra may use debuff spread when no debuffs present. Ithos may nuke heads about to be decapitated.
+
+**Hard (Manual or Auto):**
+- Manual: 14-18M damage, 10-12 trials completed, 45-55 turn clear time
+- Auto: 10-14M damage, 7-9 trials completed, 55-70 turn clear time
+- Difference: Auto viable on Hard with good gear (350+ ACC for Kantra, 50k HP for all, 3k+ DEF for Norog). Manual provides 25-30% damage boost via Maulie provoke control and Kantra debuff spread timing.
+- AI Limitation: Moderate. Auto may miss 2-3 trials due to suboptimal skill usage.
+
+**Normal (Auto Viable):**
+- Manual: 16-22M damage, 12-14 trials completed, 40-50 turn clear time
+- Auto: 12-18M damage, 9-11 trials completed, 50-65 turn clear time
+- Difference: Auto is viable on Normal (300+ ACC, 45k HP). Manual provides 20-25% damage boost but not critical.
+- AI Limitation: Minor. Team outsustains Normal mechanics.
+
+**Turn-by-Turn Skill Usage:**
+
+**Brutal (Manual, 50-60 Turns, Moderate Mechanic Intensity):**
+
+*Phase 1 (Turns 1-15): Setup & Control*
+1. **Turn 1:** Maulie A2 (Provoke Decay), Bad-el A3 (AoE cleanse + continuous heal), Norog A1 (passive Block Buffs active), Lady Annabelle A3 (AoE heal), Kantra A1 (wait for debuffs), Ithos A1 (basic attack)
+2. **Turn 2-5:** Maulie A1/A3 (TM reduction + provoke), Bad-el A1/A2 (Poison uptime), Norog A1/A2 (support), Lady Annabelle A1/A2 (heal), Kantra A3 (debuff spread after Bad-el Poison lands), Ithos A1/A2 (damage)
+3. **Turn 6-10:** Repeat cycle. Watch for first devour (usually Turn 10-12 on Brutal). Ithos A3 nuke to free devoured champion (450k+ damage).
+4. **Turn 11-15:** Decay Head will cleanse debuffs around Turn 15. Maulie provoke Decay to delay cleanse. Norog passive Block Buffs prevents Decay from cleansing (if applied before Decay acts). Bad-el A3 cleanses True Fear/Poison from team.
+
+*Phase 2 (Turns 16-30): Decapitation & Sustain*
+5. **Turn 16-20:** First head decapitation target: Decay (if present) or Torment. Ithos A3 nuke + Kantra A2 (ally attack) + all A1 attacks. If devour occurs, Ithos A3 frees champion in 1-2 turns.
+6. **Turn 21-25:** Second devour likely. If Lady Annabelle devoured, Bad-el + Maulie sustain team. Norog passive Block Buffs maintains safety from Mischief buff steal.
+7. **Turn 26-30:** Second head decapitation. Target Mischief (if present) or highest threat. Maintain Poison uptime with Bad-el A1/A2 every 2-3 turns.
+
+*Phase 3 (Turns 31-50): Final Push*
+8. **Turn 31-50:** Third head decapitation by Turn 38-42. Final head by Turn 48-55. Maulie provoke controls remaining heads. Bad-el continuous heal maintains HP. Ithos nuke accelerates cleanup.
+
+**Key Trials (Brutal):**
+- Provoke Trial (apply 12+ times): Maulie A2 every 4 turns.
+- Cleanse Trial (cleanse 15+ debuffs): Bad-el A3 every 4 turns.
+- Block Buffs Trial (block 10+ buffs): Norog passive (always active).
+- Debuff Spread Trial (spread 8+ times): Kantra A3 every 4 turns.
+- Revive Trial (revive 2+ times): Lady Annabelle A3 as needed.
+- Poison Trial (10+ stacks): Bad-el A1/A2 every cycle.
+
+**Hard (Manual or Auto, 45-55 Turns, Low Mechanic Intensity):**
+
+*Phase 1 (Turns 1-12): Setup*
+- Same Turn 1 setup. Devour occurs Turn 12-15. Decay cleanses every 18-20 turns. Norog passive Block Buffs reduces cleanse frequency significantly.
+
+*Phase 2 (Turns 13-25): Decapitation*
+- First head down by Turn 18-22. Second head down by Turn 26-30. Ithos nuke deals 20-25% more damage than Brutal due to lower head HP.
+
+*Phase 3 (Turns 26-45): Final Push*
+- Third head down by Turn 32-38. Final head by Turn 42-50. Auto can complete 7-9 trials with good gear.
+
+**Normal (Auto, 40-50 Turns, Very Low Mechanic Intensity):**
+
+*Phase 1 (Turns 1-10): Setup & Burst*
+- Same Turn 1 setup. Devour occurs Turn 15-18. Team easily outsustains mechanics.
+
+*Phase 2 (Turns 11-30): Fast Decapitations*
+- First two heads down by Turn 20-25. Third head by Turn 30-35. Final head by Turn 42-48. Auto completes 9-11 trials.
+
+**Affinity Safety/Risk (Per Difficulty):**
+
+**Brutal:**
+- Maulie (Force): MEDIUM RISK vs Magic heads (Decay, Mischief). Provoke may miss (weak hit) 10-15%. Backup: Archmage Hellmut (Epic, TM boost + control).
+- Bad-el-Kazar (Force): MEDIUM RISK vs Magic heads. Cleanse/heal not affected by weak hits, but Poison may miss (weak hit) 10-15%. Backup: Godseeker Aniri (Void, cleanse + revive, but used in Team 1).
+- Norog (Force): LOW RISK vs Magic heads. Passive Block Buffs not affected by weak hits.
+- Lady Annabelle (Epic): CHECK AFFINITY. If weak vs head affinity, revive/heal may miss application. Backup: Kinagashi (Epic, revive + support).
+- Kantra (Void): SAFE. No affinity risk.
+- Ithos (Void): SAFE. No affinity risk.
+
+**Hard/Normal:**
+- Affinity risk decreases by 5-10% per difficulty tier down (Hard 5-10% miss rate, Normal <5%). Same champions at risk, but impact less severe.
+
+**Overall Risk Assessment:**
+- **Brutal:** MEDIUM RISK (3/6 champions have weak affinity potential). Check weekly rotation. If Magic heads dominate, swap Maulie → Archmage, Bad-el → Godseeker (if available from Team 1 alternates).
+- **Hard:** LOW-MEDIUM RISK. Most weeks safe, but plan alternates for Magic-heavy rotations.
+- **Normal:** LOW RISK. Affinity rarely matters.
 
 ---
 
@@ -184,20 +487,106 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 **Core Roles:** Poison, HP Burn, Decrease DEF, Weaken, Cleanse, Support
 **Optimal Combo:** Kalvalax (Passive Poisons), Artak (HP Burn/Support), Fayne (Poisons/Decr DEF/Weaken), Venomage (Poisons/Decr ATK/Heal Reduction), Taya (Poisons/HP Burn), Vogoth (Heals/Support)
 **Alternates:** Taurus, Frozen Banshee, Fenshi, Narma the Returned, Lady Annabelle, Hotatsu
-**Speed Tuning:** 220–240+ (Kalvalax fastest for poison uptime, Artak/Fayne for debuff cycles)
 **Gear:** Perception, Speed, Toxic, Immortal, Resilience. Kalvalax: SPD/ACC/HP; Artak: ACC/HP/DEF; Fayne: ACC/ATK/HP; Venomage: ACC/HP; Taya: ACC/ATK; Vogoth: HP/RES
 **Masteries:** Support/Defense for sustain; Offense for Fayne/Taya
-**Manual/Auto:** Auto possible on Hard/Brutal; manual for Nightmare or tough rotations
 **Strengths:** Extremely high poison/HP Burn output, strong debuff coverage, good healing, can push max chest on lower difficulties
 **Weaknesses:** Less revive, can be vulnerable to burst, needs careful manual play for devour recovery
-**Simulated Damage/Clear Time:** 18–30M per key (Hard/Brutal), 10–18M (Nightmare)
 
-**Affinity Safety/Risk:**
-- Void: Safe for all roles
-- Force: Risk if Fayne or Taya are Magic affinity vs Force heads
-- Magic: Risk if Artak is Force affinity vs Magic heads
-- Spirit: Risk if Kalvalax is key poisoner and Spirit head is present
-- Always check weekly rotation for affinity matchups
+**Speed Tuning & Turn Order:**
+1. **Kalvalax (250-260 SPD)** - Goes first for passive Poison application (applies on every turn automatically). High ACC (450+ Nightmare) and HP (70k+).
+2. **Artak (245-255 SPD)** - Second for HP Burn + support buffs. Needs 400+ ACC (Nightmare) and high HP/DEF (65k HP, 3.5k DEF).
+3. **Fayne (240-250 SPD)** - Third for Poison + Decrease DEF/Weaken combo (massive damage boost). High ACC (450+ Nightmare) and ATK (4k+). Squishy, needs protection.
+4. **Venomage (235-245 SPD)** - Fourth for Poison + Decrease ATK/Heal Reduction after Fayne debuffs land. High ACC (420+ Nightmare).
+5. **Taya (230-240 SPD)** - Fifth for Poison + HP Burn hybrid. High ACC (400+ Nightmare) and ATK (4k+).
+6. **Vogoth (225-235 SPD)** - Last for passive heals (from ally deaths/low HP) and Leech application. High HP/RES (75k+ HP, 400+ RES).
+
+**Rationale:** Kalvalax applies Poison passively every turn (no skill needed). Artak applies HP Burn early. Fayne applies Poison + Decrease DEF/Weaken for massive damage scaling. Venomage/Taya layer additional Poison + HP Burn. Vogoth provides passive healing to sustain team (no reviver, so healing is critical). All champions need 220+ SPD minimum for turn cycling before devour escalates.
+
+**Manual/Auto Compromise:**
+
+**Nightmare (Manual Required):**
+- Manual: 12-18M damage, 8-10 trials completed, 55-65 turn clear time
+- Auto: 7-11M damage, 5-7 trials completed, 80-100 turn clear time
+- Difference: Manual enables precise Fayne Decrease DEF/Weaken timing (before HP Burn/Poison peaks), devour focus fire with high single-target from Taya/Fayne, and Vogoth heal cycling. Auto wastes Fayne debuffs or uses Taya skills suboptimally (40-45% damage loss). No reviver means manual is critical for survival.
+- AI Limitation: Fayne may die to burst damage on auto (squishy). Auto may not focus fire devoured heads. Vogoth heals are passive but team may not prioritize survival.
+
+**Brutal (Manual Recommended):**
+- Manual: 20-28M damage, 10-12 trials completed, 45-55 turn clear time
+- Auto: 14-20M damage, 7-9 trials completed, 60-75 turn clear time
+- Difference: Manual allows Fayne protection (Vogoth Leech + focus fire on threats) and devour recovery. Auto viable with very good gear (all 400+ ACC, 55k+ HP, Fayne needs 50k+ HP to survive), but expect 30-35% damage loss. No reviver makes auto risky.
+- AI Limitation: Fayne vulnerability on auto. Team may not survive without careful manual play.
+
+**Hard (Manual or Auto):**
+- Manual: 24-32M damage, 12-14 trials completed, 40-50 turn clear time
+- Auto: 18-26M damage, 9-11 trials completed, 50-65 turn clear time
+- Difference: Auto viable on Hard with good gear (350+ ACC, 50k HP, Fayne 45k+ HP). Manual provides 25-30% damage boost via Fayne protection and devour focus fire. No reviver but heads hit less hard.
+- AI Limitation: Moderate. Auto may lose Fayne mid-fight, reducing damage significantly.
+
+**Normal (Auto Viable):**
+- Manual: 28-38M damage, 14-16 trials completed, 35-45 turn clear time
+- Auto: 22-32M damage, 11-13 trials completed, 40-55 turn clear time
+- Difference: Auto is viable on Normal (300+ ACC, 45k HP). Manual provides 20-25% damage boost. Team outsustains Normal mechanics even without reviver.
+- AI Limitation: Minor. High damage output carries auto.
+
+**Turn-by-Turn Skill Usage:**
+
+**Nightmare (Manual, 55-65 Turns, High Mechanic Intensity):**
+
+*Phase 1 (Turns 1-15): Setup & Max Poison/Burn*
+1. **Turn 1:** Kalvalax A3 (AoE attack + passive Poison), Artak A3 (HP Burn on all heads), Fayne A3 (Poison + Decrease DEF/Weaken), Venomage A3 (Poison + Decrease ATK), Taya A3 (Poison + HP Burn), Vogoth A2 (Leech application)
+2. **Turn 2-5:** Kalvalax A1/A2 (passive Poison every turn), Artak A1/A2 (HP Burn uptime), Fayne A1/A2 (Poison + debuffs), Venomage A1/A2 (Poison uptime), Taya A1/A2 (Poison + HP Burn), Vogoth A1 (passive heals trigger)
+3. **Turn 6-10:** Watch for first devour (usually Turn 8-10). Focus fire devoured champion's head with Taya A2 (high single-target) + Fayne A2. No reviver, so freeing devoured is CRITICAL.
+4. **Turn 11-15:** Decay Head will cleanse debuffs around Turn 12. Reapply all debuffs immediately: Fayne A3 (Decrease DEF/Weaken FIRST), then Artak A3 (HP Burn), then all Poisons. Vogoth passive heals keep team alive.
+
+*Phase 2 (Turns 16-30): Decapitation & Survival*
+5. **Turn 16-20:** First head decapitation target: Decay (if present) or Torment. Taya A2 nuke + Fayne A2 + all A1 attacks. If Fayne devoured, FREE HER IMMEDIATELY (she's critical for damage via Decrease DEF/Weaken).
+6. **Turn 21-25:** Second devour likely. Prioritize freeing Fayne, Kalvalax, or Artak. Vogoth passive heals from low HP champions. Maintain Poison/HP Burn uptime.
+7. **Turn 26-30:** Second head decapitation. Target Mischief (if present) or highest threat. Fayne A3 debuffs before big damage push.
+
+*Phase 3 (Turns 31-50): Sustain & Push Damage*
+8. **Turn 31-40:** Third devour. If Wrath head active, Venomage A3 (Decrease ATK) reduces Fury nuke damage. Watch team HP—Vogoth passive heals trigger when allies drop below 50% HP.
+9. **Turn 41-50:** Third head decapitation. Target Wrath or Blight. Maintain Poison/HP Burn uptime with Kalvalax passive + Artak A3 + Taya A3 every 4 turns.
+
+*Phase 4 (Turns 51-65): Final Push*
+10. **Turn 51-65:** Final heads. Max Poison/HP Burn damage. Fayne A3 debuffs every 4 turns. Vogoth keeps team alive. Focus fire with Taya A2 nuke.
+
+**Key Trials (Nightmare):**
+- Poison Trial (20+ stacks): Kalvalax passive + Fayne A3/A1 + Venomage A3/A1 + Taya A3/A1 every cycle.
+- HP Burn Trial (10+ stacks): Artak A3 + Taya A3 every cycle.
+- Decrease DEF Trial (apply 15+ times): Fayne A3/A2 every cycle.
+- Weaken Trial (apply 12+ times): Fayne A3 every 4 turns.
+- Decrease ATK Trial (apply 12+ times): Venomage A3 every 4 turns.
+- Leech Trial (apply 8+ times): Vogoth A2 every 5 turns.
+
+**Brutal (Manual, 45-55 Turns, Moderate Mechanic Intensity):**
+
+*Phase 1-4:* Same pattern as Nightmare but 20% faster decapitation. First head down by Turn 18-20. Fayne Decrease DEF/Weaken enables 20-28M damage range. No reviver but Vogoth heals sufficient on Brutal.
+
+**Hard (Manual or Auto, 40-50 Turns, Low Mechanic Intensity):**
+
+*Phase 1-4:* Same pattern. First head down by Turn 15-18. Poison/HP Burn carries team. Auto can handle with good gear (350+ ACC for all, 50k+ HP, Fayne 45k+ HP minimum).
+
+**Normal (Auto, 35-45 Turns, Very Low Mechanic Intensity):**
+
+*Phase 1-4:* Fast decapitation. First two heads down by Turn 18-22. Team easily outsustains mechanics. High damage output (28-38M manual, 22-32M auto) pushes max chest on Normal.
+
+**Affinity Safety/Risk (Per Difficulty):**
+
+**Nightmare:**
+- Kalvalax (Magic): HIGH RISK vs Force heads (Wrath, Vengeance). Passive Poison from A1/A2 attacks affected by weak hits (15-20% miss rate). This is CRITICAL role. Backup: Taurus (Epic, high Poison but needs manual setup).
+- Artak (Force): MEDIUM RISK vs Magic heads (Decay, Mischief). HP Burn may miss (weak hit) 15-20%. Backup: Drexthar (Force, used in Team 2).
+- Fayne (Magic): HIGH RISK vs Force heads. Decrease DEF/Weaken may miss (weak hit) 15-20%. Fayne is CRITICAL for damage scaling. Backup: Narma (Force, Poison + Weaken, used in Team 2).
+- Venomage (Force): MEDIUM RISK vs Magic heads. Poison/Decrease ATK may miss (weak hit) 15-20%. Backup: Frozen Banshee (Magic, high Poison).
+- Taya (Epic): CHECK AFFINITY. If weak vs head affinity, Poison/HP Burn may miss. Backup: Fenshi (Epic, high Poison).
+- Vogoth (Epic): CHECK AFFINITY. Passive heals not affected by weak hits, but Leech application may miss. Backup: Hotatsu (Force, Block Debuffs + Leech).
+
+**Brutal/Hard/Normal:**
+- Affinity risk decreases by 5-10% per difficulty tier down (Brutal 10-15% miss rate, Hard 5-10%, Normal <5%). Same champions at risk, but impact less severe. **CRITICAL:** Kalvalax and Fayne affinity is highest priority—if weak affinity week, consider alternates or use different team.
+
+**Overall Risk Assessment:**
+- **Nightmare:** HIGH RISK (4/6 champions have weak affinity potential, including 2 critical roles: Kalvalax and Fayne). Check weekly rotation. If Force heads dominate, swap Kalvalax → Taurus, Fayne → Narma (if available from Team 2 alternates). If Magic heads dominate, swap Artak → Drexthar, Venomage → Frozen Banshee.
+- **Brutal/Hard:** MEDIUM-HIGH RISK. Plan alternates for Force/Magic-heavy rotations.
+- **Normal:** MEDIUM RISK. High damage output can offset affinity penalties, but Fayne/Kalvalax weak hits still hurt.
 
 ---
 
@@ -205,20 +594,92 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 **Core Roles:** Cleanse, Revive, Block Debuffs, Support, Ally Protect, Heals
 **Optimal Combo:** Bad-el-Kazar (Cleanse/Heals/Poison), Scyl of the Drakes (Revive/Heals/CC), Godseeker Aniri (Revive/Heals), Broadmaw (Revive/Support), Hotatsu (Block Debuffs/Leech), Lady Annabelle (Heals/Revive)
 **Alternates:** Vrask, Kinagashi, Mausoleum Mage, Apothecary, Runekeeper Dazdurk
-**Speed Tuning:** 220–250+ (Godseeker/Scyl fastest for revive/cleanse)
 **Gear:** Speed, Immortal, Resilience, Regeneration. Bad-el-Kazar: HP/RES; Scyl: HP/DEF/RES; Godseeker: HP/DEF/RES; Broadmaw: HP/RES; Hotatsu: HP/RES; Lady Annabelle: HP/RES
 **Masteries:** Support/Defense for all
-**Manual/Auto:** Auto possible on Hard; manual for higher difficulties
 **Strengths:** Maximum survivability, multiple revivers, strong cleanse, block debuffs, good for learning rotations and safe keys
 **Weaknesses:** Lower damage, can struggle to decapitate quickly, not ideal for max chest on higher difficulties
-**Simulated Damage/Clear Time:** 8–15M per key (Hard), 5–10M (Brutal)
 
-**Affinity Safety/Risk:**
-- Void: Safe for all roles
-- Force: Risk if Lady Annabelle or Broadmaw are Magic affinity vs Force heads
-- Magic: Risk if Hotatsu is Force affinity vs Magic heads
-- Spirit: Risk if Bad-el-Kazar is key cleanser and Spirit head is present
-- Always check weekly rotation for affinity matchups
+**Speed Tuning & Turn Order:**
+1. **Godseeker Aniri (250-260 SPD)** - Goes first for revive/heal + buffs if team takes early damage. High HP/DEF/RES (70k HP, 3.5k DEF, 400+ RES).
+2. **Scyl of the Drakes (245-255 SPD)** - Second for backup revive/heal + stun attempts. High HP/DEF/RES (65k HP, 3.5k DEF, 400+ RES).
+3. **Bad-el-Kazar (240-250 SPD)** - Third for cleanse + continuous heal before team acts. High HP/RES (70k HP, 400+ RES).
+4. **Hotatsu (235-245 SPD)** - Fourth for Block Debuffs (blocks True Fear, Poison) and Leech. High HP/RES (60k HP, 400+ RES).
+5. **Lady Annabelle (230-240 SPD)** - Fifth for additional heals + backup revive. High HP/RES (65k HP, 400+ RES).
+6. **Broadmaw (225-235 SPD)** - Last for backup revive (increase MAX HP buff helps survivability). High HP/RES (60k HP, 400+ RES).
+
+**Rationale:** Godseeker goes first for fast revive cycle (3-turn CD). Scyl provides backup revive + stun utility. Bad-el cleanses after revivers act. Hotatsu blocks debuffs before heads apply True Fear/Poison. Lady Annabelle + Broadmaw provide triple revive safety net. All champions need 220+ SPD minimum. **CRITICAL:** This team has 4 revivers (Godseeker, Scyl, Lady Annabelle, Broadmaw)—nearly impossible to die, but low damage output.
+
+**Manual/Auto Compromise:**
+
+**Hard (Manual or Auto - Primary Difficulty for This Team):**
+- Manual: 10-15M damage, 10-12 trials completed, 60-75 turn clear time
+- Auto: 7-12M damage, 7-9 trials completed, 80-100 turn clear time
+- Difference: Manual enables precise revive priority (revive damage dealers first if any), cleanse timing, and Block Debuffs before heads act. Auto viable with good gear (350+ ACC for Bad-el, 50k HP for all). Expect 30-35% damage loss but team rarely dies.
+- AI Limitation: Auto may revive in suboptimal order. Bad-el cleanse timing may be off. Team survives but clears slowly.
+
+**Brutal (Manual Recommended):**
+- Manual: 7-12M damage, 8-10 trials completed, 70-90 turn clear time
+- Auto: 4-8M damage, 5-7 trials completed, 100-120+ turn clear time
+- Difference: Manual required for Brutal due to higher damage from heads. Auto may survive but clear time is extremely long (2+ hours possible). Expect 40-50% damage loss. Team can outlast most mechanics but damage output is too low for efficient Brutal keys.
+- AI Limitation: Auto survives but may time out or take 2+ hours. Not recommended for Brutal unless learning rotations.
+
+**Normal (Auto Recommended):**
+- Manual: 12-18M damage, 12-14 trials completed, 50-65 turn clear time
+- Auto: 9-15M damage, 9-11 trials completed, 65-85 turn clear time
+- Difference: Auto is fully safe on Normal. Team outsustains all mechanics. Manual provides 25-30% damage boost but not necessary. This team is ideal for safe, learning keys on Normal.
+- AI Limitation: Minor. Team can't die on Normal with 4 revivers.
+
+**Turn-by-Turn Skill Usage:**
+
+**Hard (Manual or Auto, 60-75 Turns, Low Mechanic Intensity):**
+
+*Phase 1 (Turns 1-20): Setup & Sustained Healing*
+1. **Turn 1:** Godseeker A3 (AoE buffs + continuous heal), Scyl A3 (AoE heal + buffs), Bad-el A3 (AoE cleanse + continuous heal), Hotatsu A3 (Block Debuffs + Leech), Lady Annabelle A3 (AoE heal), Broadmaw A1 (basic attack)
+2. **Turn 2-10:** All champions cycle healing and support skills. Godseeker A1/A2 (heal), Scyl A1/A2 (heal + stun), Bad-el A1/A2 (Poison for damage), Hotatsu A1/A2 (support), Lady Annabelle A1/A2 (heal), Broadmaw A1/A2 (support)
+3. **Turn 11-20:** Watch for first devour (usually Turn 12-15 on Hard). Team sustains easily—revive devoured champion immediately with Godseeker A3 or Scyl A3. Bad-el continuous heal maintains HP. Hotatsu Block Debuffs every 4 turns prevents True Fear.
+
+*Phase 2 (Turns 21-40): Slow Decapitation*
+4. **Turn 21-30:** First head decapitation target: Decay (if present) or Torment. Damage output is low (only Bad-el Poison for damage), so focus all attacks on one head. If multiple devours occur, revive priority: Godseeker → Scyl → Bad-el → others.
+5. **Turn 31-40:** Second head decapitation by Turn 38-42. Team rarely loses champions due to 4 revivers + massive healing. Maintain cleanse/Block Debuffs cycles.
+
+*Phase 3 (Turns 41-60): Sustained Push*
+6. **Turn 41-60:** Third head decapitation by Turn 50-55. Final head by Turn 65-75. Team outlasts all mechanics. Clear time is long but safe.
+
+*Phase 4 (Turns 61-75): Cleanup*
+7. **Turn 61-75:** Final heads. Team can't die. Maintain healing cycles. Bad-el Poison is only damage source.
+
+**Key Trials (Hard):**
+- Revive Trial (revive 15+ times): Godseeker A3 + Scyl A3 + Lady Annabelle A3 + Broadmaw A2 every cycle.
+- Cleanse Trial (cleanse 20+ debuffs): Bad-el A3 every 4 turns.
+- Block Debuffs Trial (apply 15+ times): Hotatsu A3 every 4 turns.
+- Heal Trial (heal 500k+ HP): All champions contribute (Godseeker, Scyl, Bad-el, Lady Annabelle).
+- Poison Trial (5+ stacks): Bad-el A1/A2 every cycle (only damage source).
+
+**Brutal (Manual, 70-90 Turns, Moderate Mechanic Intensity):**
+
+*Phase 1-4:* Same pattern as Hard but slower. First head down by Turn 25-30. Team survives but damage output is insufficient for efficient clears. Use this team for Brutal only if learning rotations or need guaranteed safe key.
+
+**Normal (Auto, 50-65 Turns, Very Low Mechanic Intensity):**
+
+*Phase 1-4:* Same pattern. Team easily outsustains mechanics. First head down by Turn 18-22. Auto completes 9-11 trials. Ideal for learning keys or safe progression.
+
+**Affinity Safety/Risk (Per Difficulty):**
+
+**Hard:**
+- Bad-el-Kazar (Force): LOW RISK vs Magic heads (Decay, Mischief). Cleanse/heal not affected by weak hits. Poison may miss (weak hit) 5-10% but not critical role.
+- Scyl (Force): LOW RISK vs Magic heads. Revive/heal not affected by weak hits. Stun attempts may miss but not critical.
+- Godseeker (Void): SAFE. No affinity risk.
+- Hotatsu (Force): LOW RISK vs Magic heads. Block Debuffs may miss (weak hit) 5-10%. Backup: Mausoleum Mage (Epic, cleanse + Block Debuffs).
+- Lady Annabelle (Epic): CHECK AFFINITY. If weak vs head affinity, revive/heal may miss application. Backup: Kinagashi (Epic, revive + support).
+- Broadmaw (Epic): CHECK AFFINITY. If weak vs head affinity, revive may miss application. Backup: Vrask (Epic, high healing).
+
+**Brutal/Normal:**
+- Affinity risk minimal due to high survivability. Team can outlast most affinity penalties. Same champions at risk, but 4 revivers + massive healing means team rarely dies even with weak affinities.
+
+**Overall Risk Assessment:**
+- **Hard:** LOW RISK (3/6 champions have weak affinity potential, but all are non-critical roles). Team survives all rotations.
+- **Brutal:** LOW RISK for survival, but damage output is too low for efficient clears.
+- **Normal:** LOW RISK. Team can't die on Normal.
 
 ---
 
@@ -226,18 +687,104 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 **Core Roles:** Turn Meter Control, Debuff Spread, Block Buffs, Support, Damage Dealer
 **Optimal Combo:** Archmage Hellmut (TM Boost/Stun), Lua (Damage/Block Active Skills), Stag Knight (Decr DEF/ATK), Kinagashi (Revive/Support), Burangiri (Provoke/Support), Quargan the Crowned (Block Debuffs/Support)
 **Alternates:** Seeker, Skullcrown, Skullcrusher, Nia, Tagoar
-**Speed Tuning:** 220–240+ (Archmage fastest for TM boost)
 **Gear:** Speed, Perception, Resilience. Archmage: SPD/ACC; Lua: ATK/CRIT; Stag Knight: ACC/HP; Kinagashi: HP/RES; Burangiri: HP/RES; Quargan: HP/RES
 **Masteries:** Support/Defense for sustain; Offense for Lua
-**Manual/Auto:** Auto possible on Normal/Hard; manual for higher difficulties
 **Strengths:** Disruptive, good for specific rotations, strong debuff spread, block buffs, revive
 **Weaknesses:** Lower damage, less reliable on higher difficulties, niche utility
-**Simulated Damage/Clear Time:** 6–12M per key (Normal/Hard)
+
+**Speed Tuning & Turn Order:**
+1. **Archmage Hellmut (250-260 SPD)** - Goes first for TM boost (entire team gets +30% TM, enabling faster cycling). High SPD/ACC (260+ SPD, 350+ ACC).
+2. **Quargan the Crowned (245-255 SPD)** - Second for Block Debuffs before heads act. High RES (450+) for Mischief Target. Used here instead of Team 2 (alternate lineup).
+3. **Stag Knight (240-250 SPD)** - Third for Decrease DEF/ATK (debuff coverage). High ACC (380+ Hard, 420+ Brutal).
+4. **Burangiri (235-245 SPD)** - Fourth for provoke (controls Decay/Mischief). High HP/RES (60k HP, 400+ RES).
+5. **Kinagashi (230-240 SPD)** - Fifth for revive + support (backup safety net). High HP/RES (60k HP, 400+ RES).
+6. **Lua (225-235 SPD)** - Last for damage + Block Active Skills (unique mechanic vs certain heads). High ATK/CRIT (4.5k ATK, 100% CR, 240% CD).
+
+**Rationale:** Archmage TM boost enables entire team to cycle faster (critical for this lower-damage team). Quargan blocks debuffs before heads act. Stag applies Decrease DEF/ATK for damage boost. Burangiri provokes key heads. Kinagashi provides revive safety net. Lua provides damage + Block Active Skills (niche utility vs heads with dangerous active skills). All champions need 220+ SPD minimum.
+
+**Manual/Auto Compromise:**
+
+**Normal (Manual or Auto - Primary Difficulty for This Team):**
+- Manual: 8-14M damage, 10-12 trials completed, 55-70 turn clear time
+- Auto: 5-10M damage, 7-9 trials completed, 75-95 turn clear time
+- Difference: Manual enables precise Archmage TM boost timing, Burangiri provoke targeting (Decay/Mischief priority), and Lua Block Active Skills timing. Auto viable on Normal (300+ ACC for Stag, 45k HP for all). Expect 35-40% damage loss.
+- AI Limitation: Auto may waste TM boost or use Lua skills suboptimally. Burangiri provoke may target wrong head.
+
+**Hard (Manual Recommended):**
+- Manual: 6-12M damage, 8-10 trials completed, 65-85 turn clear time
+- Auto: 3-7M damage, 5-7 trials completed, 90-120+ turn clear time
+- Difference: Manual required for Hard due to lower damage output and niche mechanics. Auto may survive with very good gear (350+ ACC for Stag, 50k HP for all) but clear time is extremely long. Expect 50-60% damage loss.
+- AI Limitation: Auto may not prioritize correct heads or use skills optimally. Team survives but clears very slowly.
+
+**Brutal/Nightmare (Not Recommended for This Team):**
+- This team is not optimized for Brutal or Nightmare. Use Teams 1-4 for higher difficulties. Team 6 is best for Normal/Hard progression, learning rotations, or filling 3rd key slot when stronger teams are used on higher difficulties.
+
+**Turn-by-Turn Skill Usage:**
+
+**Normal (Manual or Auto, 55-70 Turns, Very Low Mechanic Intensity):**
+
+*Phase 1 (Turns 1-18): Setup & Control*
+1. **Turn 1:** Archmage A3 (TM boost entire team), Quargan A3 (Block Debuffs), Stag Knight A3 (Decrease DEF/ATK on all heads), Burangiri A2 (Provoke Decay), Kinagashi A1 (basic attack), Lua A2 (damage)
+2. **Turn 2-8:** Archmage A1/A2 (TM boost cycling), Quargan A1/A2 (support), Stag Knight A1/A2 (debuff uptime), Burangiri A1/A3 (provoke + support), Kinagashi A1/A2 (support), Lua A1/A3 (damage + Block Active Skills)
+3. **Turn 9-18:** Watch for first devour (usually Turn 15-18 on Normal). Lua A3 (Block Active Skills) can prevent certain head abilities from triggering. Archmage TM boost enables team to act more frequently. Burangiri provoke controls Decay/Mischief.
+
+*Phase 2 (Turns 19-35): Decapitation*
+4. **Turn 19-28:** First head decapitation target: Decay (if present) or Torment. Lua A1/A3 nuke + Stag Decrease DEF + all A1 attacks. If devour occurs, Kinagashi A3 revives if needed.
+5. **Turn 29-35:** Second head decapitation by Turn 32-36. Team sustains with Kinagashi revive and Quargan Block Debuffs.
+
+*Phase 3 (Turns 36-55): Sustained Push*
+6. **Turn 36-55:** Third head decapitation by Turn 42-48. Final head by Turn 55-65. Archmage TM boost keeps team cycling. Stag Decrease DEF/ATK maintains debuff coverage.
+
+*Phase 4 (Turns 56-70): Cleanup*
+7. **Turn 56-70:** Final heads. Team outsustains Normal mechanics. Low damage but safe.
+
+**Key Trials (Normal):**
+- TM Boost Trial (apply 12+ times): Archmage A3/A2 every cycle.
+- Decrease DEF Trial (apply 15+ times): Stag Knight A3/A1 every cycle.
+- Decrease ATK Trial (apply 12+ times): Stag Knight A3 every cycle.
+- Provoke Trial (apply 10+ times): Burangiri A2 every 4 turns.
+- Block Debuffs Trial (apply 10+ times): Quargan A3 every 4 turns.
+- Block Active Skills Trial (apply 8+ times): Lua A3 every 5 turns.
+- Revive Trial (revive 2+ times): Kinagashi A3 as needed.
+
+**Hard (Manual, 65-85 Turns, Low Mechanic Intensity):**
+
+*Phase 1-4:* Same pattern as Normal but slower. First head down by Turn 25-30. Team survives but damage output is low. Use this team for Hard only if learning rotations or need 3rd key team for alternate difficulty.
+
+**Affinity Safety/Risk (Per Difficulty):**
+
+**Normal:**
+- Archmage (Epic): CHECK AFFINITY. If weak vs head affinity, TM boost/stun may miss application. Backup: Seeker (Epic, TM boost + buffs).
+- Quargan (Magic): LOW RISK vs Force heads on Normal (5-10% miss rate). Block Debuffs may miss. Backup: Hotatsu (Force, used in Team 5).
+- Stag Knight (Epic): CHECK AFFINITY. If weak vs head affinity, Decrease DEF/ATK may miss. Backup: Narma (Force, Decrease ATK/Weaken, used in Team 2).
+- Burangiri (Epic): CHECK AFFINITY. Provoke may miss if weak affinity. Backup: Maulie (Force, provoke + TM control, used in Team 1/3).
+- Kinagashi (Epic): CHECK AFFINITY. Revive/heal not affected by weak hits typically. Backup: Broadmaw (Epic, revive, used in Team 5).
+- Lua (Epic): CHECK AFFINITY. Damage/Block Active Skills may miss if weak affinity. Backup: Skullcrown (Epic, AoE damage).
+
+**Hard:**
+- Same as Normal but affinity risk slightly higher (10-15% miss rate vs 5-10% on Normal). Team survives most rotations but damage is very low.
+
+**Overall Risk Assessment:**
+- **Normal:** MEDIUM RISK (most champions are Epic with unknown affinities in this context). Check weekly rotation. Team survives most weeks but damage is low. Best for learning rotations or 3rd key on Normal.
+- **Hard:** MEDIUM-HIGH RISK. Team struggles with damage output. Use only if no better options for 3rd key.
+- **Brutal/Nightmare:** NOT RECOMMENDED. Use Teams 1-4 for higher difficulties.
 
 ---
 
 # Optimized Hydra Team Set 1: Max Survivability & Control (Ideal for Hard/Brutal)
 -------------------------------------------------------------------------------
+
+**Set Overview:** This 3-team set (18 unique champions total) prioritizes survivability, control, and consistent trial completion on Hard/Brutal difficulties. Use this set when learning Hydra rotations, adapting to new head combinations, or prioritizing safe, reliable keys over maximum damage.
+
+**Stat Requirements for Set 1:**
+- **Nightmare:** 400-500 ACC, 400-500 RES, 60k+ HP, 3.5k+ DEF, 220-270 SPD
+- **Brutal:** 350-420 ACC, 350-450 RES, 55k+ HP, 3.3k+ DEF, 220-250 SPD
+- **Hard:** 300-370 ACC, 300-400 RES, 50k+ HP, 3k+ DEF, 220-240 SPD
+- **Normal:** 200-300 ACC, 200-300 RES, 45k+ HP, 2.5k+ DEF, 200-220 SPD
+
+**Set Synergy:** All teams have multiple revivers, strong cleanse, and block buffs/debuffs. Pairs well for 3-key Brutal/Hard/Normal strategy (48-68M total damage across 3 keys).
+
+---
 
 ### Team 1: Balanced HP Burn & Cleanse Core
 
