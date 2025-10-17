@@ -497,6 +497,85 @@ For each team, include all specifications from "Team Building & Simulation" sect
 - Ideal Champions to Pull (remove now-owned, reprioritize)
 - Validation & Simulation Notes (note when file was updated and why)
 
+### Large File Operations & Batching Requirements
+
+**When to Use Batched Processing:**
+
+Large file operations (500+ lines, multiple sections, or complex merges) **must** be batched to prevent:
+- Prompt length issues (token limit exceeded)
+- Runtime/memory issues
+- Difficulty in reviewing changes
+- Loss of context during long operations
+
+**Batching Strategy:**
+
+1. **Plan the Work:**
+   - Break file operations into logical sections (50-200 lines per batch)
+   - Create numbered batch tasks (BATCH 1, BATCH 2, etc.)
+   - Summarize batch plan in markdown for user review before starting
+
+2. **Batch Size Guidelines:**
+   - **BATCH 1:** Header/Title + Enhancement History (~50-200 lines)
+   - **BATCH 2:** Table of Contents (~20-50 lines)
+   - **BATCH 3:** Boss Mechanics & Trial Mapping (~200-300 lines)
+   - **BATCH 4:** Team Sections 1-3 (~200-300 lines)
+   - **BATCH 5:** Team Sections 4-6 (~200-300 lines)
+   - **BATCH 6:** Reference Sections (~100-200 lines)
+   - **BATCH 7:** Validation & Final Review
+   - **BATCH 8:** Cleanup & Git Commit
+
+3. **Batch Execution:**
+   - Complete one batch at a time
+   - Confirm completion with ✅ status update in chat
+   - Update todo list after each batch
+   - Provide brief summary (lines added, current file size)
+   - Ask for user confirmation before proceeding to next batch (or proceed automatically if instructed)
+
+4. **Batch Documentation:**
+   - Create todo list items for each batch
+   - Mark completed batches with ✅
+   - Document what was done in each batch
+   - Note any issues or deviations from plan
+
+**Example Batch Plan:**
+
+```markdown
+## Merge Strategy Summary
+
+### Source Files Analysis:
+- File A (500 lines): Complete content
+- File B (200 lines): Enhancement history
+- File C (150 lines): Additional metadata
+
+### Batching Approach:
+
+**BATCH 1: Header + Enhancement History** ✅ Starting Now
+- Create new file header
+- Merge enhancement overview from Files B & C
+- ~100 lines
+
+**BATCH 2: Table of Contents**
+- Copy ToC from File A
+- Update section numbers
+- ~30 lines
+
+**BATCH 3-5: Main Content**
+- Copy sections 1-N from File A
+- Split across 3 batches if needed
+- ~400 lines total
+
+**BATCH 6: Finalize**
+- Validate formatting
+- Cleanup old files
+```
+
+**Critical Rules:**
+- Never attempt to create/edit files >400 lines in a single operation
+- Always batch when merging multiple files
+- Always batch when file will exceed 500 lines
+- Always provide batch summary before starting work
+- Always update todo list after each batch completion
+
 ---
 
 ## Section-by-Section Maintenance
@@ -680,5 +759,6 @@ These questions were answered by the user and should guide all boss guide genera
 
 ## Changelog
 
+- **2025-10-17:** Added Large File Operations & Batching Requirements to Update & Staging Policy section. All file operations >500 lines or complex merges must use batched processing to prevent prompt length, runtime, and memory issues.
 - **2025-10-17:** Completed all sections with full content from original RAID_copilot-instructions.md, expanding Champion & Trial Mapping, Team Building & Simulation, Affinity Safety & Risk Requirements, Guide Structure & Required Sections, Update & Staging Policy, Section-by-Section Maintenance, Validation & Documentation Standards, Templates & Examples, Task Checklist, and Additional Questions for User/Reviewer
 - **2025-10-16:** Initial creation incorporating Generic AI & Copilot Instructions standards and project-specific boss guide generation workflows, QA standards, and team-building methodologies

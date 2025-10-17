@@ -82,18 +82,64 @@
 **Team Variations:**
 - Swap in alternates for affinity safety or budget options.
 - Manual play for cleanse timing; auto for consistency.
-**Speed Tuning:** 240–255 (support), 220–235 (damage dealers)
+
+**Speed Tuning & Turn Order:**
+1. **Mithrala Lifebane** (250-260 SPD) - Cleanse lead, removes Ironbrand stacks immediately
+2. **Rector Drath** (245-255 SPD) - Backup healer, revive available if needed
+3. **Apothecary** (240-250 SPD) - Speed boost to cycle cleanses faster
+4. **Artak** (230-240 SPD) - HP Burn applier, benefits from speed boost
+5. **Vogoth** (220-230 SPD) - Healer/tank, doesn't need to go first
+
+**Rationale:** Mithrala must go first to cleanse Ironbrand before it stacks dangerously. Rector follows for emergency healing/revive. Apothecary speed boosts to cycle Mithrala's cleanse faster. Artak applies HP Burn after cleanse is secure. Vogoth brings up the rear with passive healing.
+
+**Manual/Auto Compromise:**
+- **Manual Play:** 5:00-5:30 clear time, higher safety (precise cleanse timing, skill order control)
+- **Auto Play:** 5:30-6:00 clear time, ~10% failure rate (AI may waste Mithrala cleanse at wrong time, Ironbrand stacks can build up)
+- **Compromise:** Set Mithrala AI to prioritize A3 (cleanse) on manual opener, then switch to auto after 10 turns once rotation established
+
+**Turn-by-Turn Skill Usage (First 50 Turns):**
+
+**Phase 1: Opening Rotation (Turns 1-15)**
+- Turn 1: Mithrala A3 (cleanse any starter debuffs, establish lead)
+- Turn 2: Rector A3 (group heal + continuous heal buff)
+- Turn 3: Apothecary A3 (speed boost entire team)
+- Turn 4: Artak A3 (apply HP Burn to both sisters)
+- Turn 5: Vogoth A1 (passive healing procs)
+- Turn 6-10: Cycle A1 attacks, monitor Ironbrand stacks
+- Turn 11: Mithrala A3 (cleanse when Ironbrand stacks reach 2-3)
+- Turn 12-15: Rector A2 (single target heal if needed), Apothecary A2 (group heal)
+
+**Phase 2: Mid-Fight Sustain (Turns 16-35)**
+- Turn 16-20: Continue cycling cleanses every 3-4 turns, maintain HP Burn uptime with Artak A3/A2
+- Turn 21-25: Rector A3 cooldown ready, use for emergency heal if team drops below 60% HP
+- Turn 26-30: Apothecary A3 speed boost again, accelerate cleanse cycles
+- Turn 31-35: Vogoth passive healing should keep team stable, focus on HP Burn damage
+
+**Phase 3: Sister Focus (Turns 36-50)**
+- Turn 36-40: Focus Sister of Iron first (Magic affinity, safer for Force champions). Mithrala cleanses every 4 turns.
+- Turn 41-45: Sister of Iron eliminated, switch to Sister of Steel. Maintain cleanse/HP Burn rotation.
+- Turn 46-50: Sister of Steel at 30-40% HP. Rector revive available if anyone dies. Continue cycling cleanses until victory.
+
+**Expected Total Turns:** 50-60 turns for full clear (5:00-6:00 clear time)
+
+**Affinity Safety/Risk (Per Sister):**
+- **Sister of Iron (Magic):** 
+  - Safe: Artak (Force), Vogoth (Spirit), Rector Drath (Void)
+  - Risky: Mithrala (Magic) - neutral, Apothecary (Spirit) - weak affinity, may miss speed boosts 20% of time
+  - **Critical Note:** Apothecary weak affinity is acceptable - speed boost is helpful but not mandatory for survival. If misses occur, cleanse rotation slows slightly but team survives.
+  
+- **Sister of Steel (Force):**
+  - Safe: Apothecary (Spirit), Vogoth (Spirit), Rector Drath (Void)
+  - Risky: Mithrala (Magic) - weak affinity, **CRITICAL RISK** - may miss cleanses 20% of time, can lead to wipe if Ironbrand stacks reach 5+
+  - **Backup Plan:** If Mithrala misses cleanse vs Force sister, use Godseeker Aniri (Void) as alternate cleanser for Force stages
+
+- **Overall Risk:** MEDIUM - Apothecary weak vs Magic is acceptable, but Mithrala weak vs Force is HIGH RISK. Recommend Godseeker Aniri alternate for Force rotation days.
+
 **Gear:** Speed, Immortal, Perception, Accuracy
 **Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster
-**Manual/Auto:** Auto possible; manual for cleanse timing if needed
-**Strengths:** High sustain, double healing, affinity safety
-**Weaknesses:** Lower damage, can be slow if not tuned
-**Simulated Damage/Clear Time:** ~5:00–6:00
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Magic: Risk for Force cleansers.
-- Force: Risk for Magic cleansers.
-- Spirit: Risk for Force cleansers.
+**Strengths:** High sustain, double healing, affinity safety (except Force rotation)
+**Weaknesses:** Lower damage, can be slow if not tuned, Mithrala cleanse unreliable vs Force sister
+**Simulated Damage/Clear Time:** ~5:00–6:00 (Manual), ~5:30-6:00 (Auto, 10% failure rate)
 
 ### Poison/HP Burn Mix
 ### Team: Poison/HP Burn Mix
@@ -103,180 +149,407 @@
 **Team Variations:**
 - Use Narma for more poison, Artak for more HP Burn.
 - Swap in alternates for affinity safety or faster clears.
-**Speed Tuning:** 245–260 (support), 220–235 (damage dealers)
+
+**Speed Tuning & Turn Order:**
+1. **Godseeker Aniri** (255-265 SPD) - Cleanse lead, removes Ironbrand before stacks build
+2. **Apothecary** (250-260 SPD) - Speed boost to accelerate cleanse cycling
+3. **Bad-el-Kazar** (245-255 SPD) - Poison applier + continuous heal, goes before damage dealers
+4. **Geomancer** (235-245 SPD) - HP Burn applier, benefits from speed boost
+5. **Ninja** (230-240 SPD) - HP Burn + single-target nuke, finisher role
+
+**Rationale:** Godseeker must go first for cleanse. Apothecary follows to speed boost entire team. Bad-el applies poison + continuous heal early. Geomancer and Ninja apply HP Burn after cleanse/heal are secure.
+
+**Manual/Auto Compromise:**
+- **Manual Play:** 4:30-5:00 clear time, optimal damage (precise skill order, Ninja A3 nuke timed for max damage)
+- **Auto Play:** 5:00-5:30 clear time, ~5% failure rate (AI may waste Ninja A3 early, Godseeker cleanse timing slightly less optimal)
+- **Compromise:** Full auto is highly reliable with this team. Manual only needed if Ninja off-affinity vs Sister of Steel (Force).
+
+**Turn-by-Turn Skill Usage (First 55 Turns):**
+
+**Phase 1: Opening Rotation (Turns 1-15)**
+- Turn 1: Godseeker A3 (cleanse + revive on death passive active)
+- Turn 2: Apothecary A3 (speed boost all)
+- Turn 3: Bad-el A3 (apply 5% Poison + continuous heal)
+- Turn 4: Geomancer A2 (apply HP Burn to both sisters)
+- Turn 5: Ninja A2 (apply HP Burn + Decrease DEF)
+- Turn 6-10: Cycle A1 attacks, monitor Ironbrand stacks (should be 0-1 with Godseeker cleansing)
+- Turn 11: Godseeker A2 (single target heal if needed) or A3 (cleanse if Ironbrand stacks reach 2)
+- Turn 12-15: Bad-el A1 (reapply Poison), Geomancer A1 (maintain HP Burn), Ninja A1 (build to A3)
+
+**Phase 2: Mid-Fight Damage (Turns 16-35)**
+- Turn 16-20: Apothecary A3 cooldown ready, speed boost again. Bad-el A3 reapply Poison.
+- Turn 21-25: Ninja A3 (nuke Sister of Iron when she's at 60-70% HP for max damage)
+- Turn 26-30: Geomancer A2 reapply HP Burn, maintain Poison uptime with Bad-el A1/A3
+- Turn 31-35: Godseeker cleanses every 4-5 turns. Focus Sister of Iron to eliminate first.
+
+**Phase 3: Sister Focus (Turns 36-55)**
+- Turn 36-40: Sister of Iron eliminated. Switch all attacks to Sister of Steel.
+- Turn 41-45: Ninja A3 cooldown ready, use when Sister of Steel at 50-60% HP
+- Turn 46-50: Maintain Poison/HP Burn uptime. Godseeker cleanses every 4 turns.
+- Turn 51-55: Sister of Steel at 20-30% HP. Final nuke from Ninja A3. Victory.
+
+**Expected Total Turns:** 45-55 turns for full clear (4:30-5:30 clear time)
+
+**Affinity Safety/Risk (Per Sister):**
+- **Sister of Iron (Magic):**
+  - Safe: Bad-el (Spirit), Ninja (Spirit), Godseeker (Void), Apothecary (Spirit)
+  - Risky: Geomancer (Magic) - neutral affinity, no risk
+  - **Overall:** VERY SAFE - All champions safe or neutral vs Magic sister
+
+- **Sister of Steel (Force):**
+  - Safe: Geomancer (Magic), Godseeker (Void), Apothecary (Spirit)
+  - Risky: Bad-el (Spirit) - weak affinity, may miss Poison applications 20% of time (acceptable, backup damage from HP Burn)
+  - Risky: Ninja (Spirit) - **MEDIUM RISK** - weak affinity, may miss HP Burn/Decrease DEF 20% of time, A3 nuke damage reduced
+  - **Backup Plan:** If Ninja misses too often vs Force sister, use Artak (Force) as alternate HP Burn applier for Force rotation days
+
+- **Overall Risk:** LOW-MEDIUM - Bad-el poison miss is acceptable (HP Burn covers damage). Ninja weak affinity reduces damage but team still clears. Artak alternate recommended for Force rotation if consistent clears needed.
+
 **Gear:** Speed, Perception, Immortal, Accuracy
 **Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster
-**Manual/Auto:** Auto-friendly; manual for skill order if needed
-**Strengths:** Good mix of damage types, revive, healing
-**Weaknesses:** Can be slow if not tuned, weak to affinity if Ninja is off affinity
-**Simulated Damage/Clear Time:** ~4:30–5:30
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Magic: Risk for Force poisoners.
-- Force: Risk for Magic poisoners.
-- Spirit: Risk for Force poisoners.
+**Strengths:** Good mix of damage types (Poison + HP Burn), revive, healing, very safe vs Magic sister, auto-friendly
+**Weaknesses:** Ninja weak vs Force sister reduces damage, Bad-el poison miss rate increases clear time slightly
+**Simulated Damage/Clear Time:** ~4:30–5:00 (Manual), ~5:00-5:30 (Auto, 5% failure rate)
 
 ### F2P Epic Core
-### Team: F2P Epic Core
+### Team: F2P Epic Core (All-Epic Accessible Team)
 **Core Roles:** Block Debuffs, Speed, HP Burn, Healing, Sustain
 **Optimal Combo:** Mausoleum Mage, Deacon Armstrong, Geomancer, Apothecary, Vogoth
 **Alternates:** Mithrala Lifebane (cleanse), Maulie Tankard (block debuffs), Lady Annabelle (heal/sustain)
 **Team Variations:**
 - Swap in alternates for affinity safety or budget options.
 - Manual play for block debuffs timing; auto for consistency.
-**Speed Tuning:** 240–255 (support), 220–235 (damage dealers)
+
+**Speed Tuning & Turn Order:**
+1. **Mausoleum Mage** (250-260 SPD) - Block Debuffs lead, prevents Ironbrand from applying
+2. **Deacon Armstrong** (245-255 SPD) - Decrease DEF + Speed aura, amplifies damage
+3. **Apothecary** (240-250 SPD) - Speed boost to cycle Block Debuffs faster
+4. **Geomancer** (230-240 SPD) - HP Burn applier, benefits from Decrease DEF
+5. **Vogoth** (220-230 SPD) - Healer/tank, passive healing procs
+
+**Rationale:** Mausoleum Mage goes first to Block Debuffs (3-turn duration) BEFORE Ironbrand applies. Deacon follows to apply Decrease DEF for damage amp. Apothecary speed boosts to cycle Block Debuffs faster (4-turn CD, need 3-turn uptime). Geomancer applies HP Burn after Decrease DEF. Vogoth brings up rear with passive healing.
+
+**Manual/Auto Compromise:**
+- **Manual Play:** 5:30-6:00 clear time, higher safety (precise Block Debuffs timing, ensure 100% uptime)
+- **Auto Play:** 6:00-6:30 clear time, ~15% failure rate (AI may waste Mausoleum Mage A3 at wrong time, Block Debuffs gap can allow Ironbrand stack, leading to wipe)
+- **Compromise:** Manual first 15 turns to establish Block Debuffs rotation, then switch to auto once Apothecary speed boost cycling is stable. **CRITICAL:** Monitor Block Debuffs buff icon - if it drops, immediately manual to reapply before Ironbrand stacks.
+
+**Turn-by-Turn Skill Usage (First 60 Turns):**
+
+**Phase 1: Opening Rotation (Turns 1-20)**
+- Turn 1: Mausoleum Mage A3 (Block Debuffs all, 3-turn duration - **CRITICAL FIRST SKILL**)
+- Turn 2: Deacon A3 (Decrease DEF both sisters, 2-turn duration)
+- Turn 3: Apothecary A3 (speed boost all, accelerate Block Debuffs cycling)
+- Turn 4: Geomancer A2 (apply HP Burn to both sisters)
+- Turn 5: Vogoth A1 (passive healing procs on allies taking damage)
+- Turn 6-10: Cycle A1 attacks. **MONITOR Block Debuffs buff** - should have 1-2 turns remaining.
+- Turn 11: Mausoleum Mage A3 cooldown ready (4 turns) - **REAPPLY Block Debuffs IMMEDIATELY**
+- Turn 12-15: Deacon A3 reapply Decrease DEF. Geomancer A1 maintain HP Burn.
+- Turn 16-20: Apothecary A3 speed boost again. Continue cycling Block Debuffs every 4 turns.
+
+**Phase 2: Mid-Fight Sustain (Turns 21-40)**
+- Turn 21-25: Mausoleum Mage A3 every 4 turns (**NEVER MISS THIS SKILL**). Deacon maintains Decrease DEF.
+- Turn 26-30: Geomancer A2 reapply HP Burn. Vogoth passive healing keeps team above 70% HP.
+- Turn 31-35: Apothecary A3 speed boost. Focus Sister of Iron first (Magic affinity, safer for team).
+- Turn 36-40: Mausoleum Mage continues Block Debuffs rotation. Sister of Iron at 40-50% HP.
+
+**Phase 3: Sister Focus (Turns 41-60)**
+- Turn 41-45: Sister of Iron eliminated. Switch all attacks to Sister of Steel.
+- Turn 46-50: **CRITICAL PHASE** - Sister of Steel is Force affinity. Mausoleum Mage (Magic) is weak affinity, may miss Block Debuffs 20% of time. If miss occurs, **IMMEDIATELY RESTART** run or accept potential wipe.
+- Turn 51-55: Maintain Block Debuffs + HP Burn. Sister of Steel at 30-40% HP.
+- Turn 56-60: Final push. Geomancer HP Burn + Deacon Decrease DEF = victory.
+
+**Expected Total Turns:** 55-65 turns for full clear (5:30-6:30 clear time)
+
+**Affinity Safety/Risk (Per Sister):**
+- **Sister of Iron (Magic):**
+  - Safe: Deacon (Force), Geomancer (Magic neutral), Apothecary (Spirit), Vogoth (Spirit)
+  - Risky: Mausoleum Mage (Magic) - neutral affinity, no risk vs Magic sister
+  - **Overall:** VERY SAFE - All champions safe or neutral vs Magic sister
+
+- **Sister of Steel (Force):**
+  - Safe: Geomancer (Magic), Apothecary (Spirit), Vogoth (Spirit)
+  - Risky: Mausoleum Mage (Magic) - **CRITICAL HIGH RISK** - weak affinity, may miss Block Debuffs 20% of time. If Block Debuffs fails, Ironbrand applies and can stack to wipe.
+  - Risky: Deacon (Force) - neutral affinity vs Force, no risk
+  - **Backup Plan:** **MANDATORY for Force rotation days** - Replace Mausoleum Mage with Maulie Tankard (Spirit, strong vs Force) for Block Debuffs. Maulie A2 provides 2-turn Block Debuffs (shorter than Mausoleum 3-turn, but 100% reliable vs Force).
+
+- **Overall Risk:** MEDIUM vs Magic, **HIGH vs Force** - Mausoleum Mage weak affinity vs Force sister is unacceptable risk for Block Debuffs role. **MUST use Maulie Tankard alternate for Force rotation days** or accept 20% failure rate.
+
+**F2P Budget Notes:**
+- All champions are Epic rarity (no Legendaries required)
+- Mausoleum Mage, Apothecary, Vogoth obtainable F2P (login rewards, fusion, fragment summons)
+- Deacon Armstrong (Epic from events/shards), Geomancer (login reward champion)
+- Gear requirements: Speed sets farmable from Dragon 16+, Perception from Spider 13+
+- This team can clear with +12 gear (not +16 required), making it very budget-friendly
+
 **Gear:** Speed, Perception, Immortal, Accuracy
 **Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster
-**Manual/Auto:** Auto possible; manual for block debuffs timing if needed
-**Strengths:** All-epic, accessible, block debuffs, sustain
-**Weaknesses:** Lower damage, can be slow if not tuned
-**Simulated Damage/Clear Time:** ~5:30–6:30
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Magic: Risk for Force block debuffs.
-- Force: Risk for Magic block debuffs.
-- Spirit: Risk for Force block debuffs.
+**Strengths:** All-epic accessible, Block Debuffs prevents Ironbrand entirely (100% safe vs Magic), budget-friendly gear/champion requirements
+**Weaknesses:** Lower damage (slower clear), Mausoleum Mage weak vs Force sister (HIGH RISK - requires Maulie Tankard alternate), 15% auto failure rate if Block Debuffs gaps occur
+**Simulated Damage/Clear Time:** ~5:30–6:00 (Manual), ~6:00-6:30 (Auto, 15% failure rate vs Magic, 35% failure rate vs Force without Maulie alternate)
 
 ### Affinity Safe Mix
-### Team: Affinity Safe Mix
+### Team: Affinity Safe Mix (Maximum Affinity Safety)
 **Core Roles:** Cleanse, HP Burn, Healing, Revive, Affinity Safety
 **Optimal Combo:** Mithrala Lifebane, Godseeker Aniri, Geomancer, Rector Drath, Vogoth
 **Alternates:** Mausoleum Mage (block debuffs), Lady Annabelle (heal/sustain)
 **Team Variations:**
 - Swap in alternates for affinity safety or budget options.
 - Manual play for cleanse timing; auto for consistency.
-**Speed Tuning:** 240–255 (support), 220–235 (damage dealers)
+
+**Speed Tuning & Turn Order:**
+1. **Mithrala Lifebane** (250-260 SPD) - Cleanse lead, removes Ironbrand
+2. **Godseeker Aniri** (245-255 SPD) - Backup cleanser + revive on death
+3. **Rector Drath** (240-250 SPD) - Healer + revive, high sustain
+4. **Geomancer** (230-240 SPD) - HP Burn applier
+5. **Vogoth** (220-230 SPD) - Tank + passive healing
+
+**Rationale:** Double cleanse (Mithrala + Godseeker) ensures no Ironbrand gaps. Rector provides healing. Geomancer applies HP Burn. Vogoth passive healing. All Void/neutral affinities minimize risk.
+
+**Manual/Auto Compromise:**
+- **Manual:** 5:00-5:30, higher safety (precise double cleanse timing)
+- **Auto:** 5:30-6:00, ~5% failure rate (very reliable, double cleanse covers AI errors)
+
+**Turn-by-Turn Skill Usage (First 55 Turns):**
+**Phase 1 (Turns 1-15):** Mithrala A3 cleanse → Godseeker A3 cleanse backup → Rector A3 group heal → Geomancer A2 HP Burn → Vogoth A1 passive healing
+**Phase 2 (Turns 16-35):** Cycle cleanses every 3-4 turns (alternating Mithrala/Godseeker). Maintain HP Burn. Focus Sister of Iron (Magic).
+**Phase 3 (Turns 36-55):** Sister of Iron eliminated. Switch to Sister of Steel (Force). Continue double cleanse rotation. Victory at ~55 turns.
+
+**Expected Total Turns:** 50-60 turns (5:00-6:00 clear time)
+
+**Affinity Safety/Risk (Per Sister):**
+- **Sister of Iron (Magic):** All safe - Geomancer (neutral), Rector (Void), Vogoth (Spirit), Mithrala/Godseeker (Magic neutral)
+- **Sister of Steel (Force):** MEDIUM RISK - Mithrala/Godseeker (Magic weak, 20% cleanse miss) BUT double cleanse mitigates risk. If one misses, other cleanses. **Overall: SAFE**
+- **Overall Risk:** LOW - Double cleanse redundancy = high reliability even with weak affinity
+
 **Gear:** Speed, Immortal, Perception, Accuracy
 **Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster
-**Manual/Auto:** Auto possible; manual for cleanse timing if needed
-**Strengths:** High affinity safety, double revive, strong sustain
-**Weaknesses:** Lower damage, can be slow if not tuned
-**Simulated Damage/Clear Time:** ~5:00–6:00
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Magic: Risk for Force cleansers.
-- Force: Risk for Magic cleansers.
-- Spirit: Risk for Force cleansers.
+**Strengths:** Double cleanse = maximum safety, double revive, all Void/neutral affinities, very auto-friendly
+**Weaknesses:** Lower damage (slow clear), Mithrala/Godseeker both weak vs Force but redundancy covers
+**Simulated Damage/Clear Time:** ~5:00–5:30 (Manual), ~5:30-6:00 (Auto, 5% failure rate)
 
 ### Nia Cleanse Hybrid
-### Team: Nia Cleanse Hybrid
+### Team: Nia Cleanse Hybrid (Speed + Cleanse)
 **Core Roles:** Cleanser, Speed, HP Burn, Healing, Sustain
 **Optimal Combo:** White Dryad Nia, Arbiter, Geomancer, Ninja, Vogoth
 **Alternates:** Mithrala Lifebane (cleanse), Maulie Tankard (block debuffs), Lady Annabelle (heal/sustain)
-**Team Variations:**
-- Swap in alternates for affinity safety or budget options.
-- Manual play for cleanse timing; auto for consistency.
-**Speed Tuning:** 245–260 (support), 220–235 (damage dealers)
+
+**Speed Tuning & Turn Order:**
+1. **Arbiter** (260-270 SPD) - Speed lead + TM boost
+2. **White Dryad Nia** (255-265 SPD) - Cleanse + continuous heal
+3. **Geomancer** (245-255 SPD) - HP Burn + counterattack synergy
+4. **Ninja** (240-250 SPD) - HP Burn + nuke damage
+5. **Vogoth** (230-240 SPD) - Healer + passive sustain
+
+**Rationale:** Arbiter leads with TM boost to accelerate entire team. Nia cleanses immediately after. Geomancer/Ninja apply HP Burn. Vogoth sustains.
+
+**Manual/Auto Compromise:**
+- **Manual:** 4:00-4:30, optimal damage (Ninja A3 timed for max burst)
+- **Auto:** 4:30-5:00, ~10% failure rate (Nia cleanse AI timing, Arbiter TM boost may waste on wrong turn)
+
+**Turn-by-Turn Skill Usage (First 50 Turns):**
+**Phase 1 (Turns 1-15):** Arbiter A3 TM boost → Nia A3 cleanse + continuous heal → Geomancer A2 HP Burn → Ninja A2 HP Burn + Decrease DEF → Vogoth A1
+**Phase 2 (Turns 16-35):** Arbiter accelerates team. Nia cleanses every 4 turns. Geomancer/Ninja maintain HP Burn. Focus Sister of Iron.
+**Phase 3 (Turns 36-50):** Sister of Iron down. Switch to Sister of Steel. Ninja A3 nuke at 50% HP. Victory.
+
+**Expected Total Turns:** 45-55 turns (4:00-5:00 clear time)
+
+**Affinity Safety/Risk (Per Sister):**
+- **Sister of Iron (Magic):** Safe - Ninja/Arbiter (Spirit), Vogoth (Spirit), Nia (Force), Geomancer (neutral)
+- **Sister of Steel (Force):** MEDIUM RISK - Ninja/Arbiter (Spirit weak, 20% miss), Nia (Force neutral). Ninja damage reduced vs Force.
+- **Overall Risk:** LOW-MEDIUM - Ninja weak vs Force reduces clear speed but team clears reliably
+
 **Gear:** Speed, Perception, Immortal, Accuracy
 **Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster
-**Manual/Auto:** Auto-friendly; manual for cleanse timing if needed
-**Strengths:** Cleanse, sustain, HP burn, good for all affinities
-**Weaknesses:** Lower damage if Ninja is weak affinity
-**Simulated Damage/Clear Time:** ~4:00–5:00
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Magic: Risk for Force cleansers.
-- Force: Risk for Magic cleansers.
-- Spirit: Risk for Force cleansers.
+**Strengths:** Fast clear, Arbiter TM boost, Nia continuous heal, good vs Magic
+**Weaknesses:** Ninja weak vs Force sister (damage reduced 20%), Arbiter TM boost may waste on auto
+**Simulated Damage/Clear Time:** ~4:00–4:30 (Manual), ~4:30-5:00 (Auto, 10% failure rate)
 
 ### Maulie Block Debuffs
-### Team: Maulie Block Debuffs
+### Team: Maulie Block Debuffs (Spirit Block Debuffs, Safe vs Force)
 **Core Roles:** Block Debuffs, Speed, HP Burn, Healing, Revive
 **Optimal Combo:** Maulie Tankard, Deacon Armstrong, Geomancer, Ninja, Lady Annabelle
-**Alternates:** Mausoleum Mage (block debuffs), Mithrala Lifebane (cleanse), Lady Annabelle (heal/sustain)
-**Team Variations:**
-- Swap in alternates for affinity safety or budget options.
-- Manual play for block debuffs timing; auto for consistency.
-**Speed Tuning:** 240–255 (support), 220–235 (damage dealers)
+**Alternates:** Mausoleum Mage (block debuffs), Mithrala Lifebane (cleanse)
+
+**Speed Tuning & Turn Order:**
+1. **Maulie Tankard** (250-260 SPD) - Block Debuffs lead (Spirit, strong vs Force)
+2. **Deacon Armstrong** (245-255 SPD) - Decrease DEF + speed aura
+3. **Lady Annabelle** (240-250 SPD) - Healer + revive
+4. **Geomancer** (235-245 SPD) - HP Burn
+5. **Ninja** (230-240 SPD) - HP Burn + nuke
+
+**Rationale:** Maulie goes first with Block Debuffs (2-turn duration, 3-turn CD). Deacon applies Decrease DEF. Lady Annabelle heals. Geomancer/Ninja HP Burn.
+
+**Manual/Auto Compromise:**
+- **Manual:** 4:30-5:00, higher safety (precise Block Debuffs timing)
+- **Auto:** 5:00-5:30, ~15% failure rate (Maulie AI may waste Block Debuffs)
+
+**Turn-by-Turn Skill Usage (First 55 Turns):**
+**Phase 1 (Turns 1-15):** Maulie A2 Block Debuffs → Deacon A3 Decrease DEF → Lady Annabelle A3 group heal → Geomancer A2 HP Burn → Ninja A2 HP Burn
+**Phase 2 (Turns 16-35):** Maulie Block Debuffs every 3 turns (2-turn duration, 1-turn gap). Monitor buff carefully. Maintain HP Burn.
+**Phase 3 (Turns 36-55):** Sister of Iron down. Switch to Sister of Steel (Force). Maulie (Spirit) 100% reliable vs Force. Victory.
+
+**Expected Total Turns:** 50-60 turns (4:30-5:30 clear time)
+
+**Affinity Safety/Risk (Per Sister):**
+- **Sister of Iron (Magic):** Safe - Maulie/Deacon/Ninja (Spirit/Force), Lady Annabelle (Void), Geomancer (neutral)
+- **Sister of Steel (Force):** VERY SAFE - Maulie (Spirit strong vs Force, 100% Block Debuffs reliability), Deacon (neutral), Lady Annabelle (Void), Geomancer (Magic strong)
+- **Overall Risk:** LOW - Maulie Spirit affinity = ideal Block Debuffs champion vs Force sister
+
 **Gear:** Speed, Perception, Immortal, Accuracy
 **Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster
-**Manual/Auto:** Auto possible; manual for block debuffs timing if needed
-**Strengths:** Block debuffs, revive, healing, HP burn
-**Weaknesses:** Lower damage, can be slow if not tuned
-**Simulated Damage/Clear Time:** ~4:30–5:30
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Magic: Risk for Force block debuffs.
-- Force: Risk for Magic block debuffs.
-- Spirit: Risk for Force block debuffs.
+**Strengths:** Maulie Spirit affinity = 100% reliable vs Force, Block Debuffs prevents Ironbrand, revive safety, strong vs Force rotation
+**Weaknesses:** Maulie 2-turn Block Debuffs (1-turn gap vs Mausoleum 3-turn), requires manual to ensure no gaps
+**Simulated Damage/Clear Time:** ~4:30–5:00 (Manual), ~5:00-5:30 (Auto, 15% failure rate if Block Debuffs gap)
 
 ### Speed Burn Poison
-### Team: Speed Burn Poison
+### Team: Speed Burn Poison (Fastest F2P Clear)
 **Core Roles:** Speed, HP Burn, Poison, Healing, Revive
 **Optimal Combo:** Arbiter, Geomancer, Ninja, Bad-el-Kazar, Apothecary
 **Alternates:** Deacon Armstrong (speed), Narma the Returned (poison), Lady Annabelle (heal/sustain)
-**Team Variations:**
-- Swap in alternates for affinity safety or budget options.
-- Manual play for skill order; auto for consistency.
-**Speed Tuning:** 245–260 (support), 220–235 (damage dealers)
-**Gear:** Speed, Perception, Immortal, Accuracy
+
+**Speed Tuning & Turn Order:**
+1. **Arbiter** (260-270 SPD) - Speed lead + TM boost + revive
+2. **Apothecary** (255-265 SPD) - Speed boost acceleration
+3. **Bad-el-Kazar** (250-260 SPD) - Poison + continuous heal
+4. **Geomancer** (245-255 SPD) - HP Burn
+5. **Ninja** (240-250 SPD) - HP Burn + nuke
+
+**Rationale:** Arbiter TM boosts entire team. Apothecary speed boosts to cycle skills faster. Bad-el applies Poison/heal. Geomancer/Ninja HP Burn. **NO CLEANSER/BLOCK DEBUFFS** - relies on high resistance (400+) or accepting Ironbrand stacks with high healing/revive.
+
+**Manual/Auto Compromise:**
+- **Manual:** 3:30-4:00, highest damage (precise skill order, Ninja A3 timed optimally)
+- **Auto:** 4:00-4:30, ~20% failure rate (NO cleanse/Block Debuffs = Ironbrand stacks can overwhelm if RES fails)
+
+**Turn-by-Turn Skill Usage (First 45 Turns):**
+**Phase 1 (Turns 1-15):** Arbiter A3 TM boost → Apothecary A3 speed boost → Bad-el A3 Poison + heal → Geomancer A2 HP Burn → Ninja A2 HP Burn
+**Phase 2 (Turns 16-30):** Cycle HP Burn/Poison. Ironbrand may stack to 2-3 (acceptable with high heal). Arbiter revives if anyone dies. Focus Sister of Iron.
+**Phase 3 (Turns 31-45):** Sister of Iron eliminated. Switch to Sister of Steel. Ninja A3 nuke. Bad-el continuous heal keeps team alive through Ironbrand. Victory.
+
+**Expected Total Turns:** 40-50 turns (3:30-4:30 clear time, FASTEST clear but HIGHEST risk)
+
+**Affinity Safety/Risk (Per Sister):**
+- **Sister of Iron (Magic):** Safe - Arbiter/Ninja/Apothecary/Bad-el (all Spirit or neutral), Geomancer (neutral)
+- **Sister of Steel (Force):** HIGH RISK - Arbiter/Ninja/Apothecary/Bad-el (Spirit weak, 20% miss), NO CLEANSER = Ironbrand stacks unchecked
+  - **CRITICAL:** This team accepts Ironbrand stacks and relies on Bad-el continuous heal + Arbiter revive to survive. High risk, high reward.
+- **Overall Risk:** MEDIUM-HIGH - Fast clear but 20% failure rate vs Force. Recommended only if champions have 400+ RES to resist Ironbrand, or accept failure rate.
+
+**Gear:** Speed, Perception, Immortal, Accuracy (Bad-el needs Immortal + 400+ RES if possible)
 **Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster
-**Manual/Auto:** Auto-friendly; manual for skill order if needed
-**Strengths:** Fast clear, strong HP burn/poison, revive safety net
-**Weaknesses:** Can be weak to affinity if Arbiter or Ninja is off affinity
-**Simulated Damage/Clear Time:** ~3:30–4:30
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Magic: Risk for Force speed leads.
-- Force: Risk for Magic speed leads.
-- Spirit: Risk for Force speed leads.
+**Strengths:** FASTEST clear time (3:30-4:30), Arbiter TM boost, high damage (Poison + HP Burn), revive safety net
+**Weaknesses:** NO CLEANSER/BLOCK DEBUFFS = Ironbrand stacks, 20% failure rate vs Force, requires 400+ RES or high heal/revive
+**Simulated Damage/Clear Time:** ~3:30–4:00 (Manual), ~4:00-4:30 (Auto, 20% failure rate)
 
 ### Mithrala Speed Cleanse
-### Team: Mithrala Speed Cleanse
+### Team: Mithrala Speed Cleanse (Speed Lead + Cleanse Combo)
 **Core Roles:** Cleanser/Block Debuffs, Speed Lead, HP Burn, Revive, Damage Dealer
 **Optimal Combo:** Mithrala Lifebane, Arbiter, Geomancer, Godseeker Aniri, Ninja
-**Alternates:** Mausoleum Mage (block debuffs), Deacon Armstrong (speed), Lady Annabelle (heal/sustain)
-**Team Variations:**
-- Swap in alternates for affinity safety or budget options.
-- Manual play for skill order; auto for consistency.
-**Speed Tuning:** 250–260+ (support), 220–240+ (damage dealers)
+**Alternates:** Mausoleum Mage (block debuffs), Deacon Armstrong (speed)
+
+**Speed Tuning & Turn Order:**
+1. **Arbiter** (265-275 SPD) - Speed lead + TM boost
+2. **Mithrala Lifebane** (260-270 SPD) - Cleanse immediately after Arbiter boost
+3. **Godseeker Aniri** (255-265 SPD) - Backup cleanser + revive
+4. **Geomancer** (250-260 SPD) - HP Burn
+5. **Ninja** (245-255 SPD) - HP Burn + nuke
+
+**Rationale:** Arbiter TM boosts entire team. Mithrala cleanses immediately after boost (accelerated cleanse cycling). Godseeker backup cleanse. Geomancer/Ninja HP Burn.
+
+**Manual/Auto Compromise:**
+- **Manual:** 3:30-4:00, optimal clear (Arbiter boost → Mithrala cleanse sync)
+- **Auto:** 4:00-4:30, ~8% failure rate (AI may waste Arbiter boost before Ironbrand stacks high)
+
+**Turn-by-Turn Skill Usage (First 50 Turns):**
+**Phase 1 (Turns 1-15):** Arbiter A3 TM boost → Mithrala A3 cleanse → Godseeker A3 backup cleanse → Geomancer A2 HP Burn → Ninja A2 HP Burn
+**Phase 2 (Turns 16-35):** Arbiter accelerates cleanse cycling (Mithrala every 3 turns instead of 4). Double cleanse redundancy. Focus Sister of Iron.
+**Phase 3 (Turns 36-50):** Sister of Iron eliminated. Switch to Sister of Steel. Ninja A3 nuke. Victory.
+
+**Expected Total Turns:** 45-55 turns (3:30-4:30 clear time)
+
+**Affinity Safety/Risk (Per Sister):**
+- **Sister of Iron (Magic):** Safe - Arbiter/Ninja (Spirit), Godseeker (Void), Mithrala/Geomancer (neutral)
+- **Sister of Steel (Force):** MEDIUM RISK - Mithrala (Magic weak, 20% cleanse miss), but Godseeker (Void) backup cleanse covers. Ninja (Spirit weak, damage reduced).
+- **Overall Risk:** LOW-MEDIUM - Double cleanse redundancy mitigates Mithrala weak affinity vs Force
+
 **Gear:** Speed, Perception, Immortal, Accuracy, Lifesteal
 **Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster
-**Manual/Auto:** Fully auto possible; manual only for skill order optimization if needed
-**Strengths:** High consistency, strong cleanse/block debuffs, revive safety net, fast clear
-**Weaknesses:** Relies on Mithrala for affinity safety; weak if affinity is unfavorable
-**Simulated Damage/Clear Time:** ~3:30–4:30
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Magic: Risk for Force cleansers.
-- Force: Risk for Magic cleansers.
-- Spirit: Risk for Force cleansers.
+**Strengths:** Arbiter TM boost accelerates cleanses, double cleanse redundancy, revive safety, fast clear
+**Weaknesses:** Mithrala weak vs Force (20% miss) but Godseeker backup covers, Ninja weak vs Force (damage reduced)
+**Simulated Damage/Clear Time:** ~3:30–4:00 (Manual), ~4:00-4:30 (Auto, 8% failure rate)
 
 ### Block Debuffs Sustain
-### Team: Block Debuffs Sustain
+### Team: Block Debuffs Sustain (High Safety, Auto-Friendly)
 **Core Roles:** Block Debuffs, Speed, HP Burn, Poison, Healing, Revive
 **Optimal Combo:** Mausoleum Mage, Deacon Armstrong, Geomancer, Ninja, Bad-el-Kazar
-**Alternates:** Maulie Tankard (block debuffs), Mithrala Lifebane (cleanse), Lady Annabelle (heal/sustain)
-**Team Variations:**
-- Swap in alternates for affinity safety or budget options.
-- Manual play for block debuffs timing; auto for consistency.
-**Speed Tuning:** 240–255 (support), 220–235 (damage dealers)
+**Alternates:** Maulie Tankard (block debuffs), Mithrala Lifebane (cleanse)
+
+**Speed Tuning & Turn Order:**
+1. **Mausoleum Mage** (255-265 SPD) - Block Debuffs lead
+2. **Deacon Armstrong** (250-260 SPD) - Decrease DEF + speed aura
+3. **Bad-el-Kazar** (245-255 SPD) - Poison + continuous heal
+4. **Geomancer** (240-250 SPD) - HP Burn
+5. **Ninja** (235-245 SPD) - HP Burn + nuke
+
+**Rationale:** Mausoleum Block Debuffs first. Deacon Decrease DEF. Bad-el Poison/heal. Geomancer/Ninja HP Burn. High sustain team.
+
+**Manual/Auto Compromise:**
+- **Manual:** 4:00-4:30, higher safety (precise Block Debuffs timing)
+- **Auto:** 4:30-5:00, ~10% failure rate (AI may waste Mausoleum Block Debuffs)
+
+**Turn-by-Turn Skill Usage (First 55 Turns):**
+**Phase 1 (Turns 1-15):** Mausoleum A3 Block Debuffs → Deacon A3 Decrease DEF → Bad-el A3 Poison + heal → Geomancer A2 HP Burn → Ninja A2 HP Burn
+**Phase 2 (Turns 16-35):** Mausoleum Block Debuffs every 4 turns. Bad-el continuous heal + revive if needed. Focus Sister of Iron.
+**Phase 3 (Turns 36-55):** Sister of Iron eliminated. Switch to Sister of Steel (Force). Mausoleum (Magic) weak affinity = 20% Block Debuffs miss risk. Victory.
+
+**Expected Total Turns:** 50-60 turns (4:00-5:00 clear time)
+
+**Affinity Safety/Risk (Per Sister):**
+- **Sister of Iron (Magic):** Safe - Deacon/Ninja (Spirit/Force), Bad-el (Spirit), Geomancer/Mausoleum (neutral)
+- **Sister of Steel (Force):** HIGH RISK - Mausoleum (Magic weak, 20% Block Debuffs miss). Bad-el/Ninja (Spirit weak, 20% Poison/HP Burn miss). High heal/revive mitigates but risky.
+  - **Backup Plan:** Replace Mausoleum with Maulie Tankard (Spirit) for Force rotation days.
+- **Overall Risk:** MEDIUM vs Magic, HIGH vs Force without Maulie alternate
+
 **Gear:** Speed, Perception, Relentless, Accuracy
 **Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster
-**Manual/Auto:** Auto-friendly; manual for block debuffs timing if needed
-**Strengths:** Double sustain (healing + revive), block debuffs, good for all affinities
-**Weaknesses:** Lower damage than pure nuke teams, can be slow if gear is weak
-**Simulated Damage/Clear Time:** ~4:00–5:00
-**Affinity Safety/Risk:**
-- Void: Safe for all roles.
-- Magic: Risk for Force block debuffs.
-- Force: Risk for Magic block debuffs.
-- Spirit: Risk for Force block debuffs.
+**Strengths:** Block Debuffs prevents Ironbrand, Bad-el continuous heal + revive, high sustain, auto-friendly vs Magic
+**Weaknesses:** Mausoleum weak vs Force (requires Maulie alternate), Bad-el/Ninja also weak vs Force (20% miss rate)
+**Simulated Damage/Clear Time:** ~4:00–4:30 (Manual), ~4:30-5:00 (Auto, 10% failure rate vs Magic, 25% vs Force)
 
 ### Double Cleanse Safety
-### Team: Double Cleanse Safety
+### Team: Double Cleanse Safety (Maximum Reliability)
 **Core Roles:** Cleanse, Speed, HP Burn, Healing, Revive, Affinity Safety
 **Optimal Combo:** Godseeker Aniri, Apothecary, Geomancer, Artak, Rector Drath
-**Alternates:** Mithrala Lifebane (cleanse), Mausoleum Mage (block debuffs), Lady Annabelle (heal/sustain)
-**Team Variations:**
-- Swap in alternates for affinity safety or budget options.
-- Manual play for cleanse timing; auto for consistency.
-**Speed Tuning:** 245–255 (support), 220–235 (damage dealers)
+**Alternates:** Mithrala Lifebane (cleanse), Mausoleum Mage (block debuffs)
+
+**Speed Tuning & Turn Order:**
+1. **Godseeker Aniri** (255-265 SPD) - Cleanse lead + revive on death
+2. **Apothecary** (250-260 SPD) - Speed boost + group heal
+3. **Rector Drath** (245-255 SPD) - Backup cleanser + revive
+4. **Artak** (240-250 SPD) - HP Burn
+5. **Geomancer** (235-245 SPD) - HP Burn
+
+**Rationale:** Double cleanse (Godseeker + Rector) ensures 100% Ironbrand coverage. Apothecary speed boost accelerates cleanse cycling. Artak/Geomancer HP Burn.
+
+**Manual/Auto Compromise:**
+- **Manual:** 4:30-5:00, maximum safety (precise double cleanse timing)
+- **Auto:** 5:00-5:30, ~3% failure rate (VERY reliable, double cleanse + double revive = near-unkillable)
+
+**Turn-by-Turn Skill Usage (First 55 Turns):**
+**Phase 1 (Turns 1-15):** Godseeker A3 cleanse → Apothecary A3 speed boost → Rector A3 group heal (backup cleanse ready) → Artak A3 HP Burn → Geomancer A2 HP Burn
+**Phase 2 (Turns 16-35):** Alternate cleanses (Godseeker Turn 16, Rector Turn 20, Godseeker Turn 24, etc.). Maintain HP Burn. Focus Sister of Iron.
+**Phase 3 (Turns 36-55):** Sister of Iron eliminated. Switch to Sister of Steel. Continue double cleanse rotation (one always available). Victory.
+
+**Expected Total Turns:** 50-60 turns (4:30-5:30 clear time)
+
+**Affinity Safety/Risk (Per Sister):**
+- **Sister of Iron (Magic):** VERY SAFE - Artak (Force strong), Apothecary (Spirit), Rector (Void), Godseeker (Void), Geomancer (neutral)
+- **Sister of Steel (Force):** VERY SAFE - Geomancer (Magic strong), Apothecary (Spirit), Rector (Void), Godseeker (Void), Artak (Force neutral)
+- **Overall Risk:** VERY LOW - All champions safe or neutral vs both sisters, double cleanse + double revive = maximum reliability
+
 **Gear:** Speed, Immortal, Perception, Accuracy
 **Masteries:** Support/Defense; Rapid Response, Lasting Gifts, Warmaster
-**Manual/Auto:** Auto possible; manual for cleanse timing if affinity is unfavorable
-**Strengths:** Double cleanse, revive, high affinity safety, strong sustain
-**Weaknesses:** Lower damage, can be slow if not tuned
+**Strengths:** Double cleanse + double revive = near-unkillable, all champions safe/neutral affinity, very auto-friendly, maximum reliability
+**Weaknesses:** Slowest clear time (4:30-5:30), lower damage due to focus on sustain over nuke
+**Simulated Damage/Clear Time:** ~4:30–5:00 (Manual), ~5:00-5:30 (Auto, 3% failure rate - HIGHEST RELIABILITY)
 **Simulated Damage/Clear Time:** ~4:30–5:30
 **Affinity Safety/Risk:**
 - Void: Safe for all roles.
