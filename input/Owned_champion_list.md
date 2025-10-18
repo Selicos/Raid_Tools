@@ -1,12 +1,17 @@
-# Owned Champions- Abbess | Rarity: Legendary | Last Updated: 2025-10-15
+# Owned Champions
+
+## Champion List
+
+- Abbess | Rarity: Legendary | Last Updated: 2025-10-15
 - Adelyn | Rarity: Rare | Last Updated: 2025-10-15
-- Alure | Rarity: Epic | Last Updated: 2025-10-15
+- Akoth the Seared | Rarity: Epic | Last Updated: 2025-10-18
 - Alice the Wanderer | Rarity: Legendary | Last Updated: 2025-10-15
-- Apothecary | Rarity: Rare | Last Updated: 2025-10-15
-- Archmage Hellmut | Rarity: Epic | Last Updated: 2025-10-15
-- Arbiter | Rarity: Legendary | Last Updated: 2025-10-15
-- Artak | Rarity: Legendary | Last Updated: 2025-10-15
+- Alure | Rarity: Epic | Last Updated: 2025-10-15
 - Aox the Rememberer | Rarity: Epic | Last Updated: 2025-10-15
+- Apothecary (x3) | Rarity: Rare | Last Updated: 2025-10-15
+- Arbiter | Rarity: Legendary | Last Updated: 2025-10-15
+- Archmage Hellmut | Rarity: Epic | Last Updated: 2025-10-15
+- Artak | Rarity: Legendary | Last Updated: 2025-10-15
 - Astralon | Rarity: Legendary | Last Updated: 2025-10-15
 - Bad-el-Kazar | Rarity: Legendary | Last Updated: 2025-10-15
 - Black Knight | Rarity: Legendary | Last Updated: 2025-10-15
@@ -15,53 +20,68 @@
 - Burangiri | Rarity: Epic | Last Updated: 2025-10-15
 - Caoilte the Asharrow | Rarity: Epic | Last Updated: 2025-10-15
 - Cleopterix | Rarity: Legendary | Last Updated: 2025-10-15
-- Coldheart | Rarity: Rare | Last Updated: 2025-10-15
-- Crohnam | Rarity: Legendary | Last Updated: 2025-10-15
+- Coldheart (x3) | Rarity: Rare | Last Updated: 2025-10-15
 - Criodan the Blue | Rarity: Epic | Last Updated: 2025-10-15
+- Crohnam | Rarity: Legendary | Last Updated: 2025-10-15
+- Dark Athel | Rarity: Rare | Last Updated: 2025-10-18
 - Dark Kael | Rarity: Epic | Last Updated: 2025-10-15
 - Deacon Armstrong | Rarity: Epic | Last Updated: 2025-10-15
+- Deudan the Runic | Rarity: Rare | Last Updated: 2025-10-18
 - Dhukk the Pierced | Rarity: Epic | Last Updated: 2025-10-15
 - Djamarsa | Rarity: Epic | Last Updated: 2025-10-15
 - Drexthar Bloodtwin | Rarity: Legendary | Last Updated: 2025-10-15
 - Elenaril | Rarity: Legendary | Last Updated: 2025-10-15
 - Embrys the Anomaly | Rarity: Mythic | Last Updated: 2025-10-15
+- Eolfrig | Rarity: Epic | Last Updated: 2025-10-18
 - Fayne | Rarity: Epic | Last Updated: 2025-10-15
 - Fenshi | Rarity: Epic | Last Updated: 2025-10-15
 - Frozen Banshee | Rarity: Rare | Last Updated: 2025-10-15
+- Fyt-gun Isable | Rarity: Legendary | Last Updated: 2025-10-18
 - Geomancer | Rarity: Epic | Last Updated: 2025-10-15
-- Godseeker Aniri | Rarity: Epic | Last Updated: 2025-10-15
+- Ghostborn | Rarity: Epic | Last Updated: 2025-10-18
+- Godseeker Aniri (x2) | Rarity: Epic | Last Updated: 2025-10-15
 - Gretel Hagbane | Rarity: Epic | Last Updated: 2025-10-15
+- Guurda Bogbrew | Rarity: Epic | Last Updated: 2025-10-18
 - He-Man | Rarity: Legendary | Last Updated: 2025-10-15
-- Hotatsu | Rarity: Epic | Last Updated: 2025-10-15
+- High Khatun | Rarity: Rare | Last Updated: 2025-10-18
+- Hotatsu (x2) | Rarity: Epic | Last Updated: 2025-10-15
+- Husk | Rarity: Rare | Last Updated: 2025-10-18
 - Ithos | Rarity: Legendary | Last Updated: 2025-10-15
+- Iudex Artor | Rarity: Epic | Last Updated: 2025-10-18
 - Juliana | Rarity: Epic | Last Updated: 2025-10-15
 - Kalvalax | Rarity: Legendary | Last Updated: 2025-10-15
 - Kantra the Cyclone | Rarity: Legendary | Last Updated: 2025-10-15
 - Kinagashi | Rarity: Epic | Last Updated: 2025-10-15
 - Lady Annabelle | Rarity: Epic | Last Updated: 2025-10-15
 - Leminisi the Gold-Wing | Rarity: Legendary | Last Updated: 2025-10-15
-- Loki | Rarity: Legendary | Last Updated: 2025-10-15
+- Loki the Deceiver | Rarity: Legendary | Last Updated: 2025-10-15
 - Lord Champfort | Rarity: Legendary | Last Updated: 2025-10-18
 - Lord Shazar | Rarity: Legendary | Last Updated: 2025-10-15
-- Lua | Rarity: Epic | Last Updated: 2025-10-15
+- Lua (x2) | Rarity: Epic | Last Updated: 2025-10-15
 - Maulie Tankard | Rarity: Legendary | Last Updated: 2025-10-15
 - Mausoleum Mage | Rarity: Epic | Last Updated: 2025-10-15
 - Michelangelo | Rarity: Legendary | Last Updated: 2025-10-15
 - Mistrider Daithi | Rarity: Epic | Last Updated: 2025-10-15
 - Mithrala Lifebane | Rarity: Legendary | Last Updated: 2025-10-15
 - Narma the Returned | Rarity: Epic | Last Updated: 2025-10-15
-- Nia | Rarity: Epic | Last Updated: 2025-10-15
 - Ninja | Rarity: Legendary | Last Updated: 2025-10-15
-- Nogdar the Headhunter | Rarity: Legendary | Last Updated: 2025-10-15
+- Nogdar the Headhunter (x2) | Rarity: Legendary | Last Updated: 2025-10-18
+- Nogoryo (x2) | Rarity: Rare | Last Updated: 2025-10-18
 - Norog | Rarity: Legendary | Last Updated: 2025-10-15
-- Queen Eva | Rarity: Legendary | Last Updated: 2025-10-15
+- Pain Keeper (x3) | Rarity: Epic | Last Updated: 2025-10-18
+- Paragon | Rarity: Rare | Last Updated: 2025-10-18
 - Quargan the Crowned | Rarity: Epic | Last Updated: 2025-10-15
+- Queen Eva | Rarity: Legendary | Last Updated: 2025-10-15
 - Rathalos Blademaster | Rarity: Legendary | Last Updated: 2025-10-15
-- Rector Drath | Rarity: Epic | Last Updated: 2025-10-15
+- Rector Drath (x2) | Rarity: Epic | Last Updated: 2025-10-15
+- Relickeeper (x4) | Rarity: Legendary | Last Updated: 2025-10-18
 - Rhazin Scarhide | Rarity: Legendary | Last Updated: 2025-10-15
+- Rian the Conjurer | Rarity: Epic | Last Updated: 2025-10-15
+- Robar | Rarity: Epic | Last Updated: 2025-10-18
 - Runekeeper Dazdurk | Rarity: Epic | Last Updated: 2025-10-15
+- Sanguinia (x2) | Rarity: Epic | Last Updated: 2025-10-18
 - Scyl of the Drakes | Rarity: Legendary | Last Updated: 2025-10-15
-- Seeker | Rarity: Epic | Last Updated: 2025-10-15
+- Seeker (x2) | Rarity: Epic | Last Updated: 2025-10-15
 - Skeletor | Rarity: Legendary | Last Updated: 2025-10-15
 - Skullcrown | Rarity: Epic | Last Updated: 2025-10-15
 - Skullcrusher | Rarity: Epic | Last Updated: 2025-10-15
@@ -71,13 +91,14 @@
 - Taurus | Rarity: Epic | Last Updated: 2025-10-15
 - Taya | Rarity: Epic | Last Updated: 2025-10-15
 - Tayrel | Rarity: Epic | Last Updated: 2025-10-15
-- Uggo | Rarity: Epic | Last Updated: 2025-10-15
+- Ugir the Wyrm Eater | Rarity: Epic | Last Updated: 2025-10-18
+- Ultimate Galek | Rarity: Epic | Last Updated: 2025-10-18
+- Uugo | Rarity: Epic | Last Updated: 2025-10-15
 - Venomage | Rarity: Epic | Last Updated: 2025-10-15
+- Vergis | Rarity: Epic | Last Updated: 2025-10-18
 - Vergumkaar | Rarity: Legendary | Last Updated: 2025-10-15
 - Visix the Unbowed | Rarity: Legendary | Last Updated: 2025-10-15
-- Vogoth | Rarity: Epic | Last Updated: 2025-10-15
+- Vogoth (x2) | Rarity: Epic | Last Updated: 2025-10-15
 - Vrask | Rarity: Epic | Last Updated: 2025-10-15
 - Warchief | Rarity: Legendary | Last Updated: 2025-10-15
 - White Dryad Nia | Rarity: Epic | Last Updated: 2025-10-15
-- Rian the Counjurer | Rarity: Epic | Last Updated 2025-10-15
-
