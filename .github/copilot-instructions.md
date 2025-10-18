@@ -1,814 +1,764 @@
-# Copilot & AI Agent Instructions for Raid Tools (Unified, Markdown-First, Oct 2025)
+# RAID Shadow Legends Boss Guides - Copilot Instructions
 
-> This file is the authoritative, codebase-specific guide for all AI coding agents. For universal project rules, see `.github/ai-assistant-instructions.md` (fallback for any ambiguity).
-## Quick Reference: Markdown-First Boss/Team Guide Workflow
-## Update & Staging Policy for Owned Champion Changes
+> This file extends the Generic AI & Copilot Instructions with RAID Shadow Legends boss guide generation standards, champion mapping workflows, and team-building methodologies.
 
-When the owned champion list (`input/Owned_Champions/Owned_champion_list.md`) is updated, all boss/team Markdown files must be updated as follows:
+---
 
-1. **Staging in Separate File:**
-   - All updates must be staged in a new file (e.g., with `_v2.md` or date-stamped suffix) for review and comparison. Never overwrite the original file directly.
-   - The new file must be saved in the same directory as the original (e.g., `Notes/` or `output/`).
+## Reference to Generic Standards
 
-2. **Section-by-Section Update & Analysis:**
-   - For each section in the standard Table of Contents, perform a fresh analysis and update:
-     1. **Boss Mechanics & Stat Requirements:**
-        - Re-validate boss mechanics, stat thresholds, and unique challenges based on the new roster.
-        - Note any changes in stat requirements or mechanics due to new champion options.
-     2. **Teams by Estimated Damage/Clear Speed:**
-        - Re-run simulations and update the summary table with new teams, damage, and clear speed estimates.
-        - Clearly mark new or improved teams enabled by new champions.
-     3. **Detailed Team Sections:**
-        - For each team, update core roles, optimal combos, alternates, speed tuning, gear, masteries, manual/auto notes, strengths, weaknesses, and simulated results.
-        - Add new teams or variants enabled by new champions; remove or archive obsolete teams.
-     4. **Best Champions & Team Participation:**
-        - Update the participation table to reflect new team compositions and champion roles.
-        - Highlight new champions and their impact.
-     5. **Direct Champion Comparisons by Role:**
-        - Re-analyze and update role-based comparisons, including new champions and their strengths/weaknesses.
-     6. **Ideal Champions to Pull:**
-        - Revise the list of ideal champions to pull, removing any now-owned champions and reprioritizing based on new team options.
+See `Generic_AI_Copilot_Instructions.md` for universal AI assistant standards including:
+- AI Assistant Behavior
+- Safety & File Operations Policy
+- Chat Response Standards
+- Task Management & Progress Tracking
+- Output Formatting & Style Standards
+- Change Management & File Versioning
+- Code Quality Standards
+- Language-Specific Standards
+- Project Housekeeping & Shift-Left Workflow
+- Validation & Documentation
+- Data Privacy & Security
 
-3. **Validation & Documentation:**
-   - All new data, team mechanics, and champion roles must be validated with at least two sources (Ayumilove, Hellhades, Wiki).
-   - Document all validation and simulation steps in the new Markdown file or commit message.
+All generic standards apply to this project. The sections below provide RAID Shadow Legends boss guide-specific extensions.
 
-4. **Review & Comparison:**
-   - The new file must be reviewed and compared to the previous version before replacing or archiving the old file.
-   - Only after review and approval should the new file become canonical.
+---
 
-5. **No Deletion:**
-   - Never delete the original file as part of this process. Always preserve previous versions for audit and rollback.
+## Table of Contents
 
-**Summary:**
-Every time the owned champion list changes, a new, fully re-analyzed Markdown file must be staged for review, with all sections updated and validated. This ensures traceability, accuracy, and safe review of all team advice outputs.
+- [Project Purpose & Scope](#project-purpose--scope)
+- [Authoritative Data Sources](#authoritative-data-sources)
+- [Boss Guide QA Standards](#boss-guide-qa-standards)
+- [Guide Generation Workflow](#guide-generation-workflow)
+- [Champion & Trial Mapping](#champion--trial-mapping)
+- [Team Building & Simulation](#team-building--simulation)
+- [Affinity Safety & Risk Requirements](#affinity-safety--risk-requirements)
+- [Guide Structure & Required Sections](#guide-structure--required-sections)
+- [Update & Staging Policy](#update--staging-policy)
+- [Section-by-Section Maintenance](#section-by-section-maintenance)
+- [Validation & Documentation Standards](#validation--documentation-standards)
+- [Templates & Examples](#templates--examples)
+- [Task Checklist](#task-checklist)
 
-- **Primary Output:** All boss and team guides must be written in Markdown, following the standard template below. JSON is for internal data only.
-- **Template:** Every boss/team Markdown file must include:
-   1. Table of Contents (with Boss Mechanics & Stat Requirements as section 1)
-   2. Boss Mechanics & Stat Requirements (section 1)
-   3. Teams by Estimated Damage/Clear Speed (table)
-   4. Detailed Team Sections (each with: core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results)
-   5. Best Champions & Team Participation (table)
-   6. Direct Champion Comparisons by Role (table or summary)
-   7. Ideal Champions to Pull (indexed, actionable list)
-- **Validation:** All champion and boss data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki). Document validation in Markdown or commit.
-- **Simulation:** Run at least 3 simulations for each team and summarize results in the Markdown file.
-- **File Handling:** Completed Markdown files are authoritative and must be preserved in `Notes/` or `output/`.
-- **No Deletion:** Never delete files or folders as part of this workflow. If a change requires more than 20 lines of edits, create a new file (e.g., with `_v2.md` suffix) instead of overwriting the original.
-## Project Focus & Data Flow
-- **Main workflow:** Use `input/Owned_Champions/Owned_champion_list.md` to generate boss-specific, actionable Markdown (`.md`) outputs for Raid Shadow Legends. Markdown is now the primary and canonical output format for all boss and team guides.
-- **Boss context:** Default to Hard mode for all bosses; design for easy expansion to other difficulties and boss types.
-- **Champion data:** Always validate skills/mechanics with at least two online sources (Ayumilove, Hellhades, etc). Document validation in Markdown or commit messages.
-- **Output:** Modular, human-readable Markdown for each boss, using only owned champions. All outputs must follow the standard template and include boss mechanics, simulation summaries, and an indexed list of ideal champions to pull for upgrades.
-- **No legacy workflows:** Remove or ignore all references to deprecated scripts, folders, or paths (e.g., `Champion Review and Comparison/`). Only use current, documented scripts and folder names.
-## Essential Workflows
-- **Setup:** `python Tools/Setup_Environment.py` or `make setup` (creates `.venv`, installs requirements, sets up VS Code config)
-- **Champion list update:** Edit `input/Owned_Champions/Owned_champion_list.md` to reflect current roster.
-- **Team generation:** For each boss, generate Markdown guides using only owned champions, referencing validated data and following the standard template.
-- **Markdown output:** All team guides and summaries must be modular, actionable, and human-readable. Use clear headers, tables, and role separation. Save outputs in the appropriate `Notes/` or `output/` subfolder. JSON is optional and only for internal data, not for primary documentation.
-- **Validation:** Cross-check all champion and boss data with at least two sources. Document validation in the Markdown file or commit message.
-- **Large changes:** If a change requires more than 20 lines of edits to a Markdown file, create a new file (e.g., with `_v2.md` suffix) for review and comparison, rather than overwriting the original.
-## Conventions & Methodology
-- **Markdown-first:** All boss and team guides must be written in Markdown, following the standard template. JSON is for internal data only.
-- **Standard Template:** Every boss/team Markdown file must include:
-   1. Table of Contents (with Boss Mechanics & Stat Requirements as section 1)
-   2. Boss Mechanics & Stat Requirements (section 1)
-   3. Teams by Estimated Damage/Clear Speed (table)
-   4. Detailed Team Sections (each with: core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results)
-   5. Best Champions & Team Participation (table)
-   6. Direct Champion Comparisons by Role (table or summary)
-   7. Ideal Champions to Pull (indexed, actionable list)
-- **No file/folder deletion:** AI agents must never delete files or folders—never run or suggest destructive operations. If a file must be replaced with a large change, create a new file instead.
-- **Prompt/JSON overwrite policy:** Never overwrite a completed prompt in `output/completed_prompts/`. Prompts in `input/Prompt/` are always overwritten unless a completed prompt exists.
-- **Validation:** All champion data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki). Document validation in Markdown or commit.
-- **No legacy paths:** Always use the latest folder/script names (e.g., `ChampionIntake/`, not `Champion Review and Comparison/`).
-- **Testing:** All new features require pytest tests in `Tests/` or `root_Tests/`.
-- **Formatting:** All Markdown files must use consistent header levels and section numbering. Use Black and flake8 for Python code. Use line-by-line edits for clarity and easier review. Prefer creating a new file for large changes.
-## AI Assistant Behavior
-- **Markdown-first:** All outputs must be Markdown unless otherwise specified. Use the standard template for all boss/team guides.
-- **Persistence:** Continue working on multi-step tasks for up to 4 cycles without asking for confirmation.
-- **Proactivity:** Suggest better solutions, tools, or implementations when applicable.
-- **Completeness:** Ensure full task completion before moving to next items.
-- **Context Awareness:** Leverage conversation history and project context for informed decisions.
-- **Tool Usage:** Prefer built-in tools over manual commands when available.
-- **Code Generation:** Always include type hints and docstrings for new functions. Use pathlib for file operations. Implement proper error handling with try/except blocks. Update requirements.txt when adding new dependencies.
-- **Formatting:** Use clear, modular, human-readable Markdown. Use consistent header levels, section numbering, and tables. Prefer line-by-line edits for small changes and new files for large changes.
-- **No Deletion:** Never delete files or folders. For large changes, create a new file for review and comparison.
-## Example: Boss Team Markdown Output
+---
+
+## Project Purpose & Scope
+
+### Objectives
+
+This project produces comprehensive, actionable boss/encounter guides for RAID Shadow Legends, tailored to the user's owned champion roster with validated mechanics, team compositions, and strategy recommendations.
+
+### Primary Outputs
+
+**Boss Guide Markdown Files**
+- One file per boss (e.g., `Bommal_Boss_Guide.md`, `Hydra_Boss_Guide.md`)
+- Modular, human-readable Markdown following standard template
+- Includes boss mechanics, trial/mechanic mapping, team recommendations, and upgrade paths
+- Optimized for Hard mode by default (expandable to other difficulties)
+
+**Canonical References**
+- `Tools/Boss_Guide_Template.md` - Standard template for all guides
+- `Input/Owned_champion_list.md` - Single source of truth for champion roster
+- RaidHQ, Ayumilove, HellHades - Authoritative external sources
+
+---
+
+## Authoritative Data Sources
+
+### Primary Sources (Always Cross-Validate)
+
+**RaidHQ** (Primary)
+- URL: https://raid-hq.com/
+- Boss mechanics, trial requirements, stat thresholds
+- Priority: Highest for official boss data
+
+**Ayumilove**
+- URL: https://ayumilove.net/raid-shadow-legends-guide/
+- Champion guides, skill descriptions, gear recommendations
+- Priority: High for champion-specific data
+
+**HellHades**
+- URL: https://hellhades.com/
+- Team compositions, speed tuning, tier lists
+- Priority: High for team-building strategies
+
+**In-Game Testing**
+- User-provided simulation results
+- Direct observation of mechanics
+- Priority: Highest for validation
+
+### Source Validation Rules
+
+- Cross-check all boss and champion data with **at least two sources**
+- Document conflicts and prefer community consensus (RaidHQ + Ayumilove/HellHades)
+- Mark uncertainties in "Data Confidence" or "Validation & Simulation Notes" sections
+- Always cite sources in Markdown file and commit messages
+
+---
+
+## Boss Guide QA Standards
+
+### Question & Answer Framework
+
+Before starting guide generation, answer these questions:
+
+**Q: Should the guide fully document all boss mechanics, forms, stat requirements, and trial types before mapping champions?**
+
+**A:** Yes. Begin with a comprehensive, validated section on boss mechanics, forms/phases, turn order, affinities, unique mechanics, and all trial types/stat thresholds. Use RaidHQ (primary), Ayumilove, HellHades, and in-game sources for cross-validation. Document all sources in the Markdown file and commit message.
+
+**Q: How should trials/mechanics be mapped to the owned champion list?**
+
+**A:** For each trial/mechanic, list all owned champions who can fulfill the requirement. Include both a per-trial table and a combo table showing which champions can fulfill multiple trials/mechanics. Note affinity safety/risk (multi-line, explicit), and special skill/turn order notes for each champion. Use only the canonical owned champion list (`Input/Owned_champion_list.md`).
+
+**Q: What is the preferred team-building and simulation approach?**
+
+**A:** Build and simulate 5–8 unique teams using only owned champions, maximizing:
+- Total trial/mechanic completion (for score/rewards)
+- Raw damage output (for leaderboard/rank)
+- Hybrid approaches (balance of both)
+
+For each team, provide: core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results, explicit affinity safety/risk (multi-line), and actionable trial/mechanic advice. Run at least 3 simulations per team and document results in the guide.
+
+**Q: How should the Table of Contents and navigation be structured?**
+
+**A:** Use a modular, anchor-linked Table of Contents at the top of the guide. Update section numbers and anchors to match the actual file structure. Add quick reference tables at the start of the guide for best teams by difficulty/trial/damage tier. Ensure all sections match the canonical template (`Tools/Boss_Guide_Template.md`).
+
+**Q: What additional reference and summary sections are required?**
+
+**A:**
+- Best Champions & Team Participation: Table of top champions, their roles, and team participation
+- Direct Champion Comparisons by Role: Table or summary comparing only owned champions by key roles
+- Ideal Champions to Pull: List and rationale for each, with upgrade path advice (only non-owned champions)
+- General Notes: Gear, masteries, stat priorities, manual/auto advice
+- Actionable Notes & Upgrade Advice: Trial/mechanic prioritization, upgrade path, common pitfalls
+- Validation & Simulation Notes: Document all validation sources, simulation steps, and results (minimum 3 runs per team)
+
+**Q: How should the guide be updated after a roster change?**
+
+**A:**
+- Supply a new `Owned_champion_list.md` or add a new champion
+- Re-run the team and trial/mechanic mapping process to update all tables and recommendations
+- Regenerate the Ideal Champions to Pull and Team Upgrade Paths sections to reflect new gaps
+- Never overwrite the original file directly; always preserve previous versions and stage changes for review
+
+**Q: What is the process for handling alternates, trial-specific champions, and affinity risk?**
+
+**A:**
+- For each team, list alternates for each core role based on the owned champion list
+- Include trial/mechanic-specific alternates (champions used only for a specific trial/mechanic)
+- Explicitly document affinity safety/risk for each team and alternate in all relevant sections (multi-line, per template)
+
+**Q: How should failures and troubleshooting be documented?**
+
+**A:**
+- Document teams that almost work but miss a trial/mechanic or damage threshold
+- Include notes on why a team failed and what upgrades or changes would resolve the issue
+- Add troubleshooting and upgrade path advice in the actionable notes section
+
+**Q: What is the preferred output format and update policy?**
+
+**A:**
+- All outputs must be modular, human-readable Markdown, following the standard template
+- Never delete files or folders; create new versions for major changes (e.g., `_v2.md` or date-stamped)
+- Document all validation and simulation steps in the Markdown file or commit message for transparency and reproducibility
+
+---
+
+## Guide Generation Workflow
+
+### Canonical Workflow Steps (Shift-Left Applied)
+
+**Step 1: Research & Data Gathering**
+- Review authoritative boss guides (RaidHQ, Ayumilove, HellHades, in-game)
+- Document all boss forms/phases, turn order, affinities, unique mechanics, and trial types/stat thresholds
+- Cross-validate and cite sources
+- Output: Boss Mechanics section with validation notes
+
+**Step 2: Champion & Trial/Mechanic Mapping**
+- Cross-reference the canonical owned champion list with trial/mechanic requirements
+- Build per-trial and combo tables, noting affinity safety/risk (multi-line, explicit) and special notes
+- Output: Trial/mechanic mapping tables
+
+**Step 3: Team Building & Simulation**
+- Build 5–8 unique teams using only owned champions, maximizing trial/mechanic completion, damage, and hybrid approaches
+- For each team, specify all required details (roles, alternates, speed, gear, masteries, manual/auto, strengths, weaknesses, simulated results, affinity safety/risk, actionable advice)
+- Run at least 3 simulations per team and document results in the guide
+- Output: Team recommendation sections with detailed specs
+
+**Step 4: Guide Structure & Output**
+- Use a modular, anchor-linked Table of Contents
+- Add quick reference tables at the start of the guide
+- Populate all required sections: boss mechanics, trial/mechanic mapping, team tables, detailed team sections, best champions, direct comparisons, ideal pulls, general notes, actionable advice, validation/simulation notes
+- Use the canonical template (`Tools/Boss_Guide_Template.md`) for all guides
+- Output: Complete draft guide
+
+**Step 5: Update & Validation**
+- After any roster change, re-run all mapping, team building, and simulation steps
+- Regenerate all tables and recommendations as needed
+- Document all validation and simulation steps for transparency
+- Never overwrite the original file directly; always preserve previous versions and stage changes for review
+- Output: Finalized guide ready for user review
+
+---
+
+## Champion & Trial Mapping
+
+### Per-Trial Mapping
+
+For each boss trial or mechanic requirement, create a table listing all owned champions who can fulfill that requirement.
+
+**Table Format:**
+| Champion | Affinity | Role/Skill | Notes |
+|----------|----------|------------|-------|
+| Champion A | Magic | Debuff: Decrease DEF | A3 skill, 3-turn CD, 75% chance |
+| Champion B | Spirit | Debuff: Decrease DEF | A2 skill, 4-turn CD, 100% with books |
+
+**Per-Trial Requirements:**
+- List only owned champions (reference `Input/Owned_champion_list.md`)
+- Note affinity for each champion
+- Specify which skill/ability fulfills the requirement
+- Include cooldowns, chance rates, duration
+- Note gear/mastery dependencies
+- Flag affinity risks (weak hits, unreliable debuffs)
+
+### Combo Tables
+
+Create tables showing which champions can fulfill **multiple trials/mechanics** simultaneously.
+
+**Combo Table Format:**
+| Champion | Trial 1 | Trial 2 | Trial 3 | Affinity Safety |
+|----------|---------|---------|---------|-----------------|
+| Champion A | ✅ Dec DEF | ✅ HP Burn | ❌ | Safe (Magic) |
+| Champion B | ✅ Dec DEF | ❌ | ✅ Ally Protect | Risky (Weak to Force) |
+
+**Combo Table Benefits:**
+- Identify high-value champions (fulfill 3+ trials)
+- Optimize team slots (fewer champions needed)
+- Spot gaps (trials with few or no champions)
+- Prioritize upgrades (high-value champions first)
+
+### Affinity Safety Notes
+
+For each champion in mapping tables, note:
+- **Safe affinities**: Champion affinity is strong or neutral vs boss
+- **Risky affinities**: Champion is weak affinity (will miss debuffs/attacks more often)
+- **Critical roles**: If a champion is weak affinity but fills a critical role, note the risk and suggest backup
+
+**Example:**
+- Champion A (Spirit): **Risky** - Weak vs Magic boss, may miss Decrease DEF debuff. Consider Champion C (Force) as backup.
+
+---
+
+## Team Building & Simulation
+
+### Team Specifications
+
+For each recommended team, provide the following details:
+
+**Core Roles:**
+- Tank/Damage Dealer/Support/Debuffer/Healer
+- Specify which champion fills which role
+
+**Optimal Combo:**
+- List the ideal 5-champion lineup
+- Note synergies (e.g., Champion A's buff enables Champion B's nuke)
+
+**Alternates:**
+- For each core role, list 1-3 alternate champions from owned roster
+- Note when alternates are trial-specific (used only for specific mechanics)
+
+**Speed Tuning:**
+- Specify turn order (e.g., Debuffer → Buffer → Nuker → Cleanser → Healer)
+- Note speed requirements (e.g., Debuffer needs 220+ speed to go first)
+- Flag if speed tuning is flexible or strict
+
+**Gear:**
+- List gear sets for each role (e.g., Speed + Accuracy for debuffer)
+- Note stat priorities (e.g., Debuffer: 250+ ACC, 220+ SPD, 35k+ HP)
+
+**Masteries:**
+- Note key masteries (e.g., Warmaster for damage dealers, Support tree for healers)
+- Flag if specific masteries are required for trial completion
+
+**Manual/Auto:**
+- Specify if team works on auto or requires manual play
+- Note which skills to prioritize in manual mode
+
+**Strengths:**
+- List trials/mechanics the team excels at
+- Note expected damage tier or clear time
+
+**Weaknesses:**
+- List trials/mechanics the team struggles with or cannot complete
+- Note affinity risks or gear/skill dependencies
+
+**Simulated Results:**
+- Document clear times, damage scores, trial completion
+- Note success rate (e.g., 8/10 runs, 2 fails due to RNG)
+
+**Affinity Safety/Risk (Multi-Line):**
+```
+Affinity Safety/Risk:
+- Champion A (Magic): Safe vs Spirit boss
+- Champion B (Force): Risky vs Magic boss, may miss debuffs
+- Champion C (Void): Safe (neutral vs all affinities)
+```
+
+**Actionable Trial/Mechanic Advice:**
+- Step-by-step skill usage for trial completion
+- Example: "Turn 1: Champion A applies Decrease DEF. Turn 2: Champion B applies HP Burn. Turn 3: All champions attack to complete HP Burn trial."
+
+### Simulation Requirements
+
+**Minimum Simulations per Team:**
+- Run at least **3 test runs** per team
+- Document results for each run (clear time, damage, trials completed)
+
+**What to Document:**
+- Average clear time (or fastest, if times vary significantly)
+- Average damage score
+- Success rate (e.g., 10/10 runs, 7/10 runs)
+- Trial completion consistency (which trials were completed in all runs vs some runs)
+- Affinity risk observations (e.g., weak hit rate, debuff failure rate)
+
+**Data Sources for Validation:**
+- In-game testing (highest priority)
+- Community calculators (HellHades optimizer, Deadwood Jedi speed calculator)
+- Team composition guides (RaidHQ, Ayumilove, HellHades)
+
+---
+
+## Affinity Safety & Risk Requirements
+
+### Documentation Requirements
+
+**Every boss/team Markdown file must include:**
+
+1. **Boss Mechanics & Stat Requirements Section:**
+   - Explicit affinity information for the boss (e.g., "Boss is Magic affinity, weak to Force champions")
+   - Note any affinity-based mechanics (e.g., "Boss gains extra turn when hit by weak affinity")
+
+2. **Team Summary Table:**
+   - Add explicit, multi-line "Affinity Safety/Risk" column for each team
+
+3. **Detailed Team Sections:**
+   - For each team, include a multi-line "Affinity Safety/Risk" note
+   - Specify which affinities are safe, which are risky, and why
+   - Example format:
+   ```markdown
+   **Affinity Safety/Risk:**
+   - Champion A (Magic): Safe vs Spirit boss, strong affinity
+   - Champion B (Force): Risky vs Magic boss, may miss Decrease DEF debuff (60% weak hit rate observed)
+   - Champion C (Void): Safe, neutral affinity
+   - Overall: Low risk, only 1 champion has weak affinity and is not in critical role
+   ```
+
+### Weak Affinity Guidance
+
+**When to Avoid Weak Affinity Champions:**
+- **Critical debuffer roles**: If a champion must land a debuff to complete a trial, avoid weak affinity
+- **Low success rate**: If weak affinity causes >30% failure rate, note as high risk
+
+**When Weak Affinity May Be Acceptable:**
+- **Non-critical roles**: Tank or support roles where weak hits are less impactful
+- **High base accuracy**: Champion has 400+ accuracy and can partially offset weak hit penalty
+- **No better alternative**: If no neutral/strong affinity champion exists for the role, use weak affinity with explicit warning
+
+**Always Document:**
+- Why a weak affinity champion is recommended (if applicable)
+- What the risk is (e.g., "May fail to land Decrease DEF 30% of the time")
+- What the backup plan is (e.g., "If debuff fails, restart run or use Champion D as alternate")
+
+---
+
+## Guide Structure & Required Sections
+
+### Table of Contents
+
+**Requirements:**
+- Modular, anchor-linked Table of Contents at top of guide
+- Section numbers and anchors must match actual file structure
+- Update ToC whenever sections are added or reordered
+
+**Standard ToC Structure:**
 ```markdown
-# [Boss Name] Teams (Owned Champions Only)
-
 ## Table of Contents
-1. Boss Mechanics & Stat Requirements
-2. Teams by Estimated Damage/Clear Speed
-3. [Team Type 1]
-4. [Team Type 2]
-...
-N. Best Champions & Team Participation
-N+1. Direct Champion Comparisons by Role
-N+2. Ideal Champions to Pull, up to 50 per boss based on team setup.
 
----
-
-## Boss Mechanics & Stat Requirements
-- [Boss mechanics, immunities, stat thresholds, unique challenges, etc.]
-
----
-
-## Teams by Estimated Damage/Clear Speed
-| Team Name | Simulated Damage/Clear Time | Core Champions | Key Mechanics & Notes |
-|---|:---:|---|---|
-| ... | ... | ... | ... |
-
----
-
-## [Team Type Section]
-### Team: [Team Name]
-**Core Roles:** ...
-**Optimal Combo:** ...
-**Alternates:** ...
-**Speed Tuning:** ...
-**Gear:** ...
-**Masteries:** ...
-**Manual/Auto:** ...
-**Strengths:** ...
-**Weaknesses:** ...
-**Simulated Damage/Clear Time:** ...
-
----
-
-## Best Champions & Team Participation
-| Champion | Role(s) | Best Teams | Notes |
-|---|---|---|---|
-
----
-
-## Direct Champion Comparisons by Role
-...
-
----
-
-## Ideal Champions to Pull
-- [List and rationale for each boss/team]
+1. [Boss Mechanics & Stat Requirements](#boss-mechanics--stat-requirements)
+2. [Trial/Mechanic Mapping](#trialmechanic-mapping)
+3. [Quick Reference: Best Teams by Difficulty/Trial/Damage Tier](#quick-reference-best-teams)
+4. [Detailed Team Recommendations](#detailed-team-recommendations)
+   - [Team 1: High Damage, Manual](#team-1-high-damage-manual)
+   - [Team 2: Auto-Friendly, Trial Focused](#team-2-auto-friendly-trial-focused)
+5. [Best Champions & Team Participation](#best-champions--team-participation)
+6. [Direct Champion Comparisons by Role](#direct-champion-comparisons-by-role)
+7. [Ideal Champions to Pull](#ideal-champions-to-pull)
+8. [General Notes](#general-notes)
+9. [Actionable Notes & Upgrade Advice](#actionable-notes--upgrade-advice)
+10. [Validation & Simulation Notes](#validation--simulation-notes)
 ```
-# Copilot & AI Agent Instructions for Raid Tools (Oct 2025)
 
-> This file is the authoritative, codebase-specific guide for all AI coding agents. For universal project rules, see `.github/ai-assistant-instructions.md` (fallback for any ambiguity).
+### Boss Mechanics Section
 
-## Project Focus & Data Flow
+**Required Content:**
+- Boss forms/phases (e.g., Phase 1: Shield phase, Phase 2: Damage phase)
+- Turn order and boss actions per turn
+- Boss affinity and affinity-based mechanics
+- Unique mechanics (e.g., shields, counterattacks, stuns, debuff limits)
+- Trial types and stat/ability thresholds (e.g., "Complete 10 HP Burns", "Apply Decrease DEF 15 times")
+- Manual/Auto Play Notes subsection
 
-- **Primary workflow:** Process the canonical owned champion list (`input/Owned_Champions/Owned_champion_list.md`) to generate actionable, boss-specific team recommendations and summaries for Raid Shadow Legends.
-- **Boss context:** Default to Hard mode for all bosses (e.g., Clan Boss, Spider, Dragon, Fire Knight, etc.), but design for easy expansion to other difficulties and boss types.
-- **Champion data:** Always validate champion skills, stats, and mechanics using at least two authoritative online sources (Ayumilove, Hellhades, official Wiki). Document validation in prompts, commits, or logs.
-- **Output:** Generate modular, human-readable markdown guides and JSON summaries for each boss situation, using only owned champions. All outputs must be actionable and suitable for both AI and human review.
-- **No legacy workflows:** Remove or ignore all references to deprecated scripts, folders, or paths (e.g., `Champion Review and Comparison/`). Only use current, documented scripts and folder names.
+**Validation:**
+- Cross-validate with at least 2 sources (RaidHQ, Ayumilove, HellHades)
+- Document sources in this section or in Validation & Simulation Notes
 
-## Essential Workflows
+### Trial/Mechanic Mapping Section
 
-- **Environment setup:** `python Tools/Setup_Environment.py` or `make setup` (creates `.venv`, installs requirements, sets up VS Code config)
-- **Champion list update:** Edit `input/Owned_Champions/Owned_champion_list.md` to reflect current roster. All downstream outputs are based on this file.
-- **Boss team generation:** For each boss, generate teams and guides using only owned champions, referencing validated skill/mechanic data from online sources.
-- **Markdown/JSON output:** All team guides and summaries must be modular, actionable, and human-readable. Use clear headers, tables, and role separation. Save outputs in the appropriate `Notes/` or `output/` subfolder.
-- **Validation:** Cross-check all champion and boss data with at least two sources. Use `Tools/validate_json.py` for JSON validation if applicable.
+**Required Content:**
+- Per-trial tables (see Champion & Trial Mapping section above)
+- Combo tables showing multi-trial champions
+- Affinity safety notes for each champion
 
-## Project Conventions
+### Team Recommendation Sections
 
-- **Champion JSONs:** Use only allowed top-level keys (`champion`, `rarity`, `owned`, `modules`). All modules (e.g., `synergy`, `gear`, `summary`) are nested under `modules`.
-- **No file/folder deletion** by AI agents—never run or suggest destructive operations.
-- **Prompt/JSON overwrite policy:** Never overwrite a completed prompt in `output/completed_prompts/`. Prompts in `input/Prompt/` are always overwritten unless a completed prompt exists.
-- **Validation:** All champion data must be cross-checked with at least two sources (Ayumilove, Hellhades, Wiki). Document validation in prompts or commits.
-- **No legacy paths:** Always use the latest folder/script names (e.g., `ChampionIntake/`, not `Champion Review and Comparison/`).
-- **Testing:** All new features require pytest tests in `Tests/` or `root_Tests/`.
+**Quick Reference Table:**
+```markdown
+| Team Name | Difficulty | Damage Tier | Trials Completed | Manual/Auto | Affinity Safety/Risk |
+|-----------|------------|-------------|------------------|-------------|----------------------|
+| Team 1    | Hard       | High (15M+) | 8/10             | Manual      | Low risk (1 weak)    |
+| Team 2    | Hard       | Medium (10M)| 10/10            | Auto        | Safe (all neutral)   |
+```
 
-## Example: Boss Team Markdown Output
+**Detailed Team Sections:**
+For each team, include all specifications from "Team Building & Simulation" section above.
+
+**Uniqueness Requirement:**
+- All teams must use unique, owned champions (no champion appears in multiple teams)
+- If multiple teams would use the same champion list, suggest variations based on:
+  - Boss mechanics (e.g., Team A for Phase 1, Team B for Phase 2)
+  - Use case (e.g., Team A for manual high damage, Team B for auto trial completion)
+  - Affinity risk (e.g., Team A for safe affinity, Team B with risky affinity if needed)
+  - Clear speed (e.g., Team A for fast clear, Team B for consistent clear)
+
+### Reference Sections
+
+**Best Champions & Team Participation:**
+- Table of top champions, their roles, and which teams they appear in
+- Sort by participation (champions in multiple teams) or role importance
+
+**Direct Champion Comparisons by Role:**
+- Table comparing only owned champions by key roles (e.g., all owned debuffers, all owned damage dealers)
+- Include a note: "This section compares only owned champions."
+
+**Ideal Champions to Pull:**
+- List champions **not on the owned list** that would improve team performance
+- Provide rationale (e.g., "Champion X would enable Trial Y completion")
+- Provide upgrade path advice (e.g., "Pull Champion X first, then Champion Y")
+- **Important:** Only include non-owned champions in this section
+
+**General Notes:**
+- Gear priorities (e.g., "Accuracy > Speed > HP for debuffers")
+- Masteries priorities (e.g., "Warmaster for all damage dealers")
+- Stat priorities by role
+- Manual/auto play general advice
+
+**Actionable Notes & Upgrade Advice:**
+- Trial/mechanic prioritization (which trials to focus on first)
+- Upgrade path (which champions to upgrade first, which gear to farm)
+- Common pitfalls (e.g., "Don't use Spirit champions on Magic boss")
+
+**Validation & Simulation Notes:**
+- Number of simulations/test runs performed (minimum 3 per team)
+- How clear times and success rates were determined (average, fastest, manual/auto)
+- Affinity safety/risk notes based on observed weak hit rates and debuff reliability
+- Data sources used for validation (e.g., HellHades, Ayumilove, in-game testing)
+
+---
+
+## Update & Staging Policy
+
+### When Owned Champion List Changes
+
+**Process:**
+1. Supply a new `Owned_champion_list.md` or note the added/removed champion
+2. Re-run the team and trial/mechanic mapping process to update all tables and recommendations
+3. Regenerate the "Ideal Champions to Pull" and "Team Upgrade Paths" sections to reflect new gaps
+4. **Never overwrite the original file directly**; always preserve previous versions and stage changes for review
+
+**File Versioning:**
+- Create new file with version suffix (e.g., `Bommal_Boss_Guide_v2.md`) or date stamp (e.g., `Bommal_Boss_Guide_2025-10-17.md`)
+- Preserve original file for comparison
+- After user review, original may be archived or replaced
+
+**Update Scope:**
+- All trial/mechanic mapping tables
+- All team recommendations (may need to rebuild teams if key champions are added/removed)
+- Best Champions & Team Participation table
+- Direct Champion Comparisons by Role
+- Ideal Champions to Pull (remove now-owned, reprioritize)
+- Validation & Simulation Notes (note when file was updated and why)
+
+### Large File Operations & Batching Requirements
+
+**When to Use Batched Processing:**
+
+Large file operations (500+ lines, multiple sections, or complex merges) **must** be batched to prevent:
+- Prompt length issues (token limit exceeded)
+- Runtime/memory issues
+- Difficulty in reviewing changes
+- Loss of context during long operations
+
+**Batching Strategy:**
+
+1. **Plan the Work:**
+   - Break file operations into logical sections (50-200 lines per batch)
+   - Create numbered batch tasks (BATCH 1, BATCH 2, etc.)
+   - Summarize batch plan in markdown for user review before starting
+
+2. **Batch Size Guidelines:**
+   - **BATCH 1:** Header/Title + Enhancement History (~50-200 lines)
+   - **BATCH 2:** Table of Contents (~20-50 lines)
+   - **BATCH 3:** Boss Mechanics & Trial Mapping (~200-300 lines)
+   - **BATCH 4:** Team Sections 1-3 (~200-300 lines)
+   - **BATCH 5:** Team Sections 4-6 (~200-300 lines)
+   - **BATCH 6:** Reference Sections (~100-200 lines)
+   - **BATCH 7:** Validation & Final Review
+   - **BATCH 8:** Cleanup & Git Commit
+
+3. **Batch Execution:**
+   - Complete one batch at a time
+   - Confirm completion with ✅ status update in chat
+   - Update todo list after each batch
+   - Provide brief summary (lines added, current file size)
+   - Ask for user confirmation before proceeding to next batch (or proceed automatically if instructed)
+
+4. **Batch Documentation:**
+   - Create todo list items for each batch
+   - Mark completed batches with ✅
+   - Document what was done in each batch
+   - Note any issues or deviations from plan
+
+**Example Batch Plan:**
 
 ```markdown
-# Hard Spider Teams (Owned Champions Only)
+## Merge Strategy Summary
 
-## Table of Contents
-1. Teams by Estimated Clear Speed & Consistency
-2. Key Boss Mechanics & Stat Requirements
-3. High-Damage Nuker Teams
-...
+### Source Files Analysis:
+- File A (500 lines): Complete content
+- File B (200 lines): Enhancement history
+- File C (150 lines): Additional metadata
+
+### Batching Approach:
+
+**BATCH 1: Header + Enhancement History** ✅ Starting Now
+- Create new file header
+- Merge enhancement overview from Files B & C
+- ~100 lines
+
+**BATCH 2: Table of Contents**
+- Copy ToC from File A
+- Update section numbers
+- ~30 lines
+
+**BATCH 3-5: Main Content**
+- Copy sections 1-N from File A
+- Split across 3 batches if needed
+- ~400 lines total
+
+**BATCH 6: Finalize**
+- Validate formatting
+- Cleanup old files
 ```
 
-## Example: Champion JSON Structure
+**Critical Rules:**
+- Never attempt to create/edit files >400 lines in a single operation
+- Always batch when merging multiple files
+- Always batch when file will exceed 500 lines
+- Always provide batch summary before starting work
+- Always update todo list after each batch completion
 
-```json
-{
-   "champion": "Example Champion",
-   "rarity": "Legendary",
-   "owned": true,
-   "modules": {
-      "synergy": {"ally_support": true},
-      "gear": {"recommended_sets": ["Speed", "Accuracy"]},
-      "summary": {"overview": "A strong support champion for clan boss."}
-   }
-}
+---
+
+## Section-by-Section Maintenance
+
+### Maintenance Workflow
+
+For each section in the Table of Contents, follow this process:
+
+**1. Review and Update Table of Contents**
+- Ensure ToC matches actual sections in the file
+- Update section numbers and anchors if structure changed
+
+**2. Boss Mechanics & Stat Requirements**
+- Re-validate mechanics, stat thresholds, affinity notes
+- Ensure "Manual/Auto Play Notes" subsection is present
+- Cross-check with at least 2 sources (RaidHQ, Ayumilove, HellHades)
+
+**3. Teams by Estimated Damage/Clear Speed**
+- Update table with any new teams or removed teams
+- Add explicit, multi-line affinity column if missing
+- Verify all teams use only unique, owned champions
+- If multiple teams use the same champion list, suggest variations based on boss mechanics or use case (manual vs auto, affinity risk, clear speed, etc.)
+
+**4. Detailed Team Sections**
+- Add/refresh explicit, multi-line affinity notes for each team
+- Ensure all required subfields are present (roles, alternates, speed, gear, masteries, manual/auto, strengths, weaknesses, simulated results, affinity safety/risk, actionable advice)
+- If two teams use the same champion list, suggest variations based on boss mechanics, affinity, or playstyle
+
+**5. Best Champions & Team Participation**
+- Update for new teams/champions
+- Re-sort by participation or role importance
+
+**6. Direct Champion Comparisons by Role**
+- Update for new roster
+- Only list owned champions in this section
+- Include a note clarifying this (e.g., "This section compares only owned champions.")
+
+**7. Ideal Champions to Pull**
+- Remove now-owned champions
+- Reprioritize based on new gaps
+- Only include champions not on the owned list
+
+**8. General Notes**
+- Add or update actionable advice on gear, masteries, stat priorities, manual/auto play
+- Ensure advice is current with latest champion roster
+
+**9. Validation & Simulation Notes**
+- Document all validation and simulation steps
+- Include:
+  - Number of test runs (minimum 3 per team recommended)
+  - Clear time methodology (average, fastest, manual/auto)
+  - Affinity risk observations (weak hit rates, debuff reliability)
+  - Data sources (HellHades, Ayumilove, in-game testing)
+
+---
+
+## Validation & Documentation Standards
+
+### Source Cross-Validation
+
+**All champion and boss data must be cross-checked with at least two sources:**
+- RaidHQ (primary for boss mechanics)
+- Ayumilove (champion skills, gear recommendations)
+- HellHades (team compositions, tier lists)
+- In-game testing (highest priority for validation)
+
+**Document Conflicts:**
+- If sources disagree, note the conflict in "Validation & Simulation Notes"
+- Prefer community consensus (RaidHQ + Ayumilove/HellHades agree)
+- If no consensus, note as "Uncertain" or "Data Confidence: Medium/Low"
+
+### Simulation Documentation
+
+**Every boss/team Markdown file must include a "Validation & Simulation Notes" section at the end, stating:**
+- **Number of simulations/test runs performed** (minimum 3 per team recommended)
+- **How clear times and success rates were determined** (average, fastest, manual/auto, etc.)
+- **Affinity safety/risk notes** based on observed weak hit rates and debuff reliability
+- **Data sources used for validation** (e.g., HellHades, Ayumilove, in-game testing)
+
+**Alternative:** If not using a dedicated section, include explicit documentation of simulation/validation steps for each team in the team's detailed section.
+
+### Transparency & Reproducibility
+
+- Document all validation and simulation steps in the Markdown file or commit message
+- Enable users to reproduce results or validate recommendations
+- Note assumptions (e.g., "Assumes all champions are level 60, fully ascended, with Warmaster/Helmsmasher")
+
+---
+
+## Templates & Examples
+
+### Boss Guide Template
+
+**Canonical Template:**
+- `Tools/Boss_Guide_Template.md` is the standard template for all guides
+- All boss guides must match template structure and required sections
+- Use template as starting point for new boss guides
+
+### Team Table Format
+
+**Quick Reference Table:**
+```markdown
+| Team Name | Difficulty | Damage Tier | Trials Completed | Manual/Auto | Affinity Safety/Risk |
+|-----------|------------|-------------|------------------|-------------|----------------------|
+| Example   | Hard       | High (15M+) | 8/10             | Manual      | Low risk (1 weak)    |
 ```
 
-## Safety & Fallback
+### Trial Mapping Table Format
 
-- Never delete files/folders. For any ambiguous workflow, defer to `.github/ai-assistant-instructions.md`.
-
----
-
-# (Retain style, AI power, and housekeeping sections below as relevant)
-
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [JSON Export Structure and Enforcement](#json-export-structure-and-enforcement)
-3. [Validation and Cross-Source Verification](#validation-and-cross-source-verification)
-4. [Prompt and Workflow Consistency](#prompt-and-workflow-consistency)
-5. [Safety and Non-Destructive Policy](#safety-and-non-destructive-policy)
-6. [Documentation and Test Alignment](#documentation-and-test-alignment)
-7. [Modular, Human-Readable Outputs](#modular-human-readable-outputs)
-8. [AI Model and Tooling Guidance](#ai-model-and-tooling-guidance)
-9. [Error Handling and Troubleshooting](#error-handling-and-troubleshooting)
-10. [Contribution and Review Process](#contribution-and-review-process)
-11. [Example Section for Common Tasks](#example-section-for-common-tasks)
-12. [General Guidelines](#general-guidelines)
-13. [Change Management & Documentation](#change-management--documentation)
-14. [Testing & Validation](#testing--validation)
-15. [AI Model & Prompting](#ai-model--prompting)
-16. [Formatting & Style](#formatting--style)
-17. [Simplicity & Maintainability](#simplicity--maintainability)
-18. [Feedback & Review](#feedback--review)
-19. [Core Technical Standards](#core-technical-standards)
-20. [Project Architecture](#project-architecture)
-21. [Data Flow and Processing](#data-flow-and-processing)
-22. [AI Assistant Behavior Guidelines](#ai-assistant-behavior-guidelines)
-23. [Common Task Patterns](#common-task-patterns)
-24. [Automation and Workflow](#automation-and-workflow)
-25. [Quality Assurance](#quality-assurance)
-26. [Security and Best Practices](#security-and-best-practices)
-27. [Integration Guidelines](#integration-guidelines)
-28. [Troubleshooting Common Issues](#troubleshooting-common-issues)
-29. [Recent Changes & Updates](#recent-changes--updates)
-30. [Future Development Considerations](#future-development-considerations)
-31. [Contact and Contribution](#contact-and-contribution)
-32. [Handling Deprecated Scripts & Data Migrations](#handling-deprecated-scripts--data-migrations)
-
----
-
-## Project Overview
-Raid Tools is a Python-based project for analyzing Raid Shadow Legends champion data. The project generates JSON champion profiles, performs skill cycle analysis, and creates human-readable markdown summaries. This project follows modern Python practices with comprehensive testing, automation, and documentation standards.
-
----
-
-## JSON Export Structure and Enforcement
-- All champion JSON exports must be strictly modular and nested.
-- Each module (e.g., `synergy`, `gear`, `summary`) must be a sub-object under a `modules` dictionary.
-- Only the allowed top-level keys (`champion`, `rarity`, `owned`, `modules`) are permitted.
-- Keys like `relentless_viability` and `mastery_impact_of_gear` must only appear within their relevant module object, never at the top level.
-- Reference the template in `ChampionIntake/templates/logTemplate.json` as the canonical structure.
-
-## Validation and Cross-Source Verification
-- All champion data (skills, stats, multipliers, cooldowns, etc.) must be validated against at least two authoritative sources (Raid Shadow Legends Wiki, Ayumilove, Hellhades).
-- Document the validation process in prompts, commit messages, or workflow logs.
-
-## Prompt and Workflow Consistency
-- All prompt completions must use the template in `ChampionIntake/templates/Prompt_Template.md`.
-- For now, ignore the completed prompt file and directory. Only generate the JSON response.
-- Use the generated JSON in the summary generation script to create a markdown file for review.
-- Data source priority for champion skill and stat information: Ayumilove (text) > HellHades > other sources.
-- JSONs must be generated only from validated, completed prompts.
-
-## Safety and Non-Destructive Policy
-- AI assistants must never delete files or folders, even if requested by a user.
-- All destructive actions must be confirmed and executed by a human.
-
-## Documentation and Test Alignment
-- Any new feature, script, or workflow change must be accompanied by updates to documentation and tests.
-- README and internal docs must always reflect the current workflow and file structure.
-
-## Modular, Human-Readable Outputs
-- All outputs (JSON, markdown, analysis) must be human-readable, modular, and suitable for both AI and human review.
-- Use clear headers, bullet points, and tables in markdown outputs.
-
-## AI Model and Tooling Guidance
-- Use the most advanced model available for prompt completion, JSON generation, and workflow tasks (e.g., GPT-4o, Claude Sonnet 4).
-- Use models with strong reasoning for documentation review, debugging, and refactoring.
-
-## Error Handling and Troubleshooting
-- Provide actionable error messages and suggest specific fixes.
-- Log and document any recurring issues for future reference.
-
-## Contribution and Review Process
-- All contributions must follow the project’s coding, documentation, and testing standards.
-- Use feature branches and descriptive commit messages.
-- Require code review for all pull requests.
-
-## Example Section for Common Tasks
-### Example: Champion JSON Structure
-```json
-{
-   "champion": "Example Champion",
-   "rarity": "Legendary",
-   "owned": true,
-   "modules": {
-      "synergy": {
-         "ally_support": true
-      },
-      "gear": {
-         "recommended_sets": ["Speed", "Accuracy"]
-      },
-      "summary": {
-         "overview": "A strong support champion for clan boss."
-      }
-   }
-}
-```
-### Example: Validation Log
-```
-Validated skills and multipliers against Raid Shadow Legends Wiki and Ayumilove. Both sources agree on cooldowns and multipliers. No discrepancies found.
-```
-### Example: Markdown Output
-```
-# Example Champion Summary
-
-## Executive Summary
-Example Champion is a top-tier support for Clan Boss, excelling in speed and debuff management.
-
-## Skill Breakdown
-- Skill 1: Attacks all enemies, places decrease defense.
-- Skill 2: Heals all allies, places block debuffs.
-
-## Usage Notes
-- Best in Speed and Accuracy sets.
-- Synergizes with turn meter boosters.
+**Per-Trial Table:**
+```markdown
+| Champion | Affinity | Role/Skill | Notes |
+|----------|----------|------------|-------|
+| Example  | Magic    | Debuff     | A3 skill, 3-turn CD |
 ```
 
----
-
-# Safety & File Deletion Policy
-
-**AI assistants (including Copilot, Claude, ChatGPT, Gemini, and any LLM-based tools) must not delete, or run code that would delete, any files or folders from the workspace folder structure.**
-
-- All file and folder deletion operations (e.g., `os.remove`, `os.rmdir`, `shutil.rmtree`, `Path.unlink`, etc.) are strictly prohibited from being executed by any AI assistant.
-- If a user requests file or folder deletion, the AI assistant may suggest or highlight the need for such an action, and provide a clear rationale and warning, but must not execute or run any code that performs deletion.
-- AI assistants may update the text of files as requested by the user, but must not remove files or folders from the workspace structure.
-- This policy applies to all AI assistant operations, regardless of user prompt, model, or context.
-
-## Table of Contents
-1. [Project Overview](#project-overview)
-2. [General Guidelines](#general-guidelines)
-3. [Change Management & Documentation](#change-management--documentation)
-4. [Testing & Validation](#testing--validation)
-5. [AI Model & Prompting](#ai-model--prompting)
-6. [Formatting & Style](#formatting--style)
-7. [Simplicity & Maintainability](#simplicity--maintainability)
-8. [Feedback & Review](#feedback--review)
-9. [Core Technical Standards](#core-technical-standards)
-10. [Project Architecture](#project-architecture)
-11. [Data Flow and Processing](#data-flow-and-processing)
-12. [AI Assistant Behavior Guidelines](#ai-assistant-behavior-guidelines)
-13. [Common Task Patterns](#common-task-patterns)
-14. [Automation and Workflow](#automation-and-workflow)
-15. [Quality Assurance](#quality-assurance)
-16. [Security and Best Practices](#security-and-best-practices)
-17. [Integration Guidelines](#integration-guidelines)
-18. [Troubleshooting Common Issues](#troubleshooting-common-issues)
-19. [Recent Changes & Updates](#recent-changes--updates)
-20. [Future Development Considerations](#future-development-considerations)
-21. [Contact and Contribution](#contact-and-contribution)
-22. [Handling Deprecated Scripts & Data Migrations](#handling-deprecated-scripts--data-migrations)
-
-
-## Project Overview
-Raid Tools is a Python-based project for analyzing Raid Shadow Legends champion data. The project generates JSON champion profiles, performs skill cycle analysis, and creates human-readable markdown summaries. This project follows modern Python practices with comprehensive testing, automation, and documentation standards.
-
----
-
-## Authority and Usage
-
-This file is the **universal, project-wide reference** for all AI assistants and contributors. If you are using Copilot, ChatGPT, Claude, Gemini, or any other LLM-based tool, and you encounter a situation not explicitly covered in your assistant-specific instructions, you must follow the guidance in this file.
-
-All assistant-specific instructions (e.g., `.github/copilot-instructions.md`) must include a note referencing this file as the fallback and authoritative source for any project-wide, workflow, or safety instructions.
-
-## Handling Deprecated Scripts & Data Migrations
-
-- When deprecating scripts or migrating data formats, update all references in documentation, tasks, and scripts to use the new paths and formats.
-- Clearly mark deprecated scripts with comments and in the project tracking file.
-- Provide migration scripts or instructions when possible.
-- Remove or archive legacy files after migration is validated.
-- Update the Index of Bad Ideas & Risky Features if deprecation or migration introduces risk.
-
-**Optimized for:** Claude Sonnet 3.5/4.0, GPT-4, GPT-4o, ChatGPT, Gemini, and any advanced coding LLMs with strong Python and project comprehension capabilities.
-
----
-
-## General Guidelines
-- **Always use the latest folder and script names; do not reference legacy paths (e.g., `Champion Review and Comparison/`).**
-If you find any legacy paths or references (such as `Champion Review and Comparison/`), update them to the new structure (e.g., `ChampionIntake/`, `ChampionSummary/`, `src/`, `data/`, `output/`).
-- **Language:** Python 3.9+ with type hints and f-string formatting
-- **Code Formatting:** Black formatter (line length 88 characters)
-- **Linting:** flake8 for code quality enforcement
-- **Testing Framework:** pytest with 90%+ coverage target
-- **Documentation:** Google-style docstrings for all public functions/classes
-- **File Naming:** snake_case.py for all Python files
-- **No Emojis:** Avoid emojis in code, documentation, or output
-- **Error Handling:** Use Python exceptions with clear, actionable messages
-- **Imports:** Use pathlib for file operations, organize imports logically
-- **Functions:** Keep functions focused and small, prefer composition over inheritance
-- **Cross-Platform:** All scripts must work on Windows, macOS, and Linux
-- **Virtual Environment:** Use .venv for isolation
-- **Dependencies:** Minimal, well-documented in requirements.txt
-- **Automation:** Makefile and VS Code tasks for common operations
-- **Chat Behavior:** Provide concise, relevant code snippets; continue to work on larger tasks up to 4 cycles without asking for confirmation if needed
-- **Positive but Realistic:** Stay positive but when there is a better solution, tool, implementation, or approach, suggest it. Note when something is not possible or not recommended.
-- **Accessing external sites:** Always allow access to Raid Shadow Legends Wiki, Ayumilove, Hellhades, and other relevant sites for champion data verification and research.
-- **File edits:** Directly edit files, but prefer line by line changes instead of text blocks to better compare versions/commits, and allow smaller overall changes in each save/commit/etc.
-
----
-
-## Change Management & Documentation
-- Use line-by-line edits for clarity and easier review.
-- Commit messages must be clear, imperative, and reference the logical unit of work (see project tracking file for examples).
-- If a change affects documentation, update the relevant README or tracking file in the same commit.
-- When updating documentation, ensure all references to scripts, folders, and workflows are current. Remove or update legacy references.
-- When updating the project tracking file, always update the Index of Bad Ideas & Risky Features and keep section numbers sequential.
-- All markdown files should use consistent header levels and section numbering.
-- When adding new features, update all relevant documentation, tracking, and index files. Cross-reference related sections for clarity.
-
----
-
-## Testing & Validation
-- All new features and bugfixes must include or update pytest tests.
-- Run `pytest` before committing.
-- If a change affects VS Code tasks or Makefile, validate with `test_tasks_json_and_scripts.py`.
-
----
-
-## AI Model & Prompting
-- These instructions apply to all AI assistants (Copilot, Claude, ChatGPT, Gemini, etc.) and all human contributors.
-- When generating code or documentation, prefer clarity and simplicity.
-- Avoid overengineering or adding unnecessary complexity.
-- For LLM/AI integration, only proceed if there is a clear, valuable use case.
-- Reference the project tracking file for current status and risks.
-
----
-
-## Formatting & Style
-- Use Black and flake8 for all Python code. Run formatting and linting before committing.
-- All markdown files should use consistent header levels and section numbering.
-
----
-
-## Simplicity & Maintainability
-- Favor simple, maintainable solutions. Avoid duplicating functionality already provided by external tools or libraries.
-
----
-
-## Feedback & Review
-- When reviewing or updating planning files, consolidate repeated feedback and clarify section purposes.
-- If a change affects documentation, update all relevant files and cross-reference related sections.
-
----
-
-## Core Technical Standards
-
-### Development Environment
-- **Cross-Platform:** All scripts must work on Windows, macOS, and Linux
-- **Virtual Environment:** Use .venv for isolation
-- **Dependencies:** Minimal, well-documented in requirements.txt
-- **Automation:** Makefile and VS Code tasks for common operations
-
-### Dependencies
-Current requirements include:
-- **colorama** — Cross-platform colored terminal text
-- **pyperclip** — Clipboard access for copy/paste functionality
-- **pytest** — Testing framework
-- **black** — Code formatter
-- Additional packages as needed (always update `requirements.txt`)
-
-### Environment Setup Process
-1. Clone the repository
-2. Run `make setup` or manually create and activate virtual environment
-3. Install dependencies from `requirements.txt`
-4. Copy `.env.example` to `.env` and configure any secrets
-5. Run `make test` or `pytest` to verify setup
-6. Start with a small feature or bugfix branch
-
-### Code Style Guidelines
-- **No Emojis:** Avoid emojis in code, documentation, or output
-- **Error Handling:** Use Python exceptions with clear, actionable messages
-- **Imports:** Use pathlib for file operations, organize imports logically
-- **Functions:** Keep functions focused and small, prefer composition over inheritance
-
----
-
-## Project Architecture
-
-### Directory Structure
-```
-Raid_Tools/
-├── ChampionIntake/
-│   ├── Champ_Intake.py  # Champion data intake script
-│   ├── Tools/           # Data management and cleanup utilities
-│   ├── Champions/       # JSON champion data files
-│   ├── Comparisons/     # Champion comparison scripts
-│   └── Tests/           # Module-specific tests
-├── ChampionAnalysisTool/
-│   ├── championAnalysis.py    # Skill cycle simulation
-│   └── cooldown_analysis/     # Analysis output files
-├── ChampionSummary/
-│   ├── generateChampionSummaries.py  # Markdown generation
-│   └── Summary/               # Human-readable summaries
-├── root_Tests/          # Project-wide test cases
-├── templates/           # JSON templates for new champions
-├── .github/            # GitHub workflows and configuration
-└── .vscode/            # VS Code tasks and settings
+**Combo Table:**
+```markdown
+| Champion | Trial 1 | Trial 2 | Trial 3 | Affinity Safety |
+|----------|---------|---------|---------|-----------------|
+| Example  | ✅      | ✅      | ❌      | Safe (Magic)    |
 ```
 
-### Key Scripts and Their Purposes
-- **Champ_Intake.py** — Main champion intake and prompt generation (located in `ChampionIntake/`)
-- **championAnalysis.py** — Skill cycle simulation and cooldown analysis
-- **generateChampionSummaries.py** — Convert analysis to readable markdown
-- **Setup_Environment.py** — Automated environment setup
-- **cleanup_duplicate_champions.py** — Merge duplicate champion files (located in `Tools/`)
-- **Makefile** — Build automation and task management
+### Affinity Safety/Risk Note Format
 
----
-
-## Data Flow and Processing
-
-### Champion Data Pipeline
-1. **Data Intake** (`Champ_Intake.py`)
-   - Collect champion information from game sources
-   - Generate structured JSON using templates/logTemplate.json
-   - Validate against Raid Shadow Legends official data
-   - Cross-reference with Ayumilove and Hellhades for accuracy
-
-2. **Analysis Processing** (`championAnalysis.py`)
-   - Parse champion skills and stats from JSON
-   - Simulate skill rotation cycles
-   - Calculate cooldown timings and optimal sequences
-   - Generate analysis data for summary creation
-
-3. **Summary Generation** (`generateChampionSummaries.py`)
-   - Transform analysis into human-readable markdown
-   - Structure: Executive summary, skill breakdown, notes
-   - Output to ChampionSummary/Summary/ directory
-
-### Data Validation Standards
-- All champion JSONs must conform to the template structure
-- Cross-reference multiple sources for data accuracy
-- Implement schema validation for new champion fields
-- Maintain data consistency across all output formats
-
----
-
-## AI Assistant Behavior Guidelines
-
-### Task Approach
-- **Persistence:** Continue working on multi-step tasks for up to 4 cycles without asking for confirmation
-- **Proactivity:** Suggest better solutions, tools, or implementations when applicable
-- **Realism:** Clearly indicate when something is not possible or not recommended
-- **Completeness:** Ensure full task completion before moving to next items
-- **Context Awareness:** Leverage conversation history and project context for informed decisions
-- **Tool Usage:** Prefer built-in tools over manual commands when available
-
-### Code Generation Standards
-- Always include type hints and docstrings for new functions
-- Use pathlib for file operations instead of os.path
-- Implement proper error handling with try/except blocks
-- Follow the established naming conventions and file organization
-- Update requirements.txt when adding new dependencies
-- **JSON Processing:** Use GPT-4o for JSON file creation, modification, and structural updates
-- **Template Compliance:** Ensure all champion JSONs follow the logTemplate.json structure
-- Use pathlib for file operations instead of os.path
-- Implement proper error handling with try/except blocks
-- Follow the established naming conventions and file organization
-- Update requirements.txt when adding new dependencies
-
-### Testing Requirements
-- Write pytest tests for all new features and bug fixes
-- Place tests in appropriate directories (Tests/ or root_Tests/)
-- Use descriptive test names and include docstrings
-- Aim for 90%+ code coverage on core functionality
-- Include schema validation tests for JSON data structures
-
----
-
-## Common Task Patterns
-
-### Champion JSON Creation
-```python
-# Use templates/logTemplate.json as the base structure
-# Validate against multiple sources: Raid Shadow Legends, Ayumilove, Hellhades
-# Ensure all required fields are present and correctly formatted
-# Save to ChampionIntake/Champions/
-# Use Tools/validate_json.py to verify JSON structure after creation
-```
-
-### JSON Validation and Fixing
-```python
-# Use Tools/validate_json.py for individual file validation
-# Run with --all flag to validate all champion JSON files
-# For corrupted files: identify specific line/column errors
-# Apply targeted fixes rather than full file replacement when possible
-```
-
-### Summary Generation
-```python
-# Read from Champions/ directory
-# Process through championAnalysis.py if needed
-# Generate markdown with clear structure:
-#   - Executive Summary
-#   - Skill Breakdown
-#   - Usage Notes
-#   - Statistical Analysis
-# Output to ChampionSummary/Summary/
-```
-
-### Script Enhancement
-```python
-# Add type hints to all function parameters and returns
-# Include comprehensive docstrings with Args/Returns/Raises
-# Implement proper error handling
-# Add corresponding test cases
-# Update documentation and README files
+**Multi-Line Format (Preferred):**
+```markdown
+**Affinity Safety/Risk:**
+- Champion A (Magic): Safe vs Spirit boss, strong affinity
+- Champion B (Force): Risky vs Magic boss, may miss debuffs (60% weak hit rate)
+- Champion C (Void): Safe, neutral affinity
+- Overall: Low risk, only 1 champion has weak affinity in non-critical role
 ```
 
 ---
 
-## Automation and Workflow
+## Task Checklist
 
-### Makefile Commands
-- `make setup` — Environment setup and dependency installation
-- `make test` — Run complete test suite with pytest
-- `make lint` — Code quality check with flake8
-- `make format` — Code formatting with Black
-- `make intake` — Run champion data intake process
-- `make analysis` — Execute champion analysis pipeline
-- `make summary` — Generate markdown summaries
-- `make clean` — Clean up build artifacts and cache
+**For Each Boss Guide, Complete the Following:**
 
-### VS Code & AI Assistant Integration
-Available tasks via Command Palette, task runner, or AI assistant interface:
-- "Run Champion Intake" — Execute data collection workflow
-- "Run Champion Comparison Tracker" — Compare owned champions
-- "Cleanup Duplicate Champions" — Remove duplicate entries
-- "Run Champion Analysis Tool" — Perform skill cycle analysis
-- "Generate Champion Summaries" — Create readable summaries
-
-### LLM/AI Optimization
-- **File Reading Strategy:** Read large meaningful chunks rather than small sections
-- **Tool Usage:** Use semantic_search for project understanding, file_search for specific patterns
-- **Code Generation:** Always include full context in code examples
-- **Multi-step Tasks:** Break complex requests into logical sub-tasks
-- **Error Handling:** Provide specific, actionable error messages and solutions
+- [ ] **Gather and summarize all boss mechanics**, forms/phases, turn order, affinities, unique mechanics, trial types, and stat thresholds (validated, sources cited)
+- [ ] **Map all trials/mechanics to owned champions** (per-trial and combo tables, with affinity safety/risk and special notes)
+- [ ] **Draft and update a modular, anchor-linked Table of Contents** (per template)
+- [ ] **Add quick reference tables** for best teams by difficulty/trial/damage tier
+- [ ] **Build and simulate 5–8 unique teams** (trial-focused, damage-focused, hybrid)
+- [ ] **For each team, document:** core roles, optimal combo, alternates, speed tuning, gear, masteries, manual/auto, strengths, weaknesses, simulated results, affinity safety/risk, actionable trial/mechanic advice
+- [ ] **Run at least 3 simulations per team** and document results
+- [ ] **Summarize best champions & team participation** (table)
+- [ ] **Create direct champion comparisons by role** (owned only)
+- [ ] **List ideal champions to pull** and team upgrade paths (non-owned only)
+- [ ] **Add general notes**, actionable advice, and common pitfalls
+- [ ] **Document all validation and simulation steps** (sources, methodology, results)
+- [ ] **After any roster change**, re-run all mapping, team building, and simulation steps; update all tables and recommendations
+- [ ] **Never delete files or folders**; create new versions for major changes
 
 ---
 
-## Quality Assurance
+## Additional Questions for User/Reviewer
 
-### Code Review Checklist
-- [ ] Type hints on all function signatures
-- [ ] Google-style docstrings for public functions
-- [ ] Proper error handling with meaningful messages
-- [ ] Cross-platform compatibility (Windows/macOS/Linux)
-- [ ] Test coverage for new functionality
-- [ ] Updated documentation and README files
-- [ ] Dependencies added to requirements.txt
-- [ ] Black formatting applied
-- [ ] flake8 linting passes
+These questions were answered by the user and should guide all boss guide generation:
 
-### Documentation Standards
-- Use clear, concise language without emojis
-- Include code examples for complex functions
-- Document expected file formats and data structures
-- Provide troubleshooting information for common issues
-- Keep README files current with actual script behavior
+**1. Are there any specific team archetypes or trial/mechanic types you want prioritized in future updates?**
+- **Answer:** Not any at this time. But leave this as an open option.
 
----
+**2. Should the guide include more detailed turn-by-turn skill usage for each team, or is the current actionable advice sufficient?**
+- **Answer:** Use more detailed skill by skill usage. Include specific skill order from each champion to accomplish trials/mechanics as required.
 
-## Security and Best Practices
+**3. Would you like to see more auto-friendly team options, or is manual play optimization the main focus?**
+- **Answer:** Add auto friendly teams. Show the compromise in damage or trials/mechanics completed.
 
-### Data Handling
-- Never commit secrets or API keys to the repository
-- Use environment variables for sensitive configuration
-- Validate all input data before processing
-- Implement proper file permissions for output files
+**4. Are there any additional quick reference tables or summary formats you would find useful?**
+- **Answer:** We need to review the teams and note speed tune, if applicable.
 
-### Development Workflow
-- Use feature branches for all changes
-- Write descriptive commit messages (imperative mood)
-- Test thoroughly before merging to main branch
-- Follow semantic versioning for releases
-- Document breaking changes clearly
+**5. Should failures and troubleshooting notes be expanded with more detail or examples?**
+- **Answer:** Yes, include enough information to identify where to restart in generating information about the boss.
+
+**6. Is the current update and validation process clear and easy to follow for future roster changes?**
+- **Answer:** It looks good for now, yes.
 
 ---
 
-## Integration Guidelines
+## Changelog
 
-### External Data Sources
-- **Primary:** Raid Shadow Legends official game data
-- **Secondary:** Ayumilove champion database
-- **Tertiary:** Hellhades champion information
-- **Resolution:** When sources conflict, use consensus of majority
-
-### File Formats
-- **Input:** JSON for structured champion data
-- **Output:** Markdown for human-readable summaries
-- **Templates:** JSON templates in templates/ directory
-- **Logs:** Plain text with timestamps for debugging
-
----
-
-## Troubleshooting Common Issues
-
-### Path Resolution
-- Always use absolute paths when possible
-- Use pathlib.Path for cross-platform compatibility
-- Check file existence before attempting operations
-- Handle permission errors gracefully
-
-### Data Consistency
-- Validate JSON structure against templates
-- Check for required fields before processing
-- Handle missing or malformed data appropriately
-- Log data quality issues for manual review
-
-### Environment Issues
-- Ensure Python 3.9+ is installed and accessible
-- Verify virtual environment activation
-- Check that all dependencies are installed
-- Confirm cross-platform script execution
-
----
-
-## Recent Changes & Updates
-
-### Directory Structure Changes
-- **ChampionSummary/** — Renamed from "Summarize Champion Results"
-- **generateChampionSummaries.py** — Renamed from "jsonToMdPerChamp.py"
-- All documentation updated to reflect new structure
-
-### Tool Improvements
-- Added comprehensive Makefile for automation
-- Enhanced error handling and type hints in scripts
-- Standardized docstrings and code formatting
-- Updated VS Code tasks to match new directory structure
-
-### Documentation Updates
-- Consistent README files across all directories
-- Updated script references and folder structures
-- Improved onboarding instructions
-
----
-
-## Future Development Considerations
-
-### Planned Features
-- Enhanced LLM integration for automated analysis
-- Web interface for champion data management
-- API endpoints for external tool integration
-- Advanced statistical analysis capabilities
-
-### Architecture Notes
-- Keep AI/LLM components modular and configurable
-- Design for extensibility in data source integration
-- Maintain backward compatibility for existing data files
-- Plan for scalable processing of large champion datasets
-
----
-
-## Contact and Contribution
-- Open issues for bugs or feature requests
-- Follow the CC BY-NC 4.0 license for all contributions
-- Attribute original authors in significant modifications
-- Maintain project coding standards and documentation quality
-
----
-
-
-# Champion Prompt Workflow (Updated Oct 2025)
-
-## Workflow for Processing Champion Prompts
-
-1. **Prompt Generation**:
-   - Use the template in `ChampionIntake/templates/Prompt_Template.md`.
-   - Skip JSON generation if a validated prompt already exists in `output/completed_prompts/`.
-
-2. **Prompt Completion**:
-   - Ensure all fields are human-readable and validated.
-   - Validate skills, stats, multipliers, and cooldowns using authoritative sources in this order: Ayumilove (text), then HellHades, then other sources.
-
-3. **JSON Generation**:
-   - Generate the JSON response first, using the template structure.
-   - Ignore the completed prompt file and directory for now.
-   - Use the generated JSON in the summary generation script to create a markdown file for review.
-   - Ensure the structure is modular and adheres to the template.
-
-4. **Validation**:
-   - Use `Tools/validate_json.py` to validate JSON files.
-   - Confirm data accuracy and suitability for downstream tools.
-
-5. **Output Organization**:
-   - Ensure all outputs are human-readable and modular.
-   - Completed prompt files are JSON, not markdown, and reside in `output/completed_prompts/`.
-
----
+- **2025-10-17:** Added Large File Operations & Batching Requirements to Update & Staging Policy section. All file operations >500 lines or complex merges must use batched processing to prevent prompt length, runtime, and memory issues.
+- **2025-10-17:** Completed all sections with full content from original RAID_copilot-instructions.md, expanding Champion & Trial Mapping, Team Building & Simulation, Affinity Safety & Risk Requirements, Guide Structure & Required Sections, Update & Staging Policy, Section-by-Section Maintenance, Validation & Documentation Standards, Templates & Examples, Task Checklist, and Additional Questions for User/Reviewer
+- **2025-10-16:** Initial creation incorporating Generic AI & Copilot Instructions standards and project-specific boss guide generation workflows, QA standards, and team-building methodologies

@@ -24,11 +24,11 @@ VS_CODE_DIR = REPO_ROOT / ".vscode"
 MAKEFILE = REPO_ROOT / "Makefile"
 README = REPO_ROOT / "README.md"
 
+
 RECOMMENDED_EXTENSIONS = [
     "ms-python.python",
     "ms-python.vscode-pylance",
-    "ms-toolsai.jupyter",
-    "ms-azuretools.vscode-docker",
+    "ms-toolsai.jupyter"
 ]
 
 SETTINGS_JSON = VS_CODE_DIR / "settings.json"
@@ -81,7 +81,7 @@ def install_requirements():
         pip_path = "pip"
     # Ensure pip is upgraded before installing packages
     run(f"{pip_path} install --upgrade pip")
-    # Install requirements and dev tools
+    # Install only requirements and core dev tools
     run(f"{pip_path} install -r {REQUIREMENTS}")
     run(f"{pip_path} install black flake8 pytest")
 
@@ -174,17 +174,16 @@ def create_vscode_configs():
                 '  ]\n'
                 '}\n'
         )
-    if not EXTENSIONS_JSON.exists():
-        EXTENSIONS_JSON.write_text(
-            """{
-  "recommendations": [
-    "ms-python.python",
-    "ms-python.vscode-pylance",
-    "ms-toolsai.jupyter",
-    "ms-azuretools.vscode-docker"
-  ]
+        if not EXTENSIONS_JSON.exists():
+                EXTENSIONS_JSON.write_text(
+                        """{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter"
+    ]
 }"""
-        )
+                )
 
 
 def validate_files():

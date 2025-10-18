@@ -317,14 +317,14 @@ Open the workspace in VS Code and install all recommended extensions when prompt
 - **Other Files:**
   - `ChampionIntake/templates/logTemplate.json` — Template for new champion JSON files.
   - `ChampionIntake/Prompt/` — Prompt files for Copilot Chat.
-  - `ChampionIntake/Champions/Owned_Champions/Owned_champion_list.md` — List of owned champions and timestamps.
+  - `ChampionIntake/Champions/Input/Owned_champion_list.md` — List of owned champions and timestamps.
 
 #### Champion Management CLI Usage
 
 Use `Tools/import_owned_champions.py` for all champion management, bulk import, and batch prompt generation workflows:
 
 ```sh
-# Import owned champions from a file (default: ChampionIntake/Champions/Owned_Champions/Owned_champion_list.md)
+# Import owned champions from a file (default: ChampionIntake/Champions/Input/Owned_champion_list.md)
 python Tools/import_owned_champions.py --from-owned-list
 
 # Trigger champion intake and prompt generation for all owned champions
