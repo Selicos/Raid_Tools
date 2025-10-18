@@ -1,4 +1,4 @@
-# Hard Spider Teams (Owned Champions Only) — DRAFT
+# Spider Boss Guide - Hard Difficulty (FINAL)
 
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements

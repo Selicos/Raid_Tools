@@ -1,6 +1,6 @@
-# Sand Devil's Necropolis (Hard Difficulty) - Boss Guide DRAFT
+# Sand Devil Boss Guide - Doom Tower Hard Difficulty (FINAL)
 
-**Last Updated:** 2025-01-19  
+**Last Updated:** 2025-10-17  
 **Boss Name:** Al-Naemeh the Sand Devil  
 **Dungeon:** Sand Devil's Necropolis (Doom Tower - Hard Difficulty, Stages 1-120+)  
 **Primary Resources:** Lesser Oil, Greater Oil, Superior Oil, Chaos Dust  

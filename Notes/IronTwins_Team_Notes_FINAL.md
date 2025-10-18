@@ -1,4 +1,4 @@
-# Iron Twins Fortress Teams (Owned Champions Only) — DRAFT
+# Iron Twins Fortress Boss Guide (FINAL)
 
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements

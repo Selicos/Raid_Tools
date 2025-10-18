@@ -1,4 +1,4 @@
-# Hard Ice Golem Teams (Owned Champions Only) — DRAFT
+# Ice Golem Boss Guide - Hard Difficulty (FINAL)
 
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements

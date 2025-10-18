@@ -1,4 +1,4 @@
-# Amius the Lunar Archon (Cursed City) Teams (Owned Champions Only) — DRAFT
+# Amius the Lunar Archon Boss Guide - Cursed City Eclipse Tower (FINAL)
 
 ## Table of Contents
 

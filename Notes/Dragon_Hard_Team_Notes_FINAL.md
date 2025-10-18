@@ -1,4 +1,4 @@
-# Hard Dragon Teams (Owned Champions Only) — DRAFT
+# Dragon Boss Guide - Hard Difficulty (FINAL)
 
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements

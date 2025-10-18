@@ -1,4 +1,4 @@
-# Shredder Dungeon Teams (Owned Champions Only) — DRAFT
+# Shredder Dungeon Boss Guide (FINAL)
 
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements
@@ -1571,10 +1571,6 @@ Version: 1.0 DRAFT
 **Notes:**
 - These archetypes use only owned champions and can be adapted for affinity or gear gaps.
 - See Section 9 for alternates and flexibility options.
----
-
-## 10. When to Use Each Team
-
 ### When to Use Each Team
 
 | Team Name                | Best For                        | Affinity Safety/Risk Guidance                | Manual/Auto | Notes |
@@ -2206,28 +2202,6 @@ Version: 1.0 DRAFT
 **Actionable Advice:** Set Mithrala as leader for aura and affinity safety. Use AI presets to open with cleanse/block debuffs. Prioritize speed and accuracy on supports.
 
 **Troubleshooting:** If fails, check cleanse uptime and speed tuning. Use alternates for affinity or gear gaps.
-# Shredder Dungeon Teams (Owned Champions Only) — DRAFT
-
-## Table of Contents
-1. Boss Mechanics & Stat Requirements
-2. Teams by Estimated Damage/Clear Speed
-3. Detailed Team Sections (by Archetype)
-    - Defensive Cleanse
-    - HP Burn/Poison Mix
-    - F2P Epic Core
-    - Affinity Safe Mix
-    - Shredder-Specific Counter Teams
-    - Speed Burn Poison
-    - Block Debuffs Sustain
-    - Double Cleanse Safety
-4. Best Champions & Team Participation
-5. Direct Champion Comparisons by Role
-6. Ideal Champions to Pull
-7. General Notes
-8. Actionable Notes & Upgrade Advice
-9. Team Flexibility & Alternate Builds
-10. When to Use Each Team
-11. Additional Team Archetypes
 12. Validation & Simulation Notes
 
 

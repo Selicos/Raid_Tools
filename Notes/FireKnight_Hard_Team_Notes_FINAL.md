@@ -1,4 +1,4 @@
-# Fire Knight (Hard) Teams (Owned Champions Only) — DRAFT
+# Fire Knight Boss Guide - Hard Difficulty (FINAL)
 
 ## Table of Contents
 1. Boss Mechanics & Stat Requirements
