@@ -41,6 +41,7 @@
 - Lady Annabelle | Rarity: Epic | Last Updated: 2025-10-15
 - Leminisi the Gold-Wing | Rarity: Legendary | Last Updated: 2025-10-15
 - Loki | Rarity: Legendary | Last Updated: 2025-10-15
+- Lord Champfort | Rarity: Legendary | Last Updated: 2025-10-18
 - Lord Shazar | Rarity: Legendary | Last Updated: 2025-10-15
 - Lua | Rarity: Epic | Last Updated: 2025-10-15
 - Maulie Tankard | Rarity: Legendary | Last Updated: 2025-10-15
