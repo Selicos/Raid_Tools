@@ -26,6 +26,7 @@ All generic standards apply to this project. The sections below provide RAID Sha
 ## Table of Contents
 
 - [Project Purpose & Scope](#project-purpose--scope)
+- [User Content Priorities & Focus](#user-content-priorities--focus)
 - [Authoritative Data Sources](#authoritative-data-sources)
 - [Boss Guide QA Standards](#boss-guide-qa-standards)
 - [Guide Generation Workflow](#guide-generation-workflow)
@@ -38,6 +39,27 @@ All generic standards apply to this project. The sections below provide RAID Sha
 - [Validation & Documentation Standards](#validation--documentation-standards)
 - [Templates & Examples](#templates--examples)
 - [Task Checklist](#task-checklist)
+- [Champion Review Workflow](#champion-review-workflow)
+  - [Champion Review Template Standards](#champion-review-template-standards)
+  - [Rating System (X/10 Contextualized)](#rating-system-x10-contextualized)
+  - [Gear Recommendations (Option C)](#gear-recommendations-option-c)
+  - [Faction Wars Advice](#faction-wars-advice)
+  - [Current Build Input Section](#current-build-input-section)
+  - [Cheese Strategy Integration](#cheese-strategy-integration)
+  - [Single-Champion Addition Workflow](#single-champion-addition-workflow)
+- [Arena Guide Standards](#arena-guide-standards)
+  - [Tier-Specific Recommendations](#tier-specific-recommendations)
+  - [Defensive Team Variations](#defensive-team-variations)
+  - [Live Arena Coverage](#live-arena-coverage)
+  - [Tag Team Standards](#tag-team-standards)
+- [DRAFT-to-FINAL Workflow](#draft-to-final-workflow)
+- [Roster Update Workflow & Automation](#roster-update-workflow--automation)
+  - [Directory Structure Standards](#directory-structure-standards)
+  - [Owned Champion List Standards](#owned-champion-list-standards)
+  - ["Cheese" Mechanics & Duplicate Champions](#cheese-mechanics--duplicate-champions)
+  - [Guide Update Workflow (Roster Changes)](#guide-update-workflow-roster-changes)
+  - [Validation Scripts & Tools](#validation-scripts--tools)
+  - [Community & Multi-User Support](#community--multi-user-support)
 
 ---
 
@@ -59,6 +81,59 @@ This project produces comprehensive, actionable boss/encounter guides for RAID S
 - `Tools/Boss_Guide_Template.md` - Standard template for all guides
 - `Input/Owned_champion_list.md` - Single source of truth for champion roster
 - RaidHQ, Ayumilove, HellHades - Authoritative external sources
+
+---
+
+## User Content Priorities & Focus
+
+### Content Priority Order (Always Follow)
+
+**Priority 1: Clan Boss UNM**
+- Highest priority for all champion ratings, team recommendations, and guide updates
+- User has UNM-capable clan (daily rewards secured)
+- Focus on damage optimization, unkillable teams, and cheese strategies
+
+**Priority 2: Dungeons (All Stages 25)**
+- Dragon, Spider, Fire Knight, Ice Golem
+- User preference: HP Burn teams (well-built), Poison teams (NOT well-built)
+- Spider team confirmed strong
+
+**Priority 3: Advanced PVE Content**
+- Doom Tower Hard (boss-specific strategies)
+- Cursed City and other advanced PVE encounters
+- Iron Twins Fortress, Chimera, Hydra
+
+**Priority 4: Arena**
+- Classic Arena (Gold 3+)
+- Tag Team Arena (Bronze 3+, lower priority than Classic)
+- Live Arena (basic coverage, user still developing strategy)
+
+**Priority 5: Faction Wars**
+- **Completed Normal:** Orc, Banner Lords, Barbarian, Dwarf
+- **Near Completion:** Lizardmen, Knights Revenant, High Elf, Dark Elf
+- Priority: Complete remaining Normal stages, then progress to Hard
+
+### Champion Use Case Documentation
+
+**When documenting champions, always highlight:**
+- Specific boss/dungeon applications
+- Unique mechanics or cheese strategies
+- Wave clear capabilities (general or content-specific)
+- Role in Faction Wars (for user's in-progress factions)
+
+### User Team Composition Preferences
+
+**Core Arena Team (Classic):**
+- **Wukong** (speed lead, buff strip, nuke, sheep control)
+- **Mythrala** (buffs/cleanse, hex damage)
+- **Loki** (control, buff strip, suppress mythics/active skills)
+- **Flex spot:** Ninja, Michelangelo, Coldheart, Godseeker Aniri, Arbiter, Rector Drath
+
+**Team Building Preferences:**
+- HP Burn teams: Well-built and preferred
+- Poison teams: Not well-built (Frozen Banshee, Elenaril, Narma weak)
+- Speed tuning: Often loses speed battle in higher Arena tiers
+- Cheese strategies: Prioritize SAFE cheese builds for bosses and Clan Boss
 
 ---
 
@@ -757,8 +832,739 @@ These questions were answered by the user and should guide all boss guide genera
 
 ---
 
+## Champion Review Workflow
+
+### Champion Review Template Standards
+
+**Purpose:** Create comprehensive, actionable individual champion reviews tailored to user's owned roster and content priorities.
+
+**Template Location:** `input/Champion_Review_Template.md`
+
+**Review Output Location:** `Notes/Champion Reviews/[Champion_Name]_Review.md`
+
+**Required Sections:**
+1. **Champion Overview**
+   - Name, Rarity, Affinity, Faction
+   - Role classification (HP Burn, Decrease DEF, Support, Damage Dealer, Tank, TM Control, Revive, Cleanse)
+   - Brief summary of champion's primary use cases
+
+2. **Content-Specific Ratings (X/10 Contextualized)**
+   - See Rating System section below
+
+3. **Skills & Mechanics**
+   - Detailed skill descriptions with cooldowns, multipliers, effects
+   - Unique mechanics or passive abilities
+   - Skill booking priority and partial investment guidance
+
+4. **Gear Recommendations (Option C)**
+   - See Gear Recommendations section below
+
+5. **Masteries**
+   - Content-specific mastery recommendations (Clan Boss, Dungeons, Arena, etc.)
+   - Key masteries to prioritize (Warmaster, Giant Slayer, etc.)
+
+6. **Faction Wars Advice**
+   - See Faction Wars Advice section below
+
+7. **Team Synergies & Pairings**
+   - Best champions to pair with (from owned roster)
+   - Cheese strategy potential (if applicable)
+   - Similar champions with comparable utility
+
+8. **Investment Recommendations**
+   - Priority level (CRITICAL, HIGH, MEDIUM, LOW)
+   - PVE disclaimer: "This champion requires booking/building for optimal performance in [content]"
+   - When to stop investment (e.g., "Book A2 only", "6-star not required for Faction Wars")
+
+9. **Current Build Input Section**
+   - See Current Build Input Section below
+
+10. **Cheese Strategy Integration**
+    - See Cheese Strategy Integration section below
+
+11. **Validation & Sources**
+    - Cross-validation with RaidHQ, Ayumilove, HellHades
+    - Community consensus notes
+    - In-game testing results (if applicable)
+
+---
+
+### Rating System (X/10 Contextualized)
+
+**Rating Scale:** X/10 for each content area, **contextualized to owned champions**
+
+**Content Areas (Prioritized Order):**
+1. **Clan Boss UNM** (Priority 1)
+2. **Dungeons** (Priority 2): Dragon, Spider, Fire Knight, Ice Golem
+3. **Doom Tower Hard** (Priority 3)
+4. **Advanced PVE** (Priority 3): Cursed City, Iron Twins, Chimera, Hydra
+5. **Arena** (Priority 4): Classic (Gold 3+), Tag Team, Live Arena
+6. **Faction Wars** (Priority 5): Normal (in-progress factions priority), Hard
+
+**Rating Context Rules:**
+
+**10/10 Rating:**
+- Champion is best-in-class for this content among owned champions
+- Example: "Mordecai: 10/10 Clan Boss - Best HP Burn champion in your roster"
+- Note if champion is unsupported: "10/10 with no support champions available (rating reflects potential)"
+
+**8-9/10 Rating:**
+- Champion is excellent but outclassed by 1-2 owned champions
+- Example: "Geomancer: 9/10 Clan Boss - Excellent, slightly behind Mordecai"
+
+**6-7/10 Rating:**
+- Champion is good, usable, but multiple better options exist
+- Example: "Akoth the Seared: 7/10 Dragon - Solid HP Burn, but Mordecai preferred"
+
+**4-5/10 Rating:**
+- Champion is mediocre or niche for this content
+- Example: "Relickeeper: 5/10 Clan Boss - Low damage, better options available"
+
+**1-3/10 Rating:**
+- Champion is poor or unusable for this content
+- Example: "Paragon: 2/10 Clan Boss - Single-target unkillable cheese only, not viable for damage teams"
+
+**Rating Documentation Requirements:**
+- Always note if champion is unsupported (e.g., "10/10 Decrease DEF but no Ally Attack champions to pair")
+- Compare to top 3 owned champions in same role/content
+- Note affinity risks (e.g., "9/10 Dragon but weak affinity vs Magic boss")
+
+---
+
+### Gear Recommendations (Option C)
+
+**Format:** General sets + detailed artifact recommendations
+
+**General Sets (Always Include):**
+- Primary sets (e.g., "Speed + Accuracy", "Lifesteal + Speed", "Relentless + Immortal")
+- Alternative sets (e.g., "Toxic for extra poison damage", "Stalwart for AoE reduction")
+
+**Detailed Artifacts (Always Include):**
+- **Banner:** Accuracy, HP, DEF, or Resist
+- **Chest:** HP%, DEF%, or ATK%
+- **Boots:** Speed (almost always), HP%, or DEF%
+- **Gloves:** Crit Rate, Crit Damage, HP%, DEF%, or ATK%
+- **Weapon/Helmet/Shield:** Prioritize stats (e.g., "Speed, Accuracy, HP, DEF")
+
+**Stat Priorities (Always Include):**
+- Example: "250+ ACC, 220+ SPD, 35k+ HP, 2.5k+ DEF for Clan Boss UNM"
+- Content-specific stat targets (e.g., "180 ACC for Dragon 25, 220 ACC for Doom Tower Hard")
+
+**Conciseness for Low-Use Champions:**
+- For champions with limited use cases, keep gear section short
+- Example: "Low priority. If building: Speed + Accuracy, 200+ ACC, 180+ SPD for Faction Wars support."
+
+---
+
+### Faction Wars Advice
+
+**Format:** Current owned champions + ideal 5-champion pull list for that faction
+
+**Owned Champions in Faction:**
+- List all owned champions in the same faction
+- Note their roles (e.g., "Vogoth: Tank/Sustain", "Frozen Banshee: Poisoner")
+- Recommend faction-specific team compositions
+
+**Faction Wars Team Recommendations:**
+- Suggest 1-2 teams using owned champions for Faction Wars Normal/Hard
+- Note which stages are achievable with current roster
+- Highlight gaps (e.g., "No revive champion, Faction Wars 21 will be difficult")
+
+**Ideal 5-Champion Pull List (Non-Owned Only):**
+- List top 5 non-owned champions for this faction
+- Rationale for each (e.g., "Duchess Lilitu: Game-changing revive + sustain for Faction Wars Hard")
+- Prioritize by impact (CRITICAL > HIGH > MEDIUM)
+
+**Faction Wars Priority by User Progress:**
+- **Completed Normal:** Orc, Banner Lords, Barbarian, Dwarf - Low priority, focus on Hard stages
+- **Near Completion:** Lizardmen, Knights Revenant, High Elf, Dark Elf - HIGH priority, complete Normal first
+- **Not Started:** Remaining factions - MEDIUM priority, defer until core content complete
+
+---
+
+### Current Build Input Section
+
+**Purpose:** Allow user to input current champion build for personalized optimization advice
+
+**Input Fields:**
+1. **Current Level:** 1-60
+2. **Current Ascension:** 0-6 stars
+3. **Skills Booked:** None, Partial (specify which skills), Full
+4. **Current Gear Sets:** (e.g., "Speed + Accuracy")
+5. **Current Stats:**
+   - HP: [value]
+   - ATK: [value]
+   - DEF: [value]
+   - SPD: [value]
+   - Crit Rate: [value]
+   - Crit Damage: [value]
+   - Accuracy: [value]
+   - Resist: [value]
+6. **Current Masteries:** Full, Partial (T1-T6 breakdown), None
+7. **Current Primary Use:** (e.g., "Clan Boss UNM", "Dragon 25", "Arena Gold 4")
+
+**Optimization Output:**
+- Compare current build to recommended build (from Gear Recommendations section)
+- Identify gaps (e.g., "Current ACC: 180, Recommended: 250+ for Clan Boss UNM")
+- Prioritize upgrades (e.g., "Priority 1: Increase ACC to 250+, Priority 2: Increase SPD to 220+")
+- Suggest respeccing if champion is built for wrong content (e.g., "Currently built for Arena, but highest value is Clan Boss - consider respec")
+- Note if current build is optimal (e.g., "Current build is optimal for Dragon 25, no changes needed")
+
+---
+
+### Cheese Strategy Integration
+
+**Purpose:** Highlight SAFE cheese builds for bosses and Clan Boss, prioritize cheese when strictly better
+
+**When to Include Cheese Strategy:**
+- Champion enables or participates in cheese strategies (e.g., Triple Coldheart, Triple Pain Keeper, Double Nogdar)
+- Cheese strategy is strictly better in speed/damage/availability than conventional teams
+- Cheese strategy is SAFE (consistent, reliable, not RNG-dependent)
+
+**Cheese Strategy Documentation:**
+1. **Cheese Type:** (e.g., "MAX HP Damage Cheese", "Unkillable Cheese", "Ally Attack Spam Cheese")
+2. **Required Champions:** List all champions needed (note if duplicates required)
+3. **Cheese Viability:** CRITICAL (best option), HIGH (strong option), MEDIUM (niche option)
+4. **Safety Level:** SAFE (consistent, reliable), RISKY (RNG-dependent), UNSAFE (rarely works)
+5. **Content Applications:** Which bosses/content this cheese works on (e.g., "Fire Knight, Dragon, Ice Golem")
+6. **Setup Requirements:** Gear, speed tuning, skill order
+7. **Expected Results:** Clear time, damage, success rate
+
+**Prioritization Rule:**
+- If cheese strategy is strictly better AND safer than conventional teams, recommend cheese as PRIMARY strategy
+- Example: "Triple Coldheart + Ally Attack is STRICTLY BETTER than conventional Fire Knight teams - prioritize this cheese"
+- Note in champion review AND relevant boss guide under "Additional Team Archetypes" section
+
+**Cross-Reference to Boss Guides:**
+- Always note which boss guides include this cheese strategy
+- Example: "See Clan Boss UNM guide, Section 11: Triple Pain Keeper Unkillable Cheese"
+
+---
+
+### Single-Champion Addition Workflow
+
+**Purpose:** Streamline process for adding individual champion reviews and updating guides
+
+**Workflow Steps:**
+
+**Step 1: Gather Champion Data**
+- Look up champion on RaidHQ, Ayumilove, HellHades
+- Document: Rarity, Affinity, Faction, Skills, Base stats
+- Note boss-specific ratings (X/10 or X/5 from external sources)
+
+**Step 2: Generate Champion Review in Chat**
+- Use Champion Review Template
+- Present review in CHAT for user approval
+- Do NOT create file until user approves
+- Iterate based on user feedback
+
+**Step 3: Create Champion Review File (After Approval)**
+- Save to `Notes/Champion Reviews/[Champion_Name]_Review.md`
+- Use DRAFT file initially: `[Champion_Name]_Review_DRAFT.md`
+- After validation, promote to FINAL: `[Champion_Name]_Review.md`
+
+**Step 4: Identify Affected Boss Guides**
+- Based on champion ratings and use cases, identify which boss guides need updates
+- Prioritize: CRITICAL (6/5 or 10/10) > HIGH (5/5 or 8-9/10) > MEDIUM (4/5 or 6-7/10)
+- Create priority queue in chat: "Champion X affects: [Boss A (CRITICAL), Boss B (HIGH), Boss C (MEDIUM)]"
+
+**Step 5: Update Boss Guides Systematically**
+- Use DRAFT workflow (see DRAFT-to-FINAL Workflow section)
+- Update Section 2: Champion-to-Mechanics Mapping
+- Update Section 4: Detailed Team Sections (add new team or update existing)
+- Update Section 5: Best Champions & Team Participation
+- Update Section 6: Direct Champion Comparisons by Role
+- Update Section 7: Ideal Champions to Pull (remove if now owned)
+- Update Section 9: Actionable Notes & Upgrade Advice
+
+**Step 6: Validate and Commit**
+- Run validation: `python Tools/validate_guide_structure.py Notes/[Guide_Name]_DRAFT.md`
+- Present updated guide summary in chat for user approval
+- After approval, promote DRAFT to FINAL
+- Commit with detailed message: "Add [Champion Name] review + update [Boss] guides"
+
+**Scalability Notes:**
+- This workflow is designed for 1 champion at a time
+- For multiple champions (5+), use batch workflow from Roster Update Workflow section
+- Workflow is account-agnostic: Can be repeated for any owned champion list
+
+---
+
+## Arena Guide Standards
+
+### Tier-Specific Recommendations
+
+**Purpose:** Provide separate advice for each Arena tier with tier-appropriate strategies
+
+**Arena Tiers Covered:**
+- **Gold 3:** Entry tier, basic speed tuning (250-280 SPD)
+- **Gold 4:** Intermediate tier, improved speed tuning (280-310 SPD)
+- **Gold 5:** Advanced tier, high speed tuning (310-340 SPD)
+- **Platinum:** Elite tier, maximum speed tuning (340-370+ SPD)
+
+**Tier-Specific Content for Each Tier:**
+
+1. **Speed Requirements:**
+   - Recommended speed for each role (Speed Lead, Buffer, Nuker, Control)
+   - Example: "Gold 3: Speed Lead 280+, Buffer 260+, Nuker 240+, Control 220+"
+
+2. **Common Team Archetypes:**
+   - Speed teams (go first, nuke)
+   - Tanky teams (survive first turn, counter)
+   - Control teams (crowd control, debuff)
+   - Buff steal teams (steal buffs, nuke)
+
+3. **Common Threats per Tier:**
+   - List common defense teams at this tier
+   - Example: "Gold 4: Expect Arbiter/Lyssandra speed leads, Wukong nukers, Mythrala/Kymar buff/control"
+
+4. **Counters & Strategies:**
+   - How to counter common threats
+   - Example: "If slower than enemy speed lead, use Loki to suppress active skills, preventing Arbiter revive"
+
+5. **User-Specific Notes:**
+   - User often loses speed battle in higher tiers
+   - Recommend tanky/buff steal/gimmick options when speed battle not winnable
+   - Example: "Gold 5+: Consider tanky Vogoth + Rector Drath team with Wukong buff strip"
+
+**Core Arena Team (User's Confirmed Setup):**
+- **Wukong** (speed lead, buff strip, nuke, sheep control)
+- **Mythrala** (buffs/cleanse, hex damage)
+- **Loki** (control, buff strip, suppress mythics/active skills)
+- **Flex:** Ninja, Michelangelo, Coldheart, Godseeker Aniri, Arbiter, Rector Drath
+
+---
+
+### Defensive Team Variations
+
+**Purpose:** Provide 3 defensive team variations with success rate estimates
+
+**Defensive Team Requirements:**
+1. **Variation 1:** Speed-based defense
+   - Fast Arbiter/Lyssandra lead + fast buffers/nukers
+   - Success estimate: "30-40% defense wins in Gold 3, 20-30% in Gold 4+"
+   - Weakness: "Loses to faster speed teams or Loki suppress"
+
+2. **Variation 2:** Tanky/Sustain defense
+   - Vogoth + Rector Drath + Wukong + Mythrala
+   - Success estimate: "40-50% defense wins in Gold 3, 30-40% in Gold 4+"
+   - Weakness: "Loses to buff strip + nuke teams, slow clear time allows enemy to win"
+
+3. **Variation 3:** Control/Debuff defense
+   - Loki + Wukong + Mythrala + Arbiter (bait)
+   - Success estimate: "35-45% defense wins in Gold 3, 25-35% in Gold 4+"
+   - Weakness: "Loses to immunity sets or high resist teams"
+
+**Success Estimate Documentation:**
+- Based on common team archetypes at each tier
+- Note: "Defense wins are inherently lower than offense wins due to AI limitations"
+- Provide counterstrategy notes: "If seeing low defense wins, try Variation 2 (tanky sustain)"
+
+---
+
+### Live Arena Coverage
+
+**Purpose:** Provide basic Live Arena strategy with focus on user's current approach
+
+**User's Current Live Arena Strategy:**
+- **Arbiter as bait:** Force enemy to ban Arbiter, preserving Wukong speed lead
+- **Core team:** Wukong (speed lead), Mythrala, Loki, flex (Ninja, Michelangelo, Coldheart, support)
+- **Future plan:** Integrate Embrys (not yet built due to book cost)
+
+**Live Arena Basics (Coverage Level):**
+
+1. **Ban Strategy:**
+   - How to identify enemy threats (check enemy champions, predict strategy)
+   - When to ban enemy speed lead vs. enemy nuker vs. enemy control
+   - User's strategy: Offer Arbiter as bait, preserve Wukong
+
+2. **Draft Order:**
+   - General guidance: Speed lead → Buffer → Nuker → Control → Flex
+   - Counter-draft: If enemy picks speed lead, consider tanky/sustain approach
+
+3. **Counter Picks:**
+   - How to counter common Live Arena champions
+   - Example: "Enemy picks Arbiter → ban or pick Loki to suppress revive"
+
+4. **Future Integration: Embrys**
+   - Note Embrys is not yet built (book cost)
+   - Recommend Embrys as future upgrade for Live Arena (Mythic tier, game-changing kit)
+   - Placeholder: "When Embrys is built, integrate as primary control/debuff champion"
+
+**Coverage Scope:**
+- Basic coverage only (user still developing strategy)
+- Focus on user's confirmed team and approach
+- Leave room for expansion as user builds Live Arena roster
+
+---
+
+### Tag Team Standards
+
+**Purpose:** Provide 3 core teams + cheese variations for Tag Team Arena, no defense focus
+
+**Tag Team Focus:** Bronze 3+, lower priority than Classic Arena
+
+**Core Team Requirements:**
+- **Safe but fast teams** prioritized
+- **3 core teams** documented
+- **Cheese variations** documented
+- **No defense recommendations** (user does not care about Tag Team defense)
+
+**Core Team Documentation Format:**
+
+**Team 1: [Name]**
+- **Champions:** [5 champions]
+- **Speed Tuning:** [Turn order, speed requirements]
+- **Strategy:** [Go first and nuke, survive and counter, etc.]
+- **Strengths:** [Fast clear, high damage, etc.]
+- **Weaknesses:** [Loses to X, requires Y, etc.]
+- **Success Rate:** [Estimated % vs. Bronze 3 teams]
+
+**Team 2: [Name]**
+- [Same format as Team 1]
+
+**Team 3: [Name]**
+- [Same format as Team 1]
+
+**Cheese Variations:**
+- Document 1-3 cheese team variations (e.g., Triple Coldheart + Ally Attack, Unkillable cheese, etc.)
+- Note when cheese is safer/faster than core teams
+- Example: "Cheese Variation 1: Triple Coldheart + Nogdar + Wukong - One-shot enemy with MAX HP damage"
+
+**Speed Tuning Guidance:**
+- Provide general speed tuning guidance by role
+- Example: "Tag Team Bronze 3: Speed leads 260+, Buffers 240+, Nukers 220+, supports 200+"
+- Note: "Tag Team matchmaking is less predictable than Classic Arena - prioritize safety over speed"
+
+---
+
+## DRAFT-to-FINAL Workflow
+
+**Purpose:** Ensure all file updates are validated and approved before promoting to FINAL
+
+**Workflow Overview:**
+
+**Stage 1: DRAFT Creation**
+- Always create DRAFT file when updating existing guides/reviews
+- File naming: `[Original_Name]_DRAFT.md`
+- Example: `Dragon_Hard_Team_Notes_DRAFT.md`
+
+**Stage 2: DRAFT Population**
+- Merge all new information into DRAFT file
+- Update all affected sections (Section 2, 4, 5, 6, 7, 9, etc.)
+- Preserve all existing content not affected by update
+- Document changes in DRAFT file header or changelog
+
+**Stage 3: Validation**
+- Run validation scripts: `python Tools/validate_guide_structure.py Notes/[Guide_Name]_DRAFT.md`
+- Fix any errors or warnings
+- Cross-check with owned champion list: `python Tools/validate_owned_list.py`
+
+**Stage 4: Chat Review & Approval**
+- Present DRAFT summary in chat:
+  * What sections were updated
+  * What new teams/champions were added
+  * What changed in recommendations
+  * Validation results
+- Wait for user approval before promoting to FINAL
+
+**Stage 5: Promotion to FINAL**
+- After user approval:
+  * Rename old FINAL file to `[Original_Name]_OLD_[Date].md` (archive)
+  * Rename DRAFT file to `[Original_Name]_FINAL.md` (promote)
+  * Move OLD file to `Archive/` folder (if desired)
+
+**Stage 6: Commit & Documentation**
+- Commit changes with detailed message:
+  ```
+  Update [Boss/Champion] guide with [Champion Name] teams
+  
+  - Added [Champion] to Section 2 mechanics mapping
+  - Created Team X: [Team Name] with [Champion]
+  - Updated champion comparisons and pull guide
+  - Validated with 3 test runs: [results summary]
+  
+  DRAFT promoted to FINAL after user approval
+  ```
+
+**Never Overwrite FINAL Directly:**
+- Always use DRAFT workflow for updates
+- Preserve version history (OLD files archived)
+- Enable rollback if issues discovered post-update
+
+---
+
+## Roster Update Workflow & Automation
+
+### Directory Structure Standards
+
+**`input/` Directory:**
+- **Purpose:** Input data and templates for guide generation
+- **Contents:**
+  * `Owned_champion_list.md` - Champion roster (single source of truth)
+  * `Boss_Guide_Template.md` - Template for boss guides
+  * Future: `Champion_Database.json` (if created)
+
+**`Tools/` Directory:**
+- **Purpose:** Executable scripts, validation tools, and reference templates
+- **Contents:**
+  * Validation scripts (Python): `validate_owned_list.py`, `validate_guide_structure.py`
+  * Reference templates (Markdown): `Team_Entry_Template.md`, `Champion_Comparison_Template.md`, `Section2_Mapping_Template.md`
+  * Analysis scripts (Python): `ChampionTurnAnalysis.py`, etc.
+  * Setup and utility tools
+
+**`Notes/` Directory:**
+- **Purpose:** Boss guides, champion comparisons, and documentation
+- **Contents:**
+  * Boss guides (*_FINAL.md)
+  * Champion comparisons (`Notes/Champion Comparisons/`)
+  * Champion reviews (`Notes/Champion Reviews/`)
+  * Reports and analysis documents
+
+### Owned Champion List Standards
+
+**Required Format:**
+```markdown
+# Owned Champions
+
+## Champion List
+
+- [Champion Name] | Rarity: [Value] | Affinity: [Value] | Faction: [Value] | Last Updated: YYYY-MM-DD
+```
+
+**Valid Values:**
+- **Rarity:** Common, Uncommon, Rare, Epic, Legendary, Mythic
+- **Affinity:** Magic, Force, Spirit, Void
+- **Faction:** [Any valid RAID faction name]
+- **Date:** YYYY-MM-DD format
+
+**Duplicate Champion Notation:**
+Use (xN) notation for multiple copies:
+```markdown
+- Nogdar the Headhunter (x2) | Rarity: Legendary | Affinity: Force | Faction: Ogryn Tribes | Last Updated: 2025-10-18
+- Relickeeper (x4) | Rarity: Legendary | Affinity: Magic | Faction: Sacred Order | Last Updated: 2025-10-18
+- Pain Keeper (x3) | Rarity: Epic | Affinity: Void | Faction: Knight Revenant | Last Updated: 2025-10-18
+- Apothecary (x5) | Rarity: Rare | Affinity: Magic | Faction: High Elves | Last Updated: 2025-10-18
+```
+
+**Alphabetical Ordering:**
+- All champions must be in alphabetical order (case-insensitive)
+- Use `python Tools/validate_owned_list.py --fix-order` to auto-sort
+
+**Validation:**
+```bash
+# Validate format and consistency
+python Tools/validate_owned_list.py
+
+# Validate and auto-fix alphabetical order
+python Tools/validate_owned_list.py --fix-order
+```
+
+---
+
+### "Cheese" Mechanics & Duplicate Champions
+
+**Definition:**
+"Cheese" strategies abuse specific game mechanics to trivialize boss encounters or enable unconventional victories.
+
+**Common Cheese Strategies:**
+
+1. **Buff Extension Cheese:**
+   * Multiple copies of champions with Increase DEF, Ally Protection, or Counterattack
+   * Extend buffs indefinitely with champions like Warcaster, Brogni, etc.
+   * Example: Double Maulie Tankard for infinite Block Debuffs
+
+2. **Poison Explosion Cheese:**
+   * Stack massive poison debuffs (10+) on boss
+   * Detonate with Zavia, Elenaril, or similar
+   * Deal millions of damage in single explosion
+   * Example: Double Frozen Banshee + Zavia for poison spam
+
+3. **Max HP Damage Cheese:**
+   * Multiple champions with MAX HP damage (Coldheart, Royal Guard, Sethalia, etc.)
+   * Bypass boss DEF and HP scaling
+   * One-shot boss waves or phases
+   * Example: Triple Coldheart + Ally Attack for instant wave clear
+
+4. **Unkillable Cheese:**
+   * Multiple Pain Keepers (x3+ recommended)
+   * Build unkillable teams with overlapping cooldown reduction
+   * Survive indefinitely, whittle down boss
+   * Example: Triple Pain Keeper + Block Damage champions
+
+5. **Passive Sustain Cheese:**
+   * Multiple Lady Annabelle or similar passive damage champions
+   * Passive damage + passive heals = eventual victory
+   * AFK strategy for Bommal and other sustain bosses
+   * Example: Lady Annabelle solo Bommal (leave overnight)
+
+6. **Turn Meter Cheese:**
+   * Multiple TM control champions (Armiger, Coldheart, etc.)
+   * Prevent boss from taking turns
+   * Lock boss at 0% TM indefinitely
+   * Example: Triple Armiger for Fire Knight perma-lock
+
+7. **Ally Attack Spam Cheese:**
+   * Multiple Ally Attack champions (Nogdar, Longbeard, Lanakis, etc.)
+   * Chain Ally Attacks for massive turn cycling
+   * Overwhelm boss with action economy
+   * Example: Double Nogdar for back-to-back Ally Attacks
+
+**How to Document Cheese Strategies in Guides:**
+
+1. **Section 4 (Detailed Team Sections):**
+   * Add "Cheese Strategy" team archetype if applicable
+   * Example: "Team 7: Triple Pain Keeper Unkillable Cheese"
+   * Note duplicate champion requirements
+
+2. **Section 11 (Additional Team Archetypes):**
+   * Document cheese strategies that require specific duplicate champions
+   * Note: "This team requires multiple copies of [Champion Name]"
+   * Explain why cheese works and when it's optimal
+
+3. **Section 7 (Ideal Champions to Pull):**
+   * Note: "Pull additional copies of [Champion Name] for cheese strategy"
+   * Example: "Pull 2nd Coldheart for MAX HP damage cheese in Fire Knight"
+
+4. **Champion-to-Mechanics Mapping (Section 2):**
+   * Flag champions with "(x2)", "(x3)", etc. in mapping tables
+   * Note cheese potential in "Notes" column
+   * Example: "Nogdar the Headhunter (x2) - Ally Attack spam cheese potential"
+
+**Priority for Duplicate Champions:**
+- Always note duplicate counts in owned champion list
+- Prioritize cheese strategies for end-game bosses (Doom Tower Hard, Hydra Brutal, etc.)
+- Document alternative strategies if duplicates not available
+
+---
+
+### Guide Update Workflow (Roster Changes)
+
+**When Owned Champion List Changes:**
+
+**Step 1: Update Owned Champion List**
+- Add/remove champions from `input/Owned_champion_list.md`
+- Use proper format (Name | Rarity | Affinity | Faction | Last Updated)
+- Add duplicate notation for multiple copies (x2, x3, etc.)
+- Run validation: `python Tools/validate_owned_list.py --fix-order`
+
+**Step 2: Identify Affected Guides (Priority Queue)**
+- For each new champion, check boss ratings (RaidHQ, Ayumilove, HellHades)
+- Prioritize guides based on champion rating:
+  * **CRITICAL (6/5 or 10/10):** Update guide immediately
+  * **HIGH (5/5 or 8-9/10):** Update within 1-2 sessions
+  * **MEDIUM (4/5 or 6-7/10):** Update as time allows
+  * **LOW (3/5 or 4-5/10):** Defer or skip unless gap-filling role
+
+**Step 3: Generate Guide Update Checklist (Per Guide)**
+- [ ] Section 2: Add champion to mechanics mapping tables (per-trial and combo tables)
+- [ ] Section 2: Update gap analysis (note if champion fills critical gap)
+- [ ] Section 3: Add/update quick reference table (if new team created)
+- [ ] Section 4: Create new team section OR update existing team with champion
+- [ ] Section 4: Document cheese strategy if duplicate champion enables it
+- [ ] Section 5: Add champion to "Best Champions & Team Participation" table
+- [ ] Section 6: Add champion to "Direct Champion Comparisons by Role"
+- [ ] Section 7: Remove champion from "Ideal Champions to Pull" (now owned)
+- [ ] Section 9: Update "Actionable Notes & Upgrade Advice" with new upgrade path
+- [ ] Section 12: Document validation/simulation for new team (minimum 3 test runs)
+
+**Step 4: Update Guide (Systematic Process)**
+- Use reference templates from `Tools/` directory:
+  * `Team_Entry_Template.md` for new teams
+  * `Champion_Comparison_Template.md` for champion comparisons
+  * `Section2_Mapping_Template.md` for mechanics mapping
+- Follow template checklist to ensure all required fields populated
+- Run simulations (minimum 3 test runs per new team)
+- Document affinity safety/risk (multi-line format)
+- Note cheese strategy potential if applicable
+
+**Step 5: Validate Updated Guide**
+- Run guide structure validation: `python Tools/validate_guide_structure.py Notes/[Guide_Name]_FINAL.md`
+- Check TOC numbering and anchor links
+- Verify all required sections present
+- Check affinity documentation (minimum 1 mention per team)
+
+**Step 6: Version Control**
+- Never overwrite original guide directly
+- Create new version (e.g., `_v2.md` or date-stamped)
+- Commit changes with detailed message:
+  ```
+  Update [Boss] guide with [Champion Name] teams
+  
+  - Added [Champion Name] to Section 2 mechanics mapping
+  - Created Team X: [Team Name] with [Champion Name]
+  - Updated champion comparisons and pull guide
+  - Simulated 3 runs: [results summary]
+  ```
+- Push to feature branch or v0.X branch
+
+**Step 7: User Review & Finalize**
+- User reviews new teams and recommendations
+- Make adjustments based on feedback
+- Merge to main branch after approval
+- Archive old version in `Archive/` folder if needed
+
+---
+
+### Validation Scripts & Tools
+
+**`Tools/validate_owned_list.py`**
+- Validates owned champion list format, consistency, and integrity
+- Checks: Format, duplicates, alphabetical order, rarity/affinity values, date format
+- Usage: `python Tools/validate_owned_list.py [--fix-order]`
+
+**`Tools/validate_guide_structure.py`**
+- Validates boss guide structure, TOC, sections, and formatting
+- Checks: TOC format, required sections, numbering, anchor links, affinity documentation
+- Usage: `python Tools/validate_guide_structure.py [file] [--all]`
+
+**Reference Templates (in `Tools/`):**
+- `Team_Entry_Template.md` - Standard team specification format
+- `Champion_Comparison_Template.md` - Champion comparison format
+- `Section2_Mapping_Template.md` - Mechanics mapping format
+
+**Boss Guide Template (in `input/`):**
+- `Boss_Guide_Template.md` - Standard template for all boss guides
+
+---
+
+### Community & Multi-User Support
+
+**For Community Users:**
+
+1. **Fork Repository:**
+   - Fork Raid_Tools repository to personal GitHub account
+
+2. **Replace Owned Champion List:**
+   - Update `input/Owned_champion_list.md` with personal roster
+   - Use proper format (Name | Rarity | Affinity | Faction | Last Updated)
+   - Add duplicate notation (x2, x3, etc.) for multiple copies
+
+3. **Run Validation:**
+   ```bash
+   python Tools/validate_owned_list.py --fix-order
+   ```
+
+4. **Trigger Guide Regeneration:**
+   - Follow "Guide Update Workflow" steps above
+   - Start with highest priority bosses (end-game content first)
+
+5. **Expected Output:**
+   - Updated boss guides tailored to personal roster
+   - New team recommendations based on owned champions
+   - Updated pull priorities based on gaps
+
+**Multi-User Workflow:**
+- Each user maintains separate owned champion list
+- Fork repository for personal use
+- Share updated guides via pull requests (optional)
+- Merge upstream changes periodically to get new boss guides
+
+---
+
 ## Changelog
 
+- **2025-10-18:** Added "Roster Update Workflow & Automation" section with directory standards, owned champion list format requirements, cheese mechanics documentation, duplicate champion tracking, guide update workflow for roster changes, validation scripts usage, and community/multi-user support guidelines
 - **2025-10-17:** Added Large File Operations & Batching Requirements to Update & Staging Policy section. All file operations >500 lines or complex merges must use batched processing to prevent prompt length, runtime, and memory issues.
 - **2025-10-17:** Completed all sections with full content from original RAID_copilot-instructions.md, expanding Champion & Trial Mapping, Team Building & Simulation, Affinity Safety & Risk Requirements, Guide Structure & Required Sections, Update & Staging Policy, Section-by-Section Maintenance, Validation & Documentation Standards, Templates & Examples, Task Checklist, and Additional Questions for User/Reviewer
 - **2025-10-16:** Initial creation incorporating Generic AI & Copilot Instructions standards and project-specific boss guide generation workflows, QA standards, and team-building methodologies
