@@ -77,6 +77,7 @@
 **Strengths:** Extremely fast clears, high damage output, strong for farming, good for tournament points
 **Weaknesses:** Less safe on full auto, can fail if cleansers are weak or affinity is unfavorable
 **Simulated Damage/Clear Time:** 1:10–2:00 (manual/auto, Stage 10–15)
+**Poison Explosion Note:** Taurus + Elenaril poison explosion combo was nerfed in 2023 (Elenaril A3 damage reduced ~30%). Still viable but not as dominant as pre-nerf era. Consider alternate strategies for fastest clears.
 **Affinity Safety/Risk:**
 - Void: Safe for all roles.
 - Magic: Risk for Force champions (e.g., Crohnam) as main damage.
@@ -282,12 +283,12 @@
 **Top HP Burners:** Sicia Flametongue (for HP Burn explosion), Tyrant Ixlimor
 **Top Cleanse/Block Debuffs:** Duchess Lilitu, Siphi the Lost Bride
 **Top Revivers:** Duchess Lilitu, Siphi, Raglin
-**Top Wave Clear:** Kymar (reset), Trunda, Big 'Un
-**Top DEF Down:** Lydia the Deathsiren, Dracomorph
-**Other:** Seer (for speed farming), Kymar (reset), Prince Kymar
+**Top Wave Clear:** Kymar the Unkind (reset), Trunda, Big 'Un
+**Top DEF Down:** Lydia the Deathsiren, Teodor the Savant, Wixwell, Dracomorph
+**Other:** Seer (for speed farming), Wythir the Crowned (shield/damage), Gnut (cleanse/block debuffs)
 
 **Rationale:**  
-These champions would enable faster clears, more affinity-safe runs, or allow for new team archetypes (unkillable, block damage, etc.).
+These champions would enable faster clears, more affinity-safe runs, or allow for new team archetypes (unkillable, block damage, etc.). Note: Kymar the Unkind (Prince Kymar) is the same champion - added 2024 title. DEF down list updated to reflect current meta (2025).
 
 ---
 

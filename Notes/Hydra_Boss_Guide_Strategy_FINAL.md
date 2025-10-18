@@ -192,12 +192,15 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 
 ### Stat Requirements (Nightmare/Brutal/Hard/Normal)
 - **Accuracy:**
-	- Nightmare: 400–500+ (for debuffs to land reliably)
-	- Brutal: 350–420
-	- Hard: 300–370
-	- Normal: 200–300
+	- Nightmare: 450–550+ (450 absolute minimum for consistency, 500+ strongly recommended for reliable debuff landing)
+	- Brutal: 380–450
+	- Hard: 320–380
+	- Normal: 220–320
 - **Resistance:**
-	- 350–500+ (for resisting Mischief, Decay, and Blight debuffs)
+	- Nightmare: 450–550+ (for resisting Mischief, Decay, and Blight debuffs; 500+ for Mischief Target)
+	- Brutal: 400–480
+	- Hard: 350–420
+	- Normal: 250–350
 - **Speed:**
 	- 220–270+ (faster is better, but must be tuned for team synergy)
 - **HP/DEF:**
@@ -206,6 +209,8 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 	- 100% Crit Rate, 150–250% Crit Damage for damage dealers
 - **Other:**
 	- High healing, shields, and/or block damage are essential for survival
+
+**Note:** ACC/RESIST requirements updated (October 2025) to reflect current community consensus and in-game testing. Previous recommendations (400+ ACC for Nightmare) were on the low end of viable range.
 
 ### Unique Challenges
 - **Team Uniqueness:** Each key must use a completely unique set of 6 champions (no overlap), so roster depth is critical. Plan for at least 15 viable champions for 3 keys.
@@ -1116,8 +1121,10 @@ Below are the top non-owned champions to target for Hydra upgrades, organized by
 
 | Role | Champion | Why They're Ideal |
 |---|---|---|
+| **Veil/Perfect Veil (TOP PRIORITY)** | **Pythion** | **S-TIER Hydra champion (2024 release): Perfect Veil (blocks True Fear from Torment), HP Burn, Buff Control, high RESIST, cleanses debuffs. One of the strongest Hydra champions currently. HIGHEST PRIORITY if not owned.** |
 | Cleanser/Block Debuffs | Duchess Lilitu | Best-in-slot for Hydra: AoE block debuffs, revive, Veil for Torment, huge survivability boost |
 | Cleanser/Block Debuffs | Siphi the Lost Bride | AoE block debuffs, revive, speed, and healing; top Hydra support |
+| Cleanser/Block Debuffs | Gnut | AoE cleanse, block debuffs, high survivability (2024 release); strong A-tier Hydra support |
 | HP Burn | Sicia Flametongue | AoE HP Burn, debuff extension, and high damage for fast decapitation |
 | HP Burn | Tyrant Ixlimor | AoE HP Burn, ally protect, and sustain; strong for all rotations |
 | Poison | Teela Gormane | AoE HP Burn, poisons, block buffs, and leech; great for hybrid teams |
@@ -1136,7 +1143,7 @@ Below are the top non-owned champions to target for Hydra upgrades, organized by
 | Flex/Utility | Mother Cybele | Revive, TM boost, and speed; flexible for many team types |
 | Flex/Utility | Khoronar | AoE provoke, counterattack, and debuffs; strong for control teams |
 
-*Prioritize champions that fill a missing role or provide unique utility for your current teams. Duchess, Siphi, Krisk, and Nekmo are especially valuable for pushing higher Hydra difficulties and improving key reliability.*
+*Prioritize champions that fill a missing role or provide unique utility for your current teams. **Pythion is HIGHEST PRIORITY (S-tier, 2024 meta)**, followed by Duchess, Siphi, Krisk, and Nekmo for pushing higher Hydra difficulties and improving key reliability. Gnut (2024 release) is a strong A-tier cleanser/block debuffs option.*
 
 ---
 
