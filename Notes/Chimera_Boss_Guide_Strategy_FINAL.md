@@ -805,48 +805,53 @@ Mithrala 245+ → Godseeker 240+ → Venomage 235+ → Ninja 235+ → Coldheart 
 
 ## 10. Ideal Champions to Pull (Amplify/Enable Teams)
 
-These champions would significantly amplify the performance of existing teams or enable new, high-value team archetypes for Chimera. All suggestions are based on current team structures and trial requirements. Champions already owned are excluded.
+These champions would significantly amplify the performance of existing teams or enable new, high-value team archetypes for Chimera. All suggestions are based on current team structures and trial requirements. Champions already owned are excluded. **Updated October 2025 for Q4 2025 meta.**
 
 ### S-Tier (Enable New Archetypes or Maximize Trials)
+- **Pythion**: Perfect Veil (blocks debuffs from all forms), HP Burn, buff control, high RESIST. Top-tier Chimera champion (2024 release) for trial completion and survivability. **HIGHEST PRIORITY.**
+- **Taras the Fierce**: Max HP AOE nuke, massive trial damage, wave clear king (2024 release). Enables fast trial completion and high-damage strategies.
 - **Krisk the Ageless**: Universal tank, AOE ally protection, block debuffs, shield, and speed up. Enables unkillable/ally protect teams and makes all trials easier.
 - **Duchess Lilitu**: Top-tier revive, block debuffs, veil, and sustain. Enables near-auto all-trial teams and improves survivability for all archetypes.
+- **Cardiel**: Block debuffs, revive, cleanse, and TM boost. Top-tier support for revive/cleanse teams and trial combos. (Upgraded from A-tier - current meta assessment)
+- **Siphi the Lost Bride**: Revive, block debuffs, speed, and sustain. Top-tier support for revive/cleanse teams and trial combos. (Upgraded from A-tier - current meta assessment)
 - **Wythir the Crowned**: AOE shield, continuous heal, and block debuffs. Enables shield/cleanse teams and improves trial consistency.
 - **Raglin**: Fastest revive, cleanse, and TM boost. Enables revive/cleanse teams and improves trial reliability.
-- **Soulless**: Massive shield, provoke, and control. Enables shield/provoke teams for Lion/Dragon forms.
 
 ### A-Tier (Amplify Existing Teams or Fill Gaps)
+- **Gnut**: AOE cleanse, block debuffs, high survivability (2024 release). Strong A-tier support for sustain and trial consistency.
+- **Ronda**: HP Burn, ally protect, high damage (2024 release). Strong for burn/sustain hybrid teams and trial completion.
 - **Ursuga Warcaller**: Ally protection, shield, and tankiness. Amplifies sustain and shield teams.
-- **Cardiel**: Block debuffs, revive, cleanse, and TM boost. Amplifies revive/cleanse teams and enables new trial combos.
-- **Siphi the Lost Bride**: Revive, block debuffs, speed, and sustain. Amplifies revive/cleanse teams and enables new trial combos.
-- **Rotos the Lost Groom**: High single-target damage, revive synergy. Amplifies damage teams and enables 1M+ hit trial.
 - **Geomancer**: HP burn, damage reflection, and TM control. Amplifies burn/minion clear teams and enables new trial combos.
 - **Harima**: Block debuffs, shield, and sustain. Amplifies shield/cleanse teams.
 
 ### B-Tier (Specialized or Niche Upgrades)
+- **Rotos the Lost Groom**: High single-target damage, revive synergy. Niche for damage teams and 1M+ hit trial. (Downgraded from A-tier - outclassed by Taras and newer damage dealers)
 - **Mother Cybele**: Revive, TM boost, and sustain. Niche for revive/cleanse teams.
 - **Godseeker Anea**: Revive, heal, and block debuffs. Niche for revive/cleanse teams.
-- **Maneater**: Unkillable, block debuffs, and TM control. Enables unkillable teams for specific trial sets.
 - **Tuhanarak**: Block debuffs, cleanse, and sustain. Niche for cleanse/block debuffs teams.
-- **Gurgoh the Augur**: Freeze, AOE damage, and control. Niche for minion clear and control teams.
+
+**Note:** Removed from recommendations (outclassed by 2024-2025 releases): Soulless (shield/provoke - heavily outclassed), Maneater (limited Chimera use), Gurgoh the Augur (freeze/AOE - heavily outclassed).
 
 ---
 
 ## 11. Team Upgrade Paths (How Each Pull Would Help)
 
+- **Pythion (HIGHEST PRIORITY)**: Perfect Veil blocks debuffs from all Chimera forms, HP Burn for damage, buff control for Lion/Maw. Top-tier for all trial sets and survivability.
+- **Taras the Fierce**: Max HP AOE nuke enables fast trial completion (Deal 1M Damage, minion clear), wave clear, and high-damage strategies. Top-tier for leaderboard pushing.
 - **Krisk the Ageless**: Instantly enables a new "Ally Protect/Shield All-Trials" team, making all trial completions easier and increasing survivability for every archetype.
 - **Duchess Lilitu**: Allows for near-auto all-trial teams, improves revive/cleanse teams, and enables new sustain-focused builds.
+- **Cardiel**: Top-tier support amplifies revive/cleanse teams, enables new trial combos, and improves block debuffs reliability. (S-tier per Q4 2025 meta)
+- **Siphi the Lost Bride**: Top-tier support amplifies revive/cleanse teams, enables new trial combos, and improves sustain. (S-tier per Q4 2025 meta)
 - **Wythir the Crowned**: Enables shield/cleanse teams, improves shield trial reliability, and adds sustain to damage teams.
 - **Raglin**: Enables fast revive/cleanse teams, improves trial reliability, and allows for more aggressive team compositions.
-- **Soulless**: Enables shield/provoke teams, improves control in Lion/Dragon forms, and increases shield trial consistency.
+- **Gnut**: AOE cleanse and block debuffs amplify sustain teams, improve trial consistency, and add survivability. (2024 release)
+- **Ronda**: HP Burn and ally protect amplify burn/sustain hybrid teams, improve trial completion, and add high damage. (2024 release)
 - **Ursuga Warcaller**: Amplifies sustain and shield teams, improves survivability, and enables new ally protect builds.
-- **Cardiel**: Amplifies revive/cleanse teams, enables new trial combos, and improves block debuffs reliability.
-- **Siphi the Lost Bride**: Amplifies revive/cleanse teams, enables new trial combos, and improves sustain.
-- **Rotos the Lost Groom**: Amplifies damage teams, enables 1M+ hit trial, and improves minion clear.
 - **Geomancer**: Amplifies burn/minion clear teams, enables new trial combos, and improves damage output.
 - **Harima**: Amplifies shield/cleanse teams, improves shield trial reliability, and adds sustain.
+- **Rotos the Lost Groom**: Niche for damage teams and 1M+ hit trial. Outclassed by Taras for most strategies. (Downgraded to B-tier)
 - **Mother Cybele**: Niche for revive/cleanse teams, improves trial reliability.
 - **Godseeker Anea**: Niche for revive/cleanse teams, improves sustain.
-- **Maneater**: Enables unkillable teams for specific trial sets, improves survivability.
 - **Tuhanarak**: Niche for cleanse/block debuffs teams, improves trial reliability.
 - **Gurgoh the Augur**: Niche for minion clear and control teams, improves minion clear trial.
 

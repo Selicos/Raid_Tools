@@ -1117,11 +1117,12 @@ The Hydra Clan Boss is Raid Shadow Legends' most complex PvE boss, featuring six
 
 ## 7. Ideal Champions to Pull for Hydra
 
-Below are the top non-owned champions to target for Hydra upgrades, organized by role. Each is selected for their unique value, synergy, or ability to fill a current roster gap. (All champions listed are not currently owned.)
+Below are the top non-owned champions to target for Hydra upgrades, organized by role. Each is selected for their unique value, synergy, or ability to fill a current roster gap. (All champions listed are not currently owned.) **Updated October 2025 for Q4 2025 meta.**
 
 | Role | Champion | Why They're Ideal |
 |---|---|---|
 | **Veil/Perfect Veil (TOP PRIORITY)** | **Pythion** | **S-TIER Hydra champion (2024 release): Perfect Veil (blocks True Fear from Torment), HP Burn, Buff Control, high RESIST, cleanses debuffs. One of the strongest Hydra champions currently. HIGHEST PRIORITY if not owned.** |
+| **Veil/Perfect Veil (S-TIER)** | **Awakened Foli** | **S-TIER Hydra champion: Perfect Veil (if awakened), Block Buffs, Poison Cloud removal, high damage. Top-tier for Mischief/Torment/Blight counters.** |
 | Cleanser/Block Debuffs | Duchess Lilitu | Best-in-slot for Hydra: AoE block debuffs, revive, Veil for Torment, huge survivability boost |
 | Cleanser/Block Debuffs | Siphi the Lost Bride | AoE block debuffs, revive, speed, and healing; top Hydra support |
 | Cleanser/Block Debuffs | Gnut | AoE cleanse, block debuffs, high survivability (2024 release); strong A-tier Hydra support |
@@ -1134,16 +1135,17 @@ Below are the top non-owned champions to target for Hydra upgrades, organized by
 | Revive | Cardinal | Fast revive and TM boost; strong for clutch saves |
 | Support/Heals | Yumeko | AoE block debuffs, skill reset, and healing; top-tier support |
 | TM Control/Provoke | Nekmo Thaar | AoE TM control, speed, and debuffs; strong for disruptive teams |
-| TM Control/Provoke | Husk | AoE provoke, max HP nuke, and crowd control; great for decapitation |
+| Damage Dealer | Trunda | Max HP nuke, fast decapitation (buffed 2024); strong for freeing devoured and head kills |
 | Damage Dealer | Royal Guard | Max HP nuke, decapitation, and strong for freeing devoured |
 | Damage Dealer | Cupidus | AoE HP Burn, nuke, and synergy with Venus |
 | Debuff Spread | Venus | AoE debuffs, debuff spread, and synergy with Cupidus |
 | Ally Protect/Counter | Ursuga Warcaller | Ally protect, defense, and sustain; top for survivability |
 | Ally Protect/Counter | Godfrey | Ally protect, block debuffs, and sustain; strong for safe keys |
 | Flex/Utility | Mother Cybele | Revive, TM boost, and speed; flexible for many team types |
-| Flex/Utility | Khoronar | AoE provoke, counterattack, and debuffs; strong for control teams |
 
-*Prioritize champions that fill a missing role or provide unique utility for your current teams. **Pythion is HIGHEST PRIORITY (S-tier, 2024 meta)**, followed by Duchess, Siphi, Krisk, and Nekmo for pushing higher Hydra difficulties and improving key reliability. Gnut (2024 release) is a strong A-tier cleanser/block debuffs option.*
+*Prioritize champions that fill a missing role or provide unique utility for your current teams. **Pythion and Awakened Foli are HIGHEST PRIORITY (S-tier, Perfect Veil meta)**, followed by Duchess, Siphi, Krisk, and Nekmo for pushing higher Hydra difficulties and improving key reliability. Gnut (2024 release) is a strong A-tier cleanser/block debuffs option. Trunda (buffed 2024) is A-tier for damage and decapitation.*
+
+**Note:** Removed from recommendations (outclassed by 2024-2025 releases): Husk (provoke/nuke - heavily outclassed by Trunda and newer damage dealers), Khoronar (provoke/counterattack - outclassed).
 
 ---
 
