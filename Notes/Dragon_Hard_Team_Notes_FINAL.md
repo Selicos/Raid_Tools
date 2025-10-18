@@ -1,27 +1,29 @@
 # Dragon Boss Guide - Hard Difficulty (FINAL)
 
 ## Table of Contents
-1. Boss Mechanics & Stat Requirements
-2. Teams by Estimated Damage/Clear Speed
-3. Detailed Team Sections (by Archetype)
-    - Speed Clear (Manual/Auto)
-    - Double HP Burn
-    - Full Poison
-    - Wave Control/Farm
-    - Fastest Auto Poison/Burn/HP Burn (Consolidated)
-    - Safe Sustain/Revive (Consolidated)
-    - Speed Clear/Poison Explosion (Consolidated)
-4. Best Champions & Team Participation
-5. Direct Champion Comparisons by Role
-6. Ideal Champions to Pull
-7. General Notes
-8. Actionable Notes & Upgrade Advice
-9. Team Flexibility & Alternate Builds
-10. When to Use Each Team
-11. Additional Team Archetypes
-12. Validation & Simulation Notes
+
+1. [Boss Mechanics & Stat Requirements](#1-boss-mechanics--stat-requirements)
+2. [Teams by Estimated Damage/Clear Speed](#2-teams-by-estimated-damageclear-speed)
+3. [Detailed Team Sections (by Archetype)](#3-detailed-team-sections-by-archetype)
+    - [Speed Clear (Manual/Auto)](#speed-clear-manualauto)
+    - [Double HP Burn](#double-hp-burn)
+    - [Full Poison](#full-poison)
+    - [Wave Control/Farm](#wave-controlfarm)
+    - [Fastest Auto Poison/Burn/HP Burn (Consolidated)](#fastest-auto-poisonburnhp-burn-consolidated)
+    - [Safe Sustain/Revive (Consolidated)](#safe-sustainrevive-consolidated)
+    - [Speed Clear/Poison Explosion (Consolidated)](#speed-clearpoison-explosion-consolidated)
+4. [Best Champions & Team Participation](#4-best-champions--team-participation)
+5. [Direct Champion Comparisons by Role](#5-direct-champion-comparisons-by-role)
+6. [Ideal Champions to Pull](#6-ideal-champions-to-pull)
+7. [General Notes](#7-general-notes)
+8. [Actionable Notes & Upgrade Advice](#8-actionable-notes--upgrade-advice)
+9. [Team Flexibility & Alternate Builds](#9-team-flexibility--alternate-builds)
+10. [When to Use Each Team](#10-when-to-use-each-team)
+11. [Additional Team Archetypes](#11-additional-team-archetypes)
+12. [Validation & Simulation Notes](#12-validation--simulation-notes)
 
 ---
+
 
 ## 1. Boss Mechanics & Stat Requirements
 ### Manual/Auto Play Notes

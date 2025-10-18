@@ -8,30 +8,32 @@
 - Always check weekly rotation for affinity matchups
 
 ## Table of Contents
-1. Boss Mechanics & Stat Requirements
-2. Teams by Estimated Damage/Clear Speed
-3. Detailed Team Sections (by Archetype)
-    3.1 Team 1: Balanced HP Burn & Cleanse Core (Auto-Friendly, High Survivability)
-    3.2 Team 2: Decapitation & High Damage (HP Burn/Poison Hybrid, Fast Devour Recovery)
-    3.3 Team 3: TM Control, Support, and Cleanse (Sustain/Disrupt, No Overlap)
-    3.4 Team 4: High Damage Poison/Burn (Max Key Push, Unique Set)
-    3.5 Team 5: Cleanse/Revive/Support (Survivability Focus, Unique Set)
-    3.6 Team 6: Niche/Disruptive (TM Control, Debuff Spread, Unique Set)
-4. Optimized Team Sets for Hydra (No Overlap)
-    4.1 Set 1: Max Survivability & Control (Hard/Brutal)
-    4.2 Set 2: Max Damage Hybrid (Hard/Brutal/Normal)
-    4.3 Set 3: Progression & Niche/Alternate (Normal/Hard/Backup)
-5. Best Champions & Team Participation
-6. Direct Champion Comparisons by Role
-7. Ideal Champions to Pull
-8. General Notes
-9. Actionable Notes & Upgrade Advice
-10. Team Flexibility & Alternate Builds
-11. When to Use Each Team
-12. Additional Team Archetypes & Niche Strategies
-13. Validation & Simulation Notes
+
+1. [Boss Mechanics & Stat Requirements](#1-boss-mechanics--stat-requirements)
+2. [Teams by Estimated Damage/Clear Speed](#2-teams-by-estimated-damageclear-speed)
+3. [Detailed Team Sections (by Archetype)](#3-detailed-team-sections-by-archetype)
+    - [Team 1: Balanced HP Burn & Cleanse Core (Auto-Friendly, High Survivability)](#team-1-balanced-hp-burn--cleanse-core-auto-friendly-high-survivability)
+    - [Team 2: Decapitation & High Damage (HP Burn/Poison Hybrid, Fast Devour Recovery)](#team-2-decapitation--high-damage-hp-burnpoison-hybrid-fast-devour-recovery)
+    - [Team 3: TM Control, Support, and Cleanse (Sustain/Disrupt, No Overlap)](#team-3-tm-control-support-and-cleanse-sustaindisrupt-no-overlap)
+    - [Team 4: High Damage Poison/Burn (Max Key Push, Unique Set)](#team-4-high-damage-poisonburn-max-key-push-unique-set)
+    - [Team 5: Cleanse/Revive/Support (Survivability Focus, Unique Set)](#team-5-cleanserevivesupport-survivability-focus-unique-set)
+    - [Team 6: Niche/Disruptive (TM Control, Debuff Spread, Unique Set)](#team-6-nichedisruptive-tm-control-debuff-spread-unique-set)
+4. [Optimized Team Sets for Hydra (No Overlap)](#4-optimized-team-sets-for-hydra-no-overlap)
+    - [Set 1: Max Survivability & Control (Hard/Brutal)](#set-1-max-survivability--control-hardbrutal)
+    - [Set 2: Max Damage Hybrid (Hard/Brutal/Normal)](#set-2-max-damage-hybrid-hardbrutalnormal)
+    - [Set 3: Progression & Niche/Alternate (Normal/Hard/Backup)](#set-3-progression--nichealternate-normalhardbackup)
+5. [Best Champions & Team Participation](#5-best-champions--team-participation)
+6. [Direct Champion Comparisons by Role](#6-direct-champion-comparisons-by-role)
+7. [Ideal Champions to Pull](#7-ideal-champions-to-pull)
+8. [General Notes](#8-general-notes)
+9. [Actionable Notes & Upgrade Advice](#9-actionable-notes--upgrade-advice)
+10. [Team Flexibility & Alternate Builds](#10-team-flexibility--alternate-builds)
+11. [When to Use Each Team](#11-when-to-use-each-team)
+12. [Additional Team Archetypes & Niche Strategies](#12-additional-team-archetypes--niche-strategies)
+13. [Validation & Simulation Notes](#13-validation--simulation-notes)
 
 ---
+
 
 ## 1. Boss Mechanics & Stat Requirements
 

@@ -1,27 +1,29 @@
 # Fire Knight Boss Guide - Hard Difficulty (FINAL)
 
 ## Table of Contents
-1. Boss Mechanics & Stat Requirements
-2. Teams by Estimated Damage/Clear Speed
-3. Team: Ninja Freeze Ally Attack (No Yakarl)
-4. Team: Ninja Freeze + Ally Attack
-5. Team: Broadmaw Freeze + Multi-Hit
-6. Team: Fayne Poison Debuff Team
-7. Best Champions & Team Participation
-8. Direct Champion Comparisons by Role
-9. Ideal Champions to Pull
-10. General Notes
-11. Actionable Notes & Upgrade Advice
-12. Team Flexibility & Alternate Builds
-13. When to Use Each Team
-14. Additional Team Archetypes
-15. Validation & Simulation Notes
+
+1. [Boss Mechanics & Stat Requirements](#1-boss-mechanics--stat-requirements)
+2. [Teams by Estimated Damage/Clear Speed](#2-teams-by-estimated-damageclear-speed)
+3. [Team: Ninja Freeze Ally Attack (No Yakarl)](#3-team-ninja-freeze-ally-attack-no-yakarl)
+4. [Team: Ninja Freeze + Ally Attack](#4-team-ninja-freeze--ally-attack)
+5. [Team: Broadmaw Freeze + Multi-Hit](#5-team-broadmaw-freeze--multi-hit)
+6. [Team: Fayne Poison Debuff Team](#6-team-fayne-poison-debuff-team)
+7. [Best Champions & Team Participation](#7-best-champions--team-participation)
+8. [Direct Champion Comparisons by Role](#8-direct-champion-comparisons-by-role)
+9. [Ideal Champions to Pull](#9-ideal-champions-to-pull)
+10. [General Notes](#10-general-notes)
+11. [Actionable Notes & Upgrade Advice](#11-actionable-notes--upgrade-advice)
+12. [Team Flexibility & Alternate Builds](#12-team-flexibility--alternate-builds)
+13. [When to Use Each Team](#13-when-to-use-each-team)
+14. [Additional Team Archetypes](#14-additional-team-archetypes)
+15. [Validation & Simulation Notes](#15-validation--simulation-notes)
 
 ---
 
 ## 1. Boss Mechanics & Stat Requirements
 
 ### Validated Mechanics (Hard Mode)
+
 
 - **Shield Count:** 21 hits required to break the shield (up from 12 in classic). Breaking the shield is essential to damage the boss.
 - **Turn Meter Reduction Immunity:** Tainted Fyro is immune to all Turn Meter reduction except from Freeze debuffs. Each Freeze debuff reduces his TM by 15%.

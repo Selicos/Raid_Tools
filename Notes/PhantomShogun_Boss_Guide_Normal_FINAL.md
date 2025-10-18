@@ -30,6 +30,7 @@
 
 ---
 
+
 ## 1. Boss Mechanics & Stat Requirements
 
 ### Boss Overview

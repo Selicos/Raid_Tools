@@ -1,30 +1,32 @@
 # Ultra-Nightmare Clan Boss Team Guide (2025, Owned Champions Only)
 
 ## Table of Contents
-1. Boss Mechanics & Stat Requirements
-2. Teams by Estimated Damage/Clear Speed
-3. Detailed Team Sections (by Archetype)
-    - 2:1 Speed Tune Teams
-    - Geomancer-Focused & Brogni Teams
-    - Shield/Support Teams
-    - High-Damage Team Variations
-    - Poison-Focused Teams
-    - HP Burn/Hybrid Teams
-    - Turn Meter/Speed Manipulation Teams
-    - Gimmick/Niche Mechanic Teams
-    - High-Survivability/Counterattack Teams
-4. Best Champions & Team Participation
-5. Direct Champion Comparisons by Role
-6. Ideal Champions to Pull
-7. General Notes
-8. Actionable Notes & Upgrade Advice
-9. Team Flexibility & Alternate Builds
-10. When to Use Each Team
-11. Additional Team Archetypes, Variants, & Mechanics to Exploit
-12. Actionable Checklist for Reliable 80M+ Runs
-13. Validation & Simulation Notes
+
+1. [Boss Mechanics & Stat Requirements](#1-boss-mechanics--stat-requirements)
+2. [Teams by Estimated Damage/Clear Speed](#2-teams-by-estimated-damageclear-speed)
+3. [Detailed Team Sections (by Archetype)](#3-detailed-team-sections-by-archetype)
+    - [2:1 Speed Tune Teams](#21-speed-tune-teams)
+    - [Geomancer-Focused & Brogni Teams](#geomancer-focused--brogni-teams)
+    - [Shield/Support Teams](#shieldsupport-teams)
+    - [High-Damage Team Variations](#high-damage-team-variations)
+    - [Poison-Focused Teams](#poison-focused-teams)
+    - [HP Burn/Hybrid Teams](#hp-burnhybrid-teams)
+    - [Turn Meter/Speed Manipulation Teams](#turn-meterspeed-manipulation-teams)
+    - [Gimmick/Niche Mechanic Teams](#gimmickniche-mechanic-teams)
+    - [High-Survivability/Counterattack Teams](#high-survivabilitycounterattack-teams)
+4. [Best Champions & Team Participation](#4-best-champions--team-participation)
+5. [Direct Champion Comparisons by Role](#5-direct-champion-comparisons-by-role)
+6. [Ideal Champions to Pull](#6-ideal-champions-to-pull)
+7. [General Notes](#7-general-notes)
+8. [Actionable Notes & Upgrade Advice](#8-actionable-notes--upgrade-advice)
+9. [Team Flexibility & Alternate Builds](#9-team-flexibility--alternate-builds)
+10. [When to Use Each Team](#10-when-to-use-each-team)
+11. [Additional Team Archetypes, Variants, & Mechanics to Exploit](#11-additional-team-archetypes-variants--mechanics-to-exploit)
+12. [Actionable Checklist for Reliable 80M+ Runs](#12-actionable-checklist-for-reliable-80m-runs)
+13. [Validation & Simulation Notes](#13-validation--simulation-notes)
 
 ---
+
 
 ## 1. Boss Mechanics & Stat Requirements
 

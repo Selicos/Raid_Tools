@@ -1,29 +1,31 @@
 # Shredder Dungeon Boss Guide (FINAL)
 
 ## Table of Contents
-1. Boss Mechanics & Stat Requirements
-2. Champion-to-Mechanics Mapping (Shredder-Specific)
-3. Teams by Estimated Damage/Clear Speed
-4. Detailed Team Sections (by Archetype)
-    - Shredder Core Cleanse
-    - Sustain DEF Down
-    - Speed Cleanse Hybrid
-    - Block Debuffs Safety
-    - Double Cleanse Revive
-    - Awakened Damage Focus
-    - F2P Epic Core
-    - Leech Sustain Mix
-5. Best Champions & Team Participation
-6. Direct Champion Comparisons by Role
-7. Ideal Champions to Pull
-8. General Notes
-9. Actionable Notes & Upgrade Advice
-10. Team Flexibility & Alternate Builds
-11. When to Use Each Team
-12. Additional Team Archetypes
-13. Validation & Simulation Notes
+
+1. [Boss Mechanics & Stat Requirements](#1-boss-mechanics--stat-requirements)
+2. [Champion-to-Mechanics Mapping (Shredder-Specific)](#2-champion-to-mechanics-mapping-shredder-specific)
+3. [Teams by Estimated Damage/Clear Speed](#3-teams-by-estimated-damageclear-speed)
+4. [Detailed Team Sections (by Archetype)](#4-detailed-team-sections-by-archetype)
+    - [Shredder Core Cleanse](#shredder-core-cleanse)
+    - [Sustain DEF Down](#sustain-def-down)
+    - [Speed Cleanse Hybrid](#speed-cleanse-hybrid)
+    - [Block Debuffs Safety](#block-debuffs-safety)
+    - [Double Cleanse Revive](#double-cleanse-revive)
+    - [Awakened Damage Focus](#awakened-damage-focus)
+    - [F2P Epic Core](#f2p-epic-core)
+    - [Leech Sustain Mix](#leech-sustain-mix)
+5. [Best Champions & Team Participation](#5-best-champions--team-participation)
+6. [Direct Champion Comparisons by Role](#6-direct-champion-comparisons-by-role)
+7. [Ideal Champions to Pull](#7-ideal-champions-to-pull)
+8. [General Notes](#8-general-notes)
+9. [Actionable Notes & Upgrade Advice](#9-actionable-notes--upgrade-advice)
+10. [Team Flexibility & Alternate Builds](#10-team-flexibility--alternate-builds)
+11. [When to Use Each Team](#11-when-to-use-each-team)
+12. [Additional Team Archetypes](#12-additional-team-archetypes)
+13. [Validation & Simulation Notes](#13-validation--simulation-notes)
 
 ---
+
 
 ## 1. Boss Mechanics & Stat Requirements
 
