@@ -302,6 +302,7 @@ These champions would enable faster clears, more affinity-safe runs, or allow fo
 - For safest clears, double up on revivers and healers.
 - Gear: Poisoners/HP Burners in accuracy/speed, healers in Immortal/Relentless, nukers in Savage/Crit.
 - Masteries: Warmaster/Giant Slayer for damage, support tree for healers/revivers.
+- **CRITICAL: 100% C.RATE required for full Warmaster/Giant Slayer proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
 
 ---
 

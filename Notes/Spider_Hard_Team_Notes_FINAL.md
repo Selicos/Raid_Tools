@@ -229,6 +229,7 @@
 - Manual play is recommended for TM control and poison explosion teams to maximize burst and survivability.
 - Use DeadwoodJedi or similar calculators for exact speed tuning if pushing for fastest clears.
 - Prioritize Warmaster and Master Hexer masteries for all damage dealers and extenders.
+- **CRITICAL: 100% C.RATE required for full Warmaster proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
 - Relentless sets can greatly increase damage but introduce RNG.
 - For poison explosion teams, careful skill cycling and debuff management are critical for success.
 - If struggling with survivability, prioritize Brogni, Godseeker Aniri, and Tagoar for shields, revive, and cleanse.

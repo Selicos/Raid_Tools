@@ -876,6 +876,7 @@ These champions would significantly amplify the performance of existing teams or
 - **Masteries:**
   - Debuffers: Support/Defense trees for ACC, healing, and survivability.
   - Damage Dealers: Offense/Support for damage and TM gain.
+  - **CRITICAL: 100% C.RATE required for full Warmaster proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
   - Revivers/Sustain: Defense/Support for healing, damage reduction, and TM boost.
 - **Stat Tuning:**
   - Speed: 220–260+ for all roles; fastest on cleansers/block debuffers.

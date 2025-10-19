@@ -1015,6 +1015,7 @@ Below are the top non-owned champions to target for Hydra upgrades, organized by
 - **Masteries:**
 	- Support and Defense trees are best for most Hydra roles. Take Master Hexer, Lasting Gifts, and Timely Intervention for support champs.
 	- Warmaster or Giant Slayer for HP Burners, Poisoners, and main damage dealers.
+	- **CRITICAL: 100% C.RATE required for full Warmaster/Giant Slayer proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
 	- Avoid masteries that can cause unwanted debuffs (e.g., Fearsome Presence on auto).
 
 - **Stat Priorities:**

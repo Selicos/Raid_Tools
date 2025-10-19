@@ -276,6 +276,7 @@
 - Cleanse/block debuffs and revive are critical for auto consistency.
 - Gear: Speed, Immortal, Regeneration, Lifesteal for supports and debuffers; high HP/DEF for all roles.
 - Masteries: Support/Defense trees for sustain and debuff extension; Offense tree for damage dealers. Key masteries: Warmaster/Giant Slayer (boss damage), Master Hexer (debuff extension), Lasting Gifts (buff extension).
+- **CRITICAL: 100% C.RATE required for full Warmaster/Giant Slayer proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
 - Stat Priorities: Speed > HP/DEF > Accuracy > Resistance (for block debuff/cleanse teams).
 - Manual play may be needed for minion kill timing or skill order on early clears or budget teams.
 

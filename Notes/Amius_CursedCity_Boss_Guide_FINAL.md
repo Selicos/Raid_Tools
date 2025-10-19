@@ -1238,6 +1238,7 @@ Sun Wukong (6 awaken), Ninja (6 awaken), Mithrala Lifebane (6 awaken), Stag Knig
 
 **Damage Dealer Masteries (Sun Wukong, Ninja, Coldheart, Astralon):**
 - **Offense Tree:** Deadly Precision (C.RATE), Keen Strike (C.DMG), Single Out (damage vs solo boss), Bring It Down (damage vs high HP), Methodical (damage scaling), **Warmaster or Helmsmasher** (Warmaster for non-ignore DEF, Helmsmasher for ignore DEF scaling)
+- **CRITICAL: 100% C.RATE required for full Warmaster proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
 - **Support Tree:** Lore of Steel (stat boost), Cycle of Violence (TM boost on kill, safe alternative to Cycle of Magic)
 - **Key Masteries:** Helmsmasher (ignore DEF scaling for Sun Wukong/Ninja/Astralon), Warmaster (damage scaling for Coldheart MAX HP damage)
 

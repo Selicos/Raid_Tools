@@ -1390,6 +1390,7 @@ Version: 1.0 DRAFT
 **Masteries:**
 - **Supports:** Rapid Response, Lasting Gifts, Eagle-Eye, Timely Intervention.
 - **Damage Dealers:** Warmaster or Giant Slayer, Cycle of Magic, Master Hexer.
+- **CRITICAL: 100% C.RATE required for full Warmaster/Giant Slayer proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
 - **Revivers:** Timely Intervention, Lasting Gifts, Spirit Haste.
 
 **Manual/Auto Play Advice:**

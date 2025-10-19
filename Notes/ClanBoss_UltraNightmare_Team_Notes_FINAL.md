@@ -804,6 +804,7 @@ These are the top champions to pull for Clan Boss upgrades, based on current ros
 
 - **Masteries:**
   - All damage dealers and debuffers should take Warmaster and Master Hexer.
+  - **CRITICAL: 100% C.RATE required for full Warmaster proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
   - Godseeker Aniri and Brogni benefit from Lasting Gifts to extend buffs and shields.
   - Support champions (Rector Drath, Maulie Tankard) should take support tree for increased healing and buff duration.
 

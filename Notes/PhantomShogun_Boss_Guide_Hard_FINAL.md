@@ -1289,6 +1289,7 @@ Overall Risk: LOW-MEDIUM - Only Ninja has affinity risk, but it's CRITICAL on Sp
 **T6 Mastery:**
 - **Warmaster** (Ninja, Abbess) - 60% chance to deal 10% of enemy MAX HP as damage (effective before Shade Counter 40)
 - **Giant Slayer** (Coldheart) - 30% chance to deal 7.5% of enemy MAX HP as damage per hit on multi-hit skills (A3 is 4 hits)
+- **CRITICAL: 100% C.RATE required for full Warmaster/Giant Slayer proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
 
 **Key Masteries:**
 - **Single Out** (T1) - +15% damage to targets without buffs (boss rarely has buffs)

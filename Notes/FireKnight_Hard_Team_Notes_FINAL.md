@@ -412,6 +412,7 @@
 
 - **Masteries:**
   - Offense (Warmaster) for main damage dealers (Ninja, Fayne, Coldheart).
+  - **CRITICAL: 100% C.RATE required for full Warmaster proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
   - Support tree (Sniper, Master Hexer) for debuff extension and increased chance to place debuffs.
   - Defense tree for sustain on supports (Maulie, Arbiter, Broadmaw, Bad-el-Kazar).
 

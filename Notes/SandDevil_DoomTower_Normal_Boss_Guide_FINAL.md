@@ -1395,6 +1395,7 @@ This section lists **non-owned champions** that would significantly improve team
 
 #### **Offense Tree (Damage Dealers Only)**
 - **Key Masteries:** Warmaster or Helmsmasher (Tier 6, burst damage on A3/A1)
+- **CRITICAL: 100% C.RATE required for full Warmaster proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
 - **Who Needs:** Elenaril (A3 Poison explode), Coldheart (A3 30% MAX HP nuke), Dhukk (high damage output)
 - **Why:** Warmaster/Helmsmasher adds 60% chance for extra damage proc on A1/A3, boosting burst potential during Slumber state
 - **Note:** Most champions prioritize Defense + Support trees for survivability over Offense tree

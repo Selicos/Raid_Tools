@@ -650,6 +650,7 @@
 - All teams require at least one cleanser or block debuffs champion for Ironbrand prevention.
 - Gear: Speed, Perception, Immortal, Relentless for supports; Accuracy, Speed, Lifesteal for damage dealers.
 - Masteries: Support/Defense trees for sustain and debuff extension; Offense tree for damage dealers. Key masteries: Warmaster/Giant Slayer (boss damage), Rapid Response, Lasting Gifts (buff extension).
+- **CRITICAL: 100% C.RATE required for full Warmaster/Giant Slayer proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
 - Stat Priorities: Speed > HP/DEF > Accuracy > Resistance (for block debuff/cleanse teams).
 - Manual play may be needed for skill timing or affinity safety on early clears or budget teams.
 

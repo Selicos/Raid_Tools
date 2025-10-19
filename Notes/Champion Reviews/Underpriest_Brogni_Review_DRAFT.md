@@ -257,6 +257,19 @@
 - Methodical
 - **GIANT SLAYER** (T6 - CRITICAL for Clan Boss)
 
+**CRITICAL: Warmaster/Giant Slayer C.RATE Dependency**
+
+Warmaster and Giant Slayer masteries **ONLY proc on critical hits**:
+- **Effective Proc Rate = C.RATE × Base Proc Rate**
+- **Warmaster:** 60% base → 60% at 100% C.RATE, 51% at 85% C.RATE (15% damage loss)
+- **Giant Slayer:** 30% base → 30% at 100% C.RATE, 25.5% at 85% C.RATE (15% damage loss)
+
+**Why this matters for Brogni:**
+- Brogni is a SUPPORT champion (not damage dealer), so C.RATE is LOW PRIORITY
+- Giant Slayer procs will be infrequent without C.RATE investment
+- **Recommendation:** Accept lower mastery damage in exchange for maximizing HP/DEF/ACC/SPD
+- If you have excess C.RATE substats, it will boost Giant Slayer damage slightly, but don't sacrifice core stats for it
+
 **Support Tree:**
 - Steadfast
 - Lay on Hands
