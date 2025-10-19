@@ -1041,3 +1041,4 @@ Per `.github/copilot-instructions.md`:
 ---
 
 **END OF ROADMAP**
+1. update readme using current project info. Drop all items for removed python ex the intake process. Use the current structure, instructions, etc as a guide. This may remove a lot of content from the readme, confirm info is needed as you go. Review need for makefile given current scripts and tools, and extensions/etc. This should be baprt of housekeeping at the end of all phases in a body of work.

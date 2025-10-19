@@ -5,7 +5,7 @@
 - Abbess | Rarity: Legendary | Affinity: Force | Faction: Sacred Order | Last Updated: 2025-10-15
 - Adelyn | Rarity: Rare | Affinity: Spirit | Faction: High Elves | Last Updated: 2025-10-15
 - Akoth the Seared | Rarity: Epic | Affinity: Force | Faction: Demonspawn | Last Updated: 2025-10-18
-- Alice the Wanderer | Rarity: Legendary | Affinity: Magic | Faction: Shadowkin | Last Updated: 2025-10-15
+- Alice the Wanderer | Rarity: Legendary | Affinity: Magic | Faction: ShadSacred Order | Last Updated: 2025-10-15
 - Alure | Rarity: Epic | Affinity: Spirit | Faction: Demonspawn | Last Updated: 2025-10-15
 - Aox the Rememberer | Rarity: Epic | Affinity: Void | Faction: Lizardmen | Last Updated: 2025-10-15
 - Apothecary (x3) | Rarity: Rare | Affinity: Magic | Faction: High Elves | Last Updated: 2025-10-15
@@ -31,18 +31,18 @@
 - Djamarsa | Rarity: Epic | Affinity: Spirit | Faction: Demonspawn | Last Updated: 2025-10-15
 - Drexthar Bloodtwin | Rarity: Legendary | Affinity: Force | Faction: Demonspawn | Last Updated: 2025-10-15
 - Elenaril | Rarity: Legendary | Affinity: Magic | Faction: High Elves | Last Updated: 2025-10-15
-- Embrys the Anomaly | Rarity: Mythic | Affinity: Void | Faction: Sylvan Watchers | Last Updated: 2025-10-15
+- Embrys the Anomaly | Rarity: Mythic | Affinity: Force | Faction: Knights Revenant | Last Updated: 2025-10-18
 - Eolfrig | Rarity: Epic | Affinity: Spirit | Faction: Barbarians | Last Updated: 2025-10-18
 - Fayne | Rarity: Epic | Affinity: Magic | Faction: Dark Elves | Last Updated: 2025-10-15
 - Fenshi | Rarity: Epic | Affinity: Spirit | Faction: Shadowkin | Last Updated: 2025-10-15
 - Frozen Banshee | Rarity: Rare | Affinity: Spirit | Faction: Undead Hordes | Last Updated: 2025-10-15
-- Fyt-gun Isable | Rarity: Legendary | Affinity: Force | Faction: Ogryn Tribes | Last Updated: 2025-10-18
+- Fyr-gun Isabel | Rarity: Legendary | Affinity: Force | Faction: Ogryn Tribes | Last Updated: 2025-10-18
 - Geomancer | Rarity: Epic | Affinity: Magic | Faction: Barbarians | Last Updated: 2025-10-15
 - Ghostborn | Rarity: Epic | Affinity: Magic | Faction: Knights Revenant | Last Updated: 2025-10-18
-- Godseeker Aniri (x2) | Rarity: Epic | Affinity: Void | Faction: Barbarians | Last Updated: 2025-10-15
+- Godseeker Aniri (x2) | Rarity: Epic | Affinity: Void | Faction: Sacred Order | Last Updated: 2025-10-18
 - Gretel Hagbane | Rarity: Epic | Affinity: Spirit | Faction: Sylvan Watchers | Last Updated: 2025-10-15
 - Guurda Bogbrew | Rarity: Epic | Affinity: Force | Faction: Ogryn Tribes | Last Updated: 2025-10-18
-- He-Man | Rarity: Legendary | Affinity: Void | Faction: Eternals | Last Updated: 2025-10-15
+- He-Man | Rarity: Legendary | Affinity: Magic | Faction: Sacred Order | Last Updated: 2025-10-18
 - High Khatun | Rarity: Rare | Affinity: Spirit | Faction: Barbarians | Last Updated: 2025-10-18
 - Hotatsu (x2) | Rarity: Epic | Affinity: Magic | Faction: Shadowkin | Last Updated: 2025-10-15
 - Husk | Rarity: Rare | Affinity: Force | Faction: Skinwalkers | Last Updated: 2025-10-18
@@ -54,13 +54,13 @@
 - Kinagashi | Rarity: Epic | Affinity: Spirit | Faction: Shadowkin | Last Updated: 2025-10-15
 - Lady Annabelle | Rarity: Epic | Affinity: Magic | Faction: Knights Revenant | Last Updated: 2025-10-15
 - Leminisi the Gold-Wing | Rarity: Legendary | Affinity: Force | Faction: Sylvan Watchers | Last Updated: 2025-10-15
-- Loki the Deceiver | Rarity: Legendary | Affinity: Void | Faction: Asgardians | Last Updated: 2025-10-15
+- Loki the Deceiver | Rarity: Legendary | Affinity: Spirit | Faction: Barbarians | Last Updated: 2025-10-18
 - Lord Champfort | Rarity: Legendary | Affinity: Magic | Faction: Banner Lords | Last Updated: 2025-10-18
 - Lord Shazar | Rarity: Legendary | Affinity: Force | Faction: Demonspawn | Last Updated: 2025-10-15
 - Lua (x2) | Rarity: Epic | Affinity: Spirit | Faction: Shadowkin | Last Updated: 2025-10-15
 - Maulie Tankard | Rarity: Legendary | Affinity: Magic | Faction: Dwarves | Last Updated: 2025-10-15
 - Mausoleum Mage | Rarity: Epic | Affinity: Void | Faction: Undead Hordes | Last Updated: 2025-10-15
-- Michelangelo | Rarity: Legendary | Affinity: Void | Faction: Eternals | Last Updated: 2025-10-15
+- Michelangelo | Rarity: Legendary | Affinity: Spirit | Faction: Banner Lords | Last Updated: 2025-10-18
 - Mistrider Daithi | Rarity: Epic | Affinity: Force | Faction: Sylvan Watchers | Last Updated: 2025-10-15
 - Mithrala Lifebane | Rarity: Legendary | Affinity: Spirit | Faction: Undead Hordes | Last Updated: 2025-10-15
 - Narma the Returned | Rarity: Epic | Affinity: Void | Faction: Undead Hordes | Last Updated: 2025-10-15
@@ -82,17 +82,18 @@
 - Sanguinia (x2) | Rarity: Epic | Affinity: Spirit | Faction: Demonspawn | Last Updated: 2025-10-18
 - Scyl of the Drakes | Rarity: Legendary | Affinity: Spirit | Faction: Barbarians | Last Updated: 2025-10-15
 - Seeker (x2) | Rarity: Epic | Affinity: Force | Faction: High Elves | Last Updated: 2025-10-15
-- Skeletor | Rarity: Legendary | Affinity: Void | Faction: Eternals | Last Updated: 2025-10-15
+- Skeletor | Rarity: Legendary | Affinity: Spirit | Faction: Knights Revenant | Last Updated: 2025-10-18
 - Skullcrown | Rarity: Epic | Affinity: Force | Faction: Undead Hordes | Last Updated: 2025-10-15
 - Skullcrusher | Rarity: Epic | Affinity: Void | Faction: Ogryn Tribes | Last Updated: 2025-10-15
 - Stag Knight | Rarity: Epic | Affinity: Spirit | Faction: Sacred Order | Last Updated: 2025-10-15
-- Sun Wukong | Rarity: Legendary | Affinity: Magic | Faction: Asgardians | Last Updated: 2025-10-15
+- Sun Wukong | Rarity: Legendary | Affinity: Spirit | Faction: Skinwalkers | Last Updated: 2025-10-18
 - Tagoar | Rarity: Epic | Affinity: Force | Faction: Ogryn Tribes | Last Updated: 2025-10-15
 - Taurus | Rarity: Epic | Affinity: Force | Faction: Demonspawn | Last Updated: 2025-10-15
 - Taya | Rarity: Epic | Affinity: Force | Faction: High Elves | Last Updated: 2025-10-15
 - Tayrel | Rarity: Epic | Affinity: Spirit | Faction: High Elves | Last Updated: 2025-10-15
 - Ugir the Wyrm Eater | Rarity: Epic | Affinity: Spirit | Faction: Skinwalkers | Last Updated: 2025-10-18
 - Ultimate Galek | Rarity: Epic | Affinity: Force | Faction: Orcs | Last Updated: 2025-10-18
+- Underpriest Brogni | Rarity: Legendary | Affinity: Magic | Faction: Dwarves | Last Updated: 2025-10-18
 - Uugo | Rarity: Epic | Affinity: Void | Faction: Skinwalkers | Last Updated: 2025-10-15
 - Venomage | Rarity: Epic | Affinity: Spirit | Faction: Lizardmen | Last Updated: 2025-10-15
 - Vergis | Rarity: Epic | Affinity: Spirit | Faction: Banner Lords | Last Updated: 2025-10-18

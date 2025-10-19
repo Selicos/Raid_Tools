@@ -904,17 +904,18 @@ These questions were answered by the user and should guide all boss guide genera
 **Rating Context Rules:**
 
 **10/10 Rating:**
-- Champion is best-in-class for this content among owned champions
-- Example: "Mordecai: 10/10 Clan Boss - Best HP Burn champion in your roster"
+- Champion is best-in-class for this content among **OWNED champions** (validate before rating)
+- Example: "Artak: 10/10 Clan Boss - Best HP Burn champion in your roster (validated: Artak, Ninja, Geomancer, Akoth, Drexthar owned)"
 - Note if champion is unsupported: "10/10 with no support champions available (rating reflects potential)"
+- **MUST validate:** Fetch skills for all owned champions in same role to confirm "best-in-class" claim
 
 **8-9/10 Rating:**
-- Champion is excellent but outclassed by 1-2 owned champions
-- Example: "Geomancer: 9/10 Clan Boss - Excellent, slightly behind Mordecai"
+- Champion is excellent but outclassed by 1-2 **OWNED champions** (validate before rating)
+- Example: "Ninja: 9/10 Clan Boss - Excellent HP Burn, slightly behind Artak (A3 vs A2 HP Burn, validated)"
 
 **6-7/10 Rating:**
-- Champion is good, usable, but multiple better options exist
-- Example: "Akoth the Seared: 7/10 Dragon - Solid HP Burn, but Mordecai preferred"
+- Champion is good, usable, but multiple better **OWNED options** exist (validate before rating)
+- Example: "Akoth the Seared: 7/10 Dragon - Solid HP Burn, but Artak and Ninja have better uptime (validated)"
 
 **4-5/10 Rating:**
 - Champion is mediocre or niche for this content
@@ -925,9 +926,13 @@ These questions were answered by the user and should guide all boss guide genera
 - Example: "Paragon: 2/10 Clan Boss - Single-target unkillable cheese only, not viable for damage teams"
 
 **Rating Documentation Requirements:**
-- Always note if champion is unsupported (e.g., "10/10 Decrease DEF but no Ally Attack champions to pair")
+- **CRITICAL:** ALWAYS validate champion skills by fetching Ayumilove/HellHades data before making comparisons
+- **CRITICAL:** ONLY compare to OWNED champions (validate against `input/Owned_champion_list.md`)
+- Build role-specific lists (HP Burn, Freeze, Decrease DEF, etc.) by validating ALL owned champions with that mechanic
 - Compare to top 3 owned champions in same role/content
+- Always note if champion is unsupported (e.g., "10/10 Decrease DEF but no Ally Attack champions to pair")
 - Note affinity risks (e.g., "9/10 Dragon but weak affinity vs Magic boss")
+- Document validation sources (Ayumilove + HellHades) in review
 
 ---
 
