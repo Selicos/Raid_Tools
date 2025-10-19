@@ -4,25 +4,6 @@
 
 ---
 
-## Reference to Generic Standards
-
-See `Generic_AI_Copilot_Instructions.md` for universal AI assistant standards including:
-- AI Assistant Behavior
-- Safety & File Operations Policy
-- Chat Response Standards
-- Task Management & Progress Tracking
-- Output Formatting & Style Standards
-- Change Management & File Versioning
-- Code Quality Standards
-- Language-Specific Standards
-- Project Housekeeping & Shift-Left Workflow
-- Validation & Documentation
-- Data Privacy & Security
-
-All generic standards apply to this project. The sections below provide RAID Shadow Legends boss guide-specific extensions.
-
----
-
 ## Table of Contents
 
 - [Project Purpose & Scope](#project-purpose--scope)
