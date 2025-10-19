@@ -610,7 +610,8 @@ Arbiter is **BEST-IN-CLASS support** for High Elves Faction Wars in owned roster
 **Strengths:**
 - **30% Speed Aura (Arena)** = HIGHEST speed aura in owned roster
   * Beats Wukong 24% SPD aura (VALIDATED)
-  * Example: Wukong with 250 base SPD → 325 SPD with Arbiter aura (250 × 1.30 = 325)
+  * **CRITICAL:** Aura applies to BASE SPEED ONLY, not total speed after gear/substats
+  * Example: Wukong (105 base SPD) with Speed Set + Arbiter aura → (105 × 1.12 × 1.30) + flat bonuses = ~152 base + 110 flat = ~262 total SPD
 - **"Go first" strategy** = entire team acts before enemy (speed nuke teams)
   * Example Arena turn order: Arbiter (300+ SPD) → Mythrala (280+ SPD + 30% aura) → Wukong (260+ SPD + 30% aura) → Loki (240+ SPD + 30% aura) → ALL allies take turns BEFORE enemy
 - **Applies to ALL allies** = entire team benefits (not just Arbiter)
@@ -619,7 +620,9 @@ Arbiter is **BEST-IN-CLASS support** for High Elves Faction Wars in owned roster
 **Weaknesses:**
 - **Arena-only** = no benefit in Dungeons, Clan Boss, Doom Tower, Faction Wars
 - **Speed tuning required** = team must be speed-tuned to benefit from 30% aura
-  * Example: If Arbiter has 300 SPD and Mythrala has 150 SPD, Mythrala only gains 45 SPD from aura (150 × 0.30 = 45) = 195 total SPD (may still be slower than enemy)
+  * **CRITICAL:** Aura applies to BASE SPEED, NOT total speed
+  * Example: Mythrala (100 base SPD) with Speed Set + Arbiter aura → (100 × 1.12 × 1.30) = 145.6 base speed (BEFORE boots/substats)
+  * With Speed Boots (+50) + Substats (+50): 145.6 + 100 = 245.6 total SPD
 - **Loses to higher Speed enemies** = if enemy Arbiter/Lyssandra has 330+ SPD, user's Arbiter at 300 SPD loses speed battle (enemy goes first)
 
 **Use Cases:**
@@ -629,18 +632,74 @@ Arbiter is **BEST-IN-CLASS support** for High Elves Faction Wars in owned roster
 
 **Speed Tuning Example (User's Arena Team):**
 
-**WITHOUT Arbiter (current setup):**
-- Wukong: 250 SPD × 1.24 (Wukong aura) = 310 total SPD (speed lead)
-- Mythrala: 240 SPD × 1.24 = 297.6 total SPD
-- Loki: 230 SPD × 1.24 = 285.2 total SPD
+**CRITICAL NOTE:** Auras and gear sets apply to BASE SPEED, NOT total speed. Speed buffs (Increase Speed) apply to TOTAL speed.
 
-**WITH Arbiter (upgraded setup):**
-- Arbiter: 300 SPD × 1.30 (Arbiter aura) = 390 total SPD (speed lead)
-- Mythrala: 240 SPD × 1.30 = 312 total SPD
-- Wukong: 250 SPD × 1.30 = 325 total SPD
-- Loki: 230 SPD × 1.30 = 299 total SPD
+**Champion Base Speeds (from Ayumilove):**
+- Arbiter: 110 base SPD
+- Sun Wukong: 105 base SPD
+- Mythrala Lifebane: 100 base SPD (estimated, Ayumilove page unavailable)
+- Loki the Deceiver: 105 base SPD
 
-**Result:** Entire team gains +15-30 SPD (6% aura difference) = higher chance to go first vs enemy teams.
+**Gear Assumptions (realistic for Gold 3+ Arena):**
+- All champions: Speed Set (4 pieces, +12% base SPD) OR 3x Speed Set (+36% base SPD)
+- All champions: Speed Boots (+50 SPD), substats (+40-80 SPD depending on gear quality)
+
+**WITHOUT Arbiter (Wukong as speed lead, 24% SPD aura):**
+
+**Wukong (speed lead):**
+- Base: 105
+- Gear: 105 × 1.12 (Speed Set) = 117.6
+- Aura: 105 × 1.12 × 1.24 (Wukong Aura) = 145.8
+- Flat: 145.8 + 50 (boots) + 60 (substats) = **255.8 total SPD**
+
+**Mythrala:**
+- Base: 100
+- Gear: 100 × 1.12 = 112
+- Aura: 100 × 1.12 × 1.24 = 138.9
+- Flat: 138.9 + 50 (boots) + 50 (substats) = **238.9 total SPD**
+
+**Loki:**
+- Base: 105
+- Gear: 105 × 1.12 = 117.6
+- Aura: 105 × 1.12 × 1.24 = 145.8
+- Flat: 145.8 + 50 (boots) + 40 (substats) = **235.8 total SPD**
+
+**WITH Arbiter (Arbiter as speed lead, 30% SPD aura):**
+
+**Arbiter (speed lead):**
+- Base: 110
+- Gear: 110 × 1.12 = 123.2
+- Aura: 110 × 1.12 × 1.30 (Arbiter Aura) = 160.16
+- Flat: 160.16 + 50 (boots) + 80 (high substats) = **290.16 total SPD**
+
+**Mythrala:**
+- Base: 100
+- Gear: 100 × 1.12 = 112
+- Aura: 100 × 1.12 × 1.30 = 145.6
+- Flat: 145.6 + 50 (boots) + 50 (substats) = **245.6 total SPD**
+
+**Wukong:**
+- Base: 105
+- Gear: 105 × 1.12 = 117.6
+- Aura: 105 × 1.12 × 1.30 = 152.88
+- Flat: 152.88 + 50 (boots) + 60 (substats) = **262.88 total SPD**
+
+**Loki:**
+- Base: 105
+- Gear: 105 × 1.12 = 117.6
+- Aura: 105 × 1.12 × 1.30 = 152.88
+- Flat: 152.88 + 50 (boots) + 40 (substats) = **242.88 total SPD**
+
+**Speed Gain from Arbiter Aura (vs Wukong Aura):**
+- Wukong: 255.8 → 262.88 = **+7.08 SPD**
+- Mythrala: 238.9 → 245.6 = **+6.7 SPD**
+- Loki: 235.8 → 242.88 = **+7.08 SPD**
+- Arbiter (new): **290.16 SPD** (replaces Wukong as speed lead)
+
+**KEY INSIGHT:**
+- Aura difference (30% vs 24% = 6% more) applies to BASE SPEED (100-110), NOT total speed (240-290)
+- Actual speed gain is ~6-7 SPD per champion, NOT 15-30 SPD
+- **MAIN BENEFIT:** Arbiter herself is FASTER than Wukong (290 vs 256), ensuring team goes first
 
 ---
 
@@ -675,24 +734,24 @@ Arbiter is **BEST-IN-CLASS support** for High Elves Faction Wars in owned roster
 **Primary Sets (Top Priority):**
 
 **Speed Set (4 pieces) + Divine Speed Set (2 pieces):**
-- **Speed Set:** +12% SPD (4 pieces)
-- **Divine Speed Set:** +15% SPD + 15% HP Self Shield for 3 turns (2 pieces)
-- **Total Bonus:** +27% SPD + 15% HP shield
+- **Speed Set:** +12% BASE SPD (4 pieces) - applies to base speed ONLY, not total speed after boots/substats
+- **Divine Speed Set:** +15% BASE SPD + 15% HP Self Shield for 3 turns (2 pieces) - SPD bonus applies to base speed ONLY
+- **Total Bonus:** +27% BASE SPD + 15% HP shield
 - **Rationale:** Arbiter MUST go first in Arena (300+ SPD required for Gold 4+). Speed Set + Divine Speed Set maximize Speed stat. Divine Speed shield provides survivability (Arbiter is squishy without HP%/DEF% focus).
 - **Where to Get:**
   * Speed Set: Dragon 25 (common drop), Clan Shop, Market
   * Divine Speed Set: Arena Weekly Rewards (Gold 4+ rewards), Divine Speed Artifact Offer Packs ($$)
 
 **Alternative Set #1: Triple Speed Set (6 pieces):**
-- **3x Speed Set:** +36% SPD (6 pieces)
-- **Total Bonus:** +36% SPD
-- **Rationale:** If Divine Speed Set is not available, use 3x Speed Set for maximum SPD stacking. Sacrifice Divine Speed shield for +9% more SPD.
+- **3x Speed Set:** +36% BASE SPD (6 pieces) - applies to base speed ONLY
+- **Total Bonus:** +36% BASE SPD
+- **Rationale:** If Divine Speed Set is not available, use 3x Speed Set for maximum SPD stacking. Sacrifice Divine Speed shield for +9% more BASE SPD.
 - **Where to Get:** Dragon 25 (farm 6 Speed Set pieces with high Speed substats)
 
 **Alternative Set #2: Speed Set (4 pieces) + Perception Set (2 pieces):**
-- **Speed Set:** +12% SPD (4 pieces)
+- **Speed Set:** +12% BASE SPD (4 pieces) - applies to base speed ONLY
 - **Perception Set:** +40 flat ACC (2 pieces)
-- **Total Bonus:** +12% SPD + 40 ACC
+- **Total Bonus:** +12% BASE SPD + 40 ACC
 - **Rationale:** If Arbiter struggles to land Weaken (A1) or Decrease Buff Duration (A2), use Perception Set for +40 ACC. Trade Divine Speed shield for +40 ACC.
 - **Where to Get:**
   * Speed Set: Dragon 25
@@ -935,8 +994,9 @@ Arbiter has **two distinct mastery builds** depending on content focus:
 
 **Tier 4:**
 - **Lore of Steel** (Rank 3): Increases base stat bonuses from equipped artifacts by 5%/10%/15%
-  * **High value:** Increases Speed Set bonus from +12% → +13.8% SPD (multiplicative)
-  * Example: Arbiter with 200 base SPD + Speed Set (12%) = 224 SPD. With Lore of Steel: 200 × 1.138 = 227.6 SPD (+3.6 SPD)
+  * **High value:** Increases Speed Set bonus from +12% → +13.8% BASE SPD (multiplicative with gear sets)
+  * **CRITICAL:** Lore of Steel applies to BASE SPEED bonuses from gear sets, NOT total speed
+  * Example: Arbiter (110 base SPD) + Speed Set (12%) = 123.2 SPD. With Lore of Steel: 110 × 1.138 = 125.18 SPD (+1.98 SPD gain from Lore of Steel BEFORE adding flat bonuses like boots/substats)
 
 **Tier 5:**
 - **Evil Eye** (Rank 3): Decreases enemy Turn Meter by 3%/6%/9% when placing a debuff on them
@@ -1636,7 +1696,11 @@ Arbiter has **two distinct mastery builds** depending on content focus:
 1. **SPD: 280 (current) vs 300+ (recommended)** = **-20 SPD gap**
    - **Impact:** May lose speed battle vs enemy Arbiter/Lyssandra (320-330+ SPD defenses)
    - **Priority 1 Upgrade:** Replace current gear with higher Speed substats (aim for +4-6 SPD per piece on Weapon, Helmet, Shield, Chest, Gloves, Ring, Amulet, Banner)
-   - **Alternative:** Replace Accuracy Set (2 pieces) with Divine Speed Set (2 pieces) = +15% SPD bonus (280 × 1.15 = 322 SPD total, assuming base 200 SPD before sets)
+   - **CRITICAL:** Divine Speed Set applies to BASE SPEED, NOT total speed
+   - **Alternative:** Replace Accuracy Set (2 pieces) with Divine Speed Set (2 pieces) = +15% BASE SPD bonus
+     * Calculation: Arbiter (110 base SPD) + Speed Set (12%) + Divine Speed Set (15%) = 110 × 1.27 = 139.7 base speed (BEFORE boots/substats)
+     * With boots (+50) + substats (+100): 139.7 + 150 = 289.7 total SPD (NOT 322 as incorrectly calculated)
+     * **Note:** Divine Speed Set only adds ~10 total SPD vs Accuracy Set (which adds 0 SPD), so focus on SUBSTATS for major speed gains
 2. **HP: 45,000 (current) vs 50,000+ (recommended)** = **-5,000 HP gap**
    - **Impact:** May die to enemy Trunda/Wukong/Michelangelo nukes (especially if Decrease DEF applied)
    - **Priority 2 Upgrade:** Replace current Gloves with HP% Gloves (if using DEF% Gloves) OR increase HP% substats on Weapon, Helmet, Shield, Chest, Ring, Amulet
