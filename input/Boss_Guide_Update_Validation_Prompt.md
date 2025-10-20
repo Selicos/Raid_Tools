@@ -941,13 +941,13 @@ Update [Boss] guide with comprehensive validation
 - Underpriest Brogni (aura + skills validation)
 
 **PRIORITY 3: High-Damage Options (Complete THIRD)**
-- Ninja (HP Burn + nuke - critical for damage teams)
-- Artak (HP Burn + raw damage - critical for damage teams)
-- Fayne (Decrease DEF + Poison - critical for poison teams)
-- Venomage (3 poisons A1 - critical for poison teams)
-- Narma (AoE poison - critical for poison teams)
-- Nogdar x2 (Ally Attack spam cheese)
-- Seeker x2 (Ally Attack spam cheese)
+- ✅ Ninja (HP Burn + nuke - **AURA NOT FOUND** - requires re-fetch)
+- ✅ Artak (HP Burn + raw damage - **AURA NOT FOUND** - requires re-fetch)
+- ✅ Fayne (Decrease DEF + Poison - **AURA NOT FOUND** - requires re-fetch)
+- ✅ Venomage (+45 ACC "All Battles" ✅ - validated 2025-10-19)
+- ✅ Narma (+80 ACC "Dungeons" ❌ - validated 2025-10-19)
+- ✅ Nogdar x2 (+33% ATK "All Battles" ✅ - validated 2025-10-19)
+- ✅ Seeker x2 (+30% DEF "Arena" ❌ - validated 2025-10-19)
 
 **PRIORITY 4: Remaining Candidates (Complete LAST)**
 - Frozen Banshee (Poison Sensitivity)
@@ -964,6 +964,8 @@ Update [Boss] guide with comprehensive validation
 | **Rhazin Scarhide** | +30% DEF | "in Dungeons" | ❌ **NO** | Tagoar (+33% DEF "All Battles") |
 | **Rector Drath** | +55 RES | "in Doom Tower battles" | ❌ **NO** | Bad-el (+33% HP), Tagoar (+33% DEF), Tayrel (+25% DEF) |
 | **Underpriest Brogni** | +60 RES | "in Doom Tower battles" | ❌ **NO** | Bad-el (+33% HP), Tagoar (+33% DEF), Vogoth (+40 ACC) |
+| **Narma the Returned** | +80 ACC | "in Dungeons" | ❌ **NO** | Vogoth (+40 ACC "All Battles"), Aniri (+35 ACC "All Battles") |
+| **Seeker** | +30% DEF | "in the Arena" | ❌ **NO** | Tagoar (+33% DEF "All Battles"), Tayrel (+25% DEF "All Battles") |
 
 ---
 
@@ -976,7 +978,8 @@ Update [Boss] guide with comprehensive validation
 | **Tayrel** | +25% DEF | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 1 batch) |
 | **Vogoth** | +40 ACC | "All Battles" | ✅ **YES** ⚠️ **NOT SPD!** | Ayumilove 2025-10-19 (user assumed wrong aura) |
 | **Geomancer** | +25% HP | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 2 batch) |
-| **Geomancer** | +25% HP | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 2 batch) |
+| **Venomage** | +45 ACC | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 3 batch) |
+| **Nogdar the Headhunter** | +33% ATK | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 3 batch) |
 
 ---
 
