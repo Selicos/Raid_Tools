@@ -901,8 +901,8 @@ Update [Boss] guide with comprehensive validation
 |----------|-------------|----------------|---------------|----------|-------------------|
 | **Tagoar** | ✅ **+33% DEF "All Battles"** = APPLIES TO CB | ✅ Passive heal on Ally Attack | ✅ Ally Attack + Inc DEF + Dec DEF | Spirit | **✅ COMPLETE** |
 | **Bad-el-Kazar** | ✅ **+33% HP "All Battles"** = APPLIES TO CB | ✅ Passive heals + cleanses | ✅ Leech + Decrease ATK + Poison | Magic | **✅ COMPLETE** |
-| **Frozen Banshee** | ⏸️ Need validation (likely none) | ⏸️ Need validation | ⏸️ Need validation | Magic | **PENDING** |
-| **Skullcrusher** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Void | **PENDING** |
+| **Frozen Banshee** | ✅ **+35 ACC "All Battles"** = APPLIES TO CB | ✅ NO PASSIVE (skills only) | ✅ A1 2-hit Poison + A2 TM fill + A3 Poison Sensitivity | Magic | **✅ COMPLETE** |
+| **Skullcrusher** | ✅ **NO AURA** (Faction Crypt +45 RES - Ogryn Tribes only) | ✅ Unshakeable: Dec debuff duration by 1 turn | ✅ A1 Heal Reduction + A2 Counterattack + Ally Protection + Unkillable | Void | **✅ COMPLETE** |
 | **Vogoth** | ✅ **+40 ACC "All Battles"** = APPLIES TO CB ⚠️ **USER ERROR: NO SPD AURA!** | ⏸️ Need validation | ⏸️ Need validation | Spirit | **✅ AURA VALIDATED** |
 | **Rector Drath** | ❌ **+55 RES "in Doom Tower battles"** = DOOM TOWER ONLY | ⏸️ Need validation | ⏸️ Need validation | Force | **❌ AURA ERROR CONFIRMED** |
 | **Tayrel** | ✅ **+25% DEF "All Battles"** = APPLIES TO CB | ⏸️ Need validation | ⏸️ Need validation | Magic | **✅ AURA VALIDATED** |
@@ -949,9 +949,9 @@ Update [Boss] guide with comprehensive validation
 - ✅ Nogdar x2 (+33% ATK "All Battles" ✅ - validated 2025-10-19)
 - ✅ Seeker x2 (+30% DEF "Arena" ❌ - validated 2025-10-19)
 
-**PRIORITY 4: Remaining Candidates (Complete LAST)**
-- Frozen Banshee (Poison Sensitivity)
-- Skullcrusher (Counterattack)
+**PRIORITY 4: Remaining Candidates (COMPLETE ✅ - 2025-10-19)**
+- ✅ Frozen Banshee (+35 ACC "All Battles" ✅ - validated 2025-10-19)
+- ✅ Skullcrusher (NO AURA - Faction Crypts aura only - validated 2025-10-19)
 
 ---
 
@@ -980,6 +980,7 @@ Update [Boss] guide with comprehensive validation
 | **Geomancer** | +25% HP | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 2 batch) |
 | **Venomage** | +45 ACC | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 3 batch) |
 | **Nogdar the Headhunter** | +33% ATK | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 3 batch) |
+| **Frozen Banshee** | +35 ACC | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 4 batch) |
 
 ---
 
