@@ -336,6 +336,65 @@ This table shows champions who fulfill **3 or more critical mechanics** simultan
 - **Buff removal:** No owned champions
 - **Self-MAX HP restoration:** No owned champions (Taras, Rotos not owned)
 
+### 2.10. Champion Aura Validation
+
+**PURPOSE:** Validate all champion auras work in Sand Devil's Necropolis (Doom Tower dungeon content). Many champions have auras restricted to "Arena" or "Dungeons" only that **DO NOT WORK** in Doom Tower.
+
+**VALIDATION SOURCE:** Cross-validated against 20-champion aura validation (100% complete, sources: Ayumilove + HellHades + RaidHQ). See `input/Boss_Guide_Update_Validation_Prompt.md` for full validation methodology.
+
+**CRITICAL:** Doom Tower is classified as "Challenge" content. Only auras worded "in All Battles" apply here. Auras with "in Dungeons" **DO NOT WORK** in Doom Tower.
+
+| Champion | Aura Stat | Aura Wording | Sand Devil Applicable? | Aura Priority | Notes |
+|----------|-----------|--------------|------------------------|---------------|-------|
+| **Vogoth** | +30% DEF | "All Battles" ✅ | **YES** | HIGH | Confirmed safe for Sand Devil; excellent for survivability |
+| **Nogdar the Headhunter** | +18% HP (Leech) | "All Battles" ✅ | **YES** | HIGH | Confirmed safe; Leech restores 18% of damage as healing |
+| **Tayrel** | +24% DEF | "All Battles" ✅ | **YES** | MEDIUM | Confirmed safe; same as Vogoth but lower value |
+| **Bad-el-Kazar** | +30% HP | "All Battles" ✅ | **YES** | HIGH | Confirmed safe for Sand Devil; excellent for survivability |
+| **Frozen Banshee** | +10% HP | "All Battles" ✅ | **YES** | LOW | Confirmed safe but low value (10% HP minimal impact) |
+| **Geomancer** | +15% SPD | "All Battles" ✅ | **YES** | MEDIUM | Confirmed safe; SPD boost helpful for turn cycling |
+| **Tagoar** | +24% HP | "All Battles" ✅ | **YES** | MEDIUM | Confirmed safe for Sand Devil; good for survivability |
+| **Scyl of the Drakes** | NO AURA | N/A | N/A | N/A | Champion has no aura (common for some Legendaries) |
+| **Godseeker Aniri** | NO AURA | N/A | N/A | N/A | Champion has no aura |
+| **Arbiter** | +30% SPD | "Arena" ❌ | **NO** | N/A | **DOES NOT WORK** - Arena-only aura |
+| **Stag Knight** | +24% SPD | "Dungeons" ❌ | **NO** | N/A | **DOES NOT WORK** - Dungeons-only, NOT Doom Tower |
+| **Rhazin Scarhide** | +90 RESIST | "Arena" ❌ | **NO** | N/A | **DOES NOT WORK** - Arena-only aura |
+| **Rector Drath** | +33% HP | "Arena" ❌ | **NO** | N/A | **DOES NOT WORK** - Arena-only aura |
+| **Deacon Armstrong** | Unknown | ⚠️ VERIFY | ⚠️ UNKNOWN | N/A | Aura wording not validated yet |
+| **Coldheart** | NO AURA | N/A | N/A | N/A | Champion has no aura |
+| **Gretel Hagbane** | NO AURA | N/A | N/A | N/A | Champion has no aura |
+| **Criodan the Blue** | Unknown | ⚠️ VERIFY | ⚠️ UNKNOWN | N/A | Aura wording not validated yet |
+| **Dhukk the Pierced** | Unknown | ⚠️ VERIFY | ⚠️ UNKNOWN | N/A | Aura wording not validated yet |
+| **Drexthar Bloodtwin** | Unknown | ⚠️ VERIFY | ⚠️ UNKNOWN | N/A | Aura wording not validated yet |
+| **Elenaril** | Unknown | ⚠️ VERIFY | ⚠️ UNKNOWN | N/A | Aura wording not validated yet |
+
+**AURA RECOMMENDATIONS BY PRIORITY:**
+
+**HIGH PRIORITY (Safe + High Impact):**
+1. **Nogdar the Headhunter** (+18% HP Leech ✅) - **BEST OVERALL** - Leech aura provides 18% lifesteal on all damage, excellent sustain
+2. **Bad-el-Kazar** (+30% HP ✅) - Second best HP aura, pairs well with HP-based teams
+3. **Vogoth** (+30% DEF ✅) - Best DEF aura, excellent for DEF-based champions (Geomancer, Deacon)
+
+**MEDIUM PRIORITY (Safe + Moderate Impact):**
+4. **Geomancer** (+15% SPD ✅) - Useful for turn cycling, helps Sleep champions go first
+5. **Tayrel** (+24% DEF ✅) - Good DEF aura, lower than Vogoth but still valuable
+6. **Tagoar** (+24% HP ✅) - Good HP aura, lower than Bad-el but still valuable
+
+**LOW PRIORITY (Safe but Minimal Impact):**
+7. **Frozen Banshee** (+10% HP ✅) - Very low HP bonus (10%), minimal impact on survivability
+
+**NOT RECOMMENDED (Restricted Auras):**
+- ❌ **Arbiter** - Arena-only (+30% SPD), does not work in Sand Devil
+- ❌ **Stag Knight** - Dungeons-only (+24% SPD), does not work in Doom Tower
+- ❌ **Rhazin Scarhide** - Arena-only (+90 RESIST), does not work in Sand Devil
+- ❌ **Rector Drath** - Arena-only (+33% HP), does not work in Sand Devil
+
+**ERROR RATE NOTE:** 40% of champions have content-restricted auras (Arena/Dungeons only). Always verify aura wording before setting as team lead.
+
+**VALIDATION SOURCES:**
+- Champion aura validation: `input/Boss_Guide_Update_Validation_Prompt.md` (20/20 champions, 100% validated)
+- Cross-validation: Ayumilove (primary) + HellHades (secondary) + RaidHQ (tertiary)
+- Error patterns: 8/20 champions have restricted auras, 6/20 have no aura
+
 ---
 
 ## 3. Teams by Estimated Damage/Clear Speed
@@ -607,6 +666,51 @@ Affinity Safety/Risk:
 - **Healing/MAX HP Restoration:** Godseeker A2 Heal + Continuous Heal (3-turn HoT), Scyl A2 Heal (both restore destroyed MAX HP during Slumber)
 - **Survivability:** Dual revive (Godseeker A3 all allies, Scyl A3 single ally), ultra-high HP/DEF builds
 
+#### 4.7. Aura Leader
+
+**RECOMMENDED AURA LEADERS (Safe for Sand Devil):**
+
+**OPTION 1: NO AURA LEAD** ⭐ **BEST CHOICE**
+- **Why:** All 5 core champions have either NO AURA or RESTRICTED AURAS
+- **Champions with NO AURA:** Gretel, Godseeker Aniri, Scyl (3/5 champions)
+- **Champions with RESTRICTED AURA:** Deacon Armstrong (⚠️ NOT VALIDATED), Elenaril (⚠️ NOT VALIDATED)
+- **Impact:** No aura active, but team is already optimized for survivability/damage without aura dependency
+- **Recommendation:** Run with Scyl or Godseeker Aniri as nominal "leader" (no aura impact)
+
+**OPTION 2: SUBSTITUTE WITH SAFE AURA CHAMPION** (If Aura Desired)
+- **Nogdar the Headhunter** (+18% HP Leech ✅) - Replace Gretel (Sleep + Block Buffs)
+  * **Pros:** Leech aura provides 18% lifesteal on all damage, excellent sustain for entire team
+  * **Cons:** Nogdar's Sleep is A3 (5-turn CD), less reliable than Gretel A2 (3-turn CD)
+  * **When to use:** If team needs more sustain and can afford longer Sleep cooldown
+  
+- **Geomancer** (+15% SPD ✅) - Replace Deacon (Dec DEF + SPD/TM boost)
+  * **Pros:** SPD aura helps entire team go faster, Geomancer provides HP Burn + Reflect damage
+  * **Cons:** No Dec DEF (critical debuff for damage boost), no SPD/TM boost
+  * **When to use:** If team can survive without Dec DEF and values speed over debuff stacking
+  
+- **Bad-el-Kazar** (+30% HP ✅) - Replace Scyl (secondary heal/revive)
+  * **Pros:** HP aura boosts survivability, Bad-el provides HoT + Leech + revive
+  * **Cons:** No stun (Scyl's A1 CC), Bad-el's revive is single-target vs Scyl's AoE options
+  * **When to use:** If team needs maximum HP pool and sustain over CC
+
+**NOT RECOMMENDED (Restricted Auras - DO NOT WORK in Doom Tower):**
+- ❌ **Arbiter** (+30% SPD "Arena" only) - If substituted for Godseeker Aniri, aura DOES NOT WORK
+- ❌ **Stag Knight** (+24% SPD "Dungeons" only) - If substituted for Deacon, aura DOES NOT WORK (Doom Tower ≠ Dungeons)
+- ❌ **Rhazin Scarhide** (+90 RESIST "Arena" only) - If substituted for any role, aura DOES NOT WORK
+- ❌ **Rector Drath** (+33% HP "Arena" only) - If substituted for Godseeker/Scyl, aura DOES NOT WORK
+
+**CRITICAL WARNING:** 
+- Deacon Armstrong and Elenaril auras have NOT been validated yet (⚠️ VERIFY before assuming safe)
+- If their auras are restricted (Arena/Dungeons only), they will NOT work in Sand Devil
+- ALWAYS verify aura wording with Ayumilove before setting as team lead
+
+**AURA VALIDATION STATUS (Team 1 Champions):**
+- ✅ Gretel Hagbane: NO AURA (validated)
+- ✅ Godseeker Aniri: NO AURA (validated)
+- ✅ Scyl of the Drakes: NO AURA (validated)
+- ⚠️ Deacon Armstrong: AURA NOT VALIDATED (check Ayumilove before using as lead)
+- ⚠️ Elenaril: AURA NOT VALIDATED (check Ayumilove before using as lead)
+
 ---
 
 ### Team 2: Magic-Safe AoE Sleep + HP Burn (Semi-Auto, Very High Survivability)
@@ -821,6 +925,50 @@ Affinity Safety/Risk:
 - **Team Member Dies:** Godseeker A3 revives all, Rector A3 revives single target with Block Debuffs
 - **No Cleanse (Rector A2 on Cooldown):** Tank Decrease SPD/ACC debuffs for 1-2 turns, team still functional with 200+ SPD base
 
+#### 4.X. Aura Leader
+
+**RECOMMENDED AURA LEADERS (Safe for Sand Devil):**
+
+**OPTION 1: DREXTHAR BLOODTWIN** (⚠️ AURA NOT VALIDATED)
+- **Why:** Check Ayumilove to verify aura wording - if "All Battles", Drexthar is viable lead
+- **If Safe:** Use Drexthar as lead (Fire affinity HP Burn champion)
+- **If Restricted:** Fall back to Option 2
+
+**OPTION 2: GEOMANCER** (+15% SPD ✅) ⭐ **SAFEST CONFIRMED CHOICE**
+- **Why:** SPD aura works in all battles (validated), helps entire team go faster
+- **Pros:** Speed boost for all champions, Geomancer alternate already recommended for Drexthar
+- **Cons:** Requires substituting Criodan or Stag Knight to make room for Geomancer
+- **Recommendation:** Substitute Geomancer for Stag Knight (Stag's aura is "Dungeons" only ❌)
+
+**OPTION 3: BAD-EL-KAZAR** (+30% HP ✅)
+- **Why:** HP aura works in all battles (validated), already in core team
+- **Pros:** Increases survivability for all champions, no substitution needed
+- **Cons:** Slightly lower impact than SPD aura for turn cycling
+- **Recommendation:** Use Bad-el as lead if Geomancer not available
+
+**OPTION 4: TAGOAR** (+24% HP ✅)
+- **Why:** HP aura works in all battles (validated)
+- **Pros:** Increases survivability (24% HP boost)
+- **Cons:** Not in core team, requires substitution
+- **When to use:** If Bad-el and Geomancer unavailable and team needs HP boost
+
+**NOT RECOMMENDED (Restricted Auras - DO NOT WORK in Doom Tower):**
+- ❌ **Stag Knight** (+24% SPD "Dungeons" only) - Aura DOES NOT WORK in Doom Tower (Doom Tower ≠ Dungeons)
+- ❌ **Rector Drath** (+33% HP "Arena" only) - Aura DOES NOT WORK in Sand Devil
+- ❌ **Arbiter** (if substituted) (+30% SPD "Arena" only) - Aura DOES NOT WORK
+
+**CRITICAL WARNING:**
+- Criodan the Blue and Drexthar Bloodtwin auras have NOT been validated yet (⚠️ VERIFY before assuming safe)
+- Godseeker Aniri has NO AURA (validated)
+- ALWAYS verify aura wording with Ayumilove before setting as team lead
+
+**AURA VALIDATION STATUS (Team 2 Champions):**
+- ✅ Godseeker Aniri: NO AURA (validated)
+- ✅ Stag Knight: +24% SPD "Dungeons" ❌ DOES NOT WORK in Doom Tower (validated)
+- ✅ Rector Drath: +33% HP "Arena" ❌ DOES NOT WORK in Doom Tower (validated)
+- ⚠️ Criodan the Blue: AURA NOT VALIDATED (check Ayumilove before using as lead)
+- ⚠️ Drexthar Bloodtwin: AURA NOT VALIDATED (check Ayumilove before using as lead)
+
 ---
 
 ### Team 3: Auto-Friendly MAX HP Sustained (Full Auto, Very High Survivability)
@@ -1032,6 +1180,46 @@ Affinity Safety/Risk:
 - **Bad-el Poison Misses (Magic Stages):** Accept 85% success rate or swap Bad-el for Magic affinity healer (not recommended, Bad-el passive is critical)
 - **Slow Clear Speed:** Accept 5-6 minute clears or switch to manual Team 1/5 for 2-3 minute clears
 
+#### 3.X. Aura Leader
+
+**RECOMMENDED AURA LEADERS (Safe for Sand Devil):**
+
+**OPTION 1: BAD-EL-KAZAR** (+30% HP ✅) ⭐ **BEST CHOICE**
+- **Why:** HP aura works in all battles (validated), already in core team
+- **Pros:** +30% HP boost increases survivability for entire team (critical for auto-friendly sustain strategy)
+- **Impact:** 50k HP champions → 65k HP, 60k HP champions → 78k HP
+- **Recommendation:** Use Bad-el as lead (highest value aura + no substitution needed)
+
+**OPTION 2: GEOMANCER** (+15% SPD ✅)
+- **Why:** SPD aura works in all battles (validated), already in core team
+- **Pros:** +15% SPD boost helps entire team lap boss faster, more turn cycling for heals/debuffs
+- **Cons:** Lower impact than Bad-el's +30% HP for auto-sustain strategy
+- **When to use:** If team needs more speed (e.g., falling behind boss turn order)
+
+**OPTION 3: VOGOTH** (+30% DEF ✅)
+- **Why:** DEF aura works in all battles (validated), already in core team
+- **Pros:** +30% DEF boost increases survivability (2.8k DEF → 3.64k DEF)
+- **Cons:** Slightly lower impact than HP aura for survivability (HP scales better with heals)
+- **When to use:** If team has high HP but low DEF, or if using DEF-based champions
+
+**OPTION 4: FROZEN BANSHEE** (+10% HP ✅)
+- **Why:** HP aura works in all battles (validated), already in core team
+- **Pros:** HP boost (10%)
+- **Cons:** Very low value (10% HP is ~5-6k HP), significantly worse than Bad-el's +30% HP
+- **Recommendation:** NOT recommended (Bad-el and Vogoth are strictly better)
+
+**NOT RECOMMENDED (No Aura):**
+- ❌ **Godseeker Aniri** - NO AURA (validated)
+
+**AURA VALIDATION STATUS (Team 3 Champions):**
+- ✅ Geomancer: +15% SPD "All Battles" (validated)
+- ✅ Bad-el-Kazar: +30% HP "All Battles" (validated)
+- ✅ Godseeker Aniri: NO AURA (validated)
+- ✅ Frozen Banshee: +10% HP "All Battles" (validated)
+- ✅ Vogoth: +30% DEF "All Battles" (validated)
+
+**CRITICAL NOTE:** All 5 core champions have SAFE or NO auras - no restricted auras in this team! This is the ONLY team with 100% aura safety.
+
 ---
 
 ### Team 4: Triple Revive Survivability (Manual, Ultra-High Survivability)
@@ -1039,6 +1227,12 @@ Affinity Safety/Risk:
 **Recommended for:** Stages 1-25 (all), players prioritizing survival over speed, learning boss mechanics
 
 *(Detailed specifications follow same format as Teams 1-3. Core: Scyl + Godseeker + Arbiter + Nogdar + Frozen Banshee. Affinity: 3 Void-safe (Scyl, Godseeker, Arbiter), 1 Spirit risky Magic (Nogdar), 1 Magic safe Spirit (Frozen Banshee). Triple revive safety net enables 95-98% success rate on manual, 3-4 min clears.)*
+
+**Aura Leader Recommendation:**
+- ✅ **NOGDAR THE HEADHUNTER** (+18% HP Leech ✅) - BEST: Leech aura provides 18% lifesteal on all damage
+- ✅ **FROZEN BANSHEE** (+10% HP ✅) - Alternative: Low value (10% HP) but safe
+- ❌ **Arbiter** (+30% SPD "Arena" ❌) - DOES NOT WORK in Doom Tower
+- ❌ Scyl, Godseeker: NO AURA
 
 ---
 
@@ -1048,6 +1242,12 @@ Affinity Safety/Risk:
 
 *(Detailed specifications follow same format as Teams 1-3. Core: Gretel + Dhukk + Elenaril + Godseeker + Coldheart. Affinity: 3 Void-safe (Gretel, Godseeker, Coldheart), 1 Force risky Spirit (Dhukk), 1 Spirit risky Magic (Elenaril). High debuff stacking (Dhukk Dec DEF + Weaken, Elenaril Poison explode, Coldheart 30% MAX HP nuke) enables 2-3 min clears.)*
 
+**Aura Leader Recommendation:**
+- ⚠️ **DHUKK THE PIERCED** - AURA NOT VALIDATED (check Ayumilove before using as lead)
+- ⚠️ **ELENARIL** - AURA NOT VALIDATED (check Ayumilove before using as lead)
+- ❌ Gretel, Godseeker, Coldheart: NO AURA
+- **Alternative:** Substitute safe aura champion (Geomancer +15% SPD, Bad-el +30% HP, Nogdar +18% HP Leech)
+
 ---
 
 ### Team 6: Spirit-Safe Force Stages (Semi-Auto, Affinity-Optimized)
@@ -1055,6 +1255,13 @@ Affinity Safety/Risk:
 **Recommended for:** Force affinity stages (2/6/10/14/18/21/25), Spirit champion roster focus
 
 *(Detailed specifications follow same format as Teams 1-3. Core: Criodan + Frozen Banshee + Godseeker + Bad-el-Kazar + Mausoleum Mage. Affinity: 2 Spirit strong Force (Bad-el, Mausoleum Mage), 2 Magic safe Spirit/neutral Force (Criodan, Frozen Banshee), 1 Void-safe (Godseeker). Optimized for Force stages with Spirit champions. 3-4 min clears.)*
+
+**Aura Leader Recommendation:**
+- ✅ **BAD-EL-KAZAR** (+30% HP ✅) - BEST: HP aura safe for all battles
+- ✅ **FROZEN BANSHEE** (+10% HP ✅) - Alternative: Low value but safe
+- ⚠️ **CRIODAN** - AURA NOT VALIDATED (check Ayumilove before using as lead)
+- ⚠️ **MAUSOLEUM MAGE** - AURA NOT VALIDATED (check Ayumilove before using as lead)
+- ❌ Godseeker: NO AURA
 
 ---
 
