@@ -197,112 +197,137 @@
 
 ### Iron Twins
 
-**Rating: 6/10 (Usable - TM Control for Add Waves, Fragile vs Boss)**
+**Rating: 6/10 (Usable - Debuff Spread for Add Control, Decent Sustain)**
 
 **Why 6/10:**
-- **TM control:** A2 reduces boss TM by 30% (helpful for add waves)
-- **Freeze:** A3 AoE Freeze (2 turns) = freezes add waves (reduces incoming damage)
-- **Fragile:** Base HP 16,515 / DEF 980 = likely dies to add waves burst damage without extensive gear
-- **Better alternatives:** Brogni (10/10) shield provides more value than TM control
+- **HP Burn Spread on adds:** If Artak applies HP Burn to ONE add, Michelangelo A2 spreads to ALL adds → 5% MAX HP per turn = adds die quickly
+- **Debuff Spread utility:** A2 spreads Decrease DEF, Stun to ALL adds = reduces incoming damage
+- **Decrease ATK for twins:** A3 Decrease ATK 50% (4 turns booked) = reduces twin damage by 50%
+- **Leech sustain:** A3 Leech = team heals from add waves + twin attacks
+- **Moderate durability:** Base HP 16,515 + user's 47k HP = survives add waves with gear investment
+- **Better alternatives:** Brogni (10/10) shield provides more consistent protection
 
 **Best Owned Champions for Iron Twins:**
 1. **Brogni (10/10)** - Shield blocks add wave damage, game-changing sustain
 2. **Rector Drath (8/10)** - Cleanse + Block Debuffs, good for add waves
 3. **Godseeker Aniri (7/10)** - Revive + Heal, good for add wave recovery
-4. **Michelangelo (6/10)** - TM control + Freeze, usable but fragile
+4. **Artak (7/10)** - HP Burn for add clear when spread by Michelangelo
+5. **Michelangelo (6/10)** - Debuff Spread + HP Burn Spread cheese for adds, decent with team support
 
-**Conclusion:** Michelangelo is USABLE for Iron Twins (TM control + Freeze helpful), but Brogni (10/10) shield is more valuable for add wave protection.
+**IRON TWINS TEAM** (See Section 7.3 for full details):
+- **Team (3-5 min):** Michelangelo + Brogni + Rector Drath + Artak + Deacon → HP Burn spread on adds, Dec ATK on twins
+
+**Conclusion:** Michelangelo is USABLE for Iron Twins (HP Burn Spread cheese for adds + Decrease ATK for twins), but Brogni (10/10) shield is more valuable for consistent add wave protection. See Section 7.3 for team composition.
 
 ---
 
 ### Hydra Brutal
 
-**Rating: 5/10 (Mediocre - TM Control Useful, But Fragile)**
+**Rating: 6/10 (Usable - Debuff Spread Multi-Head Utility)**
 
-**Why 5/10:**
-- **TM control:** A2 reduces Hydra TM by 30% (helpful for head mechanics)
-- **Freeze:** A3 AoE Freeze (2 turns) = can freeze heads (reduces incoming damage)
-- **Fragile:** Base HP 16,515 / DEF 980 = likely dies to Hydra head nukes without extensive gear
-- **Better alternatives:** Brogni (10/10) shield + Rector Drath (9/10) cleanse more valuable
+**Why 6/10:**
+- **Debuff Spread multi-head strategy:** Focus debuffs on Mischief Head → A2 spreads to ALL heads = debuffs all heads simultaneously
+- **HP Burn Spread:** If Ninja applies HP Burn to Mischief Head, Michelangelo spreads to ALL heads → 3% MAX HP per turn on all heads
+- **Decrease DEF for damage:** A2 Decrease DEF 60% (3 turns booked) = increases team damage on all heads
+- **Decrease ATK for survivability:** A3 Decrease ATK 50% (4 turns booked) = reduces head nuke damage by 50%
+- **Moderate durability:** Base HP 16,515 + user's 47k HP = survives with Brogni Shield support
+- **Better alternatives:** Brogni (10/10) shield + Rector Drath (9/10) cleanse more valuable for debuff-heavy Hydra
 
 **Best Owned Champions for Hydra Brutal:**
 1. **Brogni (10/10)** - Shield blocks head debuffs, game-changing sustain
 2. **Rector Drath (9/10)** - Cleanse + Block Debuffs, excellent debuff protection
-3. **Ninja (7/10)** - HP Burn + Freeze, good damage + utility
-4. **Michelangelo (5/10)** - TM control + Freeze, usable but fragile
+3. **Ninja (7/10)** - HP Burn + Freeze, good damage + utility (pairs well with Michelangelo for Debuff Spread)
+4. **Michelangelo (6/10)** - Debuff Spread multi-head strategy, usable with proper support
 
-**Conclusion:** Michelangelo is MEDIOCRE for Hydra Brutal (TM control + Freeze helpful, but fragile, Brogni/Rector Drath better for debuff protection).
+**HYDRA TEAM** (See Section 7.3 for full details):
+- **Team (50-100M per key):** Michelangelo + Ninja + Brogni + Rector Drath + Deacon → Focus Mischief Head, spread debuffs to ALL heads
+
+**Conclusion:** Michelangelo is USABLE for Hydra Brutal (Debuff Spread enables multi-head debuffing strategy, HP Burn Spread damage), but Brogni/Rector Drath better for debuff protection. See Section 7.3 for team composition.
 
 ---
 
 ### Cursed City (Amius)
 
-**Rating: 7/10 (Good - TM Control for Boss Mechanics)**
+**Rating: 7/10 (Good - Debuff Spread Mechanic Bypass)**
 
 **Why 7/10:**
-- **TM control:** A2 reduces boss TM by 30% (prevents boss from taking turns = safer fight)
-- **Freeze:** A3 AoE Freeze (2 turns) = can freeze add waves (safer fight)
-- **Decrease DEF:** A1 increases team damage output (60% Decrease DEF, 3 turns)
-- **Better alternative:** Brogni (10/10) shield provides more value than TM control
+- **Debuff Spread mechanic bypass:** Debuff adds → A2 spreads to boss → Bypasses boss immunity phases
+- **HP Burn Spread:** If Artak applies HP Burn to adds, Michelangelo spreads to boss → 5% MAX HP per turn even during immunity
+- **Decrease DEF for damage:** A2 Decrease DEF 60% (3 turns booked) = increases team damage output
+- **Decrease ATK for survivability:** A3 Decrease ATK 50% (4 turns booked) + Leech = team sustains through long fight
+- **Better alternative:** Brogni (10/10) shield provides more consistent protection
 
 **Best Owned Champions for Cursed City:**
 1. **Brogni (10/10)** - Shield blocks boss debuffs, game-changing sustain
 2. **Rector Drath (8/10)** - Cleanse + Block Debuffs, excellent debuff protection
-3. **Michelangelo (7/10)** - TM control + Freeze, good boss control
+3. **Michelangelo (7/10)** - Debuff Spread mechanic bypass, good when paired with HP Burn champions
 4. **Godseeker Aniri (7/10)** - Revive + Heal, good boss recovery
+5. **Artak (7/10)** - HP Burn for mechanic bypass when spread by Michelangelo
 
-**Conclusion:** Michelangelo is GOOD for Cursed City (TM control + Freeze enables boss control, only behind Brogni for debuff protection).
+**CURSED CITY TEAM** (See Section 7.3 for full details):
+- **Team (5-10 min):** Michelangelo + Brogni + Rector Drath + Artak + Deacon → Debuff adds, spread to boss, bypasses immunity
+
+**Conclusion:** Michelangelo is GOOD for Cursed City (Debuff Spread bypasses boss immunity phases, HP Burn Spread damage), only behind Brogni for debuff protection. See Section 7.3 for team composition.
 
 ---
 
 ### Arena (Classic Gold 3+)
 
-**Rating: 8/10 (Excellent - TM Control + Freeze for Arena Offense)**
+**Rating: 8/10 (Excellent - Arena Nuke + Debuff Spread Control)**
 
 **Why 8/10:**
-- **TM control:** A2 reduces ALL enemies TM by 30% (prevents enemy from taking turns = excellent Arena offense)
-- **Freeze:** A3 AoE Freeze (2 turns) = freezes enemy team (prevents counterattacks)
-- **Decrease DEF:** A1 increases team nuke damage (60% Decrease DEF, 3 turns)
-- **Passive 15% SPD:** Helps team speed tuning (all allies +15% SPD)
-- **User loses speed battle:** Michelangelo TM control helps even if slower (reduces enemy TM after they move)
+- **Arena nuke with Mythrala:** Mythrala buffs (Inc ATK + Inc DEF + Hex) → Michelangelo A2 ~150k crit → Debuff Spread (Dec DEF + Stun to ALL enemies)
+- **Debuff Spread control:** Wukong applies Sheep + Dec DEF to ONE enemy → Michelangelo A2 spreads to ALL enemies → Entire team disabled
+- **Decrease DEF for team damage:** A2 Decrease DEF 60% (3 turns booked) = enables team nukes
+- **Decrease ATK for tank strats:** A3 Decrease ATK 50% (4 turns booked) = user can lose speed battle intentionally, outlast enemy
+- **Taunt tank:** A3 Taunt + 30% Evade (Passive A4) + Shield on hit (300% ATK) = survives first turn if loses speed battle
+- **+70 ACC Aura (SAFE):** Helps allies land debuffs (works in ALL battles)
 
 **Best Owned Champions for Arena (Classic Gold 3+):**
 1. **Wukong (10/10)** - Speed lead + Buff strip + Nuke + Sheep control, core Arena team
 2. **Arbiter (10/10)** - 30% SPD aura + TM boost + Revive, best Arena speed lead
-3. **Loki (9/10)** - Control + Buff strip + Suppress mythics/active skills, excellent control
-4. **Michelangelo (8/10)** - TM control + Freeze, excellent control for Arena offense
+3. **Mythrala (9/10)** - Buffs/cleanse, Hex damage amplification, pairs PERFECTLY with Michelangelo for 150k+ crits
+4. **Loki (9/10)** - Control + Buff strip + Suppress mythics/active skills, excellent control (Debuff Spread combos)
+5. **Michelangelo (8/10)** - Arena nuke + Debuff Spread, excellent control for Arena offense
 
-**Conclusion:** Michelangelo is EXCELLENT for Arena offense (TM control + Freeze prevents enemy from taking turns, good even if user loses speed battle).
+**5 DISTINCT ARENA TEAM STRATEGIES** (See Section 7.2 for full details):
+1. **Mythrala Hex Nuke (75-85% win rate):** Wukong + Mythrala + Michelangelo + Ninja → 150k+ crit nukes
+2. **Loki Control + Debuff Spread (80-90% vs Mythics):** Arbiter + Loki + Michelangelo + Wukong → Suppress spread
+3. **Tank & Spank (70-80% vs speed teams):** Vogoth + Brogni + Michelangelo + Rector Drath → Loses speed intentionally
+4. **Triple Debuffer Spread (85-95%):** Deacon + Wukong + Loki + Michelangelo → Complete lockdown
+5. **Godseeker Buff Extension Cheese (95%+):** Arbiter + Godseeker Aniri + Brogni + Michelangelo → Immortal team
+
+**Conclusion:** Michelangelo is EXCELLENT for Arena offense (Arena nuke with Mythrala 150k+ crits, Debuff Spread control disables entire enemy team, Tank strat if loses speed battle). See Section 7.2 for 5 distinct Arena strategies.
 
 ---
 
 ### Tag Team Arena (Bronze 3+)
 
-**Rating: 7/10 (Good - TM Control + Freeze for Tag Team Offense)**
+**Rating: 7/10 (Good - Debuff Spread + Nuke for Tag Team Offense)**
 
 **Why 7/10:**
-- **TM control:** A2 reduces ALL enemies TM by 30% (prevents enemy from taking turns)
-- **Freeze:** A3 AoE Freeze (2 turns) = freezes enemy team (prevents counterattacks)
-- **Decrease DEF:** A1 increases team nuke damage (60% Decrease DEF, 3 turns)
+- **Debuff Spread control:** Spread Sheep, Dec DEF, Stun from ONE enemy to ALL = disables entire team
+- **Arena nuke:** A2 ~150k crit with Mythrala Hex buff = high damage
+- **Decrease DEF for team damage:** A2 Decrease DEF 60% (3 turns booked) = enables team nukes
 - **Lower priority:** User prioritizes Classic Arena over Tag Team (Bronze 3+ lower priority)
 
 **Best Owned Champions for Tag Team:**
 1. **Wukong (10/10)** - Speed lead + Buff strip + Nuke + Sheep control
 2. **Arbiter (10/10)** - 30% SPD aura + TM boost + Revive
-3. **Loki (9/10)** - Control + Buff strip + Suppress mythics
-4. **Michelangelo (7/10)** - TM control + Freeze, good control
+3. **Loki (9/10)** - Control + Buff strip + Suppress mythics (pairs with Michelangelo for Debuff Spread)
+4. **Michelangelo (7/10)** - Debuff Spread + Nuke, good control
 
-**Conclusion:** Michelangelo is GOOD for Tag Team offense (TM control + Freeze helpful), but lower priority content for user (Bronze 3+).
+**Conclusion:** Michelangelo is GOOD for Tag Team offense (Debuff Spread control + Arena nuke helpful), but lower priority content for user (Bronze 3+).
 
 ---
 
 ### Live Arena
 
-**Rating: 6/10 (Usable - TM Control + Freeze, But User Still Developing Strategy)**
+**Rating: 6/10 (Usable - Debuff Spread + Nuke, But User Still Developing Strategy)**
 
 **Why 6/10:**
-- **TM control:** A2 reduces ALL enemies TM by 30% (prevents enemy from taking turns)
-- **Freeze:** A3 AoE Freeze (2 turns) = freezes enemy team (prevents counterattacks)
+- **Debuff Spread utility:** Can spread Sheep, Suppress, Dec DEF from ONE enemy to ALL (useful if setup works)
+- **Arena nuke:** A2 ~150k crit with Mythrala = decent damage
 - **Lower priority:** User still developing Live Arena strategy (lower priority content)
 - **Better alternatives:** Loki (9/10) suppress active skills + Wukong (9/10) speed lead higher priority
 
@@ -310,29 +335,29 @@
 1. **Loki (9/10)** - Control + Buff strip + Suppress mythics/active skills
 2. **Wukong (9/10)** - Speed lead + Buff strip + Nuke + Sheep control
 3. **Arbiter (8/10)** - 30% SPD aura + TM boost (user uses as bait)
-4. **Michelangelo (6/10)** - TM control + Freeze, usable but lower priority
+4. **Michelangelo (6/10)** - Debuff Spread + Nuke, usable but lower priority
 
-**Conclusion:** Michelangelo is USABLE for Live Arena (TM control + Freeze helpful), but lower priority content for user (still developing strategy).
+**Conclusion:** Michelangelo is USABLE for Live Arena (Debuff Spread + Nuke helpful), but lower priority content for user (still developing strategy).
 
 ---
 
 ### Faction Wars (Banner Lords Normal/Hard)
 
-**Rating: 8/10 (Excellent - TM Control + Freeze for Stage 21 Boss)**
+**Rating: 8/10 (Excellent - Debuff Spread + Dec ATK + Taunt Tank)**
 
 **Why 8/10:**
-- **TM control:** A2 reduces boss TM by 30% (prevents boss from taking turns = critical for Stage 21)
-- **Freeze:** A3 AoE Freeze (2 turns) = freezes waves (safer wave clear)
-- **Decrease DEF:** A1 increases team damage output (60% Decrease DEF, 3 turns)
-- **Passive 15% SPD:** Helps Banner Lords team speed tuning
+- **Debuff Spread for waves:** If ally applies Stun/Freeze to ONE enemy, Michelangelo A2 spreads to ALL = excellent wave control
+- **Decrease ATK for survivability:** A3 Decrease ATK 50% (4 turns booked) + Leech = team sustains through Stage 21
+- **Taunt tank for boss:** A3 Taunt + 30% Evade (Passive A4) + Shield on hit (300% ATK) = absorbs boss attacks, protects team
+- **Decrease DEF for damage:** A2 Decrease DEF 60% (3 turns booked) = increases team damage output
+- **+70 ACC Aura (SAFE):** Helps Banner Lords allies land debuffs
 - **User completed Banner Lords Normal:** Michelangelo can help with Hard stages progression
 
 **Best Owned Champions for Faction Wars (Banner Lords):**
-1. **Oella (if owned)** - TBD (need to validate owned Banner Lords roster)
-2. **Michelangelo (8/10)** - TM control + Freeze, excellent for Stage 21 boss control
-3. **Other Banner Lords champions (TBD)** - Need to validate owned roster
+1. **Michelangelo (8/10)** - Debuff Spread + Dec ATK + Taunt Tank, excellent for Stage 21
+2. **Other Banner Lords champions (TBD)** - Need to validate full owned Banner Lords roster for complete Faction Wars recommendations
 
-**Conclusion:** Michelangelo is EXCELLENT for Faction Wars Banner Lords (TM control + Freeze critical for Stage 21 boss control, user already completed Normal, can help with Hard progression).
+**Conclusion:** Michelangelo is EXCELLENT for Faction Wars Banner Lords (Debuff Spread for waves, Taunt Tank for boss, Decrease ATK sustain critical for Stage 21, user already completed Normal, can help with Hard progression).
 
 ---
 
@@ -340,16 +365,16 @@
 
 | Content | Rating | Best Owned Champion | Notes |
 |---------|--------|---------------------|-------|
-| **Clan Boss UNM** | 4/10 | Brogni (10/10) | TM control does NOT work on Clan Boss, fragile |
-| **Dungeons Stage 25** | 7/10 | Artak/Ninja (10/10) | Good safety with TM control, but HP Burn teams faster |
-| **Doom Tower Hard** | 8/10 | Brogni (10/10) | Excellent boss control with TM reduction + Freeze |
-| **Iron Twins** | 6/10 | Brogni (10/10) | Usable TM control, but fragile vs add waves |
-| **Hydra Brutal** | 5/10 | Brogni (10/10) | Mediocre, TM control helpful but fragile |
-| **Cursed City (Amius)** | 7/10 | Brogni (10/10) | Good boss control with TM reduction |
-| **Arena (Gold 3+)** | 8/10 | Wukong/Arbiter (10/10) | Excellent TM control + Freeze for offense |
-| **Tag Team (Bronze 3+)** | 7/10 | Wukong/Arbiter (10/10) | Good control, lower priority content |
-| **Live Arena** | 6/10 | Loki/Wukong (9/10) | Usable, lower priority content |
-| **Faction Wars (Banner Lords)** | 8/10 | Michelangelo (8/10) | Excellent for Stage 21 boss control |
+| **Clan Boss UNM** | 5/10 | Brogni (10/10) | Debuff Spread does NOT work on Clan Boss (solo boss), decent damage with Dec DEF + Dec ATK |
+| **Dungeons Stage 25** | 7/10 | Artak/Ninja (10/10) | HP Burn Spread Cheese with Artak/Ninja = 2-4 min clears, slower alone |
+| **Doom Tower Hard** | 8/10 | Brogni (10/10) | Debuff Spread + HP Burn Cheese + Taunt Tank for Scarab King |
+| **Iron Twins** | 6/10 | Brogni (10/10) | HP Burn Spread on adds + Dec ATK on twins, decent with team support |
+| **Hydra Brutal** | 6/10 | Brogni (10/10) | Debuff Spread multi-head strategy (focus Mischief → spread to ALL heads) |
+| **Cursed City (Amius)** | 7/10 | Brogni (10/10) | Debuff Spread bypasses boss immunity (debuff adds → spread to boss) |
+| **Arena (Gold 3+)** | 8/10 | Wukong/Arbiter (10/10) | Arena nuke with Mythrala 150k+ crits + Debuff Spread control |
+| **Tag Team (Bronze 3+)** | 7/10 | Wukong/Arbiter (10/10) | Debuff Spread + Nuke, lower priority content |
+| **Live Arena** | 6/10 | Loki/Wukong (9/10) | Debuff Spread + Nuke, lower priority content |
+| **Faction Wars (Banner Lords)** | 8/10 | Michelangelo (8/10) | Debuff Spread waves + Taunt Tank boss + Dec ATK sustain |
 
 ---
 
