@@ -198,13 +198,79 @@ Apply the comprehensive validation methodology developed for UNM Clan Boss to AL
 
 ## 4. PRIORITY BOSS QUEUE
 
-### **Batch 1: Sand Devil & Fire Knight (HIGHEST PRIORITY)**
+### **Batch 0: UNM Clan Boss (CURRENT PRIORITY - IN PROGRESS)**
+
+**Boss 0: UNM Clan Boss (Ultra Nightmare)**
+- **Files to Update:**
+  * `Notes/UNM_Team_Optimization_DRAFT.md` (CURRENT - Continue optimization)
+- **Priority:** CRITICAL (user content priority #1: Clan Boss UNM)
+- **Current Status:** Base 4-champion analysis complete (Geo/Mithrala/Aniri/Brogni)
+- **NEW FOCUS:** Team composition optimization for MAXIMUM DAMAGE
+  * **Phase A:** Integrate Stag Knight as CORE 5th champion (replaces gap analysis)
+    - Stag Knight brings: Decrease DEF 60% + Decrease ATK 50% + 24% SPD aura (Dungeons only)
+    - **CRITICAL:** Validate if Stag Knight aura applies to Clan Boss or Dungeons only
+    - Speed tune: Stag Knight positioning in turn order (before DPS, after buffers)
+    - Expected damage: 120M-140M with Stag Knight core
+  
+  * **Phase B:** Explore Aniri Replacement Options (free up slot for higher damage)
+    - **Candidates:** Arbiter (revive + TM boost), Rector Drath (revive + Block Debuffs), Scyl (revive + heal)
+    - **Goal:** Replace Aniri's buff extension with higher raw damage or better synergy
+    - **Trade-off:** Lose buff extension (Brogni shields/Block Debuffs shorter) vs gain raw damage/utility
+  
+  * **Phase C:** Explore Geomancer Replacement Options (if HP Burn redundant)
+    - **Candidates:** Champions with higher raw damage than Geomancer passive reflect
+    - **Consideration:** Geomancer is current HP Burn source - only replace if better HP Burn champion exists OR HP Burn not optimal
+    - **Candidates:** Ninja (HP Burn + nuke), Artak (HP Burn A2 + raw damage), other high-damage dealers
+  
+  * **Phase D:** Explore Brogni Replacement Options (if shields not critical for damage)
+    - **Candidates:** Champions with higher raw damage or better debuff synergy
+    - **Consideration:** Brogni provides: Block Debuffs, Shields (passive damage procs), survivability
+    - **Trade-off:** Lose survivability/passive damage vs gain raw damage/better debuffs
+    - **Candidates:** High-damage dealers, Decrease DEF champions (if Stag Knight not core)
+
+  * **Phase E:** High-Damage Champion Analysis (Owned List)
+    - **Focus:** Champions with mechanics that enable high Clan Boss damage:
+      * Poison specialists: Fayne, Venomage, Frozen Banshee, Narma (2.5% MAX HP per poison per turn)
+      * Ally Attack: Nogdar x2, Seeker x2, Tagoar (extra turns = more procs/damage)
+      * Counterattack: Skullcrusher (doubles all champion attacks)
+      * Enemy MAX HP damage: Coldheart x3 (but limited on Clan Boss), Fayne (Decrease DEF + Poison)
+      * Raw nukers: Ninja, Artak, Sun Wukong, Ithos (if viable for Clan Boss)
+      * Buff/Debuff amplifiers: Rhazin (Weaken + Decrease DEF), Tayrel (Decrease DEF + Decrease ATK)
+    - **Validation:** Check each champion's Clan Boss rating (10/10, 9/10, 8/10 from reviews)
+    - **Expected outcome:** Identify Top 5-8 highest damage champions to test in team compositions
+
+  * **Phase F:** Team Composition Simulations (5-8 unique teams)
+    - **Team 1:** Mithrala + Stag Knight + [3 highest damage champions] (Core with Stag Knight)
+    - **Team 2:** Mithrala + Brogni + Stag Knight + [2 highest damage] (Keep Brogni survivability)
+    - **Team 3:** Mithrala + Aniri + Stag Knight + [2 highest damage] (Keep Aniri buff extension)
+    - **Team 4:** Mithrala + Stag Knight + Nogdar + [2 DPS] (Ally Attack spam)
+    - **Team 5:** Mithrala + Stag Knight + Skullcrusher + [2 DPS] (Counterattack doubling)
+    - **Team 6:** Full poison team (Mithrala + Stag Knight + Fayne + Venomage + Frozen Banshee)
+    - **Team 7-8:** Alternative compositions based on Phase E findings
+  
+  * **Expected Damage Target:** 150M-180M+ (stretch goal with optimized high-damage team)
+
+- **Validation Requirements:**
+  * Validate Stag Knight aura: "24% SPD in Dungeons" vs "24% SPD in all Battles"
+  * Validate all high-damage champion mechanics (passives, multipliers, proc rates)
+  * Cross-check with UNM_Champion_Comparison_Prompt.md for detailed analysis
+  * Document affinity safety for all new compositions
+
+- **Output:** Updated UNM_Team_Optimization_DRAFT.md with:
+  * Phase A-F analysis and findings
+  * Top 5-8 team compositions with damage estimates
+  * Final recommendation: Best team for 150M+ damage goal
+  * Implementation guide for recommended team
+
+---
+
+### **Batch 1: Sand Devil & Fire Knight (HIGH PRIORITY)**
 
 **Boss 1: Sand Devil (Doom Tower)**
 - **Files to Update:**
   * `Notes/SandDevil_DoomTower_Normal_Boss_Guide_DRAFT.md` (if exists, update FIRST)
   * `Notes/SandDevil_DoomTower_Hard_Boss_Guide_DRAFT.md` (update SECOND)
-- **Priority:** HIGH (user content priority #3: Doom Tower Hard)
+- **Priority:** HIGH (user content priority #2: Doom Tower Hard)
 - **Focus:**
   * Validate auras for all recommended champions
   * Validate passive mechanics (HP Burn, Reflect Damage, Shields)
@@ -695,6 +761,7 @@ Update [Boss] guide with comprehensive validation
 
 **Q18: Updated Priority Queue Confirmation**
 - **Order of Bosses:**
+  0. **UNM Clan Boss (CURRENT - IN PROGRESS):** Continue optimization with Stag Knight core + Geo/Brogni/Aniri replacement exploration for maximum damage
   1. Sand Devil Normal, Phantom Shogun Normal (if exists)
   2. Fire Knight, Dragon, Spider, Ice Golem (Dungeons Hard)
   3. Iron Twins, Hydra, Chimera, Shredder, Amius (Advanced PVE)
