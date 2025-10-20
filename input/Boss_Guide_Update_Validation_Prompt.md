@@ -207,10 +207,28 @@ Apply the comprehensive validation methodology developed for UNM Clan Boss to AL
 - **Current Status:** Base 4-champion analysis complete (Geo/Mithrala/Aniri/Brogni)
 - **NEW FOCUS:** Team composition optimization for MAXIMUM DAMAGE
   * **Phase A:** Integrate Stag Knight as CORE 5th champion (replaces gap analysis)
-    - Stag Knight brings: Decrease DEF 60% + Decrease ATK 50% + 24% SPD aura (Dungeons only)
-    - **CRITICAL:** Validate if Stag Knight aura applies to Clan Boss or Dungeons only
-    - Speed tune: Stag Knight positioning in turn order (before DPS, after buffers)
-    - Expected damage: 120M-140M with Stag Knight core
+    - **VALIDATION COMPLETE:** Stag Knight mechanics verified (Ayumilove 2025-10-19)
+    - **SKILLS:**
+      * A1 "Spot Quarry": 2 hits, 30%→50% chance Decrease SPD 30% for 2 turns (not usable on Clan Boss - immune to TM/SPD debuffs)
+      * A2 "Huntmaster" (4→3 turn CD): AoE, 70%→100% chance Decrease DEF 60% + Decrease ATK 50% for 2 turns
+      * Passive "Lead the Pack": Places 50% Increase ACC on ally for 1 turn when ally's debuff is RESISTED (not when BLOCKED)
+    - **AURA:** +24% SPD **IN DUNGEONS ONLY** ❌ **DOES NOT APPLY TO CLAN BOSS**
+    - **AFFINITY:** Spirit (SAFE vs Force boss, WEAK vs Magic boss, RISKY vs Void boss)
+    - **BASE STATS:** Low ATK (956), Moderate DEF (980), Moderate HP (16,185), High SPD (105)
+    - **RECOMMENDED MASTERIES:** Warmaster (T6 Offense) + Sniper (T3 Support for 100% debuff chance)
+    - **CLAN BOSS ROLE:**
+      * PRIMARY: Decrease DEF 60% (100% uptime with 3-turn CD, fully booked)
+      * SECONDARY: Decrease ATK 50% (100% uptime with 3-turn CD, fully booked)
+      * TERTIARY: Increase ACC passive (helps other debuffers land debuffs if resisted)
+    - **CRITICAL NOTES:**
+      * A1 Decrease SPD is USELESS on Clan Boss (boss immune)
+      * Aura is USELESS on Clan Boss (Dungeons only, not "all Battles")
+      * Passive only triggers on RESIST, not on BLOCK DEBUFFS (boss Block Debuffs buff won't trigger passive)
+    - **SPEED TUNING:** Position BEFORE DPS champions to apply Decrease DEF/ATK before damage dealers attack
+    - **GEAR REQUIREMENTS:** 250+ ACC, 190+ SPD (1:1 tune) or 250+ SPD (2:1 tune), 35k+ HP, 2.5k+ DEF for survivability
+    - **EXPECTED DAMAGE CONTRIBUTION:** Warmaster procs on A1 (2 hits = 2 chances per turn), Decrease DEF enables 15-25M extra team damage
+    - **TEAM SYNERGY:** CRITICAL for all damage dealers (Geo, Brogni, Mithrala, poison champions, etc.)
+    - **Expected total team damage:** 120M-140M with Stag Knight core (validated Decrease DEF/ATK uptime)
   
   * **Phase B:** Explore Aniri Replacement Options (free up slot for higher damage)
     - **Candidates:** Arbiter (revive + TM boost), Rector Drath (revive + Block Debuffs), Scyl (revive + heal)
@@ -833,6 +851,126 @@ Update [Boss] guide with comprehensive validation
 
 **Q27: DRAFT-to-FINAL Cleanup Timing**
 - Leave all files as draft until all bosses are complete, or if moving to another task. This prompt file will can be re-used.
+
+---
+
+## Section 10: Champion Validation Status (BATCH 0 - UNM Clan Boss)
+
+### Validation Methodology
+
+**For each champion mentioned in UNM analysis, validate:**
+1. **Aura:** Check exact wording on Ayumilove - "in the Arena" (❌ CB), "in Dungeons" (❌ CB), "in all Battles" (✅ CB)
+2. **Passive Mechanics:** Check if passive procs Warmaster/Giant Slayer, document patch changes (4.40, 4.70, etc.)
+3. **Skills:** Verify skill descriptions, damage multipliers, debuff chances, cooldowns
+4. **Affinity:** Confirm affinity correctness for boss matchup
+
+**Cross-validate with 2+ sources:** Ayumilove (primary), HellHades, RaidHQ, in-game testing
+
+---
+
+### Champions Requiring Validation (20+ Total)
+
+#### **GROUP 1: CURRENT BASE TEAM (4 Champions)**
+
+| Champion | Aura Status | Passive Status | Skills Status | Affinity | Validation Status |
+|----------|-------------|----------------|---------------|----------|-------------------|
+| **Geomancer** | ⏸️ Need validation | ✅ Patch 4.70: Reflect NO LONGER procs WM/GS | ⏸️ Need validation | Magic | **PARTIAL** |
+| **Mithrala** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Spirit | **PENDING** |
+| **Godseeker Aniri** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Void | **PENDING** |
+| **Underpriest Brogni** | ⏸️ Need validation | ✅ Patch 4.40: Shield STILL procs GS (multiple) | ⏸️ Need validation | Magic | **PARTIAL** |
+
+---
+
+#### **GROUP 2: CORE 5TH CHAMPION CANDIDATE (1 Champion)**
+
+| Champion | Aura Status | Passive Status | Skills Status | Affinity | Validation Status |
+|----------|-------------|----------------|---------------|----------|-------------------|
+| **Stag Knight** | ❌ **+24% SPD "in Dungeons"** = DOES NOT APPLY TO CB | ✅ 50% Inc ACC when debuff RESISTED (not BLOCKED) | ✅ A2: Dec DEF 60% + Dec ATK 50%, 3T CD, 100% w/books | Spirit | **✅ COMPLETE** |
+
+**STAG KNIGHT CRITICAL NOTES:**
+- A1 Decrease SPD is USELESS on Clan Boss (boss immune to TM/SPD debuffs)
+- Aura provides ZERO benefit on Clan Boss (Dungeons only)
+- Still S-tier (10/10) for Clan Boss based on A2 alone (Dec DEF + Dec ATK on 3-turn CD)
+- Passive only triggers on RESIST, NOT on Block Debuffs buff (boss immunity phase won't trigger passive)
+
+---
+
+#### **GROUP 3: TOP CANDIDATE REPLACEMENTS (8 Champions)**
+
+| Champion | Aura Status | Passive Status | Skills Status | Affinity | Validation Status |
+|----------|-------------|----------------|---------------|----------|-------------------|
+| **Tagoar** | ✅ **+33% DEF "All Battles"** = APPLIES TO CB | ✅ Passive heal on Ally Attack | ✅ Ally Attack + Inc DEF + Dec DEF | Spirit | **✅ COMPLETE** |
+| **Bad-el-Kazar** | ✅ **+33% HP "All Battles"** = APPLIES TO CB | ✅ Passive heals + cleanses | ✅ Leech + Decrease ATK + Poison | Magic | **✅ COMPLETE** |
+| **Frozen Banshee** | ⏸️ Need validation (likely none) | ⏸️ Need validation | ⏸️ Need validation | Magic | **PENDING** |
+| **Skullcrusher** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Void | **PENDING** |
+| **Vogoth** | ⚠️ **SUSPECTED: +19% SPD "in Dungeons"** | ⏸️ Need validation | ⏸️ Need validation | Magic | **SUSPECTED ERROR** |
+| **Rector Drath** | ⚠️ **SUSPECTED: +15% HP "in Dungeons"** | ⏸️ Need validation | ⏸️ Need validation | Spirit | **SUSPECTED ERROR** |
+| **Tayrel** | ⏸️ Need validation (+25% ATK - check if "All Battles" or "Dungeons") | ⏸️ Need validation | ⏸️ Need validation | Spirit | **PENDING** |
+| **Scyl of the Drakes** | ⏸️ Need validation (+19% HP - check if "All Battles" or "Dungeons") | ⏸️ Need validation | ⏸️ Need validation | Spirit | **PENDING** |
+
+---
+
+#### **GROUP 4: HIGH-DAMAGE OPTIONS (8+ Champions)**
+
+| Champion | Aura Status | Passive Status | Skills Status | Affinity | Validation Status |
+|----------|-------------|----------------|---------------|----------|-------------------|
+| **Ninja** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Magic | **PENDING** |
+| **Artak** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Force | **PENDING** |
+| **Fayne** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Magic | **PENDING** |
+| **Venomage** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Spirit | **PENDING** |
+| **Narma the Returned** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Spirit | **PENDING** |
+| **Nogdar the Headhunter (x2)** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Force | **PENDING** |
+| **Seeker (x2)** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Force | **PENDING** |
+| **Rhazin Scarhide** | ❌ **+30% DEF "in Dungeons"** = DOES NOT APPLY TO CB | ⏸️ Need validation | ⏸️ Need validation | Magic | **PARTIAL** |
+| **Arbiter** | ❌ **+30% SPD "in the Arena"** = DOES NOT APPLY TO CB | ⏸️ Need validation | ⏸️ Need validation | Void | **PARTIAL** |
+
+---
+
+### Validation Priority Queue
+
+**PRIORITY 1: Suspected Aura Errors (Complete FIRST)**
+- Vogoth (+19% SPD - suspected "Dungeons")
+- Rector Drath (+15% HP - suspected "Dungeons")
+- Tayrel (+25% ATK - confirm "All Battles" or "Dungeons")
+- Scyl (+19% HP - confirm "All Battles" or "Dungeons")
+
+**PRIORITY 2: Base Team Validation (Complete SECOND)**
+- Geomancer (aura + skills validation)
+- Mithrala (aura + skills validation)
+- Godseeker Aniri (aura + skills validation)
+- Underpriest Brogni (aura + skills validation)
+
+**PRIORITY 3: High-Damage Options (Complete THIRD)**
+- Ninja (HP Burn + nuke - critical for damage teams)
+- Artak (HP Burn + raw damage - critical for damage teams)
+- Fayne (Decrease DEF + Poison - critical for poison teams)
+- Venomage (3 poisons A1 - critical for poison teams)
+- Narma (AoE poison - critical for poison teams)
+- Nogdar x2 (Ally Attack spam cheese)
+- Seeker x2 (Ally Attack spam cheese)
+
+**PRIORITY 4: Remaining Candidates (Complete LAST)**
+- Frozen Banshee (Poison Sensitivity)
+- Skullcrusher (Counterattack)
+
+---
+
+### Confirmed Aura Errors (DO NOT RECOMMEND FOR CLAN BOSS BASED ON AURA)
+
+| Champion | Aura | Wording | Applies to CB? | Alternative Champions |
+|----------|------|---------|----------------|-----------------------|
+| **Arbiter** | +30% SPD | "in the Arena" | ❌ **NO** | Tagoar (+33% DEF), Bad-el (+33% HP), [Validate others] |
+| **Stag Knight** | +24% SPD | "in Dungeons" | ❌ **NO** | Tayrel (+25% ATK if "All Battles"), Tagoar, Bad-el |
+| **Rhazin Scarhide** | +30% DEF | "in Dungeons" | ❌ **NO** | Tagoar (+33% DEF "All Battles") |
+
+---
+
+### Validated Auras (SAFE TO RECOMMEND FOR CLAN BOSS)
+
+| Champion | Aura | Wording | Applies to CB? | Validation Source |
+|----------|------|---------|----------------|-------------------|
+| **Tagoar** | +33% DEF | "All Battles" | ✅ **YES** | UNM DRAFT Section 13 (validated Ayumilove + HellHades) |
+| **Bad-el-Kazar** | +33% HP | "All Battles" | ✅ **YES** | UNM DRAFT Section 13 (validated Ayumilove + HellHades) |
 
 ---
 
