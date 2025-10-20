@@ -684,68 +684,44 @@ Update [Boss] guide with comprehensive validation
 ### **Workflow & Processing Questions:**
 
 **Q16: Section-by-Section Processing Clarification**
-- You said "break out by section of the guide as it exists, returning to prior sections with updates as required"
-  - **Option A:** Process sections 1-9 sequentially, updating DRAFT file after each section, and circle back to update earlier sections (e.g., Executive Summary, Team Rankings) once validation is complete?
+  - Do A: Process sections 1-9 sequentially, updating DRAFT file after each section, and circle back to update earlier sections (e.g., Executive Summary, Team Rankings) once validation is complete?
 
 **Q17: "Review as Possible to Optimize Processing" Clarification**
-- You mentioned "review as possible to optimize processing on later sections"
-  - Complete the entire guide update, then present summary at the end for optimization feedback?
+ Complete the entire guide update, then present summary at the end for optimization feedback?
 
 ---
 
 ### **Content Priority Questions:**
 
 **Q18: Updated Priority Queue Confirmation**
-Based on your answer to Q7, the new priority order appears to be:
-1. ✅ Clan Boss UNM (COMPLETE)
-2. **Doom Tower Hard** (Sand Devil Hard, Phantom Shogun Hard, other DT bosses)
-3. **Advanced PVE** (Iron Twins, Hydra, Chimera, Shredder, Amius)
-4. **Dungeons All Stages 25** (Fire Knight, Dragon, Spider, Ice Golem)
-
-**But you also said "Sand Devil and Phantom Shogun Hard" are priority #5?**
-
-**Question:** To clarify the final boss processing order:
-- **Option C (Normal First, Then Hard Later):**
+- **Order of Bosses:**
   1. Sand Devil Normal, Phantom Shogun Normal (if exists)
   2. Fire Knight, Dragon, Spider, Ice Golem (Dungeons Hard)
   3. Iron Twins, Hydra, Chimera, Shredder, Amius (Advanced PVE)
   4. Sand Devil Hard, Phantom Shogun Hard (Queue after all other bosses)
   5. Other Doom Tower Hard bosses
 
-**Which option matches your intent?**
 
 ---
 
 ### **Simulation & Testing Questions:**
 
 **Q19: "NEW Simulations" Clarification**
-- You confirmed "Yes. A lot of the existing data is out of date."
-- **Question:** For NEW simulations:
+- For NEW simulations:
   - **Step 1:** Use community calculators/simulators (HellHades optimizer, Deadwood Jedi speed calculator) and document methodology AND THEN to double check:
   - **Step 2:** Estimate based on validated mechanics (aura, passive, affinity) and document conservative estimates with rationale
 
 **Q20: Testing Workflow**
-- **Question:** For each boss:
-  - **Option A:** Update guide with validated mechanics and estimated damage/clear times, THEN you test in-game and provide actual results to refine estimates?
+- For each boss, Update guide with validated mechanics and estimated damage/clear times, THEN you test in-game and provide actual results to refine estimates?
 
 ---
 
 ### **DRAFT File & Existing Guides Questions:**
 
 **Q21: Existing FINAL Files**
-- Several guides already have `_FINAL.md` suffix (Fire Knight, Dragon, Spider, etc.)
-- **Question:** Should I:
-  - **Option A:** Create new `_DRAFT.md` file for updates, leaving FINAL unchanged until promotion?
-  - **Option B:** Update FINAL file directly (since you want "faster, less iterative" per Q14)?
-  - **Option C:** Rename existing FINAL to `_OLD_[Date].md`, create new DRAFT, then promote after validation?
-  - **Which approach?**
-
+- Create new `_DRAFT.md` file for updates, leaving FINAL unchanged until promotion?
 **Q22: Section Rebuild vs. Update**
-- You said "Rebuild that section using template or the existing section" for error handling
-- **Question:** For sections with CRITICAL errors (e.g., wrong champion recommended, major aura error), should I:
-  - **Option A:** Keep existing section structure and update specific errors only
-  - **Option B:** Rebuild section from scratch using UNM methodology templates
-  - **Which approach?**
+  - If there are validation/etc errors, rebuild section from scratch using reference templates/guides in this project
 
 ---
 
@@ -758,9 +734,7 @@ Based on your answer to Q7, the new priority order appears to be:
   3. Easiest to book/gear (accessibility)
 
 **Question:** When presenting Top 3-5 teams, should the ranking order be:
-- **Scenario A:** #1 = Highest success rate, #2 = Fastest clear, #3 = Easiest to gear
-- **Scenario B:** Provide separate rankings for each category (like UNM: "Most Users", "Damage-Focused", "New Players")
-- **Which format?**
+- Provide separate rankings for each category (like UNM: "Most Users", "Damage-Focused", "New Players")
 
 ---
 
@@ -772,14 +746,14 @@ Based on your answer to Q7, the new priority order appears to be:
   - **Option A:** Boss has high HP pool and takes full poison damage (e.g., Clan Boss, high HP dungeon bosses)
   - **Option B:** User has well-built poison champions for that specific boss
   - **Option C:** Poison outperforms HP Burn in clear time/damage for that boss
-  - **Which definition?**
+  - All of the above, in that priority order
 
 **Q25: "Surviving or Activating" HP Burn Clarification**
 - You said "prefer hp burn and surviving or activating if it makes sense for the boss"
 - **Question:** Does this mean:
   - HP Burn is preferred IF team can survive long enough for HP Burn to deal meaningful damage (multi-turn bosses)?
   - OR HP Burn is preferred IF HP Burn can be activated/maintained consistently (not cleansed/resisted)?
-  - **Or both?**
+  - BOTH
 
 ---
 
@@ -788,17 +762,10 @@ Based on your answer to Q7, the new priority order appears to be:
 **Q26: Commit Message for Section-by-Section Updates**
 - You said "Commit after each boss update"
 - **Question:** If I update a boss guide in multiple passes (e.g., Aura Validation → Passive Validation → Executive Summary), should I:
-  - **Option A:** Commit after EACH section update (multiple commits per boss)
-  - **Option B:** Commit only when entire boss guide is complete (1 commit per boss)
-  - **Which approach?**
+  - Commit only when entire boss guide is complete (1 commit per boss)
 
 **Q27: DRAFT-to-FINAL Cleanup Timing**
-- You said "Wait for confirmation, but do this as a cleanup after all files are set, and when exiting"
-- **Question:** Does "when exiting" mean:
-  - **Option A:** After all 10+ bosses are complete (bulk promotion at project end)
-  - **Option B:** After each batch of bosses (e.g., after Doom Tower bosses complete)
-  - **Option C:** When you explicitly say "promote all DRAFT files to FINAL"
-  - **Which timing?**
+- Leave all files as draft until all bosses are complete, or if moving to another task. This prompt file will can be re-used.
 
 ---
 
