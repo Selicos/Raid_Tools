@@ -903,10 +903,10 @@ Update [Boss] guide with comprehensive validation
 | **Bad-el-Kazar** | ✅ **+33% HP "All Battles"** = APPLIES TO CB | ✅ Passive heals + cleanses | ✅ Leech + Decrease ATK + Poison | Magic | **✅ COMPLETE** |
 | **Frozen Banshee** | ⏸️ Need validation (likely none) | ⏸️ Need validation | ⏸️ Need validation | Magic | **PENDING** |
 | **Skullcrusher** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Void | **PENDING** |
-| **Vogoth** | ⚠️ **SUSPECTED: +19% SPD "in Dungeons"** | ⏸️ Need validation | ⏸️ Need validation | Magic | **SUSPECTED ERROR** |
-| **Rector Drath** | ⚠️ **SUSPECTED: +15% HP "in Dungeons"** | ⏸️ Need validation | ⏸️ Need validation | Spirit | **SUSPECTED ERROR** |
-| **Tayrel** | ⏸️ Need validation (+25% ATK - check if "All Battles" or "Dungeons") | ⏸️ Need validation | ⏸️ Need validation | Spirit | **PENDING** |
-| **Scyl of the Drakes** | ⏸️ Need validation (+19% HP - check if "All Battles" or "Dungeons") | ⏸️ Need validation | ⏸️ Need validation | Spirit | **PENDING** |
+| **Vogoth** | ✅ **+40 ACC "All Battles"** = APPLIES TO CB ⚠️ **USER ERROR: NO SPD AURA!** | ⏸️ Need validation | ⏸️ Need validation | Spirit | **✅ AURA VALIDATED** |
+| **Rector Drath** | ❌ **+55 RES "in Doom Tower battles"** = DOOM TOWER ONLY | ⏸️ Need validation | ⏸️ Need validation | Force | **❌ AURA ERROR CONFIRMED** |
+| **Tayrel** | ✅ **+25% DEF "All Battles"** = APPLIES TO CB | ⏸️ Need validation | ⏸️ Need validation | Magic | **✅ AURA VALIDATED** |
+| **Scyl of the Drakes** | ⏸️ Need validation (NO aura in overview - confirm) | ⏸️ Need validation | ⏸️ Need validation | Magic | **PENDING** |
 
 ---
 
@@ -960,8 +960,9 @@ Update [Boss] guide with comprehensive validation
 | Champion | Aura | Wording | Applies to CB? | Alternative Champions |
 |----------|------|---------|----------------|-----------------------|
 | **Arbiter** | +30% SPD | "in the Arena" | ❌ **NO** | Tagoar (+33% DEF), Bad-el (+33% HP), [Validate others] |
-| **Stag Knight** | +24% SPD | "in Dungeons" | ❌ **NO** | Tayrel (+25% ATK if "All Battles"), Tagoar, Bad-el |
+| **Stag Knight** | +24% SPD | "in Dungeons" | ❌ **NO** | Tayrel (+25% DEF "All Battles"), Tagoar, Bad-el |
 | **Rhazin Scarhide** | +30% DEF | "in Dungeons" | ❌ **NO** | Tagoar (+33% DEF "All Battles") |
+| **Rector Drath** | +55 RES | "in Doom Tower battles" | ❌ **NO** | Bad-el (+33% HP), Tagoar (+33% DEF), Tayrel (+25% DEF) |
 
 ---
 
@@ -971,6 +972,23 @@ Update [Boss] guide with comprehensive validation
 |----------|------|---------|----------------|-------------------|
 | **Tagoar** | +33% DEF | "All Battles" | ✅ **YES** | UNM DRAFT Section 13 (validated Ayumilove + HellHades) |
 | **Bad-el-Kazar** | +33% HP | "All Battles" | ✅ **YES** | UNM DRAFT Section 13 (validated Ayumilove + HellHades) |
+| **Tayrel** | +25% DEF | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 1 batch) |
+| **Vogoth** | +40 ACC | "All Battles" | ✅ **YES** ⚠️ **NOT SPD!** | Ayumilove 2025-10-19 (user assumed wrong aura) |
+
+---
+
+### CRITICAL USER ERRORS CORRECTED
+
+**Vogoth Aura Misconception:**
+- **USER ASSUMED**: +19% SPD aura "in Dungeons" (INCORRECT)
+- **ACTUAL AURA**: +40 Accuracy "in all Battles" (CORRECT - applies to Clan Boss ✅)
+- **IMPACT**: Vogoth is SAFE to recommend for Clan Boss (aura DOES apply)
+- **LESSON**: Always validate champion data before making assumptions
+
+**Rector Drath Aura Error:**
+- **AURA**: +55 Resist "in Doom Tower battles"
+- **APPLIES TO**: Doom Tower only ❌ (does NOT apply to Clan Boss)
+- **SAME PATTERN**: Stag Knight, Arbiter, Rhazin (content-restricted auras)
 
 ---
 
