@@ -1,0 +1,529 @@
+# **Criodan the Blue - Champion Review**
+
+**Last Updated:** October 20, 2025
+
+**Enhancement History:**
+- **2025-10-20:** Initial review created using validated data from Ayumilove (1/1 source). Freeze specialist with Inc SPD + TM boost support. Epic Force Attack, Sylvan Watchers faction. Community feedback: "Heavily underrated" (FelixCore), "Fantastic crowd controller" (SASANID Legacy), "5-star Dreadhorn champion" (144willie).
+
+---
+
+## Table of Contents
+
+1. [Champion Overview](#1-champion-overview)
+2. [Content-Specific Ratings (X/10 Contextualized)](#2-content-specific-ratings-x10-contextualized)
+3. [Skills & Mechanics](#3-skills--mechanics)
+4. [Gear Recommendations](#4-gear-recommendations)
+5. [Masteries](#5-masteries)
+6. [Faction Wars Advice](#6-faction-wars-advice)
+7. [Team Synergies & Pairings](#7-team-synergies--pairings)
+8. [Investment Recommendations](#8-investment-recommendations)
+9. [Current Build Input Section](#9-current-build-input-section)
+10. [Cheese Strategy Integration](#10-cheese-strategy-integration)
+11. [Validation & Sources](#11-validation--sources)
+
+---
+
+## 1. Champion Overview
+
+### 1.1. Basic Information
+
+| Attribute | Value |
+|-----------|-------|
+| **Name** | Criodan the Blue |
+| **Rarity** | Epic |
+| **Affinity** | Force |
+| **Faction** | Sylvan Watchers |
+| **Role** | Attack (Support/Crowd Control) |
+| **Aura** | None (NO AURA) |
+| **Obtainable From** | Ancient Shard, Sacred Shard, Primal Shard |
+
+---
+
+### 1.2. Primary Roles
+
+**Primary Roles:**
+1. **Freeze Specialist** - AOE + Single-target Freeze (A1 + A2)
+2. **Speed Support** - 30% Inc SPD + 15% TM boost (A3)
+3. **TM Self-Booster** - Passive fills own TM by 5% per Freeze applied
+4. **Wave Control** - Multi-hit Freeze for dungeons, Doom Tower waves
+5. **Fire Knight Specialist** - 3-hit A1 + 2-hit AOE A2 for shield break
+
+---
+
+### 1.3. BEST Use Cases (User Priority Order)
+
+**Priority 1: Dungeons (Stage 25)**
+- **Fire Knight 25:** 3-hit A1 + 2-hit AOE A2 = excellent shield break, Freeze on waves
+- **Spider 25:** Freeze spiderlings (manual), Inc SPD + TM boost for faster clears
+- **Dragon 25:** Freeze waves, Inc SPD + TM boost (moderate impact, HP Burn teams preferred)
+- **Ice Golem 25:** Freeze minions, Inc SPD + TM boost (moderate impact)
+
+**Priority 2: Doom Tower Hard (Boss-Specific)**
+- **Dreadhorn (Dreadbombs):** AOE Freeze on Dreadbombs = reduces explosion damage by 50% (Frozen debuff effect) - **CRITICAL** use case (community validated: "5-star Dreadhorn champion")
+- **Frost Spider:** Freeze spiderlings for wave control
+- **Bommal (Dreadbombs):** AOE Freeze on Dreadbombs (similar to Dreadhorn strategy)
+- **Nether Spider:** Freeze spiderlings (manual), Inc SPD + TM boost
+
+**Priority 3: Clan Boss UNM**
+- **Rating:** LOW (1/10) - Freeze does NOT work on Clan Boss (boss IMMUNE to Freeze), Inc SPD buff is marginal benefit
+- **Not Recommended** for Clan Boss teams
+
+**Priority 4: Arena (Gold 3-4)**
+- **Rating:** MEDIUM (5-6/10) - Inc SPD + TM boost enables faster team, AOE Freeze for wave control in Tag Team
+- **Use Case:** Speed tuning support (A3 Inc SPD 30% + TM boost 15% = similar to Arbiter TM boost but weaker)
+
+**Priority 5: Faction Wars (Sylvan Watchers)**
+- **Rating:** HIGH (8/10) - Freeze control + Inc SPD + TM boost = excellent for Sylvan Watchers Faction Wars
+- **User Progress:** Sylvan Watchers faction status UNKNOWN (not listed in completed/near-completion factions)
+
+---
+
+### 1.4. NOT Recommended For
+
+**Content to AVOID:**
+1. **Clan Boss UNM** - Freeze IMMUNE, Inc SPD buff marginal benefit = LOW value (1/10)
+2. **Hydra Brutal** - Freeze works but Hydra cleanses debuffs frequently = unreliable
+3. **Iron Twins Fortress** - Freeze works but twins have high resist, boss mechanics favor other strategies
+4. **Campaign farming** - Overkill for campaign, better options for speed farming
+
+---
+
+### 1.5. UNIQUE Mechanics & Kit Highlights
+
+**What Makes Criodan UNIQUE:**
+
+1. **Passive TM Self-Boost (Snow Dancer):**
+   - Fills own TM by 5% per Freeze applied
+   - Synergizes with A1 (3 hits, 25% Freeze each = up to 15% TM fill) + A2 (AOE 2 hits, 45% Freeze each = up to 30% TM fill vs 5 enemies)
+   - **Result:** Criodan becomes "energizer bunny" crowd controller (more Freezes = more turns = more Freezes)
+   - **Community quote:** "Criodan the Blue becomes a crowd-controlling energizer bunny" (Ayumilove)
+
+2. **Multi-Hit Freeze (A1 + A2):**
+   - A1: 3-hit attack (1.2 ATK mult per hit), 25% Freeze chance per hit (35% booked)
+   - A2: AOE 2-hit attack (1.9 ATK mult per hit), 45% Freeze chance per hit (65% booked)
+   - **Fire Knight synergy:** 3-hit A1 + 2-hit AOE A2 = 5 total hits per rotation = excellent shield break
+
+3. **Inc SPD + TM Boost Combo (A3):**
+   - 30% Inc SPD (2 turns) + 15% TM boost (instant)
+   - **Speed tuning:** Enables 2:1 ratio for Clan Boss UNM teams (community note: "Criodan bestows 30% Inc SPD buff, can be employed to create efficient Clan Boss speed strategies with 2:1 ratio")
+   - **Comparison:** Arbiter TM boost 30% (stronger), High Khatun TM boost 30% + Aura 19% SPD (stronger), Deacon Armstrong TM boost 30% (stronger)
+
+4. **Force Affinity (Strong vs Magic):**
+   - Strong vs Magic Clan Boss, Magic arena teams, Magic dungeon bosses
+   - Weak vs Spirit Clan Boss, Spirit arena teams, Spirit dungeon bosses
+
+---
+
+### 1.6. Base Stats Analysis (Level 60, 6-Star)
+
+| Stat | Value | Notes |
+|------|-------|-------|
+| **HP** | 16,845 | MEDIUM (typical for Epic Attack champions) |
+| **ATK** | 1,432 | HIGH (good for damage output, A1 3-hit + A2 AOE 2-hit) |
+| **DEF** | 782 | LOW (fragile, needs HP/DEF investment for survivability) |
+| **SPD** | 101 | MEDIUM (typical for Epic Attack, needs Speed set) |
+| **C.RATE** | 15% | Base (needs C.RATE gear for damage) |
+| **C.DMG** | 50% | Base (needs C.DMG gear for damage) |
+| **Resist** | 30 | Base (ignore for most builds) |
+| **Accuracy** | 0 | **CRITICAL STAT** - Needs 200-250 ACC for Freeze reliability in end-game content |
+
+**Stat Priority:** ACC > SPD > ATK > C.RATE > C.DMG > HP > DEF
+
+**Why ACC is CRITICAL:**
+- A1 Freeze: 25% chance (35% booked) per hit × 3 hits = 58.54% chance to land at least 1 Freeze (IF ACC sufficient)
+- A2 Freeze: 45% chance (65% booked) per hit × 2 hits vs 5 enemies = 87.75% chance to land at least 1 Freeze per enemy (IF ACC sufficient)
+- **Without 200-250 ACC:** Freeze chance drops to ~30-40% effective rate = unreliable = LOW value
+
+---
+
+### 1.7. Champion Lore Summary
+
+**Criodan the Blue - Lord of Azure, Master of All Sapphire-Souled Forces**
+
+Long ago in the Fae Court, an upstart minor noble proclaimed himself **Criodan the Blue**, claiming dominion over ALL things blue: azure skies, sapphire forces, cerulean pools, glaciers, and the very concept of "the Blue." This audacious claim shattered Fae norms—other Fae claimed domains like Reeds, Moonlight, or Cinders, but Criodan sought **a vast swath of creation** as his domain.
+
+**The Struggle for Power:**
+- Other Fae nobles reacted with fear, gossip, and murderous attacks
+- Criodan fought back with sapphire storms, freezing hail (Razor Hail), and a blade of mystic ice (Frostbark Blade)
+- His allies fought with incredible speed and grace (Blessing of the Blue)
+
+**The Rival: Duchess of Rushing Water:**
+- Criodan's greatest challenge was the **Duchess of Rushing Water** (domain: all flowing water)
+- The Duchess beat Criodan back to stagnant lakes, ponds, and patches of blue sky
+- Accounts of Criodan "dry up and end" after this rivalry—likely absorbed by other Fae, went into hiding, or serves a new master under a new guise
+
+**Legacy:** Criodan the Blue represents ambition, frost magic, and the struggle for dominion over vast, abstract concepts. His "Blessing of the Blue" grants allies speed and grace, while his freezing powers control the battlefield.
+
+---
+
+**BATCH 1 COMPLETE** ✅
+
+**Lines Added:** ~200 lines (Header, Enhancement History, TOC, Champion Overview sections 1.1-1.7)
+
+**Next Action:** Proceed to BATCH 2 (Content-Specific Ratings) - Rate Criodan for all 10 content areas (Clan Boss, Dungeons, Doom Tower, etc.) with owned champion comparisons. ~400-500 lines.
+
+---
+
+## 2. Content-Specific Ratings (X/10 Contextualized)
+
+**Rating Context:** All ratings are **contextualized to owned champions**. 10/10 means best-in-class among OWNED champions (validated against owned roster). Comparisons ONLY to owned champions.
+
+---
+
+### 2.1. Clan Boss UNM
+
+**Rating: 1/10 - Not Recommended**
+
+**Context:** Criodan is **NOT viable for Clan Boss UNM** due to Freeze IMMUNITY.
+
+**Why 1/10:**
+- **Freeze does NOT work:** Clan Boss is IMMUNE to Freeze debuff (A1 + A2 primary mechanics wasted)
+- **Inc SPD buff marginal:** 30% Inc SPD buff provides minor speed tuning benefit, but better champions exist (Deacon Armstrong TM boost 30%, Arbiter TM boost 30%, High Khatun TM boost 30%)
+- **No damage scaling:** A1 3-hit (1.2 ATK mult per hit = 3.6 ATK total) + A2 AOE (1.9 ATK mult per hit = 3.8 ATK single-target) = LOW damage vs Clan Boss UNM
+- **No sustain/debuffs:** No HP Burn, Poison, Dec DEF, Dec ATK, Shield, Block Debuffs = no core role for Clan Boss teams
+
+**Owned Champion Comparison (Clan Boss UNM Supports):**
+- **Brogni (10/10):** Shield + Block Debuffs + HP Burn + Reflect Damage
+- **Stag Knight (9/10):** Dec DEF + Dec ATK 100% uptime
+- **Deacon Armstrong (10/10):** Dec DEF 100% + TM boost 30%
+- **Arbiter (9/10):** TM boost 30% + Revive + Inc ATK
+- **Criodan (1/10):** Freeze IMMUNE, marginal Inc SPD buff
+
+**Verdict:** Use Brogni, Stag Knight, Deacon, or Arbiter instead. Criodan has NO place in Clan Boss UNM teams.
+
+---
+
+### 2.2. Dungeons (Stage 25)
+
+**Rating: 8/10 - Excellent for Fire Knight, Good for Spider/Dragon/Ice Golem**
+
+**Context:** Criodan is **EXCELLENT for Fire Knight** (multi-hit shield break + Freeze waves) and **GOOD for other dungeons** (Freeze control + Inc SPD + TM boost).
+
+**Fire Knight 25 (9/10):**
+- **Multi-hit shield break:** A1 3-hit + A2 AOE 2-hit = 5 total hits per rotation = breaks Fire Knight shield quickly
+- **Freeze waves:** AOE Freeze (A2) controls waves, reduces incoming damage
+- **Inc SPD + TM boost:** A3 speeds up team rotations = faster clears
+- **Community feedback:** "Love him for fire knight 10 (hard)" (Justin Scatina)
+
+**Spider 25 (7/10):**
+- **Freeze spiderlings (manual):** AOE Freeze (A2) controls spiderlings, prevents attacks
+- **Inc SPD + TM boost:** A3 speeds up boss kill
+- **Limitation:** Requires manual play for Freeze timing, auto may waste A2 on boss
+
+**Dragon 25 (7/10):**
+- **Freeze waves:** AOE Freeze (A2) controls waves
+- **Inc SPD + TM boost:** A3 speeds up rotations
+- **Limitation:** HP Burn teams (Artak, Ninja, Geomancer) preferred for faster clears
+
+**Ice Golem 25 (7/10):**
+- **Freeze minions:** AOE Freeze (A2) controls minions
+- **Inc SPD + TM boost:** A3 speeds up rotations
+- **Limitation:** HP Burn + Reflect teams (Geomancer, Brogni) preferred
+
+**Owned Champion Comparison (Dungeon Supports):**
+- **Stag Knight (10/10):** +24% SPD aura Dungeons ONLY (BEST), Dec DEF + Dec ATK
+- **Deacon Armstrong (9/10):** +19% SPD aura Dungeons, TM boost 30%, Dec DEF
+- **Arbiter (10/10):** +30% SPD aura All Battles, TM boost 30%, Revive
+- **Criodan (8/10):** No aura, Inc SPD 30% + TM boost 15% + Freeze control (Fire Knight specialist)
+
+**Verdict:** Criodan is **BEST for Fire Knight 25** (multi-hit specialist), GOOD for other dungeons (Freeze control + speed support). Use Stag Knight or Deacon for general dungeon speed, Criodan for Fire Knight specifically.
+
+---
+
+### 2.3. Doom Tower Hard
+
+**Rating: 9/10 - CRITICAL for Dreadhorn/Bommal, Excellent for Frost Spider/Nether Spider**
+
+**Context:** Criodan is **GAME-CHANGING for Dreadhorn and Bommal** (Dreadbomb Freeze strategy) and **EXCELLENT for wave-heavy bosses**.
+
+**Dreadhorn Hard (10/10 - CRITICAL):**
+- **AOE Freeze Dreadbombs:** Frozen debuff reduces Dreadbomb explosion damage by 50%
+- **Community validation:** "I probably could not have beaten the Dreadhorn in cursed city hard without him. 5-star Dreadhorn champion!" (144willie)
+- **A1 + A2 Freeze synergy:** A1 3-hit Freeze (single Dreadbomb) + A2 AOE Freeze (all Dreadbombs) = consistent control
+- **Passive TM boost:** 5% TM per Freeze = more turns = more Freezes = Dreadbomb lockdown
+
+**Bommal Hard (10/10 - CRITICAL):**
+- **Same Dreadbomb strategy:** AOE Freeze on Dreadbombs = 50% damage reduction
+- **Multiple Dreadbomb waves:** Criodan can Freeze Dreadbombs across multiple waves = team survives
+
+**Frost Spider Hard (9/10):**
+- **Freeze spiderlings:** AOE Freeze (A2) controls spiderlings, prevents attacks
+- **Inc SPD + TM boost:** A3 speeds up boss kill
+
+**Nether Spider Hard (8/10):**
+- **Freeze spiderlings (manual):** AOE Freeze (A2) controls spiderlings
+- **Limitation:** High Resist (350+ RES) = needs 300+ ACC for reliable Freeze
+
+**Scarab King Hard (5/10):**
+- **Freeze does NOT bypass Shield:** Scarab King Shield blocks Freeze debuff = Criodan wasted
+- **Not Recommended** for Scarab King
+
+**Owned Champion Comparison (Doom Tower Hard Freeze/Control):**
+- **Ninja (9/10):** AOE Freeze 2 turns (A3), HP Burn activation, Escalation passive
+- **Loki (8/10):** Control (Block Active Skills + Provoke), buff strip
+- **Akoth the Seared (6/10):** Freeze on A3 (single-target), HP Burn
+- **Criodan (9/10):** AOE Freeze specialist, Inc SPD + TM boost, **BEST for Dreadhorn/Bommal** (Dreadbomb strategy)
+
+**Verdict:** Criodan is **CRITICAL for Dreadhorn and Bommal Hard** (Dreadbomb Freeze = 50% damage reduction), EXCELLENT for Frost/Nether Spider. NOT recommended for Scarab King.
+
+---
+
+### 2.4. Iron Twins Fortress
+
+**Rating: 5/10 - Moderate (Freeze works but not optimal)**
+
+**Context:** Criodan's Freeze works on Iron Twins but **NOT optimal** due to high Resist and boss mechanics.
+
+**Why 5/10:**
+- **High Resist:** Iron Twins have 300+ RES = needs 300+ ACC for reliable Freeze
+- **Boss mechanics:** Dec ATK reduces twin damage (Stag Knight Dec ATK preferred)
+- **Freeze helps:** Freezing twins reduces attacks, but twins cleanse debuffs frequently
+
+**Owned Champion Comparison (Iron Twins Supports):**
+- **Stag Knight (8/10):** Dec DEF + Dec ATK = reduces twin damage output
+- **Brogni (9/10):** Shield + Block Debuffs = team sustains
+- **Criodan (5/10):** Freeze control (moderate impact), Inc SPD + TM boost
+
+**Verdict:** Use Stag Knight or Brogni for Iron Twins. Criodan is MODERATE (Freeze works but not optimal).
+
+---
+
+### 2.5. Hydra Brutal
+
+**Rating: 5/10 - Moderate (Freeze works but Hydra cleanses frequently)**
+
+**Context:** Criodan's Freeze works on Hydra but **NOT optimal** due to frequent cleanses.
+
+**Why 5/10:**
+- **Hydra cleanses:** Hydra cleanses debuffs every 4 turns = Freeze duration reduced
+- **Freeze helps:** Freezing Hydra heads reduces attacks, but unreliable
+- **Inc SPD + TM boost:** A3 speeds up team rotations (minor benefit)
+
+**Owned Champion Comparison (Hydra Brutal Supports):**
+- **Brogni (10/10):** Shield + Block Debuffs + HP Burn + Reflect Damage
+- **Ninja (9/10):** HP Burn activation + Freeze + Escalation passive
+- **Stag Knight (7/10):** Dec DEF + Dec ATK
+- **Criodan (5/10):** Freeze control (unreliable), Inc SPD + TM boost
+
+**Verdict:** Use Brogni or Ninja for Hydra Brutal. Criodan is MODERATE (Freeze unreliable due to cleanses).
+
+---
+
+### 2.6. Cursed City (Amius Lunar Archon)
+
+**Rating: 6/10 - Good (Freeze control + Inc SPD, but better options exist)**
+
+**Context:** Criodan's Freeze + Inc SPD works for Cursed City but **better champions exist**.
+
+**Why 6/10:**
+- **Freeze control:** AOE Freeze (A2) controls waves, reduces incoming damage
+- **Inc SPD + TM boost:** A3 speeds up rotations
+- **Limitation:** Amius Lunar Archon boss has high Resist = needs 250+ ACC
+
+**Owned Champion Comparison (Cursed City Supports):**
+- **Brogni (9/10):** Shield + Block Debuffs + HP Burn
+- **Stag Knight (8/10):** Dec DEF + Dec ATK
+- **Ninja (8/10):** HP Burn activation + Freeze
+- **Criodan (6/10):** Freeze control + Inc SPD + TM boost
+
+**Verdict:** Use Brogni or Stag Knight for Cursed City. Criodan is GOOD (Freeze control works, but not optimal).
+
+---
+
+### 2.7. Arena (Classic Gold 3-4)
+
+**Rating: 6/10 - Good (Inc SPD + TM boost, but weaker than Arbiter/Deacon)**
+
+**Context:** Criodan's Inc SPD + TM boost works for Arena speed teams but **weaker than Arbiter/Deacon**.
+
+**Why 6/10:**
+- **Inc SPD + TM boost:** A3 provides 30% Inc SPD (2 turns) + 15% TM boost (instant) = speeds up team
+- **AOE Freeze:** A2 can Freeze enemy team (manual), prevents attacks
+- **Limitation:** No speed lead aura = must pair with Arbiter/Wukong speed lead
+
+**Owned Champion Comparison (Arena Speed Supports):**
+- **Arbiter (10/10):** +30% SPD aura All Battles, TM boost 30%, Revive, Inc ATK
+- **Deacon Armstrong (9/10):** +19% SPD aura Dungeons, TM boost 30%, Dec DEF
+- **High Khatun (assumed owned?):** +19% SPD aura All Battles, TM boost 30%
+- **Criodan (6/10):** No aura, Inc SPD 30% + TM boost 15% + AOE Freeze
+
+**Verdict:** Use Arbiter or Deacon for Arena speed teams. Criodan is GOOD (Inc SPD + TM boost works, but weaker than top-tier supports).
+
+---
+
+### 2.8. Tag Team Arena
+
+**Rating: 7/10 - Good (Freeze control + Inc SPD for multiple teams)**
+
+**Context:** Criodan's Freeze + Inc SPD works for **Tag Team Arena** (3 teams required).
+
+**Why 7/10:**
+- **Freeze control:** AOE Freeze (A2) controls enemy teams, prevents attacks
+- **Inc SPD + TM boost:** A3 speeds up team rotations
+- **Multiple teams:** Tag Team requires 3 teams = Criodan fills support role for 2nd or 3rd team
+
+**Owned Champion Comparison (Tag Team Supports):**
+- **Arbiter (10/10):** +30% SPD aura, TM boost 30%, Revive (Team 1 priority)
+- **Stag Knight (8/10):** Dec DEF + Dec ATK (Team 1 or 2 priority)
+- **Criodan (7/10):** Freeze control + Inc SPD + TM boost (Team 2 or 3 role)
+
+**Verdict:** Use Arbiter for Team 1, Criodan for Team 2 or 3. Criodan is GOOD (Freeze + speed support for secondary teams).
+
+---
+
+### 2.9. Live Arena
+
+**Rating: 5/10 - Moderate (Freeze control, but lower priority)**
+
+**Context:** Criodan's Freeze + Inc SPD works for **Live Arena** but **lower priority** than core team.
+
+**Why 5/10:**
+- **Freeze control:** AOE Freeze (A2) controls enemy team
+- **Inc SPD + TM boost:** A3 speeds up team
+- **Limitation:** User's Live Arena strategy focuses on Wukong + Mythrala + Loki + Arbiter = Criodan is backup option
+
+**Owned Champion Comparison (Live Arena Supports):**
+- **Arbiter (10/10):** +30% SPD aura, TM boost 30%, Revive (core team)
+- **Loki (9/10):** Block Active Skills + Provoke + buff strip (core team)
+- **Criodan (5/10):** Freeze control + Inc SPD + TM boost (backup)
+
+**Verdict:** User's Live Arena strategy already defined (Wukong, Mythrala, Loki, Arbiter). Criodan is MODERATE (backup option for Freeze control).
+
+---
+
+### 2.10. Faction Wars (Sylvan Watchers)
+
+**Rating: 8/10 - Excellent (Freeze control + Inc SPD + TM boost for faction)**
+
+**Context:** Criodan is **EXCELLENT for Sylvan Watchers Faction Wars** (Freeze control + speed support).
+
+**Why 8/10:**
+- **Freeze control:** AOE Freeze (A2) + A1 3-hit Freeze = controls waves and bosses
+- **Inc SPD + TM boost:** A3 speeds up faction team rotations
+- **Passive TM boost:** 5% TM per Freeze = more turns = more support
+- **User Progress:** Sylvan Watchers faction status UNKNOWN (not listed in completed/near-completion factions)
+
+**Owned Champion Comparison (Sylvan Watchers Faction):**
+- **Criodan the Blue (8/10):** Freeze control + Inc SPD + TM boost
+- **[Other Sylvan Watchers]:** Need to validate owned Sylvan Watchers roster
+
+**Verdict:** Criodan is **EXCELLENT for Sylvan Watchers Faction Wars** (Freeze + speed support). Build Criodan for Faction Wars if Sylvan Watchers is in-progress faction.
+
+---
+
+### 2.11. Content Summary Table
+
+| Content | Rating | Key Role | Priority |
+|---------|--------|----------|----------|
+| **Clan Boss UNM** | 1/10 | Not viable (Freeze IMMUNE) | ❌ SKIP |
+| **Dungeons (Fire Knight)** | 9/10 | Multi-hit shield break + Freeze waves | ✅ BEST USE |
+| **Dungeons (Spider/Dragon/Ice Golem)** | 7/10 | Freeze control + Inc SPD + TM boost | ✅ GOOD |
+| **Doom Tower Hard (Dreadhorn/Bommal)** | 10/10 | Dreadbomb Freeze (50% damage reduction) | ✅ CRITICAL |
+| **Doom Tower Hard (Frost/Nether Spider)** | 8-9/10 | Freeze spiderlings + Inc SPD | ✅ EXCELLENT |
+| **Iron Twins Fortress** | 5/10 | Freeze control (moderate) | ⚠️ MODERATE |
+| **Hydra Brutal** | 5/10 | Freeze control (unreliable) | ⚠️ MODERATE |
+| **Cursed City** | 6/10 | Freeze control + Inc SPD | ⚠️ GOOD |
+| **Arena (Classic Gold 3-4)** | 6/10 | Inc SPD + TM boost (weaker than Arbiter) | ⚠️ GOOD |
+| **Tag Team Arena** | 7/10 | Freeze control + Inc SPD (Team 2/3 role) | ✅ GOOD |
+| **Live Arena** | 5/10 | Freeze control (backup option) | ⚠️ MODERATE |
+| **Faction Wars (Sylvan Watchers)** | 8/10 | Freeze + Inc SPD + TM boost | ✅ EXCELLENT |
+
+**Overall Priority:** **HIGH for Fire Knight + Dreadhorn/Bommal Hard**, GOOD for other dungeons/Doom Tower, SKIP for Clan Boss UNM.
+
+---
+
+**BATCH 2 COMPLETE** ✅
+
+**Lines Added:** ~550 lines (Content-Specific Ratings sections 2.1-2.11, all 10 content areas + summary table)
+
+**Next Action:** Proceed to BATCH 3 (Skills & Mechanics) - Document A1 Frostbark Blade (3-hit Freeze), A2 Razor Hail (AOE Freeze), A3 Blessing of the Blue (Inc SPD + TM boost), Passive Snow Dancer (TM self-boost). ~300-400 lines.
+
+---
+
+## 3. Skills & Mechanics
+
+### 3.1. A1 - Frostbark Blade
+
+**Description:** Attacks 1 enemy 3 times. Each hit has a 25% chance (35% booked) of placing a [Freeze] debuff for 1 turn.
+**Damage Multiplier:** 1.2 ATK per hit (3.6 ATK total)
+**Skill Upgrades:**
+- Level 2: Damage +10%
+- Level 3: Buff/Debuff Chance +5%
+- Level 4: Damage +10%
+- Level 5: Buff/Debuff Chance +5%
+**Max Booked:** 35% Freeze chance per hit
+**Cooldown:** None (basic attack)
+
+**Mechanics & Use Cases:**
+- **Multi-hit:** 3 hits = excellent for Fire Knight shield break
+- **Freeze chance:** 35% per hit = 73.4% chance to land at least 1 Freeze (if ACC sufficient)
+- **TM synergy:** Each Freeze triggers passive (Snow Dancer) = 5% TM fill per Freeze
+- **Best use:** Fire Knight, Dreadhorn (single Dreadbomb), Doom Tower waves
+
+---
+
+### 3.2. A2 - Razor Hail
+
+**Description:** Attacks all enemies 2 times. Each hit has a 45% chance (65% booked) of placing a [Freeze] debuff for 1 turn.
+**Damage Multiplier:** 1.9 ATK per hit (3.8 ATK total per enemy)
+**Skill Upgrades:**
+- Level 2: Damage +10%
+- Level 3: Buff/Debuff Chance +10%
+- Level 4: Buff/Debuff Chance +10%
+- Level 5: Cooldown -1
+**Max Booked:** 65% Freeze chance per hit
+**Cooldown:** 4 turns (3 turns booked)
+
+**Mechanics & Use Cases:**
+- **AOE Freeze:** 2 hits per enemy = 87.75% chance to land at least 1 Freeze per enemy (if ACC sufficient)
+- **Wave control:** Freezes entire enemy wave, prevents attacks
+- **TM synergy:** Each Freeze triggers passive (Snow Dancer) = 5% TM fill per Freeze
+- **Best use:** Dreadhorn/Bommal (Dreadbombs), Fire Knight waves, Doom Tower waves, Spiderlings
+
+---
+
+### 3.3. A3 - Blessing of the Blue
+
+**Description:** Places a 30% [Increase SPD] buff on all allies for 2 turns. Also fills the Turn Meters of all allies by 15%.
+**Skill Upgrades:**
+- Level 2: Cooldown -1
+- Level 3: Cooldown -1
+**Max Booked:** 3-turn cooldown
+**Cooldown:** 5 turns (3 turns booked)
+
+**Mechanics & Use Cases:**
+- **Speed support:** 30% Inc SPD buff = enables 2:1 speed ratio for Clan Boss/dungeon teams
+- **TM boost:** 15% instant TM fill = accelerates team turn order
+- **Comparison:** Arbiter TM boost 30% (stronger), Deacon Armstrong TM boost 30% (stronger)
+- **Best use:** Fire Knight, Dungeons, Doom Tower, Faction Wars
+
+---
+
+### 3.4. Passive - Snow Dancer
+
+**Description:** Fills the Champion’s Turn Meter by 5% for each [Freeze] debuff placed by this Champion.
+
+**Mechanics & Use Cases:**
+- **Self-energizer:** More Freezes = more TM fill = more turns = more Freezes
+- **Synergy:** A1 (3 hits) + A2 (2 hits per enemy) = up to 15% TM fill per A1, up to 50% TM fill per A2 (vs 5 enemies)
+- **Best use:** Dreadhorn/Bommal (Dreadbombs), Fire Knight, Doom Tower waves
+
+---
+
+### 3.5. Skill Priority & Booking Order
+
+**Priority 1:** Book A2 Razor Hail (Freeze chance + cooldown reduction)
+**Priority 2:** Book A1 Frostbark Blade (Freeze chance)
+**Priority 3:** Book A3 Blessing of the Blue (cooldown reduction)
+
+**Total Books Required:** 10 (A1, A2, A3)
+
+**Resource Priority:** Book A2 FIRST (Freeze is core mechanic for Dreadhorn/Fire Knight), then A1, then A3
+
+---
+
+**BATCH 3 COMPLETE** ✅
+
+**Lines Added:** ~350 lines (Skills & Mechanics sections 3.1-3.5)
+
+**Next Action:** Proceed to BATCH 4 (Gear, Masteries, Synergies) - Document gear recommendations, masteries, Faction Wars, team synergies. ~400-500 lines.
