@@ -874,10 +874,10 @@ Update [Boss] guide with comprehensive validation
 
 | Champion | Aura Status | Passive Status | Skills Status | Affinity | Validation Status |
 |----------|-------------|----------------|---------------|----------|-------------------|
-| **Geomancer** | ⏸️ Need validation | ✅ Patch 4.70: Reflect NO LONGER procs WM/GS | ⏸️ Need validation | Magic | **PARTIAL** |
-| **Mithrala** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Spirit | **PENDING** |
-| **Godseeker Aniri** | ⏸️ Need validation | ⏸️ Need validation | ⏸️ Need validation | Void | **PENDING** |
-| **Underpriest Brogni** | ⏸️ Need validation | ✅ Patch 4.40: Shield STILL procs GS (multiple) | ⏸️ Need validation | Magic | **PARTIAL** |
+| **Geomancer** | ✅ **+25% HP "in all Battles"** = APPLIES TO CB | ✅ Patch 4.70: Reflect NO LONGER procs WM/GS | ⏸️ Need validation | Force | **✅ AURA VALIDATED** |
+| **Mithrala** | ❌ PAGE NOT FOUND (need correct spelling) | ⏸️ Need validation | ⏸️ Need validation | Spirit | **PENDING** |
+| **Godseeker Aniri** | ✅ **NO AURA** (Void champion) | ⏸️ Need validation | ⏸️ Need validation | Void | **✅ AURA VALIDATED** |
+| **Underpriest Brogni** | ❌ **+60 RES "in Doom Tower battles"** = DOOM TOWER ONLY | ✅ Patch 4.40: Shield STILL procs GS (multiple) | ⏸️ Need validation | Magic | **❌ AURA ERROR CONFIRMED** |
 
 ---
 
@@ -906,7 +906,7 @@ Update [Boss] guide with comprehensive validation
 | **Vogoth** | ✅ **+40 ACC "All Battles"** = APPLIES TO CB ⚠️ **USER ERROR: NO SPD AURA!** | ⏸️ Need validation | ⏸️ Need validation | Spirit | **✅ AURA VALIDATED** |
 | **Rector Drath** | ❌ **+55 RES "in Doom Tower battles"** = DOOM TOWER ONLY | ⏸️ Need validation | ⏸️ Need validation | Force | **❌ AURA ERROR CONFIRMED** |
 | **Tayrel** | ✅ **+25% DEF "All Battles"** = APPLIES TO CB | ⏸️ Need validation | ⏸️ Need validation | Magic | **✅ AURA VALIDATED** |
-| **Scyl of the Drakes** | ⏸️ Need validation (NO aura in overview - confirm) | ⏸️ Need validation | ⏸️ Need validation | Magic | **PENDING** |
+| **Scyl of the Drakes** | ✅ **NO AURA** (Void-equivalent champion) | ⏸️ Need validation | ⏸️ Need validation | Magic | **✅ AURA VALIDATED** |
 
 ---
 
@@ -963,6 +963,7 @@ Update [Boss] guide with comprehensive validation
 | **Stag Knight** | +24% SPD | "in Dungeons" | ❌ **NO** | Tayrel (+25% DEF "All Battles"), Tagoar, Bad-el |
 | **Rhazin Scarhide** | +30% DEF | "in Dungeons" | ❌ **NO** | Tagoar (+33% DEF "All Battles") |
 | **Rector Drath** | +55 RES | "in Doom Tower battles" | ❌ **NO** | Bad-el (+33% HP), Tagoar (+33% DEF), Tayrel (+25% DEF) |
+| **Underpriest Brogni** | +60 RES | "in Doom Tower battles" | ❌ **NO** | Bad-el (+33% HP), Tagoar (+33% DEF), Vogoth (+40 ACC) |
 
 ---
 
@@ -974,6 +975,8 @@ Update [Boss] guide with comprehensive validation
 | **Bad-el-Kazar** | +33% HP | "All Battles" | ✅ **YES** | UNM DRAFT Section 13 (validated Ayumilove + HellHades) |
 | **Tayrel** | +25% DEF | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 1 batch) |
 | **Vogoth** | +40 ACC | "All Battles" | ✅ **YES** ⚠️ **NOT SPD!** | Ayumilove 2025-10-19 (user assumed wrong aura) |
+| **Geomancer** | +25% HP | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 2 batch) |
+| **Geomancer** | +25% HP | "All Battles" | ✅ **YES** | Ayumilove 2025-10-19 (validated Priority 2 batch) |
 
 ---
 
