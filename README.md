@@ -254,31 +254,7 @@ Run `make help` to see all available commands.
 
 ## Folder Structure & VS Code Config
 
-Raid_Tools/
-├── Champion Review and Comparison/
-│   ├── Champions/
-│   ├── prompt/
-│   ├── Tools/
-│   ├── Summary/
-│   ├── templates/
-│   └── README.md
-├── ChampionAnalysisTool/
-│   ├── championAnalysis.py
-│   ├── cooldown_analysis/
-│   └── README.md
-├── ChampionSummary/
-│   ├── generateChampionSummaries.py
-│   ├── readme.md
-│   └── Summary/
-│       └── [ChampionName].md
-├── Tests/
-│   ├── testChampionReviewAndComparison.py
-│   └── test_script_paths.py
-├── .vscode/
-│   ├── settings.json   # Python interpreter, linting, formatting
-│   ├── tasks.json      # VS Code tasks for all core operations
-│   └── extensions.json # Recommended extensions
-└── README.md (this file)
+WIP
 
 **VS Code Workspace Setup:**
 - The `.vscode` folder ensures all users have the same Python interpreter, linting, formatting, and task setup.
@@ -305,14 +281,8 @@ Open the workspace in VS Code and install all recommended extensions when prompt
 
 ### 1. Champion Management & Review Tools
 
-- **Purpose:** Intake new champions, generate prompts, maintain champion logs, validate data, and perform bulk import and batch prompt generation.
+- **Purpose:** Intake champions by building a dictionary entry in json of it's stats, skills, etc. USes those and boss information to create team recommendations for content like bosses, clan boss, and other areas of the game. 
 
-- **Key Scripts:**
-  - `Tools/import_owned_champions.py` — Authoritative CLI for champion management, bulk import, and batch prompt generation from the owned list.
-  - `ChampionIntake/Champ_Intake.py` — Add a new champion, generate prompt, and create a placeholder JSON (single champion intake).
-  - `Tools/Setup_Environment.py` — Install required Python packages and check VS Code CLI.
-  - `Tools/cleanup_duplicate_champions.py` — Merge and clean up duplicate champion files.
-  - `ChampionIntake/Comparisons/Champ_Comparison_Track_owned.py` — Compare owned champions.
 
 - **Other Files:**
   - `ChampionIntake/templates/logTemplate.json` — Template for new champion JSON files.

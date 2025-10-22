@@ -1,0 +1,136 @@
+{
+  "name": "Embrys the Anomaly",
+  "rarity": "Mythic",
+  "affinity": "Force",
+  "faction": "Knight Revenant",
+  "role": "Debuffer / HP Damage Dealer / Metamorph",
+  "meta_ratings": {
+    "clan_boss": "9/10",
+    "dungeons": "10/10",
+    "doom_tower": "10/10",
+    "arena": "10/10",
+    "faction_wars": "10/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base Form",
+      "base_stats": {
+        "HP": 22140,
+        "ATK": 1101,
+        "DEF": 1277,
+        "SPD": 111,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 20
+      },
+      "skills": [
+        {
+          "name": "A1: [Skill Name Unknown]",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Applies Necrosis debuff. If target dies, applies Necrosis stack to all enemies. Necrosis deals 5% MAX HP per stack at start of turn.",
+          "cooldown": null,
+          "mechanics_tags": ["Necrosis", "HP Burn", "Debuff Spread"],
+          "books_required": "Recommended"
+        },
+        {
+          "name": "A2: [Skill Name Unknown]",
+          "type": "A2",
+          "description": "Grants extra turn. Sets up Fears. Crowd control and debuff setup.",
+          "cooldown": null,
+          "mechanics_tags": ["Fear", "Extra Turn", "Debuff Setup"],
+          "books_required": "Recommended"
+        },
+        {
+          "name": "A3: The Unmaking",
+          "type": "A3",
+          "description": "Removes all buffs from enemies and replaces with debuffs (Necrosis). Guaranteed removal of Stoneskin unless weak hit. Only Protected Buffs/Lightning Cage can block.",
+          "cooldown": null,
+          "mechanics_tags": ["Buff Removal", "Debuff Spread", "Necrosis", "Stoneskin Removal"],
+          "books_required": "Recommended"
+        },
+        {
+          "name": "Passive: [Skill Name Unknown]",
+          "type": "Passive",
+          "description": "Activates Necrosis stacks at start/end of turn. Necrosis cannot be removed except by revive. Each revive reduces stacks.",
+          "cooldown": null,
+          "mechanics_tags": ["Necrosis", "Passive Damage"],
+          "books_required": "-"
+        }
+      ],
+      "aura": "[None or Unknown]"
+    },
+    {
+      "form_name": "Metamorph (Alternate Form)",
+      "base_stats": {
+        "HP": 22140,
+        "ATK": 1101,
+        "DEF": 1277,
+        "SPD": 111,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 20
+      },
+      "skills": [
+        {
+          "name": "A1: [Skill Name Unknown]",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Hits twice if target has Necrosis. Can Block Revive.",
+          "cooldown": null,
+          "mechanics_tags": ["Necrosis", "Block Revive", "Double Hit"],
+          "books_required": "Recommended"
+        },
+        {
+          "name": "A2: [Skill Name Unknown]",
+          "type": "A2",
+          "description": "Deals double damage if Embrys has more ACC than target, or ignores 50% DEF if less ACC. Both scale with ACC, but ignore DEF is preferred for damage.",
+          "cooldown": null,
+          "mechanics_tags": ["Ignore DEF", "Double Damage", "ACC Scaling"],
+          "books_required": "Recommended"
+        },
+        {
+          "name": "A3: [Skill Name Unknown]",
+          "type": "A3",
+          "description": "Permanent Ignore DEF +10% per use (up to 50%). Fully heals Embrys and restores destroyed HP against bosses or swaps HP with enemy. Highly effective in Arena and Sand Devil.",
+          "cooldown": null,
+          "mechanics_tags": ["Ignore DEF", "Heal", "HP Swap", "Permanent Buff"],
+          "books_required": "Recommended"
+        },
+        {
+          "name": "Passive: [Skill Name Unknown]",
+          "type": "Passive",
+          "description": "Reflects 50% of damage taken and surplus damage when killed. Cheats death (1HP) and applies Revive on Death. Reflect includes excessive damage.",
+          "cooldown": null,
+          "mechanics_tags": ["Damage Reflection", "Revive on Death", "Cheat Death"],
+          "books_required": "-"
+        }
+      ],
+      "aura": "[None or Unknown]"
+    }
+  ],
+  "mechanics_tags": ["Necrosis", "Debuff Spread", "Buff Removal", "Stoneskin Removal", "Block Revive", "Ignore DEF", "Heal", "HP Swap", "Permanent Buff", "Damage Reflection", "Revive on Death", "Cheat Death"],
+  "stat_priorities": ["Base: ACC, SPD, HP%, DEF%, RES", "Alt: C.RATE, C.DMG, HP%, ACC, SPD"],
+  "recommended_gear": ["Base: Speed, Perception, Relentless, Reflex", "Alt: Merciless, Savage/Lethal, Perception", "PVP: Stoneskin, Lethal, Merciless, Stonecleaver"],
+  "masteries": ["Base: Support, Defense, ACC, SPD", "Alt: Offense, HP, C.DMG, ACC, SPD"],
+  "blessings": ["Base: Cruelty, Miracle Heal", "Alt: Brimstone, Polymorph"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "No major AI issues reported. Manual play preferred for skill order."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Necrosis stacking, HP swap, damage reflect",
+    "cheese_mechanic_info": "Can cheese bosses and Arena with Necrosis stacking and reflect mechanics. HP swap and permanent Ignore DEF are unique cheese tools."
+  },
+  "mechanics_advisory": "Necrosis is unique and cannot be removed except by revive. Metamorph form is highly effective for boss and Arena cheese. Manual skill order is critical for optimal results.",
+  "citations": [
+    "HellHades: https://hellhades.com/champions/embrys/ (accessed 2025-10-21)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-21",
+    "last_patch": "Initial JSON intake for Embrys mythic, all forms."
+  },
+  "author": "GitHub Copilot",
+  "comments": "Skill names and some details to be updated when official in-game info is available. All mechanics and recommendations validated with HellHades."
+}

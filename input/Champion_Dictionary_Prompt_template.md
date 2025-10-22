@@ -1,36 +1,28 @@
-# RAID Champion Dictionary & Mechanics Index - Sample Prompt File
+
+# RAID Champion Dictionary & Mechanics Index - Prompt & Template Reference
 #
 # Project Instructions & Champion Entry Template
 #
-# This file is the anchor and source of truth for all champion data, mechanics, and synergy reviews. Each champion entry uses the template below. **Copy and reuse this template for every champion.**
+# This file is the anchor for all champion data, mechanics, and synergy reviews. **All champion entries must use the canonical JSON template file as the single source of truth.**
 #
-## Champion Entry Template (Reusable)
+## Champion Entry Template (Reference Only)
 ---
-#### Champion Name
-- **Rarity:**
-- **Affinity:**
-- **Faction:**
-- **Base Stats (Lvl 60, 6-star):**
-  - HP:
+**IMPORTANT:**
+- All champion entries must use the canonical template in `input/Champion_Dictionary_Template.json`.
+- Do NOT copy or maintain a separate template structure here. The JSON template file is the only version to reference and use for all champion entries.
+- If the template changes, update only `Champion_Dictionary_Template.json` and notify in chat.
 
-  # RAID Champion Dictionary & Mechanics Index Prompt Template
+**Output Directory:**
+- All champion entries should be saved in the `Champion Dictionary` directory.
 
-  ## Instructions
+**Data Format:**
+- Champion entries are stored in JSON for lookup and automation.
 
-  -This template is the canonical source for all champion entries in the RAID Champion Dictionary & Mechanics Index.
+**Standardized Mechanics & Tagging:**
+- All mechanics, buffs, debuffs, and status effects must use the standardized tags listed in the "Standardized Mechanics Tag List" section below.
+- Only use tags from this list for all champion entries. If a new mechanic is needed, add it to the list first.
 
-
-  **Output Directory:**
-  - All champion entries should be saved in the `Champion Dictionary` directory for now.
-
-  **Data Format:**
-  - Champion entries will be stored in JSON for easy lookup and automation.
-
-  **Standardized Mechanics & Tagging:**
-  - All mechanics, buffs, debuffs, and status effects must use the standardized tags listed in the "Standardized Mechanics Tag List" section below.
-  - Only use tags from this list for all champion entries. If a new mechanic is needed, add it to the list first.
-
-  ---
+---
 
 
   ## Standardized Mechanics Tag List
@@ -326,14 +318,11 @@
   - Add new mechanics to the tagging list as needed (every buff, debuff, status, etc. must be indexible)
   - For quick updates, edit this template directly and notify in chat
   - When creating json entries:
-    1. Using the owned champion list, find the next missing champion, alphabetically, vs existing entries in 'Champion Dictionary'.
-    2. List the champion (optionally take a champion name as input). Optionally take a screenshot for the champion stats when confirming or intaking a champion
-    3. intake the stats from a screenshot and pull in skills an other parts of the dictionary. Confirm all in chat
-    4. Generate the champion json. List the next champion and then confirm that the  json is correct. 
-    5. If the json needs edits, I'll make them directly or request them in chat.
-    6. If yes, the next champions stats will be added to chat to start again. Go to 3.
-    - This should be a two chat, two prompt setup per champion. 
-    - OR take a champion and stats screenshot as entry, then start at 3
+    1. Intake a champion name and a screenshot of their base stats
+    2. Identify and pull in their skills and other character info needed to complete the template.
+    3. Generate the json file with validated info. 
+    4. Confirm, then prep to loop back to 1.
+    - this should be a one chat/prompt cycle. Provide champion name and states, create json and confirm, repeat.
 
   ---
 
