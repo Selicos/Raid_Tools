@@ -12,7 +12,7 @@
 ## Table of Contents
 
 1. [Quick Start Summary](#quick-start-summary)
-2. [Glossary](#glossary)
+2. [Best Practices](#best-practices)
 3. [Project Purpose and Scope](#project-purpose-and-scope)
 4. [User Content Priorities and Focus](#user-content-priorities-and-focus)
 5. [Authoritative Data Sources](#authoritative-data-sources)
@@ -27,8 +27,9 @@
 14. [Continuous Improvement Policy](#continuous-improvement-policy)
 15. [Review Questions and Feedback](#review-questions-and-feedback)
 16. [Housekeeping Shift-Left and Proactive Maintenance](#housekeeping-shift-left-and-proactive-maintenance)
-17. [Change Log and Version History](#change-log-and-version-history)
+17. [Glossary](#glossary)
 18. [Troubleshooting and Maintenance](#troubleshooting-and-maintenance)
+19. [Change Log and Version History](#change-log-and-version-history)
 
 <!--
 The rest of the content should be copied from the current copilot-instructions.md, but reordered to match the new ToC. Each section should be moved as a whole, with its heading and content, and anchors/links updated as needed.
@@ -454,28 +455,15 @@ Establish best practices for keeping the project clean, up-to-date, and continuo
 - Document and share new automation scripts or tools with the team.
 - Encourage a culture of continuous improvement and early error detection (shift-left mindset).
 
-## Change Log and Version History
+---
 
-### Purpose
-Maintain a clear, chronological record of all major changes, updates, and version history for the project instructions, templates, and workflows. This ensures transparency, traceability, and supports collaborative development.
+## Glossary
 
-### Change Log Format
-- Date (YYYY-MM-DD)
-- Author
-- Description of change (what was added, removed, or updated)
-- Affected sections/files
+**Cheese:** Abusing a mechanic to glitch a win (e.g., unkillable champ, infinite healing, etc.). Review online for that specific mechanic, champion, boss, etc.
 
-### Example Change Log
-| Date       | Author           | Description                                      | Sections/Files                |
-|------------|------------------|--------------------------------------------------|-------------------------------|
-| 2025-10-21 | GitHub Copilot   | Initial draft complete through Section 12         | All sections                  |
-| 2025-10-21 | Selicos          | Updated champion template to JSON, unified refs   | Champion_Dictionary_Template  |
-| 2025-10-21 | GitHub Copilot   | Added Embrys mythic JSON intake example           | Embrys_the_Anomaly.json       |
+**Meta:** Known good, community-rated or built setups that leverage established strategies (e.g., speed tunes).
 
-### Versioning Policy
-- Increment version number or add date-stamped entry for each major update.
-- Archive previous versions as needed for rollback and comparison.
-- Summarize key changes at the top of the file for quick reference.
+**Hybrid:** Uses multiple damage sources or mechanics (e.g., HP burn and poison, % of health, or max buff/debuff setups).
 
 ---
 
@@ -511,13 +499,30 @@ Maintain a clear, chronological record of all major changes, updates, and versio
 | Copilot ignoring project-specific file | 1. File not in `.github` folder<br>2. File name doesn't end with `_copilot-instructions.md` or `-instructions.md`<br>3. File contains syntax errors | - Verify file location is `.github/[PROJECT]_copilot-instructions.md`<br>- Check file name follows naming convention<br>- Validate markdown syntax (no broken links, proper formatting) |
 | Instructions too long | 1. Too much duplicated content from base instructions<br>2. Too many examples or verbose explanations<br>3. Including implementation details instead of guidelines | - Remove duplication; reference base instructions instead<br>- Summarize examples; link to full examples in project files<br>- Focus on "what" and "why", not "how" (let Copilot figure out "how") |
 
+
+
 ---
+## Change Log and Version History
 
-## Glossary
+### Purpose
+Maintain a clear, chronological record of all major changes, updates, and version history for the project instructions, templates, and workflows. This ensures transparency, traceability, and supports collaborative development.
 
-**Cheese:** Abusing a mechanic to glitch a win (e.g., unkillable champ, infinite healing, etc.). Review online for that specific mechanic, champion, boss, etc.
+### Change Log Format
+- Date (YYYY-MM-DD)
+- Author
+- Description of change (what was added, removed, or updated)
+- Affected sections/files
 
-**Meta:** Known good, community-rated or built setups that leverage established strategies (e.g., speed tunes).
+### Example Change Log
+| Date       | Author           | Description                                      | Sections/Files                |
+|------------|------------------|--------------------------------------------------|-------------------------------|
+| 2025-10-21 | GitHub Copilot   | Initial draft complete through Section 12         | All sections                  |
+| 2025-10-21 | Selicos          | Updated champion template to JSON, unified refs   | Champion_Dictionary_Template  |
+| 2025-10-21 | GitHub Copilot   | Added Embrys mythic JSON intake example           | Embrys_the_Anomaly.json       |
 
-**Hybrid:** Uses multiple damage sources or mechanics (e.g., HP burn and poison, % of health, or max buff/debuff setups).
+### Versioning Policy
+- Increment version number or add date-stamped entry for each major update.
+- Archive previous versions as needed for rollback and comparison.
+- Summarize key changes at the top of the file for quick reference.
 
+---
