@@ -1,5 +1,35 @@
 # Quick Start Summary
 
+## Directory Structure and Drop Points
+
+All major entry types and templates are stored in standardized directories for automation and onboarding. Use these exact paths for all intake, output, and reference operations:
+
+| Entry Type                | Directory Path (relative to repo root)                | Format/Notes                                  |
+|--------------------------|------------------------------------------------------|------------------------------------------------|
+| Champion Dictionary      | input/Champion_Dictionary/                           | JSON, one file per champion                   |
+| Mechanic Dictionary      | input/Mechanic_Dictionary/                           | JSON, one file per mechanic (input, WIP)      |
+| Templates                | input/Templates/                                     | Markdown/JSON templates for all entry types    |
+| Prompts                  | input/Prompts/                                       | Markdown prompt files for automation           |
+| Boss Guides              | Output/Boss_Guides/                                  | Markdown, one file per boss/guide              |
+| Build Evaluations        | Output/Build_Evaluations/                            | Markdown/JSON, one file per build (output)     |
+| Mechanic Dictionary (Out)| Output/Mechanic_Dictionary/                          | JSON, one file per mechanic (output, WIP)      |
+
+**Notes:**
+- All directory names use underscores for consistency and automation.
+- All paths are relative to the root of the repository (`c:\GIT\Raid_Tools`).
+- Do not create or use root-level directories for entries; always use the `input/` or `Output/` folders as shown.
+- Templates and prompts are always in `input/`.
+- Output files (guides, evaluations) are always in `Output/`.
+
+### Example Usage
+
+- To add a new champion entry: place the JSON file in `input/Champion_Dictionary/`.
+- To add a new boss guide: place the Markdown file in `Output/Boss_Guides/`.
+- To update a mechanic: use `input/Mechanic_Dictionary/` for intake, `Output/Mechanic_Dictionary/` for output.
+- To find templates: look in `input/Templates/`.
+
+This structure is referenced in both the instructions and the README for onboarding and automation.
+
 | Task | Where to Start |
 |------|----------------|
 | Add a champion | input/Champion_Dictionary_Prompt_template.md |
@@ -139,6 +169,9 @@ The rest of the content should be copied from the current copilot-instructions.m
 
 ### Purpose
 Provide canonical templates and example entries for all knowledge base types (champion, boss, mechanic, team, build) to ensure consistency, automation, and ease of use.
+
+**Storage Location:**
+All champion dictionary entries are stored as individual JSON files in the `Champion Dictionary` directory at the root of the repository. Each file is named after the champion (e.g., `Abbess.json`).
 
 ### Template Documentation
 - For each entry type, document or specify the canonical template (JSON or Markdown) in the instructions.
