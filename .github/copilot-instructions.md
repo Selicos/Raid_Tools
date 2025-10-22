@@ -1,51 +1,40 @@
-## 16. Troubleshooting & Maintenance
+# Quick Start Summary
 
-### Common Issues & Solutions
+| Task | Where to Start |
+|------|----------------|
+| Add a champion | input/Champion_Dictionary_Prompt_template.md |
+| Add a boss guide | input/Boss_Guide_Template.md |
+| Add a mechanic | input/Champion_Dictionary_Prompt_template.md (mechanics section) |
+| Add a team | See team template in instructions, Section 6 |
+| Validate or update | See Validation & Documentation Standards, Section 11 |
+| Review/feedback | Use chat and update prompt files as needed |
 
-**Copilot not following instructions:**
-- Ensure instructions are specific and actionable, not vague or ambiguous.
-- Check for conflicting or duplicated guidance between base and project files.
-- If instructions are too long, prioritize the most important at the top and remove unnecessary duplication.
+## Table of Contents
 
-**Copilot ignoring project-specific file:**
-- Confirm the file is in the `.github` folder and named with `_copilot-instructions.md` or `-instructions.md`.
-- Validate markdown syntax (no broken links, proper formatting).
+1. [Quick Start Summary](#quick-start-summary)
+2. [Glossary](#glossary)
+3. [Project Purpose and Scope](#project-purpose-and-scope)
+4. [User Content Priorities and Focus](#user-content-priorities-and-focus)
+5. [Authoritative Data Sources](#authoritative-data-sources)
+6. [Templates and Examples](#templates-and-examples)
+7. [Champion Dictionary Entry Workflow](#champion-dictionary-entry-workflow)
+8. [Boss Guide Entry Workflow](#boss-guide-entry-workflow)
+9. [Mechanic Entry Workflow](#mechanic-entry-workflow)
+10. [Team Creation and Analysis Workflow](#team-creation-and-analysis-workflow)
+11. [Build Evaluation and Optimization](#build-evaluation-and-optimization)
+12. [Validation and Documentation Standards](#validation-and-documentation-standards)
+13. [Guide Update and Versioning Policy](#guide-update-and-versioning-policy)
+14. [Continuous Improvement Policy](#continuous-improvement-policy)
+15. [Review Questions and Feedback](#review-questions-and-feedback)
+16. [Housekeeping Shift-Left and Proactive Maintenance](#housekeeping-shift-left-and-proactive-maintenance)
+17. [Change Log and Version History](#change-log-and-version-history)
+18. [Troubleshooting and Maintenance](#troubleshooting-and-maintenance)
 
-**Instructions too long or verbose:**
-- Remove duplicated content from base instructions; reference instead.
-- Summarize examples and link to full examples elsewhere if needed.
-- Focus on "what" and "why"; let Copilot determine "how" unless implementation is critical.
+<!--
+The rest of the content should be copied from the current copilot-instructions.md, but reordered to match the new ToC. Each section should be moved as a whole, with its heading and content, and anchors/links updated as needed.
+-->
 
-### Maintenance Best Practices
-- Review and update project instructions regularly as requirements change.
-- Use the changelog to document all major edits and updates.
-- Validate Table of Contents links and section anchors after major changes.
-- Test Copilot behavior after significant instruction updates and refine as needed.
-
----
-# RAID Shadow Legends Project Instructions (DRAFT v0.7)
-
-> This file is a DRAFT for the unified project instructions, workflows, and templates for champion, boss, mechanic, and team dictionary/guide generation. All edits and section reviews will be staged here before final consolidation and ToC/anchor update.
-
-## Table of Contents (DRAFT)
-
-1. [Project Purpose & Scope](#1-project-purpose--scope)
-2. [Continuous Improvement Policy](#2-continuous-improvement-policy)
-3. [User Content Priorities & Focus](#3-user-content-priorities--focus)
-4. [Authoritative Data Sources](#4-authoritative-data-sources)
-5. [Champion Dictionary Entry Workflow](#5-champion-dictionary-entry-workflow)
-6. [Boss Guide Entry Workflow](#6-boss-guide-entry-workflow)
-7. [Mechanic Entry Workflow](#7-mechanic-entry-workflow)
-8. [Team Creation & Analysis Workflow](#8-team-creation--analysis-workflow)
-9. [Build Evaluation & Optimization](#9-build-evaluation--optimization)
-10. [Guide Update & Versioning Policy](#10-guide-update--versioning-policy)
-11. [Validation & Documentation Standards](#11-validation--documentation-standards)
-12. [Templates & Examples](#12-templates--examples)
-13. [Review Questions & Feedback](#13-review-questions--feedback)
-14. [Change Log & Version History](#14-change-log--version-history)
-
-
-## 1. Project Purpose & Scope
+## Project Purpose and Scope
 - The goal of this project is to create a comprehensive, automation-ready dictionary of RAID Shadow Legends content, focused on the user's actual owned champions, teams, and mechanics.
 - The project supports:
 	- Creating JSON dictionary entries for every owned champion, using the canonical process in `Champion_Dictionary_Prompt_template.md`.
@@ -59,42 +48,28 @@
 	- Focusing on maximizing damage (Clan Boss), reliability/clear speed (dungeons/bosses), and Faction Wars progression.
 	- Recommending new speed tunes and strategies as the meta evolves, and supporting continuous learning as new content and mechanics are released.
 
----
+# Best Practices 
 
-## 2. Continuous Improvement Policy
+### ✅ DO
 
-**Continuous Improvement Policy**
+- **Document workflows step-by-step** - Copilot can follow processes
+- **Include examples** - show Copilot what "good" looks like
+- **Update regularly** - as project evolves, update instructions
+- **Reference external sources** - link to docs, APIs, wikis
+- **Define quality gates** - give Copilot clear success criteria
 
-Continuous improvement is an active, ongoing process during all project work. The goal is to rapidly identify, test, and implement better ways of working—improving accuracy, automation, and user value as the project evolves. This section defines how to practice continuous improvement in real time:
+### ❌ DON'T
 
-- **Iterative Workflow Refinement:**
-	- Treat every workflow (champion intake, boss guide, team building, etc.) as a living process. After each use, review what worked, what was slow, and what caused errors or confusion.
-	- Propose and test small changes immediately—update templates, checklists, or scripts as soon as a better approach is found.
-
-- **Rapid Feedback Loops:**
-	- After each major entry, guide, or team is created, review the process and output with the user or team. Capture feedback on clarity, speed, and accuracy.
-	- Use feedback to adjust instructions, templates, or validation steps before the next cycle.
-
-- **Learning from Errors:**
-	- When mistakes, omissions, or inefficiencies are found (e.g., missed mechanics, validation errors, unclear instructions), document the issue and update the relevant workflow or template immediately.
-	- Add troubleshooting notes or new review questions to prevent recurrence.
-
-- **Process Adaptation:**
-	- As new content, mechanics, or user needs arise, adapt workflows in real time—do not wait for a formal review cycle.
-	- If a new type of entry or validation is needed, create a draft template and test it on the next relevant task.
-
-- **Documentation of Improvements:**
-	- Summarize all significant workflow or template changes in the change log (see Section 12).
-	- Note the reason for each change (e.g., "Added new validation step after missed mechanic in Hydra guide").
-
-- **Continuous Skill Development:**
-	- Stay current with community best practices, new tools, and meta strategies. Integrate new knowledge into project workflows as soon as it is validated.
-
-This approach ensures the project remains efficient, accurate, and responsive to both user needs and game evolution. Continuous improvement is not a separate phase—it is embedded in every step of project work.
+- **Don't duplicate base instructions** - reference, don't repeat
+- **Don't use vague language** - be specific and actionable
+- **Don't forget to update** - stale instructions confuse Copilot
+- **Don't over-constrain** - leave room for Copilot to be creative
+- **Don't ignore edge cases** - document unusual scenarios
+- **Don't skip the questionnaire** - comprehensive initialization prevents issues
 
 ---
 
-## 3. User Content Priorities & Focus
+## User Content Priorities and Focus
 
 ### Content Priority Order (Always Follow)
 
@@ -145,7 +120,7 @@ This approach ensures the project remains efficient, accurate, and responsive to
 - Speed tuning: Often loses speed battle in higher Arena tiers
 - Cheese strategies: Prioritize SAFE cheese builds for bosses and Clan Boss
 
-## 4. Authoritative Data Sources
+## Authoritative Data Sources
 
 ### Validation Rules
 - All champion, boss, mechanic, and team data must be validated from at least two authoritative sources before entry creation or update. 
@@ -158,222 +133,15 @@ This approach ensures the project remains efficient, accurate, and responsive to
 
 ### Source Documentation
 - Always cite sources in each entry and in commit messages.
-- Mark uncertainties or conflicts in a dedicated "Citations & Conflicts" section.
 
-
-## 5. Champion Dictionary Entry Workflow
-### Purpose
-Establish a validated, canonical process for creating, updating, and maintaining champion dictionary entries in the RAID Shadow Legends knowledge base. This ensures all champion data is accurate, cross-referenced, and indexable for downstream guide and team generation.
-
-### Canonical Template
-- All champion entries must use the canonical template in `input/Champion_Dictionary_Prompt_template.md` (see file for full field list and mechanics tag index; if missing, mark as WIP and stage a placeholder).
-
-
-### Entry Creation Workflow
-Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all entry creation, validation, documentation, and automation requirements. The canonical process is:
-1. **Data Gathering**: Collect and cross-validate champion data from authoritative sources (see Section 3). Document all sources.
-2. **Template Population**: Populate all required fields in the canonical template. Use mechanics tags for automation.
-3. **Validation**: Validate all data per Section 9. Note conflicts, uncertainties, and data confidence.
-4. **Entry Review & Approval**: Present for review, then add to the dictionary. Update index/search tools as needed.
-
-### Update & Maintenance Workflow
-Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
-
-### Automation & Indexing
-### Cheese/Meta Teams
-Add a dedicated section or tag for cheese/meta teams in all team and boss guide entries. Check for boss, champion, or mechanic-specific cheese teams based on owned champions. Reference these in both the main team workflow and a dedicated cheese/meta section.
-All entries must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags and field names.
-
----
-
-## 6. Boss Guide Entry Workflow
-
-### Purpose
-Define a validated, modular process for creating, updating, and maintaining boss guide entries for RAID Shadow Legends. Ensure all guides are actionable, cross-referenced, and optimized for owned champion rosters and current meta.
-
-### Canonical Template
-- All boss guides must use the canonical template in `input/Boss_Guide_Template.md` (see file for full section list; if missing, mark as WIP and stage a placeholder).
-
-
-### Guide Creation Workflow
-Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all guide creation, validation, documentation, and automation requirements. The canonical process is:
-1. **Research & Data Gathering**: Review and cross-validate boss data from authoritative sources (see Section 3). Document all sources.
-2. **Trial/Mechanic Mapping**: Map all boss trials/mechanics to the owned champion list. Build per-trial and combo tables, noting affinity safety/risk and special notes.
-3. **Team Building & Simulation**: Build and simulate 5–8 unique teams using only owned champions, maximizing trial/mechanic completion, damage, and hybrid approaches. For each team, specify all required details and run at least 3 simulations per team (see Section 9 for simulation standards).
-4. **Guide Structure & Output**: Use the canonical template and modular ToC. Populate all required sections. Add quick reference tables as needed.
-5. **Update & Validation**: After any roster change, re-run all mapping, team building, and simulation steps. Regenerate all tables and recommendations as needed. Use DRAFT-to-FINAL workflow and document all validation steps.
-
-### Update & Maintenance Workflow
-Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
-
-### Automation & Indexing
-All guides must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags, anchors, and field names.
-
----
-
-## 7. Mechanic Entry Workflow
-
-### Purpose
-Define a standardized process for documenting, updating, and maintaining mechanic entries (buffs, debuffs, passives, unique effects) in the RAID Shadow Legends knowledge base. Ensure all mechanics are indexable, cross-referenced, and usable for automation and team-building.
-
-### Canonical Template
-- All mechanic entries must use the mechanics tag index and field documentation in `input/Champion_Dictionary_Prompt_template.md` (see file for mechanics list and tag details; if missing, mark as WIP and stage a placeholder). If a standalone mechanic template is needed, create and reference it here.
-
-
-### Entry Creation Workflow
-Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all entry creation, validation, documentation, and automation requirements. The canonical process is:
-1. **Data Gathering**: Collect and cross-validate mechanic data from authoritative sources (see Section 3). Document all sources.
-2. **Template Population**: Populate all required fields in the canonical template. Link to all affected champions, bosses, and teams. Specify known counters and unique interactions.
-3. **Validation**: Validate all data per Section 9. Note conflicts, uncertainties, and data confidence.
-4. **Entry Review & Approval**: Present for review, then add to the mechanic dictionary. Update index/search tools as needed.
-
-### Update & Maintenance Workflow
-Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
-
-### Automation & Indexing
-All entries must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags and field names.
-
-### Core summary of info to index
-- Boss mechanics
-- Game mechanic index/dictionary
-- interaction guidelines
-- Passive mechanics
-- Meta interactions and setups
-- Hp Burn and Poison and other damage based on Boss or Max HP mechanics 
-- 'Cheese' teams and mechanics ex unkillable, revive on death, block damage, poison explosion, etc
-
----
-
-## 8. Team Creation & Analysis Workflow
-
-### Purpose
-Define a systematic, validated process for building, simulating, and analyzing teams for all RAID content (bosses, dungeons, Faction Wars, Arena, etc.), using only owned champions and validated mechanics. Ensure all teams are actionable, optimized, and documented for both manual and auto play.
-
-### Canonical Template
-- All team entries must use the standard template in Section 12 (see file for example; if a dedicated team prompt file exists, reference it here; if missing, mark as WIP and stage a placeholder).
-
-
-### Team Creation Workflow
-Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all team creation, validation, documentation, and automation requirements. The canonical process is:
-1. **Team Archetype Selection**: Identify required mechanics/trials for the target content (see boss/mechanic entries). Select team archetypes based on owned champions and content requirements.
-2. **Team Building**: Build 5–8 unique teams using only owned champions, maximizing trial/mechanic completion, damage, and hybrid approaches. For each team, specify all required details per the canonical template. Ensure all teams are unique unless cheese/duplicate strategies are explicitly allowed.
-3. **Simulation & Validation**: Run at least 3 test runs per team (manual and/or auto as appropriate). If results are highly variable (RNG, new bosses, cheese teams), run up to 5. Rerun simulations if speed tunes or team comps change. Document results per Section 9.
-4. **Documentation & Output**: Populate all required fields in the team template. Add quick reference tables and detailed team sections to the relevant boss/guide entry. Link to all referenced champion and mechanic entries.
-
-### Update & Maintenance Workflow
-Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
-
-### Automation & Indexing
-All teams must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags and field names.
-
----
-
-## 9. Build Evaluation & Optimization
-
-### Purpose
-Provide a structured workflow for evaluating, optimizing, and documenting actual user champion builds for all RAID content. Ensure feedback is actionable, content-specific, and supports continuous improvement of the owned roster.
-
-### Canonical Template
-- All build evaluations must use a standard template specifying: Champion Name, Content Type, Current Build (gear sets, stats, masteries, skill books), Recommended Build (gear sets, stats, masteries, skill books), Gaps/Issues, Upgrade Priorities, and Validation Sources.
-- Include a comparison table of current vs. recommended stats and gear.
-- Link to relevant champion, team, and boss entries.
-
-
-### Build Evaluation Workflow
-Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all build evaluation, validation, documentation, and automation requirements. The canonical process is:
-1. **Input Collection**: Gather current build details and specify primary content use.
-2. **Comparison & Analysis**: Compare current build to recommended build for the target content. Identify gaps and note if the build is optimal, suboptimal, or misaligned.
-3. **Upgrade & Optimization Advice**: Prioritize upgrades and suggest changes as needed. Recommend respec if appropriate.
-4. **Documentation & Output**: Populate all required fields in the build evaluation template. Add actionable notes and upgrade path to the relevant champion/team entry. Link to referenced guides and validation sources.
-
-### Update & Maintenance Workflow
-Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
-
-### Automation & Indexing
-All evaluations must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags and field names.
-
----
-
-## 10. Guide Update & Versioning Policy
-
-### Purpose
-Establish clear policies and workflows for updating, versioning, and maintaining all knowledge base entries (champion, boss, mechanic, team, build) to ensure accuracy, traceability, and reproducibility.
-
-### Update Workflow
-1. **Trigger for Update**
-	- New champion acquired, champion/boss/mechanic reworked, or new content/mechanics released.
-	- User requests update or identifies outdated information.
-2. **Staging & Drafting**
-	- Create a DRAFT version of the entry (e.g., `GuideName_DRAFT.md`).
-	- Make all edits and additions in the DRAFT file, preserving the original FINAL version.
-    - Stage detailed prompt files in input to describe listed workflows in more detail, including template info.
-3. **Validation & Review**
-	- Run validation scripts and cross-check with authoritative sources.
-	- Present DRAFT for user or peer review.
-	- Iterate as needed until approved.
-4. **Promotion to FINAL**
-	- After approval, archive the old FINAL version (e.g., `GuideName_OLD_YYYY-MM-DD.md`).
-	- Rename DRAFT to FINAL (e.g., `GuideName_FINAL.md`).
-	- Move archived files to an `Archive/` folder if desired.
-5. **Documentation & Commit**
-	- Document all changes in the changelog or commit message, including validation steps and sources.
-	- Use detailed commit messages for traceability.
-
-### Versioning Policy
-- Never overwrite FINAL files directly; always use DRAFT-to-FINAL workflow.
-- Use date-stamped or versioned filenames for major changes (e.g., `_v2.md`, `_2025-10-21.md`).
-- Rely on git for version history and rollback; an Archive/ folder is not required but may be used optionally.
-**Review Frequency:** Continuous improvement should be reviewed every hour when working on the project. Create tasks for improvements as they arise. Formal review cycles (monthly/quarterly) are not required unless desired.
-- Update indexes and references after each major update.
-
-### Validation & Documentation Standards
-- All updates must be validated with at least two authoritative sources.
-- Document all validation steps, sources, and simulation results in the entry or commit message.
-- Note any uncertainties, conflicts, or assumptions in a dedicated section.
-
-### Automation & Indexing
-- Updates must be structured for automated detection and indexing (e.g., by filename pattern or metadata tag).
-- Update all relevant indexes and cross-references after each update.
-
----
-
-## 11. Validation & Documentation Standards
-
-### Purpose
-Define rigorous standards for validating, documenting, and cross-referencing all knowledge base entries (champion, boss, mechanic, team, build) to ensure accuracy, transparency, and reproducibility.
-
-### Validation Standards
-- All entries must be validated with at least two authoritative sources (Ayumilove, HellHades, RaidHQ, in-game testing).
-- In-game testing and user-provided screenshots take highest priority for stat and mechanic validation.
-- If sources conflict, note the discrepancy and prefer community consensus (RaidHQ + Ayumilove/HellHades).
-- Mark data confidence level (High/Medium/Low) if sources disagree or data is ambiguous.
-
-### Documentation Standards
-- Cite all sources in each entry and in commit messages.
-- Document all validation steps, simulation results, and assumptions in a dedicated section of each entry.
-- Note any uncertainties, conflicts, or alternate interpretations.
-- Use clear, modular sectioning and field delimiters for automated parsing.
-
-### Simulation & Testing
-- For teams and builds, run at least 3 test runs (manual and/or auto as appropriate) and document results.
-- Note clear times, damage scores, trial completion, success rates, and affinity safety/risk.
-- Use calculators or community tools for additional validation as needed.
-
-### Cross-Referencing & Indexing
-- Link all entries to relevant champions, bosses, mechanics, and teams.
-- Update indexes and cross-references after each major addition or update.
-- Use consistent tags and field names for search and automation.
-
----
-
-## 12. Templates & Examples
+## Templates and Examples
 
 ### Purpose
 Provide canonical templates and example entries for all knowledge base types (champion, boss, mechanic, team, build) to ensure consistency, automation, and ease of use.
 
 ### Template Documentation
 - For each entry type, document or specify the canonical template (JSON or Markdown) in the instructions.
-- If a template does not exist, create and add it to the project (see below for reference formats).
+- If a template or example does not exist, mark as WIP and add it to the project as you progress.
 - All new or updated templates should be referenced in the instructions and included in the repo for future automation and consistency.
 
 ### Champion Dictionary Template (JSON)
@@ -420,9 +188,193 @@ See `input/Boss_Guide_Template.md` for the full canonical template. Include anch
 | Example  | Clan Boss | Speed+Lifesteal, 210 SPD, 220 ACC | Speed+Lifesteal, 220 SPD, 250 ACC | ACC low | 1. ACC 2. SPD | Ayumilove, HH |
 ```
 
----
+## Champion Dictionary Entry Workflow
+### Purpose
+Establish a validated, canonical process for creating, updating, and maintaining champion dictionary entries in the RAID Shadow Legends knowledge base. This ensures all champion data is accurate, cross-referenced, and indexable for downstream guide and team generation.
 
-## 13. Review Questions & Feedback
+### Canonical Template
+- All champion entries must use the canonical template in `input/Champion_Dictionary_Prompt_template.md` (see file for full field list and mechanics tag index; if missing, mark as WIP and stage a placeholder).
+
+### Entry Creation Workflow
+Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all entry creation, validation, documentation, and automation requirements. The canonical process is:
+1. **Data Gathering**: Collect and cross-validate champion data from authoritative sources (see Section 3). Document all sources.
+2. **Template Population**: Populate all required fields in the canonical template. Use mechanics tags for automation.
+3. **Validation**: Validate all data per Section 9. Note conflicts, uncertainties, and data confidence.
+4. **Entry Review & Approval**: Present for review, then add to the dictionary. Update index/search tools as needed.
+
+### Update & Maintenance Workflow
+Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
+
+### Automation & Indexing
+### Cheese/Meta Teams
+Add a dedicated section or tag for cheese/meta teams in all team and boss guide entries. Check for boss, champion, or mechanic-specific cheese teams based on owned champions. Reference these in both the main team workflow and a dedicated cheese/meta section.
+All entries must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags and field names.
+
+## Boss Guide Entry Workflow
+### Purpose
+Define a validated, modular process for creating, updating, and maintaining boss guide entries for RAID Shadow Legends. Ensure all guides are actionable, cross-referenced, and optimized for owned champion rosters and current meta.
+
+### Canonical Template
+- All boss guides must use the canonical template in `input/Boss_Guide_Template.md` (see file for full section list; if missing, mark as WIP and stage a placeholder).
+
+### Guide Creation Workflow
+Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all guide creation, validation, documentation, and automation requirements. The canonical process is:
+1. **Research & Data Gathering**: Review and cross-validate boss data from authoritative sources (see Section 3). Document all sources.
+2. **Trial/Mechanic Mapping**: Map all boss trials/mechanics to the owned champion list. Build per-trial and combo tables, noting affinity safety/risk and special notes.
+3. **Team Building & Simulation**: Build and simulate 5–8 unique teams using only owned champions, maximizing trial/mechanic completion, damage, and hybrid approaches. For each team, specify all required details and run at least 3 simulations per team (see Section 9 for simulation standards).
+4. **Guide Structure & Output**: Use the canonical template and modular ToC. Populate all required sections. Add quick reference tables as needed.
+5. **Update & Validation**: After any roster change, re-run all mapping, team building, and simulation steps. Regenerate all tables and recommendations as needed. Use DRAFT-to-FINAL workflow and document all validation steps.
+
+### Update & Maintenance Workflow
+Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
+
+### Automation & Indexing
+All guides must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags, anchors, and field names.
+
+## Mechanic Entry Workflow
+### Purpose
+Define a standardized process for documenting, updating, and maintaining mechanic entries (buffs, debuffs, passives, unique effects) in the RAID Shadow Legends knowledge base. Ensure all mechanics are indexable, cross-referenced, and usable for automation and team-building.
+
+### Canonical Template
+- All mechanic entries must use the mechanics tag index and field documentation in `input/Champion_Dictionary_Prompt_template.md` (see file for mechanics list and tag details; if missing, mark as WIP and stage a placeholder). If a standalone mechanic template is needed, create and reference it here.
+
+### Entry Creation Workflow
+Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all entry creation, validation, documentation, and automation requirements. The canonical process is:
+1. **Data Gathering**: Collect and cross-validate mechanic data from authoritative sources (see Section 3). Document all sources.
+2. **Template Population**: Populate all required fields in the canonical template. Link to all affected champions, bosses, and teams. Specify known counters and unique interactions.
+3. **Validation**: Validate all data per Section 9. Note conflicts, uncertainties, and data confidence.
+4. **Entry Review & Approval**: Present for review, then add to the mechanic dictionary. Update index/search tools as needed.
+
+### Update & Maintenance Workflow
+Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
+
+### Automation & Indexing
+All entries must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags and field names.
+
+### Core summary of info to index
+- Boss mechanics
+- Game mechanic index/dictionary
+- interaction guidelines
+- Passive mechanics
+- Meta interactions and setups
+- Hp Burn and Poison and other damage based on Boss or Max HP mechanics 
+- 'Cheese' teams and mechanics ex unkillable, revive on death, block damage, poison explosion, etc
+
+## Team Creation and Analysis Workflow
+### Purpose
+Define a systematic, validated process for building, simulating, and analyzing teams for all RAID content (bosses, dungeons, Faction Wars, Arena, etc.), using only owned champions and validated mechanics. Ensure all teams are actionable, optimized, and documented for both manual and auto play.
+
+### Canonical Template
+- All team entries must use the standard template in Section 12 (see file for example; if a dedicated team prompt file exists, reference it here; if missing, mark as WIP and stage a placeholder).
+
+### Team Creation Workflow
+Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all team creation, validation, documentation, and automation requirements. The canonical process is:
+1. **Team Archetype Selection**: Identify required mechanics/trials for the target content (see boss/mechanic entries). Select team archetypes based on owned champions and content requirements.
+2. **Team Building**: Build 5–8 unique teams using only owned champions, maximizing trial/mechanic completion, damage, and hybrid approaches. For each team, specify all required details per the canonical template. Ensure all teams are unique unless cheese/duplicate strategies are explicitly allowed.
+3. **Simulation & Validation**: Run at least 3 test runs per team (manual and/or auto as appropriate). If results are highly variable (RNG, new bosses, cheese teams), run up to 5. Rerun simulations if speed tunes or team comps change. Document results per Section 9.
+4. **Documentation & Output**: Populate all required fields in the team template. Add quick reference tables and detailed team sections to the relevant boss/guide entry. Link to all referenced champion and mechanic entries.
+
+### Update & Maintenance Workflow
+Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
+
+### Automation & Indexing
+All teams must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags and field names.
+
+## Build Evaluation and Optimization
+### Purpose
+Provide a structured workflow for evaluating, optimizing, and documenting actual user champion builds for all RAID content. Ensure feedback is actionable, content-specific, and supports continuous improvement of the owned roster.
+
+### Canonical Template
+- All build evaluations must use a standard template specifying: Champion Name, Content Type, Current Build (gear sets, stats, masteries, skill books), Recommended Build (gear sets, stats, masteries, skill books), Gaps/Issues, Upgrade Priorities, and Validation Sources.
+- Include a comparison table of current vs. recommended stats and gear.
+- Link to relevant champion, team, and boss entries.
+
+### Build Evaluation Workflow
+Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all build evaluation, validation, documentation, and automation requirements. The canonical process is:
+1. **Input Collection**: Gather current build details and specify primary content use.
+2. **Comparison & Analysis**: Compare current build to recommended build for the target content. Identify gaps and note if the build is optimal, suboptimal, or misaligned.
+3. **Upgrade & Optimization Advice**: Prioritize upgrades and suggest changes as needed. Recommend respec if appropriate.
+4. **Documentation & Output**: Populate all required fields in the build evaluation template. Add actionable notes and upgrade path to the relevant champion/team entry. Link to referenced guides and validation sources.
+
+### Update & Maintenance Workflow
+Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
+
+### Automation & Indexing
+All evaluations must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags and field names.
+
+## Validation and Documentation Standards
+
+### Purpose
+Define rigorous standards for validating, documenting, and cross-referencing all knowledge base entries (champion, boss, mechanic, team, build) to ensure accuracy, transparency, and reproducibility.
+
+### Validation Standards
+- All entries must be validated with at least two authoritative sources (Ayumilove, HellHades, RaidHQ, in-game testing).
+- In-game testing and user-provided screenshots take highest priority for stat and mechanic validation.
+- If sources conflict, note the discrepancy and prefer community consensus (RaidHQ + Ayumilove/HellHades).
+- Mark data confidence level (High/Medium/Low) if sources disagree or data is ambiguous.
+
+### Documentation Standards
+- Cite all sources in each entry and in commit messages.
+- Document all validation steps, simulation results, and assumptions in a dedicated section of each entry.
+- Note any uncertainties, conflicts, or alternate interpretations.
+- Use clear, modular sectioning and field delimiters for automated parsing.
+
+
+### Simulation & Testing
+- For teams and builds, run at least 5 test runs (manual and/or auto as appropriate) and document results. Drop the most extreme outlier and use the remaining 4 for validation. Valid results should be similar, with no major outliers or swings.
+- Note clear times, damage scores, trial completion, success rates, and affinity safety/risk.
+- Use calculators or community tools for additional validation as needed.
+
+### Cross-Referencing & Indexing
+- Link all entries to relevant champions, bosses, mechanics, and teams.
+- Update indexes and cross-references after each major addition or update.
+- Use consistent tags and field names for search and automation.
+
+## Guide Update and Versioning Policy
+
+### Purpose
+Establish clear policies and workflows for updating, versioning, and maintaining all knowledge base entries (champion, boss, mechanic, team, build) to ensure accuracy, traceability, and reproducibility.
+
+### Update Workflow
+1. **Trigger for Update**
+	- New champion acquired, champion/boss/mechanic reworked, or new content/mechanics released.
+	- User requests update or identifies outdated information.
+2. **Staging & Drafting**
+	- Create a DRAFT version of the entry (e.g., `GuideName_DRAFT.md`).
+	- Make all edits and additions in the DRAFT file, preserving the original FINAL version.
+    - Stage detailed prompt files in input to describe listed workflows in more detail, including template info.
+3. **Validation & Review**
+	- Run validation scripts and cross-check with authoritative sources.
+	- Present DRAFT for user or peer review.
+	- Iterate as needed until approved.
+4. **Promotion to FINAL**
+	- After approval, archive the old FINAL version (e.g., `GuideName_OLD_YYYY-MM-DD.md`).
+	- Rename DRAFT to FINAL (e.g., `GuideName_FINAL.md`).
+	- Move archived files to an `Archive/` folder if desired.
+5. **Documentation & Commit**
+	- Document all changes in the changelog or commit message, including validation steps and sources.
+	- Use detailed commit messages for traceability.
+
+### Versioning Policy
+- Never overwrite FINAL files directly; always use DRAFT-to-FINAL workflow.
+- Use date-stamped or versioned filenames for major changes (e.g., `_v2.md`, `_2025-10-21.md`).
+- Rely on git for version history and rollback; an Archive/ folder is not required but may be used optionally.
+**Review Frequency:** Continuous improvement should be reviewed every hour when working on the project. Create tasks for improvements as they arise. Formal review cycles (monthly/quarterly) are not required unless desired.
+- Update indexes and references after each major update.
+
+### Validation & Documentation Standards
+- All updates must be validated with at least two authoritative sources.
+- Document all validation steps, sources, and simulation results in the entry or commit message.
+- Note any uncertainties, conflicts, or assumptions in a dedicated section.
+
+### Automation & Indexing
+- Updates must be structured for automated detection and indexing (e.g., by filename pattern or metadata tag).
+- Update all relevant indexes and cross-references after each update.
+
+## Continuous Improvement Policy
+[...existing Continuous Improvement Policy section...]
+
+## Review Questions and Feedback
 
 ### Purpose
 Provide a structured set of review questions and feedback prompts to ensure all workflows, templates, and outputs meet project standards and user needs. Use these questions for self-review, peer review, and user validation after each major update or new entry.
@@ -473,10 +425,7 @@ Provide a structured set of review questions and feedback prompts to ensure all 
 - Are there any redundant or conflicting instructions?
 - What improvements or clarifications are needed?
 
----
-
-
-## 15. Housekeeping, Shift-Left, and Proactive Maintenance
+## Housekeeping Shift-Left and Proactive Maintenance
 
 ### Purpose
 Establish best practices for keeping the project clean, up-to-date, and continuously improving, with a focus on early error detection, automation, and reducing technical debt.
@@ -505,7 +454,7 @@ Establish best practices for keeping the project clean, up-to-date, and continuo
 - Document and share new automation scripts or tools with the team.
 - Encourage a culture of continuous improvement and early error detection (shift-left mindset).
 
----
+## Change Log and Version History
 
 ### Purpose
 Maintain a clear, chronological record of all major changes, updates, and version history for the project instructions, templates, and workflows. This ensures transparency, traceability, and supports collaborative development.
@@ -529,4 +478,46 @@ Maintain a clear, chronological record of all major changes, updates, and versio
 - Summarize key changes at the top of the file for quick reference.
 
 ---
+
+## Troubleshooting and Maintenance
+
+### Common Issues & Solutions
+
+**Copilot not following instructions:**
+- Ensure instructions are specific and actionable, not vague or ambiguous.
+- Check for conflicting or duplicated guidance between base and project files.
+- If instructions are too long, prioritize the most important at the top and remove unnecessary duplication.
+
+**Copilot ignoring project-specific file:**
+- Confirm the file is in the `.github` folder and named with `_copilot-instructions.md` or `-instructions.md`.
+- Validate markdown syntax (no broken links, proper formatting).
+
+**Instructions too long or verbose:**
+- Remove duplicated content from base instructions; reference instead.
+- Summarize examples and link to full examples elsewhere if needed.
+- Focus on "what" and "why"; let Copilot determine "how" unless implementation is critical.
+
+### Maintenance Best Practices
+- Review and update project instructions regularly as requirements change.
+- Use the changelog to document all major edits and updates.
+- Validate Table of Contents links and section anchors after major changes.
+- Test Copilot behavior after significant instruction updates and refine as needed.
+
+### Solutions log
+
+| Issue | Possible Causes | Solutions |
+|-------|----------------|-----------|
+| Copilot not following instructions | 1. Instructions are too vague or ambiguous<br>2. Instructions conflict with each other<br>3. Instructions are too long (Copilot has token limits) | - Be more specific and directive in language<br>- Review for conflicts between base and project instructions<br>- Prioritize most important instructions at the top |
+| Copilot ignoring project-specific file | 1. File not in `.github` folder<br>2. File name doesn't end with `_copilot-instructions.md` or `-instructions.md`<br>3. File contains syntax errors | - Verify file location is `.github/[PROJECT]_copilot-instructions.md`<br>- Check file name follows naming convention<br>- Validate markdown syntax (no broken links, proper formatting) |
+| Instructions too long | 1. Too much duplicated content from base instructions<br>2. Too many examples or verbose explanations<br>3. Including implementation details instead of guidelines | - Remove duplication; reference base instructions instead<br>- Summarize examples; link to full examples in project files<br>- Focus on "what" and "why", not "how" (let Copilot figure out "how") |
+
+---
+
+## Glossary
+
+**Cheese:** Abusing a mechanic to glitch a win (e.g., unkillable champ, infinite healing, etc.). Review online for that specific mechanic, champion, boss, etc.
+
+**Meta:** Known good, community-rated or built setups that leverage established strategies (e.g., speed tunes).
+
+**Hybrid:** Uses multiple damage sources or mechanics (e.g., HP burn and poison, % of health, or max buff/debuff setups).
 
