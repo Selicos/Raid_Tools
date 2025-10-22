@@ -1,0 +1,95 @@
+{
+  "name": "Crohnam",
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Barbarians",
+  "role": "Attack / HP Burn Specialist",
+  "base_stats": {
+  "HP": 15195,
+  "ATK": 1564,
+  "DEF": 1002,
+  "SPD": 101,
+  "C_RATE": 15,
+  "C_DMG": 63,
+  "RES": 30,
+  "ACC": 10
+  },
+  "skills": [
+    {
+      "name": "Djinn Swords",
+      "type": "A1",
+      "description": "Attacks 1 enemy 2 times. Each hit has a 30% chance of increasing the duration of a random debuff on the target by 1 turn. If Djamarsa is on the same team, each hit also increases the duration of any HP Burn debuffs on the target by 1 turn.",
+      "books": "+15% damage, +20% buff/debuff chance",
+      "multiplier": "1.5 ATK per hit"
+    },
+    {
+      "name": "Berserker’s Delight",
+      "type": "A2",
+      "description": "Attacks 3 times at random. Each hit has an 80% chance of instantly activating any HP Burn debuffs on each target. Heals this Champion by 10% of their MAX HP for each HP Burn debuff activated by this skill. (4 turn cooldown)",
+      "books": "+15% damage, +20% buff/debuff chance, -1 CD",
+      "multiplier": "2 ATK per hit"
+    },
+    {
+      "name": "Blazing Zephyr",
+      "type": "A3",
+      "description": "Attacks all enemies. Has an 80% chance of placing a HP Burn debuff for 2 turns. Fills this Champion’s Turn Meter by 15% for each HP Burn debuff placed by this skill. (4 turn cooldown)",
+      "books": "+20% damage, +20% buff/debuff chance, -1 CD",
+      "multiplier": "4 ATK"
+    },
+    {
+      "name": "Simmering Anger (Passive)",
+      "type": "Passive",
+      "description": "[Passive Effect] Every 10 times Active Skills are used in battle by either enemy or allied Champions, this Champion instantly activates the Berserker’s Delight skill. This happens every 5 times Active Skills are used if Djamarsa is on the same team. [Active Effect] If Djamarsa is on the same team, revives this Champion with 50% HP and 50% Turn Meter when killed. (4 turn cooldown)"
+    },
+    {
+      "name": "Aura",
+      "type": "Aura",
+      "description": "Increases Ally ACC in all Battles by 50."
+    }
+  ],
+  "mechanics_tags": [
+    "Double hit A1",
+    "Increase debuff duration",
+    "HP Burn activation",
+    "AoE HP Burn",
+    "Self-heal",
+    "Self-revive (with Djamarsa)",
+    "Turn Meter fill",
+    "Aura: ACC",
+    "Legendary",
+    "Magic"
+  ],
+  "gear_recommendations": {
+    "PvE": ["Bloodthirst", "Impulse", "Lifesteal", "Reflex", "Relentless", "Perception", "Speed", "Immortal", "Regeneration"],
+    "PvP": ["Immunity", "Stoneskin", "Untouchable", "Zeal"],
+    "stat_priority": ["ATK%", "C.RATE", "C.DMG", "SPD", "ACC", "HP%", "DEF%"],
+    "artifacts": {
+      "Weapon": "ATK",
+      "Helmet": "HP",
+      "Shield": "DEF",
+      "Gauntlets": "ATK% / C.RATE / C.DMG / HP% / DEF%",
+      "Chest": "ATK% / ACC / HP% / DEF%",
+      "Boots": "SPD / ATK% / HP% / DEF%",
+      "Ring": "ATK / HP / DEF",
+      "Amulet": "C.DMG / ATK / HP / DEF",
+      "Banner": "ACC / ATK / HP / DEF"
+    }
+  },
+  "masteries": {
+    "offense": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Kill Streak", "Methodical", "Warmaster (PvE)", "Giant Slayer (Hydra)", "Flawless Execution (PvP)"],
+    "support": ["Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer"]
+  },
+  "book_priority": "A2 and A3 for cooldowns and debuff chance. A1 for higher debuff extension chance if books are available.",
+  "notes_synergy": [
+    "Best paired with Djamarsa for passive revive and faster skill cycling.",
+    "Excellent for Spider, Hydra, Doom Tower, and Sand Devil.",
+    "Can solo Sand Devil with Regen set and correct masteries.",
+    "Needs high ACC for HP Burn and activation reliability.",
+    "Synergizes with other HP Burn champions for maximum uptime."
+  ],
+  "sources": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-crohnam-skill-mastery-equip-guide/",
+    "HellHades: https://hellhades.com/champions/crohnam/"
+  ],
+  "owned_copies": 1
+}

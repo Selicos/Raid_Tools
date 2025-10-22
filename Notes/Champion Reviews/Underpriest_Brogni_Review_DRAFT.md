@@ -143,53 +143,84 @@
 
 ## 3. Skills & Mechanics
 
-### A1 - Deepcrystal Scourge (Single-Target, HP Burn)
-- Attacks 1 enemy
-- **45%→60% chance** to place HP Burn for 2 turns (fully booked)
-- Multiplier: 6.5 ATK
+### 3.1. A1 - Cavern Grasp
 
-**Notes:**
-- HP Burn adds 15-20M damage over full UNM Clan Boss run
-- HP Burn helps in dungeons and Doom Tower
-- Low base ATK (1266) means Brogni benefits more from HP%/DEF% than ATK%
+**Description:** Attacks 1 enemy. Has a 45% chance (60% booked) of placing an HP Burn debuff for 2 turns.
+**Damage Multiplier:** 3.5x ATK
+**Skill Upgrades:**
+- Level 2: Damage +5%
+- Level 3: Buff/Debuff Chance +5%
+- Level 4: Damage +5%
+- Level 5: Buff/Debuff Chance +10%
+- Level 6: Buff/Debuff Chance +10%
+**Max Booked:** 60% HP Burn chance
+**Cooldown:** None (basic attack)
 
-### A2 - Cavern's Grasp (AOE, Shield Growth, Buff/Debuff Removal)
-- Attacks all enemies
-- **75%→100% chance** to remove 1 random buff from all enemies (fully booked)
-- **75%→100% chance** to remove 1 random debuff from all allies (fully booked)
-- **Increases Shield buff capacity on all allies by 30% of damage inflicted**
-- Cooldown: 4 turns → 3 turns (booked)
-- Multiplier: 6.6 ATK
+**Mechanics & Use Cases:**
+- **HP Burn:** Core for Clan Boss UNM, Dragon, Spider, and Doom Tower bosses. Enables high damage over time.
+- **Single Target:** Not ideal for Fire Knight shield, but reliable for bosses.
+- **Synergy:** Triggers Brogni's passive reflect and shield growth indirectly (more damage = more shield).
 
-**Notes:**
-- **KEY MECHANIC:** Shield Growth enables "Infinity Shield" and "Super Tanky" Clan Boss strategies
-- Buff Removal useful in dungeons and Arena
-- Debuff Removal useful for cleansing Decrease Speed, Stun, etc.
+---
 
-### A3 - Resilient Glow (Block Debuffs + Increase ATK + Unremovable Shield)
-- Places **Block Debuffs** buff on all allies for 2 turns
-- Places **50% Increase ATK** buff on all allies for 2 turns
-- Places **UNREMOVABLE Shield** buff on all allies for 2 turns (equal to 30% of Brogni's MAX HP)
-- Cooldown: 5 turns → 3 turns (booked)
+### 3.2. A2 - Resilient Glow
 
-**Notes:**
-- **SIGNATURE SKILL:** Unremovable Shield cannot be dispelled by enemies
-- Block Debuffs counters Stun, Freeze, Decrease Speed, Sleep, etc.
-- Increase ATK (50%) boosts team damage
+**Description:** Places a Shield buff on all allies for 2 turns equal to 30% of this Champion's MAX HP. Also places a Block Debuffs buff on all allies for 1 turn.
+**Skill Upgrades:**
+- Level 2: Shield +5%
+- Level 3: Shield +5%
+- Level 4: Cooldown -1
+- Level 5: Shield +10%
+- Level 6: Cooldown -1
+**Max Booked:** 50% Shield strength, 3-turn cooldown
+**Cooldown:** 5 turns (3 turns booked)
 
-### Passive - Redoubt (Shield Reflect + Heal)
-- Whenever an ally under Shield buff is attacked:
-  - **Reflects 25% of damage inflicted on Shield** back to attacker
-  - **Heals ally by 25% of damage inflicted on Shield**
-- Only one champion with this skill will activate per team
+**Mechanics & Use Cases:**
+- **Unremovable Shield:** Cannot be removed by Clan Boss or most bosses. Core for Infinity Shield and Super Tanky teams.
+- **Block Debuffs:** Prevents Stun, Decrease Speed, and other disruptive debuffs. Key for speed-tuned Clan Boss teams.
+- **Synergy:** Shield enables Brogni's passive reflect and healing. Block Debuffs keeps team rotation safe.
 
-**Notes:**
-- **Synergizes with Giant Slayer:** Reflected damage procs Giant Slayer MULTIPLE times per Clan Boss attack (when all 5 allies have Shield)
-- **Massive sustain:** 25% heal per attack means team rarely needs dedicated healer
-- **Damage amplification:** 25% reflect damage adds 5-10M damage over full UNM run
+---
 
-### Aura - Doom Tower Resist (60%)
-- Increases Ally RESIST in Doom Tower battles by 60
+### 3.3. A3 - Arcane Ward
+
+**Description:** Attacks all enemies. Removes 1 random buff from all enemies. Increases the value of Shield buffs on all allies by 30% of the damage inflicted.
+**Damage Multiplier:** 3.5x ATK (AOE)
+**Skill Upgrades:**
+- Level 2: Damage +10%
+- Level 3: Cooldown -1
+- Level 4: Damage +10%
+- Level 5: Cooldown -1
+**Max Booked:** 4-turn cooldown
+**Cooldown:** 6 turns (4 turns booked)
+
+**Mechanics & Use Cases:**
+- **Shield Growth:** Increases existing shield value by 30% of AOE damage dealt. Core for Infinity Shield teams.
+- **Buff Removal:** Removes 1 random buff from all enemies. Useful in Arena, Doom Tower, and some dungeons.
+- **Synergy:** Use after A2 to maximize shield value. Enables shield stacking for reflect/Infinity Shield strategies.
+
+---
+
+### 3.4. Passive - Redoubt
+
+**Description:** Whenever an ally under a Shield buff is attacked, reflects 25% of the damage inflicted on the Shield back to the attacker. Also heals all allies by 25% of the damage inflicted on Shields.
+
+**Mechanics & Use Cases:**
+- **Reflect Damage:** Key for Clan Boss UNM, Spider, and Dragon. Procs Giant Slayer multiple times per attack (if all allies have Shield).
+- **Healing:** Provides sustain for the team, reducing need for dedicated healers.
+- **Synergy:** Works best when all allies have Shield (A2/A3). Enables "Infinity Shield" and Super Tanky teams.
+
+---
+
+### 3.5. Skill Priority & Booking Order
+
+**Priority 1:** Book A2 Resilient Glow (Shield strength + cooldown reduction)
+**Priority 2:** Book A3 Arcane Ward (cooldown reduction)
+**Priority 3:** Book A1 Cavern Grasp (HP Burn chance)
+
+**Total Books Required:** 13 (A1, A2, A3)
+
+**Resource Priority:** Book A2 FIRST (Shield is core for Clan Boss and all PvE), then A3 (shield growth), then A1 (HP Burn chance)
 
 ---
 

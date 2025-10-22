@@ -1,0 +1,111 @@
+{
+  "champion_name": "Archmage Hellmut",
+  "plarium_id": null,
+  "rarity": "Epic",
+  "affinity": "Magic",
+  "faction": "Banner Lords",
+  "meta_ratings": {
+    "Clan Boss": 6,
+    "Dungeons": 9,
+    "Doom Tower": 10,
+    "Arena": 9,
+    "Faction Wars": 10
+  },
+  "forms_alternate_kits": ["Base"],
+  "stats": {
+    "HP": 18825,
+    "ATK": 925,
+    "DEF": 1123,
+    "SPD": 108,
+    "C.RATE": 15,
+    "C.DMG": 50,
+    "RES": 30,
+    "ACC": 0
+  },
+  "skills": [
+    {
+      "name": "Arcane Dynamo",
+      "type": "A1",
+      "description": "Attacks 1 enemy. Fills this Champion’s Turn Meter by 10%. Fills the Turn Meter by 20% if this attack is critical. Damage Multiplier: 4.8 ATK. (Books: +25% damage)",
+      "cooldown": null,
+      "mechanics_tags": ["Single Target Attack", "Turn Meter Boost"]
+    },
+    {
+      "name": "Timeslip",
+      "type": "A2",
+      "description": "Attacks 1 enemy, then all others if first hit is critical. Each hit has 50% (75% booked) chance to place [Stun] for 1 turn. After attacking, decreases Turn Meter of each enemy without [Stun] by 20%. Damage Multiplier: 6 ATK (target), 3.5 ATK (AoE).",
+      "cooldown": 4,
+      "mechanics_tags": ["Single Target Attack", "AoE Attack", "Stun", "Turn Meter Reduction"]
+    },
+    {
+      "name": "Psychic Guidance",
+      "type": "A3",
+      "description": "Places 30% [Increase SPD], 30% [Increase C.RATE], and 30% [Increase C.DMG] on all allies for 2 turns.",
+      "cooldown": 5,
+      "mechanics_tags": ["Increase SPD", "Increase C.RATE", "Increase C.DMG", "Place Buffs", "All-Ally-Target"]
+    },
+    {
+      "name": "Chrono Isolation",
+      "type": "Passive",
+      "description": "Immune to Turn Meter decreasing effects.",
+      "cooldown": null,
+      "mechanics_tags": ["Unique Passive", "Turn Meter Reduction", "Skill Immunity"]
+    },
+    {
+      "name": "Arena Aura",
+      "type": "Aura",
+      "description": "Increases Ally SPD in Arena by 17%.",
+      "cooldown": null,
+      "mechanics_tags": ["Increase Ally SPD in Arena", "Aura"]
+    }
+  ],
+  "mechanics_tagging": [
+    "Single Target Attack",
+    "AoE Attack",
+    "Stun",
+    "Turn Meter Boost",
+    "Turn Meter Reduction",
+    "Increase SPD",
+    "Increase C.RATE",
+    "Increase C.DMG",
+    "Place Buffs",
+    "All-Ally-Target",
+    "Unique Passive",
+    "Skill Immunity",
+    "Increase Ally SPD in Arena",
+    "Aura"
+  ],
+  "gear_mastery_recommendations": {
+    "gear_sets": [
+      "Bloodthirst", "Impulse", "Lifesteal", "Reflex", "Relentless", "Speed", "Perception", "Immunity", "Stoneskin", "Untouchable", "Zeal"
+    ],
+    "stat_priority": [
+      "SPD", "ACC", "C.RATE", "C.DMG", "HP%", "DEF%"
+    ],
+    "masteries": [
+      "Warmaster", "Keen Strike", "Methodical", "Pinpoint Accuracy", "Rapid Response", "Evil Eye", "Lore of Steel", "Lasting Gifts"
+    ]
+  },
+  "ai_quirks_auto_warnings": {
+    "bad_ai": false,
+    "ai_issue_description": "Generally good AI. Ensure A2 is used for crowd control; no major auto-play issues reported."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": null,
+    "cheese_mechanic_info": null
+  },
+  "mechanics_advisory": "Needs 70%+ C.RATE for A2/A3 synergy. Excellent Seer buffer. Immune to TM reduction (great vs Valkyrie, Lyssandra). Book A2/A3 for best control/buff uptime.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-archmage-hellmut-skill-mastery-equip-guide/ (accessed 2025-10-21)",
+    "HellHades: https://hellhades.com/champions/archmage-hellmut/ (accessed 2025-10-21)",
+    "User screenshot (base stats, 2025-10-21)"
+  ],
+  "update_review_notes": {
+    "last_updated": "2025-10-21",
+    "last_patch": "V8.00 (2023-12-12)",
+    "author": "GitHub Copilot",
+    "summary_of_changes": "Initial validated entry from Ayumilove, HellHades, and user screenshot."
+  },
+  "notes_comments": "Top-tier for Doom Tower, Faction Wars, Arena (especially as Seer buffer). Needs high C.RATE for best performance. No cheese strategies."
+}

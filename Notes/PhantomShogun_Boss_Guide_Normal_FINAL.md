@@ -1,4 +1,4 @@
-# Phantom Shogun's Grove Boss Guide (Normal Difficulty)
+to# Phantom Shogun's Grove Boss Guide (Normal Difficulty)
 
 **Boss Name:** Akumori the Phantom Shogun  
 **Dungeon:** Phantom Shogun's Grove (Stages 1-25)  

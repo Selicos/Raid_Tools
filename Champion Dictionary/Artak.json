@@ -1,0 +1,101 @@
+{
+  "champion_name": "Artak",
+  "plarium_id": null,
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Orcs",
+  "meta_ratings": {
+    "Clan Boss": 10,
+    "Dungeons": 10,
+    "Doom Tower": 9,
+    "Arena": 7,
+    "Faction Wars": 10
+  },
+  "forms_alternate_kits": ["Base"],
+  "stats": {
+    "HP": 22140,
+    "ATK": 936,
+    "DEF": 1167,
+    "SPD": 100,
+    "C.RATE": 15,
+    "C.DMG": 63,
+    "RES": 30,
+    "ACC": 10
+  },
+  "skills": [
+    {
+      "name": "Chaosrazor",
+      "type": "A1",
+      "description": "Attacks all enemies. 35% chance to extend duration of any [HP Burn] debuffs on each target by 1 turn. (Books: +20% damage, +10% chance)",
+      "cooldown": null,
+      "mechanics_tags": ["AoE Attack", "HP Burn", "Debuff Extension"]
+    },
+    {
+      "name": "Dogs of War",
+      "type": "A2",
+      "description": "Attacks all enemies. Before attacking, instantly activates any [HP Burn] debuffs on each enemy. 75% chance of placing 50% [Decrease ATK] on all enemies for 2 turns. (Books: +10% damage, +25% chance, -1 CD)",
+      "cooldown": 4,
+      "mechanics_tags": ["AoE Attack", "HP Burn", "HP Burn Activation", "Decrease ATK"]
+    },
+    {
+      "name": "Purifyre",
+      "type": "A3",
+      "description": "Attacks all enemies 2 times. First hit: 75% chance to place [HP Burn] on all enemies for 2 turns. Restores this Champion’s destroyed MAX HP by 10% for each [HP Burn] placed. Heals by 5% MAX HP for each [HP Burn] attempt blocked or resisted. (Books: +10% damage, +25% chance, -1 CD)",
+      "cooldown": 4,
+      "mechanics_tags": ["AoE Attack", "Multi-hit", "HP Burn", "Heal", "Restore Destroyed MAX HP"]
+    },
+    {
+      "name": "Burning Blood",
+      "type": "Passive",
+      "description": "Whenever a [HP Burn] is activated, destroys this Champion’s MAX HP by 5% (up to 50%). Increases this Champion’s DMG, C.DMG, and DEF by 1% for each 1% destroyed MAX HP. Also increases SPD and RES by 2 for each 1% destroyed MAX HP.",
+      "cooldown": null,
+      "mechanics_tags": ["Unique Passive", "Stat Scaling", "Destroyed MAX HP"]
+    }
+  ],
+  "mechanics_tagging": [
+    "AoE Attack",
+    "HP Burn",
+    "Debuff Extension",
+    "HP Burn Activation",
+    "Decrease ATK",
+    "Multi-hit",
+    "Heal",
+    "Restore Destroyed MAX HP",
+    "Unique Passive",
+    "Stat Scaling",
+    "Destroyed MAX HP"
+  ],
+  "gear_mastery_recommendations": {
+    "gear_sets": [
+      "Perception", "Immortal", "Relentless", "Speed", "Toxic", "Regen", "Savage", "Bolster", "Lethal"
+    ],
+    "stat_priority": [
+      "SPD", "ACC", "HP%", "C.RATE", "C.DMG"
+    ],
+    "masteries": [
+      "Warmaster", "Keen Strike", "Methodical", "Kill Streak", "Pinpoint Accuracy", "Lore of Steel", "Evil Eye", "Master Hexer", "Tough Skin", "Blastproof", "Unshakeable"
+    ]
+  },
+  "ai_quirks_auto_warnings": {
+    "bad_ai": false,
+    "ai_issue_description": "Generally good AI. For solo dungeon runs, ensure A3 is prioritized to apply HP Burn."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": null,
+    "cheese_mechanic_info": null
+  },
+  "mechanics_advisory": "Synergizes with HP Burn teams, especially for Spider and Hydra. Stat scaling with destroyed MAX HP is unique; manage healing to avoid excessive HP loss. All skills benefit from books.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-artak-skill-mastery-equip-guide/ (accessed 2025-10-21)",
+    "HellHades: https://hellhades.com/champions/artak/ (accessed 2025-10-21)",
+    "User screenshot (base stats, 2025-10-21)"
+  ],
+  "update_review_notes": {
+    "last_updated": "2025-10-21",
+    "last_patch": "V7.10 (2023-05-11)",
+    "author": "GitHub Copilot",
+    "summary_of_changes": "Initial validated entry from Ayumilove, HellHades, and user screenshot."
+  },
+  "notes_comments": "Top-tier for Spider, Hydra, Ice Golem, Doom Tower, Faction Wars, and solo dungeon farming. No cheese strategies."
+}

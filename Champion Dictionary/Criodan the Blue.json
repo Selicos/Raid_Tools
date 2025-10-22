@@ -1,0 +1,88 @@
+{
+  "name": "Criodan the Blue",
+  "rarity": "Epic",
+  "affinity": "Force",
+  "faction": "Sylvan Watchers",
+  "role": "Support / Defense",
+  "base_stats": {
+    "HP": 20145,
+    "ATK": 859,
+    "DEF": 1309,
+    "SPD": 98,
+    "C_RATE": 15,
+    "C_DMG": 50,
+    "RES": 45,
+    "ACC": 0
+  },
+  "skills": [
+    {
+      "name": "Blue Shield",
+      "type": "A1",
+      "description": "Attacks 1 enemy. Has a 40% chance of placing a 15% [Continuous Heal] buff on the ally with the lowest HP for 1 turn.",
+      "books": "+20% damage, +15% buff chance",
+      "multiplier": "0.2 HP"
+    },
+    {
+      "name": "Sylvan Bulwark",
+      "type": "A2",
+      "description": "Places a 60% [Increase DEF] buff and a [Shield] buff on all allies for 2 turns. Shield is equal to 20% of this Champion's MAX HP.",
+      "books": "-1 CD",
+      "multiplier": "Shield: 20% MAX HP"
+    },
+    {
+      "name": "Nature's Resilience",
+      "type": "A3",
+      "description": "Removes all debuffs from all allies, then places a [Block Debuffs] buff for 2 turns.",
+      "books": "-1 CD"
+    },
+    {
+      "name": "Sylvan Sentinel (Passive)",
+      "type": "Passive",
+      "description": "Whenever an ally under a [Shield] buff is attacked, heals them by 15% of the damage received."
+    }
+  ],
+  "mechanics_tags": [
+    "Single-target heal (A1)",
+    "Team Increase DEF (A2)",
+    "Team Shield (A2)",
+    "Full team cleanse (A3)",
+    "Block Debuffs (A3)",
+    "Passive healing (shielded allies)",
+    "Support",
+    "Epic",
+    "Force"
+  ],
+  "gear_recommendations": {
+    "PvE": ["Speed", "Immortal", "Relentless", "Regeneration", "Shield", "Perception", "Resilience", "Untouchable", "Curing"],
+    "stat_priority": ["HP%", "DEF%", "SPD", "RES", "ACC (optional for provoke sets)", "Healing Bonus (if available)", "Shield Bonus (if available)", "Substats: HP, DEF, SPD"],
+    "artifacts": {
+      "Weapon": "HP / DEF",
+      "Helmet": "HP",
+      "Shield": "DEF",
+      "Gauntlets": "HP% / DEF%",
+      "Chest": "HP% / DEF% / RES",
+      "Boots": "SPD / HP% / DEF%",
+      "Ring": "HP / DEF",
+      "Amulet": "HP / DEF / RES",
+      "Banner": "RES / HP / DEF"
+    }
+  },
+  "masteries": {
+    "defense": ["Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution", "Bulwark"],
+    "support": ["Steadfast", "Lay on Hands", "Rapid Response", "Healing Savior", "Merciful Aid", "Spirit Haste", "Timely Intervention"]
+  },
+  "book_priority": "A2 and A3 for cooldowns. A1 for higher heal chance if books are available.",
+  "notes_synergy": [
+    "Excellent for Doom Tower, Hydra, and Faction Wars as a cleanser and shield support.",
+    "Synergizes with shield set users and champions who benefit from Block Debuffs.",
+    "Passive healing is strong for sustained fights, especially with shield stacking.",
+    "Not a primary healer, but provides strong team sustain and protection.",
+    "Best paired with other defensive supports or provoke tanks."
+  ],
+  "sources": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-criodan-the-blue-skill-mastery-equip-guide/",
+    "HellHades: https://hellhades.com/champions/criodan-the-blue/",
+    "User screenshot (base stats)"
+  ],
+  "owned_copies": 1
+}

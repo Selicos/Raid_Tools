@@ -345,50 +345,22 @@ Long ago in the Fae Court, an upstart minor noble proclaimed himself **Criodan t
 - **High Resist:** Iron Twins have 300+ RES = needs 300+ ACC for reliable Freeze
 - **Boss mechanics:** Dec ATK reduces twin damage (Stag Knight Dec ATK preferred)
 - **Freeze helps:** Freezing twins reduces attacks, but twins cleanse debuffs frequently
-
+**Next Action:** Proceed to BATCH 4 (Gear, Masteries, Synergies) - Document gear recommendations, masteries, Faction Wars, team synergies. ~400-500 lines.
 **Owned Champion Comparison (Iron Twins Supports):**
-- **Stag Knight (8/10):** Dec DEF + Dec ATK = reduces twin damage output
 - **Brogni (9/10):** Shield + Block Debuffs = team sustains
 - **Criodan (5/10):** Freeze control (moderate impact), Inc SPD + TM boost
 
 **Verdict:** Use Stag Knight or Brogni for Iron Twins. Criodan is MODERATE (Freeze works but not optimal).
-
----
-
 ### 3.5. Hydra Brutal
 
-**Rating: 5/10 - Moderate (Freeze works but Hydra cleanses frequently)**
-
-**Context:** Criodan's Freeze works on Hydra but **NOT optimal** due to frequent cleanses.
-
-**Why 5/10:**
-- **Hydra cleanses:** Hydra cleanses debuffs every 4 turns = Freeze duration reduced
-- **Freeze helps:** Freezing Hydra heads reduces attacks, but unreliable
-- **Inc SPD + TM boost:** A3 speeds up team rotations (minor benefit)
 
 **Owned Champion Comparison (Hydra Brutal Supports):**
-- **Brogni (10/10):** Shield + Block Debuffs + HP Burn + Reflect Damage
-- **Ninja (9/10):** HP Burn activation + Freeze + Escalation passive
-- **Stag Knight (7/10):** Dec DEF + Dec ATK
-- **Criodan (5/10):** Freeze control (unreliable), Inc SPD + TM boost
 
 **Verdict:** Use Brogni or Ninja for Hydra Brutal. Criodan is MODERATE (Freeze unreliable due to cleanses).
 
----
-
-### 3.6. Cursed City (Amius Lunar Archon)
-
 **Rating: 6/10 - Good (Freeze control + Inc SPD, but better options exist)**
-
-**Context:** Criodan's Freeze + Inc SPD works for Cursed City but **better champions exist**.
-
-**Why 6/10:**
 - **Freeze control:** AOE Freeze (A2) controls waves, reduces incoming damage
 - **Inc SPD + TM boost:** A3 speeds up rotations
-- **Limitation:** Amius Lunar Archon boss has high Resist = needs 250+ ACC
-
-**Owned Champion Comparison (Cursed City Supports):**
-- **Brogni (9/10):** Shield + Block Debuffs + HP Burn
 - **Stag Knight (8/10):** Dec DEF + Dec ATK
 - **Ninja (8/10):** HP Burn activation + Freeze
 - **Criodan (6/10):** Freeze control + Inc SPD + TM boost
@@ -400,101 +372,52 @@ Long ago in the Fae Court, an upstart minor noble proclaimed himself **Criodan t
 ### 3.7. Arena (Classic Gold 3-4)
 
 **Rating: 6/10 - Good (Inc SPD + TM boost, but weaker than Arbiter/Deacon)**
-
 **Context:** Criodan's Inc SPD + TM boost works for Arena speed teams but **weaker than Arbiter/Deacon**.
 
 **Why 6/10:**
 - **Inc SPD + TM boost:** A3 provides 30% Inc SPD (2 turns) + 15% TM boost (instant) = speeds up team
-- **AOE Freeze:** A2 can Freeze enemy team (manual), prevents attacks
 - **Limitation:** No speed lead aura = must pair with Arbiter/Wukong speed lead
 
-**Owned Champion Comparison (Arena Speed Supports):**
-- **Arbiter (10/10):** +30% SPD aura All Battles, TM boost 30%, Revive, Inc ATK
-- **Deacon Armstrong (9/10):** +19% SPD aura Dungeons, TM boost 30%, Dec DEF
 - **High Khatun (assumed owned?):** +19% SPD aura All Battles, TM boost 30%
 - **Criodan (6/10):** No aura, Inc SPD 30% + TM boost 15% + AOE Freeze
 
-**Verdict:** Use Arbiter or Deacon for Arena speed teams. Criodan is GOOD (Inc SPD + TM boost works, but weaker than top-tier supports).
-
----
-
 ### 3.8. Tag Team Arena
-
-**Rating: 7/10 - Good (Freeze control + Inc SPD for multiple teams)**
-
 **Context:** Criodan's Freeze + Inc SPD works for **Tag Team Arena** (3 teams required).
-
 **Why 7/10:**
 - **Freeze control:** AOE Freeze (A2) controls enemy teams, prevents attacks
 - **Inc SPD + TM boost:** A3 speeds up team rotations
 - **Multiple teams:** Tag Team requires 3 teams = Criodan fills support role for 2nd or 3rd team
 
-**Owned Champion Comparison (Tag Team Supports):**
-- **Arbiter (10/10):** +30% SPD aura, TM boost 30%, Revive (Team 1 priority)
-- **Stag Knight (8/10):** Dec DEF + Dec ATK (Team 1 or 2 priority)
-- **Criodan (7/10):** Freeze control + Inc SPD + TM boost (Team 2 or 3 role)
-
 **Verdict:** Use Arbiter for Team 1, Criodan for Team 2 or 3. Criodan is GOOD (Freeze + speed support for secondary teams).
-
----
-
 ### 3.9. Live Arena
-
-**Rating: 5/10 - Moderate (Freeze control, but lower priority)**
 
 **Context:** Criodan's Freeze + Inc SPD works for **Live Arena** but **lower priority** than core team.
 
-**Why 5/10:**
-- **Freeze control:** AOE Freeze (A2) controls enemy team
 - **Inc SPD + TM boost:** A3 speeds up team
-- **Limitation:** User's Live Arena strategy focuses on Wukong + Mythrala + Loki + Arbiter = Criodan is backup option
 
 **Owned Champion Comparison (Live Arena Supports):**
 - **Arbiter (10/10):** +30% SPD aura, TM boost 30%, Revive (core team)
 - **Loki (9/10):** Block Active Skills + Provoke + buff strip (core team)
-- **Criodan (5/10):** Freeze control + Inc SPD + TM boost (backup)
 
 **Verdict:** User's Live Arena strategy already defined (Wukong, Mythrala, Loki, Arbiter). Criodan is MODERATE (backup option for Freeze control).
-
----
-
-### 3.10. Faction Wars (Sylvan Watchers)
-
 **Rating: 8/10 - Excellent (Freeze control + Inc SPD + TM boost for faction)**
-
-**Context:** Criodan is **EXCELLENT for Sylvan Watchers Faction Wars** (Freeze control + speed support).
 
 **Why 8/10:**
 - **Freeze control:** AOE Freeze (A2) + A1 3-hit Freeze = controls waves and bosses
-- **Inc SPD + TM boost:** A3 speeds up faction team rotations
-- **Passive TM boost:** 5% TM per Freeze = more turns = more support
-- **User Progress:** Sylvan Watchers faction status UNKNOWN (not listed in completed/near-completion factions)
-
-**Owned Champion Comparison (Sylvan Watchers Faction):**
 - **Criodan the Blue (8/10):** Freeze control + Inc SPD + TM boost
 - **[Other Sylvan Watchers]:** Need to validate owned Sylvan Watchers roster
 
-**Verdict:** Criodan is **EXCELLENT for Sylvan Watchers Faction Wars** (Freeze + speed support). Build Criodan for Faction Wars if Sylvan Watchers is in-progress faction.
-
----
 
 ### 3.11. Content Summary Table
 
 | Content | Rating | Key Role | Priority |
 |---------|--------|----------|----------|
 | **Clan Boss UNM** | 1/10 | Not viable (Freeze IMMUNE) | ❌ SKIP |
-| **Dungeons (Fire Knight)** | 9/10 | Multi-hit shield break + Freeze waves | ✅ BEST USE |
-| **Dungeons (Spider/Dragon/Ice Golem)** | 7/10 | Freeze control + Inc SPD + TM boost | ✅ GOOD |
-| **Doom Tower Hard (Dreadhorn/Bommal)** | 10/10 | Dreadbomb Freeze (50% damage reduction) | ✅ CRITICAL |
 | **Doom Tower Hard (Frost/Nether Spider)** | 8-9/10 | Freeze spiderlings + Inc SPD | ✅ EXCELLENT |
 | **Iron Twins Fortress** | 5/10 | Freeze control (moderate) | ⚠️ MODERATE |
-| **Hydra Brutal** | 5/10 | Freeze control (unreliable) | ⚠️ MODERATE |
-| **Cursed City** | 6/10 | Freeze control + Inc SPD | ⚠️ GOOD |
 | **Arena (Classic Gold 3-4)** | 6/10 | Inc SPD + TM boost (weaker than Arbiter) | ⚠️ GOOD |
 | **Tag Team Arena** | 7/10 | Freeze control + Inc SPD (Team 2/3 role) | ✅ GOOD |
-| **Live Arena** | 5/10 | Freeze control (backup option) | ⚠️ MODERATE |
 | **Faction Wars (Sylvan Watchers)** | 8/10 | Freeze + Inc SPD + TM boost | ✅ EXCELLENT |
-
 **Overall Priority:** **HIGH for Fire Knight + Dreadhorn/Bommal Hard**, GOOD for other dungeons/Doom Tower, SKIP for Clan Boss UNM.
 
 ---
@@ -516,13 +439,7 @@ Long ago in the Fae Court, an upstart minor noble proclaimed himself **Criodan t
 
 **Relentless Set (Expanded Advice):**
 - Relentless is a strong option for Criodan in Fire Knight, Doom Tower waves, and Faction Wars when extra turns increase Freeze uptime and TM control.
-- Use Relentless when Criodan is not strictly speed-tuned, allowing him to cycle skills and apply more Freezes and TM boosts.
-- Stat priorities in Relentless: 220+ SPD (after bonuses), 250+ ACC, 100% Crit Rate (if using for damage), 30k+ HP. Do not sacrifice ACC or SPD for Relentless procs.
-- Synergy: Relentless works best with TM boosting allies (e.g., Michelangelo, Coldheart) and in teams where Criodan can safely take extra turns without disrupting team order.
-- For Bommal/Dreadhorn, Relentless can help keep Dreadbombs frozen and TM locked, but ensure survivability is not compromised.
-- For Faction Wars, Relentless can help with wave control and faster clears if survivability is sufficient.
 - Avoid Relentless if strict speed tuning is required (e.g., Clan Boss, some Doom Tower bosses) or if survivability is low—prioritize Speed/Accuracy/Stalwart instead.
-- Summary: Relentless is best for maximizing Freeze uptime and TM control in content where extra turns are safe and beneficial.
 
 **Perception Set (Expanded Advice):**
 - Perception is ideal if you lack high-quality Speed or Accuracy gear. It provides both SPD and ACC, making it easy to hit key stat thresholds for Freeze reliability and turn cycling.
@@ -537,30 +454,17 @@ Long ago in the Fae Court, an upstart minor noble proclaimed himself **Criodan t
 - Avoid Stalwart in content where single-target damage is the main threat (e.g., Fire Knight boss).
 
 **Frost Set (Expanded Advice):**
-- Frost is a niche option for cheese strategies, especially in Faction Wars or Doom Tower waves. It can apply additional Freeze debuffs when Criodan is attacked.
-- Use Frost if you want to maximize crowd control and disrupt enemy waves. Stat priorities: 220+ SPD, 250+ ACC, 35k+ HP.
-- Synergy: Frost works best with other Freeze champions (Michelangelo, Ninja) and in content where enemies attack frequently.
 - Avoid Frost in boss fights where Freeze debuffs are less impactful or where survivability is more important.
 
-**Immunity Set (Expanded Advice):**
-- Immunity is recommended if facing heavy debuffs (e.g., Doom Tower waves with stun/fear, Arena teams with debuffers).
 - Use Immunity to ensure Criodan can always use his skills and maintain Freeze uptime. Stat priorities: 220+ SPD, 250+ ACC, 35k+ HP.
 - Synergy: Immunity is best in Arena, Tag Team, and certain Doom Tower waves. Pair with speed boosters for maximum effect.
-- Avoid Immunity in PvE content where debuffs are rare or where other sets provide more value.
-
 **Summary Table:**
-| Set         | Best Use Cases                | Stat Priorities                | Synergy Champions         | When to Avoid                |
 |-------------|------------------------------|-------------------------------|---------------------------|------------------------------|
 | Speed+ACC   | All PvE, Fire Knight, Bommal | 220+ SPD, 250+ ACC, 35k+ HP   | All                      | Never                        |
 | Relentless  | Fire Knight, DT waves, FW    | 220+ SPD, 250+ ACC, 30k+ HP   | Michelangelo, Coldheart   | Strict speed tune, low HP    |
 | Perception  | Early/mid-game, FW, Bommal   | 220+ SPD, 250+ ACC, 35k+ HP   | All                      | Max gear available           |
-| Stalwart    | Bommal, Dreadhorn            | 250+ ACC, 220+ SPD, 40k+ HP   | Godseeker Aniri           | Single-target content        |
-| Frost       | FW, DT waves, cheese         | 220+ SPD, 250+ ACC, 35k+ HP   | Michelangelo, Ninja       | Boss fights, survivability   |
-| Immunity    | Arena, DT waves, debuffers   | 220+ SPD, 250+ ACC, 35k+ HP   | Speed boosters            | PvE w/o debuffs              |
 
 ---
-
-## 5. Masteries
 
 **Clan Boss UNM:**
 - Not recommended (1/10 rating). If built: Support tree (Lore of Steel, Evil Eye), Defense tree (Tough Skin, Defiant). No T6 required.
@@ -568,7 +472,6 @@ Long ago in the Fae Court, an upstart minor noble proclaimed himself **Criodan t
 **Fire Knight/Doom Tower/Bommal:**
 - Offense: Warmaster (T6, for boss damage), Keen Strike, Shield Breaker
 - Support: Lore of Steel, Evil Eye, Lasting Gifts (for SPD/ACC sets, TM control)
-- Defense: Stalwart, Defiant, Delay Death (for Bommal/Dreadhorn survivability)
 
 **Key Masteries:**
 - Warmaster (T6, for boss damage)

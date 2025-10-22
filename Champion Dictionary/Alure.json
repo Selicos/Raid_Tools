@@ -1,0 +1,48 @@
+{
+  "name": "Alure",
+  "rarity": "Epic",
+  "affinity": "Spirit",
+  "faction": "Demonspawn",
+  "role": "Attack / Turn Meter Control",
+  "base_stats": {
+    "HP": 14040,
+    "ATK": 1575,
+    "DEF": 793,
+    "SPD": 96,
+    "C.RATE": 15,
+    "C.DMG": 60,
+    "RES": 30,
+    "ACC": 0
+  },
+  "skills": [
+    {
+      "name": "Psychic Whip",
+      "type": "A1",
+      "description": "Attacks 3 times at random. Decreases the target’s Turn Meter by 25% on each critical hit.",
+      "books_required": 0
+    },
+    {
+      "name": "Temptation",
+      "type": "A2",
+      "description": "Attacks all enemies 2 times. Each hit has a 30% chance of placing 30% Decrease DEF for 1 turn. Places Sleep for 1 turn on targets under Decrease DEF.",
+      "books_required": "A2 recommended for higher debuff chance and cooldown"
+    },
+    {
+      "name": "Hellish Blaze",
+      "type": "A3",
+      "description": "Attacks 1 enemy. Extra 30% crit chance. Ignores 50% of target’s DEF.",
+      "books_required": "A3 recommended for damage"
+    }
+  ],
+  "aura": "Increases Ally ACC in Faction Crypts by 50.",
+  "stat_priorities": "100% Crit Rate (for A1 TM control), 210–250+ Speed, 300–350+ Accuracy (for DT Hard), HP/DEF for survivability",
+  "recommended_gear": "Perception, Speed, Crit Rate, Accuracy, Relentless (for more TM control), Affinitybreaker (for Scarab King), Lifesteal (for sustain)",
+  "masteries": "Offense (Giant Slayer for multi-hit A1), Support (Evil Eye, Pinpoint Accuracy, Charged Focus, Sniper)",
+  "blessings": "Cruelty (Debuffer), Phantom Touch (Clan Boss)",
+  "notes": "Does not require books for core TM control role. Build for 100% crit rate and high speed/accuracy. S-tier for Fire Knight and Dark Fae. Can be used in duplicate for Scarab King auto teams.",
+  "sources": [
+    "https://ayumilove.net/raid-shadow-legends-alure-skill-mastery-equip-guide/",
+    "https://hellhades.com/champions/alure/"
+  ],
+  "last_validated": "2025-10-21"
+}

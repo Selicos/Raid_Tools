@@ -1,0 +1,73 @@
+{
+  "name": "Arbiter",
+  "rarity": "Legendary",
+  "affinity": "Void",
+  "faction": "High Elves",
+  "role": "Support",
+  "base_stats": {
+    "hp": 21135,
+    "atk": 1068,
+    "def": 1101,
+    "spd": 110,
+    "c_rate": 15,
+    "c_dmg": 50,
+    "resist": 30,
+    "acc": 10
+  },
+  "skills": [
+    {
+      "name": "Gaze of Justice",
+      "type": "A1",
+      "description": "Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 25% Weaken debuff for 2 turns.",
+      "upgrades": "+20% damage, +20% debuff chance (books)"
+    },
+    {
+      "name": "Enforced Humility",
+      "type": "A2",
+      "description": "Attacks all enemies. 75% chance to decrease duration of all enemy buffs by 1 turn.",
+      "cooldown": "4 turns",
+      "upgrades": "+10% damage, +25% debuff chance (books)"
+    },
+    {
+      "name": "Mentor of Heroes",
+      "type": "A3",
+      "description": "Fills Turn Meters of all allies by 30%, places 50% Increase ATK on all allies for 2 turns, heals all allies by 25% of their max HP if they have less than 50% HP.",
+      "cooldown": "4 turns (3 turns booked)",
+      "upgrades": "-1 turn CD (books)"
+    },
+    {
+      "name": "Destiny’s Call",
+      "type": "A4",
+      "description": "Revives all dead allies to 35% HP, fills Turn Meters of all allies by 20%, grants Arbiter an extra turn if an ally was revived.",
+      "cooldown": "7 turns (5 turns booked)",
+      "upgrades": "-2 turn CD (books)"
+    },
+    {
+      "name": "Aura",
+      "type": "Aura",
+      "description": "Increases Ally SPD in Arena by 30%"
+    }
+  ],
+  "book_priority": "A3, A4 (for cooldowns and team utility)",
+  "gear_recommendations": {
+    "pve": ["Speed", "Divine Speed", "Supersonic", "Relentless"],
+    "pvp": ["Speed", "Stoneskin", "Supersonic"],
+    "stat_priority": ["SPD", "DEF%", "HP%", "ACC"]
+  },
+  "masteries": {
+    "pve": "Support + Offense (Warmaster for Clan Boss, Evil Eye, Lasting Gifts)",
+    "pvp": "Support + Defense (Unshakeable, Rapid Response, Evil Eye)"
+  },
+  "notes": [
+    "Arbiter is a top-tier speed lead and reviver for Arena, Dungeons, and Faction Wars.",
+    "A3 is a premier Turn Meter boost and team heal.",
+    "A4 revive with extra turn enables immediate follow-up.",
+    "A2 is strong for buff control in Arena and Hydra.",
+    "Needs high SPD and enough ACC for debuff/buff control."
+  ],
+  "sources": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-arbiter-skill-mastery-equip-guide/",
+    "HellHades: https://hellhades.com/champions/arbiter/",
+    "User screenshot (base stats)"
+  ]
+}

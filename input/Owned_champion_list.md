@@ -3,11 +3,10 @@
 ## Champion List
 
 - Abbess | Rarity: Legendary | Affinity: Force | Faction: Sacred Order | Last Updated: 2025-10-15
-- Adelyn | Rarity: Rare | Affinity: Spirit | Faction: High Elves | Last Updated: 2025-10-15
+- Chronicler Adelyn | Rarity: Rare | Affinity: Spirit | Faction: High Elves | Last Updated: 2025-10-15
 - Akoth the Seared | Rarity: Epic | Affinity: Force | Faction: Demonspawn | Last Updated: 2025-10-18
 - Alice the Wanderer | Rarity: Legendary | Affinity: Magic | Faction: ShadSacred Order | Last Updated: 2025-10-15
 - Alure | Rarity: Epic | Affinity: Spirit | Faction: Demonspawn | Last Updated: 2025-10-15
-- Aox the Rememberer | Rarity: Epic | Affinity: Void | Faction: Lizardmen | Last Updated: 2025-10-15
 - Apothecary (x3) | Rarity: Rare | Affinity: Magic | Faction: High Elves | Last Updated: 2025-10-15
 - Arbiter | Rarity: Legendary | Affinity: Void | Faction: High Elves | Last Updated: 2025-10-15
 - Archmage Hellmut | Rarity: Epic | Affinity: Force | Faction: Banner Lords | Last Updated: 2025-10-15
@@ -36,12 +35,10 @@
 - Fayne | Rarity: Epic | Affinity: Magic | Faction: Dark Elves | Last Updated: 2025-10-15
 - Fenshi | Rarity: Epic | Affinity: Spirit | Faction: Shadowkin | Last Updated: 2025-10-15
 - Frozen Banshee | Rarity: Rare | Affinity: Spirit | Faction: Undead Hordes | Last Updated: 2025-10-15
-- Fyr-gun Isabel | Rarity: Legendary | Affinity: Force | Faction: Ogryn Tribes | Last Updated: 2025-10-18
 - Geomancer | Rarity: Epic | Affinity: Magic | Faction: Barbarians | Last Updated: 2025-10-15
 - Ghostborn | Rarity: Epic | Affinity: Magic | Faction: Knights Revenant | Last Updated: 2025-10-18
 - Godseeker Aniri (x2) | Rarity: Epic | Affinity: Void | Faction: Sacred Order | Last Updated: 2025-10-18
 - Gretel Hagbane | Rarity: Epic | Affinity: Spirit | Faction: Sylvan Watchers | Last Updated: 2025-10-15
-- Guurda Bogbrew | Rarity: Epic | Affinity: Force | Faction: Ogryn Tribes | Last Updated: 2025-10-18
 - He-Man | Rarity: Legendary | Affinity: Magic | Faction: Sacred Order | Last Updated: 2025-10-18
 - High Khatun | Rarity: Rare | Affinity: Spirit | Faction: Barbarians | Last Updated: 2025-10-18
 - Hotatsu (x2) | Rarity: Epic | Affinity: Magic | Faction: Shadowkin | Last Updated: 2025-10-15
@@ -57,7 +54,6 @@
 - Loki the Deceiver | Rarity: Legendary | Affinity: Spirit | Faction: Barbarians | Last Updated: 2025-10-18
 - Lord Champfort | Rarity: Legendary | Affinity: Magic | Faction: Banner Lords | Last Updated: 2025-10-18
 - Lord Shazar | Rarity: Legendary | Affinity: Force | Faction: Demonspawn | Last Updated: 2025-10-15
-- Lua (x2) | Rarity: Epic | Affinity: Spirit | Faction: Shadowkin | Last Updated: 2025-10-15
 - Maulie Tankard | Rarity: Legendary | Affinity: Magic | Faction: Dwarves | Last Updated: 2025-10-15
 - Mausoleum Mage | Rarity: Epic | Affinity: Void | Faction: Undead Hordes | Last Updated: 2025-10-15
 - Michelangelo | Rarity: Legendary | Affinity: Spirit | Faction: Banner Lords | Last Updated: 2025-10-18
@@ -66,7 +62,6 @@
 - Narma the Returned | Rarity: Epic | Affinity: Void | Faction: Undead Hordes | Last Updated: 2025-10-15
 - Ninja | Rarity: Legendary | Affinity: Spirit | Faction: Shadowkin | Last Updated: 2025-10-15
 - Nogdar the Headhunter (x2) | Rarity: Legendary | Affinity: Force | Faction: Ogryn Tribes | Last Updated: 2025-10-18
-- Nogoryo (x2) | Rarity: Rare | Affinity: Magic | Faction: Shadowkin | Last Updated: 2025-10-18
 - Norog | Rarity: Legendary | Affinity: Magic | Faction: Skinwalkers | Last Updated: 2025-10-15
 - Pain Keeper (x3) | Rarity: Epic | Affinity: Void | Faction: Knights Revenant | Last Updated: 2025-10-18
 - Paragon | Rarity: Rare | Affinity: Void | Faction: Undead Hordes | Last Updated: 2025-10-18
