@@ -1,3 +1,28 @@
+## 16. Troubleshooting & Maintenance
+
+### Common Issues & Solutions
+
+**Copilot not following instructions:**
+- Ensure instructions are specific and actionable, not vague or ambiguous.
+- Check for conflicting or duplicated guidance between base and project files.
+- If instructions are too long, prioritize the most important at the top and remove unnecessary duplication.
+
+**Copilot ignoring project-specific file:**
+- Confirm the file is in the `.github` folder and named with `_copilot-instructions.md` or `-instructions.md`.
+- Validate markdown syntax (no broken links, proper formatting).
+
+**Instructions too long or verbose:**
+- Remove duplicated content from base instructions; reference instead.
+- Summarize examples and link to full examples elsewhere if needed.
+- Focus on "what" and "why"; let Copilot determine "how" unless implementation is critical.
+
+### Maintenance Best Practices
+- Review and update project instructions regularly as requirements change.
+- Use the changelog to document all major edits and updates.
+- Validate Table of Contents links and section anchors after major changes.
+- Test Copilot behavior after significant instruction updates and refine as needed.
+
+---
 # RAID Shadow Legends Project Instructions (DRAFT v0.7)
 
 > This file is a DRAFT for the unified project instructions, workflows, and templates for champion, boss, mechanic, and team dictionary/guide generation. All edits and section reviews will be staged here before final consolidation and ToC/anchor update.
@@ -450,7 +475,37 @@ Provide a structured set of review questions and feedback prompts to ensure all 
 
 ---
 
-## 14. Change Log & Version History
+
+## 15. Housekeeping, Shift-Left, and Proactive Maintenance
+
+### Purpose
+Establish best practices for keeping the project clean, up-to-date, and continuously improving, with a focus on early error detection, automation, and reducing technical debt.
+
+### Housekeeping Guidelines
+- Regularly archive or remove obsolete files, prompts, and templates (rely on git for version history).
+- Keep the workspace organized: maintain clear folder structures, consistent naming, and up-to-date indexes.
+- Remove or refactor deprecated scripts, workflows, or mechanics as soon as they are replaced.
+- Document all major changes in the changelog and commit messages.
+- Review and update the Table of Contents and section anchors after major edits.
+
+### Shift-Left Principles
+- Validate data, templates, and automation outputs as early as possible in the workflow.
+- Run validation, simulation, and linting scripts before merging or promoting any FINAL file.
+- Encourage early peer review and feedback on new workflows, templates, and automation scripts.
+- Integrate new validation or automation tools as soon as they are available.
+
+### Proactive Maintenance
+- Schedule regular (hourly when working) reviews of instructions, templates, and automation scripts for improvement opportunities.
+- Create and track housekeeping or improvement tasks as soon as issues are identified.
+- Update validation, simulation, and automation standards as the meta or project needs evolve.
+- Ensure all new content, mechanics, or workflows are indexed and cross-referenced immediately.
+
+### Automation & Continuous Improvement
+- Use automation for repetitive housekeeping tasks (e.g., index updates, validation runs, changelog generation).
+- Document and share new automation scripts or tools with the team.
+- Encourage a culture of continuous improvement and early error detection (shift-left mindset).
+
+---
 
 ### Purpose
 Maintain a clear, chronological record of all major changes, updates, and version history for the project instructions, templates, and workflows. This ensures transparency, traceability, and supports collaborative development.
