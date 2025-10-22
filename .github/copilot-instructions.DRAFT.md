@@ -13,15 +13,52 @@
 
 
 ## 1. Project Purpose & Scope
-- Build evaluation and optimization for actual user champion setups
+- The goal of this project is to create a comprehensive, automation-ready dictionary of RAID Shadow Legends content, focused on the user's actual owned champions, teams, and mechanics.
+- The project supports:
+	- Creating JSON dictionary entries for every owned champion, using the canonical process in `Champion_Dictionary_Prompt_template.md`.
+	- Creating similar entries for all bosses (with Hard difficulty focus if available), documenting mechanics, stat requirements, and all relevant trials.
+	- Adding/updating mechanic entries (buffs, debuffs, passives, unique effects) as needed for indexing and team-building.
+	- Enabling automated team creation, mechanic mapping, and testing using champion and mechanic entries.
+	- Building teams for each boss and mechanic, including meta, cheese, and hybrid teams, with analysis of damage, gearing, speed tunes, alternates, and ideal pulls (unowned champions).
+	- Advising on best team archetypes for each boss/dungeon (e.g., HP Burn, Poison, raw damage, buff spread).
+	- Inputting and evaluating actual champion builds/setups for effectiveness in their best use case, recommending upgrades, speed tunes, and new team compositions based on current builds and meta.
+	- Generating actionable boss guides and team notes using current builds, with recommendations for improvement.
+	- Focusing on maximizing damage (Clan Boss), reliability/clear speed (dungeons/bosses), and Faction Wars progression.
+	- Recommending new speed tunes and strategies as the meta evolves, and supporting continuous learning as new content and mechanics are released.
 
-7. **Continuous Improvement:** Update all instructions, workflows, and templates as new content, mechanics, or user needs arise. Consolidate duplicate sections and keep the knowledge base current.
+---
 
-- Mechanic entries: JSON or Markdown (as needed)
-- Team recommendations: Markdown/JSON (linked to boss and champion entries)
-- All new or updated templates should be referenced in the instructions and included in the repo for future automation and consistency.
+## 2. Continuous Improvement Policy
 
-- All entries must be validated from at least two authoritative sources (Ayumilove, HellHades, RaidHQ, in-game)
+**Continuous Improvement Policy**
+
+Continuous improvement is an active, ongoing process during all project work. The goal is to rapidly identify, test, and implement better ways of working—improving accuracy, automation, and user value as the project evolves. This section defines how to practice continuous improvement in real time:
+
+- **Iterative Workflow Refinement:**
+	- Treat every workflow (champion intake, boss guide, team building, etc.) as a living process. After each use, review what worked, what was slow, and what caused errors or confusion.
+	- Propose and test small changes immediately—update templates, checklists, or scripts as soon as a better approach is found.
+
+- **Rapid Feedback Loops:**
+	- After each major entry, guide, or team is created, review the process and output with the user or team. Capture feedback on clarity, speed, and accuracy.
+	- Use feedback to adjust instructions, templates, or validation steps before the next cycle.
+
+- **Learning from Errors:**
+	- When mistakes, omissions, or inefficiencies are found (e.g., missed mechanics, validation errors, unclear instructions), document the issue and update the relevant workflow or template immediately.
+	- Add troubleshooting notes or new review questions to prevent recurrence.
+
+- **Process Adaptation:**
+	- As new content, mechanics, or user needs arise, adapt workflows in real time—do not wait for a formal review cycle.
+	- If a new type of entry or validation is needed, create a draft template and test it on the next relevant task.
+
+- **Documentation of Improvements:**
+	- Summarize all significant workflow or template changes in the change log (see Section 12).
+	- Note the reason for each change (e.g., "Added new validation step after missed mechanic in Hydra guide").
+
+- **Continuous Skill Development:**
+	- Stay current with community best practices, new tools, and meta strategies. Integrate new knowledge into project workflows as soon as it is validated.
+
+This approach ensures the project remains efficient, accurate, and responsive to both user needs and game evolution. Continuous improvement is not a separate phase—it is embedded in every step of project work.
+
 ---
 
 ## 2. User Content Priorities & Focus
@@ -516,3 +553,29 @@ Provide a structured set of review questions and feedback prompts to ensure all 
 - What improvements or clarifications are needed?
 
 ---
+
+## 12. Change Log & Version History
+
+### Purpose
+Maintain a clear, chronological record of all major changes, updates, and version history for the project instructions, templates, and workflows. This ensures transparency, traceability, and supports collaborative development.
+
+### Change Log Format
+- Date (YYYY-MM-DD)
+- Author
+- Description of change (what was added, removed, or updated)
+- Affected sections/files
+
+### Example Change Log
+| Date       | Author           | Description                                      | Sections/Files                |
+|------------|------------------|--------------------------------------------------|-------------------------------|
+| 2025-10-21 | GitHub Copilot   | Initial draft complete through Section 12         | All sections                  |
+| 2025-10-21 | Selicos          | Updated champion template to JSON, unified refs   | Champion_Dictionary_Template  |
+| 2025-10-21 | GitHub Copilot   | Added Embrys mythic JSON intake example           | Embrys_the_Anomaly.json       |
+
+### Versioning Policy
+- Increment version number or add date-stamped entry for each major update.
+- Archive previous versions as needed for rollback and comparison.
+- Summarize key changes at the top of the file for quick reference.
+
+---
+
