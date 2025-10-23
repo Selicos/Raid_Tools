@@ -1,101 +1,110 @@
 {
-  "champion_name": "Artak",
-  "plarium_id": null,
+  "name": "Artak",
   "rarity": "Legendary",
   "affinity": "Magic",
   "faction": "Orcs",
+  "role": "HP Burner / Debuffer / Soloist",
   "meta_ratings": {
-    "Clan Boss": 10,
-    "Dungeons": 10,
-    "Doom Tower": 9,
-    "Arena": 7,
-    "Faction Wars": 10
+    "clan_boss": "9/10",
+    "dungeons": "10/10",
+    "doom_tower": "9/10",
+    "arena": "8/10",
+    "faction_wars": "10/10"
   },
-  "forms_alternate_kits": ["Base"],
-  "stats": {
-    "HP": 22140,
-    "ATK": 936,
-    "DEF": 1167,
-    "SPD": 100,
-    "C.RATE": 15,
-    "C.DMG": 63,
-    "RES": 30,
-    "ACC": 10
-  },
-  "skills": [
+  "forms": [
     {
-      "name": "Chaosrazor",
-      "type": "A1",
-      "description": "Attacks all enemies. 35% chance to extend duration of any [HP Burn] debuffs on each target by 1 turn. (Books: +20% damage, +10% chance)",
-      "cooldown": null,
-      "mechanics_tags": ["AoE Attack", "HP Burn", "Debuff Extension"]
-    },
-    {
-      "name": "Dogs of War",
-      "type": "A2",
-      "description": "Attacks all enemies. Before attacking, instantly activates any [HP Burn] debuffs on each enemy. 75% chance of placing 50% [Decrease ATK] on all enemies for 2 turns. (Books: +10% damage, +25% chance, -1 CD)",
-      "cooldown": 4,
-      "mechanics_tags": ["AoE Attack", "HP Burn", "HP Burn Activation", "Decrease ATK"]
-    },
-    {
-      "name": "Purifyre",
-      "type": "A3",
-      "description": "Attacks all enemies 2 times. First hit: 75% chance to place [HP Burn] on all enemies for 2 turns. Restores this Champion’s destroyed MAX HP by 10% for each [HP Burn] placed. Heals by 5% MAX HP for each [HP Burn] attempt blocked or resisted. (Books: +10% damage, +25% chance, -1 CD)",
-      "cooldown": 4,
-      "mechanics_tags": ["AoE Attack", "Multi-hit", "HP Burn", "Heal", "Restore Destroyed MAX HP"]
-    },
-    {
-      "name": "Burning Blood",
-      "type": "Passive",
-      "description": "Whenever a [HP Burn] is activated, destroys this Champion’s MAX HP by 5% (up to 50%). Increases this Champion’s DMG, C.DMG, and DEF by 1% for each 1% destroyed MAX HP. Also increases SPD and RES by 2 for each 1% destroyed MAX HP.",
-      "cooldown": null,
-      "mechanics_tags": ["Unique Passive", "Stat Scaling", "Destroyed MAX HP"]
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 22140,
+        "ATK": 936,
+        "DEF": 1167,
+        "SPD": 100,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 30,
+        "ACC": 10
+      },
+      "skills": [
+        {
+          "name": "Chaosrazor",
+          "type": "A1",
+          "description": "Attacks all enemies. Has a 35% chance to extend the duration of any [HP Burn] debuffs on each target by 1 turn.",
+          "multiplier": "0.1x HP",
+          "cooldown_booked": null,
+          "mechanics_tags": ["AoE", "HP Burn Extension"],
+          "book_value": "+20% damage, +10% debuff chance",
+          "notes": "Synergizes with A3 for long HP Burn uptime."
+        },
+        {
+          "name": "Dogs Of War",
+          "type": "A2",
+          "description": "Attacks all enemies. Before attacking, instantly activates any [HP Burn] debuffs on each enemy. Has a 75% chance of placing a 50% [Decrease ATK] debuff on all enemies for 2 turns.",
+          "multiplier": "0.25x HP",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "HP Burn Activation", "Decrease ATK"],
+          "book_value": "+10% damage, +25% debuff chance, -1 CD",
+          "notes": "HP Burn activation is key for Spider, Hydra, and boss content."
+        },
+        {
+          "name": "Purifyre",
+          "type": "A3",
+          "description": "Attacks all enemies 2 times. The first hit has a 75% chance of placing a [HP Burn] debuff on all enemies for 2 turns. Restores this Champion’s destroyed MAX HP by 10% for each [HP Burn] debuff placed by this skill. Heals this Champion by 5% of their MAX HP for each [HP Burn] debuff attempt blocked or resisted by the enemy team.",
+          "multiplier": "0.14x HP",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "Double Hit", "HP Burn", "Restore Destroyed MAX HP", "Heal (on resist)"],
+          "book_value": "+10% damage, +25% debuff chance, -1 CD",
+          "notes": "Restores destroyed MAX HP and heals on resist."
+        },
+        {
+          "name": "Burning Blood",
+          "type": "Passive",
+          "description": "Whenever a [HP Burn] debuff is activated, destroys this champion's MAX HP by 5% (stacks up to 50%). Increases this Champion’s DMG, C.DMG, and DEF by 1% for each 1% of their destroyed MAX HP. Also increases this Champion’s SPD and RES by 2 for each 1% of their destroyed MAX HP.",
+          "multiplier": null,
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive", "Stat Scaling (Destroyed MAX HP)", "Self Debuff (Destroyed MAX HP)"],
+          "book_value": "No books required",
+          "notes": "Unique mechanic: stat scaling at the cost of destroyed MAX HP."
+        }
+      ],
+      "aura": null,
+      "comments": "Artak is a top-tier HP Burn specialist for Spider, Hydra, and solo dungeon content. His passive enables unique stat scaling but requires careful management of destroyed MAX HP."
     }
   ],
-  "mechanics_tagging": [
-    "AoE Attack",
-    "HP Burn",
-    "Debuff Extension",
-    "HP Burn Activation",
-    "Decrease ATK",
-    "Multi-hit",
-    "Heal",
-    "Restore Destroyed MAX HP",
-    "Unique Passive",
-    "Stat Scaling",
-    "Destroyed MAX HP"
-  ],
-  "gear_mastery_recommendations": {
-    "gear_sets": [
-      "Perception", "Immortal", "Relentless", "Speed", "Toxic", "Regen", "Savage", "Bolster", "Lethal"
-    ],
-    "stat_priority": [
-      "SPD", "ACC", "HP%", "C.RATE", "C.DMG"
-    ],
-    "masteries": [
-      "Warmaster", "Keen Strike", "Methodical", "Kill Streak", "Pinpoint Accuracy", "Lore of Steel", "Evil Eye", "Master Hexer", "Tough Skin", "Blastproof", "Unshakeable"
-    ]
+  "mechanics_tags": ["AoE", "HP Burn", "HP Burn Extension", "HP Burn Activation", "Decrease ATK", "Double Hit", "Restore Destroyed MAX HP", "Heal", "Passive", "Stat Scaling"],
+  "stat_priorities": ["HP%", "SPD", "ACC", "C.RATE", "C.DMG", "DEF%"],
+  "stat_priority_recommendations": {
+    "clan_boss": "HP%, SPD, ACC, C.RATE, C.DMG",
+    "dungeons": "HP%, SPD, ACC, C.RATE, C.DMG, DEF%",
+    "arena": "HP%, SPD, ACC, C.RATE, C.DMG, RES"
   },
-  "ai_quirks_auto_warnings": {
+  "recommended_gear": ["Bloodthirst", "Impulse", "Lifesteal", "Reflex", "Relentless", "Toxic", "Immortal", "Perception", "Speed", "Regeneration", "Stoneskin", "Protection"],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Master Hexer", "Evil Eye", "Cycle of Violence"],
+    "dungeons": ["Flawless Execution", "Master Hexer", "Lore of Steel", "Cycle of Magic"],
+    "arena": ["Flawless Execution", "Cycle of Violence", "Unshakeable"],
+    "doom_tower": ["Warmaster", "Lasting Gifts", "Cycle of Magic"],
+    "faction_wars": ["Warmaster", "Cycle of Magic"],
+    "general": ["Offense/Support/Defense as needed"]
+  },
+  "blessings": ["Brimstone", "Cruelty", "Polymorph"],
+  "ai_quirks": {
     "bad_ai": false,
-    "ai_issue_description": "Generally good AI. For solo dungeon runs, ensure A3 is prioritized to apply HP Burn."
+    "ai_issue_description": "Generally good AI. Will use HP Burn and activation skills appropriately. No major issues."
   },
   "cheese_strategy": {
-    "cheese_viable": false,
-    "cheese_type": null,
-    "cheese_mechanic_info": null
+    "cheese_viable": true,
+    "cheese_type": "HP Burn Activation / Solo Sustain",
+    "cheese_mechanic_info": "HP Burn activation and self-healing allow for soloing Spider, Hydra, and dungeons."
   },
-  "mechanics_advisory": "Synergizes with HP Burn teams, especially for Spider and Hydra. Stat scaling with destroyed MAX HP is unique; manage healing to avoid excessive HP loss. All skills benefit from books.",
+  "mechanics_advisory": "Artak's HP Burn activation and stat-scaling passive make him a unique and powerful option for boss and solo content. Build for HP, speed, and accuracy.",
   "citations": [
-    "Ayumilove: https://ayumilove.net/raid-shadow-legends-artak-skill-mastery-equip-guide/ (accessed 2025-10-21)",
-    "HellHades: https://hellhades.com/champions/artak/ (accessed 2025-10-21)",
-    "User screenshot (base stats, 2025-10-21)"
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-artak-skill-mastery-equip-guide/ (accessed 2025-10-22)",
+    "HellHades: https://hellhades.com/champions/artak/ (accessed 2025-10-22)",
+    "In-game screenshot (user provided)"
   ],
-  "update_review_notes": {
-    "last_updated": "2025-10-21",
-    "last_patch": "V7.10 (2023-05-11)",
-    "author": "GitHub Copilot",
-    "summary_of_changes": "Initial validated entry from Ayumilove, HellHades, and user screenshot."
+  "update_notes": {
+    "last_updated": "2025-10-22",
+    "last_patch": "Initial canonical entry for Artak."
   },
-  "notes_comments": "Top-tier for Spider, Hydra, Ice Golem, Doom Tower, Faction Wars, and solo dungeon farming. No cheese strategies."
+  "author": "GitHub Copilot"
 }

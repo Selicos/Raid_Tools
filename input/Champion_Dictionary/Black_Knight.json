@@ -1,0 +1,108 @@
+{
+  "name": "Black Knight",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "Banner Lords",
+  "role": "HP",
+  "meta_ratings": {
+    "clan_boss": "7/10",
+    "dungeons": "9/10",
+    "doom_tower": "9/10",
+    "arena": "9/10",
+    "faction_wars": "10/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 22470,
+        "ATK": 914,
+        "DEF": 1167,
+        "SPD": 100,
+        "C.RATE": 15,
+        "C.DMG": 57,
+        "RES": 50,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Heavy Blow",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 75% chance of placing a [Provoke] debuff for 1 turn.",
+          "multiplier": "0.28x HP",
+          "cooldown_booked": null,
+          "mechanics_tags": ["Provoke", "Single Target"],
+          "book_value": "+20% damage",
+          "notes": "75% chance to Provoke when fully booked."
+        },
+        {
+          "name": "Lower Visor",
+          "type": "A2",
+          "description": "Places a 15% [Continuous Heal] buff and a 60% [Increase DEF] buff on all allies for 2 turns.",
+          "multiplier": null,
+          "cooldown_booked": 2,
+          "mechanics_tags": ["Continuous Heal", "Increase DEF", "Buff", "AoE"],
+          "book_value": "Cooldown -1 turn",
+          "notes": "Strong team support."
+        },
+        {
+          "name": "Last Breath",
+          "type": "A3",
+          "description": "Attacks all enemies. Damage increases according to the amount of HP this champion has lost.",
+          "multiplier": "0.25x HP * (HP Percent Lost * 10 + 1)",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "HP Scaling", "Nuke"],
+          "book_value": "+20% damage",
+          "notes": "Hits much harder at low HP."
+        },
+        {
+          "name": "Valorous",
+          "type": "Passive",
+          "description": "Places an [Unkillable] buff on this Champion for 1 turn if incoming damage exceeds 15% MAX HP in one attack. (Cooldown: 2 turns)",
+          "multiplier": null,
+          "cooldown_booked": 2,
+          "mechanics_tags": ["Unkillable", "Passive", "Self-Buff"],
+          "book_value": null,
+          "notes": "Triggers only if hit exceeds 15% max HP."
+        }
+      ],
+      "aura": "Increases Ally HP in all Battles by 33%",
+      "comments": "Excellent tank and support. A3 can nuke when low HP. Passive makes him hard to kill."
+    }
+  ],
+  "mechanics_tags": ["Provoke", "Continuous Heal", "Increase DEF", "Unkillable", "HP Scaling", "AoE", "Buff"],
+  "stat_priorities": ["HP%", "DEF%", "SPD", "C.RATE", "C.DMG"],
+  "stat_priority_recommendations": {
+    "clan_boss": "HP%, DEF%, SPD, C.RATE, C.DMG",
+    "dungeons": "HP%, DEF%, SPD, C.RATE, C.DMG",
+    "arena": "HP%, DEF%, SPD, C.RATE, C.DMG"
+  },
+  "recommended_gear": ["Bloodthirst", "Lifesteal", "Reflex", "Relentless", "Stoneskin", "Immortal", "Speed", "Perception"],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Support/Defense as needed"],
+    "dungeons": ["Warmaster", "Support/Defense as needed"],
+    "arena": ["Unshakeable", "Lasting Gifts", "Retribution"],
+    "doom_tower": ["Unshakeable", "Lasting Gifts", "Retribution"],
+    "faction_wars": ["Warmaster", "Support/Defense as needed"],
+    "general": ["Offense/Support/Defense as needed"]
+  },
+  "blessings": ["Brimstone (Debuffer)", "Heavencast (Magma Dragon)", "Ward of the Fallen (Damage Dealer)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Generally good AI. Uses A2 and A3 appropriately."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": null,
+    "cheese_mechanic_info": null
+  },
+  "mechanics_advisory": "Passive makes him a strong tank for high-damage bosses. A3 can be used as a nuke when low HP. Synergizes with healers and DEF buffers.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-black-knight-skill-mastery-equip-guide/ (accessed 2025-10-22)",
+    "HellHades: https://hellhades.com/champions/black-knight/ (accessed 2025-10-22)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-22",
+    "last_patch": "A3 multiplier and passive confirmed. Template-compliant JSON entry."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Scyl of the Drakes",
+  "rarity": "Legendary",
+  "affinity": "Spirit",
+  "faction": "Dragons",
+  "role": "Support/Utility",
+  "meta_ratings": {
+    "clan_boss": "7/10",
+    "dungeons": "8/10",
+    "doom_tower": "7/10",
+    "arena": "8/10",
+    "faction_wars": "7/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 19980,
+        "ATK": 859,
+        "DEF": 1387,
+        "SPD": 95,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 40,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Skill A1 (placeholder)",
+          "type": "A1",
+          "description": "Placeholder - fill with verified skill text.",
+          "multiplier": null,
+          "cooldown_booked": null,
+          "mechanics_tags": [],
+          "book_value": "",
+          "notes": ""
+        }
+      ],
+      "aura": "",
+      "comments": "Base stats populated from user screenshot attachment; skill details and citations pending."
+    }
+  ],
+  "mechanics_tags": [],
+  "stat_priorities": ["SPD", "ACC (if utility checks)", "HP/DEF for survivability"],
+  "stat_priority_recommendations": {},
+  "recommended_gear": [],
+  "masteries": {},
+  "blessings": [],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": ""
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "",
+    "cheese_mechanic_info": ""
+  },
+  "mechanics_advisory": "",
+  "citations": [],
+  "update_notes": {
+    "last_updated": "2025-10-23",
+    "last_patch": "Created entry with base_stats from user screenshot; skill text and sources pending."
+  }
+}

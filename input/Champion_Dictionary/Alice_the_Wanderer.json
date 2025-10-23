@@ -1,0 +1,108 @@
+{
+  "name": "Alice the Wanderer",
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Sacred Order",
+  "role": "Attack",
+  "meta_ratings": {
+    "clan_boss": "6/10",
+    "dungeons": "8/10",
+    "doom_tower": "8/10",
+    "arena": "9/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 15420,
+        "ATK": 1564,
+        "DEF": 1046,
+        "SPD": 104,
+        "C.RATE": 15,
+        "C.DMG": 60,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Vorpal Sword",
+          "type": "A1",
+          "description": "Attacks 1 enemy 2 times. Places an extra hit if the target has any active skills on cooldown. Each hit has an 80% chance of decreasing the duration of a random buff on the target by 1 turn.",
+          "multiplier": "1.7x ATK per hit",
+          "cooldown_booked": null,
+          "mechanics_tags": ["Multi-hit", "Extra Hit", "Decrease Buff Duration"],
+          "book_value": "+20% Damage, +20% Buff/Debuff Chance",
+          "notes": "Extra hit triggers if target has any skill on cooldown. Each hit can reduce buff duration."
+        },
+        {
+          "name": "Clockwork Cyclone",
+          "type": "A2",
+          "description": "Attacks all enemies. 75% chance of increasing the cooldowns of all enemy skills by 2 turns. Also has a 75% chance of decreasing the target’s Turn Meter by 15%. If at least one of a target’s skills has its cooldown increased to the max, decreases their Turn Meter by 30% instead.",
+          "multiplier": "4.2x ATK",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "Increase Skill Cooldown", "Decrease Turn Meter"],
+          "book_value": "+20% Damage, +25% Buff/Debuff Chance, -1 Cooldown",
+          "notes": "Turn Meter reduction is doubled if skill cooldown is maxed."
+        },
+        {
+          "name": "Queenslayer",
+          "type": "A3",
+          "description": "Attacks 1 enemy. Will ignore 20% of the target’s DEF. If the initial target is killed, also attacks the enemy with the lowest HP. Will also ignore 20% of the target’s DEF.",
+          "multiplier": "5x ATK",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Ignore Defense", "Chain Attack"],
+          "book_value": "+20% Damage, -1 Cooldown",
+          "notes": "If first target is killed, chains to lowest HP enemy. Both hits ignore 20% DEF."
+        },
+        {
+          "name": "Tick Tock",
+          "type": "Passive",
+          "description": "[Passive Effect] Whenever this Champion attacks, inflicts 3% bonus damage to each target for each turn remaining on all of their skill’s cooldowns. [Active Effect] Resets the cooldown of one of this Champion’s skills each time they kill an enemy. Occurs once per skill.",
+          "multiplier": null,
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Bonus Damage", "Reset Skill Cooldown"],
+          "book_value": "N/A",
+          "notes": "Synergizes with A2 for bonus damage. Kill resets one skill cooldown (once per skill)."
+        }
+      ],
+      "aura": "Increases Ally ATK in All Battles by 30%",
+      "comments": "Strong control and nuker. Excels in Arena and Doom Tower."
+    }
+  ],
+  "mechanics_tags": ["Multi-hit", "Extra Hit", "Decrease Buff Duration", "AoE", "Increase Skill Cooldown", "Decrease Turn Meter", "Ignore Defense", "Chain Attack", "Bonus Damage", "Reset Skill Cooldown"],
+  "stat_priorities": ["ATK%", "C.RATE", "C.DMG", "SPD", "ACC"],
+  "stat_priority_recommendations": {
+    "clan_boss": "ACC, SPD, C.RATE, C.DMG, ATK%",
+    "dungeons": "ATK%, C.RATE, C.DMG, SPD, ACC",
+    "arena": "ATK%, C.RATE, C.DMG, SPD, ACC"
+  },
+  "recommended_gear": ["Savage", "Lethal", "Merciless", "Perception", "Cruel", "Relentless", "Bloodthirst", "Impulse", "Stoneskin"],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Evil Eye", "Support"],
+    "dungeons": ["Helmsmasher", "Cycle of Violence", "Bring it Down", "Kill Streak", "Methodical"],
+    "arena": ["Helmsmasher", "Shield Breaker", "Ruthless Ambush", "Single Out", "Cycle of Violence", "Kill Streak"],
+    "doom_tower": ["Helmsmasher", "Cycle of Violence", "Kill Streak"],
+    "faction_wars": ["Helmsmasher", "Cycle of Violence", "Kill Streak"],
+    "general": ["Offense/Support as needed"]
+  },
+  "blessings": ["Crushing Rend", "Heaventcast"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "No major AI issues reported."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "",
+    "cheese_mechanic_info": "Not a cheese champion."
+  },
+  "mechanics_advisory": "Best used as a nuker and control champion. Synergizes with cooldown manipulation teams. Passive bonus damage is maximized when enemy skills are on cooldown.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-alice-the-wanderer-skill-mastery-equip-guide/ (accessed 2025-06-10)",
+    "HellHades: https://hellhades.com/champions/alice-the-wanderer/ (accessed 2025-06-10)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-06-10",
+    "last_patch": "Patch 10.10 (2025-01-08): Champion released."
+  }
+}

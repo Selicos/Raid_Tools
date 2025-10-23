@@ -1,0 +1,107 @@
+{
+  "name": "Loki the Deceiver",
+  "rarity": "Mythic",
+  "affinity": "Spirit",
+  "faction": "Barbarians",
+  "role": "Debuffer / Control / Support",
+  "meta_ratings": {
+    "clan_boss": "7/10",
+    "dungeons": "8/10",
+    "doom_tower": "9/10",
+    "arena": "9/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 19155,
+        "ATK": 980,
+        "DEF": 1321,
+        "SPD": 105,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 40,
+        "ACC": 20
+      },
+      "skills": [
+        {
+          "name": "Flames of Mischief",
+          "type": "A1",
+          "description": "Attacks all enemies. 70% chance to extend the duration of all debuffs on each target by 1 turn.",
+          "multiplier": "3.5x ATK",
+          "cooldown_booked": null,
+          "mechanics_tags": ["AoE", "Debuff Extension"],
+          "book_value": "+20% Damage, +20% Debuff Chance",
+          "notes": "Excellent for keeping debuffs up in Hydra and waves."
+        },
+        {
+          "name": "Deceiver's Gambit",
+          "type": "A2",
+          "description": "Custom targeting: On enemy, places Block Active Skills and Block Debuffs, then spreads 2 random debuffs to all enemies if under Veil. On ally, heals based on Loki's HP and spreads 2 random buffs to all allies.",
+          "multiplier": null,
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Block Active Skills", "Block Debuffs", "Buff Spread", "Debuff Spread", "Heal", "Custom Targeting"],
+          "book_value": "Cooldown -1",
+          "notes": "Powerful for controlling mythics and supporting team. Only 2 random buffs/debuffs are spread."
+        },
+        {
+          "name": "Bandit Flash",
+          "type": "A3",
+          "description": "Attacks 1 enemy. Steals all buffs and turn meter from the target. If under Veil, also ignores RES for these effects and grants Increase ATK to all allies.",
+          "multiplier": "5x ATK",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Single Target", "Steal Buffs", "Steal Turn Meter", "Ignore RES (Veil)", "Increase ATK (team)"],
+          "book_value": "+20% Damage, Cooldown -1",
+          "notes": "No ACC required for steal if under Veil. Great for boss control."
+        },
+        {
+          "name": "Mist Step",
+          "type": "Passive",
+          "description": "[Passive Effect] 15% chance to Evade incoming skills and effects. If under Veil or Perfect Veil, chance increases to 30%. [Active Effect] May prevent instant death from a single ability (testing required).",
+          "multiplier": null,
+          "cooldown_booked": null,
+          "mechanics_tags": ["Evade", "Veil Synergy", "Survivability"],
+          "book_value": null,
+          "notes": "Evade is boosted by Veil. May block lethal hits."
+        }
+      ],
+      "aura": "Increases Ally SPD in all Battles by 20%.",
+      "comments": "Mythic login/event champion. Excels at debuff extension, buff/debuff spread, and boss control. Veil synergy is key."
+    }
+  ],
+  "mechanics_tags": ["AoE", "Debuff Extension", "Block Active Skills", "Block Debuffs", "Buff Spread", "Debuff Spread", "Heal", "Custom Targeting", "Single Target", "Steal Buffs", "Steal Turn Meter", "Ignore RES (Veil)", "Increase ATK (team)", "Evade", "Veil Synergy", "Survivability"],
+  "stat_priorities": ["SPD", "ACC", "HP", "DEF", "RES"],
+  "stat_priority_recommendations": {
+    "clan_boss": "SPD, ACC, HP, DEF",
+    "dungeons": "SPD, ACC, HP, DEF",
+    "arena": "SPD, ACC, HP, RES"
+  },
+  "recommended_gear": ["Feral", "Perception", "Speed", "Supersonic", "Reflex", "Merciless", "Stoneskin"],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Evil Eye", "Support"],
+    "dungeons": ["Giant Slayer", "Master Hexer", "Lore of Steel"],
+    "arena": ["Eagle-Eye", "Unshakeable", "Support"],
+    "doom_tower": ["Timely Intervention", "Lasting Gifts"],
+    "faction_wars": ["Warmaster", "Cycle of Magic"],
+    "general": ["Offense/Support/Defense as needed"]
+  },
+  "blessings": ["Cruelty", "Phantom Touch", "Polymorph", "Brimstone"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI may not always target optimally for spread skills. Manual play recommended for Hydra and bosses."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion."
+  },
+  "mechanics_advisory": "Best used for debuff extension and control. Veil synergy is critical for full kit value. Build for high speed and accuracy.",
+  "citations": [
+    "HellHades: https://hellhades.com/champions/loki/ (accessed 2025-10-22)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-22",
+    "last_patch": "Patch 9.10 (2024-08): Champion released."
+  }
+}

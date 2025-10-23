@@ -1,0 +1,109 @@
+{
+  "name": "Maulie Tankard",
+  "rarity": "Legendary",
+  "affinity": "Spirit",
+  "faction": "Dwarves",
+  "role": "Support",
+  "meta_ratings": {
+    "clan_boss": "6/10",
+    "dungeons": "8/10",
+    "doom_tower": "8/10",
+    "arena": "9/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 0,
+        "ATK": 0,
+        "DEF": 0,
+        "SPD": 0,
+        "C.RATE": 0,
+        "C.DMG": 0,
+        "RES": 0,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Roast",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Damage increases by 50% if the target is under an HP Burn debuff.",
+          "multiplier": "3.3x DEF (base); +50% vs HP Burn",
+          "cooldown_booked": null,
+          "mechanics_tags": ["Single Target Attack", "HP Burn Synergy"],
+          "book_value": "Minor: increases damage; not a high priority compared to A2/A3",
+          "notes": "Good single-target damage when enemies are burning; pairs well with HP Burn teams."
+        },
+        {
+          "name": "Bar Brawl",
+          "type": "A2",
+          "description": "Places a Provoke debuff on all enemies for 1 turn. Has a 50% chance to place Provoke on the primary target for 2 turns instead. Places a 30% Reflect Damage buff on this champion for 2 turns.",
+          "multiplier": null,
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Provoke", "AoE", "Reflect Damage"],
+          "book_value": "High: reduces cooldown (book to -1), core utility for arena/dungeons",
+          "notes": "Accuracy dependent for consistent Provoke application. Primary utility skill; book when you want more frequent provokes."
+        },
+        {
+          "name": "Cheers!",
+          "type": "A3",
+          "description": "Revives an ally with 50% HP and fills their Turn Meter by 50%. Places a Block Damage buff on that ally for 1 turn.",
+          "multiplier": null,
+          "cooldown_booked": 6,
+          "mechanics_tags": ["Revive", "Turn Meter", "Block Damage"],
+          "book_value": "High: book to improve effectiveness (A3/A2 tome priority on community guides)",
+          "notes": "Very strong revival utility; combine with high-res allies to keep them alive. Books reduce cooldown and improve usability in longer fights."
+        },
+        {
+          "name": "Rowdy Crowd",
+          "type": "Passive",
+          "description": "Fills the Turn Meters of all allies by 15% when this champion is hit. Fills allies' Turn Meters by 25% when hit by a Boss.",
+          "multiplier": null,
+          "cooldown_booked": 2,
+          "mechanics_tags": ["Passive", "Increase Turn Meter"],
+          "book_value": "N/A",
+          "notes": "Excellent passive for speeding teams; procs frequently when Maulie is provoked/taunting and when enemies AOE. Very strong synergy with provoke/aggro comps."
+        }
+      ],
+      "aura": "None",
+      "comments": "Base form entry. Fill 'base_stats' with the user's in-game screenshot or the champion's ascended stats when available."
+    }
+  ],
+  "mechanics_tags": ["Provoke", "Revive", "Reflect Damage", "Block Damage", "Increase Turn Meter"],
+  "stat_priorities": ["ACC (for Provoke)", "SPD", "HP%/DEF% for survivability"],
+  "stat_priority_recommendations": {
+    "clan_boss": "ACC 200+, HP/DEF focus; not primary clan boss DPS",
+    "dungeons": "High ACC, solid SPD, tanky HP/DEF; pairs well as wave/tank in dungeons",
+    "arena": "High ACC for reliable Provoke, decent SPD, RES to survive"
+  },
+  "recommended_gear": ["Speed", "Lifesteal", "Resistance", "Accuracy"],
+  "masteries": {
+    "clan_boss": ["Support", "Cycle of Magic"],
+    "dungeons": ["Stubbornness", "Cycle of Magic"],
+    "arena": ["Unshakeable", "Pinpoint Accuracy"],
+    "doom_tower": ["Lasting Gifts", "Resurgence"],
+    "faction_wars": ["Giant Slayer", "Cycle of Magic"],
+    "general": ["Support/Defense tree options as situational"]
+  },
+  "blessings": ["Ward of the Fallen", "Polymorph (Arena)", "Brimstone (Hydra)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "No major bad-AI reports in community guides; A2 targeting/Provoke relies on ACC and may miss if low ACC."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Maulie is more utility/tank than cheese; pairs well with HP Burn comps to increase A1 damage."
+  },
+  "mechanics_advisory": "Maulie's kit centers on team speed and control: consistent Provoke + TM on-hit passive makes her excellent as a dungeon/arena control/tank. Revive (A3) with TM fill and Block Damage makes her a strong safety net in longer fights. Ensure adequate ACC and RES for stability.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-maulie-tankard-skill-mastery-equip-guide/ (accessed 2025-10-23)",
+    "HellHades: https://hellhades.com/raid/champions/maulie-tankard/ (accessed 2025-10-23)",
+    "Fandom: https://raidshadowlegends.fandom.com/wiki/Maulie_Tankard (accessed 2025-10-23)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-23",
+    "last_patch": "Created entry from community guide sources and flagged base_stats for user-supplied in-game screenshot"
+  }
+}

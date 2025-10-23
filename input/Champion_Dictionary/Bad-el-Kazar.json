@@ -1,0 +1,98 @@
+{
+  "name": "Bad-el-Kazar",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "Undead Hordes",
+  "role": "Support",
+  "meta_ratings": {
+    "clan_boss": "10/10",
+    "dungeons": "10/10",
+    "doom_tower": "9/10",
+    "arena": "8/10",
+    "faction_wars": "10/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 20145,
+        "ATK": 925,
+        "DEF": 1200,
+        "SPD": 108,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Dark Sphere",
+          "type": "A1",
+          "description": "Attacks all enemies. Heals this Champion and all allies by 20% of the damage inflicted.",
+          "multiplier": "2.8x ATK",
+          "cooldown_booked": null,
+          "mechanics_tags": ["AoE", "Heal"],
+          "book_value": "+20% damage, +20% heal",
+          "notes": "Heal is based on total damage dealt. Fully booked increases both damage and healing."
+        },
+        {
+          "name": "Malice",
+          "type": "A2",
+          "description": "Removes all debuffs from all allies. Places two 15% [Continuous Heal] buffs on all allies for 2 turns. Places two 5% [Poison] debuffs on all enemies for 2 turns.",
+          "multiplier": null,
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Cleanse", "Continuous Heal", "Poison", "AoE"],
+          "book_value": "Cooldown -2 turns",
+          "notes": "100% chance to apply poisons. Booked cooldown is 3 turns."
+        },
+        {
+          "name": "Prey Upon",
+          "type": "Passive",
+          "description": "All allies inflict 20% more damage against targets under [Poison] debuffs.",
+          "multiplier": null,
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive", "Damage Boost", "Poison Synergy"],
+          "book_value": null,
+          "notes": "Does not increase Warmaster/Giant Slayer damage. Does not stack if multiple Bad-el-Kazars are present."
+        }
+      ],
+      "aura": "Increases Ally Critical Rate in all Battles by 25%",
+      "comments": "One of the best universal support champions. Excels in Clan Boss, dungeons, and solo content."
+    }
+  ],
+  "mechanics_tags": ["AoE", "Heal", "Cleanse", "Continuous Heal", "Poison", "Damage Boost", "Poison Synergy"],
+  "stat_priorities": ["ACC", "SPD", "HP%", "DEF%"],
+  "stat_priority_recommendations": {
+    "clan_boss": "220+ SPD, 250+ ACC, HP%/DEF% for survivability",
+    "dungeons": "220+ SPD, 200+ ACC, HP%/DEF% for survivability",
+    "arena": "300+ SPD, 100% C.RATE, C.DMG, RES for tank"
+  },
+  "recommended_gear": ["Reflex", "Relentless", "Stalwart", "Speed", "Perception", "Immortal"],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Support Tree (Master Hexer, Lasting Gifts)", "No Rapid Response/Arcane Celerity in speed-tuned teams"],
+    "dungeons": ["Warmaster", "Support Tree (Master Hexer, Lasting Gifts)"],
+    "arena": ["Support/Defense as needed"],
+    "doom_tower": ["Support/Defense as needed"],
+    "faction_wars": ["Warmaster", "Support Tree (Master Hexer, Lasting Gifts)"],
+    "general": ["Offense/Support/Defense as needed"]
+  },
+  "blessings": ["Brimstone (late game)", "Iron Will (Ice Golem)", "Phantom Touch (solo farming)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Generally good AI. Prioritizes cleanse and healing appropriately."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": null,
+    "cheese_mechanic_info": null
+  },
+  "mechanics_advisory": "Passive does not boost Warmaster/Giant Slayer damage. Does not stack with multiple Bad-el-Kazars. Synergizes with poisoners and teams that apply Poison debuffs.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-bad-el-kazar-skill-mastery-equip-guide/ (accessed 2024-06-10)",
+    "HellHades: https://hellhades.com/champions/bad-el-kazar/ (accessed 2024-06-10)"
+  ],
+  "update_notes": {
+    "last_updated": "2024-06-10",
+    "last_patch": "Passive updated to 20% damage boost. Template-compliant JSON entry."
+  }
+}

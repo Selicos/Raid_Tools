@@ -1,0 +1,114 @@
+{
+  "name": "Underpriest Brogni",
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Dwarves",
+  "role": "Support / Shield / Cleanser",
+  "meta_ratings": {
+    "clan_boss": "10/10",
+    "dungeons": "10/10",
+    "doom_tower": "10/10",
+    "arena": "9/10",
+    "faction_wars": "10/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 22965,
+        "ATK": 782,
+        "DEF": 1266,
+        "SPD": 100,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 90,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Deepcrystal Scourge",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 45% chance of placing a [HP Burn] debuff for 2 turns.",
+          "multiplier": "6.5x ATK",
+          "cooldown_booked": null,
+          "mechanics_tags": ["Single Target", "HP Burn"],
+          "book_value": "+10% damage, +15% debuff chance",
+          "notes": "HP Burn chance increases with books. Useful for Clan Boss and Hydra."
+        },
+        {
+          "name": "Cavern’s Grasp",
+          "type": "A2",
+          "description": "Attacks all enemies. 75% chance of removing 1 random buff from all enemies and 1 random debuff from all allies. Increases value of [Shield] buffs on all allies by 30% of the damage inflicted.",
+          "multiplier": "6.6x ATK",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "Buff Strip", "Debuff Cleanse", "Shield Increase"],
+          "book_value": "+10% damage, +25% debuff chance, -1 CD",
+          "notes": "Key for Infinity Shield teams. Shield increase is based on damage dealt."
+        },
+        {
+          "name": "Resilient Glow",
+          "type": "A3",
+          "description": "Places a [Block Debuffs] and 50% [Increase ATK] on all allies for 2 turns. Also places a [Shield] buff on all allies for 2 turns equal to 30% of this Champion’s MAX HP. The [Shield] cannot be removed.",
+          "multiplier": null,
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Team Buff", "Block Debuffs", "Increase ATK", "Shield (Unremovable)"],
+          "book_value": "-2 CD",
+          "notes": "Unremovable shield is unique and critical for Clan Boss and Arena."
+        },
+        {
+          "name": "Redoubt",
+          "type": "Passive",
+          "description": "Whenever an ally under [Shield] buff is attacked, reflects 25% of the damage inflicted on the [Shield] back to the attacker. Also heals that ally by 25% of the damage inflicted on the [Shield]. If multiple Champions have this skill, only one will activate.",
+          "multiplier": null,
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive", "Reflect Damage", "Heal"],
+          "book_value": "No books required",
+          "notes": "Reflects damage and heals allies under shield. Only one Brogni passive can trigger per attack."
+        }
+      ],
+      "aura": "Increases Ally RESIST in Doom Tower battles by 60.",
+      "comments": "Brogni is a top-tier support for Clan Boss, Hydra, and all PvE content. His shield and passive enable unique Infinity Shield and Super Tanky teams."
+    }
+  ],
+  "mechanics_tags": [
+    "HP Burn", "Shield", "Buff Strip", "Debuff Cleanse", "Block Debuffs", "Increase ATK", "Reflect Damage", "Heal", "Passive"
+  ],
+  "stat_priorities": ["HP%", "SPD", "ACC", "DEF%", "RES"],
+  "stat_priority_recommendations": {
+    "clan_boss": "220+ SPD, 250+ ACC, 60k+ HP, 3.5k+ DEF",
+    "dungeons": "200+ SPD, 200+ ACC, HP%/DEF% for survivability",
+    "arena": "300+ SPD, 100k+ HP, RES for tank"
+  },
+  "recommended_gear": [
+    "Shield", "Relentless", "Regeneration", "Immortal", "Perception", "Speed", "Reflex", "Stoneskin", "Protection"
+  ],
+  "masteries": {
+    "clan_boss": ["Giant Slayer", "Lasting Gifts", "Shieldbearer", "Cycle of Magic"],
+    "dungeons": ["Giant Slayer", "Lasting Gifts", "Shieldbearer", "Cycle of Magic"],
+    "arena": ["Unshakeable", "Lasting Gifts", "Shieldbearer"],
+    "doom_tower": ["Giant Slayer", "Lasting Gifts", "Shieldbearer"],
+    "faction_wars": ["Giant Slayer", "Lasting Gifts"],
+    "general": ["Offense/Support/Defense as needed"]
+  },
+  "blessings": ["Brimstone", "Soul Reap", "Cruelty"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Generally good AI. Will use shield and cleanse skills on auto. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Infinity Shield / Super Tanky",
+    "cheese_mechanic_info": "Enables Infinity Shield and Super Tanky Clan Boss teams with shield stacking and reflect."
+  },
+  "mechanics_advisory": "Brogni's shield and passive are unique. Build for HP, speed, and accuracy for PvE; high RES and HP for Arena.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-underpriest-brogni-skill-mastery-equip-guide/ (accessed 2025-10-22)",
+    "HellHades: https://hellhades.com/champions/underpriest-brogni/ (accessed 2025-10-22)",
+    "In-game screenshot (user provided)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-22",
+    "last_patch": "Initial canonical entry for Underpriest Brogni."
+  },
+  "author": "GitHub Copilot"
+}

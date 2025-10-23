@@ -1,0 +1,108 @@
+{
+  "name": "Chronicler Adelyn",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "Banner Lords",
+  "role": "Support",
+  "meta_ratings": {
+    "clan_boss": "6/10",
+    "dungeons": "8/10",
+    "doom_tower": "8/10",
+    "arena": "7/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 20145,
+        "ATK": 1046,
+        "DEF": 1398,
+        "SPD": 104,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Equivalent Exchange",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 50% chance of transferring 1 random debuff from this Champion to the target. Also has a 50% chance of stealing 1 random buff from the target.",
+          "multiplier": "5.5x ATK",
+          "cooldown_booked": null,
+          "mechanics_tags": ["Transfer Debuff", "Steal Buff"],
+          "book_value": "+20% damage, +25% chance to transfer/steal",
+          "notes": "Chance increases to 75% when fully booked."
+        },
+        {
+          "name": "Healing Script",
+          "type": "A2",
+          "description": "Restores 25% of each ally’s destroyed MAX HP, then heals all allies by 25% of this Champion’s MAX HP.",
+          "multiplier": "Heal: 25% of Adelyn's MAX HP",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Restore Destroyed MAX HP", "Heal"],
+          "book_value": "+20% heal, -1 cooldown",
+          "notes": "Restores destroyed MAX HP before healing."
+        },
+        {
+          "name": "Writ of Sleep",
+          "type": "A3",
+          "description": "Has a 75% chance of placing a [Sleep] debuff on a target for 1 turn. Also has a 75% chance of placing a 30% [Decrease SPD] and a 50% [Decrease ATK] debuff for 2 turns. Debuffs placed by this skill ignore [Block Debuffs] buffs.",
+          "multiplier": null,
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Sleep", "Decrease SPD", "Decrease ATK", "Ignores Block Debuffs"],
+          "book_value": "+25% chance, -2 cooldown",
+          "notes": "All debuffs ignore Block Debuffs."
+        },
+        {
+          "name": "Perceive Weakness",
+          "type": "Passive",
+          "description": "Allies deal 3% more damage to targets for each debuff placed on them by this Champion.",
+          "multiplier": null,
+          "cooldown_booked": null,
+          "mechanics_tags": ["Damage Amplify"],
+          "book_value": "None",
+          "notes": "Synergizes with multi-debuff teams."
+        }
+      ],
+      "aura": "Increases Ally ACC in All Battles by 60.",
+      "comments": "A2 and A3 are the main book priorities. A3 is key for Sand Devil and other bosses requiring Sleep."
+    }
+  ],
+  "mechanics_tags": ["Transfer Debuff", "Steal Buff", "Restore Destroyed MAX HP", "Heal", "Sleep", "Decrease SPD", "Decrease ATK", "Ignores Block Debuffs", "Damage Amplify"],
+  "stat_priorities": ["ACC", "SPD", "HP%", "DEF%"],
+  "stat_priority_recommendations": {
+    "clan_boss": "220+ SPD, 250+ ACC, HP%/DEF% for survivability",
+    "dungeons": "220+ SPD, 250+ ACC, HP%/DEF% for survivability",
+    "arena": "250+ SPD, 350+ ACC, HP%/DEF% for tank"
+  },
+  "recommended_gear": ["Speed", "Perception", "Relentless", "Reflex", "Guardian"],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Evil Eye", "Support"],
+    "dungeons": ["Giant Slayer", "Master Hexer", "Lore of Steel"],
+    "arena": ["Eagle-Eye", "Unshakeable", "Support"],
+    "doom_tower": ["Timely Intervention", "Lasting Gifts"],
+    "faction_wars": ["Warmaster", "Cycle of Magic"],
+    "general": ["Support", "Defense"]
+  },
+  "blessings": ["Brimstone", "Intimidating Presence", "Polymorph", "Temporal Chains", "Miracle Heal"],
+  "ai_quirks": {
+    "bad_ai": true,
+    "ai_issue_description": "AI may target enemies immune to Sleep, wasting A3 turns on Clan Boss or bosses immune to Sleep."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "",
+    "cheese_mechanic_info": ""
+  },
+  "mechanics_advisory": "Best for Sand Devil, Scarab King solo, and content requiring Sleep or MAX HP restoration. Passive amplifies team damage with debuffs.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-chronicler-adelyn-skill-mastery-equip-guide/ (accessed 2025-10-21)",
+    "HellHades: https://hellhades.com/champions/chronicler-adelyn/ (accessed 2025-10-21)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-21",
+    "last_patch": "V8.40 (2024-04-04): Champion released."
+  }
+}

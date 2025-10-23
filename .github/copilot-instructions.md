@@ -1,43 +1,5 @@
 # Quick Start Summary
 
-## Directory Structure and Drop Points
-
-All major entry types and templates are stored in standardized directories for automation and onboarding. Use these exact paths for all intake, output, and reference operations:
-
-| Entry Type                | Directory Path (relative to repo root)                | Format/Notes                                  |
-|--------------------------|------------------------------------------------------|------------------------------------------------|
-| Champion Dictionary      | input/Champion_Dictionary/                           | JSON, one file per champion                   |
-| Mechanic Dictionary      | input/Mechanic_Dictionary/                           | JSON, one file per mechanic (input, WIP)      |
-| Templates                | input/Templates/                                     | Markdown/JSON templates for all entry types    |
-| Prompts                  | input/Prompts/                                       | Markdown prompt files for automation           |
-| Boss Guides              | Output/Boss_Guides/                                  | Markdown, one file per boss/guide              |
-| Build Evaluations        | Output/Build_Evaluations/                            | Markdown/JSON, one file per build (output)     |
-| Mechanic Dictionary (Out)| Output/Mechanic_Dictionary/                          | JSON, one file per mechanic (output, WIP)      |
-
-**Notes:**
-- All directory names use underscores for consistency and automation.
-- All paths are relative to the root of the repository (`c:\GIT\Raid_Tools`).
-- Do not create or use root-level directories for entries; always use the `input/` or `Output/` folders as shown.
-- Templates and prompts are always in `input/`.
-- Output files (guides, evaluations) are always in `Output/`.
-
-### Example Usage
-
-- To add a new champion entry: place the JSON file in `input/Champion_Dictionary/`.
-- To add a new boss guide: place the Markdown file in `Output/Boss_Guides/`.
-- To update a mechanic: use `input/Mechanic_Dictionary/` for intake, `Output/Mechanic_Dictionary/` for output.
-- To find templates: look in `input/Templates/`.
-
-This structure is referenced in both the instructions and the README for onboarding and automation.
-
-| Task | Where to Start |
-|------|----------------|
-| Add a champion | input/Champion_Dictionary_Prompt_template.md |
-| Add a boss guide | input/Boss_Guide_Template.md |
-| Add a mechanic | input/Champion_Dictionary_Prompt_template.md (mechanics section) |
-| Add a team | See team template in instructions, Section 6 |
-| Validate or update | See Validation & Documentation Standards, Section 11 |
-| Review/feedback | Use chat and update prompt files as needed |
 
 ## Table of Contents
 
@@ -97,6 +59,47 @@ The rest of the content should be copied from the current copilot-instructions.m
 - **Don't over-constrain** - leave room for Copilot to be creative
 - **Don't ignore edge cases** - document unusual scenarios
 - **Don't skip the questionnaire** - comprehensive initialization prevents issues
+
+---
+
+## Directory Structure and Drop Points
+
+All major entry types and templates are stored in standardized directories for automation and onboarding. Use these exact paths for all intake, output, and reference operations:
+
+| Entry Type                | Directory Path (relative to repo root)                | Format/Notes                                  |
+|--------------------------|------------------------------------------------------|------------------------------------------------|
+| Champion Dictionary      | input/Champion_Dictionary/                           | JSON, one file per champion                   |
+| Mechanic Dictionary      | input/Mechanic_Dictionary/                           | JSON, one file per mechanic (input, WIP)      |
+| Templates                | input/Templates/                                     | Markdown/JSON templates for all entry types    |
+| Prompts                  | input/Prompts/                                       | Markdown prompt files for automation           |
+| Boss Guides              | Output/Boss_Guides/                                  | Markdown, one file per boss/guide              |
+| Build Evaluations        | Output/Build_Evaluations/                            | Markdown/JSON, one file per build (output)     |
+| Mechanic Dictionary (Out)| Output/Mechanic_Dictionary/                          | JSON, one file per mechanic (output, WIP)      |
+
+**Notes:**
+- All directory names use underscores for consistency and automation.
+- All paths are relative to the root of the repository (`c:\GIT\Raid_Tools`).
+- Do not create or use root-level directories for entries; always use the `input/` or `Output/` folders as shown.
+- Templates and prompts are always in `input/`.
+- Output files (guides, evaluations) are always in `Output/`.
+
+### Example Usage
+
+- To add a new champion entry: place the JSON file in `input/Champion_Dictionary/`.
+- To add a new boss guide: place the Markdown file in `Output/Boss_Guides/`.
+- To update a mechanic: use `input/Mechanic_Dictionary/` for intake, `Output/Mechanic_Dictionary/` for output.
+- To find templates: look in `input/Templates/`.
+
+This structure is referenced in both the instructions and the README for onboarding and automation.
+
+| Task | Where to Start |
+|------|----------------|
+| Add a champion | input/Champion_Dictionary_Prompt_template.md |
+| Add a boss guide | input/Boss_Guide_Template.md |
+| Add a mechanic | input/Champion_Dictionary_Prompt_template.md (mechanics section) |
+| Add a team | See team template in instructions, Section 6 |
+| Validate or update | See Validation & Documentation Standards, Section 11 |
+| Review/feedback | Use chat and update prompt files as needed |
 
 ---
 
@@ -229,20 +232,30 @@ Establish a validated, canonical process for creating, updating, and maintaining
 ### Canonical Template
 - All champion entries must use the canonical template in `input/Champion_Dictionary_Prompt_template.md` (see file for full field list and mechanics tag index; if missing, mark as WIP and stage a placeholder).
 
+
 ### Entry Creation Workflow
 Follow the unified standards in Sections 8 (Guide Update & Versioning Policy) and 9 (Validation & Documentation Standards) for all entry creation, validation, documentation, and automation requirements. The canonical process is:
 1. **Data Gathering**: Collect and cross-validate champion data from authoritative sources (see Section 3). Document all sources.
 2. **Template Population**: Populate all required fields in the canonical template. Use mechanics tags for automation.
 3. **Validation**: Validate all data per Section 9. Note conflicts, uncertainties, and data confidence.
-4. **Entry Review & Approval**: Present for review, then add to the dictionary. Update index/search tools as needed.
+4. **Cleanup & Canonicalization**: After entry creation or refactor, run a cleanup/validation step to ensure the file contains no duplicate keys, repeated info, or structural errors. Confirm the file matches the canonical template and is valid JSON. This prevents issues like duplicate fields or merged blocks from automation or manual edits.
+5. **Entry Review & Approval**: Present for review, then add to the dictionary. Update index/search tools as needed.
+
+## OR SIMPLIFIED PROCESS:
+1. In chat, intake the champion name and a screenshot of base stats.
+2. Follow steps 2-5 above. Intake all data on skills/etc. Output to a file with the champion name.
+	1. If needed, repeat using skill info from chat.
+	2. Develop independent analysis for the champion but also check meta info online.
+3. After file creation, always run the cleanup/validation step to ensure no duplicate keys or info remain and the file is canonical.
+4. Loop back to 1 for this one-off intake process.
 
 ### Update & Maintenance Workflow
-Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described.
+Follow the update, versioning, and documentation standards in Section 8 for all changes. Use DRAFT-to-FINAL workflow, versioning, and changelog documentation as described. Always run the cleanup/validation step after any major edit or refactor.
 
 ### Automation & Indexing
 ### Cheese/Meta Teams
 Add a dedicated section or tag for cheese/meta teams in all team and boss guide entries. Check for boss, champion, or mechanic-specific cheese teams based on owned champions. Reference these in both the main team workflow and a dedicated cheese/meta section.
-All entries must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags and field names.
+All entries must be structured for automated parsing and indexing as described in Sections 8 and 9. Use consistent tags and field names. Always ensure files are cleaned and canonical before indexing.
 
 ## Boss Guide Entry Workflow
 ### Purpose

@@ -1,0 +1,108 @@
+{
+  "name": "Geomancer",
+  "rarity": "Epic",
+  "affinity": "Force",
+  "faction": "Dwarves",
+  "role": "Attack",
+  "meta_ratings": {
+    "clan_boss": "10/10",
+    "dungeons": "10/10",
+    "doom_tower": "10/10",
+    "arena": "6/10",
+    "faction_wars": "10/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 17010,
+        "ATK": 1443,
+        "DEF": 1200,
+        "SPD": 98,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Tremor Staff",
+          "type": "A1",
+          "description": "Attacks all enemies. Has a 30% chance of placing a 50% [Decrease ACC] debuff for 2 turns.",
+          "multiplier": "2.4x ATK",
+          "cooldown_booked": null,
+          "mechanics_tags": ["AoE", "Decrease ACC"],
+          "book_value": "+15% damage, +10% debuff chance",
+          "notes": "Useful for reducing enemy debuff application, especially in boss fights."
+        },
+        {
+          "name": "Creeping Petrify",
+          "type": "A2",
+          "description": "Removes all buffs from a target enemy, then attacks them. Steals all buffs if the target is under a [HP Burn] debuff placed by this champion. Reduces the cooldown of Quicksand Grasp by 2 turns if the target is killed by this skill while under a [HP Burn] debuff placed by this Champion.",
+          "multiplier": "6x ATK",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Remove Buffs", "Steal Buffs", "Conditional Cooldown Reduction"],
+          "book_value": "+20% damage, -1 turn cooldown",
+          "notes": "Synergizes with his own HP Burn. Great for Hydra, Clan Boss, and bosses with buffs."
+        },
+        {
+          "name": "Quicksand Grasp",
+          "type": "A3",
+          "description": "Fully depletes the target’s Turn Meter. Fills this Champion’s Turn Meter by the amount the target loses. Has a 75% chance of placing a [HP Burn] and a 25% [Weaken] debuff on the target for 3 turns.",
+          "multiplier": null,
+          "cooldown_booked": 3,
+          "mechanics_tags": ["HP Burn", "Weaken", "Turn Meter Depletion", "Turn Meter Gain"],
+          "book_value": "+25% debuff chance, -2 turn cooldown",
+          "notes": "Key skill for boss control and enabling his passive."
+        },
+        {
+          "name": "Stoneguard",
+          "type": "Passive",
+          "description": "Decreases the damage all allies receive by 15% and deflects that damage onto each enemy under a [HP Burn] debuff placed by this Champion. Whenever this Champion is attacked, deflects 30% of the damage instead. When deflecting damage, on each hit, has a 30% chance of dealing additional damage equal to 3% of the target’s MAX HP.",
+          "multiplier": "3% Enemy MAX HP (conditional)",
+          "cooldown_booked": null,
+          "mechanics_tags": ["Damage Reduction", "Damage Reflection", "HP Burn Synergy", "Max HP Damage"],
+          "book_value": "N/A",
+          "notes": "Unique mechanic, does not trigger Warmaster/Giant Slayer. Core to his boss damage."
+        }
+      ],
+      "aura": "Increases Ally HP in all battles by 25%.",
+      "comments": "One of the best Epic champions for Clan Boss, Hydra, Iron Twins, and many bosses. Passive is unique and meta-defining."
+    }
+  ],
+  "mechanics_tags": ["Decrease ACC", "HP Burn", "Weaken", "Remove Buffs", "Steal Buffs", "Turn Meter Depletion", "Damage Reflection", "Max HP Damage"],
+  "stat_priorities": ["ACC", "SPD", "HP%", "DEF%"],
+  "stat_priority_recommendations": {
+    "clan_boss": "250+ ACC, 220+ SPD, HP%/DEF% for survivability",
+    "dungeons": "220+ SPD, 200+ ACC, HP%/DEF% for survivability",
+    "arena": "250+ ACC, 220+ SPD, HP%/DEF% for tankiness"
+  },
+  "recommended_gear": ["Perception", "Reflex", "Stalwart", "Speed", "Accuracy"],
+  "masteries": {
+    "clan_boss": ["Giant Slayer", "Master Hexer", "Support"],
+    "dungeons": ["Giant Slayer", "Master Hexer", "Lore of Steel"],
+    "arena": ["Eagle-Eye", "Unshakeable"],
+    "doom_tower": ["Timely Intervention", "Lasting Gifts"],
+    "faction_wars": ["Giant Slayer", "Cycle of Magic"],
+    "general": ["Offense/Support/Defense as needed"]
+  },
+  "blessings": ["Cruelty", "Phantom Touch"],
+  "ai_quirks": {
+    "bad_ai": true,
+    "ai_issue_description": "Will sometimes use A3 on non-priority targets (e.g., spiderlings), and A2 on low-HP targets, which can be suboptimal in auto-play."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Max HP/Passive Damage Reflection",
+    "cheese_mechanic_info": "Enables cheese strategies in Clan Boss, Hydra, and Iron Twins by reflecting massive damage via HP Burn."
+  },
+  "mechanics_advisory": "Stoneguard passive is unique: reflected damage is not a hit, does not trigger Warmaster/Giant Slayer, and ignores some artifact set effects. Build for survivability and accuracy.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-geomancer-skill-mastery-equip-guide/ (accessed 2024-07-07)",
+    "HellHades: https://hellhades.com/champions/geomancer/ (accessed 2024-07-07)"
+  ],
+  "update_notes": {
+    "last_updated": "2024-07-07",
+    "last_patch": "Patch 8.00 (2023-12-12): No major changes to Geomancer."
+  }
+}

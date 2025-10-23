@@ -1,0 +1,100 @@
+{
+  "name": "Lord Champfort",
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Banner Lords",
+  "role": "HP Tank / Debuffer / Support",
+  "meta_ratings": {
+    "clan_boss": "7/10",
+    "dungeons": "9/10",
+    "doom_tower": "9/10",
+    "arena": "8/10",
+    "faction_wars": "10/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 22305,
+        "ATK": 1079,
+        "DEF": 1013,
+        "SPD": 97,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 40,
+        "ACC": 20
+      },
+      "skills": [
+        {
+          "name": "Annihilating Hit",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 45% chance of placing a 60% [Decrease DEF] debuff for 2 turns.",
+          "multiplier": "0.2x HP",
+          "cooldown_booked": null,
+          "mechanics_tags": ["Single Target", "Decrease DEF"],
+          "book_value": "+25% damage",
+          "notes": "HP-based damage. Good for boss and wave defense reduction."
+        },
+        {
+          "name": "Earthshaker",
+          "type": "A2",
+          "description": "Attacks all enemies. Places a 50% [Decrease ACC] debuff and a 50% [Decrease ATK] debuff for 2 turns.",
+          "multiplier": "0.23x HP",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "Decrease ACC", "Decrease ATK"],
+          "book_value": "+15% damage, -1 CD",
+          "notes": "Excellent for reducing incoming damage and debuff accuracy."
+        },
+        {
+          "name": "Thornsphere",
+          "type": "Passive",
+          "description": "At the start of each turn, places a [Shield] buff on this Champion equal to 20% of their MAX HP for 2 turns. Will place a 15% [Decrease SPD] debuff for 1 turn on whichever enemy attacks this Champion.",
+          "multiplier": null,
+          "cooldown_booked": 1,
+          "mechanics_tags": ["Passive", "Shield (Self)", "Decrease SPD (on attacker)"],
+          "book_value": "-1 turn cooldown",
+          "notes": "Shield and Decrease SPD make him strong for Scarab King and soloing content."
+        }
+      ],
+      "aura": "Increases Ally HP in Dungeons by 50%",
+      "comments": "Lord Champfort excels as a tank and debuffer, especially in dungeons and Doom Tower. His passive shield and Decrease SPD are key for Scarab King and solo strategies."
+    }
+  ],
+  "mechanics_tags": ["Single Target", "Decrease DEF", "AoE", "Decrease ACC", "Decrease ATK", "Passive", "Shield", "Decrease SPD"],
+  "stat_priorities": ["HP%", "C.RATE", "C.DMG", "SPD", "ACC", "DEF%"],
+  "stat_priority_recommendations": {
+    "clan_boss": "HP%, SPD, ACC, C.RATE, C.DMG",
+    "dungeons": "HP%, SPD, ACC, C.RATE, C.DMG, DEF%",
+    "arena": "HP%, SPD, ACC, C.RATE, C.DMG, RES"
+  },
+  "recommended_gear": ["Bloodthirst", "Impulse", "Lifesteal", "Reflex", "Relentless", "Toxic", "Immortal", "Perception", "Speed", "Resilience", "Regeneration"],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Master Hexer", "Evil Eye", "Cycle of Violence"],
+    "dungeons": ["Flawless Execution", "Master Hexer", "Lore of Steel", "Cycle of Magic"],
+    "arena": ["Flawless Execution", "Cycle of Violence", "Unshakeable"],
+    "doom_tower": ["Warmaster", "Lasting Gifts", "Cycle of Magic"],
+    "faction_wars": ["Warmaster", "Cycle of Magic"],
+    "general": ["Offense/Support/Defense as needed"]
+  },
+  "blessings": ["Brimstone", "Soul Reap"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Generally good AI. Will use debuffs and shield skills appropriately. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Solo Scarab King / Shield Sustain",
+    "cheese_mechanic_info": "Passive shield and Decrease SPD allow for soloing Scarab King and other content."
+  },
+  "mechanics_advisory": "Lord Champfort's passive and debuffs make him a top-tier tank and support for dungeons, Doom Tower, and solo content. Build for HP, speed, and accuracy.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-lord-champfort-skill-mastery-equip-guide/ (accessed 2025-10-22)",
+    "HellHades: https://hellhades.com/champions/lord-champfort/ (accessed 2025-10-22)",
+    "In-game screenshot (user provided)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-22",
+    "last_patch": "Initial canonical entry for Lord Champfort."
+  },
+  "author": "GitHub Copilot"
+}

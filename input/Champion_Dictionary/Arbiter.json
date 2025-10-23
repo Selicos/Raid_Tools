@@ -3,71 +3,112 @@
   "rarity": "Legendary",
   "affinity": "Void",
   "faction": "High Elves",
-  "role": "Support",
-  "base_stats": {
-    "hp": 21135,
-    "atk": 1068,
-    "def": 1101,
-    "spd": 110,
-    "c_rate": 15,
-    "c_dmg": 50,
-    "resist": 30,
-    "acc": 10
+  "role": "Support / Speed Lead / Reviver",
+  "meta_ratings": {
+    "clan_boss": "9/10",
+    "dungeons": "10/10",
+    "doom_tower": "10/10",
+    "arena": "10/10",
+    "faction_wars": "10/10"
   },
-  "skills": [
+  "forms": [
     {
-      "name": "Gaze of Justice",
-      "type": "A1",
-      "description": "Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 25% Weaken debuff for 2 turns.",
-      "upgrades": "+20% damage, +20% debuff chance (books)"
-    },
-    {
-      "name": "Enforced Humility",
-      "type": "A2",
-      "description": "Attacks all enemies. 75% chance to decrease duration of all enemy buffs by 1 turn.",
-      "cooldown": "4 turns",
-      "upgrades": "+10% damage, +25% debuff chance (books)"
-    },
-    {
-      "name": "Mentor of Heroes",
-      "type": "A3",
-      "description": "Fills Turn Meters of all allies by 30%, places 50% Increase ATK on all allies for 2 turns, heals all allies by 25% of their max HP if they have less than 50% HP.",
-      "cooldown": "4 turns (3 turns booked)",
-      "upgrades": "-1 turn CD (books)"
-    },
-    {
-      "name": "Destiny’s Call",
-      "type": "A4",
-      "description": "Revives all dead allies to 35% HP, fills Turn Meters of all allies by 20%, grants Arbiter an extra turn if an ally was revived.",
-      "cooldown": "7 turns (5 turns booked)",
-      "upgrades": "-2 turn CD (books)"
-    },
-    {
-      "name": "Aura",
-      "type": "Aura",
-      "description": "Increases Ally SPD in Arena by 30%"
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 21135,
+        "ATK": 1068,
+        "DEF": 1101,
+        "SPD": 110,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 10
+      },
+      "skills": [
+        {
+          "name": "Gaze of Justice",
+          "type": "A1",
+          "description": "Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 25% [Weaken] debuff for 2 turns.",
+          "multiplier": "1.8x ATK",
+          "cooldown_booked": null,
+          "mechanics_tags": ["Double Hit", "Weaken"],
+          "book_value": "+10% damage, +20% debuff chance",
+          "notes": "Each hit can place Weaken. Useful for boss and wave damage."
+        },
+        {
+          "name": "Enforced Humility",
+          "type": "A2",
+          "description": "Attacks all enemies. 75% chance of decreasing the duration of all enemy buffs by 1 turn.",
+          "multiplier": "2.2x ATK",
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "Decrease Buff Duration"],
+          "book_value": "+10% damage, +25% debuff chance, -1 CD",
+          "notes": "Key for Arena and Hydra to strip buffs."
+        },
+        {
+          "name": "Mentor of Heroes",
+          "type": "A3",
+          "description": "Fills the Turn Meters of all allies by 30% and places a 50% [Increase ATK] buff on all allies for 2 turns. Heals all allies by 25% of their MAX HP if they have less than 50% HP.",
+          "multiplier": null,
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Turn Meter Fill", "Increase ATK", "Heal"],
+          "book_value": "-1 CD",
+          "notes": "Signature speed boost and heal. Core for Arena and PvE."
+        },
+        {
+          "name": "Destiny’s Call",
+          "type": "A4",
+          "description": "Revives all dead allies to 35% HP, then fills the Turn Meters of all allies by 20%. Grants an Extra Turn to this Champion if an ally was successfully revived.",
+          "multiplier": null,
+          "cooldown_booked": 5,
+          "mechanics_tags": ["Revive", "Turn Meter Fill", "Extra Turn"],
+          "book_value": "-2 CD",
+          "notes": "Revive plus extra turn allows immediate follow-up with A3."
+        }
+      ],
+      "aura": "Increases Ally SPD in the Arena by 30%.",
+      "comments": "Arbiter is the premier speed lead and reviver for Arena, Dungeons, and Doom Tower. Her kit is essential for progression and PvP."
     }
   ],
-  "book_priority": "A3, A4 (for cooldowns and team utility)",
-  "gear_recommendations": {
-    "pve": ["Speed", "Divine Speed", "Supersonic", "Relentless"],
-    "pvp": ["Speed", "Stoneskin", "Supersonic"],
-    "stat_priority": ["SPD", "DEF%", "HP%", "ACC"]
-  },
-  "masteries": {
-    "pve": "Support + Offense (Warmaster for Clan Boss, Evil Eye, Lasting Gifts)",
-    "pvp": "Support + Defense (Unshakeable, Rapid Response, Evil Eye)"
-  },
-  "notes": [
-    "Arbiter is a top-tier speed lead and reviver for Arena, Dungeons, and Faction Wars.",
-    "A3 is a premier Turn Meter boost and team heal.",
-    "A4 revive with extra turn enables immediate follow-up.",
-    "A2 is strong for buff control in Arena and Hydra.",
-    "Needs high SPD and enough ACC for debuff/buff control."
+  "mechanics_tags": [
+    "Double Hit", "Weaken", "AoE", "Decrease Buff Duration", "Turn Meter Fill", "Increase ATK", "Heal", "Revive", "Extra Turn"
   ],
-  "sources": [
-    "Ayumilove: https://ayumilove.net/raid-shadow-legends-arbiter-skill-mastery-equip-guide/",
-    "HellHades: https://hellhades.com/champions/arbiter/",
-    "User screenshot (base stats)"
-  ]
+  "stat_priorities": ["SPD", "HP%", "DEF%", "ACC"],
+  "stat_priority_recommendations": {
+    "clan_boss": "220+ SPD, 200+ ACC, HP%/DEF% for survivability",
+    "dungeons": "250+ SPD, 200+ ACC, HP%/DEF%",
+    "arena": "350+ SPD, HP%/DEF% for tank, ACC for debuffing"
+  },
+  "recommended_gear": [
+    "Speed", "Divine Speed", "Supersonic", "Relentless", "Perception", "Immortal", "Stoneskin", "Reflex"
+  ],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Evil Eye", "Support"],
+    "dungeons": ["Warmaster", "Evil Eye", "Support"],
+    "arena": ["Unshakeable", "Evil Eye", "Rapid Response"],
+    "doom_tower": ["Unshakeable", "Evil Eye", "Rapid Response"],
+    "faction_wars": ["Warmaster", "Evil Eye", "Support"],
+    "general": ["Offense/Support/Defense as needed"]
+  },
+  "blessings": ["Brimstone", "Intimidating Presence", "Cruelty"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Generally good AI. Will use revive and speed boost on auto. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion, but enables speed and revive strategies."
+  },
+  "mechanics_advisory": "Arbiter's speed aura and turn meter boost are meta-defining for Arena and PvE. Build for maximum speed and survivability.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-arbiter-skill-mastery-equip-guide/ (accessed 2025-10-22)",
+    "HellHades: https://hellhades.com/champions/arbiter/ (accessed 2025-10-22)",
+    "In-game screenshot (user provided)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-22",
+    "last_patch": "Initial canonical entry for Arbiter."
+  },
+  "author": "GitHub Copilot"
 }

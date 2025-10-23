@@ -13,7 +13,7 @@
   },
   "forms": [
     {
-      "form_name": "Base/Empowered/Alternate Skillset/etc.",
+      "form_name": "Base", // Always include 'Base' form. Add additional forms only if champion has them. Don't assume the champion has one unless it exists in valid sources or the champion index file.
       "base_stats": {
         "HP": 0,
         "ATK": 0,
@@ -29,18 +29,34 @@
           "name": "Skill Name",
           "type": "A1/A2/A3/Passive",
           "description": "Skill effect description.",
-          "cooldown": null,
+          "multiplier": "Skill damage multiplier (e.g., 4.2x ATK, 3.5x DEF, etc.)",
+          "cooldown_booked": null,
           "mechanics_tags": ["Decrease DEF", "HP Burn"],
-          "books_required": "Books needed or recommended for skill"
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-      "aura": "Aura description (if any)"
+      "aura": "Aura description (if any)",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
+    // Add additional form objects here only if champion has alternate forms (e.g., Empowered, Alternate Skillset)
   ],
   "mechanics_tags": ["Decrease DEF", "HP Burn"],
   "stat_priorities": ["Stat priorities for main content(s)", "e.g. 100% Crit Rate, 250+ ACC"],
+  "stat_priority_recommendations": {
+    "clan_boss": "e.g. 250+ ACC, 220+ SPD, 100% C.RATE",
+    "dungeons": "e.g. 220+ SPD, 200+ ACC, HP%/DEF% for survivability",
+    "arena": "e.g. 300+ SPD, 100% C.RATE, C.DMG, RES for tank"
+  },
   "recommended_gear": ["Speed", "Perception", "Lifesteal"],
-  "masteries": ["Warmaster", "Evil Eye", "Support"],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Evil Eye", "Support"],
+    "dungeons": ["Giant Slayer", "Master Hexer", "Lore of Steel"],
+    "arena": ["Helmsmasher", "Eagle-Eye", "Unshakeable"],
+    "doom_tower": ["Timely Intervention", "Lasting Gifts"],
+    "faction_wars": ["Warmaster", "Cycle of Magic"],
+    "general": ["Offense/Support/Defense as needed"]
+  },
   "blessings": ["Cruelty", "Phantom Touch"],
   "ai_quirks": {
     "bad_ai": false,
@@ -60,6 +76,4 @@
     "last_updated": "YYYY-MM-DD",
     "last_patch": "Patch version/date and summary of change"
   },
-  "author": "Author Name",
-  "comments": "Freeform notes, edge cases, user/community feedback"
 }
