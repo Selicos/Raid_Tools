@@ -26,85 +26,50 @@ from typing import List, Tuple, Dict
 VALID_RARITIES = ['Common', 'Uncommon', 'Rare', 'Epic', 'Legendary', 'Mythic']
 VALID_AFFINITIES = ['Magic', 'Force', 'Spirit', 'Void']
 
+
+# Updated ChampionEntry for markdown table rows
 class ChampionEntry:
-    def __init__(self, line: str, line_number: int):
-        self.raw_line = line.strip()
+    def __init__(self, columns: list, line_number: int):
         self.line_number = line_number
-        self.name = None
-        self.rarity = None
-        self.affinity = None
-        self.faction = None
-        self.last_updated = None
+        self.name = columns[0].strip() if len(columns) > 0 else None
+        self.rarity = columns[1].strip() if len(columns) > 1 else None
+        self.affinity = columns[2].strip() if len(columns) > 2 else None
+        self.faction = columns[3].strip() if len(columns) > 3 else None
+        self.last_updated = columns[4].strip() if len(columns) > 4 else None
         self.is_valid = False
         self.errors = []
-        
         self.parse()
-    
+
     def parse(self):
-        """Parse champion entry line"""
-        # Expected format: - Name | Rarity: Value | Affinity: Value | Faction: Value | Last Updated: YYYY-MM-DD
-        # or legacy format: - Name | Rarity: Value | Last Updated: YYYY-MM-DD
-        
-        if not self.raw_line.startswith('-'):
-            self.errors.append(f"Line {self.line_number}: Missing leading dash")
-            return
-        
-        content = self.raw_line[1:].strip()
-        parts = [p.strip() for p in content.split('|')]
-        
-        if len(parts) < 3:
-            self.errors.append(f"Line {self.line_number}: Insufficient fields (need at least Name, Rarity, Last Updated)")
-            return
-        
-        # Parse name
-        self.name = parts[0].strip()
-        
-        # Parse remaining fields
-        for part in parts[1:]:
-            if ':' not in part:
-                self.errors.append(f"Line {self.line_number}: Invalid field format '{part}' (expected 'Field: Value')")
-                continue
-            
-            field, value = part.split(':', 1)
-            field = field.strip()
-            value = value.strip()
-            
-            if field == 'Rarity':
-                self.rarity = value
-                if value not in VALID_RARITIES:
-                    self.errors.append(f"Line {self.line_number}: Invalid rarity '{value}' (must be one of {VALID_RARITIES})")
-            
-            elif field == 'Affinity':
-                self.affinity = value
-                if value not in VALID_AFFINITIES:
-                    self.errors.append(f"Line {self.line_number}: Invalid affinity '{value}' (must be one of {VALID_AFFINITIES})")
-            
-            elif field == 'Faction':
-                self.faction = value
-            
-            elif field == 'Last Updated':
-                self.last_updated = value
-                # Validate date format
-                try:
-                    datetime.strptime(value, '%Y-%m-%d')
-                except ValueError:
-                    self.errors.append(f"Line {self.line_number}: Invalid date format '{value}' (expected YYYY-MM-DD)")
-        
-        # Check required fields
+        # Validate required fields
         if not self.name:
             self.errors.append(f"Line {self.line_number}: Missing champion name")
         if not self.rarity:
             self.errors.append(f"Line {self.line_number}: Missing rarity field")
+        if not self.affinity:
+            self.errors.append(f"Line {self.line_number}: Missing affinity field")
+        if not self.faction:
+            self.errors.append(f"Line {self.line_number}: Missing faction field")
         if not self.last_updated:
             self.errors.append(f"Line {self.line_number}: Missing 'Last Updated' field")
-        
+
+        # Validate rarity
+        if self.rarity and self.rarity not in VALID_RARITIES:
+            self.errors.append(f"Line {self.line_number}: Invalid rarity '{self.rarity}' (must be one of {VALID_RARITIES})")
+        # Validate affinity
+        if self.affinity and self.affinity not in VALID_AFFINITIES:
+            self.errors.append(f"Line {self.line_number}: Invalid affinity '{self.affinity}' (must be one of {VALID_AFFINITIES})")
+        # Validate date
+        if self.last_updated:
+            try:
+                datetime.strptime(self.last_updated, '%Y-%m-%d')
+            except ValueError:
+                self.errors.append(f"Line {self.line_number}: Invalid date format '{self.last_updated}' (expected YYYY-MM-DD)")
+
         self.is_valid = len(self.errors) == 0
-    
+
     def __str__(self):
-        if self.affinity and self.faction:
-            return f"- {self.name} | Rarity: {self.rarity} | Affinity: {self.affinity} | Faction: {self.faction} | Last Updated: {self.last_updated}"
-        else:
-            return f"- {self.name} | Rarity: {self.rarity} | Last Updated: {self.last_updated}"
+        return f"| {self.name} | {self.rarity} | {self.affinity} | {self.faction} | {self.last_updated} |"
 
 
 def validate_owned_list(file_path: Path, fix_order: bool = False) -> Tuple[bool, List[str]]:
@@ -127,31 +92,37 @@ def validate_owned_list(file_path: Path, fix_order: bool = False) -> Tuple[bool,
     with open(file_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
     
-    # Parse champions
+
+    # Parse champions from markdown table
     champions: List[ChampionEntry] = []
-    in_list_section = False
-    
+    in_table = False
+    header_found = False
     for i, line in enumerate(lines, start=1):
         line_stripped = line.strip()
-        
-        # Detect start of champion list
-        if line_stripped.startswith('## Champion List') or line_stripped.startswith('## Owned Champions'):
-            in_list_section = True
+        # Detect table header
+        if line_stripped.startswith('| Name') and 'Last Updated' in line_stripped:
+            in_table = True
+            header_found = True
             continue
-        
-        # Skip empty lines and headers
-        if not line_stripped or line_stripped.startswith('#'):
-            continue
-        
-        # Parse champion entries
-        if in_list_section and line_stripped.startswith('-'):
-            entry = ChampionEntry(line_stripped, i)
+        if in_table:
+            # Skip separator row
+            if line_stripped.startswith('|---'):
+                continue
+            # End of table (empty line or not a table row)
+            if not line_stripped or not line_stripped.startswith('|'):
+                break
+            # Parse table row
+            columns = [col.strip() for col in line_stripped.strip('|').split('|')]
+            if len(columns) < 5:
+                continue  # skip malformed rows
+            entry = ChampionEntry(columns, i)
             if not entry.is_valid:
                 errors.extend(entry.errors)
             champions.append(entry)
+
+    print(f"✅ Parsed {len(champions)} champion entries from table")
     
-    print(f"✅ Parsed {len(champions)} champion entries")
-    
+
     # Check for duplicates
     seen_names = {}
     for champ in champions:
@@ -159,14 +130,13 @@ def validate_owned_list(file_path: Path, fix_order: bool = False) -> Tuple[bool,
             errors.append(f"ERROR: Duplicate champion '{champ.name}' found on lines {seen_names[champ.name]} and {champ.line_number}")
         else:
             seen_names[champ.name] = champ.line_number
-    
+
     # Check alphabetical order
     champion_names = [c.name for c in champions if c.name]
     sorted_names = sorted(champion_names, key=str.lower)
-    
+
     if champion_names != sorted_names:
         warnings.append(f"WARNING: Champion list is not in alphabetical order")
-        
         # Show first few out-of-order entries
         mismatches = []
         for i, (actual, expected) in enumerate(zip(champion_names, sorted_names)):
@@ -175,48 +145,46 @@ def validate_owned_list(file_path: Path, fix_order: bool = False) -> Tuple[bool,
                 if len(mismatches) >= 5:
                     mismatches.append("  ... (more mismatches)")
                     break
-        
         warnings.extend(mismatches)
-        
-        if fix_order:
-            print("\n🔧 Fixing alphabetical order...")
-            # Re-sort champions and rewrite file
-            champions_sorted = sorted(champions, key=lambda c: c.name.lower() if c.name else '')
-            
-            # Reconstruct file with sorted champions
-            new_lines = []
-            wrote_champions = False
-            
-            for line in lines:
-                line_stripped = line.strip()
-                
-                # Write champions after the header
-                if not wrote_champions and (line_stripped.startswith('## Champion List') or line_stripped.startswith('## Owned Champions')):
-                    new_lines.append(line)
-                    new_lines.append('\n')
-                    for champ in champions_sorted:
+        # Always fix order if not sorted
+        print("\n🔧 Fixing alphabetical order...")
+        champions_sorted = sorted(champions, key=lambda c: c.name.lower() if c.name else '')
+        new_lines = []
+        wrote_table = False
+        in_table = False
+        for line in lines:
+            line_stripped = line.strip()
+            # Write table header and separator
+            if not wrote_table and line_stripped.startswith('| Name') and 'Last Updated' in line_stripped:
+                new_lines.append(line)
+                wrote_table = True
+                in_table = True
+                continue
+            if wrote_table and line_stripped.startswith('|---'):
+                new_lines.append(line)
+                # Write sorted, deduplicated champion rows
+                seen = set()
+                for champ in champions_sorted:
+                    if champ.name not in seen:
                         new_lines.append(str(champ) + '\n')
-                    wrote_champions = True
-                
-                # Skip old champion entries
-                elif line_stripped.startswith('-') and ' | Rarity:' in line:
-                    continue
-                
-                # Keep other lines (headers, notes, etc.)
-                elif not wrote_champions:
-                    new_lines.append(line)
-            
-            # Write back to file
-            with open(file_path, 'w', encoding='utf-8') as f:
-                f.writelines(new_lines)
-            
-            print(f"✅ Fixed alphabetical order and saved to {file_path}")
-            warnings = []  # Clear warnings since we fixed it
+                        seen.add(champ.name)
+                wrote_table = False  # Only write once
+                in_table = False
+                continue
+            # Skip all original champion rows in the table
+            if in_table and line_stripped.startswith('|') and not line_stripped.startswith('|---') and not line_stripped.startswith('| Name'):
+                continue
+            # Keep other lines (headers, notes, etc.)
+            new_lines.append(line)
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.writelines(new_lines)
+        print(f"✅ Fixed alphabetical order and saved to {file_path}")
+        warnings = []  # Clear warnings since we fixed it
     
+
     # Check for missing fields (affinity, faction)
     missing_affinity = sum(1 for c in champions if not c.affinity)
     missing_faction = sum(1 for c in champions if not c.faction)
-    
     if missing_affinity > 0:
         warnings.append(f"WARNING: {missing_affinity} champions missing Affinity field")
     if missing_faction > 0:
@@ -253,20 +221,19 @@ def main():
     import argparse
     
     parser = argparse.ArgumentParser(description='Validate Owned Champion List')
-    parser.add_argument('--fix-order', action='store_true', help='Auto-fix alphabetical ordering')
     parser.add_argument('--file', type=str, default='input/Owned_champion_list.md', help='Path to owned list file')
-    
+
     args = parser.parse_args()
-    
+
     # Resolve file path
     script_dir = Path(__file__).parent.parent
     file_path = script_dir / args.file
-    
+
     print(f"Validating: {file_path}")
     print("="*60 + "\n")
-    
-    is_valid, messages = validate_owned_list(file_path, fix_order=args.fix_order)
-    
+
+    is_valid, messages = validate_owned_list(file_path)
+
     sys.exit(0 if is_valid else 1)
 
 
