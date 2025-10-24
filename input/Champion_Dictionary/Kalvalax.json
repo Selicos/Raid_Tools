@@ -1,0 +1,188 @@
+{
+  "name": "Kalvalax",
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Demonspawn",
+  "role": "Poison Exploder / Damage Dealer / Support",
+  "meta_ratings": {
+    "clan_boss": "10/10",
+    "dungeons": "10/10",
+    "doom_tower": "9/10",
+    "arena": "7/10",
+    "faction_wars": "9/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 12720,
+        "ATK": 1663,
+        "DEF": 1068,
+        "SPD": 99,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 30,
+        "ACC": 10
+      },
+      "skills": [
+        {
+          "name": "Oozing Greatsword",
+          "type": "A1",
+          "description": "Attacks 1 enemy. 40% chance to increase duration of all [Poison] debuffs on the target by 1 turn. Heals this Champion by 2.5% of their MAX HP for each [Poison] debuff on the target.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.5,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target."
+            },
+            {
+              "type": "debuff_extension",
+              "stat": "Poison",
+              "value": 1,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": 1,
+              "notes": "40% chance to extend all Poison debuffs by 1 turn."
+            },
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 0.025,
+              "per_hit": false,
+              "target": "self",
+              "notes": "Heals 2.5% MAX HP per Poison debuff on target."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Poison Extension", "Heal", "Single Target"],
+          "book_value": "+15% Damage, +15% Debuff Chance",
+          "notes": "Excellent for keeping poisons up and self-sustain."
+        },
+        {
+          "name": "Corruption Locus",
+          "type": "A2",
+          "description": "Attacks 1 enemy. Places an extra hit for each [Poison] debuff on the target (up to 3 extra hits).",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.0,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "Base hit + up to 3 extra hits for each Poison debuff."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Multi-hit", "Poison Synergy"],
+          "book_value": "+30% Damage",
+          "notes": "Synergizes with Poison-heavy teams."
+        },
+        {
+          "name": "Storm of Vitriol",
+          "type": "A3",
+          "description": "Attacks all enemies. Damage increases according to the number of [Poison] debuffs on each target.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.5,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "Base AoE damage."
+            },
+            {
+              "type": "damage_scaling",
+              "stat": "ENEMY_MAX_HP",
+              "value": 0.01,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "+1% ENEMY MAX HP per Poison debuff on each target."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["AoE", "Poison Scaling"],
+          "book_value": "+30% Damage",
+          "notes": "Extremely high damage with many Poisons on enemies."
+        },
+        {
+          "name": "Pestilence",
+          "type": "Passive",
+          "description": "Places four 5% [Poison] debuffs on all enemies for 2 turns at the start of each round. 50% chance of placing a 5% [Poison] debuff on all enemies for 1 turn at the start of each turn. [Active Effect] Whenever an enemy places a [Poison] debuff on this Champion, instantly removes it and replaces it with a 15% [Continuous Heal] buff for 2 turns instead.",
+          "effects": [
+            {
+              "type": "apply_debuff",
+              "stat": "Poison",
+              "value": 4,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": 2,
+              "notes": "Places four 5% Poison debuffs for 2 turns at start of round."
+            },
+            {
+              "type": "apply_debuff",
+              "stat": "Poison",
+              "value": 1,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": 1,
+              "notes": "50% chance to place 5% Poison for 1 turn at start of each turn."
+            },
+            {
+              "type": "replace_debuff_with_buff",
+              "stat": "Poison/Continuous Heal",
+              "value": null,
+              "per_hit": false,
+              "target": "self",
+              "duration": 2,
+              "notes": "Replaces Poison with 15% Continuous Heal for 2 turns."
+            }
+          ],
+          "cooldown_booked": 1,
+          "mechanics_tags": ["Poison", "Continuous Heal", "Passive"],
+          "book_value": "",
+          "notes": "Unique passive for mass Poison and self-sustain."
+        }
+      ],
+      "aura": "Increases Ally SPD in all Battles by 19%.",
+      "comments": "Kalvalax is a top-tier Poison exploder and damage dealer for Clan Boss, dungeons, and Hydra. His passive enables fast Poison setup and strong self-sustain."
+    }
+  ],
+  "mechanics_tags": ["Poison", "Poison Extension", "Heal", "Continuous Heal", "AoE", "Passive", "Poison Scaling", "Multi-hit"],
+  "stat_priorities": ["SPD", "ATK", "ACC", "C.RATE", "C.DMG"],
+  "stat_priority_recommendations": {
+    "clan_boss": "SPD, ATK, ACC, C.RATE, C.DMG",
+    "dungeons": "SPD, ATK, ACC, C.RATE, C.DMG",
+    "arena": "SPD, ATK, C.RATE, C.DMG"
+  },
+  "recommended_gear": ["Relentless", "Toxic", "Perception", "Speed", "Accuracy"],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Master Hexer", "Sniper"],
+    "dungeons": ["Giant Slayer", "Master Hexer", "Sniper"],
+    "arena": ["Helmsmasher", "Evil Eye", "Cycle of Violence"],
+    "doom_tower": ["Warmaster", "Master Hexer"],
+    "faction_wars": ["Warmaster", "Master Hexer"],
+    "general": ["Offense/Support as needed"]
+  },
+  "blessings": ["Brimstone", "Phantom Touch", "Cruelty"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI will always open with A3 if available, which is optimal for most content."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion."
+  },
+  "mechanics_advisory": "Best used in Poison-heavy teams. Passive enables fast setup for Poison explosion and strong self-sustain.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-kalvalax-skill-mastery-equip-guide/ (accessed 2025-10-23)",
+    "HellHades: https://hellhades.com/champions/kalvalax/ (accessed 2025-10-23)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-23",
+    "last_patch": "Patch 10.00 (2025-09): No changes."
+  }
+}

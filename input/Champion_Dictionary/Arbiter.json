@@ -97,7 +97,7 @@
               },
               {
                 "type": "turn_meter_fill",
-                "stat": "None",
+                "stat": "Turn Meter",
                 "value": 0.2,
                 "per_hit": false,
                 "target": "all_allies",

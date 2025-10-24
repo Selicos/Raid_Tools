@@ -52,7 +52,7 @@
                       "stat": { "type": ["string", "null"] },
                       "value": {
                         "oneOf": [
-                          { "type": ["number", "null"] },
+                          { "type": ["number", "null"] }
                         ]
                       },
                       "per_hit": { "type": "boolean" },

@@ -97,7 +97,7 @@
               },
               {
                 "type": "turn_meter_fill",
-                "stat": "none",
+                "stat": "Turn Meter",
                 "value": 0.5,
                 "per_hit": false,
                 "target": "self",

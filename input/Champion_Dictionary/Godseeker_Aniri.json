@@ -1,0 +1,201 @@
+{
+  "name": "Godseeker Aniri",
+  "rarity": "Epic",
+  "affinity": "Void",
+  "faction": "Sacred Order",
+  "role": "Reviver / Healer / Support",
+  "meta_ratings": {
+    "clan_boss": "10/10",
+    "dungeons": "10/10",
+    "doom_tower": "10/10",
+    "arena": "8/10",
+    "faction_wars": "10/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 15195,
+        "ATK": 1046,
+        "DEF": 1244,
+        "SPD": 99,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 45,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Blade of Blessings",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Heals the ally with the lowest HP by 5% of their MAX HP. Cannot heal this champion.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.6,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target."
+            },
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 0.05,
+              "per_hit": false,
+              "target": "lowest_hp_ally",
+              "notes": "Heals lowest HP ally by 5% MAX HP. Cannot heal self."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Heal", "Single Target"],
+          "book_value": "+15% Damage, +15% Heal",
+          "notes": "Great for keeping allies alive, especially in Clan Boss."
+        },
+        {
+          "name": "Quest for Meaning",
+          "type": "A2",
+          "description": "Attacks all enemies. Heals all allies by 15% of their MAX HP, then decreases the duration of all buffs on all enemies by 1 turn and increases the duration of all buffs on all allies by 1 turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE."
+            },
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 0.15,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "Heals all allies by 15% MAX HP."
+            },
+            {
+              "type": "buff_duration_increase",
+              "stat": null,
+              "value": 1,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "Increases duration of all buffs on all allies by 1 turn."
+            },
+            {
+              "type": "buff_duration_decrease",
+              "stat": null,
+              "value": 1,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "Decreases duration of all buffs on all enemies by 1 turn."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Heal", "AoE", "Buff Duration Manipulation"],
+          "book_value": "+20% Heal, Cooldown -1",
+          "notes": "Excellent for buff control and team sustain."
+        },
+        {
+          "name": "Rise of Glory",
+          "type": "A3",
+          "description": "Revives a dead ally with 50% HP, then fills their Turn Meter by 50% and resets the cooldowns of all their skills.",
+          "effects": [
+            {
+              "type": "revive",
+              "stat": null,
+              "value": 0.5,
+              "per_hit": false,
+              "target": "single_ally",
+              "notes": "Revives with 50% HP."
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": null,
+              "value": 0.5,
+              "per_hit": false,
+              "target": "single_ally",
+              "notes": "Fills Turn Meter by 50%."
+            },
+            {
+              "type": "reset_cooldowns",
+              "stat": null,
+              "value": null,
+              "per_hit": false,
+              "target": "single_ally",
+              "notes": "Resets all skill cooldowns."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Revive", "Turn Meter Fill", "Cooldown Reset"],
+          "book_value": "Cooldown -3",
+          "notes": "One of the best single-target revives in the game."
+        },
+        {
+          "name": "Guardian Angel",
+          "type": "Passive",
+          "description": "[Passive Effect] Increases the amount of healing allies receive by 10%. [Active Effect] If an ally is about to get killed by a fatal hit, preempts that hit and instantly places a [Revive On Death] buff on them for 1 turn before the damage is taken.",
+          "effects": [
+            {
+              "type": "heal_increase",
+              "stat": null,
+              "value": 0.1,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "Increases healing received by 10%."
+            },
+            {
+              "type": "revive_on_death",
+              "stat": null,
+              "value": null,
+              "per_hit": false,
+              "target": "single_ally",
+              "duration": 1,
+              "notes": "Places Revive On Death for 1 turn before fatal hit."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Passive", "Heal Increase", "Revive On Death"],
+          "book_value": "Cooldown -3",
+          "notes": "Unique passive for team survivability."
+        }
+      ],
+      "aura": "Increases Ally DEF in all Battles by 30%.",
+      "comments": "Godseeker Aniri is one of the best epic revivers and healers in the game, with unique cooldown reset and passive team sustain."
+    }
+  ],
+  "mechanics_tags": ["Heal", "Revive", "Turn Meter Fill", "Cooldown Reset", "Buff Duration Manipulation", "Passive", "Heal Increase", "Revive On Death"],
+  "stat_priorities": ["DEF", "HP", "SPD", "ACC", "RES"],
+  "stat_priority_recommendations": {
+    "clan_boss": "DEF, HP, SPD, ACC, RES",
+    "dungeons": "DEF, HP, SPD, ACC, RES",
+    "arena": "DEF, HP, SPD, ACC, RES"
+  },
+  "recommended_gear": ["Relentless", "Immortal", "Perception", "Speed", "Resilience"],
+  "masteries": {
+    "clan_boss": ["Warmaster", "Cycle of Violence", "Master Hexer"],
+    "dungeons": ["Giant Slayer", "Cycle of Violence", "Master Hexer"],
+    "arena": ["Unshakeable", "Evil Eye", "Cycle of Violence"],
+    "doom_tower": ["Warmaster", "Master Hexer"],
+    "faction_wars": ["Warmaster", "Master Hexer"],
+    "general": ["Defense/Support as needed"]
+  },
+  "blessings": ["Cruelty", "Brimstone", "Phantom Touch"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI will always use A2 if available, which is optimal for most content."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion."
+  },
+  "mechanics_advisory": "Best used in revive/sustain teams. Passive enables unique protection and healing for all content.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-godseeker-aniri-skill-mastery-equip-guide/ (accessed 2025-10-23)",
+    "HellHades: https://hellhades.com/champions/godseeker-aniri/ (accessed 2025-10-23)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-23",
+    "last_patch": "Patch 10.00 (2025-09): No changes."
+  }
+}

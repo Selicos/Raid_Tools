@@ -32,7 +32,7 @@
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NONE|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
               "value": 0.0,
               "per_hit": false,
               "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
