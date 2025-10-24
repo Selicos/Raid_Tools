@@ -1,0 +1,55 @@
+{
+  "name": "Juliana",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "The Sacred Order",
+  "role": "Attack",
+  "draft": true,
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 15360,
+        "ATK": 1398,
+        "DEF": 881,
+        "SPD": 103,
+        "C.RATE": 15,
+        "C.DMG": 60,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Battledance",
+          "description": "Attacks 1 enemy 2 times. Each critical hit fill this Champion’s Turn Meter by 10%.\nDamage based on\n[ATK]\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Lethal Partner",
+          "description": "Places a 30%\n[Increase C. RATE]\nbuff on this Champion, then attacks 1 enemy 2 times. Places a 5%\n[Poison]\ndebuff on the target for 3 turns if this attack is critical. [Will ignore 50% of the target’s DEF when Romero is on the same team]\nDamage based on\n[ATK]\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +10%",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Fire of Purgation",
+          "description": "Attacks 1 enemy. Removes 1 random buff from the target. Has a 75% chance of placing a\n[HP Burn]\ndebuff for 3 turns.\nDamage based on\n[ATK]\nLevel 2: Damage +10%\nLevel 3: Damage +10%\nLevel 4: Buff/Debuff Chance +5%\nLevel 5: Buff/Debuff Chance +5%\nLevel 6: Buff/Debuff Chance +5%\nLevel 7: Buff/Debuff Chance +5%\nLevel 8: Buff/Debuff Chance +5%",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Aura",
+          "description": "Increases Ally C. RATE in the Arena by 20%.",
+          "type": "Aura",
+          "effects": null,
+          "cooldown_booked": null
+        }
+      ],
+      "aura": null,
+      "comments": "Imported from RaidWiki."
+    }
+  ]
+}

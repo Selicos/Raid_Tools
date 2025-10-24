@@ -1,0 +1,26 @@
+{
+  "name": "Lord Shazar",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "Demonspawn",
+  "role": "Attack",
+  "draft": true,
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 15690,
+        "ATK": 1343,
+        "DEF": 1189,
+        "SPD": 101,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [],
+      "aura": null,
+      "comments": "Imported from RaidWiki."
+    }
+  ]
+}

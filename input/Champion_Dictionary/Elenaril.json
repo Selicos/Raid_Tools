@@ -1,0 +1,55 @@
+{
+  "name": "Elenaril",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "",
+  "role": "Attack",
+  "draft": true,
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 14535,
+        "ATK": 1387,
+        "DEF": 1222,
+        "SPD": 96,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Searing Rebuke",
+          "description": "Attacks 1 enemy. Places a\n[HP Burn]\ndebuff for 2 turns. This debuff cannot be resisted.\nDamage based on\n[ATK]\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +10%\nLevel 5: Damage +10%",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Smolder",
+          "description": "Attacks all enemies. Places a 5%\n[Poison]\ndebuff for 2 turns. Places a second 5%\n[Poison]\ndebuff for 2 turns if the attack is critical.\nDamage based on\n[ATK]\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +10%\nLevel 5: Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Combust",
+          "description": "Deals damage from all\n[Poison]\ndebuffs on all enemies instantly.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Aura",
+          "description": "Increases Ally C. RATE in Faction Crypts by 24%.",
+          "type": "Aura",
+          "effects": null,
+          "cooldown_booked": null
+        }
+      ],
+      "aura": null,
+      "comments": "Imported from RaidWiki."
+    }
+  ]
+}

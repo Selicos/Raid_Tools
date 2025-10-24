@@ -2,15 +2,9 @@
   "name": "Brakus the Shifter",
   "rarity": "Legendary",
   "affinity": "Force",
-  "faction": "Skinwalkers",
-  "role": "Damage / Leech / Revive / Fear",
-  "meta_ratings": {
-    "clan_boss": "8/10",
-    "dungeons": "9/10",
-    "doom_tower": "8/10",
-    "arena": "7/10",
-    "faction_wars": "10/10"
-  },
+  "faction": "",
+  "role": "Attack",
+  "draft": true,
   "forms": [
     {
       "form_name": "Base",
@@ -27,191 +21,35 @@
       "skills": [
         {
           "name": "Innocent Blood",
-          "type": "A1",
-          "description": "Attacks 1 enemy. Heals this Champion by 15% of the damage inflicted.",
-          "effects": [
-            {
-              "type": "damage",
-              "stat": "ATK",
-              "value": 3.75,
-              "per_hit": false,
-              "target": "single_enemy",
-              "notes": "Single hit."
-            },
-            {
-              "type": "self_heal_from_damage",
-              "stat": null,
-              "value": 0.15,
-              "per_hit": false,
-              "target": "self",
-              "notes": "Heals self by 15% of damage inflicted."
-            }
-          ],
-          "cooldown_booked": null,
-          "mechanics_tags": ["Heal", "Single Target"],
-          "book_value": "+20% Damage",
-          "notes": "Sustain through self-heal."
+          "description": "Attacks 1 enemy. Heals this Champion by 15% of the damage inflicted.\nDamage based on\n[ATK]\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +5%",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
         },
         {
           "name": "Full Moon Rampage",
-          "type": "A2",
-          "description": "Attacks 1 enemy 6 times. Heals this Champion by 25% of the damage inflicted. Heals this Champion by 50% of the damage inflicted instead if the target is under a [Fear] or a [True Fear] debuff. After the first hit, has a 75% chance of placing a 25% [Weaken] debuff for 2 turns.",
-          "effects": [
-            {
-              "type": "damage",
-              "stat": "ATK",
-              "value": 0.97,
-              "per_hit": true,
-              "target": "single_enemy",
-              "notes": "6 hits."
-            },
-            {
-              "type": "self_heal_from_damage",
-              "stat": null,
-              "value": 0.25,
-              "per_hit": false,
-              "target": "self",
-              "notes": "Heals self by 25% of damage inflicted (50% if target under Fear/True Fear)."
-            },
-            {
-              "type": "apply_debuff",
-              "stat": null,
-              "value": 0.75,
-              "per_hit": false,
-              "target": "single_enemy",
-              "debuff": "Weaken 25%",
-              "duration": 2,
-              "notes": "75% chance after first hit to place 25% Weaken for 2 turns."
-            }
-          ],
-          "cooldown_booked": 3,
-          "mechanics_tags": ["Multi-hit", "Heal", "Weaken"],
-          "book_value": "+25% Damage, +25% Debuff Chance, Cooldown -2",
-          "notes": "Excellent for Fire Knight and boss damage."
+          "description": "Attacks 1 enemy 6 times. Heals this Champion by 25% of the damage inflicted. Heals this Champion by 50% of the damage inflicted instead if the target is under a\n[Fear]\nor a\n[True Fear]\ndebuff. After the first hit, has a 75% chance of placing a 25%\n[Weaken]\ndebuff for 2 turns.\nDamage based on\n[ATK]\nLevel 2: Damage +10%\nLevel 3: Damage +15%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Buff/Debuff Chance +15%\nLevel 6: Cooldown -1\nLevel 7: Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
         },
         {
           "name": "Hunter’s Howl",
-          "type": "A3",
-          "description": "Places a 50% [Increase ATK] buff on all allies for 3 turns, then attacks 1 enemy 3 times. Each hit has a 50% chance of placing a [True Fear] debuff for 1 turn. Has a 50% chance of placing a [Fear] debuff on 2 random enemies for 1 turn if the [True Fear] debuff is placed.",
-          "effects": [
-            {
-              "type": "apply_buff",
-              "stat": null,
-              "value": null,
-              "per_hit": false,
-              "target": "aoe_allies",
-              "buff": "Increase ATK 50%",
-              "duration": 3,
-              "notes": "Places 50% Increase ATK on all allies for 3 turns."
-            },
-            {
-              "type": "damage",
-              "stat": "ATK",
-              "value": 2.3,
-              "per_hit": true,
-              "target": "single_enemy",
-              "notes": "3 hits."
-            },
-            {
-              "type": "apply_debuff",
-              "stat": null,
-              "value": 0.5,
-              "per_hit": true,
-              "target": "single_enemy",
-              "debuff": "True Fear",
-              "duration": 1,
-              "notes": "50% chance per hit to place True Fear for 1 turn."
-            },
-            {
-              "type": "apply_debuff",
-              "stat": null,
-              "value": 0.5,
-              "per_hit": false,
-              "target": "random_enemies",
-              "debuff": "Fear",
-              "duration": 1,
-              "notes": "50% chance to place Fear on 2 random enemies for 1 turn if True Fear is placed."
-            }
-          ],
-          "cooldown_booked": 4,
-          "mechanics_tags": ["Increase ATK", "Multi-hit", "True Fear", "Fear"],
-          "book_value": "+10% Damage, +25% Debuff Chance, Cooldown -1",
-          "notes": "Buffs team and controls enemies."
+          "description": "Places a 50%\n[Increase ATK]\nbuff on all allies for 3 turns, then attacks 1 enemy 3 times. Each hit has a 50% chance of placing a\n[True Fear]\ndebuff for 1 turn. Hasa 50% chance of placing a\n[Fear]\ndebuff on 2 random enemies for 1 turn if the\n[True Fear]\ndebuff is placed.\nDamage based on\n[ATK]\nLevel 2: Damage +10%\nLevel 3: Buff/Debuff Chance +10%\nLevel 4: Buff/Debuff Chance +15%\nLevel 5: Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
         },
         {
           "name": "Beast Mode",
-          "type": "Passive",
-          "description": "Passive Effect: Damage increases by 40% when this Champion’s HP drops below 40%. Active Effect: Revives this Champion with 20% HP when killed. Immediately grants an Extra Turn.",
-          "effects": [
-            {
-              "type": "damage_increase_below_hp_threshold",
-              "stat": null,
-              "value": 0.4,
-              "per_hit": false,
-              "target": "self",
-              "threshold": 0.4,
-              "notes": "+40% damage when HP < 40%."
-            },
-            {
-              "type": "self_revive",
-              "stat": null,
-              "value": 0.2,
-              "per_hit": false,
-              "target": "self",
-              "notes": "Revives self with 20% HP when killed."
-            },
-            {
-              "type": "extra_turn",
-              "stat": null,
-              "value": null,
-              "per_hit": false,
-              "target": "self",
-              "notes": "Immediately grants an Extra Turn after revive."
-            }
-          ],
-          "cooldown_booked": 5,
-          "mechanics_tags": ["Passive", "Self Revive", "Extra Turn", "Damage Increase"],
-          "book_value": "Cooldown -2",
-          "notes": "Self-revive and extra turn make him hard to kill."
+          "description": "Passive Effect: Damage increases by 40% when this Champion’s HP drops below 40%. Active Effect: Revives this Champion with 20% HP when killed. Immediately grants an Extra Turn.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
         }
       ],
       "aura": null,
-      "comments": "Brakus the Shifter is a strong multi-hit damage dealer with self-heal, debuffs, and self-revive. Great for Fire Knight and Faction Wars."
+      "comments": "Imported from RaidWiki."
     }
-  ],
-  "mechanics_tags": ["Heal", "Single Target", "Multi-hit", "Weaken", "Increase ATK", "True Fear", "Fear", "Passive", "Self Revive", "Extra Turn", "Damage Increase"],
-  "stat_priorities": ["ATK", "C.RATE", "C.DMG", "SPD", "HP"],
-  "stat_priority_recommendations": {
-    "clan_boss": "ATK, C.RATE, C.DMG, SPD, HP",
-    "dungeons": "ATK, C.RATE, C.DMG, SPD, HP",
-    "arena": "ATK, C.RATE, C.DMG, SPD, HP"
-  },
-  "recommended_gear": ["Savage", "Cruel", "Relentless", "Lifesteal", "Speed"],
-  "masteries": {
-    "clan_boss": ["Warmaster", "Cycle of Violence", "Methodical"],
-    "dungeons": ["Giant Slayer", "Cycle of Violence", "Methodical"],
-    "arena": ["Helmsmasher", "Cycle of Violence", "Methodical"],
-    "doom_tower": ["Warmaster", "Cycle of Violence"],
-    "faction_wars": ["Warmaster", "Cycle of Violence"],
-    "general": ["Offense/Support as needed"]
-  },
-  "blessings": ["Phantom Touch", "Brimstone", "Cruelty"],
-  "ai_quirks": {
-    "bad_ai": false,
-    "ai_issue_description": "AI uses A2 and A3 for multi-hit and debuffs."
-  },
-  "cheese_strategy": {
-    "cheese_viable": false,
-    "cheese_type": "N/A",
-    "cheese_mechanic_info": "Not a cheese champion."
-  },
-  "mechanics_advisory": "Best used for multi-hit content (Fire Knight), self-revive, and debuffing. Strong in Faction Wars.",
-  "citations": [
-    "Ayumilove: https://ayumilove.net/raid-shadow-legends-brakus-the-shifter-skill-mastery-equip-guide/ (accessed 2025-10-23)",
-    "HellHades: https://hellhades.com/champions/brakus-the-shifter/ (accessed 2025-10-23)"
-  ],
-  "update_notes": {
-    "last_updated": "2025-10-23",
-    "last_patch": "Patch 10.00 (2025-09): No changes."
-  }
+  ]
 }

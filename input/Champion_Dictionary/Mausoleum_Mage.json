@@ -1,0 +1,48 @@
+{
+  "name": "Mausoleum Mage",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "",
+  "role": "Attack",
+  "draft": true,
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 19485,
+        "ATK": 1057,
+        "DEF": 947,
+        "SPD": 104,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Soul Manacles",
+          "description": "Attacks 1 enemy. Has a 30% chance of placing a 30%\n[Decrease SPD]\ndebuff for 2 turns.\nDamage based on\n[ATK]\nLevel 2: Damage +5%\nLevel 3: Damage +10%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Buff/Debuff Chance +10%",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Might of Undeath",
+          "description": "Places a\n[Block Debuffs]\nbuff on all allies for 1 turn. Also places a 30%\n[Increase C. RATE]\nbuff and a 60%\n[Increase DEF]\non all allies for 2 turns.\nLevel 2: Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Winds of Purging",
+          "description": "Removes all debuffs from all allies, then heals all allies by 10% of this Champion’s MAX HP. Heals each ally by a further 10% if 1 or more debuffs are removed from that ally. Fills each ally’s Turn Meter by 15% if 2 or more debuffs are removed from that ally.\nLevel 2: Heal +10%\nLevel 3: Heal +10%\nLevel 4: Heal +10%\nLevel 5: Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        }
+      ],
+      "aura": null,
+      "comments": "Imported from RaidWiki."
+    }
+  ]
+}

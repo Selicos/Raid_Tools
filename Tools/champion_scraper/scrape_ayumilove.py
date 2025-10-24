@@ -81,7 +81,6 @@ def extract_skills_section(soup):
     return '\n'.join(skills_text).strip()
 
 
-
 def normalize_champion_name(name):
     # Converts champion name to Ayumilove URL format (lowercase, hyphens, remove special chars)
     # TODO: Validate champion name against a canonical list if available
@@ -107,6 +106,23 @@ def main():
     print("Main Image URL:", image_url)
     print("Base Stats:", stats)
     print("\nSKILLS Section:\n", skills)
+
+def scrape_ayumilove_champion(champ_name):
+    norm_name = normalize_champion_name(champ_name)
+    url = f"https://ayumilove.net/raid-shadow-legends-{norm_name}-skill-mastery-equip-guide/"
+    print(f"[Ayumilove] Fetching: {url}")
+    try:
+        html = fetch_champion_page(url)
+    except Exception as e:
+        print(f"[Ayumilove][ERROR] Failed to fetch {champ_name}: {e}")
+        return None
+    soup = BeautifulSoup(html, 'lxml')
+    image_url, stats = extract_main_image_and_stats(soup)
+    skills_text = extract_skills_section(soup)
+    # For now, just return the skills text as a single block; real parsing can split into skill dicts later
+    info = {"image_url": image_url}
+    skills = [{"name": "SKILLS", "desc": skills_text}] if skills_text else []
+    return {'info': info, 'stats': stats, 'skills': skills}
 
 if __name__ == "__main__":
     main()

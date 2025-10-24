@@ -1,0 +1,55 @@
+{
+  "name": "Broadmaw",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "Lizardmen",
+  "role": "Attack",
+  "draft": true,
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 18660,
+        "ATK": 1101,
+        "DEF": 958,
+        "SPD": 104,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Ice Blast",
+          "description": "Attacks 1 enemy. Has a 25% chance of placing a\n[Freeze]\ndebuff for 1 turn.\nDamage based on\n[ATK]\nLevel 2: Damage +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Damage +5%\nLevel 5: Buff/Debuff Chance +5%\nLevel 6: Damage +5%",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Gift",
+          "description": "Places a 30%\n[Increase C. RATE]\nbuff and a 15%\n[Increase SPD]\nbuff on all allies for 2 turns.\nLevel 2: Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Resurrect",
+          "description": "Revives 2 random dead allies with 25% HP. Places a\n[Block Damage]\nbuff on the revived allies for 1 turn.\nLevel 2: Heal +5%\nLevel 3: Heal +10%\nLevel 4: Heal +15%\nLevel 5: Cooldown -1\nLevel 6: Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Aura",
+          "description": "Increases Ally DEF in the Arena by 33%.",
+          "type": "Aura",
+          "effects": null,
+          "cooldown_booked": null
+        }
+      ],
+      "aura": null,
+      "comments": "Imported from RaidWiki."
+    }
+  ]
+}

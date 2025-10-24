@@ -4,6 +4,7 @@
   "affinity": "Magic/Force/Spirit/Void",
   "faction": "Faction Name",
   "role": "Primary Role(s)",
+  Draft": true,
   "meta_ratings": {
     "clan_boss": "X/10",
     "dungeons": "X/10",

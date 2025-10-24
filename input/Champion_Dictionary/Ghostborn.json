@@ -1,0 +1,55 @@
+{
+  "name": "Ghostborn",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "Dark Elves",
+  "role": "Attack",
+  "draft": true,
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 18825,
+        "ATK": 1211,
+        "DEF": 1112,
+        "SPD": 101,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 40,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Energy Bolt",
+          "description": "Attacks 1 enemy. Has a 50% chance of placing a 60%\n[Decrease DEF]\ndebuff for 2 turns.\nDamage based on\n[ATK]\nLevel: 2 Buff/Debuff Chance +10%\nLevel: 3 Buff/Debuff Chance +10%\nLevel: 4 Buff/Debuff Chance +10%\nLevel: 5 Buff/Debuff Chance +20%",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Petrify",
+          "description": "Attacks all enemies. Has a 75 chance of placing a 100%\n[Heal Reduction]\ndebuff for 2 turns.\nDamage based on\n[ATK]\nLevel: 2 Buff/Debuff Chance +10%\nLevel: 3 Buff/Debuff Chance +15%\nLevel: 4 Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Ancestral Spirits",
+          "description": "Attacks all enemies. Has a 75% chance of placing a 60%\n[Decrease DEF]\ndebuff for 2 turns. This debuff cannot be resisted. Places a 50%\n[Increase ATK]\nbuff on all allies for 2 turns.\nDamage based on\n[ATK]\nLevel: 2 Buff/Debuff Chance +10%\nLevel: 3 Buff/Debuff Chance +15%\nLevel: 4 Cooldown -1",
+          "type": "Active",
+          "effects": [],
+          "cooldown_booked": null
+        },
+        {
+          "name": "Aura",
+          "description": "Increases Ally ACC in Faction Crypts by 65.",
+          "type": "Aura",
+          "effects": null,
+          "cooldown_booked": null
+        }
+      ],
+      "aura": null,
+      "comments": "Imported from RaidWiki."
+    }
+  ]
+}
