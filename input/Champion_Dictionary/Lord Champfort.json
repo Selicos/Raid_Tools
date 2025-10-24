@@ -29,7 +29,16 @@
           "name": "Annihilating Hit",
           "type": "A1",
           "description": "Attacks 1 enemy. Has a 45% chance of placing a 60% [Decrease DEF] debuff for 2 turns.",
-          "multiplier": "0.2x HP",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.2,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target. 45% chance to place Decrease DEF."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Single Target", "Decrease DEF"],
           "book_value": "+25% damage",
@@ -39,7 +48,16 @@
           "name": "Earthshaker",
           "type": "A2",
           "description": "Attacks all enemies. Places a 50% [Decrease ACC] debuff and a 50% [Decrease ATK] debuff for 2 turns.",
-          "multiplier": "0.23x HP",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.23,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. Places Decrease ACC and Decrease ATK."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["AoE", "Decrease ACC", "Decrease ATK"],
           "book_value": "+15% damage, -1 CD",
@@ -49,7 +67,7 @@
           "name": "Thornsphere",
           "type": "Passive",
           "description": "At the start of each turn, places a [Shield] buff on this Champion equal to 20% of their MAX HP for 2 turns. Will place a 15% [Decrease SPD] debuff for 1 turn on whichever enemy attacks this Champion.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": 1,
           "mechanics_tags": ["Passive", "Shield (Self)", "Decrease SPD (on attacker)"],
           "book_value": "-1 turn cooldown",

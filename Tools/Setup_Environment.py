@@ -81,9 +81,9 @@ def install_requirements():
         pip_path = "pip"
     # Ensure pip is upgraded before installing packages
     run(f"{pip_path} install --upgrade pip")
-    # Install only requirements and core dev tools
+    # Install requirements and core dev tools (including jsonschema for schema validation)
     run(f"{pip_path} install -r {REQUIREMENTS}")
-    run(f"{pip_path} install black flake8 pytest")
+    run(f"{pip_path} install black flake8 pytest jsonschema")
 
 
 def create_vscode_configs():

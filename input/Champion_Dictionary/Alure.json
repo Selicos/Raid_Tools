@@ -1,0 +1,121 @@
+{
+  "name": "Alure",
+  "rarity": "Epic",
+  "affinity": "Magic",
+  "faction": "Demonspawn",
+  "role": "Attack",
+  "meta_ratings": {
+    "clan_boss": "6/10",
+    "dungeons": "7/10",
+    "doom_tower": "6/10",
+    "arena": "7/10",
+    "faction_wars": "7/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 10200,
+        "ATK": 1125,
+        "DEF": 567,
+        "SPD": 96,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Triple Strike (A1)",
+          "type": "A1",
+          "description": "Attacks 3 times at random. Decreases the target's Turn Meter by 25% on each critical hit.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.5,
+              "per_hit": true,
+              "target": "random_enemy",
+              "notes": "Triple hit. Each crit hit decreases TM by 25%."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Multi-hit", "Decrease Turn Meter", "Crit-synergy"],
+          "book_value": "Useful but A2/A3 book priority varies by use-case",
+          "notes": "Works best with Crit-focused builds to maximise TM reduction."
+        },
+        {
+          "name": "Defiling Gust (A2)",
+          "type": "A2",
+          "description": "Attacks all enemies 2 times. Each hit has a 30% chance of placing a 30% Decrease DEF debuff for 1 turn. Places Sleep on targets under Decrease DEF.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.0,
+              "per_hit": true,
+              "target": "aoe_enemies",
+              "notes": "Double AoE hit. Each hit can place Decrease DEF and Sleep (conditional)."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["AoE", "Decrease DEF", "Sleep (conditional)"],
+          "book_value": "High: reduces cooldown and boosts proc chance; useful in group content.",
+          "notes": "Good AoE clear and DEF shred support for teams relying on DEF-sensitive nukers."
+        },
+        {
+          "name": "Piercing Malediction (A3)",
+          "type": "A3",
+          "description": "Attacks 1 enemy. Has an extra 30% chance of inflicting a critical hit and will ignore 50% of the target's DEF.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 6.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single-target nuke. 50% ignore DEF. Extra 30% crit chance."
+            }
+          ],
+          "cooldown_booked": 6,
+          "mechanics_tags": ["Ignore DEF", "High Single-Target Damage", "Crit-bias"],
+          "book_value": "High: booking improves cooldown and reliability for clutch kills.",
+          "notes": "Primary nuke; pairs well with accuracy/crit and ignore-def comps."
+        }
+      ],
+      "aura": "None",
+      "comments": "Base stats from user screenshot (accessed 2025-10-23). Skill text summarized from community guides; please run validation script to confirm field completeness."
+    }
+  ],
+  "mechanics_tags": ["Ignore DEF", "Decrease DEF", "Multi-hit", "Decrease TM"],
+  "stat_priorities": ["C.RATE/C.DMG", "ATK", "SPD", "ACC as needed"],
+  "stat_priority_recommendations": {
+    "dungeons": "High Crit Rate and Crit Damage; ACC if using A2 to land Decrease DEF",
+    "arena": "High SPD and Crit to secure TM drops",
+    "clan_boss": "Not primary CB champion; avoid if focused on CB DPS"
+  },
+  "recommended_gear": ["Crit Rate", "Crit Damage", "Speed", "Ignore DEF support"],
+  "masteries": {
+    "general": ["Warmaster", "Deadly Precision"]
+  },
+  "blessings": [],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "No major AI issues reported in community guides."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": ""
+  },
+  "mechanics_advisory": "Alure excels as a DEF-ignoring single-target/cleave hybrid; optimise Crit Rate/Crit DMG and consider ACC for reliable A2 debuffs.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-alure-skill-mastery-equip-guide/ (accessed 2025-10-23)",
+    "HellHades: https://hellhades.com/raid/champions/alure/ (accessed 2025-10-23)",
+    "Fandom: https://raidshadowlegends.fandom.com/wiki/Alure (accessed 2025-10-23)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-23",
+    "last_patch": "Created/updated base_stats per user screenshot and populated skills from community sources; recommend user-run JSON validation."
+  }
+}

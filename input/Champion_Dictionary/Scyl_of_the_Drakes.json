@@ -26,26 +26,80 @@
       },
       "skills": [
         {
-          "name": "Skill A1 (placeholder)",
+          "name": "Drake's Swiftness",
           "type": "A1",
-          "description": "Placeholder - fill with verified skill text.",
-          "multiplier": null,
+          "description": "Attacks 1 enemy. Has a 20% chance of placing a 30% Decrease SPD debuff for 2 turns. Also has a 30% chance of decreasing the target's Turn Meter by 15%.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.5,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single hit. 20% chance Decrease SPD, 30% chance Decrease TM."
+            }
+          ],
           "cooldown_booked": null,
-          "mechanics_tags": [],
+          "mechanics_tags": ["Single Target Attack", "Decrease SPD", "Decrease Turn Meter"],
+          "book_value": "Valuable: increased damage and proc chance when booked; A1 is considered useful for TM control.",
+          "notes": "Good anti-turn-meter tool vs bosses that rely on single big turns."
+        },
+        {
+          "name": "Wingbeat Flurry",
+          "type": "A2",
+          "description": "Attacks all enemies 2 times. Each hit has a 20% chance of placing a Stun debuff for 1 turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 1.55,
+              "per_hit": true,
+              "target": "aoe_enemies",
+              "notes": "AoE, 2 hits. 20% chance Stun per hit."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["AoE", "Multi-hit", "Stun"],
+          "book_value": "High: booking improves proc rates and reduces cooldown at higher book levels; core CC ability.",
+          "notes": "Strong crowd-control A2; synergises with ACC and stun-focused masteries/sets."
+        },
+        {
+          "name": "Phoenix Rite",
+          "type": "A3",
+          "description": "Revives an ally with 50% HP and places a 50% Ally Protection buff on them for 2 turns.",
+          "effects": null,
+          "cooldown_booked": 6,
+          "mechanics_tags": ["Revive", "Ally Protection", "Support"],
+          "book_value": "High: book to reduce cooldown and increase usability in long fights.",
+          "notes": "Excellent emergency tool; ally protection reduces immediate follow-up wipes."
+        },
+        {
+          "name": "Boundless Life",
+          "type": "Passive",
+          "description": "Heals all allies by 10% of their MAX HP at the start of each turn. Also places a 30% Increase SPD buff on a random ally for 2 turns.",
+          "effects": null,
+          "cooldown_booked": null,
+          "mechanics_tags": ["AoE Heal", "Increase SPD", "Passive"],
           "book_value": "",
-          "notes": ""
+          "notes": "Extremely powerful passive for sustain and team speed; benefits greatly from Relentless/extra-turn sets."
         }
       ],
-      "aura": "",
-      "comments": "Base stats populated from user screenshot attachment; skill details and citations pending."
+      "aura": "None",
+      "comments": "Base stats populated from user screenshot attachment; skill details filled from Ayumilove/HellHades/Fandom."
     }
   ],
-  "mechanics_tags": [],
-  "stat_priorities": ["SPD", "ACC (if utility checks)", "HP/DEF for survivability"],
-  "stat_priority_recommendations": {},
-  "recommended_gear": [],
-  "masteries": {},
-  "blessings": [],
+  "mechanics_tags": ["AoE Heal", "Stun", "Revive", "Increase SPD", "Decrease Turn Meter"],
+  "stat_priorities": ["SPD", "DEF/HP", "ACC (for reliable stuns)"],
+  "stat_priority_recommendations": {
+    "clan_boss": "Not primary CB DPS; build tanky if used (HP/DEF)",
+    "dungeons": "High ACC, decent SPD, HP/DEF for sustain",
+    "arena": "High ACC for stuns, decent SPD"
+  },
+  "recommended_gear": ["Relentless", "Lifesteal", "Speed", "Perception"],
+  "masteries": {
+    "dungeons": ["Support tree choices (Lay on Hands, Healing Savior)", "Defense/Support hybrids"]
+  },
+  "blessings": ["Brimstone (Hydra)", "Soul Reap"],
   "ai_quirks": {
     "bad_ai": false,
     "ai_issue_description": ""
@@ -56,9 +110,13 @@
     "cheese_mechanic_info": ""
   },
   "mechanics_advisory": "",
-  "citations": [],
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-scyl-of-the-drakes-skill-mastery-equip-guide/ (accessed 2025-10-23)",
+    "HellHades: https://hellhades.com/raid/champions/scyl-of-the-drakes/ (accessed 2025-10-23)",
+    "Fandom: https://raidshadowlegends.fandom.com/wiki/Scyl_of_the_Drakes (accessed 2025-10-23)"
+  ],
   "update_notes": {
     "last_updated": "2025-10-23",
-    "last_patch": "Created entry with base_stats from user screenshot; skill text and sources pending."
+    "last_patch": "Filled skills, mechanics, and citations from community guide sources."
   }
 }

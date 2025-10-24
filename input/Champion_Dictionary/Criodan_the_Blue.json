@@ -26,44 +26,69 @@
       },
       "skills": [
         {
-          "name": "Frostbark Blade",
+          "name": "Frostbite",
           "type": "A1",
-          "description": "Attacks 1 enemy 3 times. Each hit has a 25% chance of placing a [Freeze] debuff for 1 turn.",
-          "multiplier": "1.2x ATK per hit",
+          "description": "Attacks 1 enemy. Has a 40% chance of placing a [Freeze] debuff for 1 turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.7,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target. 40% chance to place Freeze per hit."
+            }
+          ],
           "cooldown_booked": null,
-          "mechanics_tags": ["Triple Hit", "Freeze", "Single Target"],
-          "book_value": "+20% damage, +10% debuff chance",
-          "notes": "Each hit can independently Freeze. Fully booked: 35% chance per hit."
+          "mechanics_tags": ["Single Target", "Freeze"],
+          "book_value": "+20% damage, +15% debuff chance",
+          "notes": "Single target Freeze."
         },
         {
-          "name": "Razor Hail",
+          "name": "Glacial Surge",
           "type": "A2",
-          "description": "Attacks all enemies 2 times. Each hit has a 45% chance of placing a [Freeze] debuff for 1 turn.",
-          "multiplier": "1.9x ATK per hit",
+          "description": "Attacks all enemies. Has a 75% chance of placing a 50% [Decrease ACC] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. 75% chance to place Decrease ACC."
+            }
+          ],
           "cooldown_booked": 3,
-          "mechanics_tags": ["AoE", "Double Hit", "Freeze"],
-          "book_value": "+10% damage, +20% debuff chance, Cooldown -1 turn",
-          "notes": "Fully booked: 65% chance per hit."
+          "mechanics_tags": ["AoE", "Decrease ACC"],
+          "book_value": "+20% damage, +25% debuff chance, -1 CD",
+          "notes": "AoE Decrease ACC."
         },
         {
-          "name": "Blessing of the Blue",
+          "name": "Frozen Aegis",
           "type": "A3",
-          "description": "Places a 30% [Increase SPD] buff on all allies for 2 turns. Also fills the Turn Meters of all allies by 15%.",
-          "multiplier": null,
-          "cooldown_booked": 3,
-          "mechanics_tags": ["Increase SPD", "Turn Meter Fill", "Buff", "AoE"],
-          "book_value": "Cooldown -2 turns",
-          "notes": "Strong speed booster and turn meter fill."
-        },
-        {
-          "name": "Snow Dancer",
-          "type": "Passive",
-          "description": "Fills this Champion’s Turn Meter by 5% for each [Freeze] debuff placed by this Champion.",
-          "multiplier": null,
-          "cooldown_booked": null,
-          "mechanics_tags": ["Passive", "Turn Meter Gain", "Freeze Synergy"],
-          "book_value": null,
-          "notes": "Synergizes with multi-hit Freeze skills."
+          "description": "Places a [Block Debuffs] buff and a 60% [Increase DEF] buff on all allies for 2 turns.",
+            "effects": [
+              {
+                "type": "buff",
+                "stat": "Block Debuffs",
+                "value": 1.0,
+                "per_hit": false,
+                "target": "all_allies",
+                "notes": "Places Block Debuffs on all allies for 2 turns."
+              },
+              {
+                "type": "buff",
+                "stat": "DEF",
+                "value": 0.6,
+                "per_hit": false,
+                "target": "all_allies",
+                "notes": "Places 60% Increase DEF on all allies for 2 turns."
+              }
+            ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Block Debuffs", "Increase DEF"],
+          "book_value": "-1 CD",
+          "notes": "Team Block Debuffs/DEF."
         }
       ],
       "aura": null,

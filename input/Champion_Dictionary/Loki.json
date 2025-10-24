@@ -29,7 +29,15 @@
           "name": "Flames of Mischief",
           "type": "A1",
           "description": "Attacks all enemies. 70% chance to extend the duration of all debuffs on each target by 1 turn.",
-          "multiplier": "3.5x ATK",
+          "multiplier": [
+            {
+              "stat": "ATK",
+              "value": 3.5,
+              "type": "total",
+              "per_hit": false,
+              "notes": "AoE."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["AoE", "Debuff Extension"],
           "book_value": "+20% Damage, +20% Debuff Chance",
@@ -49,7 +57,15 @@
           "name": "Bandit Flash",
           "type": "A3",
           "description": "Attacks 1 enemy. Steals all buffs and turn meter from the target. If under Veil, also ignores RES for these effects and grants Increase ATK to all allies.",
-          "multiplier": "5x ATK",
+          "multiplier": [
+            {
+              "stat": "ATK",
+              "value": 5.0,
+              "type": "total",
+              "per_hit": false,
+              "notes": "Single target."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["Single Target", "Steal Buffs", "Steal Turn Meter", "Ignore RES (Veil)", "Increase ATK (team)"],
           "book_value": "+20% Damage, Cooldown -1",
@@ -62,7 +78,7 @@
           "multiplier": null,
           "cooldown_booked": null,
           "mechanics_tags": ["Evade", "Veil Synergy", "Survivability"],
-          "book_value": null,
+          "book_value": "",
           "notes": "Evade is boosted by Veil. May block lethal hits."
         }
       ],

@@ -29,7 +29,16 @@
           "name": "Fetid Glaive",
           "type": "A1",
           "description": "Attacks all enemies. Destroys each target’s MAX HP by 3% (stacks up to 30%). Also increases the duration of 1 random debuff on all enemies by 1 turn. This effect cannot be resisted if enemies have any [Necrosis] stacks.",
-          "multiplier": "0.19x HP",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.19,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. Destroys MAX HP by 3%. Increases debuff duration. Unresistable if Necrosis."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["AoE", "Decrease MAX HP", "Increase Debuff Duration", "Conditional Unresistable"],
           "book_value": "+20% Damage",
@@ -39,7 +48,7 @@
           "name": "Voidstare",
           "type": "A2",
           "description": "Places a [True Fear] debuff on all enemies for 1 turn, and a 50% [Decrease ATK] debuff on all enemies for 2 turns. These effects cannot be resisted if enemies have any [Necrosis] stacks. Then grants an Extra Turn.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": 3,
           "mechanics_tags": ["AoE", "True Fear", "Decrease ATK", "Extra Turn", "Conditional Unresistable"],
           "book_value": "Cooldown -1, Ignore RES +20%",
@@ -49,7 +58,16 @@
           "name": "The Unmaking",
           "type": "A3",
           "description": "Attacks all enemies. Removes any [Stone Skin] buffs and replaces them with [True Fear] debuffs. [Block Debuffs] buffs will be replaced with [Block Buffs] debuffs. Also removes any buffs positively affecting stats, and replaces them with their mirrored debuff equivalent, such as [Increase ATK] being replaced with [Decrease ATK]. Buffs such as [Continuous Heal] and [Strengthen] will be replaced with [Heal Reduction] and [Weaken] debuffs respectively. The mirrored debuffs will have the same duration as the buffs before they were replaced. Then steals 5% of each target’s Turn Meter for each buff converted into a debuff by this skill. Also decreases the Turn Meters of all enemies by 20%. These effects cannot be resisted if enemies have any [Necrosis] stacks.",
-          "multiplier": "0.27x HP",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.27,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. Buff strip/conversion, TM steal/decrease. Unresistable if Necrosis."
+            }
+          ],
           "cooldown_booked": 4,
           "mechanics_tags": ["AoE", "Buff Strip", "Buff Conversion", "Turn Meter Steal", "Turn Meter Decrease", "Conditional Unresistable"],
           "book_value": "Cooldown -1, Ignore RES +20%",
@@ -59,11 +77,21 @@
           "name": "Wrongful Existence",
           "type": "Passive",
           "description": "Whenever an enemy is killed, places one [Necrosis] stack on all other enemies. [Necrosis] stacks cannot be resisted or blocked. [Necrosis] stacks can only be removed by reviving dead allies. This effect does not work against Bosses and their minions. If there are multiple Champions on the team with this skill, this effect will only activate once. At the start and the end of this Champion’s turn, instantly activates any [Necrosis] stacks on all enemies.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": null,
           "mechanics_tags": ["Necrosis", "Passive", "Conditional"],
-          "book_value": null,
+          "book_value": "",
           "notes": "Unique Necrosis mechanic, triggers at start/end of turn."
+        },
+        {
+          "name": "Metamorph",
+          "type": "A4",
+          "description": "Transforms this Champion into their Base/Alternate Form. Then grants an Extra Turn.",
+          "effects": null,
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Transform", "Extra Turn"],
+          "book_value": "Cooldown -1",
+          "notes": "Switches between forms, always grants extra turn."
         }
       ],
       "aura": "Increases Ally HP in All Battles by 35%",
@@ -86,7 +114,24 @@
           "name": "Unmaker’s Blade",
           "type": "A1",
           "description": "Attacks 1 enemy. Places an extra hit if the target has any [Necrosis] stacks. Also places a [Block Revive] debuff if this attack kills an enemy.",
-          "multiplier": "0.25x HP + (ACC/10000) HP",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.25,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target. Extra hit if Necrosis."
+            },
+            {
+              "type": "scaling",
+              "stat": "ACC",
+              "value": 0.0001,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Scales with ACC."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Single Target", "Extra Hit", "Block Revive", "Conditional"],
           "book_value": "+30% Damage",
@@ -96,7 +141,24 @@
           "name": "Atomize",
           "type": "A2",
           "description": "Attacks all enemies. Deals double damage to enemies whose ACC is lower than this Champion’s ACC. Ignores 50% of each enemy’s DEF whose ACC is equal to or higher than this Champion’s ACC.",
-          "multiplier": "0.28x HP + (ACC/10000) HP",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.28,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. Double damage or ignore DEF based on ACC."
+            },
+            {
+              "type": "scaling",
+              "stat": "ACC",
+              "value": 0.0001,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "Scales with ACC."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["AoE", "Conditional Double Damage", "Ignore DEF"],
           "book_value": "+20% Damage, Cooldown -1",
@@ -106,7 +168,32 @@
           "name": "Your Life Is Forfeit!",
           "type": "A3",
           "description": "Swaps HP with an enemy. If the target is a Boss, fully restores this Champion’s destroyed MAX HP and fully heals this Champion instead. Each time this skill is used, increases this Champion’s Ignore DEF effect by 10% while in their Alternate Form (stacks up to 50%). Then grants an Extra Turn.",
-          "multiplier": null,
+            "effects": [
+              {
+                "type": "hp_swap",
+                "stat": null,
+                "value": null,
+                "per_hit": false,
+                "target": "single_enemy",
+                "notes": "Swaps HP with target. If target is Boss, fully restores destroyed MAX HP and fully heals self."
+              },
+              {
+                "type": "restore_destroyed_max_hp",
+                "stat": "MAX HP",
+                "value": 1.0,
+                "per_hit": false,
+                "target": "self",
+                "notes": "Fully restores destroyed MAX HP if target is Boss."
+              },
+              {
+                "type": "heal",
+                "stat": "MAX HP",
+                "value": 1.0,
+                "per_hit": false,
+                "target": "self",
+                "notes": "Fully heals self if target is Boss."
+              }
+            ],
           "cooldown_booked": 4,
           "mechanics_tags": ["HP Swap", "Restore Destroyed MAX HP", "Heal", "Stat Stack", "Extra Turn"],
           "book_value": "Cooldown -1",
@@ -116,25 +203,34 @@
           "name": "Degenerator",
           "type": "Passive",
           "description": "[Passive Effect] When this Champion dies, reflects damage equal to 50% of the fatal hit back to the attacker, including any surplus damage. Whenever an enemy is killed, places one [Necrosis] stack on all other enemies. [Necrosis] stacks cannot be resisted or blocked. [Necrosis] stacks can only be removed by reviving dead allies. This effect does not apply against Bosses and their minions. If there are multiple Champions on the team with this skill, only one will activate. [Active Effect] If this Champion is about to get killed by a fatal hit, preempts that hit and instantly places a [Revive On Death] buff on them for 1 turn before the damage is taken.",
-          "multiplier": null,
+            "effects": [
+              {
+                "type": "reflect_damage",
+                "stat": "fatal_hit",
+                "value": 0.5,
+                "per_hit": false,
+                "target": "attacker",
+                "notes": "Reflects 50% of fatal hit back to attacker when killed."
+              },
+              {
+                "type": "revive_on_death",
+                "stat": null,
+                "value": 1,
+                "per_hit": false,
+                "target": "self",
+                "notes": "Places Revive On Death buff for 1 turn before fatal hit."
+              }
+            ],
           "cooldown_booked": 5,
           "mechanics_tags": ["Reflect Damage", "Revive On Death", "Necrosis", "Passive"],
-          "book_value": null,
+          "book_value": "",
           "notes": "Reflects fatal hit, preemptive Revive on Death, Necrosis stacking."
-        }
-      ],
-      "aura": null,
-      "comments": "Alternate form is a tanky HP nuker with unique Ignore DEF stacking and reflect mechanics."
-    },
-    {
-      "form_name": "Common",
-      "base_stats": null,
-      "skills": [
+        },
         {
           "name": "Metamorph",
           "type": "A4",
           "description": "Transforms this Champion into their Base/Alternate Form. Then grants an Extra Turn.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": 3,
           "mechanics_tags": ["Transform", "Extra Turn"],
           "book_value": "Cooldown -1",
@@ -142,7 +238,7 @@
         }
       ],
       "aura": null,
-      "comments": "Metamorph is available in both forms."
+      "comments": "Alternate form is a tanky HP nuker with unique Ignore DEF stacking and reflect mechanics."
     }
   ],
   "mechanics_tags": ["Necrosis", "Buff Strip", "Buff Conversion", "Turn Meter Steal", "Turn Meter Decrease", "True Fear", "Decrease ATK", "Block Revive", "Reflect Damage", "Revive On Death", "HP Swap", "Restore Destroyed MAX HP", "Stat Stack", "Conditional Unresistable", "AoE", "Single Target", "Extra Turn", "Heal"],

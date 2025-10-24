@@ -29,7 +29,16 @@
           "name": "Dark Sphere",
           "type": "A1",
           "description": "Attacks all enemies. Heals this Champion and all allies by 20% of the damage inflicted.",
-          "multiplier": "2.8x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.8,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. Heal is based on total damage dealt. Fully booked increases both damage and healing."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["AoE", "Heal"],
           "book_value": "+20% damage, +20% heal",
@@ -39,7 +48,7 @@
           "name": "Malice",
           "type": "A2",
           "description": "Removes all debuffs from all allies. Places two 15% [Continuous Heal] buffs on all allies for 2 turns. Places two 5% [Poison] debuffs on all enemies for 2 turns.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": 3,
           "mechanics_tags": ["Cleanse", "Continuous Heal", "Poison", "AoE"],
           "book_value": "Cooldown -2 turns",
@@ -49,10 +58,10 @@
           "name": "Prey Upon",
           "type": "Passive",
           "description": "All allies inflict 20% more damage against targets under [Poison] debuffs.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": null,
           "mechanics_tags": ["Passive", "Damage Boost", "Poison Synergy"],
-          "book_value": null,
+          "book_value": "",
           "notes": "Does not increase Warmaster/Giant Slayer damage. Does not stack if multiple Bad-el-Kazars are present."
         }
       ],

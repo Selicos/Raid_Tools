@@ -29,7 +29,16 @@
           "name": "Gotcha!",
           "type": "A1",
           "description": "Attacks 1 enemy. Has a 25% chance of placing a [Stun] debuff for 1 turn. Chance increases to 50% if the target has any buffs (booked values improve chances).",
-          "multiplier": "3.5x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.5,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single hit. 25-50% chance to Stun."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Single Target", "Stun"],
           "book_value": "+10% damage / +10-15% stun chance (per community guides)",
@@ -39,7 +48,16 @@
           "name": "Staff Of Wonder",
           "type": "A2",
           "description": "Attacks 1 enemy. Ignores 50% of the target's DEF. If the initial target is killed, will apply the surplus damage to all remaining enemies (surplus attacks also ignore 50% DEF). This attack cannot be critical. If the initial target survives, places a [Sheep] debuff on them for 1 turn (this Sheep cannot be blocked by Polymorph).",
-          "multiplier": "5.0x ATK (booked values increase damage)",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 5.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target, ignores DEF, surplus damage. Sheep on survive."
+            }
+          ],
           "cooldown_booked": 4,
           "mechanics_tags": ["Single Target", "Ignore DEF", "Surplus Damage", "Sheep"],
           "book_value": "+10-20% damage, -1 CD (book priority)",
@@ -49,7 +67,16 @@
           "name": "Now You See Us",
           "type": "A3",
           "description": "Removes all buffs from all enemies, then attacks all enemies. Places a [Block Buffs] debuff on all enemies for 2 turns after stealing buffs.",
-          "multiplier": "3.8x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.8,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. Remove buffs, Block Buffs."
+            }
+          ],
           "cooldown_booked": 4,
           "mechanics_tags": ["AoE", "Remove Buffs", "Block Buffs"],
           "book_value": "+10% damage, -1 CD (book priority)",
@@ -59,10 +86,10 @@
           "name": "Unbeatable Wukong",
           "type": "Passive",
           "description": "Revives this Champion with 100% HP and 100% Turn Meter 3 turns after they were killed.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": null,
           "mechanics_tags": ["Revive", "Passive", "Turn Meter"],
-          "book_value": "N/A",
+          "book_value": "",
           "notes": "Counts turns from all participants; interacts with Block Revive / Block Passive debuffs. Core to his Arena value."
         }
       ],

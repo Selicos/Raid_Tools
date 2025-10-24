@@ -29,7 +29,16 @@
           "name": "Equivalent Exchange",
           "type": "A1",
           "description": "Attacks 1 enemy. Has a 50% chance of transferring 1 random debuff from this Champion to the target. Also has a 50% chance of stealing 1 random buff from the target.",
-          "multiplier": "5.5x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 5.5,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target. 50% chance to transfer debuff and steal buff."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Transfer Debuff", "Steal Buff"],
           "book_value": "+20% damage, +25% chance to transfer/steal",
@@ -39,7 +48,24 @@
           "name": "Healing Script",
           "type": "A2",
           "description": "Restores 25% of each ally’s destroyed MAX HP, then heals all allies by 25% of this Champion’s MAX HP.",
-          "multiplier": "Heal: 25% of Adelyn's MAX HP",
+            "effects": [
+              {
+                "type": "restore_destroyed_max_hp",
+                "stat": "MAX HP",
+                "value": 0.25,
+                "per_hit": false,
+                "target": "all_allies",
+                "notes": "Restores 25% of each ally's destroyed MAX HP."
+              },
+              {
+                "type": "heal",
+                "stat": "MAX HP",
+                "value": 0.25,
+                "per_hit": false,
+                "target": "all_allies",
+                "notes": "Heals all allies by 25% of this Champion's MAX HP."
+              }
+            ],
           "cooldown_booked": 3,
           "mechanics_tags": ["Restore Destroyed MAX HP", "Heal"],
           "book_value": "+20% heal, -1 cooldown",
@@ -49,7 +75,7 @@
           "name": "Writ of Sleep",
           "type": "A3",
           "description": "Has a 75% chance of placing a [Sleep] debuff on a target for 1 turn. Also has a 75% chance of placing a 30% [Decrease SPD] and a 50% [Decrease ATK] debuff for 2 turns. Debuffs placed by this skill ignore [Block Debuffs] buffs.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": 3,
           "mechanics_tags": ["Sleep", "Decrease SPD", "Decrease ATK", "Ignores Block Debuffs"],
           "book_value": "+25% chance, -2 cooldown",
@@ -59,10 +85,10 @@
           "name": "Perceive Weakness",
           "type": "Passive",
           "description": "Allies deal 3% more damage to targets for each debuff placed on them by this Champion.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": null,
           "mechanics_tags": ["Damage Amplify"],
-          "book_value": "None",
+          "book_value": "",
           "notes": "Synergizes with multi-debuff teams."
         }
       ],

@@ -26,67 +26,108 @@
       },
       "skills": [
         {
-          "name": "Heavy Blow",
+          "name": "Smash",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 75% chance of placing a [Provoke] debuff for 1 turn.",
-          "multiplier": "0.28x HP",
+          "description": "Attacks 1 enemy. Places a 15% [Continuous Heal] buff on this Champion for 1 turn if the attack is critical.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.5,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target. Places Continuous Heal (self) on crit."
+            }
+          ],
           "cooldown_booked": null,
-          "mechanics_tags": ["Provoke", "Single Target"],
+          "mechanics_tags": ["Single Target", "Continuous Heal (self)"],
           "book_value": "+20% damage",
-          "notes": "75% chance to Provoke when fully booked."
+          "notes": "Self-sustain on crit."
         },
         {
-          "name": "Lower Visor",
+          "name": "Foul Play",
           "type": "A2",
-          "description": "Places a 15% [Continuous Heal] buff and a 60% [Increase DEF] buff on all allies for 2 turns.",
-          "multiplier": null,
-          "cooldown_booked": 2,
-          "mechanics_tags": ["Continuous Heal", "Increase DEF", "Buff", "AoE"],
-          "book_value": "Cooldown -1 turn",
-          "notes": "Strong team support."
-        },
-        {
-          "name": "Last Breath",
-          "type": "A3",
-          "description": "Attacks all enemies. Damage increases according to the amount of HP this champion has lost.",
-          "multiplier": "0.25x HP * (HP Percent Lost * 10 + 1)",
+          "description": "Attacks all enemies. Has a 50% chance of placing a 50% [Decrease ATK] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.8,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. 50% chance to place Decrease ATK."
+            }
+          ],
           "cooldown_booked": 3,
-          "mechanics_tags": ["AoE", "HP Scaling", "Nuke"],
-          "book_value": "+20% damage",
-          "notes": "Hits much harder at low HP."
+          "mechanics_tags": ["AoE", "Decrease ATK"],
+          "book_value": "+20% damage, +20% debuff chance, -1 CD",
+          "notes": "AoE Decrease ATK."
         },
         {
-          "name": "Valorous",
+          "name": "Valor",
+          "type": "A3",
+          "description": "Places a 60% [Increase DEF] buff and a [Continuous Heal] buff on all allies for 2 turns. Places an [Unkillable] buff on this Champion for 1 turn.",
+            "effects": [
+              {
+                "type": "buff",
+                "stat": "DEF",
+                "value": 0.6,
+                "per_hit": false,
+                "target": "all_allies",
+                "notes": "Places 60% Increase DEF on all allies for 2 turns."
+              },
+              {
+                "type": "buff",
+                "stat": "Continuous Heal",
+                "value": 0.15,
+                "per_hit": false,
+                "target": "all_allies",
+                "notes": "Places Continuous Heal (15%) on all allies for 2 turns."
+              },
+              {
+                "type": "buff",
+                "stat": "Unkillable",
+                "value": 1.0,
+                "per_hit": false,
+                "target": "self",
+                "notes": "Places Unkillable on self for 1 turn."
+              }
+            ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Increase DEF", "Continuous Heal", "Unkillable (self)"],
+          "book_value": "-1 CD",
+          "notes": "Team DEF/Heal, self Unkillable."
+        },
+        {
+          "name": "Steadfast",
           "type": "Passive",
-          "description": "Places an [Unkillable] buff on this Champion for 1 turn if incoming damage exceeds 15% MAX HP in one attack. (Cooldown: 2 turns)",
-          "multiplier": null,
-          "cooldown_booked": 2,
-          "mechanics_tags": ["Unkillable", "Passive", "Self-Buff"],
-          "book_value": null,
-          "notes": "Triggers only if hit exceeds 15% max HP."
+          "description": "Heals this Champion by 15% of their MAX HP and places an [Unkillable] buff on them for 1 turn when hit with a fatal hit.",
+            "effects": [
+              {
+                "type": "heal",
+                "stat": "MAX HP",
+                "value": 0.15,
+                "per_hit": false,
+                "target": "self",
+                "notes": "Heals self by 15% MAX HP when hit with a fatal hit."
+              },
+              {
+                "type": "buff",
+                "stat": "Unkillable",
+                "value": 1.0,
+                "per_hit": false,
+                "target": "self",
+                "notes": "Places Unkillable on self for 1 turn when hit with a fatal hit."
+              }
+            ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive", "Heal (self)", "Unkillable (self)"],
+          "book_value": "",
+          "notes": "Self-sustain and Unkillable on fatal hit."
         }
-      ],
-      "aura": "Increases Ally HP in all Battles by 33%",
-      "comments": "Excellent tank and support. A3 can nuke when low HP. Passive makes him hard to kill."
+      ]
     }
   ],
-  "mechanics_tags": ["Provoke", "Continuous Heal", "Increase DEF", "Unkillable", "HP Scaling", "AoE", "Buff"],
-  "stat_priorities": ["HP%", "DEF%", "SPD", "C.RATE", "C.DMG"],
-  "stat_priority_recommendations": {
-    "clan_boss": "HP%, DEF%, SPD, C.RATE, C.DMG",
-    "dungeons": "HP%, DEF%, SPD, C.RATE, C.DMG",
-    "arena": "HP%, DEF%, SPD, C.RATE, C.DMG"
-  },
-  "recommended_gear": ["Bloodthirst", "Lifesteal", "Reflex", "Relentless", "Stoneskin", "Immortal", "Speed", "Perception"],
-  "masteries": {
-    "clan_boss": ["Warmaster", "Support/Defense as needed"],
-    "dungeons": ["Warmaster", "Support/Defense as needed"],
-    "arena": ["Unshakeable", "Lasting Gifts", "Retribution"],
-    "doom_tower": ["Unshakeable", "Lasting Gifts", "Retribution"],
-    "faction_wars": ["Warmaster", "Support/Defense as needed"],
-    "general": ["Offense/Support/Defense as needed"]
-  },
-  "blessings": ["Brimstone (Debuffer)", "Heavencast (Magma Dragon)", "Ward of the Fallen (Damage Dealer)"],
   "ai_quirks": {
     "bad_ai": false,
     "ai_issue_description": "Generally good AI. Uses A2 and A3 appropriately."

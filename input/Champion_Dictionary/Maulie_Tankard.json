@@ -29,7 +29,16 @@
           "name": "Roast",
           "type": "A1",
           "description": "Attacks 1 enemy. Damage increases by 50% if the target is under an HP Burn debuff.",
-          "multiplier": "3.3x DEF (base); +50% vs HP Burn",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.3,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target. +50% damage if target is under HP Burn."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Single Target Attack", "HP Burn Synergy"],
           "book_value": "Minor: increases damage; not a high priority compared to A2/A3",
@@ -39,7 +48,7 @@
           "name": "Bar Brawl",
           "type": "A2",
           "description": "Places a Provoke debuff on all enemies for 1 turn. Has a 50% chance to place Provoke on the primary target for 2 turns instead. Places a 30% Reflect Damage buff on this champion for 2 turns.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": 4,
           "mechanics_tags": ["Provoke", "AoE", "Reflect Damage"],
           "book_value": "High: reduces cooldown (book to -1), core utility for arena/dungeons",
@@ -49,7 +58,7 @@
           "name": "Cheers!",
           "type": "A3",
           "description": "Revives an ally with 50% HP and fills their Turn Meter by 50%. Places a Block Damage buff on that ally for 1 turn.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": 6,
           "mechanics_tags": ["Revive", "Turn Meter", "Block Damage"],
           "book_value": "High: book to improve effectiveness (A3/A2 tome priority on community guides)",
@@ -59,10 +68,10 @@
           "name": "Rowdy Crowd",
           "type": "Passive",
           "description": "Fills the Turn Meters of all allies by 15% when this champion is hit. Fills allies' Turn Meters by 25% when hit by a Boss.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": 2,
           "mechanics_tags": ["Passive", "Increase Turn Meter"],
-          "book_value": "N/A",
+          "book_value": "",
           "notes": "Excellent passive for speeding teams; procs frequently when Maulie is provoked/taunting and when enemies AOE. Very strong synergy with provoke/aggro comps."
         }
       ],

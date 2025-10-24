@@ -89,6 +89,8 @@ All major entry types and templates are stored in standardized directories for a
 - `make analysis` — Run cooldown analysis
 - `make summary` — Generate summary markdowns
 
+Note: schema validation for champion JSONs uses the `jsonschema` package. The setup script installs this dependency automatically, or install it manually with `pip install jsonschema`.
+
 Or use the corresponding Python scripts directly (see `.github/copilot-instructions.md`).
 
 ## Best Practices

@@ -13,7 +13,7 @@
   },
   "forms": [
     {
-      "form_name": "Base", // Always include 'Base' form. Add additional forms only if champion has them. Don't assume the champion has one unless it exists in valid sources or the champion index file.
+      "form_name": "Base",
       "base_stats": {
         "HP": 0,
         "ATK": 0,
@@ -29,17 +29,26 @@
           "name": "Skill Name",
           "type": "A1/A2/A3/Passive",
           "description": "Skill effect description.",
-          "multiplier": "Skill damage multiplier (e.g., 4.2x ATK, 3.5x DEF, etc.)",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|... (as needed)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": 2,
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Decrease DEF", "HP Burn"],
           "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-      "aura": "Aura description (if any)",
-      "comments": "Form-specific notes, edge cases, or user/community feedback."
+  "aura": "Aura description (if any)",
+  "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
-    // Add additional form objects here only if champion has alternate forms (e.g., Empowered, Alternate Skillset)
   ],
   "mechanics_tags": ["Decrease DEF", "HP Burn"],
   "stat_priorities": ["Stat priorities for main content(s)", "e.g. 100% Crit Rate, 250+ ACC"],
@@ -72,8 +81,10 @@
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",
     "HellHades: https://hellhades.com/champions/champion-name/ (accessed YYYY-MM-DD)"
   ],
+  "author": "Author Name (e.g., GitHub Copilot)",
+  "comments": "Top-level comments about the entry. For form-specific notes use forms[*].comments.",
   "update_notes": {
     "last_updated": "YYYY-MM-DD",
     "last_patch": "Patch version/date and summary of change"
-  },
+  }
 }

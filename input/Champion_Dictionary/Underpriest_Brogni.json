@@ -29,7 +29,16 @@
           "name": "Deepcrystal Scourge",
           "type": "A1",
           "description": "Attacks 1 enemy. Has a 45% chance of placing a [HP Burn] debuff for 2 turns.",
-          "multiplier": "6.5x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 6.5,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target. 45% chance to place HP Burn."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Single Target", "HP Burn"],
           "book_value": "+10% damage, +15% debuff chance",
@@ -39,7 +48,16 @@
           "name": "Cavern’s Grasp",
           "type": "A2",
           "description": "Attacks all enemies. 75% chance of removing 1 random buff from all enemies and 1 random debuff from all allies. Increases value of [Shield] buffs on all allies by 30% of the damage inflicted.",
-          "multiplier": "6.6x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 6.6,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. 75% chance to remove buff/debuff, increases shield by 30% of damage."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["AoE", "Buff Strip", "Debuff Cleanse", "Shield Increase"],
           "book_value": "+10% damage, +25% debuff chance, -1 CD",
@@ -49,7 +67,16 @@
           "name": "Resilient Glow",
           "type": "A3",
           "description": "Places a [Block Debuffs] and 50% [Increase ATK] on all allies for 2 turns. Also places a [Shield] buff on all allies for 2 turns equal to 30% of this Champion’s MAX HP. The [Shield] cannot be removed.",
-          "multiplier": null,
+          "effects": [
+            {
+              "type": "shield",
+              "stat": "MAX HP",
+              "value": 0.3,
+              "per_hit": false,
+              "target": "all_allies",
+              "notes": "Shield buff on all allies for 2 turns; value is 30% of Brogni's MAX HP. Shield is unremovable."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["Team Buff", "Block Debuffs", "Increase ATK", "Shield (Unremovable)"],
           "book_value": "-2 CD",
@@ -59,7 +86,24 @@
           "name": "Redoubt",
           "type": "Passive",
           "description": "Whenever an ally under [Shield] buff is attacked, reflects 25% of the damage inflicted on the [Shield] back to the attacker. Also heals that ally by 25% of the damage inflicted on the [Shield]. If multiple Champions have this skill, only one will activate.",
-          "multiplier": null,
+          "effects": [
+            {
+              "type": "reflect_damage",
+              "stat": "damage_on_shield",
+              "value": 0.25,
+              "per_hit": false,
+              "target": "attacker",
+              "notes": "Reflects 25% of damage inflicted on the shield back to the attacker. Only triggers if ally is under shield."
+            },
+            {
+              "type": "heal",
+              "stat": "damage_on_shield",
+              "value": 0.25,
+              "per_hit": false,
+              "target": "shielded_ally",
+              "notes": "Heals ally for 25% of the damage inflicted on the shield. Only triggers if ally is under shield."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Passive", "Reflect Damage", "Heal"],
           "book_value": "No books required",

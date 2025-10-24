@@ -29,7 +29,16 @@
           "name": "Vorpal Sword",
           "type": "A1",
           "description": "Attacks 1 enemy 2 times. Places an extra hit if the target has any active skills on cooldown. Each hit has an 80% chance of decreasing the duration of a random buff on the target by 1 turn.",
-          "multiplier": "1.7x ATK per hit",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.7,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "Double hit. Extra hit if target has skill on cooldown. Each hit can reduce buff duration."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Multi-hit", "Extra Hit", "Decrease Buff Duration"],
           "book_value": "+20% Damage, +20% Buff/Debuff Chance",
@@ -39,7 +48,16 @@
           "name": "Clockwork Cyclone",
           "type": "A2",
           "description": "Attacks all enemies. 75% chance of increasing the cooldowns of all enemy skills by 2 turns. Also has a 75% chance of decreasing the target’s Turn Meter by 15%. If at least one of a target’s skills has its cooldown increased to the max, decreases their Turn Meter by 30% instead.",
-          "multiplier": "4.2x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.2,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. TM reduction is doubled if skill cooldown is maxed."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["AoE", "Increase Skill Cooldown", "Decrease Turn Meter"],
           "book_value": "+20% Damage, +25% Buff/Debuff Chance, -1 Cooldown",
@@ -49,7 +67,16 @@
           "name": "Queenslayer",
           "type": "A3",
           "description": "Attacks 1 enemy. Will ignore 20% of the target’s DEF. If the initial target is killed, also attacks the enemy with the lowest HP. Will also ignore 20% of the target’s DEF.",
-          "multiplier": "5x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 5.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target. Ignores 20% DEF. If first target is killed, chains to lowest HP enemy. Both hits ignore 20% DEF."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["Ignore Defense", "Chain Attack"],
           "book_value": "+20% Damage, -1 Cooldown",
@@ -59,10 +86,10 @@
           "name": "Tick Tock",
           "type": "Passive",
           "description": "[Passive Effect] Whenever this Champion attacks, inflicts 3% bonus damage to each target for each turn remaining on all of their skill’s cooldowns. [Active Effect] Resets the cooldown of one of this Champion’s skills each time they kill an enemy. Occurs once per skill.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": 3,
           "mechanics_tags": ["Bonus Damage", "Reset Skill Cooldown"],
-          "book_value": "N/A",
+          "book_value": "",
           "notes": "Synergizes with A2 for bonus damage. Kill resets one skill cooldown (once per skill)."
         }
       ],

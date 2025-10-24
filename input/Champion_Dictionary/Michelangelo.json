@@ -29,7 +29,16 @@
           "name": "Boo-Yah!",
           "type": "A1",
           "description": "Attacks 1 enemy 2 times. If either hit was critical, places a 50% Increase ATK buff on this Champion for 2 turns.",
-          "multiplier": "2x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.0,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "Double hit. Places Increase ATK on crit."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Double Hit", "Increase ATK"],
           "book_value": "+20% Damage",
@@ -39,7 +48,16 @@
           "name": "Express Delivery!",
           "type": "A2",
           "description": "Attacks 1 enemy. Before attacking, has a 75% chance of placing a 60% Decrease DEF debuff for 2 turns and a 75% chance of placing a Stun debuff for 1 turn. Will ignore 25% of the target's RES if the attack is critical. Then applies a Debuff Spread effect, taking all debuffs from the target and placing them on all enemies. Will ignore 25% of each target's RES if the initial attack was critical.",
-          "multiplier": "6x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 6.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target. Decrease DEF, Stun, Debuff Spread, Ignore RES."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["Decrease DEF", "Stun", "Debuff Spread", "Ignore RES"],
           "book_value": "+25% Buff/Debuff Chance, Cooldown -1",
@@ -49,7 +67,16 @@
           "name": "Shell Cyclone",
           "type": "A3",
           "description": "Attacks all enemies. Has a 75% chance of placing a 50% Decrease ATK debuff and a Leech debuff for 2 turns. Will ignore 25% of each target's RES if the attack is critical. Then places a Taunt buff on this Champion for 2 turns.",
-          "multiplier": "5x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 5.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. Decrease ATK, Leech, Taunt, Ignore RES."
+            }
+          ],
           "cooldown_booked": 4,
           "mechanics_tags": ["AoE", "Decrease ATK", "Leech", "Taunt", "Ignore RES"],
           "book_value": "+25% Buff/Debuff Chance, Cooldown -1",
@@ -59,10 +86,10 @@
           "name": "Party Dude",
           "type": "Passive",
           "description": "[Passive Effect] Has a 15% chance to Evade an enemy skill and all of its effects. If this Champion is under a Taunt buff, the chance to Evade increases to 30%. Whenever Leonardo, Donatello, Michelangelo, or Raphael attacks, this Champion joins in that attack. [Active Effect] Places a Shield buff equal to 300% of this Champion's ATK on this Champion for 1 turn when they receive a hit.",
-          "multiplier": null,
+          "effects": null,
           "cooldown_booked": 1,
           "mechanics_tags": ["Evade", "Ally Join Attack", "Shield (self)", "Synergy: Turtles"],
-          "book_value": null,
+          "book_value": "",
           "notes": "Unique synergy with other TMNT champions. Shield triggers on every hit."
         }
       ],

@@ -29,7 +29,16 @@
           "name": "Gaze of Justice",
           "type": "A1",
           "description": "Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 25% [Weaken] debuff for 2 turns.",
-          "multiplier": "1.8x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.8,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "Double hit. Each hit can place Weaken."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Double Hit", "Weaken"],
           "book_value": "+10% damage, +20% debuff chance",
@@ -39,7 +48,16 @@
           "name": "Enforced Humility",
           "type": "A2",
           "description": "Attacks all enemies. 75% chance of decreasing the duration of all enemy buffs by 1 turn.",
-          "multiplier": "2.2x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.2,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. 75% chance to decrease buff duration."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["AoE", "Decrease Buff Duration"],
           "book_value": "+10% damage, +25% debuff chance, -1 CD",
@@ -49,7 +67,16 @@
           "name": "Mentor of Heroes",
           "type": "A3",
           "description": "Fills the Turn Meters of all allies by 30% and places a 50% [Increase ATK] buff on all allies for 2 turns. Heals all allies by 25% of their MAX HP if they have less than 50% HP.",
-          "multiplier": null,
+            "effects": [
+              {
+                "type": "heal",
+                "stat": "MAX HP",
+                "value": 0.25,
+                "per_hit": false,
+                "target": "all_allies_below_50pct_hp",
+                "notes": "Heals all allies by 25% of their MAX HP if they have less than 50% HP."
+              }
+            ],
           "cooldown_booked": 3,
           "mechanics_tags": ["Turn Meter Fill", "Increase ATK", "Heal"],
           "book_value": "-1 CD",
@@ -59,7 +86,24 @@
           "name": "Destiny’s Call",
           "type": "A4",
           "description": "Revives all dead allies to 35% HP, then fills the Turn Meters of all allies by 20%. Grants an Extra Turn to this Champion if an ally was successfully revived.",
-          "multiplier": null,
+            "effects": [
+              {
+                "type": "revive",
+                "stat": "MAX HP",
+                "value": 0.35,
+                "per_hit": false,
+                "target": "all_dead_allies",
+                "notes": "Revives all dead allies to 35% HP."
+              },
+              {
+                "type": "turn_meter_fill",
+                "stat": null,
+                "value": 0.2,
+                "per_hit": false,
+                "target": "all_allies",
+                "notes": "Fills Turn Meter of all allies by 20%."
+              }
+            ],
           "cooldown_booked": 5,
           "mechanics_tags": ["Revive", "Turn Meter Fill", "Extra Turn"],
           "book_value": "-2 CD",

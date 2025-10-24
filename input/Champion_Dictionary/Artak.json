@@ -29,7 +29,16 @@
           "name": "Chaosrazor",
           "type": "A1",
           "description": "Attacks all enemies. Has a 35% chance to extend the duration of any [HP Burn] debuffs on each target by 1 turn.",
-          "multiplier": "0.1x HP",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.1,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. 35% chance to extend HP Burn debuffs."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["AoE", "HP Burn Extension"],
           "book_value": "+20% damage, +10% debuff chance",
@@ -39,7 +48,16 @@
           "name": "Dogs Of War",
           "type": "A2",
           "description": "Attacks all enemies. Before attacking, instantly activates any [HP Burn] debuffs on each enemy. Has a 75% chance of placing a 50% [Decrease ATK] debuff on all enemies for 2 turns.",
-          "multiplier": "0.25x HP",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.25,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. Instantly activates HP Burn debuffs. 75% chance to place Decrease ATK."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["AoE", "HP Burn Activation", "Decrease ATK"],
           "book_value": "+10% damage, +25% debuff chance, -1 CD",
@@ -49,7 +67,16 @@
           "name": "Purifyre",
           "type": "A3",
           "description": "Attacks all enemies 2 times. The first hit has a 75% chance of placing a [HP Burn] debuff on all enemies for 2 turns. Restores this Champion’s destroyed MAX HP by 10% for each [HP Burn] debuff placed by this skill. Heals this Champion by 5% of their MAX HP for each [HP Burn] debuff attempt blocked or resisted by the enemy team.",
-          "multiplier": "0.14x HP",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.14,
+              "per_hit": true,
+              "target": "aoe_enemies",
+              "notes": "Double hit. First hit can place HP Burn. Restores destroyed MAX HP and heals on resist."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["AoE", "Double Hit", "HP Burn", "Restore Destroyed MAX HP", "Heal (on resist)"],
           "book_value": "+10% damage, +25% debuff chance, -1 CD",
@@ -59,10 +86,27 @@
           "name": "Burning Blood",
           "type": "Passive",
           "description": "Whenever a [HP Burn] debuff is activated, destroys this champion's MAX HP by 5% (stacks up to 50%). Increases this Champion’s DMG, C.DMG, and DEF by 1% for each 1% of their destroyed MAX HP. Also increases this Champion’s SPD and RES by 2 for each 1% of their destroyed MAX HP.",
-          "multiplier": null,
+            "effects": [
+              {
+                "type": "self_debuff",
+                "stat": "MAX HP",
+                "value": 0.05,
+                "per_hit": false,
+                "target": "self",
+                "notes": "Destroys 5% of own MAX HP whenever HP Burn is activated (stacks up to 50%)."
+              },
+              {
+                "type": "stat_scaling",
+                "stat": "destroyed_MAX_HP",
+                "value": 0.01,
+                "per_hit": false,
+                "target": "self",
+                "notes": "Increases DMG, C.DMG, DEF by 1% per 1% destroyed MAX HP; SPD and RES by 2 per 1% destroyed MAX HP."
+              }
+            ],
           "cooldown_booked": null,
           "mechanics_tags": ["Passive", "Stat Scaling (Destroyed MAX HP)", "Self Debuff (Destroyed MAX HP)"],
-          "book_value": "No books required",
+          "book_value": "",
           "notes": "Unique mechanic: stat scaling at the cost of destroyed MAX HP."
         }
       ],

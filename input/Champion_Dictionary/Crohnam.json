@@ -29,7 +29,16 @@
           "name": "Djinn Swords",
           "type": "A1",
           "description": "Attacks 1 enemy 2 times. Each hit has a 30% chance of increasing the duration of a random debuff on the target by 1 turn. If Djamarsa is on the same team, each hit also increases the duration of any HP Burn debuffs on the target by 1 turn.",
-          "multiplier": "1.5x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.5,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "Double hit. Each hit can extend debuffs and HP Burn (with Djamarsa)."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Double Hit", "Debuff Extension", "HP Burn Extension"],
           "book_value": "+15% Damage, +20% Debuff Chance",
@@ -39,7 +48,16 @@
           "name": "Berserker’s Delight",
           "type": "A2",
           "description": "Attacks 3 times at random. Each hit has an 80% chance of instantly activating any HP Burn debuffs on each target. Heals this Champion by 10% of their MAX HP for each HP Burn debuff activated by this skill.",
-          "multiplier": "2x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.0,
+              "per_hit": true,
+              "target": "random_enemies",
+              "notes": "Triple hit. Each hit can activate HP Burn and heal."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["Triple Hit", "HP Burn Activation", "Heal", "Random Target"],
           "book_value": "+15% Damage, +20% Debuff Chance, Cooldown -1",
@@ -49,7 +67,16 @@
           "name": "Blazing Zephyr",
           "type": "A3",
           "description": "Attacks all enemies. Has an 80% chance of placing a HP Burn debuff for 2 turns. Fills this Champion’s Turn Meter by 15% for each HP Burn debuff placed by this skill.",
-          "multiplier": "4x ATK",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE. 80% chance to place HP Burn and fill TM per HP Burn placed."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["AoE", "HP Burn", "Turn Meter Fill"],
           "book_value": "+10% Damage, +20% Debuff Chance, Cooldown -1",
@@ -59,10 +86,27 @@
           "name": "Simmering Anger",
           "type": "Passive",
           "description": "[Passive Effect] Every 10 times Active Skills are used in battle by either enemy or allied Champions, this Champion instantly activates the Berserker’s Delight skill. This happens every 5 times Active Skills are used if Djamarsa is on the same team. [Active Effect] If Djamarsa is on the same team, revives this Champion with 50% HP and 50% Turn Meter when killed.",
-          "multiplier": null,
+            "effects": [
+              {
+                "type": "revive",
+                "stat": "MAX HP",
+                "value": 0.5,
+                "per_hit": false,
+                "target": "self",
+                "notes": "If Djamarsa is on the same team, revives this Champion with 50% HP and 50% Turn Meter when killed."
+              },
+              {
+                "type": "turn_meter_fill",
+                "stat": null,
+                "value": 0.5,
+                "per_hit": false,
+                "target": "self",
+                "notes": "Fills Turn Meter by 50% on revive (with Djamarsa)."
+              }
+            ],
           "cooldown_booked": 4,
           "mechanics_tags": ["Passive", "HP Burn Activation", "Revive (with Djamarsa)"],
-          "book_value": null,
+          "book_value": "",
           "notes": "Unique HP Burn cycling and revive synergy with Djamarsa."
         }
       ],

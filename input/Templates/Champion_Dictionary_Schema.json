@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Champion Dictionary Entry",
+  "type": "object",
+  "required": ["name", "rarity", "affinity", "faction", "role", "forms"],
+  "properties": {
+    "name": { "type": "string" },
+    "rarity": { "type": "string" },
+    "affinity": { "type": "string" },
+    "faction": { "type": "string" },
+    "role": { "type": "string" },
+    "meta_ratings": {
+      "type": "object",
+      "additionalProperties": { "type": "string" }
+    },
+    "forms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["form_name", "base_stats", "skills"],
+        "properties": {
+          "form_name": { "type": "string" },
+          "base_stats": {
+            "type": "object",
+            "properties": {
+              "HP": { "type": "number" },
+              "ATK": { "type": "number" },
+              "DEF": { "type": "number" },
+              "SPD": { "type": "number" },
+              "C.RATE": { "type": "number" },
+              "C.DMG": { "type": "number" },
+              "RES": { "type": "number" },
+              "ACC": { "type": "number" }
+            },
+            "required": ["HP","ATK","DEF","SPD","C.RATE","C.DMG","RES","ACC"]
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name","type","description","effects","cooldown_booked"],
+              "properties": {
+                "name": { "type": "string" },
+                "type": { "type": "string" },
+                "description": { "type": "string" },
+                "effects": {
+                  "type": ["array", "null"],
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": { "type": "string" },
+                      "stat": { "type": "string" },
+                      "value": { "type": "number" },
+                      "per_hit": { "type": "boolean" },
+                      "target": { "type": "string" },
+                      "duration": { "type": "integer" },
+                      "notes": { "type": "string" }
+                    },
+                    "required": ["type"]
+                  }
+                },
+                "cooldown_booked": { "type": ["integer","null"] },
+                "mechanics_tags": { "type": "array" },
+                "book_value": { "type": "string" },
+                "notes": { "type": "string" }
+              }
+            }
+          },
+          "aura": { "type": ["string","null"] },
+          "comments": { "type": "string" }
+        }
+      }
+    },
+    "mechanics_tags": { "type": "array" },
+    "stat_priorities": { "type": "array" },
+    "stat_priority_recommendations": { "type": "object" },
+    "recommended_gear": { "type": "array" },
+    "masteries": { "type": "object" },
+    "blessings": { "type": "array" },
+    "ai_quirks": { "type": "object" },
+    "cheese_strategy": { "type": "object" },
+    "mechanics_advisory": { "type": "string" },
+    "citations": { "type": "array" },
+    "update_notes": { "type": "object" },
+    "author": { "type": "string" },
+    "comments": { "type": "string" }
+  }
+}

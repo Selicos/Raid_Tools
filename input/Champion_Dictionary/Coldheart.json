@@ -1,0 +1,108 @@
+{
+  "name": "Coldheart",
+  "rarity": "Rare",
+  "affinity": "Void",
+  "faction": "Dark Elves",
+  "role": "Attack",
+  "meta_ratings": {
+    "clan_boss": "6/10",
+    "dungeons": "10/10",
+    "doom_tower": "7/10",
+    "arena": "5/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 13710,
+        "ATK": 1376,
+        "DEF": 738,
+        "SPD": 94,
+        "C.RATE": 15,
+        "C.DMG": 57,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Flurry of Arrows",
+          "type": "A1",
+          "description": "Attacks 4 times at random. Each hit has a 25% chance of placing a 100% [Heal Reduction] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.1,
+              "per_hit": true,
+              "target": "random_enemies",
+              "notes": "4-hit random. Each hit can place Heal Reduction."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Random Hit", "Heal Reduction"],
+          "book_value": "+10% damage, +15% debuff chance",
+          "notes": "4-hit random, each hit can place Heal Reduction."
+        },
+        {
+          "name": "Cold Kiss",
+          "type": "A2",
+          "description": "Attacks 1 enemy. Has a 50% chance of decreasing the target’s Turn Meter by 100%.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.5,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target. 50% chance to decrease TM by 100%."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Single Target", "Turn Meter Reduction"],
+          "book_value": "+10% damage, +15% debuff chance, -1 CD",
+          "notes": "Single target, 100% TM reduction."
+        },
+        {
+          "name": "Heartseeker",
+          "type": "A3",
+          "description": "Attacks 1 enemy. Decreases the target’s Turn Meter by 100%. Inflicts massive damage based on enemy MAX HP.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ENEMY_MAX_HP",
+              "value": 0.2,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single target, enemy max HP."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Single Target", "Turn Meter Reduction", "Enemy MAX HP"],
+          "book_value": "+10% damage, -1 CD",
+          "notes": "Signature skill. Enemy MAX HP damage."
+        },
+        {
+          "name": "Aura",
+          "type": "Aura",
+          "description": "Increases Ally CRIT Rate in Dungeons by 15%.",
+          "effects": null,
+          "cooldown_booked": null,
+          "mechanics_tags": ["Aura", "Crit Rate"],
+          "book_value": "",
+          "notes": "Dungeon CRIT Rate aura."
+        }
+      ]
+    }
+  ],
+  "citations": [
+    "HellHades: https://hellhades.com/champions/coldheart/ (accessed 2025-10-22)",
+    "User screenshot (base stats)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-23",
+    "last_patch": "Final: normalized to template fields (multiplier, book_value, masteries mapping)"
+  },
+  "author": "GitHub Copilot (draft)",
+  "comments": "Final"
+}

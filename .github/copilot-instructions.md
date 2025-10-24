@@ -1,5 +1,91 @@
-# Quick Start Summary
+## Champion Dictionary Canonical Source Policy
 
+- The file `input/Templates/Champion_Dictionary_Template.json` is the only canonical template for all champion dictionary entries.
+- All new or updated champion entries in `input/Champion_Dictionary/` must strictly follow this template’s structure and field names.
+- Do not copy, modify, or reference outdated templates elsewhere—always use the latest version of this file.
+- When updating the template, immediately update the schema (`Champion_Dictionary_Schema.json`) and communicate changes to all contributors.
+- All validation, automation, and guide generation scripts must reference this template for field definitions and required structure.
+- Before submitting or merging any champion entry, validate it against the template and schema using `Tools/validate_json.py --schema`.
+- If a field or structure is missing from the template, propose an update to the canonical template before using it in any entry.
+# Raid Tools: AI Agent Instructions
+
+## Project Overview
+
+Raid Tools is an automation-ready system for generating, validating, and maintaining RAID Shadow Legends boss guides, champion/team dictionaries, and meta analysis. The codebase is structured for modular intake, analysis, and output, with all major workflows and templates standardized for automation and onboarding.
+
+**Key architectural concepts:**
+- **Dictionary-driven:** All champion, boss, mechanic, and team data is stored as individual JSON/Markdown files in canonical directories for automated parsing and guide generation.
+- **Workflow modularity:** Each major operation (intake, analysis, summary, validation) is a standalone Python script, with VS Code tasks and Makefile targets for orchestration.
+- **Template-first:** All new entries must use the templates in `input/Templates/` (see below for mapping).
+- **Strict directory conventions:** All intake is under `input/`, all outputs under `Output/`, with enforced naming for automation.
+
+## Directory Structure & Key Files
+
+| Entry Type         | Directory                        | Template File                                    |
+|--------------------|----------------------------------|--------------------------------------------------|
+| Champion           | input/Champion_Dictionary/       | input/Templates/Champion_Dictionary_Template.json |
+| Mechanic           | input/Mechanic_Dictionary/       | input/Templates/Mechanic_Entry_Template.json      |
+| Boss Guide         | Output/Boss_Guides/              | input/Templates/Boss_Guide_Template.md            |
+| Team               | Output/Build_Evaluations/        | input/Templates/Team_Entry_Template.md            |
+| Build Evaluation   | Output/Build_Evaluations/        | input/Templates/Build_Evaluation_Template.md       |
+
+**All new entries must use the canonical template.**
+
+## Critical Workflows
+
+**Environment setup:**
+- Run `python Tools/Setup_Environment.py` or `make setup` to create `.venv` and install requirements.
+- Activate the virtual environment before running scripts.
+
+**Core operations:**
+- Use VS Code tasks (Ctrl+Shift+P → "Tasks: Run Task") or Makefile targets for:
+	- Champion intake: `python ChampionIntake/Champ_Intake.py` or `make intake`
+	- Skill turn analysis: `python ChampionSkillTurnAnalysis/ChampionSkillTurnAnalysis.py` or `make analysis`
+	- Generate summaries: `python ChampionSummary/generateChampionSummaries.py` or `make summary`
+	- Validate JSON: `python Tools/validate_json.py` or `make validate`
+
+**Validation:**
+- All champion/boss/mechanic/team entries must be validated against at least two authoritative sources (Ayumilove, HellHades, RaidHQ, in-game testing).
+- Use `jsonschema` for schema validation of champion JSONs.
+
+**Versioning:**
+- Use DRAFT-to-FINAL workflow for all major guide and dictionary updates. Never overwrite FINAL files directly; always promote from DRAFT after review.
+- Archive old versions with date-stamped filenames if needed.
+
+## Project-Specific Conventions
+
+- All directory and file names use underscores for automation.
+- No root-level entries; always use `input/` or `Output/`.
+- All entries must be modular, indexable, and cross-referenced.
+- Cheese/meta teams must be tagged in both team and boss guide entries.
+- All validation steps, sources, and simulation results must be documented in each entry.
+
+## Integration & Automation
+
+- All scripts are Python 3.10+ and expect the `.venv` environment.
+- Use Makefile or VS Code tasks for all core workflows; do not run scripts ad hoc unless debugging.
+- All new or updated templates must be referenced in this file and included in `input/Templates/`.
+
+## Example: Adding a New Champion
+
+1. Place a new JSON file in `input/Champion_Dictionary/` using the canonical template.
+2. Validate with at least two sources and run `python Tools/validate_json.py`.
+3. Document sources and validation in the entry.
+4. Use DRAFT-to-FINAL workflow for major changes.
+
+## Troubleshooting
+
+- If validation fails, check for duplicate keys, missing fields, or schema mismatches.
+- If automation scripts break, ensure the `.venv` is active and requirements are installed.
+- For unclear workflows, see this file and `README.md` for canonical process.
+
+## See Also
+
+- `README.md` for onboarding and quick start
+- `input/Templates/` for all templates
+- This file for all project-specific conventions and workflows
+
+---
 
 ## Table of Contents
 
