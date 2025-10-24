@@ -1,0 +1,164 @@
+{
+  "name": "Dark Kael",
+  "rarity": "Epic",
+  "affinity": "Magic",
+  "faction": "Dark Elves",
+  "role": "Attack",
+  "meta_ratings": {
+    "clan_boss": "9/10",
+    "dungeons": "10/10",
+    "doom_tower": "9/10",
+    "arena": "8/10",
+    "faction_wars": "10/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 14205,
+        "ATK": 1343,
+        "DEF": 1013,
+        "SPD": 96,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 15
+      },
+      "skills": [
+        {
+          "name": "Weaver of Woes",
+          "type": "A1",
+          "description": "Attacks 1 enemy 3 times. Each hit has a 25% chance to instantly activate 2 [Poison] debuffs or 1 [Poison] debuff and 1 [HP Burn] debuff.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.35,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "3 hits, each hit 1.35x ATK."
+            },
+            {
+              "type": "other",
+              "stat": null,
+              "value": null,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "Each hit: 25% chance to instantly activate 2 Poison debuffs or 1 Poison and 1 HP Burn debuff."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Poison Activation", "HP Burn Activation", "Multi-hit"],
+          "book_value": "+10% damage, +20% debuff chance",
+          "notes": "Instant activation of debuffs is unique and powerful for boss fights."
+        },
+        {
+          "name": "Binding Darkness",
+          "type": "A2",
+          "description": "Attacks all enemies. Has a 75% chance of placing a 50% [Decrease ATK] debuff for 2 turns. Each critical hit also has a 75% chance of increasing the duration of all the debuffs on the target by 1 turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "4.0x ATK to all enemies."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease ATK",
+              "value": 0.5,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": 2,
+              "notes": "75% chance to place 50% Decrease ATK for 2 turns."
+            },
+            {
+              "type": "other",
+              "stat": null,
+              "value": null,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "Each crit: 75% chance to increase duration of all debuffs on target by 1 turn."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Decrease ATK", "Debuff Extension", "AOE"],
+          "book_value": "+20% damage, +25% debuff chance, cooldown -1",
+          "notes": "Debuff extension is conditional on crits."
+        },
+        {
+          "name": "Reality Acid",
+          "type": "A3",
+          "description": "Has a 75% chance of placing three 5% [Poison] debuffs and a 25% [Poison Sensitivity] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "debuff",
+              "stat": "Poison",
+              "value": 0.05,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": 2,
+              "notes": "75% chance to place three 5% Poison debuffs for 2 turns."
+            },
+            {
+              "type": "debuff",
+              "stat": "Poison Sensitivity",
+              "value": 0.25,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": 2,
+              "notes": "75% chance to place 25% Poison Sensitivity for 2 turns."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Poison", "Poison Sensitivity"],
+          "book_value": "+25% debuff chance, cooldown -1",
+          "notes": "High value for boss fights and poison teams."
+        },
+        {
+          "name": "Delerium",
+          "type": "Passive",
+          "description": "Decreases the C.RATE of enemies under 2 or more [Poison] debuffs by 15%. If there are multiple Champions on the team with this Skill, only one will activate.",
+          "effects": [
+            {
+              "type": "debuff",
+              "stat": "C.RATE Reduction",
+              "value": 0.15,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "Decreases C.RATE of enemies under 2+ Poison debuffs by 15%."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["C.RATE Reduction", "Passive"],
+          "book_value": "None",
+          "notes": "Unique passive, only one instance active per team."
+        }
+      ],
+      "aura": null,
+      "comments": "Dark Kael is a top-tier poisoner and debuff extender for Clan Boss, Dungeons, and Doom Tower. His A1 can instantly activate poisons and HP Burn, and his A2 extends debuffs on crit."
+    }
+  ],
+  "mechanics_tags": ["Poison", "Poison Sensitivity", "Debuff Extension", "Decrease ATK", "C.RATE Reduction", "Multi-hit"],
+  "stat_priorities": [
+    "Clan Boss: SPD, ACC, HP%, DEF%",
+    "Dungeons: ACC, SPD, HP%, DEF%",
+    "Doom Tower: ACC, SPD, HP%, DEF%"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "220+ SPD, 250+ ACC, HP%/DEF% for survivability",
+    "dungeons": "220+ SPD, 250+ ACC, HP%/DEF% for survivability",
+    "arena": "220+ SPD, 250+ ACC, C.RATE, C.DMG"
+  },
+  "recommended_gear": [
+    "Speed", "Perception", "Accuracy", "Relentless", "Toxic"
+  ],
+  "validation_sources": [
+    "Ayumilove (https://ayumilove.net/raid-shadow-legends-dark-kael-skill-mastery-equip-guide/)",
+    "HellHades (https://hellhades.com/champions/dark-kael/)",
+    "In-game screenshot (base stats)"
+  ],
+  "notes": "Dark Kael is a meta poisoner and debuff extender for Clan Boss, Dungeons, and Doom Tower. Build for high ACC and SPD."
+}

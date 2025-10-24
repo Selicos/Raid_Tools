@@ -1,0 +1,156 @@
+{
+  "name": "Burangiri",
+  "rarity": "Epic",
+  "affinity": "Force",
+  "faction": "Shadowkin",
+  "role": "Defense",
+  "meta_ratings": {
+    "clan_boss": "5/10",
+    "dungeons": "7/10",
+    "doom_tower": "10/10",
+    "arena": "6/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 16680,
+        "ATK": 804,
+        "DEF": 1387,
+        "SPD": 93,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 15
+      },
+      "skills": [
+        {
+          "name": "Battering Skull",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 20% chance of placing a [Provoke] debuff for 1 turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.1,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "3.1x DEF. Books: +20% damage, +20% debuff chance."
+            },
+            {
+              "type": "debuff",
+              "stat": "Provoke",
+              "value": 1,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": 1,
+              "notes": "20% chance, books to 40%."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Provoke"],
+          "book_value": "+20% damage, +20% debuff chance",
+          "notes": "Useful for Magma Dragon and control."
+        },
+        {
+          "name": "Bakemono Charge",
+          "type": "A2",
+          "description": "Attacks all enemies. Has a 40% chance of placing a [Stun] debuff for 1 turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.5,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "3.5x DEF. Books: +10% damage, +20% debuff chance."
+            },
+            {
+              "type": "debuff",
+              "stat": "Stun",
+              "value": 1,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": 1,
+              "notes": "40% chance, books to 60%."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Stun", "AOE"],
+          "book_value": "+10% damage, +20% debuff chance, cooldown -1",
+          "notes": "AOE stun is useful for control, but chance is not 100%."
+        },
+        {
+          "name": "Frightful Warcry",
+          "type": "A3",
+          "description": "Places a 25% [Strengthen] buff on all allies for 2 turns. Also places a [Shield] buff for 2 turns on all allies with less than 50% HP. The [Shield] buff is equal to 15% of the target’s MAX HP.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "Strengthen",
+              "value": 0.25,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": 2,
+              "notes": "25% Strengthen for 2 turns."
+            },
+            {
+              "type": "shield",
+              "stat": "MAX HP",
+              "value": 0.15,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": 2,
+              "notes": "Shield for 2 turns on allies <50% HP, equal to 15% of their MAX HP."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Strengthen", "Shield"],
+          "book_value": "Cooldown -2",
+          "notes": "Key for survivability in Bommal and Scarab King."
+        },
+        {
+          "name": "Soulmonger",
+          "type": "Passive",
+          "description": "Heals this Champion by 50% of their MAX HP whenever an ally or an enemy dies.",
+          "effects": [
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 0.5,
+              "per_hit": false,
+              "target": "self",
+              "notes": "Heals 50% MAX HP on any death (ally or enemy)."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Heal", "Passive"],
+          "book_value": "None",
+          "notes": "Enables soloing Bommal and Scarab King."
+        }
+      ],
+      "aura": "Increases Ally RESIST in all Battles by 40.",
+      "comments": "Burangiri is a specialist for Doom Tower Bommal and Scarab King. His passive and A3 make him a top solo option for these bosses. Less useful in general content."
+    }
+  ],
+  "mechanics_tags": ["Provoke", "Stun", "Strengthen", "Shield", "Heal"],
+  "stat_priorities": [
+    "Doom Tower: HP%, DEF%, SPD, RES",
+    "General: DEF%, HP%, SPD, ACC"
+  ],
+  "stat_priority_recommendations": {
+    "doom_tower": "60-70K HP, 3-4K DEF, 220-250 SPD, 200+ RES for Bommal/Scarab King",
+    "dungeons": "HP%, DEF%, SPD, ACC as needed",
+    "arena": "DEF%, HP%, SPD, RES"
+  },
+  "recommended_gear": [
+    "Regeneration", "Immortal", "Perception", "Speed", "Resilience"
+  ],
+  "validation_sources": [
+    "Ayumilove (https://ayumilove.net/raid-shadow-legends-burangiri-skill-mastery-equip-guide/)",
+    "HellHades (https://hellhades.com/champions/burangiri/)",
+    "In-game screenshot (base stats)"
+  ],
+  "notes": "Burangiri is a meta solution for Bommal and Scarab King in Doom Tower. Build for high HP, DEF, and SPD. His passive is key for soloing. Less impact in Arena and Clan Boss."
+}

@@ -1,0 +1,145 @@
+{
+  "name": "Seeker",
+  "rarity": "Epic",
+  "affinity": "Magic",
+  "faction": "Undead Hordes",
+  "role": "Defense",
+  "meta_ratings": {
+    "clan_boss": "9/10",
+    "dungeons": "9/10",
+    "doom_tower": "9/10",
+    "arena": "10/10",
+    "faction_wars": "9/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 16845,
+        "ATK": 1002,
+        "DEF": 1178,
+        "SPD": 103,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 45,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Devour",
+          "type": "A1",
+          "description": "Attacks 1 enemy 2 times. Has a 25% chance of placing a [Provoke] debuff for 1 turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.2,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "2 hits, each hit 2.2x ATK. Books: +30% damage, +25% debuff chance."
+            },
+            {
+              "type": "debuff",
+              "stat": "Provoke",
+              "value": 1,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": 1,
+              "notes": "Base 25% chance, books to 50%."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Provoke", "Multi-hit"],
+          "book_value": "+30% damage, +25% debuff chance",
+          "notes": "Useful for Magma Dragon, Hydra, and Arena control."
+        },
+        {
+          "name": "Tailwind",
+          "type": "A2",
+          "description": "Fills the Turn Meter of all allies by 30%. Places a 50% [Increase ATK] buff on all allies for 2 turns. Grants an Extra Turn.",
+          "effects": [
+            {
+              "type": "turn_meter_fill",
+              "stat": null,
+              "value": 0.3,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "Fills TM by 30%."
+            },
+            {
+              "type": "buff",
+              "stat": "Increase ATK",
+              "value": 0.5,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": 2,
+              "notes": "50% Increase ATK for 2 turns."
+            },
+            {
+              "type": "other",
+              "stat": null,
+              "value": null,
+              "per_hit": false,
+              "target": "self",
+              "notes": "Grants Extra Turn."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Increase ATK", "Turn Meter Fill", "Extra Turn"],
+          "book_value": "Cooldown -2 (to 3 turns)",
+          "notes": "Key for speed tuning and Arena boosting."
+        },
+        {
+          "name": "Dark Blood",
+          "type": "Passive",
+          "description": "When critically hit, heals this Champion by 20% HP and places a 60% [Increase DEF] buff on all allies for 2 turns. (Cooldown: 5 turns)",
+          "effects": [
+            {
+              "type": "heal",
+              "stat": "HP",
+              "value": 0.2,
+              "per_hit": false,
+              "target": "self",
+              "notes": "Heals 20% HP when critically hit."
+            },
+            {
+              "type": "buff",
+              "stat": "Increase DEF",
+              "value": 0.6,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": 2,
+              "notes": "60% Increase DEF for 2 turns when Seeker is critically hit."
+            }
+          ],
+          "cooldown_booked": 5,
+          "mechanics_tags": ["Heal", "Increase DEF", "Passive"],
+          "book_value": "None",
+          "notes": "Triggers on being critically hit. Great for Arena defense and survivability."
+        }
+      ],
+      "aura": "Increases Ally DEF in the Arena by 30%.",
+      "comments": "Seeker is a top-tier TM booster and defensive support for Arena, Clan Boss (2:1 speed tunes), and Doom Tower Magma Dragon. Provoke is key for Hydra and Magma Dragon. Extra turn on A2 enables fast cycling."
+    }
+  ],
+  "mechanics_tags": ["Provoke", "Increase ATK", "Increase DEF", "Turn Meter Fill", "Heal", "Extra Turn", "Multi-hit"],
+  "stat_priorities": [
+    "Arena: SPD, DEF%, HP%, C.RATE",
+    "Clan Boss: SPD, DEF%, C.RATE, C.DMG, HP%",
+    "Doom Tower: ACC (for Provoke), SPD, DEF%, HP%"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "220+ SPD, 100% C.RATE, 250+ ACC (if needed), high DEF/HP",
+    "dungeons": "220+ SPD, 200+ ACC, HP%/DEF% for survivability",
+    "arena": "300+ SPD, 100% C.RATE, C.DMG, RES for tank"
+  },
+  "recommended_gear": [
+    "Speed", "Relentless", "Lifesteal", "Perception", "Accuracy", "Immortal", "Defiant"
+  ],
+  "validation_sources": [
+    "Ayumilove (https://ayumilove.net/raid-shadow-legends-seeker-skill-mastery-equip-guide/)",
+    "HellHades (https://hellhades.com/champions/seeker/)",
+    "In-game screenshot (base stats)"
+  ],
+  "notes": "Seeker is a meta-defining champion for Arena, Clan Boss (unkillable 2:1), and Doom Tower Magma Dragon. Build for high speed and survivability. Provoke requires ACC for PvE bosses. Extra turn on A2 enables fast cycling. Passive is key for go-second Arena teams."
+}
