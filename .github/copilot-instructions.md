@@ -137,6 +137,13 @@ The rest of the content should be copied from the current copilot-instructions.m
 - **Reference external sources** - link to docs, APIs, wikis
 - **Define quality gates** - give Copilot clear success criteria
 
+### Commit Best Practices
+
+- After completing a logical chunk of work (such as a batch of file updates, a major template/schema change, or a successful validation/refactor), make a git commit with a clear, descriptive message.
+- Periodically suggest or perform commits during long or multi-step workflows to ensure changes are tracked and can be easily reverted if needed.
+- Include validation results, sources, and a summary of changes in the commit message when possible.
+- Use the DRAFT-to-FINAL workflow for major guide and dictionary updates, but commit intermediate DRAFTs as work progresses.
+
 ### ❌ DON'T
 
 - **Don't duplicate base instructions** - reference, don't repeat
