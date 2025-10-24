@@ -49,8 +49,12 @@
                     "type": "object",
                     "properties": {
                       "type": { "type": "string" },
-                      "stat": { "type": "string" },
-                      "value": { "type": "number" },
+                      "stat": { "type": ["string", "null"] },
+                      "value": {
+                        "oneOf": [
+                          { "type": ["number", "null"] },
+                        ]
+                      },
                       "per_hit": { "type": "boolean" },
                       "target": { "type": "string" },
                       "duration": { "type": "integer" },

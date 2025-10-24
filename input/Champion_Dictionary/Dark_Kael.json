@@ -133,7 +133,7 @@
           ],
           "cooldown_booked": null,
           "mechanics_tags": ["C.RATE Reduction", "Passive"],
-          "book_value": "None",
+          "book_value": "NA",
           "notes": "Unique passive, only one instance active per team."
         }
       ],

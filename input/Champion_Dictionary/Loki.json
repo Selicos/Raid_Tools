@@ -29,13 +29,24 @@
           "name": "Flames of Mischief",
           "type": "A1",
           "description": "Attacks all enemies. 70% chance to extend the duration of all debuffs on each target by 1 turn.",
-          "multiplier": [
+          "effects": [
             {
+              "type": "damage",
               "stat": "ATK",
               "value": 3.5,
-              "type": "total",
               "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": 0,
               "notes": "AoE."
+            },
+            {
+              "type": "debuff_extension",
+              "stat": "NONE",
+              "value": 1,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": 1,
+              "notes": "70% chance to extend all debuffs by 1 turn."
             }
           ],
           "cooldown_booked": null,
@@ -47,7 +58,44 @@
           "name": "Deceiver's Gambit",
           "type": "A2",
           "description": "Custom targeting: On enemy, places Block Active Skills and Block Debuffs, then spreads 2 random debuffs to all enemies if under Veil. On ally, heals based on Loki's HP and spreads 2 random buffs to all allies.",
-          "multiplier": null,
+          "effects": [
+            {
+              "type": "debuff",
+              "stat": "NONE",
+              "value": 1,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": 2,
+              "notes": "Places Block Active Skills and Block Debuffs on enemy."
+            },
+            {
+              "type": "debuff_spread",
+              "stat": "NONE",
+              "value": 2,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": 1,
+              "notes": "Spreads 2 random debuffs to all enemies if under Veil."
+            },
+            {
+              "type": "heal",
+              "stat": "HP",
+              "value": 0.3,
+              "per_hit": false,
+              "target": "single_ally",
+              "duration": 0,
+              "notes": "Heals ally based on Loki's HP."
+            },
+            {
+              "type": "buff_spread",
+              "stat": "NONE",
+              "value": 2,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": 1,
+              "notes": "Spreads 2 random buffs to all allies."
+            }
+          ],
           "cooldown_booked": 3,
           "mechanics_tags": ["Block Active Skills", "Block Debuffs", "Buff Spread", "Debuff Spread", "Heal", "Custom Targeting"],
           "book_value": "Cooldown -1",
@@ -57,13 +105,51 @@
           "name": "Bandit Flash",
           "type": "A3",
           "description": "Attacks 1 enemy. Steals all buffs and turn meter from the target. If under Veil, also ignores RES for these effects and grants Increase ATK to all allies.",
-          "multiplier": [
+          "effects": [
             {
+              "type": "damage",
               "stat": "ATK",
               "value": 5.0,
-              "type": "total",
               "per_hit": false,
+              "target": "single_enemy",
+              "duration": 0,
               "notes": "Single target."
+            },
+            {
+              "type": "steal_buffs",
+              "stat": "NONE",
+              "value": 1,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": 0,
+              "notes": "Steals all buffs from the target."
+            },
+            {
+              "type": "steal_turn_meter",
+              "stat": "Turn Meter",
+              "value": 1.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": 0,
+              "notes": "Steals all turn meter from the target."
+            },
+            {
+              "type": "ignore_res",
+              "stat": "NONE",
+              "value": 1,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": 0,
+              "notes": "If under Veil, ignores RES for steal effects."
+            },
+            {
+              "type": "buff",
+              "stat": "Increase ATK",
+              "value": 0.5,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": 2,
+              "notes": "Grants Increase ATK to all allies."
             }
           ],
           "cooldown_booked": 3,
@@ -75,7 +161,26 @@
           "name": "Mist Step",
           "type": "Passive",
           "description": "[Passive Effect] 15% chance to Evade incoming skills and effects. If under Veil or Perfect Veil, chance increases to 30%. [Active Effect] May prevent instant death from a single ability (testing required).",
-          "multiplier": null,
+          "effects": [
+            {
+              "type": "evade",
+              "stat": "NONE",
+              "value": 0.15,
+              "per_hit": false,
+              "target": "self",
+              "duration": 0,
+              "notes": "15% chance to Evade. 30% if under Veil or Perfect Veil."
+            },
+            {
+              "type": "survive_lethal",
+              "stat": "NONE",
+              "value": 1,
+              "per_hit": false,
+              "target": "self",
+              "duration": 0,
+              "notes": "May prevent instant death from a single ability (testing required)."
+            }
+          ],
           "cooldown_booked": null,
           "mechanics_tags": ["Evade", "Veil Synergy", "Survivability"],
           "book_value": "",
