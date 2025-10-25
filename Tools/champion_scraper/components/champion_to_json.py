@@ -112,6 +112,15 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
     Always sets 'draft': true.
     """
     template = load_template(template_path)
+    # Patch: Map scraped_data['info'] fields to top-level template fields
+    info = scraped_data.get('info', {})
+    for key in ['name', 'faction', 'rarity', 'role', 'affinity']:
+        if key in info and info[key]:
+            template[key] = info[key]
+    # Patch: Map scraped_data['skills'] to forms[0]['skills'] if present
+    if 'skills' in scraped_data and scraped_data['skills']:
+        if 'forms' in template and isinstance(template['forms'], list) and len(template['forms']) > 0:
+            template['forms'][0]['skills'] = scraped_data['skills']
     champion_json = fill_template_with_data(template, scraped_data)
     champion_json["draft"] = True
 

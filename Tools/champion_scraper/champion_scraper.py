@@ -110,6 +110,17 @@ def main():
                 'skills': skills,
                 'mechanics_tags': template_mechanics_tags
             }
+            # If Ayumilove fallback used, map extra overview fields to comments
+            if source.startswith('ayumilove') and info:
+                comments = []
+                if 'rank' in info and info['rank']:
+                    comments.append(f"Rank: {info['rank']}")
+                if 'usability' in info and info['usability']:
+                    comments.append(f"Usability: {info['usability']}")
+                if 'tomes' in info and info['tomes']:
+                    comments.append(f"Tomes: {info['tomes']}")
+                if comments:
+                    scraped_data['comments'] = ' '.join(comments)
             generate_champion_json(champ_name, scraped_data, template_path, output_path)
             print(f"Champion JSON for {champ_name} written to {output_path} (source: {source})")
             # Diff log

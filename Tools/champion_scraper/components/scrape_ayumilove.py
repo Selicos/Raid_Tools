@@ -1,13 +1,3 @@
-import json
-import os
-
-def load_template(template_path=None):
-    # Load the canonical champion template from file
-    if template_path is None:
-        # Default path relative to this script
-        template_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../input/Templates/Champion_Dictionary_Template.json'))
-    with open(template_path, 'r', encoding='utf-8') as f:
-        return json.load(f)
 import requests
 from bs4 import BeautifulSoup
 import sys
@@ -20,36 +10,13 @@ def fetch_champion_page(url):
     return resp.text
 
 
-def extract_base_info(soup):
-    # Find the <p> block with base info
-    info = {"name": "", "faction": "", "rarity": "", "role": "", "affinity": ""}
-    p_tags = soup.find_all('p')
-    for p in p_tags:
-        txt = p.get_text("\n", strip=True)
-        if "NAME:" in txt and "FACTION:" in txt:
-            # Parse lines
-            for line in txt.split("\n"):
-                if line.startswith("NAME:"):
-                    info["name"] = line.split(":",1)[1].strip()
-                elif line.startswith("FACTION:"):
-                    info["faction"] = line.split(":",1)[1].strip()
-                elif line.startswith("RARITY:"):
-                    info["rarity"] = line.split(":",1)[1].strip()
-                elif line.startswith("ROLE:"):
-                    info["role"] = line.split(":",1)[1].strip()
-                elif line.startswith("AFFINITY:"):
-                    info["affinity"] = line.split(":",1)[1].strip()
-            break
-    return info
-
-def extract_main_image_and_stats(soup, champ_name):
+def extract_main_image_and_stats(soup):
     # Try to find the main image (look for champion name in src or alt)
     img_tag = None
-    champ_name_lc = champ_name.strip().lower().replace("'", "").replace(" ", "_")
     for img in soup.find_all('img'):
         alt = img.get('alt', '').lower()
         src = img.get('src', '').lower()
-        if champ_name_lc in alt or champ_name_lc in src:
+        if 'coldheart' in alt or 'coldheart' in src:
             img_tag = img
             break
     image_url = img_tag['src'] if img_tag else None
@@ -58,6 +25,7 @@ def extract_main_image_and_stats(soup, champ_name):
 
     # Try to find the stats table or block
     stats = {}
+    # Look for a table with HP, ATK, DEF, etc.
     table = None
     for t in soup.find_all('table'):
         if any('HP' in cell.get_text() for cell in t.find_all(['td', 'th'])):
@@ -73,6 +41,7 @@ def extract_main_image_and_stats(soup, champ_name):
     else:
         # Fallback: look for text blocks
         text = soup.get_text("\n")
+        import re
         for stat in ["HP", "ATK", "DEF", "SPD", "C. RATE", "C. DMG", "RESIST", "ACC"]:
             m = re.search(rf'{stat}[:\s]+([\d,]+)', text)
             if m:
@@ -82,7 +51,7 @@ def extract_main_image_and_stats(soup, champ_name):
     return image_url, stats
 
 
-def extract_skills_structured(soup):
+def extract_skills_section(soup):
     # Find the SKILLS section header (case-insensitive)
     skills_header = None
     for tag in soup.find_all(['h2', 'h3']):
@@ -91,28 +60,25 @@ def extract_skills_structured(soup):
             break
     if not skills_header:
         print("[DEBUG] No SKILLS section header found.")
-        return []
-    # Collect all <p> tags after the header until next major section (Build Guide)
-    skills = []
-    skill_blocks = []
+        return None
+    # Collect all text until the next major section (e.g., BUILD GUIDE)
+    skills_text = []
     for sib in skills_header.next_siblings:
-        if hasattr(sib, 'name') and sib.name in ['h2', 'h3']:
+        if hasattr(sib, 'get_text') and sib.name in ['h2', 'h3']:
+            # Stop at next major section
             if 'build guide' in sib.get_text(strip=True).lower():
                 break
-        if hasattr(sib, 'name') and sib.name == 'p':
-            txt = sib.get_text("\n", strip=True)
-            skill_blocks.append(txt)
-    # Each skill block is a multiline string, preserve formatting
-    for block in skill_blocks:
-        # First line is skill name (may include cooldown/passive)
-        lines = block.split('\n')
-        if lines:
-            skill_name = lines[0].strip()
-            desc = '\n'.join(lines[1:]).strip() if len(lines) > 1 else ''
-            skills.append({"name": skill_name, "desc": desc})
-    if not skills:
-        print("[DEBUG] No skill <p> tags found after SKILLS header.")
-    return skills
+        if hasattr(sib, 'get_text'):
+            txt = sib.get_text(strip=True)
+            if txt:
+                skills_text.append(txt)
+        elif isinstance(sib, str):
+            txt = sib.strip()
+            if txt:
+                skills_text.append(txt)
+    if not skills_text:
+        print("[DEBUG] No skills text found after SKILLS header.")
+    return '\n'.join(skills_text).strip()
 
 
 def normalize_champion_name(name):
@@ -141,7 +107,7 @@ def main():
     print("Base Stats:", stats)
     print("\nSKILLS Section:\n", skills)
 
-def scrape_ayumilove_champion(champ_name, template_path=None):
+def scrape_ayumilove_champion(champ_name):
     norm_name = normalize_champion_name(champ_name)
     url = f"https://ayumilove.net/raid-shadow-legends-{norm_name}-skill-mastery-equip-guide/"
     print(f"[Ayumilove] Fetching: {url}")
@@ -151,15 +117,79 @@ def scrape_ayumilove_champion(champ_name, template_path=None):
         print(f"[Ayumilove][ERROR] Failed to fetch {champ_name}: {e}")
         return None
     soup = BeautifulSoup(html, 'lxml')
-    info = extract_base_info(soup)
-    image_url, stats = extract_main_image_and_stats(soup, champ_name)
-    skills = extract_skills_structured(soup)
-    info["image_url"] = image_url
-    # Load template and use its default values for missing fields
-    template = load_template(template_path)
-    # Use template mechanics_tags
-    mechanics_tags = template.get("mechanics_tags", ["Relevant mechanic tags"])
-    return {'info': info, 'stats': stats, 'skills': skills, 'mechanics_tags': mechanics_tags}
+    image_url, stats = extract_main_image_and_stats(soup)
+    # --- Skill extraction block ---
+    skills = []
+    # Find the SKILLS section header for this champion
+    skills_header = soup.find('h2', string=lambda t: t and t.strip().lower().startswith(f"{champ_name.lower()} skills"))
+    if skills_header:
+        for sib in skills_header.next_siblings:
+            if getattr(sib, 'name', None) == 'h2' and 'build guide' in sib.get_text(strip=True).lower():
+                break
+            if getattr(sib, 'name', None) == 'p':
+                strong = sib.find('strong')
+                if strong:
+                    skill_name = strong.get_text(strip=True)
+                    cooldown = ''
+                    cd_match = re.search(r'\(Cooldown: (\d+) turns\)', skill_name)
+                    if cd_match:
+                        cooldown = cd_match.group(1)
+                        skill_name = re.sub(r'\(Cooldown: \d+ turns\)', '', skill_name).strip()
+                    # Skill type: try to infer from name
+                    skill_type = 'Aura' if 'aura' in skill_name.lower() else ('Passive' if 'passive' in skill_name.lower() else '')
+                    skill = {
+                        'type': skill_type,
+                        'name': skill_name,
+                        'description': '',
+                        'cooldown': cooldown,
+                        'book_value': '',
+                        'multiplier': ''
+                    }
+                    # Parse rest of <p> for description, booking, multiplier
+                    lines = sib.decode_contents().split('<br')
+                    desc_lines = []
+                    for raw in lines[1:]:
+                        txt = BeautifulSoup(raw, 'html.parser').text.strip()
+                        if not txt:
+                            continue
+                        if txt.lower().startswith('level') or 'book' in txt.lower():
+                            skill['book_value'] += (txt + '\n')
+                        elif 'multiplier' in txt.lower():
+                            skill['multiplier'] = txt.split(':',1)[-1].strip()
+                        else:
+                            desc_lines.append(txt)
+                    skill['description'] = '\n'.join(desc_lines).strip()
+                    skill['book_value'] = skill['book_value'].strip()
+                    skills.append(skill)
+    # --- End skill extraction block ---
+
+    # Extract overview info (unchanged)
+    overview_info = {"name": "", "faction": "", "rarity": "", "role": "", "affinity": "", "image_url": image_url}
+    overview_h4 = soup.find('h4', string=lambda t: t and 'overview' in t.lower())
+    if overview_h4:
+        overview_p = overview_h4.find_next('p')
+        if overview_p:
+            lines = overview_p.decode_contents().split('<br')
+            canonical_keys = ["name", "faction", "rarity", "role", "affinity", "rank", "usability", "tomes"]
+            for line in lines:
+                line = BeautifulSoup(line, 'html.parser').text.strip()
+                if ':' in line:
+                    key, value = line.split(':', 1)
+                    key = key.strip().lower()
+                    key = re.sub(r'^[/\\>?\n\s]+', '', key)
+                    if key not in canonical_keys:
+                        continue
+                    value = value.strip()
+                    if not value:
+                        continue
+                    if '(' in value:
+                        value = value.split('(')[0].strip()
+                    overview_info[key] = value
+    print("[DEBUG] Parsed overview_info:", overview_info)
+    for field in ["name", "faction", "rarity", "role", "affinity"]:
+        if not overview_info.get(field):
+            print(f"[WARN] Overview field missing: {field}")
+    return {'info': overview_info, 'stats': stats, 'skills': skills}
 
 if __name__ == "__main__":
     main()

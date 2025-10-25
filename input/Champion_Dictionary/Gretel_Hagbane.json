@@ -1,9 +1,9 @@
 {
-  "name": "Champion Name",
-  "rarity": "Legendary/Epic/Rare/etc.",
-  "affinity": "Magic/Force/Spirit/Void",
-  "faction": "Faction Name",
-  "role": "Primary Role(s)",
+  "name": "Gretel Hagbane",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "Sacred Order",
+  "role": "Attack",
   "draft": true,
   "meta_ratings": {
     "clan_boss": "X/10",
@@ -27,26 +27,44 @@
       },
       "skills": [
         {
-          "name": "Skill Name",
-          "type": "A1/A2/A3/Passive",
-          "description": "Skill effect description.",
-          "effects": [
-            {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
-              "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": 2,
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
-            }
-          ],
-          "cooldown_booked": null,
-          "mechanics_tags": [
-            "Relevant mechanic tags"
-          ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "type": "",
+          "name": "Evil Undone",
+          "description": "/>\nAttacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns. If Hansel Witchhunter is on the same team, attacks all enemies instead. Has a 25% chance of placing a 60% [Decrease DEF] debuff on all enemies for 2 turns. Also places an extra hit against enemies under any buffs.\n/>\nLevel 2: Damage +10%\n/>\nLevel 3: Damage +10%\n/>\nLevel 4: Buff/Debuff chance +10%\n/>\nLevel 5: Buff/Debuff chance +15%",
+          "cooldown": "",
+          "book_value": "",
+          "multiplier": "3.8 ATK (Single Target), 2.4 ATK (AoE)"
+        },
+        {
+          "type": "",
+          "name": "Shadowseeker Bolts",
+          "description": "/>\nAttacks 1 enemy 4 times. The first hit will ignore 10% of the target’s DEF, the second hit will ignore 15% DEF, the third hit will ignore 20% DEF, and the fourth hit will ignore 25% DEF. If this attack kills an enemy, resets the cooldown of this skill and fills this Champion’s Turn Meter by 50%.\n/>\nLevel 2: Damage +10%\n/>\nLevel 3: Damage +10%\n/>\nLevel 4: Cooldown -1",
+          "cooldown": "4",
+          "book_value": "",
+          "multiplier": "1.4 ATK"
+        },
+        {
+          "type": "",
+          "name": "Sacred Ritual",
+          "description": "/>\nAttacks all enemies. Decreases the Turn Meters of all enemies by 25%. If Hansel Witchhunter is on the same team, decreased the Turn Meter of all enemies by 50% instead. This effect cannot be resisted. Then fills this Champion’s Turn Meter by 20% for each enemy alive after the attack.\n/>\nLevel 2: Damage +10%\n/>\nLevel 3: Damage +10%\n/>\nLevel 4: Cooldown -1",
+          "cooldown": "4",
+          "book_value": "",
+          "multiplier": "4.1 ATK"
+        },
+        {
+          "type": "Passive",
+          "name": "Sisterly Bond (Passive, Cooldown: 3 turns)",
+          "description": "/>\n[Passive Effect] Fills this Champion’s Turn Meter by 50% whenever an enemy is granted an Extra Turn. If Hansel Witchhunter is on the same team, also fills their Turn Meter by 50% whenever an enemy is granted an Extra Turn.\n/>\n[Active Effect] If Hansel Witchhunter is on the same team and is killed by the enemy, instantly activates [Sacred Ritual] skill.",
+          "cooldown": "",
+          "book_value": "",
+          "multiplier": ""
+        },
+        {
+          "type": "Aura",
+          "name": "Aura",
+          "description": "/>\nIncreases Ally ATK in all battles by 30%",
+          "cooldown": "",
+          "book_value": "",
+          "multiplier": ""
         }
       ],
       "aura": "Aura description (if any)",
@@ -106,7 +124,7 @@
     "HellHades: https://hellhades.com/champions/champion-name/ (accessed YYYY-MM-DD)"
   ],
   "author": "Author Name (e.g., GitHub Copilot)",
-  "comments": "Top-level comments about the entry. For form-specific notes use forms[*].comments.",
+  "comments": "Rank: B Usability: Mid-Late Game Tomes: 10",
   "update_notes": {
     "last_updated": "YYYY-MM-DD",
     "last_patch": "Patch version/date and summary of change"
