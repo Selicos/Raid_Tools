@@ -29,7 +29,7 @@
         {
           "name": "Molten Punch",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 50% chance of placing a 30% [Decrease C.RATE] debuff for 2 turns.\nLevel 2: Damage +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Damage +5%\nLevel 5: Buff/Debuff Chance +5%\nLevel 6: Buff/Debuff Chance +10%\nDamage Multiplier: 4 DEF",
+          "description": "Attacks 1 enemy. Has a 50% chance of placing a 30% [Decrease C.RATE] debuff for 2 turns.",
           "effects": [
             {
               "type": "damage",
@@ -62,7 +62,7 @@
         {
           "name": "Pyroclasm (Cooldown: 3 turns)",
           "type": "A2",
-          "description": "Attacks all enemies. Has a 20% chance of placing a [HP Burn] debuff for 2 turns. The chance of placing the debuff increases by 20% for each alive enemy.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +10%\nLevel 5: Damage +10%\nDamage Multiplier: 3.5 DEF",
+          "description": "Attacks all enemies. Has a 20% chance of placing a [HP Burn] debuff for 2 turns. The chance of placing the debuff increases by 20% for each alive enemy.",
           "effects": [
             {
               "type": "damage",
@@ -96,46 +96,80 @@
         {
           "name": "Pyretic Release (Cooldown: 5 turns)",
           "type": "A3",
-          "description": "Attacks all enemies. Has a 50% chance of increasing the cooldowns of all skills by 2 turns on enemies under [HP Burn] debuffs. Also places a [Shield] buff equal to 20% of this Champion’s MAX HP on all allies for 2 turns. Instantly activates this skill when this Champion is revived by\nRian the Conjurer\n.\nLevel 2: Buff/Debuff Chance +5%\nLevel 3: Shield +5%\nLevel 4: Buff/Debuff Chance +5%\nLevel 5: Shield +5%\nLevel 6: Buff/Debuff Chance +10%\nLevel 7: Cooldown -1\nDamage Multiplier: 3.5 DEF",
+          "description": "Attacks all enemies. Has a 50% chance of increasing the cooldowns of all skills by 2 turns on enemies under [HP Burn] debuffs. Also places a [Shield] buff equal to 20% of this Champion's MAX HP on all allies for 2 turns. Instantly activates this skill when this Champion is revived by Rian the Conjurer.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.5,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "AOE damage scaling from DEF. Same multiplier as A2."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 2,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "Increases cooldowns by 2 turns on enemies under HP Burn. 50% base chance, 70% fully booked. Conditional on HP Burn presence. Requires accuracy check."
+            },
+            {
+              "type": "buff",
+              "stat": "MAX HP",
+              "value": 30,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": 2,
+              "notes": "Shield = 30% of Akoth's MAX HP (20% base + 10% from books) on all allies for 2 turns. Scales with Akoth's HP, not ally HP."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "NA",
+              "notes": "Auto-triggers when revived by Rian the Conjurer. Unique synergy - instant shield + cooldown control on revive."
             }
           ],
-          "cooldown_booked": null,
+          "cooldown_booked": 4,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "Cooldown Increase",
+            "Shield",
+            "HP Burn synergy",
+            "Rian the Conjurer synergy",
+            "DEF scaling",
+            "AOE"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "HIGHEST priority - reduces cooldown 5→4 turns, increases shield 20%→30% (+50% shield value), increases debuff chance 50%→70%",
+          "notes": "Signature skill with unique Rian synergy. Auto-triggers on revive for instant team protection. Cooldown increase is devastating when combo'd with A2 HP Burn. Shield scales from Akoth's HP (build HP% to maximize). Fully book for 4-turn CD and 30% shield. Core skill for Faction Wars and dungeon progression."
         },
         {
           "name": "Fiery Swatch (Passive)",
           "type": "Passive",
-          "description": "Has a 10% chance of placing a [Fear] debuff on an enemy for 1 turn whenever they receive damage from a [HP Burn] debuff.\nLevel 2: Buff/Debuff Chance +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Buff/Debuff Chance +5%",
+          "description": "Has a 10% chance of placing a [Fear] debuff on an enemy for 1 turn whenever they receive damage from a [HP Burn] debuff.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "debuff",
+              "stat": "NA",
+              "value": 0,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "random_enemy",
+              "duration": 1,
+              "notes": "10% base chance, 25% fully booked. Triggers whenever ANY enemy takes HP Burn damage. Does NOT require accuracy check (passive proc). Minor CC utility."
             }
           ],
           "cooldown_booked": null,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "Fear",
+            "HP Burn synergy",
+            "Passive proc"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "Low priority - only increases proc chance from 10% to 25%. Book after A1 and A3.",
+          "notes": "Passive CC that triggers on HP Burn ticks. Useful for waves but unreliable (25% max). Does not require accuracy. Synergizes with A2 HP Burn spam. Minor utility, not a core mechanic."
         }
       ],
       "aura": "Increases Ally HP in all Battles by 25%.",

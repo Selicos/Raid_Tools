@@ -4,7 +4,13 @@
 
 # Raid Tools: Automation-Ready Boss & Team Guide System
 
-> **Project instructions:** See `.github/copilot-instructions.md` for canonical workflows, templates, and best practices.
+> **Source of truth:** All workflows, templates, and best practices are in `.github/copilot-instructions.md` and `input/Templates/`.
+
+## Onboarding
+
+1. Read this README for a high-level overview and quick start.
+2. For all details, workflows, and canonical templates, see `.github/copilot-instructions.md`.
+3. Use the template files in `input/Templates/` for all new entries.
 
 ## Quick Start
 
@@ -20,42 +26,25 @@
    - macOS/Linux: `source .venv/bin/activate`
 5. Use the Makefile or VS Code tasks for all core operations (intake, analysis, summary, test, lint, format).
 
-## Directory Structure and Drop Points
+## Champion Dictionary Completion Workflow
 
-All major entry types and templates are stored in standardized directories for automation and onboarding. Use these exact paths for all intake, output, and reference operations:
+**Standard Process: Option C (User Stats + AI Research)**
 
-| Entry Type                | Directory Path (relative to repo root)                | Format/Notes                                  |
-|--------------------------|------------------------------------------------------|------------------------------------------------|
-| Champion Dictionary      | input/Champion_Dictionary/                           | JSON, one file per champion                   |
-| Mechanic Dictionary      | input/Mechanic_Dictionary/                           | JSON, one file per mechanic (input, WIP)      |
+This is the canonical workflow for completing champion dictionary entries:
 
+1. **User provides screenshot** of champion base stats (100% accurate)
+2. **AI parses skills** from scraped data and populates:
+   - `effects[]` arrays with damage multipliers, debuff/buff details
+   - `mechanics_tags[]` for indexing
+   - `book_value` and skill-specific `notes`
+3. **Clean skill descriptions** (remove level-up info and multipliers)
+4. **Meta research** from authoritative sources (HellHades, Ayumilove, RaidHQ)
+5. **Cross-reference** with user's content priorities
+6. **Validate and document** all sources
 
-![Python](https://img.shields.io/badge/python-3.10%2B-blue)
-![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)
-![Platform](https://img.shields.io/badge/platform-windows%20%7C%20linux%20%7C%20macos-blue)
+**Time estimate:** 2-3 minutes per champion
 
-# Raid Tools: Automation-Ready Boss & Team Guide System
-
-> **Source of truth:** All workflows, templates, and best practices are in `.github/copilot-instructions.md` and `input/Templates/`.
-
-## Onboarding
-
-1. Read this README for a high-level overview and quick start.
-2. For all details, workflows, and canonical templates, see `.github/copilot-instructions.md`.
-3. Use the template files in `input/Templates/` for all new entries.
-
-## Quick Start
-
-1. Open a terminal in the repo root and run:
-   ```sh
-   python Tools/Setup_Environment.py
-   ```
-2. Open the folder in VS Code. Select the `.venv` Python interpreter if prompted.
-3. Install all recommended extensions when prompted.
-4. Activate the virtual environment before running tests or scripts:
-   - Windows: `.venv\Scripts\activate`
-   - macOS/Linux: `source .venv/bin/activate`
-5. Use the Makefile or VS Code tasks for all core operations (intake, analysis, summary, test, lint, format).
+> For complete details, see `.github/copilot-instructions.md` → "Champion Dictionary Entry Completion Process"
 
 ## Directory Drop Points
 
@@ -88,20 +77,21 @@ All major entry types and templates are stored in standardized directories for a
 - `make intake` — Intake a new champion
 - `make analysis` — Run cooldown analysis
 - `make summary` — Generate summary markdowns
+- `make validate` — Validate all JSON files
+
+Or use VS Code tasks (`Ctrl+Shift+P` → "Tasks: Run Task") or run scripts directly.
 
 **Note:** Schema validation for champion JSONs uses the `jsonschema` package. Web scraping requires `requests`, `beautifulsoup4`, and `lxml`. OCR-based stat extraction (optional) requires `pillow`, `pytesseract`, and the [Tesseract OCR binary](https://github.com/UB-Mannheim/tesseract/wiki). The setup script installs all Python dependencies automatically.
 
-Or use the corresponding Python scripts directly (see `.github/copilot-instructions.md`).
-
 ## Best Practices
 
-- Always use the canonical templates in `input/Templates/` for new entries. For all other guidance, see `.github/copilot-instructions.md`.
+- Always use the canonical templates in `input/Templates/` for new entries
+- For champion completion, use **Option C workflow** (user stats + AI research)
+- Validate all entries with at least 2 authoritative sources
+- Use DRAFT-to-FINAL workflow for major updates
+- Document all sources in citations and commit messages
+
+> For all other guidance, workflows, and standards, see `.github/copilot-instructions.md`.
 
 ---
-- Validate JSON
-
-- Organize Completed Prompts
-
-
-
 Open the Command Palette (`Ctrl+Shift+P`), select “Tasks: Run Task”, and choose the desired operation.
