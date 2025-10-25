@@ -51,10 +51,7 @@ def fill_template_with_data(template_section, data_section):
     if isinstance(template_section, dict):
         result = {}
         for key, value in template_section.items():
-            # Special case: always use mapped skills if present
-            if key == 'skills' and 'skills' in data_section and isinstance(data_section['skills'], list) and len(data_section['skills']) > 0:
-                result[key] = data_section['skills']
-            elif key in data_section and data_section[key] not in [None, ""]:
+            if key in data_section and data_section[key] not in [None, ""]:
                 # Recursively fill nested dicts/lists
                 if isinstance(value, (dict, list)):
                     result[key] = fill_template_with_data(value, data_section[key])
@@ -109,77 +106,17 @@ def diff_champion_jsons(old_json, new_json, log_path):
 
 # Main entry point
 def generate_champion_json(champion_name, scraped_data, template_path, output_path):
-    # Ensure mapped skills are directly assigned to output
-    if output['forms'] and 'skills' in output['forms'][0]:
-        output['forms'][0]['skills'] = mapped_skills
-    print(f"[DEBUG] Ayumilove skills found: {len(ayumi_skills)}")
     """
     Generate a champion JSON file using the canonical template, filling in available scraped data.
     Missing fields are left blank ("", 0, [], or {} as appropriate).
     Always sets 'draft': true.
     """
     template = load_template(template_path)
-    output = template.copy()
-    output['draft'] = True
-    # Fill top-level fields with scraped overview info if present
-    info = scraped_data.get('info', {})
-    output['name'] = info.get('name', template.get('name', ""))
-    output['rarity'] = info.get('rarity', template.get('rarity', ""))
-    output['affinity'] = info.get('affinity', template.get('affinity', ""))
-    output['faction'] = info.get('faction', template.get('faction', ""))
-    output['role'] = info.get('role', template.get('role', ""))
-    # Build forms manually to ensure mapped skills are used
-    forms = []
-    base_form = template['forms'][0].copy()
-    # Fill base stats
-    base_stats = base_form['base_stats'].copy()
-    for stat in base_stats:
-        base_stats[stat] = scraped_data.get('stats', {}).get(stat, "")
-    base_form['base_stats'] = base_stats
-    # Fill skills, mapping Ayumilove data to template structure
-    template_skills = template['forms'][0].get('skills', [])
-    default_skill = {
-        "name": "Skill Name",
-        "type": "A1/A2/A3/Passive",
-        "description": "Skill effect description.",
-        "effects": [
-            {
-                "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-                "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|...",
-                "value": 0.0,
-                "per_hit": False,
-                "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-                "duration": 2,
-                "notes": "Describe scaling, conditions, or special logic."
-            }
-        ],
-        "cooldown_booked": None,
-        "mechanics_tags": ["Relevant mechanic tags"],
-        "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-        "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
-    }
-    ayumi_skills = scraped_data.get('skills', [])
-    mapped_skills = []
-    for i, skill in enumerate(ayumi_skills):
-        # Use template skill as base, fill available fields
-        skill_template = (template_skills[0].copy() if template_skills else default_skill.copy())
-        skill_template['name'] = skill.get('name', skill_template['name'])
-        skill_template['description'] = skill.get('desc', skill_template.get('description', ''))
-        # Try to infer type (A1/A2/A3/Passive/Aura) from name or order
-        name_lc = skill_template['name'].lower()
-        if 'passive' in name_lc:
-            skill_template['type'] = 'Passive'
-        elif 'aura' in name_lc:
-            skill_template['type'] = 'Aura'
-        else:
-            skill_template['type'] = f"A{i+1}"
-        mapped_skills.append(skill_template)
-    base_form['skills'] = mapped_skills
-    forms.append(base_form)
-    output['forms'] = forms
+    champion_json = fill_template_with_data(template, scraped_data)
+    champion_json["draft"] = True
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(output, f, indent=2, ensure_ascii=False)
+        json.dump(champion_json, f, indent=2, ensure_ascii=False)
 
     print(f"Champion JSON for {champion_name} written to {output_path}")
