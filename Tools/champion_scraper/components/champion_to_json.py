@@ -120,7 +120,21 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
     # Patch: Map scraped_data['skills'] to forms[0]['skills'] if present
     if 'skills' in scraped_data and scraped_data['skills']:
         if 'forms' in template and isinstance(template['forms'], list) and len(template['forms']) > 0:
-            template['forms'][0]['skills'] = scraped_data['skills']
+            # Transform scraped skills to match template structure
+            template_skill = template['forms'][0]['skills'][0]
+            transformed_skills = []
+            for skill in scraped_data['skills']:
+                # Create a copy of the template skill
+                import copy
+                new_skill = copy.deepcopy(template_skill)
+                # Map scraped fields to template fields
+                new_skill['name'] = skill.get('name', '')
+                new_skill['type'] = skill.get('type', '')
+                new_skill['description'] = skill.get('desc', '')  # Map 'desc' to 'description'
+                # Keep template defaults for fields we don't scrape yet
+                # effects, cooldown_booked, mechanics_tags, book_value, notes remain as template defaults
+                transformed_skills.append(new_skill)
+            template['forms'][0]['skills'] = transformed_skills
     # Patch: Map scraped_data['aura'] to forms[0]['aura'] if present
     if 'aura' in scraped_data and scraped_data['aura']:
         if 'forms' in template and isinstance(template['forms'], list) and len(template['forms']) > 0:

@@ -37,7 +37,7 @@
               "value": 0.0,
               "per_hit": false,
               "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": 2,
+              "duration": "Duration of buff/debuff in turns (if applicable)",
               "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
             }
           ],

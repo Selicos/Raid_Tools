@@ -94,6 +94,37 @@ def extract_skills(soup):
                 skills.append(skill_block)
     return skills
 
+
+def determine_skill_type(skill_name, skill_desc, skill_index, total_skills):
+    """
+    Determine skill type (A1, A2, A3, Passive) based on skill name, description, and position.
+    
+    Logic:
+    - If name or description contains "Passive", it's a Passive skill
+    - Otherwise, assign based on position: 0=A1, 1=A2, 2=A3, etc.
+    - Skip aura skills (handled separately)
+    
+    Note for future sources:
+    - This logic assumes standard skill ordering (basic attack first, then abilities)
+    - Adjust pattern matching if source uses different passive indicators
+    - Some champions may have multiple passives or non-standard skill counts
+    """
+    name_lower = skill_name.lower()
+    desc_lower = skill_desc.lower()
+    
+    # Check for passive indicators
+    if "passive" in name_lower or "[passive" in desc_lower:
+        return "Passive"
+    
+    # Assign based on position (A1, A2, A3, A4, etc.)
+    # Most champions have 3-4 skills before aura/passive
+    skill_types = ["A1", "A2", "A3", "A4", "A5", "A6"]
+    if skill_index < len(skill_types):
+        return skill_types[skill_index]
+    
+    # Fallback for unusual cases
+    return f"A{skill_index + 1}"
+
 def scrape_raidwiki_champion(champ_name):
     norm_name = normalize_champion_name(champ_name)
     url = f"https://raidwiki.com/champion/{norm_name}"
@@ -108,14 +139,24 @@ def scrape_raidwiki_champion(champ_name):
     stats = extract_stats(soup)
     skills = extract_skills(soup)
     
-    # Separate aura from skills
+    # Separate aura from skills and assign skill types
     aura_desc = ""
     filtered_skills = []
+    skill_index = 0
     for skill in skills:
         if skill["name"].strip().lower() == "aura":
             aura_desc = skill["desc"]
         else:
+            # Determine skill type based on position and content
+            skill_type = determine_skill_type(
+                skill["name"], 
+                skill["desc"], 
+                skill_index, 
+                len(skills)
+            )
+            skill["type"] = skill_type
             filtered_skills.append(skill)
+            skill_index += 1
     
     return {'info': info, 'stats': stats, 'skills': filtered_skills, 'aura': aura_desc}
 

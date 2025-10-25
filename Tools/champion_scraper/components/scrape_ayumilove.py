@@ -13,6 +13,16 @@ from bs4 import BeautifulSoup
 import sys
 import re
 
+# Optional OCR imports - will use if available
+try:
+    from PIL import Image
+    import pytesseract
+    from io import BytesIO
+    OCR_AVAILABLE = True
+except ImportError:
+    OCR_AVAILABLE = False
+    print("[INFO] OCR libraries not available. Install 'pillow' and 'pytesseract' for image-based stat extraction.")
+
 
 def fetch_champion_page(url):
     resp = requests.get(url)
@@ -62,6 +72,56 @@ def extract_base_info(soup):
                         last_label = "affinity"
             break
     return info
+
+def extract_stats_from_image(image_url):
+    """
+    Extract champion stats from an image using OCR.
+    Returns a dict of stats (HP, ATK, DEF, etc.) or empty dict if extraction fails.
+    
+    Requirements:
+    - pillow: pip install pillow
+    - pytesseract: pip install pytesseract
+    - Tesseract binary: https://github.com/tesseract-ocr/tesseract
+    """
+    if not OCR_AVAILABLE:
+        return {}
+    
+    try:
+        # Download the image
+        response = requests.get(image_url, timeout=10)
+        response.raise_for_status()
+        img = Image.open(BytesIO(response.content))
+        
+        # Perform OCR
+        text = pytesseract.image_to_string(img)
+        
+        # Parse stats from OCR text
+        stats = {}
+        stat_patterns = {
+            'HP': r'HP[:\s]+(\d[\d,]*)',
+            'ATK': r'ATK[:\s]+(\d[\d,]*)',
+            'DEF': r'DEF[:\s]+(\d[\d,]*)',
+            'SPD': r'SPD[:\s]+(\d[\d,]*)',
+            'C. RATE': r'C\.?\s*RATE[:\s]+(\d+)%?',
+            'C. DMG': r'C\.?\s*DMG[:\s]+(\d+)%?',
+            'RESIST': r'RESIST(?:ANCE)?[:\s]+(\d+)',
+            'ACC': r'ACC(?:URACY)?[:\s]+(\d+)',
+        }
+        
+        for stat_name, pattern in stat_patterns.items():
+            match = re.search(pattern, text, re.IGNORECASE)
+            if match:
+                value = match.group(1).replace(',', '')
+                stats[stat_name] = value
+        
+        if stats:
+            print(f"[OCR] Extracted {len(stats)} stats from image")
+        return stats
+    
+    except Exception as e:
+        print(f"[OCR][ERROR] Failed to extract stats from image: {e}")
+        return {}
+
 
 def extract_main_image_and_stats(soup, champ_name):
     # Try to find the main image (look for champion name in src or alt)
@@ -137,6 +197,37 @@ def extract_skills_structured(soup):
     return skills
 
 
+def determine_skill_type(skill_name, skill_desc, skill_index, total_skills):
+    """
+    Determine skill type (A1, A2, A3, Passive) based on skill name, description, and position.
+    
+    Logic:
+    - If name or description contains "Passive", it's a Passive skill
+    - Otherwise, assign based on position: 0=A1, 1=A2, 2=A3, etc.
+    - Skip aura skills (handled separately)
+    
+    Note for future sources:
+    - This logic assumes standard skill ordering (basic attack first, then abilities)
+    - Adjust pattern matching if source uses different passive indicators
+    - Some champions may have multiple passives or non-standard skill counts
+    """
+    name_lower = skill_name.lower()
+    desc_lower = skill_desc.lower()
+    
+    # Check for passive indicators
+    if "passive" in name_lower or "[passive" in desc_lower:
+        return "Passive"
+    
+    # Assign based on position (A1, A2, A3, A4, etc.)
+    # Most champions have 3-4 skills before aura/passive
+    skill_types = ["A1", "A2", "A3", "A4", "A5", "A6"]
+    if skill_index < len(skill_types):
+        return skill_types[skill_index]
+    
+    # Fallback for unusual cases
+    return f"A{skill_index + 1}"
+
+
 def normalize_champion_name(name):
     # Converts champion name to Ayumilove URL format (lowercase, hyphens, remove special chars)
     # TODO: Validate champion name against a canonical list if available
@@ -178,20 +269,30 @@ def scrape_ayumilove_champion(champ_name, template_path=None):
     skills = extract_skills_structured(soup)
     info["image_url"] = image_url
     
-    # Separate aura from skills
+    # Separate aura from skills and assign skill types
     aura_desc = ""
     filtered_skills = []
+    skill_index = 0
     for skill in skills:
         if skill["name"].strip().lower() == "aura":
             aura_desc = skill["desc"]
         else:
+            # Determine skill type based on position and content
+            skill_type = determine_skill_type(
+                skill["name"], 
+                skill["desc"], 
+                skill_index, 
+                len(skills)
+            )
+            skill["type"] = skill_type
             filtered_skills.append(skill)
+            skill_index += 1
     
     # Load template and use its default values for missing fields
     template = load_template(template_path)
     mechanics_tags = template.get("mechanics_tags", ["Relevant mechanic tags"])
     
-    # Return raw data with aura separated
+    # Return raw data with aura separated and skill types assigned
     return {
         'info': info, 
         'stats': stats, 
