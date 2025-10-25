@@ -121,6 +121,10 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
     if 'skills' in scraped_data and scraped_data['skills']:
         if 'forms' in template and isinstance(template['forms'], list) and len(template['forms']) > 0:
             template['forms'][0]['skills'] = scraped_data['skills']
+    # Patch: Map scraped_data['aura'] to forms[0]['aura'] if present
+    if 'aura' in scraped_data and scraped_data['aura']:
+        if 'forms' in template and isinstance(template['forms'], list) and len(template['forms']) > 0:
+            template['forms'][0]['aura'] = scraped_data['aura']
     champion_json = fill_template_with_data(template, scraped_data)
     champion_json["draft"] = True
 

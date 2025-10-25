@@ -107,7 +107,17 @@ def scrape_raidwiki_champion(champ_name):
     info = extract_champion_info(soup)
     stats = extract_stats(soup)
     skills = extract_skills(soup)
-    return {'info': info, 'stats': stats, 'skills': skills}
+    
+    # Separate aura from skills
+    aura_desc = ""
+    filtered_skills = []
+    for skill in skills:
+        if skill["name"].strip().lower() == "aura":
+            aura_desc = skill["desc"]
+        else:
+            filtered_skills.append(skill)
+    
+    return {'info': info, 'stats': stats, 'skills': filtered_skills, 'aura': aura_desc}
 
 def main():
     if len(sys.argv) < 2:

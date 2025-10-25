@@ -177,11 +177,28 @@ def scrape_ayumilove_champion(champ_name, template_path=None):
     image_url, stats = extract_main_image_and_stats(soup, champ_name)
     skills = extract_skills_structured(soup)
     info["image_url"] = image_url
+    
+    # Separate aura from skills
+    aura_desc = ""
+    filtered_skills = []
+    for skill in skills:
+        if skill["name"].strip().lower() == "aura":
+            aura_desc = skill["desc"]
+        else:
+            filtered_skills.append(skill)
+    
     # Load template and use its default values for missing fields
     template = load_template(template_path)
-    # Use template mechanics_tags
     mechanics_tags = template.get("mechanics_tags", ["Relevant mechanic tags"])
-    return {'info': info, 'stats': stats, 'skills': skills, 'mechanics_tags': mechanics_tags}
+    
+    # Return raw data with aura separated
+    return {
+        'info': info, 
+        'stats': stats, 
+        'skills': filtered_skills, 
+        'aura': aura_desc,
+        'mechanics_tags': mechanics_tags
+    }
 
 if __name__ == "__main__":
     main()

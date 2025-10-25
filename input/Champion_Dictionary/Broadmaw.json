@@ -16,13 +16,14 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": "18660",
-        "ATK": "1101",
-        "DEF": "958",
-        "SPD": "104",
-        "C.RATE": "15",
-        "C.DMG": "50",
-        "RES": "30"
+        "HP": 0,
+        "ATK": 0,
+        "DEF": 0,
+        "SPD": 0,
+        "C.RATE": 0,
+        "C.DMG": 0,
+        "RES": 0,
+        "ACC": 0
       },
       "skills": [
         {
@@ -36,17 +37,14 @@
         {
           "name": "Resurrect",
           "desc": "Revives 2 random dead allies with 25% HP. Places a\n[Block Damage]\nbuff on the revived allies for 1 turn.\nLevel 2: Heal +5%\nLevel 3: Heal +10%\nLevel 4: Heal +15%\nLevel 5: Cooldown -1\nLevel 6: Cooldown -1"
-        },
-        {
-          "name": "Aura",
-          "desc": "Increases Ally DEF in the Arena by 33%."
         }
-      ]
+      ],
+      "aura": "Increases Ally DEF in the Arena by 33%.",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
   ],
   "mechanics_tags": [
-    "Decrease DEF",
-    "HP Burn"
+    "Relevant mechanic tags"
   ],
   "stat_priorities": [
     "Stat priorities for main content(s)",

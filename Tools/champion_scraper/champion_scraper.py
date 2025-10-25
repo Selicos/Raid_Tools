@@ -108,6 +108,7 @@ def main():
                 },
                 'stats': mapped_stats,
                 'skills': skills,
+                'aura': data.get('aura', ''),
                 'mechanics_tags': template_mechanics_tags
             }
             # If Ayumilove fallback used, map extra overview fields to comments
