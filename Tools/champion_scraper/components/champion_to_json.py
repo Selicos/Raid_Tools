@@ -139,8 +139,47 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
     if 'aura' in scraped_data and scraped_data['aura']:
         if 'forms' in template and isinstance(template['forms'], list) and len(template['forms']) > 0:
             template['forms'][0]['aura'] = scraped_data['aura']
+    # Patch: Map scraped_data['stats'] to forms[0]['base_stats'] if present
+    if 'stats' in scraped_data and scraped_data['stats']:
+        if 'forms' in template and isinstance(template['forms'], list) and len(template['forms']) > 0:
+            print(f"[DEBUG] Mapping stats to template: {scraped_data['stats']}")
+            # Map stat names to template field names (should already be mapped in champion_scraper.py)
+            # These keys should match the valid_stats in champion_scraper.py
+            stat_mapping = {
+                'HP': 'HP',
+                'ATK': 'ATK',
+                'DEF': 'DEF',
+                'SPD': 'SPD',
+                'C.RATE': 'C.RATE',
+                'C.DMG': 'C.DMG',
+                'RES': 'RES',
+                'ACC': 'ACC'
+            }
+            for scraped_name, template_name in stat_mapping.items():
+                if scraped_name in scraped_data['stats']:
+                    value = scraped_data['stats'][scraped_name]
+                    print(f"[DEBUG] Mapping {scraped_name} ({value}) -> {template_name}")
+                    # Convert to int if possible
+                    try:
+                        template['forms'][0]['base_stats'][template_name] = int(value)
+                    except (ValueError, TypeError):
+                        template['forms'][0]['base_stats'][template_name] = value
+                else:
+                    print(f"[DEBUG] Stat {scraped_name} not found in scraped data")
     champion_json = fill_template_with_data(template, scraped_data)
     champion_json["draft"] = True
+
+    # Add validation metadata if available
+    validation_info = scraped_data.get('validation', {})
+    print(f"[DEBUG] Validation info in scraped_data: {validation_info}")
+    if validation_info:
+        champion_json['validation_metadata'] = {
+            'stat_confidence': validation_info.get('confidence', 0),
+            'stat_differences': validation_info.get('differences', []),
+            'data_sources': validation_info.get('sources', ''),
+            'ocr_notes': 'Stats compared between RaidWiki and Ayumilove OCR' if 'validated' in validation_info.get('sources', '') else 'OCR only - consider manual verification'
+        }
+        print(f"[DEBUG] Added validation_metadata to champion JSON")
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:

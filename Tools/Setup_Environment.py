@@ -219,6 +219,22 @@ def main():
     print(
         "You can run all tools and tests from the VS Code terminal or using the provided tasks."
     )
+    print("\n--- Optional: Tesseract OCR ---")
+    print(
+        "For OCR-based champion stat extraction, install Tesseract OCR binary:"
+    )
+    print(
+        "  Windows: https://github.com/UB-Mannheim/tesseract/wiki"
+    )
+    print(
+        "  Linux: sudo apt-get install tesseract-ocr"
+    )
+    print(
+        "  Mac: brew install tesseract"
+    )
+    print(
+        "The scraper will work without it, but OCR provides a fallback for image-based stats."
+    )
 
 
 if __name__ == "__main__":

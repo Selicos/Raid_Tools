@@ -1,9 +1,9 @@
 {
-  "name": "Gretel Hagbane",
+  "name": "Ghostborn",
   "rarity": "Legendary",
-  "affinity": "Force",
-  "faction": "Sacred Order",
-  "role": "Attack",
+  "affinity": "Spirit",
+  "faction": "Dark Elves",
+  "role": "Support",
   "draft": true,
   "meta_ratings": {
     "clan_boss": "X/10",
@@ -16,20 +16,20 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": 15525,
-        "ATK": 1564,
-        "DEF": 980,
-        "SPD": 100,
+        "HP": 18825,
+        "ATK": 1211,
+        "DEF": 1112,
+        "SPD": 101,
         "C.RATE": 15,
-        "C.DMG": 63,
-        "RES": 10,
-        "ACC": 30
+        "C.DMG": 50,
+        "RES": 40,
+        "ACC": ""
       },
       "skills": [
         {
-          "name": "Evil Undone",
+          "name": "Energy Bolt",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns. If Hansel Witchhunter is on the same team, attacks all enemies instead. Has a 25% chance of placing a 60% [Decrease DEF] debuff on all enemies for 2 turns. Also places an extra hit against enemies under any buffs.\nLevel 2: Damage +10%\nLevel 3: Damage +10%\nLevel 4: Buff/Debuff chance +10%\nLevel 5: Buff/Debuff chance +15%\nDamage Multiplier: 3.8 ATK (Single Target), 2.4 ATK (AoE)",
+          "description": "Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns.\nLevel 2: Buff/Debuff Chance +10%\nLevel 3: Buff/Debuff Chance +10%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Buff/Debuff Chance +20%\nDamage Multiplier: 4.5 ATK",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -49,9 +49,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Shadowseeker Bolts (Cooldown: 4 turns)",
+          "name": "Petrify (Cooldown: 4 turns)",
           "type": "A2",
-          "description": "Attacks 1 enemy 4 times. The first hit will ignore 10% of the target’s DEF, the second hit will ignore 15% DEF, the third hit will ignore 20% DEF, and the fourth hit will ignore 25% DEF. If this attack kills an enemy, resets the cooldown of this skill and fills this Champion’s Turn Meter by 50%.\nLevel 2: Damage +10%\nLevel 3: Damage +10%\nLevel 4: Cooldown -1\nDamage Multiplier: 1.4 ATK",
+          "description": "Attacks all enemies. Has a 75% chance of placing a 100% [Heal Reduction] debuff for 2 turns.\nLevel 2: Buff/Debuff Chance +10%\nLevel 3: Buff/Debuff Chance +15%\nLevel 4: Cooldown -1\nDamage Multiplier: 1 ATK x (2 + SPD/100)",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -71,9 +71,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Sacred Ritual (Cooldown: 4 turns)",
+          "name": "Ancestral Spirits (Cooldown: 5 turns)",
           "type": "A3",
-          "description": "Attacks all enemies. Decreases the Turn Meters of all enemies by 25%. If Hansel Witchhunter is on the same team, decreased the Turn Meter of all enemies by 50% instead. This effect cannot be resisted. Then fills this Champion’s Turn Meter by 20% for each enemy alive after the attack.\nLevel 2: Damage +10%\nLevel 3: Damage +10%\nLevel 4: Cooldown -1\nDamage Multiplier: 4.1 ATK",
+          "description": "Attacks all enemies. Has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns. This debuff cannot be resisted. Places a 50% [Increase ATK] buff on all allies for 2 turns.\nLevel 2: Buff/Debuff Chance +10%\nLevel 3: Buff/Debuff Chance +15%\nLevel 4: Cooldown -1\nDamage Multiplier: 3.8 ATK",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -93,9 +93,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Sisterly Bond (Passive, Cooldown: 3 turns)",
-          "type": "Passive",
-          "description": "[Passive Effect] Fills this Champion’s Turn Meter by 50% whenever an enemy is granted an Extra Turn. If Hansel Witchhunter is on the same team, also fills their Turn Meter by 50% whenever an enemy is granted an Extra Turn.\n[Active Effect] If Hansel Witchhunter is on the same team and is killed by the enemy, instantly activates [Sacred Ritual] skill.",
+          "name": "",
+          "type": "A4",
+          "description": "",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -115,7 +115,7 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-      "aura": "Increases Ally ATK in all battles by 30%",
+      "aura": "Increases Ally ACC in Faction Crypts by 65.",
       "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
   ],
@@ -176,5 +176,13 @@
   "update_notes": {
     "last_updated": "YYYY-MM-DD",
     "last_patch": "Patch version/date and summary of change"
+  },
+  "validation_metadata": {
+    "stat_confidence": 100.0,
+    "stat_differences": [
+      "No Ayumilove OCR stats available - using RaidWiki"
+    ],
+    "data_sources": "raidwiki_stats+ayumilove_ocr_validated",
+    "ocr_notes": "Stats compared between RaidWiki and Ayumilove OCR"
   }
 }

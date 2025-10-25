@@ -109,10 +109,6 @@ def diff_champion_jsons(old_json, new_json, log_path):
 
 # Main entry point
 def generate_champion_json(champion_name, scraped_data, template_path, output_path):
-    # Ensure mapped skills are directly assigned to output
-    if output['forms'] and 'skills' in output['forms'][0]:
-        output['forms'][0]['skills'] = mapped_skills
-    print(f"[DEBUG] Ayumilove skills found: {len(ayumi_skills)}")
     """
     Generate a champion JSON file using the canonical template, filling in available scraped data.
     Missing fields are left blank ("", 0, [], or {} as appropriate).
@@ -177,6 +173,18 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
     base_form['skills'] = mapped_skills
     forms.append(base_form)
     output['forms'] = forms
+
+    # Add validation metadata if available
+    validation_info = scraped_data.get('validation', {})
+    print(f"[DEBUG] Validation info in scraped_data: {validation_info}")
+    if validation_info:
+        output['validation_metadata'] = {
+            'stat_confidence': validation_info.get('confidence', 0),
+            'stat_differences': validation_info.get('differences', []),
+            'data_sources': validation_info.get('sources', ''),
+            'ocr_notes': 'Stats compared between RaidWiki and Ayumilove OCR' if 'validated' in validation_info.get('sources', '') else 'OCR only - consider manual verification'
+        }
+        print(f"[DEBUG] Added validation_metadata to output JSON")
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:

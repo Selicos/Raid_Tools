@@ -19,9 +19,27 @@ try:
     import pytesseract
     from io import BytesIO
     OCR_AVAILABLE = True
-except ImportError:
+    # Configure tesseract path for Windows if not in PATH
+    import platform
+    if platform.system() == 'Windows':
+        # Try common installation paths
+        possible_paths = [
+            r'C:\Program Files\Tesseract-OCR\tesseract.exe',
+            r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe',
+        ]
+        tesseract_found = False
+        for path in possible_paths:
+            if os.path.exists(path):
+                pytesseract.pytesseract.tesseract_cmd = path
+                tesseract_found = True
+                print(f"[OCR] Configured Tesseract at: {path}")
+                break
+        if not tesseract_found:
+            print("[OCR][WARNING] Tesseract not found in common paths. Trying system PATH...")
+except ImportError as e:
     OCR_AVAILABLE = False
-    print("[INFO] OCR libraries not available. Install 'pillow' and 'pytesseract' for image-based stat extraction.")
+    print(f"[INFO] OCR libraries not available: {e}")
+    print("[INFO] Install 'pillow' and 'pytesseract' for image-based stat extraction.")
 
 
 def fetch_champion_page(url):
@@ -78,6 +96,9 @@ def extract_stats_from_image(image_url):
     Extract champion stats from an image using OCR.
     Returns a dict of stats (HP, ATK, DEF, etc.) or empty dict if extraction fails.
     
+    For Ayumilove images: Stats are displayed in fixed order without labels
+    (HP, ATK, DEF, SPD, C.RATE, C.DMG, RESIST, ACC)
+    
     Requirements:
     - pillow: pip install pillow
     - pytesseract: pip install pytesseract
@@ -95,8 +116,14 @@ def extract_stats_from_image(image_url):
         # Perform OCR
         text = pytesseract.image_to_string(img)
         
+        print(f"[OCR][DEBUG] Extracted text from image:")
+        print(text)
+        print("[OCR][DEBUG] " + "=" * 60)
+        
         # Parse stats from OCR text
         stats = {}
+        
+        # First try to find labeled stats (for images that have labels)
         stat_patterns = {
             'HP': r'HP[:\s]+(\d[\d,]*)',
             'ATK': r'ATK[:\s]+(\d[\d,]*)',
@@ -114,53 +141,123 @@ def extract_stats_from_image(image_url):
                 value = match.group(1).replace(',', '')
                 stats[stat_name] = value
         
+        # If no labeled stats found, try positional extraction (Ayumilove format)
+        if not stats:
+            print("[OCR][INFO] No labeled stats found, trying positional extraction...")
+            # Find all numbers (with optional commas)
+            # Look for the stat block after "Total Stats" or similar
+            numbers = re.findall(r'\d[\d,]+', text)
+            
+            print(f"[OCR][DEBUG] All numbers found: {numbers}")
+            
+            # Clean numbers (remove commas)
+            clean_numbers = [n.replace(',', '') for n in numbers]
+            
+            # Ayumilove stats are in order: HP (4-5 digits), ATK (3-4 digits), DEF (3-4 digits), 
+            # SPD (2-3 digits), C.RATE (1-2 digits), C.DMG (2-3 digits), RESIST (1-3 digits), ACC (1-3 digits)
+            # Look for a sequence that matches these patterns
+            stat_candidates = []
+            for i, num in enumerate(clean_numbers):
+                try:
+                    val = int(num)
+                    # Skip level (60, typically first) but include all other numbers
+                    # HP is usually 10000+, so start from first 4-5 digit number
+                    if i == 0 and val <= 100:
+                        # Likely level number, skip
+                        continue
+                    # Include all reasonable stat values (10-30000)
+                    if 10 <= val <= 30000:
+                        stat_candidates.append(num)
+                except ValueError:
+                    continue
+            
+            print(f"[OCR][DEBUG] Stat candidates: {stat_candidates}")
+            
+            # Take the first 8 candidates if we have enough
+            # Ayumilove order: HP, ATK, DEF, SPD, C.RATE, C.DMG, RESIST, ACC
+            if len(stat_candidates) >= 8:
+                stat_names = ['HP', 'ATK', 'DEF', 'SPD', 'C. RATE', 'C. DMG', 'RESIST', 'ACC']
+                for i in range(8):
+                    stats[stat_names[i]] = stat_candidates[i]
+                print(f"[OCR][INFO] Extracted {len(stats)} stats using positional mapping")
+            elif len(stat_candidates) >= 4:
+                # At minimum try to get HP, ATK, DEF, SPD
+                stat_names = ['HP', 'ATK', 'DEF', 'SPD']
+                for i in range(min(4, len(stat_candidates))):
+                    stats[stat_names[i]] = stat_candidates[i]
+                print(f"[OCR][INFO] Extracted {len(stats)} core stats using positional mapping")
+        
         if stats:
-            print(f"[OCR] Extracted {len(stats)} stats from image")
+            print(f"[OCR] ✓ Extracted {len(stats)} stats from image")
+        else:
+            print(f"[OCR][WARNING] No stats matched from OCR text")
         return stats
     
     except Exception as e:
         print(f"[OCR][ERROR] Failed to extract stats from image: {e}")
+        import traceback
+        traceback.print_exc()
         return {}
 
 
-def extract_main_image_and_stats(soup, champ_name):
+def extract_main_image_and_stats(soup, champ_name, skip_stats=False):
     # Try to find the main image (look for champion name in src or alt)
     img_tag = None
     champ_name_lc = champ_name.strip().lower().replace("'", "").replace(" ", "_")
+    champ_name_hyphen = champ_name.strip().lower().replace("'", "").replace(" ", "-")
+    
     for img in soup.find_all('img'):
         alt = img.get('alt', '').lower()
         src = img.get('src', '').lower()
-        # Accept match if champion name (with/without underscores/hyphens) is in alt or src
-        if champ_name_lc in alt or champ_name_lc in src or champ_name.strip().lower().replace(" ", "-") in src:
+        data_src = img.get('data-src', '').lower()
+        
+        # Check both src and data-src for lazy-loaded images
+        # Accept match if champion name (with underscores or hyphens) is in the URL
+        if (champ_name_lc in src or champ_name_lc in data_src or 
+            champ_name_hyphen in src or champ_name_hyphen in data_src):
             img_tag = img
             break
-    image_url = img_tag['src'] if img_tag else None
+    
+    # Extract and normalize image URL
+    image_url = None
+    if img_tag:
+        # Prefer data-src for lazy-loaded images, fall back to src
+        image_url = img_tag.get('data-src') or img_tag.get('src')
+        if image_url:
+            # Handle protocol-relative URLs (//example.com/path)
+            if image_url.startswith('//'):
+                image_url = 'https:' + image_url
+            # Handle relative URLs (/path)
+            elif image_url.startswith('/'):
+                image_url = 'https://ayumilove.net' + image_url
+            print(f"[DEBUG] Found champion image: {image_url}")
+    
     if not image_url:
         print("[DEBUG] No main image found.")
 
-    # Try to find the stats table or block
+    # Skip stats extraction if RaidWiki provided them
     stats = {}
-    table = None
-    for t in soup.find_all('table'):
-        if any('HP' in cell.get_text() for cell in t.find_all(['td', 'th'])):
-            table = t
-            break
-    if table:
-        for row in table.find_all('tr'):
-            cells = row.find_all(['td', 'th'])
-            if len(cells) == 2:
-                stat = cells[0].get_text(strip=True)
-                value = cells[1].get_text(strip=True).replace(',', '')
-                stats[stat] = value
+    if skip_stats:
+        print("[Ayumilove] Skipping stats extraction (using RaidWiki stats)")
     else:
-        # Fallback: look for text blocks
-        text = soup.get_text("\n")
-        for stat in ["HP", "ATK", "DEF", "SPD", "C. RATE", "C. DMG", "RESIST", "ACC"]:
-            m = re.search(rf'{stat}[:\s]+([\d,]+)', text)
-            if m:
-                stats[stat] = m.group(1).replace(',', '')
-        if not stats:
-            print("[DEBUG] No stats found in table or text.")
+        # For Ayumilove, stats are in the champion image (lower right corner)
+        # Use OCR directly instead of trying to parse HTML tables/text
+        if image_url and OCR_AVAILABLE:
+            print("[DEBUG] Using OCR to extract stats from champion image...")
+            stats = extract_stats_from_image(image_url)
+            
+            # Warn if low confidence (missing many stats)
+            stats_found = sum(1 for v in stats.values() if v and v != '')
+            total_stats = 8
+            confidence = (stats_found / total_stats) * 100 if total_stats > 0 else 0
+            
+            if confidence < 75:
+                print(f"[WARNING] Low OCR confidence: {stats_found}/{total_stats} stats extracted ({confidence:.1f}%)")
+                print(f"[WARNING] Consider manual verification for this champion")
+        elif not OCR_AVAILABLE:
+            print("[WARNING] OCR not available - install pillow and pytesseract for stat extraction")
+    
+    print(f"[DEBUG] Final stats being returned: {stats}")
     return image_url, stats
 
 
@@ -254,7 +351,7 @@ def main():
     print("Base Stats:", stats)
     print("\nSKILLS Section:\n", skills)
 
-def scrape_ayumilove_champion(champ_name, template_path=None):
+def scrape_ayumilove_champion(champ_name, template_path=None, skip_stats=False):
     norm_name = normalize_champion_name(champ_name)
     url = f"https://ayumilove.net/raid-shadow-legends-{norm_name}-skill-mastery-equip-guide/"
     print(f"[Ayumilove] Fetching: {url}")
@@ -265,7 +362,7 @@ def scrape_ayumilove_champion(champ_name, template_path=None):
         return None
     soup = BeautifulSoup(html, 'lxml')
     info = extract_base_info(soup)
-    image_url, stats = extract_main_image_and_stats(soup, champ_name)
+    image_url, stats = extract_main_image_and_stats(soup, champ_name, skip_stats=skip_stats)
     skills = extract_skills_structured(soup)
     info["image_url"] = image_url
     

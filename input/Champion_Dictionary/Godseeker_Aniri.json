@@ -1,9 +1,9 @@
 {
-  "name": "Gretel Hagbane",
-  "rarity": "Legendary",
-  "affinity": "Force",
+  "name": "Godseeker Aniri",
+  "rarity": "Epic",
+  "affinity": "Void",
   "faction": "Sacred Order",
-  "role": "Attack",
+  "role": "Defense",
   "draft": true,
   "meta_ratings": {
     "clan_boss": "X/10",
@@ -16,20 +16,20 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": 15525,
-        "ATK": 1564,
-        "DEF": 980,
-        "SPD": 100,
-        "C.RATE": 15,
-        "C.DMG": 63,
-        "RES": 10,
-        "ACC": 30
+        "HP": 15195,
+        "ATK": 1046,
+        "DEF": 1244,
+        "SPD": 99,
+        "C.RATE": "",
+        "C.DMG": "",
+        "RES": "",
+        "ACC": ""
       },
       "skills": [
         {
-          "name": "Evil Undone",
+          "name": "Blade of Blessings",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns. If Hansel Witchhunter is on the same team, attacks all enemies instead. Has a 25% chance of placing a 60% [Decrease DEF] debuff on all enemies for 2 turns. Also places an extra hit against enemies under any buffs.\nLevel 2: Damage +10%\nLevel 3: Damage +10%\nLevel 4: Buff/Debuff chance +10%\nLevel 5: Buff/Debuff chance +15%\nDamage Multiplier: 3.8 ATK (Single Target), 2.4 ATK (AoE)",
+          "description": "Attacks 1 enemy. Heal the ally with the lowest HP by 5% of their MAX HP. Cannot heal this champion.\nLevel 2: Damage 5%\nLevel 3: Heal 5%\nLevel 4: Damage +5%\nLevel 5: Heal +5%\nLevel 6: Damage +5%\nLevel 7: Heal +5%\nDamage Multiplier: 3.6 DEF",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -49,9 +49,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Shadowseeker Bolts (Cooldown: 4 turns)",
+          "name": "Quest for Meaning (Cooldown: 4 turns)",
           "type": "A2",
-          "description": "Attacks 1 enemy 4 times. The first hit will ignore 10% of the target’s DEF, the second hit will ignore 15% DEF, the third hit will ignore 20% DEF, and the fourth hit will ignore 25% DEF. If this attack kills an enemy, resets the cooldown of this skill and fills this Champion’s Turn Meter by 50%.\nLevel 2: Damage +10%\nLevel 3: Damage +10%\nLevel 4: Cooldown -1\nDamage Multiplier: 1.4 ATK",
+          "description": "Attacks all enemies. Heal all allies by 15% of their MAX HP, then decreases the duration of all buffs on all enemies by 1 turn and increases the duration of all buffs on all allies by 1 turn.\nLevel 2: Heal +5%\nLevel 3: Heal +5%\nLevel 4: Heal +5%\nLevel 5: Heal +5%\nLevel 6: Cooldown -1\nDamage Multiplier: 3 DEF",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -71,9 +71,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Sacred Ritual (Cooldown: 4 turns)",
+          "name": "Rise of Glory (Cooldown: 7 turns)",
           "type": "A3",
-          "description": "Attacks all enemies. Decreases the Turn Meters of all enemies by 25%. If Hansel Witchhunter is on the same team, decreased the Turn Meter of all enemies by 50% instead. This effect cannot be resisted. Then fills this Champion’s Turn Meter by 20% for each enemy alive after the attack.\nLevel 2: Damage +10%\nLevel 3: Damage +10%\nLevel 4: Cooldown -1\nDamage Multiplier: 4.1 ATK",
+          "description": "Revives a dead ally with 50% HP, then fills their Turn Meter by 50% and resets the cooldowns of all their skills\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1\nLevel 4: Cooldown -1",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -93,9 +93,31 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Sisterly Bond (Passive, Cooldown: 3 turns)",
+          "name": "Guardian Angel (Passive, Cooldown: 7 turns)",
           "type": "Passive",
-          "description": "[Passive Effect] Fills this Champion’s Turn Meter by 50% whenever an enemy is granted an Extra Turn. If Hansel Witchhunter is on the same team, also fills their Turn Meter by 50% whenever an enemy is granted an Extra Turn.\n[Active Effect] If Hansel Witchhunter is on the same team and is killed by the enemy, instantly activates [Sacred Ritual] skill.",
+          "description": "[Passive Effect] Increases the amount of healing allies receive by 10%. [Active Effect] If an ally is about to get killed by a fatal hit, preempts that hit and instantly places a [Revive On Death] buff on them for 1 turn before the damage is taken.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1\nLevel 4: Cooldown -1",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "",
+          "type": "A5",
+          "description": "",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -115,7 +137,7 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-      "aura": "Increases Ally ATK in all battles by 30%",
+      "aura": "Aura description (if any)",
       "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
   ],

@@ -89,7 +89,7 @@ All major entry types and templates are stored in standardized directories for a
 - `make analysis` — Run cooldown analysis
 - `make summary` — Generate summary markdowns
 
-Note: schema validation for champion JSONs uses the `jsonschema` package. The setup script installs this dependency automatically, or install it manually with `pip install jsonschema`.
+**Note:** Schema validation for champion JSONs uses the `jsonschema` package. Web scraping requires `requests`, `beautifulsoup4`, and `lxml`. OCR-based stat extraction (optional) requires `pillow`, `pytesseract`, and the [Tesseract OCR binary](https://github.com/UB-Mannheim/tesseract/wiki). The setup script installs all Python dependencies automatically.
 
 Or use the corresponding Python scripts directly (see `.github/copilot-instructions.md`).
 

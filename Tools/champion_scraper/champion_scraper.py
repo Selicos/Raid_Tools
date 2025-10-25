@@ -18,18 +18,160 @@ def merge_champion_data(primary, fallback):
         merged[key] = primary.get(key) if primary.get(key) else fallback.get(key)
     return merged
 
+def compare_stats(raidwiki_stats, ayumilove_stats, champion_name):
+    """
+    Compare stats from RaidWiki and Ayumilove OCR.
+    Returns: (use_raidwiki: bool, confidence: float, differences: list)
+    """
+    if not raidwiki_stats or not any(v for v in raidwiki_stats.values()):
+        return False, 0.0, ["No RaidWiki stats available"]
+    
+    if not ayumilove_stats or not any(v for v in ayumilove_stats.values()):
+        return True, 100.0, ["No Ayumilove OCR stats available - using RaidWiki"]
+    
+    # Normalize stat keys for comparison
+    stat_map = {
+        'C. RATE': 'C.RATE',
+        'C. DMG': 'C.DMG',
+        'RESIST': 'RES',
+        'ACC': 'ACC',
+        'HP': 'HP',
+        'ATK': 'ATK',
+        'DEF': 'DEF',
+        'SPD': 'SPD'
+    }
+    
+    # Normalize Ayumilove stats
+    normalized_ocr = {}
+    for k, v in ayumilove_stats.items():
+        mapped_key = stat_map.get(k, k)
+        if v and v != '':
+            try:
+                normalized_ocr[mapped_key] = int(str(v).replace(',', ''))
+            except (ValueError, TypeError):
+                pass
+    
+    # Normalize RaidWiki stats
+    normalized_rw = {}
+    for k, v in raidwiki_stats.items():
+        if v and v != '':
+            try:
+                normalized_rw[k] = int(str(v).replace(',', ''))
+            except (ValueError, TypeError):
+                pass
+    
+    # Compare
+    matches = 0
+    total = 0
+    differences = []
+    
+    for stat in ['HP', 'ATK', 'DEF', 'SPD', 'C.RATE', 'C.DMG', 'RES', 'ACC']:
+        rw_val = normalized_rw.get(stat)
+        ocr_val = normalized_ocr.get(stat)
+        
+        if rw_val is not None and ocr_val is not None:
+            total += 1
+            if rw_val == ocr_val:
+                matches += 1
+            else:
+                differences.append(f"{stat}: RaidWiki={rw_val}, OCR={ocr_val}")
+        elif rw_val is not None:
+            # RaidWiki has it, OCR doesn't
+            differences.append(f"{stat}: RaidWiki={rw_val}, OCR=MISSING")
+        elif ocr_val is not None:
+            # OCR has it, RaidWiki doesn't
+            differences.append(f"{stat}: RaidWiki=MISSING, OCR={ocr_val}")
+    
+    confidence = (matches / total * 100) if total > 0 else 0
+    
+    # Decision logic
+    use_raidwiki = True  # Default to RaidWiki (most reliable)
+    
+    if confidence == 100 and total >= 6:
+        print(f"[Validation] ✅ Perfect match! RaidWiki and OCR agree on all {total} stats")
+    elif confidence >= 75:
+        print(f"[Validation] ⚠️  Good match: {matches}/{total} stats agree ({confidence:.1f}%)")
+        print(f"[Validation] Using RaidWiki stats (more reliable)")
+        for diff in differences[:3]:  # Show first 3 differences
+            print(f"[Validation]   - {diff}")
+    else:
+        print(f"[Validation] ❌ Poor match: {matches}/{total} stats agree ({confidence:.1f}%)")
+        print(f"[Validation] Using RaidWiki stats, but flagging for manual review")
+        for diff in differences:
+            print(f"[Validation]   - {diff}")
+    
+    return use_raidwiki, confidence, differences
+
+
 def try_all_scrapers(champion_name):
-    # Try RaidWiki first
-    data = scrape_raidwiki_champion(champion_name)
-    if data and data.get('info') and data.get('stats') and data.get('skills'):
-        return data, 'raidwiki'
-    # Try Ayumilove as fallback
-    fallback = scrape_ayumilove_champion(champion_name)
-    merged = merge_champion_data(data, fallback)
-    if merged and merged.get('info') and merged.get('stats') and merged.get('skills'):
-        return merged, 'ayumilove+raidwiki'
-    if fallback:
-        return fallback, 'ayumilove'
+    # Hybrid approach: Try RaidWiki first for stats, Ayumilove for everything else
+    # ALWAYS pull Ayumilove OCR for comparison/validation
+    
+    # Try RaidWiki first (most reliable for stats)
+    print("[Hybrid] Trying RaidWiki for stats...")
+    raidwiki_data = scrape_raidwiki_champion(champion_name)
+    
+    has_raidwiki_stats = (raidwiki_data and 
+                          raidwiki_data.get('stats') and 
+                          any(v for v in raidwiki_data.get('stats', {}).values()))
+    
+    # ALWAYS fetch Ayumilove (for skills/info and OCR comparison)
+    print("[Hybrid] Fetching Ayumilove data (skills, info, and OCR for validation)...")
+    ayumilove_data = scrape_ayumilove_champion(champion_name, skip_stats=False)  # Always OCR
+    
+    if has_raidwiki_stats and ayumilove_data:
+        # Both sources available - compare stats
+        print("[Hybrid] ✓ Both sources available - comparing stats...")
+        use_raidwiki, confidence, differences = compare_stats(
+            raidwiki_data.get('stats', {}),
+            ayumilove_data.get('stats', {}),
+            champion_name
+        )
+        
+        # Use RaidWiki stats + Ayumilove everything else
+        merged_data = {
+            'info': ayumilove_data.get('info', {}),
+            'stats': raidwiki_data.get('stats', {}),  # RaidWiki stats (validated)
+            'skills': ayumilove_data.get('skills', []),
+            'aura': ayumilove_data.get('aura', ''),
+            'mechanics_tags': ayumilove_data.get('mechanics_tags', []),
+            'validation': {
+                'confidence': confidence,
+                'differences': differences,
+                'sources': 'raidwiki_stats+ayumilove_ocr_validated'
+            }
+        }
+        return merged_data, f'raidwiki_stats+ayumilove (validated: {confidence:.1f}%)'
+    
+    elif has_raidwiki_stats:
+        # RaidWiki only (Ayumilove failed)
+        print("[Hybrid] ⚠️  Ayumilove failed - using RaidWiki only")
+        return raidwiki_data, 'raidwiki'
+    
+    elif ayumilove_data and ayumilove_data.get('info') and ayumilove_data.get('skills'):
+        # Ayumilove only (RaidWiki not available)
+        print("[Hybrid] RaidWiki stats not available - using Ayumilove OCR only")
+        
+        # Check OCR confidence
+        stats = ayumilove_data.get('stats', {})
+        stats_found = sum(1 for v in stats.values() if v and v != '')
+        total_stats = 8
+        confidence = (stats_found / total_stats) * 100 if total_stats > 0 else 0
+        
+        if confidence < 75:
+            print(f"[WARNING] Low OCR confidence: {stats_found}/{total_stats} stats extracted ({confidence:.1f}%)")
+            print(f"[WARNING] Consider manual verification for this champion")
+        
+        return ayumilove_data, 'ayumilove_ocr'
+    
+    # Fallback: use whatever data we have
+    if raidwiki_data:
+        print("[Hybrid] ⚠️  Using incomplete RaidWiki data")
+        return raidwiki_data, 'raidwiki_partial'
+    elif ayumilove_data:
+        print("[Hybrid] ⚠️  Using incomplete Ayumilove data")
+        return ayumilove_data, 'ayumilove_partial'
+    
     return None, None
 
 def main():
@@ -87,7 +229,7 @@ def main():
                 'DEF': 'DEF',
                 'SPD': 'SPD',
                 'C. RATE': 'C.RATE',
-                'C.DMG': 'C.DMG',
+                'C. DMG': 'C.DMG',
                 'RESIST': 'RES',
                 'ACC': 'ACC'
             }
@@ -111,6 +253,14 @@ def main():
                 'aura': data.get('aura', ''),
                 'mechanics_tags': template_mechanics_tags
             }
+            # Pass through validation metadata if available
+            print(f"[DEBUG] Keys in data dict: {list(data.keys())}")
+            if 'validation' in data:
+                print(f"[DEBUG] Validation data found: {data['validation']}")
+                scraped_data['validation'] = data['validation']
+            else:
+                print(f"[DEBUG] No validation key in data")
+            print(f"[DEBUG] Final scraped_data keys: {list(scraped_data.keys())}")
             # If Ayumilove fallback used, map extra overview fields to comments
             if source.startswith('ayumilove') and info:
                 comments = []

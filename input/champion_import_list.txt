@@ -1,0 +1,37 @@
+# Champion Batch Import List
+# Format: One champion name per line
+# Lines starting with # are ignored
+# Priority order: S-Tier first, then A-Tier
+
+# S-Tier / Meta-Defining (Highest Priority)
+Maulie Tankard
+Kalvalax
+Kantra the Cyclone
+Godseeker Aniri
+Deacon Armstrong
+Fayne
+Broadmaw
+Mausoleum Mage
+
+# A-Tier / Strong Versatile Champions
+Ithos
+Lord Shazar
+Leminisi the Gold-Wing
+Archmage Hellmut
+Hotatsu
+Brakus the Shifter
+Cleopterix
+Drexthar Bloodtwin
+Elenaril
+He-Man
+Juliana
+Kinagashi
+Lady Annabelle
+Akoth the Seared
+Fenshi
+Ghostborn
+Gretel Hagbane
+Husk
+Iudex Artor
+Apothecary
+High Khatun

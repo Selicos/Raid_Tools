@@ -1,0 +1,230 @@
+{
+  "name": "Akoth the Seared",
+  "rarity": "Epic",
+  "affinity": "Magic",
+  "faction": "Demonspawn",
+  "role": "Defense",
+  "draft": true,
+  "meta_ratings": {
+    "clan_boss": "4/10",
+    "dungeons": "6/10",
+    "doom_tower": "5/10",
+    "arena": "3/10",
+    "faction_wars": "7/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 16680,
+        "ATK": 892,
+        "DEF": 1299,
+        "SPD": 95,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 15
+      },
+      "skills": [
+        {
+          "name": "Molten Punch",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 50% chance of placing a 30% [Decrease C.RATE] debuff for 2 turns.\nLevel 2: Damage +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Damage +5%\nLevel 5: Buff/Debuff Chance +5%\nLevel 6: Buff/Debuff Chance +10%\nDamage Multiplier: 4 DEF",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 4.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Single-target damage scaling from DEF. High multiplier (4.0) makes this a strong DEF-scaling A1."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 30,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": 2,
+              "notes": "50% base chance to place 30% Decrease Crit Rate for 2 turns. Fully booked: 70% chance. Requires accuracy check."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Decrease Crit Rate",
+            "DEF scaling",
+            "Single-target"
+          ],
+          "book_value": "High priority - increases debuff chance from 50% to 70% (+20%), plus 15% damage boost",
+          "notes": "Strong A1 for DEF-based champions. Decrease Crit Rate useful for survivability in dungeons and Faction Wars. Fully book for reliable debuff application."
+        },
+        {
+          "name": "Pyroclasm (Cooldown: 3 turns)",
+          "type": "A2",
+          "description": "Attacks all enemies. Has a 20% chance of placing a [HP Burn] debuff for 2 turns. The chance of placing the debuff increases by 20% for each alive enemy.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +10%\nLevel 5: Damage +10%\nDamage Multiplier: 3.5 DEF",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.5,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "AOE damage scaling from DEF. Lower multiplier than A1 but hits all enemies."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": 2,
+              "notes": "HP Burn for 2 turns. Chance scales with alive enemies: 20% (1 enemy), 40% (2), 60% (3), 80% (4), 100% (5). Does NOT require books for 100% chance in full waves. Requires accuracy check."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "HP Burn",
+            "DEF scaling",
+            "AOE",
+            "Conditional debuff chance"
+          ],
+          "book_value": "Medium priority - damage boost only (+30% total), HP Burn chance is already 100% in 5-enemy waves",
+          "notes": "Key HP Burn skill. 100% chance on full waves (5 enemies) without books. Scales down to 20% on single targets (not reliable for bosses). Strong for Spider, Fire Knight waves, and dungeon trash. Synergizes with Passive (Fear on HP Burn tick) and A3 (cooldown increase on HP Burn targets)."
+        },
+        {
+          "name": "Pyretic Release (Cooldown: 5 turns)",
+          "type": "A3",
+          "description": "Attacks all enemies. Has a 50% chance of increasing the cooldowns of all skills by 2 turns on enemies under [HP Burn] debuffs. Also places a [Shield] buff equal to 20% of this Champion’s MAX HP on all allies for 2 turns. Instantly activates this skill when this Champion is revived by\nRian the Conjurer\n.\nLevel 2: Buff/Debuff Chance +5%\nLevel 3: Shield +5%\nLevel 4: Buff/Debuff Chance +5%\nLevel 5: Shield +5%\nLevel 6: Buff/Debuff Chance +10%\nLevel 7: Cooldown -1\nDamage Multiplier: 3.5 DEF",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "Fiery Swatch (Passive)",
+          "type": "Passive",
+          "description": "Has a 10% chance of placing a [Fear] debuff on an enemy for 1 turn whenever they receive damage from a [HP Burn] debuff.\nLevel 2: Buff/Debuff Chance +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Buff/Debuff Chance +5%",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        }
+      ],
+      "aura": "Increases Ally HP in all Battles by 25%.",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
+    }
+  ],
+  "mechanics_tags": [
+    "HP Burn",
+    "Decrease Crit Rate",
+    "Shield",
+    "Cooldown Increase",
+    "Fear",
+    "DEF-based damage",
+    "AOE damage",
+    "Rian the Conjurer synergy"
+  ],
+  "stat_priorities": [
+    "DEF% (primary damage stat)",
+    "200+ ACC (debuff application)",
+    "170+ SPD (dungeon waves)",
+    "HP%/RES for survivability"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "200+ ACC, 170+ SPD, DEF%, HP% for survivability - limited CB value due to HP Burn cap",
+    "dungeons": "200+ ACC, 180+ SPD, DEF%, C.RATE/C.DMG for wave clear - strong in Fire Knight and Spider",
+    "arena": "Not recommended - too slow, lacks CC/utility for Arena",
+    "doom_tower": "220+ ACC, 180+ SPD, DEF%, HP% - good for HP Burn floors and waves",
+    "faction_wars": "200+ ACC, 170+ SPD, DEF%, HP% - excellent for Demonspawn progression"
+  },
+  "recommended_gear": [
+    "Primary: Lifesteal + Accuracy (dungeons, sustain + debuffs)",
+    "Alternative: Regeneration + Accuracy (Faction Wars, passive healing)",
+    "Niche: Stalwart + Accuracy (reflect damage comps)",
+    "Stats: DEF% chest, DEF% gloves, SPD boots, ACC banner"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Defense tree: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "Support tree: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, Master Hexer"
+    ],
+    "dungeons": [
+      "Defense tree: Tough Skin, Blastproof, Improved Parry, Bloodthirst, Warmaster",
+      "Support tree: Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel"
+    ],
+    "arena": [
+      "Not recommended for Arena"
+    ],
+    "doom_tower": [
+      "Defense tree: Tough Skin, Blastproof, Resurgent, Improved Parry, Warmaster",
+      "Support tree: Pinpoint Accuracy, Charged Focus, Lore of Steel, Evil Eye, Master Hexer"
+    ],
+    "faction_wars": [
+      "Defense tree: Tough Skin, Blastproof, Improved Parry, Bloodthirst, Warmaster",
+      "Support tree: Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel"
+    ],
+    "general": [
+      "Warmaster T6 (DEF scaling), Master Hexer for HP Burn extension"
+    ]
+  },
+  "blessings": [
+    "Brimstone (HP Burn damage boost - best choice)",
+    "Crushing Rend (DEF scaling boost)",
+    "Soul Reap (healing on kill for waves)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI is generally good - prioritizes A3 for shield/cooldown control, uses A2 for HP Burn spread. No major issues on auto."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "HP Burn specialist with Rian the Conjurer synergy",
+    "cheese_mechanic_info": "When paired with Rian the Conjurer, Akoth's A3 auto-triggers on revive, providing instant team shield and cooldown control. Strong HP Burn synergy for Spider, Fire Knight, and dungeon waves. Can be built for reflect damage comps with Brimstone blessing."
+  },
+  "mechanics_advisory": "DEF-based HP Burn specialist with unique Rian the Conjurer synergy. A3 instantly activates when revived by Rian, making this combo strong for Faction Wars and dungeon progression. HP Burn on A2 scales with number of alive enemies (20-100% chance). Passive Fear proc (25% at max books) adds minor CC. Strong for Fire Knight (HP Burn + shield), Spider (HP Burn wave clear), and Demonspawn Faction Wars. Not recommended for Clan Boss (HP Burn capped at 50k/turn) or Arena (too slow, lacks burst).",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-akoth-the-seared-skill-mastery-equip-guide/ (accessed 2025-10-24)",
+    "HellHades: https://hellhades.com/champions/akoth-the-seared/ (accessed 2025-10-24)",
+    "User-provided base stats screenshot (2025-10-24)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "DEF-based HP Burn specialist with Rian synergy. Strong for Demonspawn Faction Wars and dungeon waves. User Priority: Dungeons (HP Burn team preference), Faction Wars (Demonspawn in progress).",
+  "update_notes": {
+    "last_updated": "2025-10-24",
+    "last_patch": "Initial entry creation - Option C workflow (user stats + AI research)"
+  },
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "stat_differences": [],
+    "data_sources": "user_screenshot",
+    "ocr_notes": "Stats manually provided by user via screenshot - 100% accurate"
+  }
+}
