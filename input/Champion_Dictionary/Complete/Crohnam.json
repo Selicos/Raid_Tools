@@ -123,12 +123,12 @@
   },
   "recommended_gear": ["Bloodthirst", "Impulse", "Lifesteal", "Reflex", "Relentless", "Perception", "Speed", "Immortal", "Regeneration", "Immunity", "Stoneskin", "Untouchable", "Zeal", "Accuracy", "Critical Damage", "Cruel", "Divine Speed", "Fatal", "Feral", "Instinct", "Killstroke", "Lethal", "Merciless", "Pinpoint", "Savage", "Supersonic"],
   "masteries": {
-    "clan_boss": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Kill Streak", "Methodical", "Warmaster", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer"],
-    "dungeons": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Kill Streak", "Methodical", "Warmaster", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer"],
+    "clan_boss": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Kill Streak", "Methodical", "Warmaster", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer (extends HP Burn)"],
+    "dungeons": ["Deadly Precision", "Keen Strike", "Grim Resolve (synergy with Djamarsa self-revive when HP low)", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Kill Streak", "Methodical", "Warmaster", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer (extends HP Burn)"],
     "arena": ["Helmsmasher", "Eagle-Eye", "Unshakeable"],
-    "doom_tower": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Kill Streak", "Methodical", "Warmaster", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer"],
-    "faction_wars": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Kill Streak", "Methodical", "Warmaster", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer"],
-    "general": ["Offense/Support/Defense as needed"]
+    "doom_tower": ["Deadly Precision", "Keen Strike", "Grim Resolve (synergy with Djamarsa self-revive)", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Kill Streak", "Methodical", "Warmaster", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer (extends HP Burn)"],
+    "faction_wars": ["Deadly Precision", "Keen Strike", "Grim Resolve (synergy with Djamarsa self-revive)", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Kill Streak", "Methodical", "Warmaster", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer (extends HP Burn)"],
+    "general": ["KEY SYNERGY: Grim Resolve (+5% damage when HP ≤50% - synergizes with Djamarsa self-revive passive), Master Hexer (extends HP Burn for cycling)", "Offense/Support/Defense as needed"]
   },
   "blessings": ["Brimstone", "Cruelty", "Hand of Uncreation", "Chronocube", "Orb of Transfixion", "Wand of Submission", "Golden Elixir", "Irethi Coronet", "Stormcaller", "Volcardiac Heart"],
   "ai_quirks": {

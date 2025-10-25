@@ -251,11 +251,11 @@
   "recommended_gear": ["Bloodthirst", "Impulse", "Lifesteal", "Reflex", "Relentless", "Zeal", "Accuracy", "Critical Damage", "Divine Speed", "Feral", "Immortal", "Instinct", "Killstroke", "Lethal", "Perception", "Pinpoint", "Resilience", "Savage", "Speed", "Supersonic", "Stoneskin", "Merciless", "Stonecleaver"],
   "masteries": {
     "clan_boss": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Cycle of Violence", "Methodical", "Helmsmasher", "Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution", "Deterrence"],
-    "dungeons": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Cycle of Violence", "Methodical", "Helmsmasher", "Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution", "Deterrence"],
-    "arena": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Whirlwind of Death", "Bring it Down", "Cycle of Violence", "Methodical", "Kill Streak", "Helmsmasher", "Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution"],
-    "doom_tower": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Cycle of Violence", "Methodical", "Helmsmasher", "Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution", "Deterrence"],
-    "faction_wars": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Cycle of Violence", "Methodical", "Helmsmasher", "Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution", "Deterrence"],
-    "general": ["Offense/Support/Defense as needed"]
+    "dungeons": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Cycle of Violence", "Methodical", "Helmsmasher", "Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution", "Harvest Despair (Leech on True Fear)"],
+    "arena": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Whirlwind of Death", "Bring it Down", "Opportunist (+12% damage to feared targets - synergizes with A2 True Fear)", "Methodical", "Kill Streak", "Helmsmasher", "Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution"],
+    "doom_tower": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Opportunist (+12% damage to feared targets)", "Methodical", "Helmsmasher", "Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution", "Harvest Despair (Leech on True Fear)"],
+    "faction_wars": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Opportunist (+12% damage to feared targets)", "Methodical", "Helmsmasher", "Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution", "Harvest Despair (Leech on True Fear)"],
+    "general": ["KEY SYNERGIES: Opportunist (+12% damage to own True Fear debuffs on A2/A3), Harvest Despair (60% chance Leech when placing True Fear)", "Offense/Support/Defense as needed"]
   },
   "blessings": ["Rod of Blasphemy", "Wand of Submission", "Irethi Coronet", "Malefic Talon", "Stormcaller"],
   "ai_quirks": {
