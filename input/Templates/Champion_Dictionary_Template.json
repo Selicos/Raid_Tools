@@ -47,8 +47,8 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-  "aura": "Aura description (if any)",
-  "comments": "Form-specific notes, edge cases, or user/community feedback."
+      "aura": "Aura description (if any)",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
   ],
   "mechanics_tags": ["Overall champion mechanic tags, listing all mechanics used by this champion (fully booked)"],
