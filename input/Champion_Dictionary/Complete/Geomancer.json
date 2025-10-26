@@ -106,12 +106,40 @@
   },
   "recommended_gear": ["Perception", "Reflex", "Stalwart", "Speed", "Accuracy"],
   "masteries": {
-    "clan_boss": ["Giant Slayer", "Master Hexer", "Support"],
-    "dungeons": ["Giant Slayer", "Master Hexer", "Lore of Steel"],
-    "arena": ["Eagle-Eye", "Unshakeable"],
-    "doom_tower": ["Timely Intervention", "Lasting Gifts"],
-    "faction_wars": ["Giant Slayer", "Cycle of Magic"],
-    "general": ["Offense/Support/Defense as needed"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER (A1/A2 single-hit - 60% proc, 4% boss MAX HP. NOTE: Passive reflected damage does NOT trigger Warmaster)",
+      "Support: Steadfast (+810 HP), Pinpoint Accuracy, Charged Focus, Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - extends HP Burn/Dec ACC from A1/A3 for 2→3 turns), Cycle of Magic (cooldown cycling), Eagle Eye (CRITICAL +50 ACC for HP Burn consistency - 250+ ACC needed)",
+      "Defense: Tough Skin (CRITICAL - reduce incoming damage for passive reflection synergy), Blastproof, Resurgent, Shadow Heal, Delay Death, Unshakeable (+50 RES)"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER (A1/A2 single-hit - 60% proc, 6% boss MAX HP. Passive reflected damage does NOT trigger Warmaster)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - HP Burn/Dec ACC extension 2→3 turns), Cycle of Magic, Eagle Eye (CRITICAL +50 ACC - 250+ ACC total)",
+      "Defense: Tough Skin (reduce incoming damage for passive reflection), Blastproof, Resurgent, Shadow Heal, Delay Death, Unshakeable"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Evil Eye (TM control), Lore of Steel (Speed set boost), Master Hexer (HP Burn extension), Cycle of Magic, Eagle Eye (CRITICAL +50 ACC for 250+ total)",
+      "Defense: Tough Skin (reduce incoming damage), Blastproof, Resurgent, Shadow Heal, Delay Death, Unshakeable (+50 RES for tank builds)"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - HP Burn/Dec ACC extension), Cycle of Magic, Timely Intervention (TM on ally low HP), Lasting Gifts (buff extension), Eagle Eye (CRITICAL +50 ACC - 250+ ACC for Hard)",
+      "Defense: Tough Skin (CRITICAL - reduce incoming damage for passive reflection synergy), Blastproof, Resurgent, Shadow Heal, Delay Death, Unshakeable (debuff RES)"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Evil Eye (TM control), Lore of Steel, Master Hexer (HP Burn/Dec ACC extension), Cycle of Magic, Eagle Eye (+50 ACC for HP Burn consistency)",
+      "Defense: Tough Skin (reduce incoming damage), Blastproof, Resurgent, Shadow Heal, Delay Death"
+    ],
+    "general": [
+      "PRIORITY OFFENSE T6: WARMASTER (A1/A2 are single-hit attacks - 60% proc per skill for 4% boss MAX HP / 6% dungeon boss MAX HP damage). Giant Slayer is INCORRECT for Geomancer (no multi-hit skills). NOTE: Passive 'Stoneguard' reflected damage does NOT trigger Warmaster/Giant Slayer - T6 Offense mainly for A1/A2 damage contribution.",
+      "PRIORITY SUPPORT T6: Master Hexer (CRITICAL - extends HP Burn/Dec ACC debuffs from 2→3 turns for sustained damage), Eagle Eye (CRITICAL +50 ACC for HP Burn consistency - need 250+ ACC Clan Boss/Doom Tower).",
+      "PRIORITY DEFENSE T6: Tough Skin (CRITICAL - reduces incoming damage, synergizes with passive Stoneguard reflection - less incoming damage = more survivability while dealing reflected damage).",
+      "KEY MASTERIES: Warmaster (A1/A2 single-hit), Master Hexer (CRITICAL - HP Burn/Dec ACC extension 2→3 turns), Eagle Eye (ACC for HP Burn), Tough Skin (reduce incoming damage for passive reflection synergy), Cycle of Magic (cooldown cycling for A3 HP Burn spam).",
+      "SYNERGIES: Passive 'Stoneguard' places Increase DEF 60% + Strengthen 25% on self + HP Burn on all enemies for 2 turns. When ally hit, reflects portion of damage to all enemies (does NOT trigger Warmaster/Giant Slayer, does NOT benefit from some artifact sets - UNIQUE mechanic). A3 places HP Burn on all enemies (75% chance, 100% booked, 3-turn CD). A2 removes/steals buffs + cooldown reduction if target under HP Burn. Master Hexer extends HP Burn from 2→3 turns for 50% more damage. Build for 250+ ACC (with Eagle Eye), 220+ SPD, HP%/DEF% for survivability (passive reflection scales with incoming damage).",
+      "UNIQUE MECHANICS: Passive reflected damage is NOT a hit - does not trigger Warmaster/Giant Slayer, does not benefit from Savage/Cruel sets, does not count as damage dealt for artifact set effects. Main damage source is HP Burn (passive + A3) and reflected damage from passive. Geomancer functions as a tank/reflect specialist.",
+      "DWARVES FACTION WARS: Top-tier (10/10 rating). User has completed Dwarf Normal - excellent for Hard progression. HP Burn + reflected damage + tankiness make Geomancer a carry."
+    ]
   },
   "blessings": ["Cruelty", "Phantom Touch"],
   "ai_quirks": {

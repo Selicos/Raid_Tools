@@ -97,12 +97,32 @@
   },
   "recommended_gear": ["Impulse", "Reflex", "Relentless", "Immunity", "Protection", "Stoneskin", "Untouchable", "Accuracy", "Divine Speed", "Feral", "Fortitude", "Immortal", "Perception", "Pinpoint", "Regeneration", "Resistance", "Righteous", "Speed", "Supersonic"],
   "masteries": {
-    "clan_boss": ["Deadly Precision", "Keen Strike", "Heart of Glory", "Single Out", "Life Drinker", "Bring it Down", "Methodical", "Warmaster", "Tough Skin", "Blastproof", "Resurgent", "Delay Death", "Retribution", "Deterrence"],
-    "dungeons": ["Deadly Precision", "Keen Strike", "Single Out", "Bring it Down", "Methodical", "Warmaster", "Pinpoint Accuracy", "Shield Bearer", "Charged Focus", "Rapid Response", "Arcane Celerity", "Lore of Steel", "Evil Eye", "Master Hexer", "Spirit Haste"],
-    "arena": ["Defiant", "Improved Parry", "Rejuvenation", "Shadow Heal", "Solidarity", "Cycle of Violence", "Pinpoint Accuracy", "Shield Bearer", "Rapid Response", "Healing Savior", "Lore of Steel", "Merciful Aid", "Lasting Gifts", "Master Hexer", "Eagle-Eye"],
-    "doom_tower": ["Defiant", "Improved Parry", "Rejuvenation", "Shadow Heal", "Solidarity", "Cycle of Violence", "Pinpoint Accuracy", "Shield Bearer", "Rapid Response", "Healing Savior", "Lore of Steel", "Merciful Aid", "Lasting Gifts", "Master Hexer", "Eagle-Eye"],
-    "faction_wars": ["Defiant", "Improved Parry", "Rejuvenation", "Shadow Heal", "Solidarity", "Cycle of Violence", "Pinpoint Accuracy", "Shield Bearer", "Rapid Response", "Healing Savior", "Lore of Steel", "Merciful Aid", "Lasting Gifts", "Master Hexer", "Eagle-Eye"],
-    "general": ["Offense/Support/Defense as needed"]
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Life Drinker, Bring it Down, Methodical, GIANT SLAYER (CRITICAL - A1 'Lifebane' attacks 2 times at random, 30% proc per hit = ~51% total proc chance). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A1 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends Poison debuffs from A1 for more damage)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (CRITICAL - A1 'Lifebane' attacks 2 times at random, 30% proc per hit = ~51% total proc chance). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Shield Bearer, Improved Parry, Rejuvenation, Shadow Heal",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Rapid Response, Arcane Celerity, Lore of Steel, Evil Eye, SWARM SMITER (CRITICAL - multi-hit A1 synergy), EAGLE EYE (CRITICAL - +50 ACC for 250+ total), MASTER HEXER (CRITICAL - extends Poison debuffs), Spirit Haste"
+    ],
+    "arena": [
+      "OFFENSE: Defiant, Improved Parry, Rejuvenation, Shadow Heal, Solidarity, Cycle of Violence, HELMSMASHER (Ignore DEF for burst) OR Giant Slayer if using multi-hit A1",
+      "DEFENSE: Shield Bearer, Improved Parry, Rejuvenation, Shadow Heal",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Rapid Response, Healing Savior, Lore of Steel, Merciful Aid, Lasting Gifts, MASTER HEXER (extends debuffs), EAGLE EYE (CRITICAL - +50 ACC for debuff landing)"
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (CRITICAL - A1 'Lifebane' attacks 2 times at random, 30% proc per hit = ~51% total proc chance). CORRECTED: Missing T6 Offense - Giant Slayer added.",
+      "DEFENSE: Shield Bearer, Improved Parry, Rejuvenation, Shadow Heal, Solidarity",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Rapid Response, Healing Savior, Lore of Steel, Merciful Aid, Lasting Gifts, SWARM SMITER (CRITICAL - multi-hit A1 synergy), EAGLE EYE (CRITICAL - +50 ACC for 250+ total), MASTER HEXER (CRITICAL - extends Poison/debuffs), Cycle of Violence"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (CRITICAL - A1 'Lifebane' attacks 2 times at random, 30% proc per hit = ~51% total proc chance). CORRECTED: Missing T6 Offense - Giant Slayer added.",
+      "DEFENSE: Shield Bearer, Improved Parry, Rejuvenation, Shadow Heal, Solidarity",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Rapid Response, Healing Savior, Lore of Steel, Merciful Aid, Lasting Gifts, SWARM SMITER (CRITICAL - multi-hit A1 synergy), EAGLE EYE (CRITICAL - +50 ACC for 250+ total), MASTER HEXER (CRITICAL - extends Poison/debuffs), Cycle of Violence"
+    ],
+    "general": "CORRECTED: Giant Slayer for all PVE content (A1 'Lifebane' attacks 2 times at random = multi-hit, 30% proc per hit = ~51% total proc chance). Warmaster INCORRECT for multi-hit champion. Master Hexer CRITICAL (extends Poison debuffs from A1 for more damage). Eagle Eye CRITICAL (+50 ACC for 250+ total, reliable Poison landing). Swarm Smiter CRITICAL (multi-hit A1 synergy). Arena can use Helmsmasher for Ignore DEF burst. Previous entries missing T6 Offense for Arena/Doom Tower/Faction Wars - Giant Slayer added."
   },
   "blessings": ["Hand of Uncreation", "Aspect of Siroth", "Chronocube", "Orb of Transfixion", "Wand of Submission", "Gilded Dragonstone", "Golden Elixir", "Volcardiac Heart"],
   "ai_quirks": {

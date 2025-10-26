@@ -1,0 +1,202 @@
+{
+  "name": "Mausoleum_Mage",
+  "rarity": "Epic",
+  "affinity": "Force",
+  "faction": "Undead Hordes",
+  "role": "Support",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "9/10",
+    "dungeons": "8/10",
+    "doom_tower": "8/10",
+    "arena": "7/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 19485,
+        "ATK": 1057,
+        "DEF": 947,
+        "SPD": 104,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Soul Manacles",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.6,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single-hit. 4.6x ATK multiplier base (5.4 ATK fully booked with +15% damage)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease SPD",
+              "value": 30,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "30% base chance (50% booked) to place 30% Dec SPD. Useful for TM control."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Single Target", "Decrease SPD"],
+          "book_value": "Low: +15% damage, +20% Dec SPD chance (30%→50%). Not priority.",
+          "notes": "Single-hit A1. 50% Dec SPD chance when booked. Low priority for booking."
+        },
+        {
+          "name": "Might of Undeath",
+          "type": "A2",
+          "description": "Places a [Block Debuffs] buff on all allies for 1 turn. Also places a 30% [Increase C.RATE] buff and a 60% [Increase DEF] buff on all allies for 2 turns.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "Block Debuffs",
+              "value": 0,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "1 turn",
+              "notes": "Block Debuffs for 1 turn. Protects team from crowd control and debuffs for 1 turn."
+            },
+            {
+              "type": "buff",
+              "stat": "Increase C.RATE",
+              "value": 30,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "30% Inc C.RATE buff for 2 turns. Excellent for teams without 100% C.RATE (boosts C.RATE by 30%)."
+            },
+            {
+              "type": "buff",
+              "stat": "Increase DEF",
+              "value": 60,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "60% Inc DEF buff for 2 turns. Excellent team survivability boost."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Block Debuffs", "Increase C.RATE", "Increase DEF", "Team Support"],
+          "book_value": "CRITICAL: -1 cooldown (4→3). MUST BOOK for Block Debuffs uptime in Clan Boss and dungeons.",
+          "notes": "PRIMARY SUPPORT SKILL: Block Debuffs (1 turn) + Inc C.RATE (30%, 2 turns) + Inc DEF (60%, 2 turns). MUST BOOK for 3-turn cooldown. EXCELLENT for Clan Boss (Block Debuffs protection from Stun) and dungeons (debuff protection). Inc C.RATE synergy with damage dealers."
+        },
+        {
+          "name": "Winds of Purging",
+          "type": "A3",
+          "description": "Removes all debuffs from all allies, then heals all allies by 10% of this Champion's MAX HP. Heals each ally by a further 10% if 1 or more debuffs are removed from that ally. Fills each ally's Turn Meter by 15% if 2 or more debuffs are removed from that ally.",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "Removes ALL debuffs from all allies. Full cleanse (not just 1-2 debuffs). EXCELLENT for heavy debuff content (Doom Tower, Faction Wars, Clan Boss Stun)."
+            },
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 10,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "Heals all allies by 10% Mausoleum Mage MAX HP base (13% booked with +30% heal). At 50K HP: 5K base heal (6.5K booked)."
+            },
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 10,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "Additional 10% MAX HP heal (13% booked) if 1+ debuffs removed from ally. Total: 20% MAX HP base (26% booked) if debuffs removed. At 50K HP: 10K base heal (13K booked)."
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 15,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "+15% TM per ally if 2+ debuffs removed. Excellent for Clan Boss and debuff-heavy content (TM boost after cleanse)."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Cleanse", "Heal", "Turn Meter Manipulation", "Team Support"],
+          "book_value": "CRITICAL: +30% heal, -1 cooldown (5→4). MUST BOOK for heal scaling and cooldown reduction.",
+          "notes": "CLEANSE SPECIALIST: Removes ALL debuffs from all allies + heals 10% MAX HP base (20% if debuffs removed) + TM boost (15% if 2+ debuffs removed). MUST BOOK for 4-turn cooldown and +30% heal boost. EXCELLENT for Clan Boss (Stun cleanse), Doom Tower (debuff cleanse), and Faction Wars. Build 50000+ HP for max heal value."
+        }
+      ],
+      "aura": "None",
+      "comments": "Block Debuffs + cleanse specialist. A2 'Might of Undeath' provides Block Debuffs (1 turn) + Inc C.RATE (30%) + Inc DEF (60%). A3 'Winds of Purging' is full team cleanse + heal + TM boost. EXCELLENT for Clan Boss (9/10) with Block Debuffs protection from Stun. Good for dungeons (8/10), Doom Tower (8/10), and Faction Wars (8/10) with debuff protection and cleanse. Must book A2/A3 for 3-turn A2, 4-turn A3 cooldowns."
+    }
+  ],
+  "mechanics_tags": ["Block Debuffs", "Cleanse", "Heal", "Increase C.RATE", "Increase DEF", "Turn Meter Manipulation", "Decrease SPD", "Team Support"],
+  "stat_priorities": ["50000+ HP", "220+ SPD", "200+ ACC", "2000+ DEF", "100+ RES"],
+  "stat_priority_recommendations": {
+    "clan_boss": "PRIORITY: 220+ SPD (speed tuning for Block Debuffs before Stun), 50000+ HP (heal value), 200+ ACC (Dec SPD if needed), 2000+ DEF (survivability), 100+ RES (resist debuffs). A2 Block Debuffs CRITICAL for Stun protection (must use before Stun turn). Immortal or Speed sets.",
+    "dungeons": "PRIORITY: 220+ SPD (Block Debuffs cycling), 50000+ HP (heal value), 200+ ACC (Dec SPD), 2000+ DEF (survivability). A2 Block Debuffs + A3 cleanse excellent for debuff-heavy dungeons (Dragon, Ice Golem). Speed or Immortal sets.",
+    "arena": "200+ SPD (speed tuning), 50000+ HP (heal value), 2000+ DEF, 150+ RES (resist debuffs). A2 Block Debuffs + Inc C.RATE + Inc DEF good for tanky Arena teams. Not top-tier for Arena (7/10) but usable.",
+    "faction_wars": "PRIORITY: 220+ SPD, 50000+ HP (heal value CRITICAL for sustain), 200+ ACC (Dec SPD), 2000+ DEF (survivability). A2 Block Debuffs + A3 cleanse excellent for debuff-heavy boss waves. Must book A2/A3 for Undead Hordes FW progression."
+  },
+  "recommended_gear": ["Speed (220+ SPD for Block Debuffs cycling)", "Immortal (HP + sustain for heal value)", "Perception (ACC boost)", "Accuracy (200+ ACC for Dec SPD)", "Regeneration (sustain)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (single-hit A1, Warmaster optimal)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (tanky support)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC for Dec SPD), HEALING SAVIOR (CRITICAL - boosts A3 heal by 30% for massive team healing), Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2 4→3 booked, A3 5→4 booked cooldowns)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE, HEALING SAVIOR (CRITICAL - boosts A3 heal), Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, DETERRENCE",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC, HEALING SAVIOR"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (tanky support for survivability), UNSHAKEABLE (+50 RES for debuff resistance)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE, HEALING SAVIOR (CRITICAL - boosts A3 heal for FW sustain), Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2 Block Debuffs + A3 cleanse cycling)"
+    ],
+    "general": "WARMASTER for all content (single-hit A1). Healing Savior CRITICAL (+30% A3 heal boost for massive team healing, synergizes with 50K+ HP build). Cycle of Magic CRITICAL (reduces A2 4→3 booked, A3 5→4 booked cooldowns for Block Debuffs + cleanse uptime). Eagle Eye (+50 ACC for Dec SPD). Deterrence (tanky support survivability). Unshakeable (+50 RES for debuff resistance in FW). MUST BOOK A2/A3 for 3-turn A2, 4-turn A3 cooldowns. Build: 50000+ HP (heal value), 220+ SPD (Block Debuffs cycling), 200+ ACC (Dec SPD), 2000+ DEF, 100+ RES. Speed or Immortal sets. Focus: Clan Boss (9/10) with Block Debuffs Stun protection. Good for dungeons (8/10), Doom Tower (8/10), Faction Wars (8/10) with debuff protection + cleanse. User Priority: Arena/Support (Priority 4) - Mausoleum Mage is BEST Epic support for Clan Boss with Block Debuffs. Force affinity = weak to Spirit but strong vs Magic."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams - unlikely)", "Polymorph (CC support)", "Phantom Touch (speed boost)", "Cruelty (C.DMG boost - low priority for support)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A2 Block Debuffs when available, A3 cleanse when debuffs present. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion. EXCELLENT Epic support for Clan Boss and dungeons with Block Debuffs + cleanse."
+  },
+  "mechanics_advisory": "Block Debuffs + cleanse specialist. A2 'Might of Undeath' is PRIMARY SUPPORT SKILL: Block Debuffs (1 turn) + Inc C.RATE (30%, 2 turns) + Inc DEF (60%, 2 turns). MUST BOOK for 3-turn cooldown. CRITICAL for Clan Boss (Block Debuffs before Stun turn to prevent Stun lock). Inc C.RATE synergy with damage dealers (30% boost to C.RATE). A3 'Winds of Purging' is CLEANSE SPECIALIST: Removes ALL debuffs from all allies + heals 10% Mausoleum Mage MAX HP base (20% if debuffs removed) + TM boost (15% if 2+ debuffs removed). MUST BOOK for 4-turn cooldown and +30% heal boost. EXCELLENT for Clan Boss (Stun cleanse), Doom Tower (debuff cleanse), and Faction Wars (debuff protection + sustain). Build 50000+ HP for max heal value (10K base heal, 13K booked). A1 'Soul Manacles' is filler with 50% Dec SPD chance when booked. MUST BOOK A2/A3 for Clan Boss viability (3-turn A2 = Block Debuffs every 3 turns before Stun). EXCELLENT for Clan Boss (9/10) as BEST Epic support with Block Debuffs. Good for dungeons (8/10), Doom Tower (8/10), Faction Wars (8/10) with debuff protection + cleanse. Build: 50000+ HP (heal value), 220+ SPD (Block Debuffs cycling for CB Stun timing), 200+ ACC (Dec SPD), 2000+ DEF, 100+ RES. Speed or Immortal sets. Warmaster for single-hit A1. Healing Savior CRITICAL (+30% A3 heal boost). Cycle of Magic CRITICAL (faster A2/A3 cycling). User Priority: Arena/Support (Priority 4) - Mausoleum Mage is CRITICAL for Clan Boss UNM teams (user Priority 1) with Block Debuffs Stun protection. Force affinity = weak to Spirit but strong vs Magic.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-mausoleum-mage-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/mausoleum-mage/ (accessed 2025-10-25)",
+    "RaidWiki: https://raidwiki.com/champion/mausoleum-mage (accessed 2025-10-25)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Block Debuffs + cleanse specialist. BEST Epic support for Clan Boss with Block Debuffs Stun protection. A2 Block Debuffs + Inc C.RATE + Inc DEF. A3 full cleanse + heal + TM boost. Must book A2/A3. User priority: CRITICAL for Clan Boss UNM (Priority 1).",
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Clan Boss + dungeons focus. Validated against Ayumilove/HellHades/RaidWiki."
+  },
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "raidwiki, ayumilove_ocr, hellhades",
+    "ocr_notes": "Stats from RaidWiki + Ayumilove OCR (HP/ATK/DEF/SPD/C.RATE/C.DMG/RES validated, 100% confidence)"
+  }
+}

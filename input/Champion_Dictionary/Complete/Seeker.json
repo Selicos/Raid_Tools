@@ -136,10 +136,72 @@
   "recommended_gear": [
     "Speed", "Relentless", "Lifesteal", "Perception", "Accuracy", "Immortal", "Defiant"
   ],
+  "masteries": {
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, GIANT SLAYER (critical for A1 2-hit), Heart of Glory, Single Out, Bring it Down, Methodical",
+      "Defense: Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Swarm Smiter, Lore of Steel (boosts Speed set), Cycle of Magic"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, GIANT SLAYER (A1 2-hit multi-proc), Heart of Glory, Single Out, Bring it Down",
+      "Defense: Blastproof, Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Lore of Steel, Cycle of Magic"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory (full HP nuke), Shield Breaker, Helmsmasher or Flawless Execution",
+      "Defense: Improved Parry (high C.RATE enemies), Delay Death",
+      "Support: Pinpoint Accuracy (for Provoke), Swarm Smiter, Lore of Steel (Speed set), Unshakeable (+50 RES for tank)"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, GIANT SLAYER (A1 2-hit), Heart of Glory, Single Out, Bring it Down",
+      "Defense: Blastproof, Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy (Provoke for Magma Dragon/Hydra), Eagle Eye (+50 ACC), Swarm Smiter, Lore of Steel"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, GIANT SLAYER (A1 2-hit), Heart of Glory, Single Out, Bring it Down",
+      "Defense: Blastproof, Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC for Provoke), Swarm Smiter, Lore of Steel"
+    ],
+    "general": [
+      "KEY SYNERGIES:",
+      "- GIANT SLAYER: A1 is 2-hit attack → 2 chances for 30% proc (better than Warmaster 60% once)",
+      "- Lore of Steel: Boosts Speed set bonus (+15% multiplicative)",
+      "- Eagle Eye/Pinpoint Accuracy: Provoke requires ACC for PvE bosses (Magma Dragon, Hydra)",
+      "- Heart of Glory: Arena builds benefit from full HP damage boost",
+      "- Improved Parry: Tank builds in Arena (passive triggers on crit)",
+      "- Unshakeable: Arena tank builds for RES",
+      "AVOID: Rapid Response, Arcane Celerity (breaks speed tunes for Clan Boss 2:1 comps)"
+    ]
+  },
+  "blessings": [
+    "Brimstone (Arena damage)",
+    "Intimidating Presence (Arena control)",
+    "Polymorph (PvE debuff extension)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Generally good AI. Will use A2 TM boost appropriately. Provoke on A1 works well on auto."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion, but enables unkillable 2:1 Clan Boss comps and speed boost strategies."
+  },
+  "mechanics_advisory": "Seeker is a meta-defining support for Arena (TM boost + ATK buff), Clan Boss (2:1 speed tunes), and Doom Tower (Provoke for Magma Dragon/Hydra). A1 2-hit attack benefits from Giant Slayer. Passive triggers on crit for survivability and team Increase DEF.",
   "validation_sources": [
     "Ayumilove (https://ayumilove.net/raid-shadow-legends-seeker-skill-mastery-equip-guide/)",
     "HellHades (https://hellhades.com/champions/seeker/)",
-    "In-game screenshot (base stats)"
+    "In-game screenshot (base stats)",
+    "Masteries.md (mastery synergies)"
   ],
-  "notes": "Seeker is a meta-defining champion for Arena, Clan Boss (unkillable 2:1), and Doom Tower Magma Dragon. Build for high speed and survivability. Provoke requires ACC for PvE bosses. Extra turn on A2 enables fast cycling. Passive is key for go-second Arena teams."
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-seeker-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/seeker/ (accessed 2025-10-25)"
+  ],
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "Added complete masteries section with Giant Slayer synergy (A1 2-hit), Lore of Steel (Speed set boost), Eagle Eye/Pinpoint Accuracy (Provoke), and content-specific recommendations. Added blessings, AI quirks, cheese strategy, and mechanics advisory sections."
+  },
+  "author": "GitHub Copilot",
+  "draft": false
 }

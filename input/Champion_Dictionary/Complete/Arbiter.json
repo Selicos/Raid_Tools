@@ -127,12 +127,45 @@
     "Speed", "Divine Speed", "Supersonic", "Relentless", "Perception", "Immortal", "Stoneskin", "Reflex"
   ],
   "masteries": {
-    "clan_boss": ["Warmaster", "Evil Eye", "Support"],
-    "dungeons": ["Warmaster", "Evil Eye", "Support"],
-    "arena": ["Unshakeable", "Evil Eye", "Rapid Response"],
-    "doom_tower": ["Unshakeable", "Evil Eye", "Rapid Response"],
-    "faction_wars": ["Warmaster", "Evil Eye", "Support"],
-    "general": ["Offense/Support/Defense as needed"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (critical for A1 2-hit)",
+      "Defense: Improved Parry, Delay Death",
+      "Support: Steadfast (+810 HP for reviver), Pinpoint Accuracy, Swarm Smiter, Evil Eye (TM control synergy with A3), Lore of Steel, Unshakeable (+50 RES for reviver)"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (A1 2-hit multi-proc)",
+      "Defense: Blastproof, Improved Parry",
+      "Support: Steadfast, Pinpoint Accuracy, Eagle Eye (+50 ACC for Weaken), Swarm Smiter, Evil Eye (TM control), Lore of Steel (boosts Speed set)"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory (speed nuke), Helmsmasher or Flawless Execution",
+      "Defense: Improved Parry, Delay Death",
+      "Support: Steadfast, Pinpoint Accuracy, Eagle Eye (+50 ACC for Weaken/buff reduction), Swarm Smiter, Lore of Steel (Speed set boost), Unshakeable (+50 RES for tank), Timely Intervention (TM on ally low HP)"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (A1 2-hit)",
+      "Defense: Blastproof, Improved Parry, Delay Death",
+      "Support: Steadfast, Lay on Hands (+5% heal when A3 heals), Healing Savior (+10% when ally <40% HP), Pinpoint Accuracy, Eagle Eye (+50 ACC), Swarm Smiter, Lore of Steel, Unshakeable (+50 RES), Timely Intervention"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (A1 2-hit)",
+      "Defense: Blastproof, Improved Parry, Delay Death",
+      "Support: Steadfast, Lay on Hands, Healing Savior, Pinpoint Accuracy, Eagle Eye (+50 ACC), Swarm Smiter, Lore of Steel, Unshakeable (+50 RES)"
+    ],
+    "general": [
+      "KEY SYNERGIES:",
+      "- GIANT SLAYER vs Helmsmasher/Flawless Execution:",
+      "  - GIANT SLAYER: A1 is 2-hit attack → 2 chances for 30% proc = superior for PVE bosses",
+      "  - Helmsmasher/Flawless Execution: Arena speed nuke builds (pure support role, minimal damage)",
+      "- Lore of Steel: CRITICAL for Speed set boost (+15% multiplicative) → maximizes speed lead",
+      "- Unshakeable: CRITICAL for reviver role (+50 RES) → avoid being stunned/frozen",
+      "- Timely Intervention: +20% TM when ally drops below 25% HP → synergizes with revive/heal role",
+      "- Evil Eye: TM control synergy with A3 TM fill → enemy TM reduction on A1",
+      "- Lay on Hands + Healing Savior: Boost A3 heal when allies <40% HP",
+      "- Eagle Eye + Pinpoint Accuracy: A1 Weaken and A2 buff reduction require ACC",
+      "REVIVER PRIORITY: Unshakeable (+50 RES), Steadfast (+810 HP), Timely Intervention",
+      "PVE PRIORITY: Giant Slayer for A1 multi-hit, Lore of Steel for Speed set"
+    ]
   },
   "blessings": ["Brimstone", "Intimidating Presence", "Cruelty"],
   "ai_quirks": {
@@ -144,15 +177,22 @@
     "cheese_type": "N/A",
     "cheese_mechanic_info": "Not a cheese champion, but enables speed and revive strategies."
   },
-  "mechanics_advisory": "Arbiter's speed aura and turn meter boost are meta-defining for Arena and PvE. Build for maximum speed and survivability.",
+  "mechanics_advisory": "Arbiter is the premier speed lead and reviver for Arena (30% SPD aura), Dungeons, and Doom Tower. A1 2-hit attack benefits from Giant Slayer. A2 AoE decreases buff duration (75% chance). A3 fills TM by 30% + places Increase ATK + heals allies <50% HP. A4 revives all dead allies to 35% HP + fills TM by 20% + grants Extra Turn → instant follow-up with A3 for full team recovery. Build for maximum SPD (350+ Arena, 250+ dungeons), HP%/DEF% for tank, ACC for Weaken/buff reduction. Lore of Steel CRITICAL for Speed set boost. Unshakeable CRITICAL for reviver role (avoid disruption).",
+  "validation_sources": [
+    "Ayumilove (https://ayumilove.net/raid-shadow-legends-arbiter-skill-mastery-equip-guide/)",
+    "HellHades (https://hellhades.com/champions/arbiter/)",
+    "In-game screenshot (base stats)",
+    "Masteries.md (mastery synergies)"
+  ],
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-arbiter-skill-mastery-equip-guide/ (accessed 2025-10-22)",
     "HellHades: https://hellhades.com/champions/arbiter/ (accessed 2025-10-22)",
     "In-game screenshot (user provided)"
   ],
   "update_notes": {
-    "last_updated": "2025-10-22",
-    "last_patch": "Initial canonical entry for Arbiter."
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: Added complete masteries section with Giant Slayer synergy (A1 2-hit multi-proc), Lore of Steel (CRITICAL for Speed set boost), Unshakeable (CRITICAL for reviver role), Timely Intervention (TM on ally low HP), Lay on Hands/Healing Savior (heal boost), Eagle Eye/Pinpoint Accuracy (ACC for Weaken/buff reduction), and content-specific recommendations. Expanded mechanics_advisory with strategic guidance. Added validation_sources."
   },
-  "author": "GitHub Copilot"
+  "author": "GitHub Copilot",
+  "draft": false
 }

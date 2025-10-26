@@ -106,12 +106,32 @@
   },
   "recommended_gear": ["Merciless", "Savage", "Lethal", "Cruel", "Perception", "Bloodthirst", "Impulse", "Lifesteal", "Reflex", "Relentless", "Zeal", "Accuracy", "Critical Damage", "Divine Speed", "Fatal", "Feral", "Instinct", "Killstroke", "Pinpoint", "Speed", "Supersonic"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer"],
-    "dungeons": ["Helmsmasher", "Cycle of Violence", "Bring it Down", "Kill Streak", "Methodical", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer"],
-    "arena": ["Helmsmasher", "Whirlwind of Death", "Single Out", "Cycle of Violence", "Kill Streak", "Methodical", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Master Hexer"],
-    "doom_tower": ["Helmsmasher", "Cycle of Violence", "Kill Streak", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer"],
-    "faction_wars": ["Helmsmasher", "Cycle of Violence", "Kill Streak", "Pinpoint Accuracy", "Charged Focus", "Swarm Smiter", "Lore of Steel", "Cycle of Magic", "Master Hexer"],
-    "general": ["Offense/Support as needed"]
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (CRITICAL - A1 'Dual Strike' attacks 2 times, 30% proc per hit = ~51% total proc chance). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit synergy with A1), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends Dec DEF/Weaken/HP Burn debuffs), CYCLE OF MAGIC (CRITICAL - reduces A2/A3 cooldowns for more frequent utility)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (CRITICAL - A1 'Dual Strike' attacks 2 times, 30% proc per hit = ~51% total proc chance). CORRECTED: Helmsmasher can work for Arena burst, but Giant Slayer optimal for dungeon bosses.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit synergy with A1), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends Dec DEF/Weaken/HP Burn), CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling), Cycle of Violence (speed boost), Methodical (cooldown reduction)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, HELMSMASHER (Ignore DEF for burst damage in Arena) OR Giant Slayer if using multi-hit A1 setup",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (multi-hit synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for debuffs), Lore of Steel, MASTER HEXER (extends Dec DEF/Weaken), Whirlwind of Death (AoE damage boost), Cycle of Violence, Kill Streak, Methodical"
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (CRITICAL - A1 'Dual Strike' attacks 2 times, 30% proc per hit = ~51% total proc chance). CORRECTED: Helmsmasher can work, but Giant Slayer optimal for boss floors.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit synergy with A1), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends Dec DEF/Weaken/HP Burn), CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling), Cycle of Violence"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (CRITICAL - A1 'Dual Strike' attacks 2 times, 30% proc per hit = ~51% total proc chance). CORRECTED: Helmsmasher can work, but Giant Slayer optimal for boss floors.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit synergy with A1), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends Dec DEF/Weaken/HP Burn), CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling), Cycle of Violence, Kill Streak, Methodical"
+    ],
+    "general": "CORRECTED: Giant Slayer for all PVE content (A1 'Dual Strike' attacks 2 times = multi-hit, 30% proc per hit = ~51% total proc chance). Warmaster INCORRECT for multi-hit champion. Helmsmasher viable for Arena burst damage. Master Hexer CRITICAL (extends Dec DEF/Weaken/HP Burn debuffs). Eagle Eye CRITICAL (+50 ACC for 250+ total, reliable debuff landing). Swarm Smiter CRITICAL (multi-hit A1 synergy). Cycle of Magic CRITICAL (reduces A2/A3 cooldowns for more frequent Provoke/debuff spread/Taunt). Arena can use Helmsmasher for Ignore DEF burst instead of Giant Slayer."
   },
   "blessings": ["Nature's Wrath", "Lightning Cage", "Irethi Coronet", "Stormcaller", "Wand of Submission"],
   "ai_quirks": {

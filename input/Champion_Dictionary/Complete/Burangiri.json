@@ -147,10 +147,52 @@
   "recommended_gear": [
     "Regeneration", "Immortal", "Perception", "Speed", "Resilience"
   ],
+  "masteries": {
+    "clan_boss": [
+      "Low priority content for Burangiri (5/10 rating) - if used:",
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER (A1/A2 single-hit DEF-scaling - 60% proc per skill, 4% boss MAX HP)",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal (passive heal synergy), Delay Death (survivability), Unshakeable (CRITICAL +50 RES - synergizes with 40 RES aura for 90 total)",
+      "Support: Steadfast (+810 HP), Lay on Hands, Healing Savior (passive heal boost), Lore of Steel (Speed/Immortal/Regeneration set boost)"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER (A1/A2 single-hit DEF-scaling - 60% proc, 6% boss MAX HP)",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal (passive heal synergy - 50% MAX HP on death), Delay Death (survivability), Unshakeable (+50 RES)",
+      "Support: Steadfast, Lay on Hands, Healing Savior (passive heal boost), Pinpoint Accuracy (Provoke/Stun ACC), Lore of Steel (Speed/Immortal/Regeneration set boost)"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal, Delay Death, Unshakeable (CRITICAL +50 RES - synergizes with 40 RES aura for 90 total)",
+      "Support: Steadfast, Lay on Hands, Healing Savior, Pinpoint Accuracy (Provoke/Stun), Lore of Steel (Speed set boost)"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER (A1/A2 DEF-scaling for boss damage)",
+      "Defense: Tough Skin (CRITICAL - reduce incoming damage for Bommal/Scarab King solo), Blastproof (CRITICAL - resist bombs from Bommal), Resurgent (CRITICAL - healing boost), Shadow Heal (CRITICAL - passive heal synergy - 50% MAX HP on death), Delay Death (CRITICAL - survivability for solo strategies), Retribution (counter damage), Unshakeable (CRITICAL +50 RES - synergizes with 40 RES aura for 90 total, essential for Bommal/Scarab King debuff resistance)",
+      "Support: Steadfast (+810 HP for tank pool), Lay on Hands (CRITICAL - passive heal boost), Healing Savior (CRITICAL - passive heal boost), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control), Lore of Steel (CRITICAL - Regeneration/Immortal set boost for sustain), Lasting Gifts (A3 Strengthen/Shield extension 2→3 turns)",
+      "NOTE: Doom Tower is PRIMARY content (10/10 rating) - mastery focus should prioritize solo survivability for Bommal/Scarab King"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal (passive heal synergy), Delay Death, Unshakeable (+50 RES - 40 RES aura = 90 total)",
+      "Support: Steadfast, Lay on Hands, Healing Savior (passive heal boost), Pinpoint Accuracy (Provoke/Stun), Lore of Steel (Speed/Regeneration set boost), Lasting Gifts (A3 buff extension)"
+    ],
+    "general": [
+      "PRIORITY OFFENSE T6: WARMASTER (A1 'Battering Skull' and A2 'Bakemono Charge' are single-hit DEF-scaling attacks - 60% proc per skill for 4% boss MAX HP / 6% dungeon boss MAX HP damage). Giant Slayer is INCORRECT for Burangiri (no multi-hit skills).",
+      "PRIORITY DEFENSE T6: Unshakeable (CRITICAL +50 RES - synergizes with 40 RES aura for 90 total, essential for Doom Tower Bommal/Scarab King debuff resistance). Delay Death (CRITICAL for solo survivability). Shadow Heal (CRITICAL - synergizes with passive 'Soulmonger' heal on death).",
+      "PRIORITY SUPPORT T6: Lay on Hands + Healing Savior (CRITICAL - boost passive heal from 50% MAX HP to higher values, essential for Doom Tower solo strategies). Lore of Steel (CRITICAL - Regeneration/Immortal set boost for sustain). Lasting Gifts (A3 Strengthen/Shield extension 2→3 turns).",
+      "KEY MASTERIES: Warmaster (A1/A2 DEF-scaling single-hit), Unshakeable (40 RES aura + 50 RES mastery = 90 total for Doom Tower), Tough Skin + Blastproof (reduce incoming damage/bombs for solo Bommal/Scarab King), Shadow Heal + Lay on Hands + Healing Savior (passive heal boost - 50% MAX HP on death), Lore of Steel (Regeneration/Immortal set boost), Resurgent (healing boost for solo).",
+      "SYNERGIES: Passive 'Soulmonger' heals 50% MAX HP whenever ANY champion dies (ally or enemy) - enables solo Bommal/Scarab King strategies by healing on minion deaths. A3 places Strengthen 25% on all allies + Shield (15% MAX HP) on allies <50% HP for 2 turns (4-turn CD booked, Lasting Gifts extends 2→3 turns). A2 places Stun (40% base, 60% booked) on all enemies. A1 places Provoke (20% base, 40% booked) on single target (useful for Magma Dragon control). Build for 60-70K HP, 3-4K DEF, 220-250 SPD, 200+ RES (with Unshakeable + 40 RES aura) for Doom Tower solo strategies.",
+      "DOOM TOWER SPECIALIST: Burangiri is a meta solution for Bommal the Dreadhorn and Scarab King (10/10 Doom Tower rating). Passive heals on minion deaths, A3 Strengthen reduces incoming damage, high RES (90+ with masteries/aura) resists debuffs. Regeneration set + Immortal + high HP/DEF/RES for sustain. Lay on Hands + Healing Savior boost passive heal for extreme sustain.",
+      "UNIQUE MECHANICS: Passive heals on ANY death (ally or enemy) - 50% MAX HP heal per death. Makes Burangiri one of the best solo champions for bosses with minions (Bommal, Scarab King). Less useful for content without frequent deaths (Clan Boss 5/10, Dungeons 7/10, Arena 6/10)."
+    ]
+  },
   "validation_sources": [
     "Ayumilove (https://ayumilove.net/raid-shadow-legends-burangiri-skill-mastery-equip-guide/)",
     "HellHades (https://hellhades.com/champions/burangiri/)",
     "In-game screenshot (base stats)"
   ],
-  "notes": "Burangiri is a meta solution for Bommal and Scarab King in Doom Tower. Build for high HP, DEF, and SPD. His passive is key for soloing. Less impact in Arena and Clan Boss."
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: CREATED complete masteries section from scratch (was entirely missing). KEY ADDITIONS: Warmaster (A1/A2 single-hit DEF-scaling - 60% proc per skill), Unshakeable (CRITICAL +50 RES - synergizes with 40 RES aura for 90 total, essential for Doom Tower Bommal/Scarab King debuff resistance), Delay Death (CRITICAL for solo survivability), Tough Skin + Blastproof (reduce incoming damage/bombs for solo strategies), Shadow Heal + Lay on Hands + Healing Savior (CRITICAL - boost passive 'Soulmonger' heal from 50% MAX HP on death, essential for solo sustain), Resurgent (healing boost), Lore of Steel (CRITICAL - Regeneration/Immortal set boost for sustain), Lasting Gifts (A3 Strengthen/Shield extension 2→3 turns). DOOM TOWER FOCUS: Burangiri is a meta Doom Tower specialist (10/10 rating) for Bommal and Scarab King solo strategies - mastery emphasis on defensive/healing trees for extreme sustain. Passive heals 50% MAX HP on ANY death (ally or enemy) - synergizes with Lay on Hands + Healing Savior + Shadow Heal for massive healing on minion deaths. Build 60-70K HP, 3-4K DEF, 220-250 SPD, 200+ RES (90+ with Unshakeable + aura). Added mechanics_advisory notes. Shadowkin Faction Wars 8/10 rating."
+  },
+  "notes": "Burangiri is a meta solution for Bommal and Scarab King in Doom Tower (10/10 rating). His passive 'Soulmonger' heals 50% MAX HP whenever any champion dies (ally or enemy), enabling solo strategies by healing on minion deaths. Build for high HP (60-70K), DEF (3-4K), SPD (220-250), and RES (200+ with Unshakeable + 40 RES aura = 90 total). Regeneration + Immortal sets + defensive/healing masteries for extreme sustain. Less impact in Clan Boss (5/10), Dungeons (7/10), and Arena (6/10) - specialized for Doom Tower boss strategies."
 }

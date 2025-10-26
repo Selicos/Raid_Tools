@@ -200,12 +200,12 @@
   },
   "recommended_gear": ["Feral", "Perception", "Speed", "Supersonic", "Reflex", "Merciless", "Stoneskin"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Evil Eye", "Support"],
-    "dungeons": ["Giant Slayer", "Master Hexer", "Lore of Steel"],
-    "arena": ["Eagle-Eye", "Unshakeable", "Support"],
-    "doom_tower": ["Timely Intervention", "Lasting Gifts"],
-    "faction_wars": ["Warmaster", "Cycle of Magic"],
-    "general": ["Offense/Support/Defense as needed"]
+    "clan_boss": ["Warmaster (A1/A2 single-hit)", "Evil Eye (TM control)", "Master Hexer (Dec SPD/Block Active Skills extension)", "Eagle Eye (+50 ACC)", "Support tree"],
+    "dungeons": ["Warmaster (CORRECTED - A1/A2 single-hit, Giant Slayer INCORRECT)", "Master Hexer (Dec SPD/Block Active Skills extension)", "Eagle Eye (+50 ACC)", "Lore of Steel"],
+    "arena": ["Warmaster", "Eagle-Eye (+50 ACC for 350+ total)", "Unshakeable (+50 RES for control immunity)", "Support/Defense"],
+    "doom_tower": ["Warmaster", "Master Hexer", "Eagle Eye (+50 ACC)", "Unshakeable", "Timely Intervention", "Lasting Gifts"],
+    "faction_wars": ["Warmaster", "Master Hexer", "Eagle Eye", "Cycle of Magic"],
+    "general": ["CORRECTED: Warmaster for all content (A1/A2 single-hit, Giant Slayer INCORRECT). Master Hexer CRITICAL (extends Dec SPD/Block Active Skills). Eagle Eye CRITICAL (+50 ACC for 350+ total Arena). Unshakeable for Arena control immunity."]
   },
   "blessings": ["Cruelty", "Phantom Touch", "Polymorph", "Brimstone"],
   "ai_quirks": {

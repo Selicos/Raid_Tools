@@ -434,7 +434,7 @@ Follow the unified standards in Sections 12 (Validation and Documentation Standa
   - `meta_ratings`: Content-specific ratings (1-10 scale)
   - `stat_priority_recommendations`: Content-specific stat targets
   - `recommended_gear`: Gear sets and stat priorities
-  - `masteries`: Content-specific mastery trees
+  - `masteries`: Content-specific mastery trees. Reference the Masteries.md table under the Mechanics Dictionary
   - `blessings`: Best blessing choices
   - `mechanics_advisory`: Overall strategy and use cases
   - `cheese_strategy`: Cheese viability and synergies (if applicable)

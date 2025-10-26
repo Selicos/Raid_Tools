@@ -1,0 +1,175 @@
+{
+  "name": "Fenshi",
+  "rarity": "Epic",
+  "affinity": "Force",
+  "faction": "Shadowkin",
+  "role": "Attack",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "6/10",
+    "dungeons": "8/10",
+    "doom_tower": "8/10",
+    "arena": "7/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 16515,
+        "ATK": 1465,
+        "DEF": 738,
+        "SPD": 97,
+        "C.RATE": 15,
+        "C.DMG": 60,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Hate Blades",
+          "type": "A1",
+          "description": "Attacks 1 enemy 3 times. Each hit has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.1,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "3-hit single target. 1.1x ATK per hit = 3.3 ATK total base (3.63 ATK fully booked with +10% damage)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease SPD",
+              "value": 30,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "30% chance per hit (40% booked) to place 30% Dec SPD. 3 hits = multiple Dec SPD proc chances. Excellent for TM control."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Multi-Hit", "Decrease SPD", "Single Target"],
+          "book_value": "Medium: +10% damage, +10% Dec SPD chance per hit (30%→40%). Good for Dec SPD uptime.",
+          "notes": "3-hit A1 (Giant Slayer procs 3x). 40% Dec SPD chance per hit when booked (3 chances = high proc rate). Synergizes with A2 TM reduction."
+        },
+        {
+          "name": "Nowhere To Run",
+          "type": "A2",
+          "description": "Attacks 1 enemy 3 times. Each hit has a 50% chance of decreasing the target's Turn Meter by 15%.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.0,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "3-hit single target. 2.0x ATK per hit = 6.0 ATK total base (6.9 ATK fully booked with +15% damage)."
+            },
+            {
+              "type": "turn_meter_steal",
+              "stat": "Turn Meter",
+              "value": 15,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "50% chance per hit (75% booked) to decrease target TM by 15%. 3 hits = up to 45% TM reduction total. EXCELLENT for TM lock/control."
+            }
+          ],
+          "cooldown_booked": 2,
+          "mechanics_tags": ["Multi-Hit", "Turn Meter Manipulation", "Single Target"],
+          "book_value": "CRITICAL: +15% damage, +25% TM reduction chance per hit (50%→75%), -2 cooldown (4→2). MUST BOOK for TM control viability.",
+          "notes": "PRIMARY TM CONTROL: 3-hit with 75% TM reduction chance per hit when booked (3 chances = very high total proc rate). Up to 45% TM reduction total. MUST BOOK for 2-turn cooldown (spammable TM control). Synergizes with A1 Dec SPD for TM lock."
+        },
+        {
+          "name": "Killer's Bile",
+          "type": "A3",
+          "description": "Attacks 1 enemy 2 times. Each hit places a 5% [Poison] debuff on the target for 3 turns. Will ignore 10% of the target's DEF for each [Poison] debuff on the target.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.7,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "2-hit single target. 2.7x ATK per hit = 5.4 ATK total base (6.48 ATK fully booked with +20% damage). SCALES WITH POISON: Ignores 10% DEF per Poison debuff on target (e.g., 10 Poisons = 100% ignore DEF = full DEF ignore)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Poison",
+              "value": 5,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "3 turns",
+              "notes": "100% chance to place TWO 5% Poisons (one per hit, 2 hits total). No ACC check (always lands per Ayumilove). Excellent for Clan Boss and boss damage."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Multi-Hit", "Poison", "Ignore DEF", "Single Target"],
+          "book_value": "CRITICAL: +20% damage, -1 cooldown (4→3). MUST BOOK for Poison uptime and DEF ignore scaling.",
+          "notes": "POISON SPECIALIST: 2-hit placing TWO 5% Poisons (100% chance, no ACC check). Damage ignores 10% DEF per Poison on target (self-synergy: 2 Poisons from A3 = 20% DEF ignore, 10 Poisons = 100% DEF ignore). MUST BOOK for 3-turn cooldown. EXCELLENT for Clan Boss (Poison specialist) and boss damage (DEF ignore scaling)."
+        }
+      ],
+      "aura": "None",
+      "comments": "TM control + Poison specialist. A2 'Nowhere To Run' is 3-hit TM reduction (75% chance per hit when booked, up to 45% total TM reduction). A3 'Killer's Bile' places TWO 5% Poisons (no ACC check) + ignores 10% DEF per Poison. A1 'Hate Blades' is 3-hit Dec SPD for TM control synergy. EXCELLENT for Shadowkin Faction Wars (8/10), Doom Tower (8/10), and dungeons (8/10) with TM lock capability. Must book A2/A3 for TM control and Poison uptime."
+    }
+  ],
+  "mechanics_tags": ["Multi-Hit", "Turn Meter Manipulation", "Poison", "Decrease SPD", "Ignore DEF", "Single Target"],
+  "stat_priorities": ["100% C.RATE", "220%+ C.DMG", "200+ ACC", "220+ SPD", "3500+ ATK"],
+  "stat_priority_recommendations": {
+    "clan_boss": "PRIORITY: 200+ ACC (Poison + Dec SPD), 220+ SPD (speed tuning), 100% C.RATE, 220%+ C.DMG, 3500+ ATK. A3 Poison specialist (TWO 5% Poisons, no ACC check but still needs ACC for A1 Dec SPD). Lifesteal or Speed sets.",
+    "dungeons": "PRIORITY: 200+ ACC (TM reduction + Dec SPD), 220+ SPD (TM lock cycling), 100% C.RATE, 220%+ C.DMG, 3500+ ATK. A2 TM control excellent for boss TM lock. Must book A2 for 2-turn cooldown spammable TM control.",
+    "arena": "200+ ACC (TM reduction), 250+ SPD (speed tuning), 100% C.RATE, 250%+ C.DMG, 3500+ ATK. A2 TM control viable for control teams. Not top-tier for Arena (7/10) but usable.",
+    "faction_wars": "PRIORITY: 200+ ACC (TM reduction + Dec SPD + Poison), 220+ SPD, 100% C.RATE, 220%+ C.DMG, 3500+ ATK. A2 TM control + A3 Poison excellent for boss waves. Must book A2/A3 for Shadowkin FW progression."
+  },
+  "recommended_gear": ["Speed (220+ SPD for TM control cycling)", "Accuracy (200+ ACC for debuffs)", "Lifesteal (Clan Boss sustain)", "Perception (ACC boost)", "Cruel (C.RATE + ignore DEF synergy with A3)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (A1 3-hit + A2 3-hit + A3 2-hit all multi-hit, Giant Slayer triggers on all skills)",
+      "DEFENSE: Tough Skin, Blastproof (738 DEF glass cannon)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC CRITICAL for Dec SPD), MASTER HEXER (CRITICAL - extends Poison from 3→4 turns for max uptime), Lore of Steel, CYCLE OF MAGIC (reduces A2/A3 cooldowns)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (all skills multi-hit)",
+      "DEFENSE: Tough Skin, Blastproof (glass cannon protection)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC CRITICAL for TM reduction + Dec SPD), Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2 4→2 booked, A3 4→3 booked cooldowns for faster TM control cycling)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER",
+      "DEFENSE: Tough Skin, Blastproof",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE, Lore of Steel, CYCLE OF MAGIC"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (all skills multi-hit for wave clear + boss damage)",
+      "DEFENSE: Tough Skin, Blastproof (738 DEF glass cannon), Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC CRITICAL for TM reduction + Dec SPD + Poison), MASTER HEXER (extends Poison 3→4 turns for boss damage), Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2 TM control + A3 Poison cycling)"
+    ],
+    "general": "GIANT SLAYER CRITICAL (A1 3-hit + A2 3-hit + A3 2-hit all multi-hit, Giant Slayer triggers on ALL skills for massive T6 damage). Cycle of Magic CRITICAL (reduces A2 4→2 booked, A3 4→3 booked cooldowns for TM control + Poison uptime). Eagle Eye CRITICAL (+50 ACC for TM reduction + Dec SPD + Poison). Master Hexer CRITICAL for Clan Boss/FW (extends Poison 3→4 turns for max uptime). MUST BOOK A2/A3 for TM control viability (A2 4→2 cooldown = spammable TM lock) and Poison uptime (A3 4→3). Build: 100% C.RATE, 220%+ C.DMG, 200+ ACC, 220+ SPD, 3500+ ATK. Speed or Lifesteal sets. Focus: Shadowkin Faction Wars (8/10) + Doom Tower (8/10) + dungeons (8/10) with TM lock + Poison. User Priority: Faction Wars (Priority 5) - Shadowkin completed Normal, Fenshi key for Hard progression with TM control for boss waves."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams - unlikely)", "Polymorph (CC support synergy with TM control)", "Soul Reap (cooldown reduction on kill for TM control chaining)", "Phantom Touch (speed boost)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A3 Poison when available, A2 for TM control, A1 for filler. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion. Solid TM control + Poison specialist for Faction Wars and dungeons."
+  },
+  "mechanics_advisory": "TM control + Poison specialist. A2 'Nowhere To Run' is PRIMARY TM CONTROL: 3-hit with 75% TM reduction chance per hit when booked (3 chances = very high total proc rate, up to 45% total TM reduction). MUST BOOK for 2-turn cooldown = spammable TM lock. A3 'Killer's Bile' is POISON SPECIALIST: 2-hit placing TWO 5% Poisons (100% chance, no ACC check per Ayumilove) + damage ignores 10% DEF per Poison on target (self-synergy: 2 Poisons from A3 = 20% DEF ignore, 10 Poisons on target = 100% DEF ignore = full ignore). MUST BOOK for 3-turn cooldown. A1 'Hate Blades' is 3-hit Dec SPD (40% chance per hit when booked) for TM control synergy (Dec SPD + TM reduction = TM lock). EXCELLENT for Shadowkin Faction Wars (8/10) with TM lock for boss waves + Poison damage. Good for Doom Tower (8/10) and dungeons (8/10) with TM control. Good for Clan Boss (6/10) as Poison specialist (TWO 5% Poisons no ACC check). MUST BOOK A2/A3 for TM control viability and Poison uptime. Build: 100% C.RATE, 220%+ C.DMG, 200+ ACC (TM reduction + Dec SPD), 220+ SPD (TM lock cycling), 3500+ ATK. Giant Slayer CRITICAL (all skills multi-hit). Cycle of Magic CRITICAL (faster A2/A3 cycling). Master Hexer CRITICAL (extends Poison 3→4 turns). Eagle Eye CRITICAL (+50 ACC). User Priority: Faction Wars (Priority 5) - Shadowkin completed Normal, Fenshi is key TM control + Poison specialist for Hard boss waves. Force affinity = weak to Magic but strong vs Spirit.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-fenshi-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/fenshi/ (accessed 2025-10-25)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "TM control + Poison specialist for Shadowkin FW. A2 spammable TM lock (2-turn cooldown when booked). A3 TWO Poisons (no ACC check) + DEF ignore scaling. Must book A2/A3. User priority: Shadowkin FW Hard progression.",
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Faction Wars + Doom Tower focus. Validated against Ayumilove/HellHades. RaidWiki unavailable (500 error), stats manually extracted from Ayumilove OCR."
+  },
+  "validation_metadata": {
+    "stat_confidence": 90,
+    "data_sources": "ayumilove_ocr, hellhades",
+    "ocr_notes": "Stats manually extracted from Ayumilove OCR output (HP 16515, ATK 1465, DEF 738, SPD 97, C.RATE 15, C.DMG 60, RES 30, ACC 0). RaidWiki unavailable (500 error). 90% confidence based on OCR text match."
+  }
+}

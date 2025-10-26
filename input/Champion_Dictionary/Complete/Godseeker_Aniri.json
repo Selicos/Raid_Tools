@@ -172,12 +172,45 @@
   },
   "recommended_gear": ["Relentless", "Immortal", "Perception", "Speed", "Resilience"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Cycle of Violence", "Master Hexer"],
-    "dungeons": ["Giant Slayer", "Cycle of Violence", "Master Hexer"],
-    "arena": ["Unshakeable", "Evil Eye", "Cycle of Violence"],
-    "doom_tower": ["Warmaster", "Master Hexer"],
-    "faction_wars": ["Warmaster", "Master Hexer"],
-    "general": ["Defense/Support as needed"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER (A1/A2 single-hit DEF-scaling - 60% proc, 4% boss MAX HP)",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal, Delay Death, Retribution, Unshakeable (CRITICAL +50 RES - base 45 RES = 95 total for reviver role)",
+      "Support: Steadfast (+810 HP), Lay on Hands (CRITICAL - healing boost for A1/A2/A3), Healing Savior (CRITICAL - healing boost), Lore of Steel, Cycle of Magic (A2/A3 spam), Lasting Gifts (CRITICAL - extends A2 ally buffs from extended duration)",
+      "NOTE: Master Hexer NOT recommended (no debuffs in kit)"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER (A1/A2 single-hit DEF-scaling - 60% proc, 6% boss MAX HP). CORRECTION: Giant Slayer is INCORRECT (no multi-hit skills).",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal, Delay Death, Retribution, Unshakeable (CRITICAL +50 RES - 95 total for reviver)",
+      "Support: Steadfast, Lay on Hands (CRITICAL - healing boost), Healing Savior (CRITICAL - healing boost for A1/A2/A3 heals), Lore of Steel, Cycle of Magic (A2/A3 spam), Lasting Gifts (CRITICAL - buff extension synergy with A2 buff extension mechanic)",
+      "NOTE: Cycle of Violence can replace Methodical for more frequent A1 heals"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Cycle of Violence (Arena farm), Methodical, WARMASTER",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal, Delay Death, Retribution, Unshakeable (CRITICAL +50 RES - base 45 = 95 total for reviver, resist debuffs)",
+      "Support: Steadfast, Lay on Hands, Healing Savior (healing boost), Timely Intervention (TM on ally low HP), Lore of Steel (Speed set boost), Cycle of Magic, Lasting Gifts (buff extension)",
+      "NOTE: High RES (95 with Unshakeable) essential for reviver role in Arena"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal, Delay Death, Retribution, Unshakeable (CRITICAL +50 RES - 95 total for reviver/healer survivability)",
+      "Support: Steadfast, Lay on Hands (CRITICAL - healing boost), Healing Savior (CRITICAL - A1/A2/A3 healing boost), Timely Intervention (TM on ally low HP), Lore of Steel, Cycle of Magic (A2/A3 spam), Lasting Gifts (CRITICAL - buff extension synergy with A2)",
+      "NOTE: Doom Tower 10/10 - healing + revive + buff extension critical for Hard progression"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal, Delay Death, Retribution, Unshakeable (+50 RES for 95 total)",
+      "Support: Steadfast, Lay on Hands (CRITICAL - healing boost), Healing Savior (CRITICAL - healing boost), Timely Intervention (TM on ally low HP), Lore of Steel, Cycle of Magic (A2/A3 spam), Lasting Gifts (CRITICAL - buff extension)",
+      "NOTE: Sacred Order Faction Wars 10/10 - top-tier reviver/healer/support"
+    ],
+    "general": [
+      "PRIORITY OFFENSE T6: WARMASTER (A1 'Blade of Blessings' and A2 'Quest for Meaning' are single-hit DEF-scaling attacks - 60% proc per skill for 4% boss MAX HP / 6% dungeon boss MAX HP damage). Giant Slayer is INCORRECT for Godseeker Aniri (no multi-hit skills - current 'dungeons' entry is a mistake).",
+      "PRIORITY DEFENSE T6: Unshakeable (CRITICAL +50 RES - base 45 RES = 95 total for reviver role, essential for Arena/Doom Tower to resist debuffs and survive to revive team).",
+      "PRIORITY SUPPORT T6: Lay on Hands + Healing Savior (CRITICAL - boost all healing from A1 5% heal, A2 15% heal, A3 30% heal + Continuous Heal placement), Lasting Gifts (CRITICAL - synergizes with A2 buff extension mechanic - extends ally buffs by 1 turn, Lasting Gifts adds another turn extension).",
+      "KEY MASTERIES: Warmaster (A1/A2 single-hit DEF-scaling), Unshakeable (95 RES total for reviver), Lay on Hands + Healing Savior (CRITICAL healing boost for entire kit), Lasting Gifts (buff extension synergy with A2), Cycle of Magic (A2/A3 cooldown spam), Timely Intervention (TM on ally low HP for support).",
+      "SYNERGIES: A1 heals lowest HP ally by 5% MAX HP (cannot heal self - benefits from Lay on Hands + Healing Savior). A2 AoE damage + heals all allies 15% MAX HP + decreases enemy buff duration by 1 turn + increases ally buff duration by 1 turn (Lasting Gifts extends ally buffs further). A3 revives all dead allies to 30% HP + places Continuous Heal for 2 turns + fills TM by 30% (benefits from Lay on Hands + Healing Savior for stronger revive heal + Continuous Heal). Passive 'Rebirth' revives one random ally when Aniri dies (50% HP revive, 1-turn CD - only works once). Build for DEF% (scales damage and tanking), HP% (survivability), 200+ SPD, 95 RES (with Unshakeable) for reviver role.",
+      "UNIQUE MECHANICS: A2 EXTENDS ally buff duration by 1 turn + DECREASES enemy buff duration by 1 turn (unique mechanic, synergizes with Lasting Gifts for extended ally buffs). Passive 'Rebirth' revives random ally on death (insurance revive if Aniri dies before using A3). A3 revives ALL dead allies (mass revive - meta for Faction Wars, Doom Tower, dungeons).",
+      "REVIVER ROLE: Base 45 RES (above average) + Unshakeable +50 = 95 RES total. Essential for surviving to revive team in Arena/Doom Tower. Lay on Hands + Healing Savior boost all heals (A1 5% → higher, A2 15% → higher, A3 30% + Continuous Heal → higher). Lasting Gifts + A2 buff extension = extended ally buffs for team survivability."
+    ]
   },
   "blessings": ["Cruelty", "Brimstone", "Phantom Touch"],
   "ai_quirks": {

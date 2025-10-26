@@ -1,0 +1,211 @@
+{
+  "name": "Iudex_Artor",
+  "rarity": "Legendary",
+  "affinity": "Spirit",
+  "faction": "Sacred Order",
+  "role": "Support",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "5/10",
+    "dungeons": "7/10",
+    "doom_tower": "7/10",
+    "arena": "8/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 19980,
+        "ATK": 980,
+        "DEF": 1266,
+        "SPD": 102,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 50,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Censer Whirl",
+          "type": "A1",
+          "description": "Attacks all enemies. Heals all allies by 5% of this Champion's MAX HP.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.4,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE attack. 3.4x ATK multiplier base (4.08 ATK fully booked with +20% damage)."
+            },
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 5,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "Heals all allies by 5% Iudex Artor MAX HP. At 50K HP: 2.5K heal per ally every A1."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["AoE", "Heal", "Team Support"],
+          "book_value": "Low: +20% damage. Decent for AoE heal sustain but not priority.",
+          "notes": "AoE A1 with team heal (5% Iudex MAX HP). Build 50000+ HP for max heal value (2.5K/turn sustain). Good for auto sustain."
+        },
+        {
+          "name": "Incense of Inspiration",
+          "type": "A2",
+          "description": "Places a 50% [Increase ATK] buff and a 25% [Strengthen] buff on all allies for 2 turns. Fills the Turn Meters of all allies by 15%.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "Increase ATK",
+              "value": 50,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "50% Inc ATK buff for 2 turns. Team-wide damage boost."
+            },
+            {
+              "type": "buff",
+              "stat": "Strengthen",
+              "value": 25,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "25% Strengthen buff for 2 turns. Reduces incoming damage by 25% (stacks multiplicatively with Inc DEF). Excellent team survivability."
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 15,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "+15% TM for all allies. Team-wide speed boost."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Increase ATK", "Strengthen", "Turn Meter Manipulation", "Team Support"],
+          "book_value": "CRITICAL: -2 cooldown (5→3). MUST BOOK for Inc ATK + Strengthen uptime.",
+          "notes": "SETUP SKILL: Inc ATK (50%) + Strengthen (25% damage reduction) + TM boost (15%). MUST BOOK for 3-turn cooldown. EXCELLENT for Arena (buff setup) and Faction Wars (team buff + survivability)."
+        },
+        {
+          "name": "Revival Mandate",
+          "type": "A3",
+          "description": "Revives an ally with 50% HP and 50% Turn Meter. Also places a 50% [Increase ATK] buff on that ally for 1 turn. Then activates the revived ally's default skill, targeting the enemy with the lowest HP.",
+          "effects": [
+            {
+              "type": "revive",
+              "stat": "HP",
+              "value": 50,
+              "per_hit": false,
+              "target": "single_ally",
+              "notes": "Revives ally with 50% HP and 50% TM."
+            },
+            {
+              "type": "buff",
+              "stat": "Increase ATK",
+              "value": 50,
+              "per_hit": false,
+              "target": "revived_ally",
+              "duration": "1 turn",
+              "notes": "50% Inc ATK buff on revived ally for 1 turn."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "revived_ally",
+              "notes": "UNIQUE: Activates revived ally's A1 skill immediately, targeting enemy with lowest HP. Revived ally acts instantly with Inc ATK buff. EXCELLENT for instant pressure after revive."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Revive", "Increase ATK", "Instant Action", "Unique Mechanic"],
+          "book_value": "CRITICAL: -2 cooldown (6→4). MUST BOOK for revive uptime.",
+          "notes": "UNIQUE REVIVE: Revives ally with 50% HP + 50% TM + 50% Inc ATK + INSTANTLY activates revived ally's A1 targeting lowest HP enemy. MUST BOOK for 4-turn cooldown. EXCELLENT for Arena (instant revive + attack) and Faction Wars (revive cycling). Synergizes with passive for cooldown reset if revived ally kills with A1."
+        },
+        {
+          "name": "Sentenced to Life",
+          "type": "A4",
+          "description": "[Passive] If an enemy is killed by an ally's default skill after being revived by the [Revival Mandate] skill, resets the cooldown of the [Revival Mandate] skill.",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "self",
+              "notes": "UNIQUE PASSIVE: If revived ally kills enemy with A1 (activated by Revival Mandate), resets A3 cooldown instantly. CHEESE POTENTIAL: Revive + kill + instant revive again = infinite revive cycling if conditions met. EXCELLENT for Arena cleave teams (revive nuker → kill → instant reset → revive again)."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive", "Cooldown Reset", "Unique Mechanic", "On Kill"],
+          "book_value": "N/A: Passive, cannot book.",
+          "notes": "CHEESE PASSIVE: Resets A3 revive cooldown if revived ally kills with A1. Synergy: Revive nuker → nuker A1 kills → A3 reset → revive again instantly. EXCELLENT for Arena (infinite revive potential with right team)."
+        }
+      ],
+      "aura": "Increases Ally SPD in Arena by 25%",
+      "comments": "UNIQUE revive specialist with instant action mechanic. A3 'Revival Mandate' revives ally + activates their A1 immediately with Inc ATK buff. Passive 'Sentenced to Life' resets A3 cooldown if revived ally kills with A1. A2 'Incense of Inspiration' provides Inc ATK + Strengthen + TM boost. EXCELLENT for Arena (8/10) with +25% SPD aura + instant revive combo. Good for Faction Wars (8/10) and dungeons (7/10). Must book A2/A3 for 3-turn A2, 4-turn A3 cooldowns."
+    }
+  ],
+  "mechanics_tags": ["Revive", "Increase ATK", "Strengthen", "Turn Meter Manipulation", "Heal", "AoE", "Instant Action", "Cooldown Reset", "Passive", "Unique Mechanic", "Speed Aura"],
+  "stat_priorities": ["50000+ HP", "220+ SPD", "2000+ DEF", "100+ RES", "100% C.RATE"],
+  "stat_priority_recommendations": {
+    "clan_boss": "Low priority. If used: 220+ SPD, 50000+ HP (A1 heal value), 2000+ DEF. Revive not useful in CB. 5/10 CB rating.",
+    "dungeons": "PRIORITY: 220+ SPD (revive cycling), 50000+ HP (A1 heal value), 2000+ DEF (survivability), 100+ RES (resist debuffs). A3 revive + A2 buffs good for auto dungeon teams. Speed or Immortal sets.",
+    "arena": "PRIORITY: 220+ SPD (speed tuning for A2 buff setup), 50000+ HP (A1 heal sustain), 2000+ DEF, 150+ RES (resist debuffs). +25% SPD Arena aura EXCELLENT. A3 revive + instant A1 combo for cleave teams. Pair with nuker (revive Ithos/Trunda → instant nuke with Inc ATK). Must book A2/A3.",
+    "faction_wars": "PRIORITY: 220+ SPD, 50000+ HP (A1 heal value CRITICAL for sustain), 2000+ DEF (survivability), 100+ RES. A3 revive + A2 buffs excellent for boss waves. Must book A2/A3 for Sacred Order FW progression."
+  },
+  "recommended_gear": ["Speed (220+ SPD for revive/buff cycling)", "Immortal (HP + sustain for heal value)", "Perception (ACC boost if needed)", "Regeneration (sustain)", "Divine Speed (speed + heal synergy)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (single-hit A1 AoE)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (tanky support)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (reduces A2/A3 cooldowns), HEALING SAVIOR (+30% A1 heal boost)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2 5→3 booked, A3 6→4 booked cooldowns), HEALING SAVIOR (CRITICAL - boosts A1 heal)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, DETERRENCE",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (faster A2/A3 cycling), LASTING GIFTS (extends Inc ATK/Strengthen buff duration for team)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (tanky support for survivability), UNSHAKEABLE (+50 RES for debuff resistance)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2 buff + A3 revive cycling), HEALING SAVIOR (CRITICAL - boosts A1 heal for FW sustain), LASTING GIFTS (extends buffs)"
+    ],
+    "general": "WARMASTER for all content (single-hit A1 AoE). Healing Savior CRITICAL (+30% A1 heal boost for team sustain, synergizes with 50K+ HP build). Cycle of Magic CRITICAL (reduces A2 5→3 booked, A3 6→4 booked cooldowns for buff + revive uptime). Lasting Gifts (extends Inc ATK/Strengthen buff duration). Deterrence (tanky support survivability). Unshakeable (+50 RES for debuff resistance). MUST BOOK A2/A3 for 3-turn A2, 4-turn A3 cooldowns. Build: 50000+ HP (A1 heal value), 220+ SPD (buff/revive cycling), 2000+ DEF, 100+ RES. Speed or Immortal sets. Focus: Arena (8/10) with +25% SPD aura + unique revive combo (revive ally → instant A1 with Inc ATK → passive reset if kill). Good for Faction Wars (8/10) and dungeons (7/10) with revive + buff support. User Priority: Arena/Support (Priority 4) - Iudex Artor is UNIQUE revive specialist for Arena cleave teams. Pair with nuker (Ithos, Trunda, etc.) for instant revive → nuke combo. Spirit affinity = neutral vs Force/Magic, weak to Void."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams - unlikely)", "Soul Reap (cooldown reduction on kill synergy with passive reset)", "Phantom Touch (speed boost)", "Polymorph (CC support)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A3 revive when ally dead, A2 for buffs, A1 for heal. Passive auto-triggers. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Infinite Revive Loop (conditional)",
+    "cheese_mechanic_info": "CHEESE POTENTIAL: Passive resets A3 cooldown if revived ally kills with A1. Combo: Revive nuker (Ithos, Trunda) → nuker A1 kills enemy with Inc ATK buff → A3 reset instantly → revive again. With right team and enemy HP, can create infinite revive loop in Arena. Requires: 1) High damage nuker with strong A1, 2) Inc ATK buff from revive, 3) Enemy low enough HP for A1 kill, 4) Passive cooldown reset. EXCELLENT for Arena cleave teams with revival cycling."
+  },
+  "mechanics_advisory": "UNIQUE revive specialist with instant action mechanic. A3 'Revival Mandate' is PRIMARY REVIVE: Revives ally with 50% HP + 50% TM + 50% Inc ATK buff + INSTANTLY activates revived ally's A1 targeting enemy with lowest HP. MUST BOOK for 4-turn cooldown. UNIQUE MECHANIC: Revived ally acts immediately with Inc ATK buff = instant pressure after revive. Passive 'Sentenced to Life' is CHEESE MECHANIC: Resets A3 cooldown if revived ally kills enemy with A1. COMBO: Revive nuker (Ithos, Trunda, etc.) → nuker A1 kills with Inc ATK → A3 reset → revive again instantly = infinite revive potential. A2 'Incense of Inspiration' is BUFF SUPPORT: Inc ATK (50%) + Strengthen (25% damage reduction) + TM boost (15%). MUST BOOK for 3-turn cooldown. A1 'Censer Whirl' is AoE with team heal (5% Iudex MAX HP). Build 50000+ HP for max heal value (2.5K/turn sustain). MUST BOOK A2/A3 for Arena/FW viability (3-turn A2, 4-turn A3). EXCELLENT for Arena (8/10) with +25% SPD aura + unique revive + instant action combo. Pair with high damage A1 nuker for passive reset cheese. Good for Faction Wars (8/10) and dungeons (7/10) with revive + buff support. Build: 50000+ HP (heal value), 220+ SPD (buff/revive cycling), 2000+ DEF, 100+ RES. Speed or Immortal sets. Warmaster for A1 AoE. Healing Savior (+30% A1 heal). Cycle of Magic (faster A2/A3 cycling). Lasting Gifts (extends buffs). User Priority: Arena/Support (Priority 4) - Iudex Artor is UNIQUE for Arena cleave teams with instant revive → nuke combo. Spirit affinity = neutral vs most, weak to Void.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-iudex-artor-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/iudex-artor/ (accessed 2025-10-25)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "UNIQUE revive specialist for Arena. A3 revives ally + activates A1 instantly with Inc ATK. Passive resets A3 if revived ally kills (cheese potential). A2 Inc ATK + Strengthen + TM boost. Must book A2/A3. User priority: Arena cleave teams with instant revive combo.",
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Arena + Faction Wars focus. Validated against Ayumilove/HellHades. RaidWiki unavailable (500 error), stats from attachment + Ayumilove OCR."
+  },
+  "validation_metadata": {
+    "stat_confidence": 90,
+    "data_sources": "ayumilove_ocr, hellhades, attachment",
+    "ocr_notes": "Stats from Ayumilove OCR + attachment (HP 19980, ATK 980, DEF 1266, SPD 102, C.RATE 15, C.DMG 50, RES 50, ACC 0). RaidWiki unavailable (500 error). 90% confidence."
+  }
+}

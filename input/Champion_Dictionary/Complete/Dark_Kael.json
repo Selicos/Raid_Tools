@@ -155,10 +155,52 @@
   "recommended_gear": [
     "Speed", "Perception", "Accuracy", "Relentless", "Toxic"
   ],
+  "masteries": {
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A1 3-hit attack - 30% proc per hit = ~66% total proc chance per A1 use for massive MAX HP damage)",
+      "Support: Steadfast (+810 HP), Pinpoint Accuracy, Charged Focus, Swarm Smiter (A1 3-hit synergy), Evil Eye (TM control from allies), Lore of Steel, Master Hexer (CRITICAL - extends Poison/HP Burn/Dec ATK from A1/A2/A3 for 2→3 turns, MASSIVE synergy with entire kit), Cycle of Magic (cooldown cycling for A2/A3 spam), Eagle Eye (CRITICAL +50 ACC for Poison/Dec ATK consistency - 250+ ACC needed)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability)",
+      "NOTE: A2 debuff extension requires 100% C.RATE - prioritize Deadly Precision + Keen Strike + Heart of Glory + gear C.RATE for consistent debuff extension"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A1 3-hit multi-proc - 30% per hit = ~66% total proc chance, excellent for boss damage)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A1 3-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - Poison/HP Burn/Dec ATK extension 2→3 turns), Cycle of Magic (A2/A3 spam), Eagle Eye (CRITICAL +50 ACC - 250+ ACC total)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability)"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Cycle of Violence (Arena farm), Kill Streak (Arena farm), Bring it Down, Methodical, GIANT SLAYER (A1 3-hit)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A1 3-hit), Evil Eye (TM control), Lore of Steel (Speed set boost), Master Hexer (debuff extension), Cycle of Magic, Eagle Eye (+50 ACC for 250+ total)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A1 3-hit multi-proc for boss damage)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A1 3-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - Poison/HP Burn/Dec ATK extension 2→3 turns), Cycle of Magic (A2/A3 spam), Eagle Eye (CRITICAL +50 ACC - 250+ ACC for Hard)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death, Unshakeable (debuff RES for boss survivability)"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A1 3-hit)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A1 3-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - Poison/HP Burn/Dec ATK extension), Cycle of Magic (A2/A3 spam), Eagle Eye (+50 ACC for Poison consistency)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability)"
+    ],
+    "general": [
+      "PRIORITY OFFENSE T6: GIANT SLAYER (A1 'Weaver of Woes' attacks 1 enemy 3 times - 30% proc per hit = ~66% total proc chance per A1 use for massive MAX HP damage on bosses). Warmaster is INCORRECT for Dark Kael due to multi-hit A1.",
+      "PRIORITY SUPPORT T6: Master Hexer (CRITICAL - extends Poison/HP Burn/Dec ATK debuffs from 2→3 turns. MASSIVE synergy with entire kit: A1 instantly activates Poison/HP Burn, A2 places Dec ATK + extends debuffs on crit, A3 places 3x Poison + Poison Sensitivity). Eagle Eye (CRITICAL +50 ACC for Poison/Dec ATK consistency - need 250+ ACC Clan Boss/Doom Tower Hard).",
+      "KEY MASTERIES: Giant Slayer (A1 3-hit multi-proc), Master Hexer (CRITICAL - entire kit is debuff-based, extends Poison/HP Burn/Dec ATK 2→3 turns for 50% more damage/utility), Eagle Eye (ACC for Poison/Dec ATK), Swarm Smiter (A1 3-hit synergy), Deadly Precision + Keen Strike + Heart of Glory (CRITICAL for 100% C.RATE builds - A2 debuff extension requires crit), Cycle of Magic (A2/A3 spam).",
+      "SYNERGIES: A1 attacks 3 times (each hit 1.35x ATK) - 25% chance per hit (45% booked) to instantly activate 2 Poison debuffs OR 1 Poison + 1 HP Burn debuff (UNIQUE mechanic, massive boss damage). A2 AoE places Dec ATK (75% base, 100% booked) + on crit, 75% chance to extend ALL debuffs on target by 1 turn (requires 100% C.RATE for consistency). A3 places 3x Poison (5% each) + Poison Sensitivity 25% for 2 turns (75% base, 100% booked). Passive decreases enemy C.RATE by 15% if under 2+ Poison debuffs (defensive utility). Master Hexer extends ALL debuffs (Poison, HP Burn, Dec ATK, Poison Sensitivity) from 2→3 turns.",
+      "BUILD REQUIREMENTS: 100% C.RATE (CRITICAL for A2 debuff extension on crit), 220+ SPD, 250+ ACC (with Eagle Eye for Clan Boss/Doom Tower Hard), HP%/DEF% for survivability. Deadly Precision + Keen Strike + Heart of Glory masteries help reach 100% C.RATE with gear.",
+      "UNIQUE MECHANICS: A1 INSTANTLY ACTIVATES Poison/HP Burn debuffs (bypasses tick mechanics for immediate boss damage - excellent for Hydra, Clan Boss, Spider, Doom Tower bosses). A2 extends ALL debuffs on crit (not just Poison - extends HP Burn, Dec ATK, Dec DEF, etc. if present). Passive C.RATE reduction stacks with team debuffs for defensive utility.",
+      "DARK ELVES FACTION WARS: Top-tier poisoner/debuffer (10/10 rating). User's Dark Elf Near Completion (Normal) - excellent for completing Normal and progressing Hard. Poison damage bypasses enemy tankiness.",
+      "CLAN BOSS/DOOM TOWER: Meta poisoner (Clan Boss 9/10, Doom Tower 9/10). Master Hexer + A1 instant activation + A2 debuff extension = sustained Poison/HP Burn damage. Build for 220+ SPD (speed-tuned), 250+ ACC, 100% C.RATE, HP%/DEF%."
+    ]
+  },
   "validation_sources": [
     "Ayumilove (https://ayumilove.net/raid-shadow-legends-dark-kael-skill-mastery-equip-guide/)",
     "HellHades (https://hellhades.com/champions/dark-kael/)",
     "In-game screenshot (base stats)"
   ],
-  "notes": "Dark Kael is a meta poisoner and debuff extender for Clan Boss, Dungeons, and Doom Tower. Build for high ACC and SPD."
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: CREATED complete masteries section from scratch (was entirely missing). KEY ADDITIONS: GIANT SLAYER (A1 'Weaver of Woes' attacks 3 times - 30% proc per hit = ~66% total proc chance per A1 for massive MAX HP damage), Master Hexer (CRITICAL - extends Poison/HP Burn/Dec ATK from 2→3 turns, MASSIVE synergy with entire debuff-based kit), Eagle Eye (CRITICAL +50 ACC for Poison/Dec ATK consistency - 250+ ACC needed), Deadly Precision + Keen Strike + Heart of Glory (CRITICAL for 100% C.RATE builds - A2 debuff extension requires crit for 75% chance to extend ALL debuffs by 1 turn), Swarm Smiter (A1 3-hit synergy), Cycle of Magic (A2/A3 spam). UNIQUE MECHANICS: A1 INSTANTLY ACTIVATES Poison/HP Burn debuffs (25% base, 45% booked per hit - bypasses tick mechanics for immediate boss damage, excellent for Hydra/Clan Boss/Spider/Doom Tower). A2 extends ALL debuffs on crit (not just Poison - extends HP Burn, Dec ATK, Dec DEF if present - 75% chance per crit, requires 100% C.RATE for consistency). A3 places 3x Poison (5% each) + Poison Sensitivity 25% (75% base, 100% booked). Passive decreases enemy C.RATE by 15% if under 2+ Poison debuffs. Master Hexer extends ALL debuffs from 2→3 turns. BUILD REQUIREMENTS: 100% C.RATE (A2 debuff extension), 220+ SPD (speed-tuned), 250+ ACC (with Eagle Eye), HP%/DEF% for survivability. Dark Elves Faction Wars 10/10 (user Near Completion Normal - excellent for completing/progressing Hard). Clan Boss 9/10, Doom Tower 9/10, Dungeons 10/10 meta poisoner/debuffer. Added mechanics_advisory notes."
+  },
+  "notes": "Dark Kael is a top-tier meta poisoner and debuff extender (Clan Boss 9/10, Dungeons 10/10, Doom Tower 9/10, Faction Wars 10/10, Arena 8/10). A1 INSTANTLY ACTIVATES Poison/HP Burn debuffs for immediate boss damage (unique mechanic). A2 extends ALL debuffs on crit (requires 100% C.RATE for consistency). Master Hexer CRITICAL for extending all debuffs 2→3 turns. Build for 100% C.RATE, 220+ SPD, 250+ ACC (with Eagle Eye), HP%/DEF% for survivability. User's Dark Elf Near Completion (Normal) - excellent for completing Normal and progressing Hard Faction Wars."
 }

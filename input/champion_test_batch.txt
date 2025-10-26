@@ -1,4 +1,0 @@
-# Test batch import - Small subset for verification
-Deacon Armstrong
-Broadmaw
-Mausoleum Mage

@@ -94,28 +94,72 @@
     "arena": "High SPD and Crit to secure TM drops",
     "clan_boss": "Not primary CB champion; avoid if focused on CB DPS"
   },
-  "recommended_gear": ["Crit Rate", "Crit Damage", "Speed", "Ignore DEF support"],
+  "recommended_gear": ["Crit Rate", "Crit Damage", "Speed", "Savage", "Cruel", "Perception", "Relentless"],
   "masteries": {
-    "general": ["Warmaster", "Deadly Precision"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (critical for A1 3-hit random)",
+      "Defense: Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Swarm Smiter, Evil Eye (TM control synergy with A1), Lore of Steel"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Kill Streak, GIANT SLAYER (A1 3-hit multi-proc)",
+      "Defense: Improved Parry, Bloodthirst",
+      "Support: Pinpoint Accuracy, Swarm Smiter, Evil Eye (A1 TM reduction synergy), Lore of Steel"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Shield Breaker, Ruthless Ambush, Single Out, Kill Streak, Helmsmasher (stacks with A3 ignore 50% DEF)",
+      "Defense: Improved Parry",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC for A2 Decrease DEF), Swarm Smiter"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (A1 3-hit)",
+      "Defense: Blastproof, Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC), Swarm Smiter, Evil Eye (TM control), Lore of Steel"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Kill Streak, GIANT SLAYER (A1 3-hit)",
+      "Defense: Blastproof, Improved Parry, Bloodthirst",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC), Swarm Smiter, Lore of Steel"
+    ],
+    "general": [
+      "KEY SYNERGIES:",
+      "- GIANT SLAYER vs Helmsmasher:",
+      "  - GIANT SLAYER: A1 is 3-hit random attack → 3 chances for 30% proc per hit = superior for PVE bosses (Fire Knight TM lock specialist)",
+      "  - Helmsmasher: Arena nuke builds → stacks additively with A3 ignore 50% DEF (total 75% DEF ignore)",
+      "- Evil Eye: A1 TM control synergy (-20% TM on first hit with A1) → stacks with A1 inherent TM reduction (25% per crit)",
+      "- Kill Streak: +6% damage per kill (max +12%) → snowball damage in waves",
+      "- Eagle Eye + Pinpoint Accuracy: A2 Decrease DEF requires ACC (30% chance per hit)",
+      "- 100% C.RATE CRITICAL: A1 TM reduction only triggers on crits (25% TM per crit hit) → Fire Knight specialist",
+      "FIRE KNIGHT BUILD: Giant Slayer + Evil Eye + 100% C.RATE for TM lock",
+      "ARENA PRIORITY: Helmsmasher for DEF ignore stacking (75% total with A3)"
+    ]
   },
-  "blessings": [],
+  "blessings": ["Crushing Rend (ATK scaling boost)", "Brimstone (Fire Knight/dungeon damage)"],
   "ai_quirks": {
     "bad_ai": false,
-    "ai_issue_description": "No major AI issues reported in community guides."
+    "ai_issue_description": "Generally good AI. Will prioritize A1 for TM control. A3 nuke used appropriately. No major issues on auto."
   },
   "cheese_strategy": {
-    "cheese_viable": false,
-    "cheese_type": "N/A",
-    "cheese_mechanic_info": ""
+    "cheese_viable": true,
+    "cheese_type": "Fire Knight TM lock specialist",
+    "cheese_mechanic_info": "Alure is THE champion for Fire Knight TM lock cheese. A1 3-hit random attack with 25% TM reduction per crit hit → with 100% C.RATE, can reduce Fire Knight TM by 75% per turn (3 hits × 25%). Combined with Evil Eye mastery (-20% TM on first hit), can TM lock Fire Knight indefinitely. Build for 100% C.RATE, high SPD, and Giant Slayer for multi-hit proc synergy."
   },
-  "mechanics_advisory": "Alure excels as a DEF-ignoring single-target/cleave hybrid; optimise Crit Rate/Crit DMG and consider ACC for reliable A2 debuffs.",
+  "mechanics_advisory": "Alure is a legendary Fire Knight TM lock specialist. A1 3-hit random attack with 25% TM reduction per crit → 100% C.RATE is CRITICAL for TM control. Giant Slayer synergizes with A1 3-hit for boss damage. A3 ignores 50% DEF (stacks with Helmsmasher for 75% total in Arena). A2 AoE Decrease DEF + conditional Sleep. Best used for Fire Knight (TM lock cheese), dungeon wave clear, and Arena nuking. Build for 100% C.RATE (mandatory for TM control), C.DMG, ATK%, SPD, and ACC (A2 Decrease DEF).",
+  "validation_sources": [
+    "Ayumilove (https://ayumilove.net/raid-shadow-legends-alure-skill-mastery-equip-guide/)",
+    "HellHades (https://hellhades.com/raid/champions/alure/)",
+    "Fandom (https://raidshadowlegends.fandom.com/wiki/Alure)",
+    "Masteries.md (mastery synergies)"
+  ],
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-alure-skill-mastery-equip-guide/ (accessed 2025-10-23)",
     "HellHades: https://hellhades.com/raid/champions/alure/ (accessed 2025-10-23)",
     "Fandom: https://raidshadowlegends.fandom.com/wiki/Alure (accessed 2025-10-23)"
   ],
   "update_notes": {
-    "last_updated": "2025-10-23",
-    "last_patch": "Created/updated base_stats per user screenshot and populated skills from community sources; recommend user-run JSON validation."
-  }
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: Added complete masteries section with Giant Slayer synergy (A1 3-hit multi-proc), Helmsmasher for Arena (stacks with A3 ignore 50% DEF to 75% total), Evil Eye (TM control synergy with A1), Kill Streak, Eagle Eye/Pinpoint Accuracy (A2 Decrease DEF), and content-specific recommendations. Documented Fire Knight TM lock cheese strategy (100% C.RATE mandatory). Expanded mechanics_advisory with strategic guidance. Added blessings and validation_sources."
+  },
+  "author": "GitHub Copilot",
+  "draft": false
 }

@@ -123,12 +123,40 @@
   },
   "recommended_gear": ["Bloodthirst", "Impulse", "Lifesteal", "Reflex", "Relentless", "Toxic", "Immortal", "Perception", "Speed", "Regeneration", "Stoneskin", "Protection"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Master Hexer", "Evil Eye", "Cycle of Violence"],
-    "dungeons": ["Flawless Execution", "Master Hexer", "Lore of Steel", "Cycle of Magic"],
-    "arena": ["Flawless Execution", "Cycle of Violence", "Unshakeable"],
-    "doom_tower": ["Warmaster", "Lasting Gifts", "Cycle of Magic"],
-    "faction_wars": ["Warmaster", "Cycle of Magic"],
-    "general": ["Offense/Support/Defense as needed"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A3 2-hit AoE synergy - 30% proc per hit = ~51% total proc chance per A3 use)",
+      "Support: Steadfast (+810 HP for destroyed MAX HP pool), Pinpoint Accuracy, Charged Focus, Swarm Smiter (A3 multi-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - extends HP Burn from 2→3 turns, massive synergy with A1/A2/A3 HP Burn kit), Cycle of Magic (cooldown cycling for A2/A3 spam), Eagle Eye (+50 ACC for HP Burn consistency)",
+      "Defense: Improved Parry, Bloodthirst (healing synergy with self-damage passive), Delay Death (survivability)"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A3 2-hit AoE multi-proc - excellent for Spider, Fire Knight, Hydra)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A3 multi-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - HP Burn extension for sustained damage), Cycle of Magic (A2/A3 spam), Eagle Eye (CRITICAL +50 ACC for HP Burn consistency - 200+ ACC needed)",
+      "Defense: Improved Parry, Bloodthirst (healing from passive self-damage), Delay Death (survivability for solo/cheese strategies)"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Cycle of Violence (Arena farm), Kill Streak (Arena farm), Bring it Down, Methodical, GIANT SLAYER (A3 2-hit AoE)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A3 multi-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (HP Burn extension), Cycle of Magic, Eagle Eye (+50 ACC for HP Burn/Dec ATK consistency)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death, Unshakeable (+50 RES for tank builds - passive gives +100 RES at 50% destroyed MAX HP)"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A3 2-hit AoE multi-proc for boss damage)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A3 multi-hit), Evil Eye (TM control vs waves), Lore of Steel, Master Hexer (CRITICAL - HP Burn extension), Cycle of Magic (cooldown cycling), Lasting Gifts (buff extension if using buffers), Eagle Eye (CRITICAL +50 ACC - 250+ ACC for Hard)",
+      "Defense: Improved Parry, Bloodthirst (healing from passive), Delay Death, Unshakeable (debuff RES - passive gives +100 RES at 50% destroyed MAX HP)"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A3 2-hit AoE multi-proc)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A3 multi-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (HP Burn extension), Cycle of Magic (A2/A3 spam), Eagle Eye (+50 ACC for HP Burn consistency)",
+      "Defense: Improved Parry, Bloodthirst (healing from passive), Delay Death (survivability)"
+    ],
+    "general": [
+      "PRIORITY OFFENSE T6: GIANT SLAYER (A3 'Purifyre' attacks all enemies 2 times - 30% proc per hit = ~51% total proc chance per A3 use for significant MAX HP damage). Warmaster is INCORRECT for Artak due to multi-hit A3.",
+      "PRIORITY SUPPORT T6: Master Hexer (CRITICAL for HP Burn extension - A1 has 35% base chance to extend, Master Hexer adds 30% chance to extend on placement → HP Burn lasts 2→3+ turns for sustained damage on Spider/Hydra/bosses). Eagle Eye (CRITICAL +50 ACC for HP Burn consistency - need 200+ ACC dungeons, 250+ Doom Tower Hard).",
+      "KEY MASTERIES: Giant Slayer (A3 2-hit AoE), Master Hexer (HP Burn extension synergy with entire kit), Eagle Eye (ACC for HP Burn/Dec ATK consistency), Cycle of Magic (cooldown cycling for A2/A3 HP Burn spam), Bloodthirst (healing from passive self-damage mechanic).",
+      "SYNERGIES: A3 2-hit AoE benefits from Giant Slayer (30% proc per hit). A1/A2/A3 HP Burn kit benefits massively from Master Hexer (extends duration). Passive destroys MAX HP when HP Burn activates (5% per activation, 50% max) but grants scaling stats (+1% DMG/C.DMG/DEF per 1% destroyed, +2 SPD/RES per 1%). A3 restores destroyed MAX HP by 10% per HP Burn placed (self-sustain). Build for HP% (large MAX HP pool for passive scaling), SPD (200+), ACC (200+ dungeons, 250+ Hard Doom Tower with Eagle Eye).",
+      "CHEESE STRATEGY: HP Burn activation (A2 instantly activates HP Burn before attacking) + self-healing (A3 restores destroyed MAX HP + heals on resist) allows for solo Spider, Hydra, and dungeon strategies. Bloodthirst mastery enhances self-sustain.",
+      "UNIQUE MECHANIC: Passive stat scaling from destroyed MAX HP is unique - at 50% destroyed MAX HP, gains +50% DMG/C.DMG/DEF and +100 SPD/RES. Requires careful management of HP pool and use of A3 healing to sustain.",
+      "ORCS FACTION WARS: Top-tier carry (10/10 rating) - HP Burn damage bypasses enemy tankiness, self-sustain allows solo/low-support clears. User has completed Orc Normal, strong candidate for Hard progression."
+    ]
   },
   "blessings": ["Brimstone", "Cruelty", "Polymorph"],
   "ai_quirks": {
@@ -140,15 +168,15 @@
     "cheese_type": "HP Burn Activation / Solo Sustain",
     "cheese_mechanic_info": "HP Burn activation and self-healing allow for soloing Spider, Hydra, and dungeons."
   },
-  "mechanics_advisory": "Artak's HP Burn activation and stat-scaling passive make him a unique and powerful option for boss and solo content. Build for HP, speed, and accuracy.",
+  "mechanics_advisory": "Artak is a top-tier HP Burn specialist (Clan Boss 9/10, Dungeons 10/10, Doom Tower 9/10, Faction Wars 10/10) with unique stat-scaling passive. A3 'Purifyre' is 2-hit AoE that benefits from Giant Slayer (30% proc per hit). KEY STRENGTHS: (1) Complete HP Burn kit - A3 places HP Burn (75% chance, 2 turns), A1 extends HP Burn (35% chance +1 turn), A2 INSTANTLY ACTIVATES HP Burn before attacking (massive burst damage on Spider/Hydra/bosses), (2) Self-sustain - A3 restores destroyed MAX HP by 10% per HP Burn placed + heals 5% MAX HP on resist, (3) Unique passive - destroys 5% MAX HP per HP Burn activation (50% max) but grants scaling stats (+1% DMG/C.DMG/DEF per 1% destroyed, +2 SPD/RES per 1%), (4) Dec ATK debuff (75% chance, 2 turns) for team survivability. REQUIRES Master Hexer mastery (CRITICAL - extends HP Burn 2→3+ turns for sustained damage) and Eagle Eye (+50 ACC for 200+ total). At 50% destroyed MAX HP, gains +50% DMG/C.DMG/DEF and +100 SPD/RES. Build for HP% (large MAX HP pool), 200+ SPD, 200+ ACC (250+ Hard Doom Tower), C.RATE/C.DMG for damage. CHEESE STRATEGY: HP Burn activation (A2) + self-healing (A3) allows solo Spider, Hydra, and dungeon clears. Bloodthirst mastery enhances sustain. User's Orcs Faction Wars COMPLETE (Normal) - excellent for Hard progression. Top-tier for Spider 25, Hydra, and HP Burn cheese teams.",
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-artak-skill-mastery-equip-guide/ (accessed 2025-10-22)",
     "HellHades: https://hellhades.com/champions/artak/ (accessed 2025-10-22)",
     "In-game screenshot (user provided)"
   ],
   "update_notes": {
-    "last_updated": "2025-10-22",
-    "last_patch": "Initial canonical entry for Artak."
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: Corrected T6 Offense mastery from Warmaster to GIANT SLAYER (A3 'Purifyre' attacks all enemies 2 times - 30% proc per hit = ~51% total proc chance). Added complete masteries section with full offense/defense/support trees per content type. KEY ADDITIONS: Giant Slayer (A3 2-hit AoE synergy), Master Hexer (CRITICAL - extends HP Burn duration from A1/A2/A3 kit), Eagle Eye (CRITICAL +50 ACC for HP Burn/Dec ATK consistency - 200+ ACC needed), Cycle of Magic (A2/A3 cooldown spam), Bloodthirst (healing synergy with passive self-damage mechanic). CLARIFIED: Passive destroys MAX HP when HP Burn activates (5% per activation, 50% max) but grants scaling stats (+1% DMG/C.DMG/DEF per 1% destroyed, +2 SPD/RES per 1%). A3 restores destroyed MAX HP (10% per HP Burn placed) + heals on resist (5% per resist) for self-sustain. A2 INSTANTLY ACTIVATES HP Burn before attacking (cheese synergy for Spider/Hydra/boss burst). Expanded mechanics_advisory with Giant Slayer synergy, Master Hexer critical importance, cheese strategy details, and Orc Faction Wars notes (user completed Normal). Added validation_sources."
   },
   "author": "GitHub Copilot"
 }

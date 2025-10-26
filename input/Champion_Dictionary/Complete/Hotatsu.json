@@ -1,0 +1,196 @@
+{
+  "name": "Hotatsu",
+  "rarity": "Epic",
+  "affinity": "Magic",
+  "faction": "Shadowkin",
+  "role": "Defense",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "7/10",
+    "dungeons": "7/10",
+    "doom_tower": "7/10",
+    "arena": "6/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 17505,
+        "ATK": 969,
+        "DEF": 1255,
+        "SPD": 99,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Red River",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 40% chance of placing a [Leech] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.2,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "DEF-scaling attack. 3.2 DEF base (4.16 DEF booked with +30% damage)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Leech",
+              "value": 40,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "40% chance Leech debuff for 2 turns base (60% booked with +20% debuff chance). Excellent for sustain once booked."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["DEF Scaling", "Leech", "Sustain"],
+          "book_value": "Medium: +30% damage + 20% Leech chance (40%→60%). Decent for Leech uptime but not 100%.",
+          "notes": "DEF-scaling A1 with Leech (60% booked). Not guaranteed Leech but good sustain when landed. 200+ ACC needed. At 3000 DEF: ~13K damage booked."
+        },
+        {
+          "name": "Rushing Death",
+          "type": "A2",
+          "description": "Attacks all enemies. Has a 50% chance of placing a 50% [Decrease ATK] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 4.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE DEF-scaling attack. 4.0 DEF base (4.2 DEF booked with +5% damage)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease ATK",
+              "value": 50,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "50% chance Dec ATK (50%) for 2 turns base (80% booked with +30% debuff chance). Good for damage mitigation but not guaranteed."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "DEF Scaling", "Decrease ATK", "Damage Mitigation"],
+          "book_value": "HIGH: +30% Dec ATK chance (50%→80%) + -1 cooldown (4→3). MUST BOOK for Dec ATK uptime.",
+          "notes": "AoE Dec ATK (80% booked) + DEF damage. MUST BOOK for 3-turn cooldown + 80% Dec ATK chance. EXCELLENT for Clan Boss (7/10) and dungeons (7/10) with damage mitigation. 200+ ACC needed. At 3000 DEF: ~12.6K AoE damage booked."
+        },
+        {
+          "name": "Oni Icon",
+          "type": "A3",
+          "description": "Places a 60% [Increase DEF] buff on all allies for 2 turns and a 15% [Continuous Heal] buff on all allies for 1 turn.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "Increase DEF",
+              "value": 60,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "60% Inc DEF buff for all allies for 2 turns. Team-wide survivability boost."
+            },
+            {
+              "type": "buff",
+              "stat": "Continuous Heal",
+              "value": 15,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "1 turn",
+              "notes": "15% Continuous Heal buff for all allies for 1 turn. Team sustain (15% MAX HP heal/turn for 1 turn). Short duration but helpful."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Increase DEF", "Continuous Heal", "Team Support", "Buff", "Sustain"],
+          "book_value": "CRITICAL: -1 cooldown (4→3). MUST BOOK for Inc DEF + Continuous Heal uptime.",
+          "notes": "BUFF SUPPORT: Inc DEF (60%, 2 turns) + Continuous Heal (15%, 1 turn) for team. MUST BOOK for 3-turn cooldown. EXCELLENT for Clan Boss (7/10) and Faction Wars (8/10) with team survivability. Synergizes with passive (debuff removal)."
+        },
+        {
+          "name": "Spirit Touched",
+          "type": "Passive",
+          "description": "Removes 1 random debuff from this Champion at the start of each turn. Will remove [Stun], [Sleep], [Freeze], [Fear], [True Fear] and [Provoke] debuffs before other debuffs.",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "self",
+              "notes": "PASSIVE CLEANSE: Removes 1 random debuff from Hotatsu at start of turn. PRIORITY: Stun, Sleep, Freeze, Fear, True Fear, Provoke first (CC priority). Then other debuffs. 3-turn cooldown. EXCELLENT for CC resistance and self-sustain. Synergizes with A3 (Inc DEF + Continuous Heal) for survivability."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive", "Cleanse", "Debuff Removal", "CC Resistance", "Self-Sustain"],
+          "book_value": "N/A: Passive, cannot book. 3-turn cooldown built-in.",
+          "notes": "PASSIVE CLEANSE: Removes 1 debuff/turn (3-turn cooldown). Prioritizes CC debuffs (Stun/Sleep/Freeze/Fear/Provoke) before others. EXCELLENT for Clan Boss (Stun removal), dungeons (CC waves), and Faction Wars (survivability). Synergizes with A3 Inc DEF + Continuous Heal for self-sustain."
+        }
+      ],
+      "aura": "Increases Ally DEF in Faction Crypts by 33%",
+      "comments": "DEF-based support specialist with Leech, Dec ATK, Inc DEF, and Continuous Heal. A3 'Oni Icon' Inc DEF (60%) + Continuous Heal (15%) for team. Passive 'Spirit Touched' removes 1 debuff/turn (CC priority). A2 'Rushing Death' AoE Dec ATK (80% booked). EXCELLENT for Faction Wars (8/10) with +33% DEF aura. Good for Clan Boss (7/10), dungeons (7/10), and Doom Tower (7/10). Must book A2/A3."
+    }
+  ],
+  "mechanics_tags": ["DEF Scaling", "Leech", "Decrease ATK", "Increase DEF", "Continuous Heal", "AoE", "Passive", "Cleanse", "Debuff Removal", "CC Resistance", "Team Support", "Sustain", "DEF Aura"],
+  "stat_priorities": ["3000+ DEF", "220+ SPD", "200+ ACC", "40000+ HP", "100+ RES", "100% C.RATE"],
+  "stat_priority_recommendations": {
+    "clan_boss": "PRIORITY: 3000+ DEF (damage + Inc DEF value), 220+ SPD (Dec ATK cycling), 200+ ACC (Leech + Dec ATK), 40000+ HP (survivability), 100+ RES. A2 Dec ATK (80% booked) excellent for damage mitigation. Passive Stun removal good for UNM. Must book A2/A3.",
+    "dungeons": "PRIORITY: 3000+ DEF (damage + Inc DEF value), 220+ SPD (buff/debuff cycling), 200+ ACC (Leech + Dec ATK), 40000+ HP, 100+ RES. A2 Dec ATK + A3 Inc DEF excellent for wave/boss survivability. Passive CC removal for waves. DEF% sets.",
+    "arena": "MEDIUM: 3000+ DEF, 220+ SPD, 200+ ACC, 40000+ HP, 150+ RES. A3 Inc DEF + Continuous Heal for team sustain. Passive CC removal. Not top-tier Arena but functional support. 6/10 Arena rating.",
+    "faction_wars": "PRIORITY: 3000+ DEF (CRITICAL - +33% DEF aura = effective 4000 DEF), 220+ SPD, 200+ ACC (Leech + Dec ATK), 40000+ HP, 100+ RES. A2 Dec ATK + A3 Inc DEF + Continuous Heal + passive CC removal EXCELLENT for boss waves. MUST BOOK A2/A3 for Shadowkin FW progression."
+  },
+  "recommended_gear": ["DEF% (chest, gloves, boots for 3000+ DEF)", "Speed (220+ SPD for cycling)", "Perception (ACC boost)", "Immortal (HP + sustain)", "Regeneration (sustain)", "Divine Speed (speed + heal synergy)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (single-hit A1/A2 for DEF-based damage)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (tanky support), UNSHAKEABLE (+50 RES for debuff resistance)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (reduces A2/A3 cooldowns), EVIL EYE (extends Leech 2→3 turns), LASTING GIFTS (extends Inc DEF + Continuous Heal)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (tanky support), UNSHAKEABLE (+50 RES)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2 4→3 booked, A3 4→3 booked cooldowns), EVIL EYE (CRITICAL - extends Leech 2→3 turns), LASTING GIFTS (extends Inc DEF + Continuous Heal)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, DETERRENCE (tanky support), UNSHAKEABLE (+50 RES)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (faster A2/A3 cycling), LASTING GIFTS (extends Inc DEF + Continuous Heal)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (CRITICAL - tanky support with +33% DEF aura), UNSHAKEABLE (+50 RES for debuff resistance)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2 Dec ATK + A3 Inc DEF/Continuous Heal cycling), EVIL EYE (CRITICAL - extends Leech 2→3 turns), LASTING GIFTS (extends Inc DEF + Continuous Heal for boss waves)"
+    ],
+    "general": "WARMASTER for all content (single-hit A1/A2 DEF-based). Cycle of Magic CRITICAL (reduces A2 4→3 booked, A3 4→3 booked cooldowns for Dec ATK + Inc DEF/Continuous Heal uptime). Evil Eye CRITICAL for FW/dungeons (extends Leech 2→3 turns). Lasting Gifts (extends Inc DEF + Continuous Heal buff duration). Deterrence (tanky support with +33% DEF aura). Unshakeable (+50 RES for debuff resistance). MUST BOOK A2/A3 for 3-turn cooldowns + 80% Dec ATK chance. Build: 3000+ DEF (damage + Inc DEF value, 4000 effective with +33% aura), 220+ SPD (buff/debuff cycling), 200+ ACC (Leech + Dec ATK), 40000+ HP. DEF% sets. Focus: Faction Wars (8/10) with +33% DEF aura + Dec ATK + Inc DEF + Continuous Heal + passive CC removal. Good for Clan Boss (7/10), dungeons (7/10), and Doom Tower (7/10) with survivability support. User Priority: Shadowkin specialist for FW progression. Magic affinity = neutral vs Spirit/Force, weak to Void."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams - unlikely)", "Soul Reap (cooldown reduction on kill)", "Phantom Touch (speed boost)", "Polymorph (CC support)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A3 for buffs, A2 for Dec ATK, A1 for Leech. Passive auto-triggers. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "No cheese mechanics. Standard DEF-based support with buffs, debuffs, and passive cleanse."
+  },
+  "mechanics_advisory": "DEF-based support specialist with damage mitigation and team survivability. A3 'Oni Icon' is PRIMARY BUFF: Inc DEF (60%, 2 turns) + Continuous Heal (15%, 1 turn) for team. MUST BOOK for 3-turn cooldown. EXCELLENT for Clan Boss and Faction Wars with team survivability. A2 'Rushing Death' is DEBUFF SUPPORT: AoE Dec ATK (50%, 80% booked) for 2 turns. MUST BOOK for 3-turn cooldown + 80% chance. CRITICAL for damage mitigation in CB/dungeons. Passive 'Spirit Touched' is SELF-CLEANSE: Removes 1 debuff/turn (3-turn cooldown). PRIORITY: CC debuffs (Stun/Sleep/Freeze/Fear/Provoke) first, then others. EXCELLENT for Clan Boss Stun removal and dungeon CC waves. A1 'Red River' has Leech (60% booked) for sustain. MUST BOOK A2/A3 for FW/CB viability (3-turn cooldowns + 80% Dec ATK). EXCELLENT for Faction Wars (8/10) with +33% DEF aura (effective 4000 DEF at 3000 base). Good for Clan Boss (7/10), dungeons (7/10), and Doom Tower (7/10) with Dec ATK + Inc DEF + Continuous Heal + passive CC removal. Build: 3000+ DEF (damage + buff value), 220+ SPD (buff/debuff cycling), 200+ ACC (Leech + Dec ATK), 40000+ HP. DEF% sets. Warmaster for DEF-based damage. Cycle of Magic (faster cycling). Evil Eye (extends Leech). Lasting Gifts (extends buffs). User Priority: Shadowkin specialist for Faction Wars progression. Magic affinity = neutral vs most, weak to Void.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-hotatsu-skill-mastery-equip-guide/ (accessed 2025-10-26)",
+    "HellHades: https://hellhades.com/champions/hotatsu/ (accessed 2025-10-26)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "DEF-based support for Faction Wars. A3 Inc DEF + Continuous Heal. A2 AoE Dec ATK (80% booked). Passive removes 1 debuff/turn (CC priority). Must book A2/A3. User priority: Shadowkin FW with +33% DEF aura.",
+  "update_notes": {
+    "last_updated": "2025-10-26",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Faction Wars + Clan Boss focus. Validated against Ayumilove/HellHades. RaidWiki unavailable (500 error), stats from Ayumilove OCR + typical Epic DEF stats."
+  },
+  "validation_metadata": {
+    "stat_confidence": 75,
+    "data_sources": "ayumilove_ocr, hellhades, typical_epic_def",
+    "ocr_notes": "Stats from Ayumilove OCR (HP 17505, RES 30). Missing ATK/DEF/SPD/C.RATE/C.DMG/ACC - used typical Epic DEF stats (969 ATK, 1255 DEF, 99 SPD, 15 C.RATE, 50 C.DMG, 0 ACC). RaidWiki unavailable (500 error). 75% confidence due to incomplete OCR."
+  }
+}

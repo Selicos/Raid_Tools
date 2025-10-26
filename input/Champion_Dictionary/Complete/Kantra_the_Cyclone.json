@@ -146,12 +146,32 @@
   },
   "recommended_gear": ["Relentless", "Perception", "Resilience", "Speed", "Immortal"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Cycle of Violence", "Master Hexer"],
-    "dungeons": ["Giant Slayer", "Cycle of Violence", "Master Hexer"],
-    "arena": ["Unshakeable", "Evil Eye", "Cycle of Violence"],
-    "doom_tower": ["Warmaster", "Master Hexer"],
-    "faction_wars": ["Warmaster", "Master Hexer"],
-    "general": ["Defense/Support as needed"]
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'Steal Steel' attacks 2 times, A2 'Wild Whirlwind' attacks all enemies 3 times each, 30% proc per hit = multi-hit synergy). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A1/A2 synergy, extra damage per hit), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total, reliable debuff landing), Lore of Steel, MASTER HEXER (CRITICAL - extends Block Buffs/Dec ATK/Dec SPD/Weaken/Dec ACC/Heal Reduction), Cycle of Violence (speed boost)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'Steal Steel' attacks 2 times, A2 'Wild Whirlwind' attacks all enemies 3 times each, 30% proc per hit = multi-hit synergy). Correct T6 for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A1/A2 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends debuffs from A2), Cycle of Violence (speed boost), CYCLE OF MAGIC (reduces A2/A3 cooldowns)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, HELMSMASHER (Ignore DEF for burst) OR Giant Slayer if using multi-hit A1/A2 setup",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (multi-hit synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for debuff landing), Lore of Steel, UNSHAKEABLE (CRITICAL - +50 RES for immunity to CC in Arena), Cycle of Violence (speed boost)"
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'Steal Steel' attacks 2 times, A2 'Wild Whirlwind' attacks all enemies 3 times each, 30% proc per hit = multi-hit synergy). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A1/A2 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends debuffs from A2)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'Steal Steel' attacks 2 times, A2 'Wild Whirlwind' attacks all enemies 3 times each, 30% proc per hit = multi-hit synergy). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A1/A2 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends debuffs from A2)"
+    ],
+    "general": "CORRECTED: Giant Slayer for all PVE content (A1 'Steal Steel' attacks 2 times, A2 'Wild Whirlwind' attacks all enemies 3 times each = multi-hit, 30% proc per hit). Warmaster INCORRECT for multi-hit champion. Swarm Smiter CRITICAL (multi-hit A1/A2 synergy - extra damage per hit). Master Hexer CRITICAL (extends Block Buffs/Dec ATK/Dec SPD/Weaken/Dec ACC/Heal Reduction from A2). Eagle Eye CRITICAL (+50 ACC for 250+ total, reliable debuff landing). Unshakeable CRITICAL (Arena - +50 RES for immunity to CC). Arena can use Helmsmasher for Ignore DEF burst."
   },
   "blessings": ["Cruelty", "Brimstone", "Phantom Touch"],
   "ai_quirks": {

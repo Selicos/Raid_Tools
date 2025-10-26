@@ -87,12 +87,32 @@
   },
   "recommended_gear": ["Bloodthirst", "Impulse", "Lifesteal", "Reflex", "Relentless", "Toxic", "Immortal", "Perception", "Speed", "Resilience", "Regeneration"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Master Hexer", "Evil Eye", "Cycle of Violence"],
-    "dungeons": ["Flawless Execution", "Master Hexer", "Lore of Steel", "Cycle of Magic"],
-    "arena": ["Flawless Execution", "Cycle of Violence", "Unshakeable"],
-    "doom_tower": ["Warmaster", "Lasting Gifts", "Cycle of Magic"],
-    "faction_wars": ["Warmaster", "Cycle of Magic"],
-    "general": ["Offense/Support/Defense as needed"]
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 'Annihilating Hit' single-target HP-scaling, 60% proc per skill). Correct T6 for single-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence (HP-based champion, extra tankiness)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total, reliable Dec DEF/Dec ACC/Dec ATK/HP Burn debuffs), Lore of Steel, MASTER HEXER (CRITICAL - extends Dec DEF/Dec ACC/Dec ATK/HP Burn debuffs), Cycle of Violence (speed boost)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 single-target HP-scaling, 60% proc per skill) OR Flawless Execution (Ignore DEF for waves)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends Dec DEF/HP Burn), CYCLE OF MAGIC (CRITICAL - reduces A2/A3 cooldowns for more frequent debuffs/shields)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 single-target HP-scaling, 60% proc per skill) OR Flawless Execution (Ignore DEF burst)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for debuff landing), Lore of Steel, UNSHAKEABLE (CRITICAL - +50 RES for 90 total, immunity to CC for support/tank role), Cycle of Violence (speed boost)"
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 'Annihilating Hit' single-target HP-scaling, 60% proc per skill). Correct T6 for single-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (extends Dec DEF/HP Burn), LASTING GIFTS (CRITICAL - extends Shield buffs from A3), CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 'Annihilating Hit' single-target HP-scaling, 60% proc per skill). Correct T6 for single-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (extends Dec DEF/HP Burn), CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling)"
+    ],
+    "general": "Warmaster for all PVE content (A1 'Annihilating Hit' single-target HP-scaling, 60% proc per skill). Correct T6 for single-hit champion. Master Hexer CRITICAL (extends Dec DEF/Dec ACC/Dec ATK/HP Burn debuffs for team support). Eagle Eye CRITICAL (+50 ACC for 250+ total, reliable debuff landing). Cycle of Magic CRITICAL (reduces A2/A3 cooldowns for more frequent AoE debuffs/Shield). Lasting Gifts CRITICAL (Doom Tower - extends Shield buffs from A3). Unshakeable CRITICAL (Arena - +50 RES for 90 total, immunity to CC for tank/support role). Deterrence (HP-based champion, extra damage mitigation). Flawless Execution option for dungeons/Arena if not using Warmaster."
   },
   "blessings": ["Brimstone", "Soul Reap"],
   "ai_quirks": {

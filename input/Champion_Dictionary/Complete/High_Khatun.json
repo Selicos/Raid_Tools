@@ -1,0 +1,195 @@
+{
+  "name": "High_Khatun",
+  "rarity": "Rare",
+  "affinity": "Spirit",
+  "faction": "Barbarians",
+  "role": "Support",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "3/10",
+    "dungeons": "6/10",
+    "doom_tower": "5/10",
+    "arena": "9/10",
+    "faction_wars": "7/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 16350,
+        "ATK": 1024,
+        "DEF": 1189,
+        "SPD": 104,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Imperial Grace",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 25% chance of placing 30% [Decrease SPD] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.7,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single-hit. 3.7x ATK multiplier (4.44 ATK fully booked with +20% damage)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease SPD",
+              "value": 30,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "25% base chance (40% booked) to place 30% Dec SPD for 2 turns. Low proc chance but useful speed control when lands."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Single Target", "Decrease SPD"],
+          "book_value": "Low: +20% damage, +15% Dec SPD chance (25%→40%). Not priority booking.",
+          "notes": "Single-hit A1 filler. 40% Dec SPD chance when booked. Not main focus (use for TM manipulation skills)."
+        },
+        {
+          "name": "Rally the Horde",
+          "type": "A2",
+          "description": "Fill the Turn Meters of all allies by 15% and places a 30% [Increase SPD] buff on all allies for 2 turns.",
+          "effects": [
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 15,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "+15% TM boost to all allies. Instant speed boost for team turn cycling."
+            },
+            {
+              "type": "buff",
+              "stat": "Increase SPD",
+              "value": 30,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "+30% SPD buff to all allies for 2 turns. Stacks with speed aura for massive speed advantage."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Turn Meter Manipulation", "Increase SPD", "Team Support"],
+          "book_value": "CRITICAL: -1 cooldown (4→3). MUST BOOK for Arena and speed team cycling. PRIMARY SKILL.",
+          "notes": "PRIMARY SKILL: +15% TM boost + 30% Inc SPD buff to all allies. MUST BOOK for 3-turn cooldown. EXCELLENT for Arena speed teams (synergizes with +19% SPD aura for massive speed advantage). Use turn 1 in Arena to boost team before enemy turns."
+        },
+        {
+          "name": "Shamanic Lightning",
+          "type": "A3",
+          "description": "Attacks all enemies. Has a 50% chance of decreasing the Turn Meters by 15%.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.5,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE attack. 3.5x ATK multiplier (4.2 ATK fully booked with +20% damage)."
+            },
+            {
+              "type": "turn_meter_steal",
+              "stat": "Turn Meter",
+              "value": 15,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "50% base chance (75% booked) to decrease enemy TM by 15%. AoE TM control for delaying enemy turns."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["AoE", "Turn Meter Manipulation"],
+          "book_value": "Medium: +20% damage, +25% TM reduction chance (50%→75%), -1 cooldown (5→4). Useful for TM control.",
+          "notes": "AoE TM reduction (15% TM decrease, 75% chance when booked). Useful for Arena speed control and delaying enemy turns. Secondary skill to A2."
+        },
+        {
+          "name": "Divine Vitality [P]",
+          "type": "A4",
+          "description": "Ally HP in all battles by 15%.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "HP",
+              "value": 15,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "+15% HP to all allies (all battles). Passive survivability boost for team."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["HP", "Passive", "Team Support"],
+          "book_value": "N/A: Passive, cannot book.",
+          "notes": "Passive +15% HP to all allies (all battles). Improves team survivability. Useful for all content."
+        }
+      ],
+      "aura": "Increases Ally SPD in all battles by 19%.",
+      "comments": "FREE Rare speed aura specialist (login reward). A2 'Rally the Horde' is PRIMARY SKILL: +15% TM boost + 30% Inc SPD buff to all allies (3-turn cooldown when booked). +19% SPD aura all battles excellent for Arena, Clan Boss, dungeons. A3 'Shamanic Lightning' provides AoE TM reduction (75% chance when booked). Passive +15% HP to all allies. EXCELLENT early-game Arena speed lead (9/10). Must book A2 for 3-turn cooldown. Good for Barbarians Faction Wars (7/10) and general speed support. Spirit affinity = weak to Force but strong vs Magic."
+    }
+  ],
+  "mechanics_tags": ["Turn Meter Manipulation", "Increase SPD", "Decrease SPD", "HP", "Passive", "Speed Aura", "Team Support", "AoE"],
+  "stat_priorities": ["300+ SPD", "200+ ACC", "2000+ DEF", "20000+ HP"],
+  "stat_priority_recommendations": {
+    "clan_boss": "Low priority. If used: 250+ SPD (speed tuning), 200+ ACC (Dec SPD), 20000+ HP, 2000+ DEF. A2 TM boost not useful in CB (turn meter controlled by CB). 3/10 CB rating.",
+    "dungeons": "PRIORITY: 250+ SPD (speed tuning), 200+ ACC (Dec SPD/TM reduction), 20000+ HP, 2000+ DEF. A2 TM boost + Inc SPD useful for speed cycling. A3 TM reduction for wave control. Speed or Perception sets.",
+    "arena": "PRIORITY: 300+ SPD (CRITICAL for speed lead - fastest champion goes first), 200+ ACC (TM reduction), 20000+ HP, 2000+ DEF. +19% SPD aura + A2 TM boost/Inc SPD = massive speed advantage. Build fastest in team to use A2 turn 1. Speed sets mandatory.",
+    "faction_wars": "PRIORITY: 250+ SPD, 200+ ACC (Dec SPD/TM reduction), 20000+ HP, 2000+ DEF. A2 TM boost/Inc SPD useful for speed cycling. Passive +15% HP good for survivability. Must book A2 for 3-turn cooldown."
+  },
+  "recommended_gear": ["Speed (MANDATORY - 300+ SPD for Arena speed lead)", "Perception (ACC boost for TM reduction)", "Accuracy (200+ ACC for debuffs)", "Immortal (HP + survivability)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (single-hit A1)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC for Dec SPD), Lore of Steel, CYCLE OF MAGIC (reduces A2/A3 cooldowns), LASTING GIFTS (extends Inc SPD buff on allies)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC for TM reduction), Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2 4→3 booked, A3 5→4 booked cooldowns), LASTING GIFTS (extends Inc SPD buff)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC for TM reduction), Lore of Steel, CYCLE OF MAGIC (faster A2 cycling), LASTING GIFTS (CRITICAL - extends Inc SPD buff for longer speed advantage)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC), Lore of Steel, CYCLE OF MAGIC (faster A2/A3 cycling), LASTING GIFTS (extends Inc SPD buff)"
+    ],
+    "general": "Warmaster for all content (single-hit A1). Cycle of Magic CRITICAL (reduces A2 4→3 booked, A3 5→4 booked cooldowns). Lasting Gifts CRITICAL (extends Inc SPD buff on allies for longer speed advantage in Arena/dungeons). Eagle Eye CRITICAL (+50 ACC for TM reduction/Dec SPD uptime). MUST BOOK A2 for 3-turn cooldown. Build: 300+ SPD (Arena speed lead - fastest in team), 200+ ACC (TM reduction/Dec SPD), 20000+ HP, 2000+ DEF. Speed sets MANDATORY for Arena. Focus: Arena (9/10) with +19% SPD aura + A2 TM boost/Inc SPD for massive speed advantage. Use A2 turn 1 to boost team before enemy turns. Good for Faction Wars (7/10) and early-game dungeons (6/10) with speed support. User Priority: Arena (Priority 4) - High Khatun is FREE speed aura specialist (login reward). Early-game Arena staple for speed teams. Barbarians completed Normal FW, still useful for Hard progression. FREE RARE from login rewards - no pulling required."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams - unlikely)", "Phantom Touch (BEST - speed boost synergy with speed aura)", "Soul Reap (cooldown reduction on kill)", "Polymorph (CC support)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A2 TM boost/Inc SPD when available, A3 for TM reduction. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion. EXCELLENT early-game Arena speed lead + TM manipulation specialist."
+  },
+  "mechanics_advisory": "FREE Rare speed aura specialist (login reward). A2 'Rally the Horde' is PRIMARY SKILL: +15% TM boost + 30% Inc SPD buff to all allies (3-turn cooldown when booked). MUST BOOK A2 for 3-turn cooldown. +19% SPD aura all battles (Arena, Clan Boss, dungeons) stacks with A2 Inc SPD for MASSIVE speed advantage. Combo: Build High Khatun as FASTEST champion in team (300+ SPD) → use A2 turn 1 in Arena to boost team TM + Inc SPD before enemy turns → team goes first and chains attacks. A3 'Shamanic Lightning' provides AoE TM reduction (15% TM decrease, 75% chance when booked) for Arena speed control. A1 'Imperial Grace' has 40% Dec SPD chance when booked (filler skill). Passive 'Divine Vitality' gives +15% HP to all allies (all battles) for survivability. EXCELLENT early-game Arena speed lead (9/10) - FREE from login rewards, no pulling required. Good for Barbarians Faction Wars (7/10) and early-game dungeons (6/10) with speed support. Build: 300+ SPD (CRITICAL for Arena speed lead), 200+ ACC (TM reduction/Dec SPD), 20000+ HP, 2000+ DEF. Speed sets MANDATORY for Arena. Lasting Gifts mastery CRITICAL (extends Inc SPD buff for longer speed advantage). Cycle of Magic CRITICAL (reduces A2 4→3 booked cooldown). User Priority: Arena (Priority 4) - High Khatun is early-game Arena staple for speed teams. Barbarians completed Normal FW, still useful for Hard progression. FREE RARE from daily login - accessible to all players. Spirit affinity = weak to Force but strong vs Magic.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-high-khatun-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/high-khatun/ (accessed 2025-10-25)",
+    "RaidWiki: https://raidwiki.com/champion/high-khatun (accessed 2025-10-25)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "FREE Rare speed aura specialist (login reward). A2 TM boost + Inc SPD (3-turn cooldown when booked). +19% SPD aura all battles. Excellent early-game Arena speed lead. Must book A2. User priority: Arena speed support.",
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Arena + speed support focus. Validated against Ayumilove/HellHades/RaidWiki."
+  },
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "raidwiki, ayumilove_ocr, hellhades",
+    "ocr_notes": "Stats from RaidWiki + Ayumilove OCR (8/8 stats 100% match: HP/ATK/DEF/SPD/C.RATE/C.DMG/RES/ACC validated)"
+  }
+}

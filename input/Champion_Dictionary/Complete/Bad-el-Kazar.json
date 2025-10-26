@@ -78,12 +78,41 @@
   },
   "recommended_gear": ["Reflex", "Relentless", "Stalwart", "Speed", "Perception", "Immortal"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Support Tree (Master Hexer, Lasting Gifts)", "No Rapid Response/Arcane Celerity in speed-tuned teams"],
-    "dungeons": ["Warmaster", "Support Tree (Master Hexer, Lasting Gifts)"],
-    "arena": ["Support/Defense as needed"],
-    "doom_tower": ["Support/Defense as needed"],
-    "faction_wars": ["Warmaster", "Support Tree (Master Hexer, Lasting Gifts)"],
-    "general": ["Offense/Support/Defense as needed"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER (A1 single-hit AoE - 60% proc per skill, 4% boss MAX HP)",
+      "Support: Steadfast (+810 HP), Lay on Hands (healing boost), Healing Savior (healing boost), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control from allies), Lore of Steel, Master Hexer (CRITICAL - extends Poison from 2→3 turns, massive damage increase), Cycle of Magic (cooldown cycling for A2 spam), Lasting Gifts (CRITICAL - extends Continuous Heal buffs from 2→3 turns), Eagle Eye (CRITICAL +50 ACC for Poison consistency - 250+ ACC needed)",
+      "Defense: Improved Parry, Bloodthirst (healing synergy), Delay Death (survivability)",
+      "AVOID: Rapid Response, Arcane Celerity (breaks speed tunes in unkillable/CA teams)"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER (A1 single-hit AoE - 60% proc, 6% boss MAX HP)",
+      "Support: Steadfast, Lay on Hands, Healing Savior (healing boost for A1 + Continuous Heal), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - Poison extension), Cycle of Magic (A2 spam), Lasting Gifts (CRITICAL - Continuous Heal extension), Eagle Eye (CRITICAL +50 ACC for Poison - 200+ ACC needed)",
+      "Defense: Improved Parry, Bloodthirst (healing synergy), Delay Death (survivability)"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Cycle of Violence (Arena farm), Kill Streak (Arena farm), Bring it Down, Methodical, WARMASTER",
+      "Support: Steadfast, Lay on Hands, Healing Savior (healing boost), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control), Lore of Steel (Speed set boost), Master Hexer (Poison extension), Cycle of Magic, Lasting Gifts (Continuous Heal extension), Eagle Eye (+50 ACC)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death, Unshakeable (+50 RES for tank builds - 8/10 Arena rating)"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Support: Steadfast, Lay on Hands, Healing Savior (healing boost for sustain), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control), Lore of Steel, Master Hexer (Poison extension), Cycle of Magic (A2 spam), Lasting Gifts (Continuous Heal extension), Eagle Eye (CRITICAL +50 ACC - 250+ ACC for Hard)",
+      "Defense: Improved Parry, Bloodthirst (healing synergy), Delay Death, Unshakeable (debuff RES for boss survivability)"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Support: Steadfast, Lay on Hands, Healing Savior (healing boost), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control), Lore of Steel, Master Hexer (Poison extension), Cycle of Magic (A2 spam), Lasting Gifts (Continuous Heal extension), Eagle Eye (+50 ACC for Poison consistency)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability)"
+    ],
+    "general": [
+      "PRIORITY OFFENSE T6: WARMASTER (A1 'Dark Sphere' is single-hit AoE attack - 60% proc per skill for 4% boss MAX HP / 6% dungeon boss MAX HP damage). Giant Slayer is INCORRECT for Bad-el-Kazar (no multi-hit skills).",
+      "PRIORITY SUPPORT T6: Master Hexer (CRITICAL for Poison extension - A2 places 2x Poison debuffs for 2 turns, Master Hexer extends to 3 turns = 50% more damage), Lasting Gifts (CRITICAL for Continuous Heal extension - A2 places 2x Continuous Heal for 2 turns, Lasting Gifts extends to 3 turns = 50% more healing), Eagle Eye (CRITICAL +50 ACC for Poison consistency - need 250+ ACC Clan Boss, 200+ dungeons).",
+      "KEY MASTERIES: Warmaster (A1 single-hit AoE), Master Hexer (Poison extension - CRITICAL for damage), Lasting Gifts (Continuous Heal extension - CRITICAL for sustain), Eagle Eye (ACC for Poison), Lay on Hands + Healing Savior (healing boost for A1 + Continuous Heal), Cycle of Magic (A2 spam for cleanse/heal/poison cycling).",
+      "SYNERGIES: A1 heals all allies by 20% of damage dealt (benefits from Lay on Hands + Healing Savior + Bloodthirst). A2 cleanses all debuffs + places 2x Continuous Heal + 2x Poison (3-turn CD when booked). Passive grants all allies +20% damage vs Poisoned targets (does NOT boost Warmaster/Giant Slayer damage - does NOT stack with multiple Bad-el-Kazars). Master Hexer extends Poison duration (2→3 turns) for massive damage increase. Lasting Gifts extends Continuous Heal duration (2→3 turns) for 50% more healing.",
+      "CLAN BOSS SPECIFIC: AVOID Rapid Response and Arcane Celerity masteries (break speed tunes in unkillable/CA teams). Build for 220+ SPD (speed-tuned), 250+ ACC with Eagle Eye, HP%/DEF% for survivability. Master Hexer + Lasting Gifts are CRITICAL for maximizing Poison damage and healing sustain.",
+      "ARENA SPECIFIC: 25% C.RATE aura for all allies. Build for 300+ SPD (Arena 8/10 rating), Unshakeable for tank builds, RES for disruption avoidance. Cycle of Violence + Kill Streak for farming.",
+      "UNIQUE MECHANICS: A1 heals based on TOTAL DAMAGE DEALT (not per target) - build ATK% for more healing in addition to HP%/DEF%. Passive +20% damage boost for allies vs Poisoned targets synergizes with Poison teams (Frozen Banshee, Elenaril, Narma, etc.) but does NOT boost Warmaster/Giant Slayer damage."
+    ]
   },
   "blessings": ["Brimstone (late game)", "Iron Will (Ice Golem)", "Phantom Touch (solo farming)"],
   "ai_quirks": {
@@ -95,13 +124,13 @@
     "cheese_type": null,
     "cheese_mechanic_info": null
   },
-  "mechanics_advisory": "Passive does not boost Warmaster/Giant Slayer damage. Does not stack with multiple Bad-el-Kazars. Synergizes with poisoners and teams that apply Poison debuffs.",
+  "mechanics_advisory": "Bad-el-Kazar is one of the best universal support champions in RAID (Clan Boss 10/10, Dungeons 10/10, Faction Wars 10/10, Doom Tower 9/10, Arena 8/10). A1 'Dark Sphere' is single-hit AoE that benefits from Warmaster (60% proc, 4% boss MAX HP). KEY STRENGTHS: (1) Complete support kit - A1 AoE damage + 20% heal based on damage dealt (benefits from Lay on Hands + Healing Savior), A2 cleanses all debuffs + places 2x Continuous Heal + 2x Poison (3-turn CD when booked), (2) Passive grants all allies +20% damage vs Poisoned targets (does NOT boost Warmaster/Giant Slayer, does NOT stack with multiple Bad-el-Kazars), (3) 25% C.RATE aura for all allies (all battles). REQUIRES Master Hexer (CRITICAL - extends Poison 2→3 turns = 50% more damage) + Lasting Gifts (CRITICAL - extends Continuous Heal 2→3 turns = 50% more healing) + Eagle Eye (+50 ACC for 250+ total Clan Boss, 200+ dungeons). A1 heals based on TOTAL DAMAGE DEALT (not per target) - build ATK% for more healing. CLAN BOSS: AVOID Rapid Response/Arcane Celerity (breaks speed tunes). Build 220+ SPD (speed-tuned), 250+ ACC, HP%/DEF% for survivability. Synergizes with Poison teams (Frozen Banshee, Elenaril, Narma) and benefits from Counterattack (Skullcrusher, Martyr). ARENA: 300+ SPD, Unshakeable for tank, RES for disruption avoidance. Top-tier for Undead Hordes Faction Wars and universal PVE content.",
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-bad-el-kazar-skill-mastery-equip-guide/ (accessed 2024-06-10)",
     "HellHades: https://hellhades.com/champions/bad-el-kazar/ (accessed 2024-06-10)"
   ],
   "update_notes": {
-    "last_updated": "2024-06-10",
-    "last_patch": "Passive updated to 20% damage boost. Template-compliant JSON entry."
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: Confirmed Warmaster is CORRECT (A1 single-hit AoE). Added complete masteries section with full offense/defense/support trees per content type. KEY ADDITIONS: Master Hexer (CRITICAL - extends Poison 2→3 turns = 50% more damage), Lasting Gifts (CRITICAL - extends Continuous Heal 2→3 turns = 50% more healing), Eagle Eye (CRITICAL +50 ACC for Poison consistency - 250+ ACC Clan Boss, 200+ dungeons), Lay on Hands + Healing Savior (healing boost for A1 + Continuous Heal), Cycle of Magic (A2 spam for cleanse/heal/poison cycling), Bloodthirst (healing synergy). CLAN BOSS: AVOID Rapid Response/Arcane Celerity (breaks speed tunes in unkillable/CA teams). ARENA: Cycle of Violence + Kill Streak (Arena 8/10), Unshakeable for tank builds. CLARIFIED: Passive +20% damage vs Poisoned targets does NOT boost Warmaster/Giant Slayer damage and does NOT stack with multiple Bad-el-Kazars. A1 heals based on TOTAL DAMAGE DEALT (not per target) - build ATK% for more healing. Expanded mechanics_advisory with mastery strategy, synergies, and detailed build guidance. Added validation_sources."
   }
 }

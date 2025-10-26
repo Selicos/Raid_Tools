@@ -104,14 +104,44 @@
     "dungeons": "220+ SPD, 250+ ACC, ATK%/C.DMG for wave clear",
     "arena": "300+ SPD, 350+ ACC, 100% C.RATE, C.DMG for nuke"
   },
-  "recommended_gear": ["Speed", "Perception", "Immunity", "Stoneskin", "Savage"],
+  "recommended_gear": ["Speed", "Perception", "Immunity", "Stoneskin", "Savage", "Relentless"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Evil Eye", "Support"],
-    "dungeons": ["Helmsmasher", "Master Hexer", "Lore of Steel"],
-    "arena": ["Helmsmasher", "Eagle-Eye", "Unshakeable"],
-    "doom_tower": ["Timely Intervention", "Lasting Gifts"],
-    "faction_wars": ["Warmaster", "Cycle of Magic"],
-    "general": ["Offense/Support/Defense as needed"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Grim Resolve (synergy with self-revive passive), Heart of Glory, Single Out, Bring it Down, Methodical, Warmaster",
+      "Defense: Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Swarm Smiter, Evil Eye (TM control), Lore of Steel"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Grim Resolve (self-revive synergy), Heart of Glory, Single Out, Bring it Down, Warmaster or Helmsmasher",
+      "Defense: Blastproof, Improved Parry",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC), Swarm Smiter, Lore of Steel, Master Hexer (extends Block Buffs)"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory (speed nuke), Shield Breaker, Ruthless Ambush (+8% first hit), Helmsmasher (ignore DEF stacking with A2)",
+      "Defense: Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC for Stun/Sheep/Block Buffs), Swarm Smiter, Unshakeable (+50 RES)"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Grim Resolve (self-revive synergy), Heart of Glory, Single Out, Bring it Down, Warmaster",
+      "Defense: Blastproof, Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC), Swarm Smiter, Lore of Steel, Master Hexer (Block Buffs extension), Timely Intervention (TM on ally low HP)"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Grim Resolve (self-revive passive), Heart of Glory, Single Out, Bring it Down, Warmaster",
+      "Defense: Blastproof, Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC), Swarm Smiter, Lore of Steel, Cycle of Magic"
+    ],
+    "general": [
+      "KEY SYNERGIES:",
+      "- Grim Resolve: +5% damage when HP ≤50% → synergizes with self-revive passive (revives at 100% HP, but benefits when low HP before death)",
+      "- Helmsmasher (Arena): 50% ignore 25% DEF → stacks additively with A2 ignore 50% DEF (total 75% DEF ignore)",
+      "- Warmaster (PVE): Single-hit skills → 60% proc rate for 4% MAX HP damage",
+      "- Eagle Eye + Pinpoint Accuracy: High ACC required for Stun (A1), Sheep (A2), Block Buffs (A3)",
+      "- Master Hexer: Extends Block Buffs duration (30% chance)",
+      "- Heart of Glory: Arena speed nuke builds benefit from full HP damage boost",
+      "ARENA PRIORITY: Helmsmasher for DEF ignore stacking, Eagle Eye for ACC",
+      "PVE PRIORITY: Warmaster for boss damage, Grim Resolve for self-revive sustain"
+    ]
   },
   "blessings": ["Polymorph", "Intimidating Presence"],
   "ai_quirks": {
@@ -123,7 +153,14 @@
     "cheese_type": "",
     "cheese_mechanic_info": ""
   },
-  "mechanics_advisory": "Immune to Sheep. Excels at stripping buffs and controlling mythics in Arena. Build for high speed and accuracy.",
+  "mechanics_advisory": "Sun Wukong is a top-tier Arena champion with buff strip, control (Stun/Sheep), and self-revive. Immune to Sheep. Excels at controlling mythics and stripping buffs. A2 ignores 50% DEF and applies surplus damage (kills squishiest enemy first for splash). Passive self-revive (3 turns after death, 100% HP/TM) synergizes with Grim Resolve mastery. Build for high SPD, ACC (Stun/Sheep/Block Buffs), and nuke damage (ATK%/C.DMG). Arena: Helmsmasher stacks with A2 DEF ignore. PVE: Warmaster for boss damage.",
+  "validation_sources": [
+    "Ayumilove (https://ayumilove.net/raid-shadow-legends-sun-wukong-skill-mastery-equip-guide/)",
+    "HellHades (https://hellhades.com/raid/champions/sun-wukong/)",
+    "Raid Wiki (https://raidshadowlegends.fandom.com/wiki/Sun_Wukong)",
+    "In-game screenshot (base stats)",
+    "Masteries.md (mastery synergies)"
+  ],
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-sun-wukong-skill-mastery-equip-guide/ (accessed 2025-10-23)",
     "HellHades: https://hellhades.com/raid/champions/sun-wukong/ (accessed 2025-10-23)",
@@ -131,7 +168,9 @@
     "In-game screenshot (base stats, 2025-10-23)"
   ],
   "update_notes": {
-    "last_updated": "2025-10-23",
-    "last_patch": "User intake, no recent changes."
-  }
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: Added complete masteries section with Grim Resolve (self-revive synergy), Helmsmasher (Arena DEF ignore stacking with A2), Warmaster (PVE boss damage), Eagle Eye/Pinpoint Accuracy (high ACC for control), Master Hexer (Block Buffs extension), and content-specific recommendations. Expanded mechanics_advisory with strategic guidance. Added validation_sources."
+  },
+  "author": "GitHub Copilot",
+  "draft": false
 }

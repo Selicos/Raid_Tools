@@ -159,12 +159,40 @@
   },
   "recommended_gear": ["Relentless", "Toxic", "Perception", "Speed", "Accuracy"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Master Hexer", "Sniper"],
-    "dungeons": ["Giant Slayer", "Master Hexer", "Sniper"],
-    "arena": ["Helmsmasher", "Evil Eye", "Cycle of Violence"],
-    "doom_tower": ["Warmaster", "Master Hexer"],
-    "faction_wars": ["Warmaster", "Master Hexer"],
-    "general": ["Offense/Support as needed"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A2 multi-hit - 1-4 hits depending on Poison count, 30% proc per hit = up to ~76% total proc chance with 3 Poison debuffs)",
+      "Support: Steadfast (+810 HP), Pinpoint Accuracy, Charged Focus, Swarm Smiter (A2 multi-hit synergy), Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - extends Poison from A1/passive for 2→3 turns, massive synergy with A2 multi-hit mechanic), Cycle of Magic (cooldown cycling), Eagle Eye (CRITICAL +50 ACC for Poison consistency - 250+ ACC needed)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability)"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A2 multi-hit - 30% proc per hit, scales with Poison count)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A2 multi-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - Poison extension 2→3 turns), Cycle of Magic, Eagle Eye (CRITICAL +50 ACC - 250+ ACC total)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Cycle of Violence (Arena farm), Kill Streak, Bring it Down, Methodical, Helmsmasher (Arena burst damage)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A2 multi-hit), Evil Eye (TM control), Lore of Steel (Speed set boost), Master Hexer (Poison extension), Cycle of Magic, Eagle Eye (+50 ACC)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death",
+      "NOTE: Can use GIANT SLAYER instead of Helmsmasher if using Poison setup in Arena"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A2 multi-hit for boss damage)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A2 multi-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - Poison extension 2→3 turns), Cycle of Magic, Eagle Eye (CRITICAL +50 ACC - 250+ ACC for Hard)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death, Unshakeable (debuff RES)"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (A2 multi-hit)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A2 multi-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - Poison extension), Cycle of Magic, Eagle Eye (+50 ACC)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death"
+    ],
+    "general": [
+      "PRIORITY OFFENSE T6: GIANT SLAYER (A2 'Serpent Fang' attacks 1 enemy with extra hits for each Poison debuff - 1 base hit + up to 3 extra hits = 1-4 total hits. 30% proc per hit = up to ~76% total proc chance with 3 Poison debuffs. Scales with Poison count for massive MAX HP damage). Warmaster is SUBOPTIMAL for Kalvalax (A2 multi-hit benefits more from Giant Slayer). NOTE: Arena can use Helmsmasher for burst damage if not using Poison setup.",
+      "PRIORITY SUPPORT T6: Master Hexer (CRITICAL - extends Poison from 2→3 turns. A1 extends Poison duration by 1 turn on 40% chance, 60% booked. A2 scales damage with Poison count. A3 damage scales with Poison count. Passive places 2x Poison on self-damage. Master Hexer extends all Poison for 50% more damage + more A2 hits), Eagle Eye (CRITICAL +50 ACC for Poison consistency - need 250+ ACC Clan Boss/Doom Tower).",
+      "KEY MASTERIES: Giant Slayer (A2 multi-hit - scales with Poison count), Master Hexer (CRITICAL - entire kit scales with Poison, extends 2→3 turns), Eagle Eye (ACC for Poison), Swarm Smiter (A2 multi-hit synergy), Cycle of Magic (cooldown cycling).",
+      "SYNERGIES: A2 'Serpent Fang' multi-hit mechanic (1 base hit + up to 3 extra hits for each Poison debuff = 1-4 total hits) synergizes with Giant Slayer (30% proc per hit). A1 extends Poison duration by 1 turn (40% base, 60% booked) + heals 2.5% MAX HP per Poison debuff. A3 AoE damage scales with Poison count. Passive places 2x Poison debuffs on ally taking fatal hit (50% chance, saves ally + sets up A2 multi-hit). Master Hexer extends ALL Poison from 2→3 turns for 50% more damage + more consistent A2 multi-hit. Build for 250+ ACC (with Eagle Eye), 200+ SPD, HP%/DEF% for survivability.",
+      "UNIQUE MECHANICS: A2 hit count scales with Poison debuffs on target (1-4 hits total). More Poison = more hits = more Giant Slayer procs. A1/A3 damage scales with Poison count. Passive saves ally from fatal hit by placing 2x Poison on them (cheese synergy for ally survival + A2 setup). Entire kit revolves around Poison stacking.",
+      "POISON SYNERGY: Kalvalax needs Poison support (Frozen Banshee, Elenaril, Narma, etc.) to maximize A2 multi-hit damage. Without Poison setup, A2 is only 1-hit (Giant Slayer still works but not optimal). Master Hexer extends Poison duration for sustained multi-hit damage."
+    ]
   },
   "blessings": ["Brimstone", "Phantom Touch", "Cruelty"],
   "ai_quirks": {

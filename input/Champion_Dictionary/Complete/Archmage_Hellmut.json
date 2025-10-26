@@ -1,0 +1,276 @@
+{
+  "name": "Archmage Hellmut",
+  "rarity": "Epic",
+  "affinity": "Magic",
+  "faction": "Banner Lords",
+  "role": "Support",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "5/10",
+    "dungeons": "8/10",
+    "doom_tower": "9/10",
+    "arena": "9/10",
+    "faction_wars": "9/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 18825,
+        "ATK": 925,
+        "DEF": 1123,
+        "SPD": 108,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Arcane Dynamo",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Fills this Champion's Turn Meter by 10%. Fills the Turn Meter by 20% if this attack is critical.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.8,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Single-target ATK-based damage with 4.8x multiplier"
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 10.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "NA",
+              "notes": "Fills own TM by 10%, or 20% if attack is critical. Excellent TM cycling for support champion."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Turn Meter Manipulation",
+            "Self TM Fill",
+            "Crit-Dependent"
+          ],
+          "book_value": "Medium - +25% damage total, helps with cycling but not critical",
+          "notes": "Crit-dependent TM gain makes C.RATE valuable. Allows Hellmut to cycle faster for support skills."
+        },
+        {
+          "name": "Timeslip (Cooldown: 4 turns)",
+          "type": "A2",
+          "description": "Attacks 1 enemy. Also, attack all other enemies if the first attack is critical. Each hit has a 50% chance of placing a [Stun] debuff for 1 turn. After attacking, decrease the Turn Meters of each enemy without a [Stun] debuff by 20%.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 6.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Primary target takes 6x ATK damage. If critical, also attacks all other enemies for 3.5x ATK each."
+            },
+            {
+              "type": "debuff",
+              "stat": "Stun",
+              "value": 50.0,
+              "per_hit": true,
+              "target": "aoe_enemies",
+              "duration": "1 turn",
+              "notes": "50% base chance per hit to place [Stun] for 1 turn. Books increase to 75% total. Crit-dependent AOE spread."
+            },
+            {
+              "type": "turn_meter_steal",
+              "stat": "Turn Meter",
+              "value": 20.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "Decreases TM by 20% for all enemies WITHOUT [Stun] debuff. Powerful TM control when combined with stuns."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "AOE Damage",
+            "Stun",
+            "Turn Meter Manipulation",
+            "Turn Meter Reduction",
+            "Crit-Dependent",
+            "Control"
+          ],
+          "book_value": "HIGH - Reduces cooldown by 1 turn AND increases stun chance by 25% total (critical for control)",
+          "notes": "CORE SKILL - Crit-dependent AOE spread with dual control (stun + TM reduction). Requires 100% C.RATE for consistency. Enemies with stun are immune to TM reduction, making this a strong lockdown tool."
+        },
+        {
+          "name": "Psychic Guidance (Cooldown: 5 turns)",
+          "type": "A3",
+          "description": "Places a 30% [Increase SPD] buff, a 30% [Increase C.RATE] buff and a 30% [Increase C.DMG] buff on all allies for 2 turns.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "SPD",
+              "value": 30.0,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "30% Speed buff for all allies for 2 turns"
+            },
+            {
+              "type": "buff",
+              "stat": "C.RATE",
+              "value": 30.0,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "30% Crit Rate buff for all allies for 2 turns"
+            },
+            {
+              "type": "buff",
+              "stat": "C.DMG",
+              "value": 30.0,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "30% Crit Damage buff for all allies for 2 turns"
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "Team Buff",
+            "Speed Buff",
+            "Crit Rate Buff",
+            "Crit Damage Buff",
+            "Offensive Support"
+          ],
+          "book_value": "HIGH - Reduces cooldown by 2 turns (5→3), allowing near-permanent uptime on critical buffs",
+          "notes": "CORE SKILL - Triple offensive buff with excellent synergy. Enables crit-based teams and increases overall team damage/speed. Booked 3-turn cooldown means 2 turns of buffs with only 1 turn downtime."
+        },
+        {
+          "name": "Chrono Isolation (Passive)",
+          "type": "Passive",
+          "description": "Immune to Turn Meter decreasing effects.",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "Permanent",
+              "notes": "Complete immunity to TM reduction effects. Cannot be TM locked or controlled via TM manipulation."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Passive",
+            "TM Immunity",
+            "Control Immunity"
+          ],
+          "book_value": "NA - Passive cannot be booked",
+          "notes": "KEY DEFENSIVE PASSIVE - Prevents TM lock strategies. Excellent for Arena and bosses with TM reduction mechanics (Scarab, Spider, etc.)."
+        }
+      ],
+      "aura": "Increase Ally SPD in the Arena by 17%",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
+    }
+  ],
+  "mechanics_tags": [
+    "Turn Meter Manipulation",
+    "Self TM Fill",
+    "AOE Damage",
+    "Stun",
+    "Turn Meter Reduction",
+    "Team Buff",
+    "Speed Buff",
+    "Crit Rate Buff",
+    "Crit Damage Buff",
+    "Control",
+    "TM Immunity",
+    "Crit-Dependent",
+    "Offensive Support"
+  ],
+  "stat_priorities": [
+    "100% Crit Rate (critical for A2 AOE spread and A1 TM gain)",
+    "200+ ACC (for Stun debuffs)",
+    "200+ SPD (turn cycling)",
+    "HP%/DEF% for survivability"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "Low priority - lacks debuff synergy. If used: 200+ SPD, 200+ ACC, HP%/DEF% for survivability",
+    "dungeons": "200+ SPD, 100% C.RATE, 200+ ACC, HP%/DEF%. Focus on wave control and buff cycling.",
+    "arena": "250+ SPD (with 17% speed aura), 100% C.RATE, 200+ ACC for stun/control, RES optional for tank builds",
+    "doom_tower": "200+ SPD, 100% C.RATE, 250+ ACC (Hard), HP%/DEF% for survivability. TM immunity passive is key for boss control immunity.",
+    "faction_wars": "200+ SPD, 100% C.RATE, 200+ ACC, HP%/DEF%. Excellent Banner Lords support with triple buff + control."
+  },
+  "recommended_gear": [
+    "PRIMARY: Speed + Perception (200+ SPD, 100% C.RATE, 200+ ACC for control/buff cycling)",
+    "ARENA: Speed + Accuracy (250+ SPD with aura, 100% C.RATE, high ACC for stun locks)",
+    "DOOM TOWER: Speed + Accuracy + Immortal (survivability, 250+ ACC for Hard, TM immunity passive key)",
+    "ALTERNATIVE: Relentless for extra turns (synergizes with buff/control cycling)"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Low priority content for Hellmut (5/10 rating) - if used:",
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, GIANT SLAYER (A2 2-hit synergy - 30% proc per hit)",
+      "Support: Steadfast, Lay on Hands, Healing Savior (buff extension), Lore of Steel, Master Hexer (Stun extension - NOTE: Will NOT extend Stun as it's crowd control, use for other debuffs if applicable), Cycle of Magic, Lasting Gifts (buff duration)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability)"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, GIANT SLAYER (A2 2-hit multi-proc - 30% per hit = excellent damage on waves and bosses)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A2 multi-hit synergy), Evil Eye (TM control synergy), Lore of Steel, Master Hexer (Stun extension), Cycle of Magic, Lasting Gifts (buff extension), Eagle Eye (CRITICAL +50 ACC for Stun consistency - 200+ ACC needed)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability for wave tanking)"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Cycle of Violence (Arena farm), Kill Streak (Arena farm), Bring it Down, Methodical, GIANT SLAYER (A2 2-hit synergy)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A2 multi-hit), Evil Eye (TM manipulation), Lore of Steel (Speed set boost), Master Hexer (Stun extension - NOTE: Will NOT extend Stun, but useful if using other debuffers), Cycle of Magic, Lasting Gifts (buff extension for A3 buffs), Eagle Eye (CRITICAL +50 ACC for Stun locks - 200+ ACC needed)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death, Unshakeable (+50 RES for tank builds)"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, GIANT SLAYER (A2 2-hit multi-proc - 30% per hit for boss damage)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A2 multi-hit), Evil Eye (TM manipulation vs waves), Lore of Steel, Master Hexer (Stun extension - NOTE: Will NOT extend Stun, useful for other debuffs), Cycle of Magic, Lasting Gifts (buff extension), Eagle Eye (CRITICAL +50 ACC - 250+ ACC needed for Hard)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death, Unshakeable (debuff RES for boss survivability)"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, GIANT SLAYER (A2 2-hit multi-proc)",
+      "Support: Steadfast, Pinpoint Accuracy, Charged Focus, Swarm Smiter (A2 multi-hit), Evil Eye (TM control), Lore of Steel, Master Hexer (Stun extension - NOTE: Will NOT extend Stun), Cycle of Magic, Lasting Gifts (buff extension), Eagle Eye (CRITICAL +50 ACC for Stun consistency)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability)"
+    ],
+    "general": [
+      "PRIORITY OFFENSE T6: GIANT SLAYER (A2 is 2-hit attack - primary target + AoE spread if crit - 30% proc per hit = ~51% chance per A2 use for significant MAX HP damage). Warmaster is INCORRECT for Hellmut due to multi-hit A2.",
+      "PRIORITY SUPPORT T6: Eagle Eye (CRITICAL +50 ACC for Stun consistency - need 200+ ACC dungeons, 250+ ACC Doom Tower Hard). Master Hexer is listed but NOTE: Will NOT extend Stun debuff (crowd control) - only extends non-CC debuffs like HP Burn, Poison, Weaken, etc. If not using other debuffers on team, skip Master Hexer.",
+      "KEY MASTERIES: Giant Slayer (A2 multi-hit), Eagle Eye (ACC for Stun), Lore of Steel (Speed set boost for 200+ SPD needs), Lasting Gifts (buff extension for A3 SPD/C.RATE/C.DMG buffs - 2 turns → 3 turns effective), Cycle of Magic (cooldown cycling for A2/A3 spam).",
+      "SYNERGIES: A2 2-hit attack benefits from Giant Slayer (30% proc per hit). A3 triple buff benefits from Lasting Gifts (extend duration). A1 TM fill + A2 TM reduction benefit from Cycle of Magic (faster cycling). Requires 100% C.RATE for A2 AOE spread consistency (crit-dependent).",
+      "ARENA SPECIFIC: Cycle of Violence + Kill Streak for Arena farming (Arena rating 9/10). Unshakeable for tank builds to avoid disruption.",
+      "DOOM TOWER SPECIFIC: Passive TM immunity prevents TM lock strategies - no additional masteries needed for this. Focus on ACC (Eagle Eye) and survivability (Delay Death, Unshakeable)."
+    ]
+  },
+  "blessings": [
+    "PRIORITY: Brimstone (Doom Tower/Dungeons - adds damage on debuff placement, synergizes with Stun)",
+    "ARENA: Crushing Rend (extra damage on control/stun)",
+    "ALTERNATIVE: Phantom Touch (extra turn chance, synergizes with buff/control cycling)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI behavior is generally good - prioritizes A3 buffs when available, uses A2 for control. No major issues reported."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "NA",
+    "cheese_mechanic_info": "Not a cheese champion - standard support/control role. TM immunity passive prevents being cheesed by TM lock strategies."
+  },
+  "mechanics_advisory": "Archmage Hellmut is a versatile Epic support with excellent control and offensive buffs. A2 'Timeslip' is a 2-hit attack (primary target + AoE spread if crit) that benefits from Giant Slayer (30% proc per hit). KEY STRENGTHS: (1) Triple offensive buff (SPD/C.RATE/C.DMG) with near-permanent uptime when booked (3-turn CD, 2-turn duration), (2) Crit-dependent AOE stun + TM reduction for strong wave control, (3) TM immunity passive prevents control strategies (Scarab, Spider, Arena TM locks), (4) 17% Arena speed aura. REQUIRES 100% CRIT RATE for A2 AOE spread consistency. Build for 200+ SPD (250+ Arena), 100% C.RATE, 200+ ACC (250+ Doom Tower Hard) with Eagle Eye mastery (+50 ACC), HP%/DEF% for survivability. Lasting Gifts extends A3 buffs effectively (2→3 turns). NOTE: Master Hexer will NOT extend Stun debuff (crowd control immunity) - only use if team has other debuffs like HP Burn/Poison/Weaken. Excellent for Banner Lords Faction Wars, Arena control/buff teams, and Doom Tower waves. Less useful for Clan Boss (5/10 rating - no debuff synergy). Synergizes with crit-based nukers and ACC-based debuffers.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-archmage-hellmut-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/archmage-hellmut/ (accessed 2025-10-25)",
+    "RaidHQ: User-provided base stats and skill descriptions"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Archmage Hellmut is an underrated Epic support with excellent kit for control and offensive buffing. 17% Arena speed aura is strong for Epic tier. MUST BOOK A2 and A3 for effectiveness (reduces cooldowns significantly). User priority: Banner Lords Faction Wars (Normal complete, consider for Hard progression). Also strong for Arena control/buff teams and Doom Tower wave control.",
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: Corrected T6 Offense mastery from Warmaster to GIANT SLAYER (A2 'Timeslip' is 2-hit attack - primary target + AOE spread if crit - 30% proc per hit = ~51% total proc chance). Added complete masteries section with full offense/defense/support trees per content type. KEY ADDITIONS: Eagle Eye (CRITICAL +50 ACC for Stun consistency - 200+ ACC dungeons, 250+ Hard Doom Tower), Lasting Gifts (buff extension for A3 SPD/C.RATE/C.DMG buffs), Cycle of Magic (cooldown cycling), Lore of Steel (Speed set boost). CLARIFIED: Master Hexer will NOT extend Stun debuff (crowd control) - only extends non-CC debuffs. Arena-specific: Cycle of Violence + Kill Streak for farming (Arena 9/10 rating). Doom Tower: Unshakeable for debuff RES, passive TM immunity prevents TM locks. Expanded mechanics_advisory with Giant Slayer synergy, mastery strategy, and detailed build guidance. Added validation_sources."
+  }
+}

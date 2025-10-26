@@ -1,0 +1,202 @@
+{
+  "name": "Apothecary",
+  "rarity": "Rare",
+  "affinity": "Magic",
+  "faction": "High Elves",
+  "role": "Support",
+  "draft": true,
+  "meta_ratings": {
+    "clan_boss": "7/10",
+    "dungeons": "9/10",
+    "doom_tower": "8/10",
+    "arena": "8/10",
+    "faction_wars": "9/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 17175,
+        "ATK": 881,
+        "DEF": 1002,
+        "SPD": 106,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Scatterbolt",
+          "type": "A1",
+          "description": "Attacks 3 times at random.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.4,
+              "per_hit": true,
+              "target": "random_enemy",
+              "duration": "NA",
+              "notes": "3 random hits at 1.4x ATK multiplier each. Total potential damage: 4.2x ATK if all hit same target. Excellent for Giant Slayer procs."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Multi-hit",
+            "Random target",
+            "ATK scaling"
+          ],
+          "book_value": "Medium priority - total +25% damage (5% + 5% + 5% + 10%), but A3 cooldown is more important",
+          "notes": "Triple-hit A1 is excellent for Giant Slayer mastery procs (3 chances per turn). Random targeting can spread damage or focus-fire depending on RNG. Strong for breaking shields and triggering masteries."
+        },
+        {
+          "name": "Soothing Chant (Cooldown: 3 turns)",
+          "type": "A2",
+          "description": "Heals a target ally by 35% HP. This Heal can be critical.",
+          "effects": [
+            {
+              "type": "heal",
+              "stat": "HP",
+              "value": 35,
+              "per_hit": false,
+              "target": "single_ally",
+              "duration": "NA",
+              "notes": "Base heal: 35% of target's MAX HP. Can crit for 50% boost (52.5% total). Fully booked: 50% base heal (75% crit). Build C.RATE for consistent crit heals."
+            }
+          ],
+          "cooldown_booked": 2,
+          "mechanics_tags": [
+            "Heal",
+            "Crit-able heal",
+            "Single-target"
+          ],
+          "book_value": "HIGHEST priority - reduces cooldown 3→2 turns AND increases heal 35%→50% (+15% heal). Massive survivability boost.",
+          "notes": "One of the best heals in the game for a Rare. Crit-able means it scales with C.RATE/C.DMG. At 100% C.RATE and 50% C.DMG, heals for 75% MAX HP every 2 turns. Can target self. Essential for dungeons and Faction Wars."
+        },
+        {
+          "name": "Boon of Speed (Cooldown: 5 turns)",
+          "type": "A3",
+          "description": "Places a 30% [Increase Speed] buff on all allies for 2 turns. Fills the Turn Meter of all allies by 15%.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "SPD",
+              "value": 30,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": 2,
+              "notes": "30% Increase Speed buff on all allies for 2 turns. Stacks multiplicatively with base speed."
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 15,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "NA",
+              "notes": "15% TM boost to all allies. Effective speed boost + cycle advantage. Core skill for speed tuning and turn cycling."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "Increase Speed",
+            "Turn Meter Boost",
+            "AOE buff"
+          ],
+          "book_value": "HIGHEST priority - reduces cooldown 5→3 turns. Doubles uptime of speed buff and TM boost. Essential for all content.",
+          "notes": "Signature skill. Speed buff + TM boost = massive team acceleration. At 106 base SPD, Apothecary cycles A3 frequently. Fully book for 3-turn CD (up every ~4-5 turns with speed tuning). Essential for Arena, dungeons, and speed farming. Synergizes with high-damage nukers."
+        }
+      ],
+      "aura": "Increases Ally DEF in Dungeons by 21%",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
+    }
+  ],
+  "mechanics_tags": [
+    "Increase Speed",
+    "Turn Meter Boost",
+    "Heal",
+    "Crit-able heal",
+    "Multi-hit A1",
+    "AOE buff"
+  ],
+  "stat_priorities": [
+    "220+ SPD (cycle A3 faster)",
+    "100% C.RATE (crit heals)",
+    "HP%/DEF% for survivability",
+    "C.DMG for bigger crit heals"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "200+ SPD, 100% C.RATE, HP%/DEF%, C.DMG - strong support for speed tuning and sustain",
+    "dungeons": "220+ SPD, 100% C.RATE, HP%/DEF%, C.DMG - top-tier speed/heal support for all dungeons",
+    "arena": "250+ SPD, 100% C.RATE, HP%/DEF% - excellent TM booster for speed teams",
+    "doom_tower": "220+ SPD, 100% C.RATE, HP%/DEF%, C.DMG - strong for boss and wave healing",
+    "faction_wars": "200+ SPD, 100% C.RATE, HP%/DEF%, C.DMG - core High Elf support"
+  },
+  "recommended_gear": [
+    "Primary: Speed + Immortal (fast cycling + sustain)",
+    "Alternative: Speed + Accuracy (if using for debuff extension teams)",
+    "Arena: Speed + Perception (maximize SPD for TM boost)",
+    "Stats: SPD boots (mandatory), HP%/DEF% chest, C.RATE gloves, HP%/DEF% banner"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'Celerity' attacks 3 times at random, 30% proc per hit = ~66% total proc chance). Correct T6 for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Rapid Response, SWARM SMITER (CRITICAL - multi-hit A1 synergy, extra damage per hit), EAGLE EYE (+50 ACC if needed, usually low priority for healer/speed support), Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2/A3 cooldowns for more frequent heals/speed boosts), LASTING GIFTS (CRITICAL - extends Speed/Inc ATK buffs from A3)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'Celerity' attacks 3 times at random, 30% proc per hit = ~66% total proc chance). Correct T6 for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution (optional)",
+      "SUPPORT: Pinpoint Accuracy (low priority, no debuffs), Charged Focus, Rapid Response, SWARM SMITER (CRITICAL - multi-hit A1 synergy), Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2 heal/A3 speed boost cycling), LASTING GIFTS (CRITICAL - extends Speed/Inc ATK buffs from A3)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (A1 3-hit) OR Helmsmasher if not using A1 for damage",
+      "DEFENSE: Tough Skin, Blastproof, Improved Parry, Bloodthirst, Retribution, UNSHAKEABLE (+50 RES for support survivability, immunity to CC)",
+      "SUPPORT: Pinpoint Accuracy (low priority), Charged Focus, Rapid Response, SWARM SMITER (multi-hit A1 synergy), Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling), LASTING GIFTS (CRITICAL - extends Speed/Inc ATK buffs from A3)"
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'Celerity' attacks 3 times at random, 30% proc per hit = ~66% total proc chance). Correct T6 for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy (low priority), Charged Focus, Rapid Response, SWARM SMITER (CRITICAL - multi-hit A1 synergy), Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2 heal/A3 speed boost cycling), LASTING GIFTS (CRITICAL - extends Speed/Inc ATK buffs from A3)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'Celerity' attacks 3 times at random, 30% proc per hit = ~66% total proc chance). Correct T6 for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy (low priority), Charged Focus, Rapid Response, SWARM SMITER (CRITICAL - multi-hit A1 synergy), Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling), LASTING GIFTS (CRITICAL - extends Speed/Inc ATK buffs)"
+    ],
+    "general": "Giant Slayer CRITICAL for all PVE content (A1 'Celerity' attacks 3 times at random = multi-hit, 30% proc per hit = ~66% total proc chance). Correct T6 for multi-hit champion. Swarm Smiter CRITICAL (multi-hit A1 synergy - extra damage per hit). Cycle of Magic CRITICAL (reduces A2 heal/A3 speed boost cooldowns for more frequent utility). Lasting Gifts CRITICAL (extends Speed/Inc ATK buffs from A3 for longer team boost). Pinpoint Accuracy/Eagle Eye low priority (no debuffs in kit, focus is healer/speed support). Unshakeable for Arena survivability (+50 RES, immunity to CC)."
+  },
+  "blessings": [
+    "Phantom Touch (best - speed boost on A3 use)",
+    "Brimstone (if used in HP Burn teams)",
+    "Polymorph (CC support for waves)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI is excellent - prioritizes A3 for speed boost, uses A2 on low-health allies. No issues on auto."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Speed/TM manipulation specialist",
+    "cheese_mechanic_info": "Apothecary is a cornerstone of speed farming and TM boost strategies. Enables 2:1 or 3:1 speed tuning in Clan Boss. Synergizes with high-damage nukers for Arena blitz teams. Can enable cheese comps by cycling team turns faster than boss (e.g., Dragon, Fire Knight)."
+  },
+  "mechanics_advisory": "One of the best Rare champions in the game. Speed buff + TM boost on A3 enables speed tuning, turn cycling, and blitz strategies. Crit-able heal on A2 (75% MAX HP with books + 100% C.RATE) provides massive sustain. Triple-hit A1 synergizes with Giant Slayer for extra damage. Excellent for all content, especially dungeons (9/10) and Faction Wars (9/10). Core support for early-to-mid game and remains viable in endgame for High Elf FW and dungeon speed teams. User Priority: Dungeons (top priority), Faction Wars (High Elf near completion). Apothecary is must-build for dungeon progression.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-apothecary-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/apothecary/ (accessed 2025-10-25)",
+    "RaidWiki + Ayumilove stats validated via scraper"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Top-tier Rare support champion. Core for dungeon progression and speed farming. User Priority: Dungeons (Priority 2 - HP Burn team preference, but Apothecary fits any comp), Faction Wars (High Elf near completion - Priority 5). Fully book A2 and A3 for maximum impact.",
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "Initial entry creation - Hybrid workflow (user stats + AI research)"
+  },
+  "validation_metadata": {
+    "stat_confidence": 100.0,
+    "stat_differences": [],
+    "data_sources": "raidwiki_stats+ayumilove_ocr_validated",
+    "ocr_notes": "Stats compared between RaidWiki and Ayumilove OCR"
+  }
+}

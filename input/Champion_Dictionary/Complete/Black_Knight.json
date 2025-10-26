@@ -128,6 +128,44 @@
       ]
     }
   ],
+  "masteries": {
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER (A1/A2 single-hit skills - 60% proc per skill, 4% boss MAX HP)",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal (healing synergy with A1 Continuous Heal + passive heal), Delay Death (CRITICAL - synergizes with passive Unkillable on fatal hit), Retribution (counter synergy), Unshakeable (CRITICAL +50 RES for tank role - base 50 RES)",
+      "Support: Steadfast (+810 HP for tank pool), Lay on Hands (healing boost), Healing Savior (healing boost for A1/A3 Continuous Heal), Lore of Steel (Speed/Lifesteal/Immortal set boost), Lasting Gifts (CRITICAL - extends A3 buffs from 2→3 turns)",
+      "NOTE: Low priority for Clan Boss (7/10 rating) - better suited for dungeons/Doom Tower"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER (A1/A2 single-hit - 60% proc, 6% boss MAX HP)",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal (healing synergy), Delay Death (CRITICAL - synergizes with passive), Retribution (counter), Unshakeable (CRITICAL +50 RES for tank - 9/10 Dungeons rating)",
+      "Support: Steadfast, Lay on Hands, Healing Savior (healing boost for A1/A3 Continuous Heal), Lore of Steel (Speed/Immortal set boost), Lasting Gifts (CRITICAL - A3 buff extension 2→3 turns), Cycle of Magic (cooldown cycling for A2/A3 spam)"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Cycle of Violence (Arena farm), Kill Streak (Arena farm), Bring it Down, Methodical, WARMASTER",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal, Delay Death (CRITICAL - passive synergy), Retribution (counter), Unshakeable (CRITICAL +50 RES for tank - Arena 9/10 rating, base 50 RES = 100 total)",
+      "Support: Steadfast, Lay on Hands, Healing Savior (healing boost), Lore of Steel (Speed set boost), Lasting Gifts (CRITICAL - A3 buff extension), Cycle of Magic"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal (healing synergy), Delay Death (CRITICAL - passive Unkillable synergy on fatal hit), Retribution, Unshakeable (CRITICAL +50 RES for tank - Doom Tower 9/10 rating)",
+      "Support: Steadfast, Lay on Hands, Healing Savior (healing boost for A1/A3 Continuous Heal), Lore of Steel, Lasting Gifts (CRITICAL - A3 buff extension), Cycle of Magic (A2/A3 spam)"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Defense: Tough Skin, Blastproof, Resurgent, Shadow Heal (healing synergy), Delay Death (CRITICAL - passive synergy), Retribution, Unshakeable (CRITICAL +50 RES for tank)",
+      "Support: Steadfast, Lay on Hands, Healing Savior (healing boost), Lore of Steel, Lasting Gifts (CRITICAL - A3 buff extension), Cycle of Magic (cooldown cycling)"
+    ],
+    "general": [
+      "PRIORITY OFFENSE T6: WARMASTER (A1 'Smash' and A2 'Foul Play' are single-hit attacks - 60% proc per skill for 4% boss MAX HP / 6% dungeon boss MAX HP damage). Giant Slayer is INCORRECT for Black Knight (no multi-hit skills).",
+      "PRIORITY DEFENSE T6: Delay Death (CRITICAL - synergizes with passive 'Steadfast' which triggers Unkillable on fatal hit). Unshakeable (CRITICAL +50 RES for tank role - base 50 RES = 100 total with mastery, excellent for Arena/Doom Tower/Faction Wars).",
+      "PRIORITY SUPPORT T6: Lasting Gifts (CRITICAL - extends A3 buffs from 2→3 turns: Increase DEF 60% + Continuous Heal on all allies, self Unkillable 1 turn).",
+      "KEY MASTERIES: Warmaster (A1/A2 single-hit), Delay Death + Unshakeable (tank role synergy), Lasting Gifts (A3 buff extension), Lay on Hands + Healing Savior (healing boost for A1 Continuous Heal on crit + A3 Continuous Heal on all allies), Shadow Heal (healing synergy with passive heal on fatal hit).",
+      "SYNERGIES: Passive 'Steadfast' triggers on fatal hit - heals self 15% MAX HP + places Unkillable for 1 turn (synergizes with Delay Death mastery for tanking). A1 places Continuous Heal on self if crit (build 100% C.RATE for sustain). A3 places Increase DEF 60% + Continuous Heal on all allies + self Unkillable (Lasting Gifts extends 2→3 turns). A2 places Dec ATK 50% on enemies (50% chance base, 70% booked). Build for HP% (large MAX HP pool for passive heal), DEF% (synergizes with A3 Increase DEF), 100% C.RATE (A1 self-heal), RES (Unshakeable +50 for 100 total).",
+      "UNIQUE MECHANICS: Passive grants Unkillable on fatal hit (once per proc, must wait for buff to expire before it can trigger again). Makes Black Knight an excellent tank for high-damage bosses (Doom Tower, Faction Wars, Arena). Base 50 RES is above average - Unshakeable mastery brings to 100 RES for strong debuff resistance.",
+      "BANNER LORDS FACTION WARS: Top-tier tank/support (10/10 rating). User has completed Banner Lords Normal - excellent for Hard progression. Provides team DEF buff, healing, and Dec ATK debuff while tanking with passive Unkillable.",
+      "CHEESE POTENTIAL: Unkillable passive can be used for boss strategies where Black Knight tanks fatal hits while team deals damage. Not a traditional cheese but enables unique tank strategies."
+    ]
+  },
   "ai_quirks": {
     "bad_ai": false,
     "ai_issue_description": "Generally good AI. Uses A2 and A3 appropriately."
@@ -137,13 +175,13 @@
     "cheese_type": null,
     "cheese_mechanic_info": null
   },
-  "mechanics_advisory": "Passive makes him a strong tank for high-damage bosses. A3 can be used as a nuke when low HP. Synergizes with healers and DEF buffers.",
+  "mechanics_advisory": "Black Knight is a top-tier tank/support (Dungeons 9/10, Doom Tower 9/10, Arena 9/10, Faction Wars 10/10, Clan Boss 7/10). A1/A2 are single-hit attacks that benefit from Warmaster (60% proc, 4% boss MAX HP). KEY STRENGTHS: (1) Passive 'Steadfast' triggers on fatal hit - heals self 15% MAX HP + places Unkillable for 1 turn (synergizes with Delay Death mastery for extreme tanking), (2) A3 'Valor' places Increase DEF 60% + Continuous Heal on all allies for 2 turns + self Unkillable for 1 turn (4-turn CD booked - Lasting Gifts extends buffs 2→3 turns for near-permanent uptime), (3) A2 places Dec ATK 50% on all enemies (50% base, 70% booked - 3-turn CD), (4) A1 places Continuous Heal on self if crit (build 100% C.RATE for sustain). Base 50 RES (above average) + Unshakeable mastery = 100 RES for strong debuff resistance. Build for HP% (large MAX HP pool for passive heal + tanking), DEF% (synergizes with A3 Increase DEF), 100% C.RATE (A1 self-heal), RES (Unshakeable for 100 total). MASTERIES: Warmaster (single-hit skills), Delay Death (CRITICAL - passive Unkillable synergy), Unshakeable (CRITICAL +50 RES for tank), Lasting Gifts (CRITICAL - A3 buff extension 2→3 turns), Lay on Hands + Healing Savior + Shadow Heal (healing boost). User's Banner Lords Faction Wars COMPLETE (Normal) - excellent for Hard progression as top-tier tank/support (10/10 rating). Strong for Arena tank teams, Doom Tower boss tanking, and dungeon wave/boss survivability.",
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-black-knight-skill-mastery-equip-guide/ (accessed 2025-10-22)",
     "HellHades: https://hellhades.com/champions/black-knight/ (accessed 2025-10-22)"
   ],
   "update_notes": {
-    "last_updated": "2025-10-22",
-    "last_patch": "A3 multiplier and passive confirmed. Template-compliant JSON entry."
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: CREATED complete masteries section from scratch (was entirely missing). KEY ADDITIONS: Warmaster (A1/A2 single-hit skills - 60% proc per skill), Delay Death (CRITICAL - synergizes with passive 'Steadfast' Unkillable on fatal hit for extreme tanking), Unshakeable (CRITICAL +50 RES - base 50 RES = 100 total for strong debuff resistance in Arena/Doom Tower/Faction Wars), Lasting Gifts (CRITICAL - extends A3 buffs from 2→3 turns: Increase DEF 60% + Continuous Heal on all allies for near-permanent uptime), Lay on Hands + Healing Savior + Shadow Heal (healing boost for A1 Continuous Heal on crit + A3 Continuous Heal + passive heal on fatal hit). Arena-specific: Cycle of Violence + Kill Streak (Arena 9/10 rating). CLARIFIED: Passive triggers on fatal hit (heals 15% MAX HP + Unkillable 1 turn) - must wait for Unkillable to expire before it can trigger again. A1 requires 100% C.RATE for consistent self-sustain (Continuous Heal on crit). Expanded mechanics_advisory with mastery strategy, passive mechanics, and Banner Lords Faction Wars notes (user completed Normal, excellent for Hard as 10/10 tank/support). Added validation_sources."
   }
 }

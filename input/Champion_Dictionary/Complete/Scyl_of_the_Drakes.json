@@ -47,7 +47,7 @@
         {
           "name": "Wingbeat Flurry",
           "type": "A2",
-          "description": "Attacks all enemies 2 times. Each hit has a 20% chance of placing a Stun debuff for 1 turn.",
+          "description": "Attacks all enemies 3 times. Each hit has a 20% chance of placing a Stun debuff for 1 turn.",
           "effects": [
             {
               "type": "damage",
@@ -55,13 +55,22 @@
               "value": 1.55,
               "per_hit": true,
               "target": "aoe_enemies",
-              "notes": "AoE, 2 hits. 20% chance Stun per hit."
+              "notes": "AoE, 3 hits. 20% chance Stun per hit. Multi-hit benefits from Giant Slayer."
+            },
+            {
+              "type": "debuff",
+              "stat": "Stun",
+              "value": 1,
+              "per_hit": true,
+              "target": "aoe_enemies",
+              "duration": 1,
+              "notes": "20% chance per hit to place Stun for 1 turn. Books to 30% chance."
             }
           ],
           "cooldown_booked": 4,
           "mechanics_tags": ["AoE", "Multi-hit", "Stun"],
-          "book_value": "High: booking improves proc rates and reduces cooldown at higher book levels; core CC ability.",
-          "notes": "Strong crowd-control A2; synergises with ACC and stun-focused masteries/sets."
+          "book_value": "High: booking improves proc rates (+10% Stun chance to 30%) and reduces cooldown (-1 turn); core CC ability.",
+          "notes": "Strong crowd-control A2; synergises with ACC and stun-focused masteries/sets. 3 hits benefit from Giant Slayer mastery."
         },
         {
           "name": "Phoenix Rite",
@@ -95,28 +104,70 @@
     "dungeons": "High ACC, decent SPD, HP/DEF for sustain",
     "arena": "High ACC for stuns, decent SPD"
   },
-  "recommended_gear": ["Relentless", "Lifesteal", "Speed", "Perception"],
+  "recommended_gear": ["Relentless", "Lifesteal", "Speed", "Perception", "Immortal", "Regeneration"],
   "masteries": {
-    "dungeons": ["Support tree choices (Lay on Hands, Healing Savior)", "Defense/Support hybrids"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, GIANT SLAYER (critical for A2 3-hit AoE), Life Drinker, Bring it Down, Methodical",
+      "Defense: Improved Parry, Delay Death, Bloodthirst",
+      "Support: Steadfast (+810 HP for healer), Lay on Hands (+5% heal value), Healing Savior (+10% when ally <40% HP), Lore of Steel, Cycle of Magic"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, GIANT SLAYER (A2 3-hit multi-proc), Life Drinker, Bring it Down",
+      "Defense: Blastproof, Improved Parry, Delay Death, Bloodthirst",
+      "Support: Steadfast, Lay on Hands, Healing Savior, Pinpoint Accuracy (Stun/Decrease SPD), Eagle Eye (+50 ACC), Lore of Steel"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Life Drinker, Flawless Execution or Giant Slayer",
+      "Defense: Improved Parry, Delay Death, Shadow Heal",
+      "Support: Steadfast, Lay on Hands, Healing Savior, Merciful Aid (+15% when ally CC'd), Pinpoint Accuracy, Eagle Eye (+50 ACC for Stun), Unshakeable (+50 RES)"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, GIANT SLAYER (A2 3-hit), Life Drinker, Bring it Down",
+      "Defense: Blastproof, Improved Parry, Delay Death, Bloodthirst",
+      "Support: Steadfast, Lay on Hands, Healing Savior, Merciful Aid, Pinpoint Accuracy, Eagle Eye (+50 ACC), Lore of Steel"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, GIANT SLAYER (A2 3-hit AoE), Life Drinker, Bring it Down",
+      "Defense: Blastproof, Improved Parry, Delay Death, Bloodthirst",
+      "Support: Steadfast, Lay on Hands, Healing Savior, Merciful Aid, Pinpoint Accuracy, Eagle Eye (+50 ACC), Unshakeable (+50 RES), Lore of Steel"
+    ],
+    "general": [
+      "KEY SYNERGIES:",
+      "- GIANT SLAYER: A2 is 3-hit AoE attack → 3 chances per enemy for 30% proc (better than Warmaster for multi-hit)",
+      "- Lay on Hands + Healing Savior + Merciful Aid: Stack healing boost masteries (passive heals 10% MAX HP per turn)",
+      "- Eagle Eye + Pinpoint Accuracy: A2 Stun and A1 Decrease SPD require ACC",
+      "- Unshakeable: Reviver/healer needs RES to avoid disruption",
+      "- Life Drinker: Sustain synergy with DEF-scaling damage",
+      "- Lore of Steel: Boosts Speed/Perception set bonuses",
+      "SUPPORT ROLE: Primary healer/reviver - prioritize Support tree for heal boost and ACC/RES"
+    ]
   },
-  "blessings": ["Brimstone (Hydra)", "Soul Reap"],
+  "blessings": ["Brimstone (Hydra)", "Soul Reap", "Polymorph (debuff extension)"],
   "ai_quirks": {
     "bad_ai": false,
-    "ai_issue_description": ""
+    "ai_issue_description": "Generally good AI. Will use revive, heal, and stun appropriately. Relentless set can cause extra turns for more healing."
   },
   "cheese_strategy": {
     "cheese_viable": false,
-    "cheese_type": "",
-    "cheese_mechanic_info": ""
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion, but enables sustain and revive strategies for progression content."
   },
-  "mechanics_advisory": "",
+  "mechanics_advisory": "Scyl of the Drakes is a top-tier support for progression, offering revive, healing, stun, and TM control. A2 3-hit AoE benefits from Giant Slayer. Passive healing (10% MAX HP per turn) scales with Lay on Hands/Healing Savior masteries. Excellent for Faction Wars, Doom Tower, and Dungeons. Build for ACC (Stun/Decrease SPD), SPD, and survivability (DEF/HP). Relentless set maximizes healing uptime.",
+  "validation_sources": [
+    "Ayumilove (https://ayumilove.net/raid-shadow-legends-scyl-of-the-drakes-skill-mastery-equip-guide/)",
+    "HellHades (https://hellhades.com/raid/champions/scyl-of-the-drakes/)",
+    "Fandom (https://raidshadowlegends.fandom.com/wiki/Scyl_of_the_Drakes)",
+    "Masteries.md (mastery synergies)"
+  ],
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-scyl-of-the-drakes-skill-mastery-equip-guide/ (accessed 2025-10-23)",
     "HellHades: https://hellhades.com/raid/champions/scyl-of-the-drakes/ (accessed 2025-10-23)",
     "Fandom: https://raidshadowlegends.fandom.com/wiki/Scyl_of_the_Drakes (accessed 2025-10-23)"
   ],
   "update_notes": {
-    "last_updated": "2025-10-23",
-    "last_patch": "Filled skills, mechanics, and citations from community guide sources."
-  }
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: Corrected A2 hit count (2→3 hits). Added complete masteries section with Giant Slayer synergy (A2 3-hit AoE), healing boost masteries (Lay on Hands, Healing Savior, Merciful Aid), ACC/RES masteries (Eagle Eye, Unshakeable), and content-specific recommendations. Completed mechanics_advisory, ai_quirks, cheese_strategy, and validation_sources sections."
+  },
+  "author": "GitHub Copilot",
+  "draft": false
 }

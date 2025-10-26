@@ -105,12 +105,41 @@
   },
   "recommended_gear": ["Speed", "Perception", "Relentless", "Reflex", "Guardian"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Evil Eye", "Support"],
-    "dungeons": ["Giant Slayer", "Master Hexer", "Lore of Steel"],
-    "arena": ["Eagle-Eye", "Unshakeable", "Support"],
-    "doom_tower": ["Timely Intervention", "Lasting Gifts"],
-    "faction_wars": ["Warmaster", "Cycle of Magic"],
-    "general": ["Support", "Defense"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER (A1 single-hit - 60% proc per skill, 4% boss MAX HP)",
+      "Support: Steadfast (+810 HP), Lay on Hands (healing boost), Healing Savior (A2 heal boost), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control from allies), Lore of Steel, Master Hexer (CRITICAL - extends Dec ATK/Dec SPD from A3 for 2→3 turns, NOTE: Will NOT extend Sleep as it's crowd control), Cycle of Magic (cooldown cycling for A2/A3 spam), Eagle Eye (CRITICAL +50 ACC - synergizes with 60 ACC aura for 110+ total)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability)",
+      "NOTE: Low priority for Clan Boss (6/10 rating) - AI may waste A3 on bosses immune to Sleep"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER (A1 single-hit - 60% proc, 6% boss MAX HP). CORRECTION: Giant Slayer is INCORRECT for Chronicler Adelyn (no multi-hit skills).",
+      "Support: Steadfast, Lay on Hands, Healing Savior (A2 heal boost - restores destroyed MAX HP + heals 25% MAX HP), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - extends Dec ATK/Dec SPD 2→3 turns, NOTE: Will NOT extend Sleep), Cycle of Magic (A2/A3 spam), Lasting Gifts (buff extension if using buffers), Eagle Eye (CRITICAL +50 ACC - 60 ACC aura = 110+ total)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability)"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Cycle of Violence (Arena farm), Kill Streak (Arena farm), Bring it Down, Methodical, WARMASTER",
+      "Support: Steadfast, Lay on Hands, Healing Savior (A2 heal boost), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control), Lore of Steel (Speed set boost), Master Hexer (Dec ATK/Dec SPD extension), Cycle of Magic, Eagle Eye (CRITICAL +50 ACC - 60 ACC aura = 110 total for 350+ ACC builds)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death, Unshakeable (+50 RES for tank builds - Arena 7/10)"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Support: Steadfast, Lay on Hands, Healing Savior (A2 heal boost - key for Sand Devil/Scarab King sustain), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control), Lore of Steel, Master Hexer (CRITICAL - Dec ATK/Dec SPD extension, Sleep will NOT extend), Cycle of Magic (A2/A3 spam), Lasting Gifts (buff extension), Timely Intervention (TM on ally low HP), Eagle Eye (CRITICAL +50 ACC - 60 ACC aura = 110 total, 250+ ACC needed for Hard)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death, Unshakeable (debuff RES for boss survivability)"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, WARMASTER",
+      "Support: Steadfast, Lay on Hands, Healing Savior (A2 heal boost), Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye (TM control), Lore of Steel, Master Hexer (Dec ATK/Dec SPD extension), Cycle of Magic (A2/A3 spam), Eagle Eye (+50 ACC - 60 ACC aura = 110 total)",
+      "Defense: Improved Parry, Bloodthirst, Delay Death (survivability)"
+    ],
+    "general": [
+      "PRIORITY OFFENSE T6: WARMASTER (A1 'Equivalent Exchange' is single-hit attack - 60% proc per skill for 4% boss MAX HP / 6% dungeon boss MAX HP damage). Giant Slayer is INCORRECT for Chronicler Adelyn (no multi-hit skills - current 'dungeons' entry is a mistake).",
+      "PRIORITY SUPPORT T6: Master Hexer (CRITICAL for Dec ATK/Dec SPD extension from A3 - extends from 2→3 turns. NOTE: Will NOT extend Sleep debuff as it's crowd control), Eagle Eye (CRITICAL +50 ACC - synergizes with 60 ACC aura for 110+ total, enables 250+ ACC Doom Tower Hard, 350+ ACC Arena builds).",
+      "KEY MASTERIES: Warmaster (A1 single-hit), Master Hexer (Dec ATK/Dec SPD extension from A3 - Sleep will NOT extend), Eagle Eye (ACC boost - 60 ACC aura synergy), Lay on Hands + Healing Savior (A2 heal boost - restores destroyed MAX HP + heals 25% MAX HP), Cycle of Magic (A2/A3 cooldown spam), Timely Intervention (TM on ally low HP for support).",
+      "SYNERGIES: A1 transfers debuff from self to enemy (50% base, 75% booked) + steals buff from enemy (50% base, 75% booked). A2 restores 25% destroyed MAX HP for all allies + heals 25% of HER MAX HP (benefits from Lay on Hands + Healing Savior, key for Sand Devil/Scarab King/Artak teams). A3 places Sleep + Dec SPD 30% + Dec ATK 50% for 2 turns (75% base, 100% booked) - all debuffs IGNORE Block Debuffs (cheese for Sand Devil, Doom Tower). Passive grants all allies +3% damage per debuff placed by Adelyn (synergizes with A3 multi-debuff). Build for 220+ SPD, 250+ ACC (350+ Arena) with Eagle Eye + 60 ACC aura = 110 base, HP%/DEF% for sustain.",
+      "DOOM TOWER SPECIALIST: Chronicler Adelyn is a meta solution for Sand Devil (8/10 Doom Tower rating) - A3 Sleep + Dec ATK/Dec SPD ignores Block Debuffs, A2 restores destroyed MAX HP (Sand Devil passive destroys MAX HP). Also strong for Scarab King (A2 MAX HP restore) and general Doom Tower content.",
+      "UNIQUE MECHANICS: A2 restores destroyed MAX HP BEFORE healing (unique mechanic, synergizes with Artak, Sand Devil passive, Brimstone Blast sets). A3 debuffs IGNORE Block Debuffs (cheese for many bosses). 60 ACC aura for all battles (excellent for debuff teams). Passive damage amp (+3% per debuff) stacks with team debuffs.",
+      "AI QUIRK: AI may target enemies immune to Sleep (Clan Boss, some bosses) and waste A3 turns. Manual play recommended for Clan Boss if using."
+    ]
   },
   "blessings": ["Brimstone", "Intimidating Presence", "Polymorph", "Temporal Chains", "Miracle Heal"],
   "ai_quirks": {
@@ -122,13 +151,13 @@
     "cheese_type": "",
     "cheese_mechanic_info": ""
   },
-  "mechanics_advisory": "Best for Sand Devil, Scarab King solo, and content requiring Sleep or MAX HP restoration. Passive amplifies team damage with debuffs.",
+  "mechanics_advisory": "Chronicler Adelyn is a specialist support (Doom Tower 8/10, Dungeons 8/10, Faction Wars 8/10, Arena 7/10, Clan Boss 6/10). A1 'Equivalent Exchange' is single-hit that benefits from Warmaster (60% proc, 4% boss MAX HP). KEY STRENGTHS: (1) A2 'Healing Script' restores 25% destroyed MAX HP for all allies BEFORE healing 25% of HER MAX HP (unique mechanic, synergizes with Artak, Sand Devil passive, Brimstone Blast sets - benefits from Lay on Hands + Healing Savior), (2) A3 'Writ of Sleep' places Sleep + Dec SPD 30% + Dec ATK 50% for 2 turns (75% base, 100% booked) - all debuffs IGNORE Block Debuffs (cheese for Sand Devil, Doom Tower bosses), (3) Passive grants all allies +3% damage per debuff placed by Adelyn (synergizes with A3 multi-debuff), (4) 60 ACC aura for all battles (synergizes with Eagle Eye +50 ACC for 110+ total, enables 250+ ACC Doom Tower Hard, 350+ ACC Arena builds). REQUIRES Master Hexer (CRITICAL - extends Dec ATK/Dec SPD 2→3 turns, NOTE: Will NOT extend Sleep as it's crowd control) + Eagle Eye (+50 ACC). Build for 220+ SPD, 250+ ACC (350+ Arena), HP%/DEF% for sustain. DOOM TOWER: Meta solution for Sand Devil (A3 Sleep + debuffs ignore Block Debuffs, A2 restores destroyed MAX HP) and Scarab King (A2 MAX HP restore). AI QUIRK: May waste A3 on bosses immune to Sleep (manual recommended for Clan Boss). User's Banner Lords Faction Wars COMPLETE (Normal) - strong for Hard progression (8/10 rating).",
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-chronicler-adelyn-skill-mastery-equip-guide/ (accessed 2025-10-21)",
     "HellHades: https://hellhades.com/champions/chronicler-adelyn/ (accessed 2025-10-21)"
   ],
   "update_notes": {
-    "last_updated": "2025-10-21",
-    "last_patch": "V8.40 (2024-04-04): Champion released."
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: CORRECTED T6 Offense mastery - REMOVED incorrect Giant Slayer from 'dungeons' entry (A1 is single-hit, Giant Slayer is WRONG). Confirmed Warmaster is CORRECT for all content. Added complete masteries section with full offense/defense/support trees per content type. KEY ADDITIONS: Master Hexer (CRITICAL - extends Dec ATK/Dec SPD from A3 for 2→3 turns, NOTE: Will NOT extend Sleep as it's crowd control), Eagle Eye (CRITICAL +50 ACC - synergizes with 60 ACC aura for 110+ total, enables 250+ ACC Doom Tower Hard, 350+ ACC Arena), Lay on Hands + Healing Savior (A2 heal boost - restores destroyed MAX HP + heals 25% MAX HP), Cycle of Magic (A2/A3 spam), Timely Intervention (TM on ally low HP). CLARIFIED: A2 restores destroyed MAX HP BEFORE healing (unique mechanic, synergizes with Artak/Sand Devil/Brimstone Blast). A3 debuffs IGNORE Block Debuffs (cheese for Sand Devil, Doom Tower). Passive damage amp +3% per debuff placed by Adelyn. AI may waste A3 on bosses immune to Sleep (manual recommended for Clan Boss). Expanded mechanics_advisory with mastery strategy, Doom Tower specialist notes (Sand Devil/Scarab King), and Banner Lords Faction Wars (user completed Normal, 8/10 for Hard). Added validation_sources. V8.40 (2024-04-04): Champion released."
   }
 }

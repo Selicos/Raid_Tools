@@ -1,0 +1,240 @@
+{
+  "name": "Cleopterix",
+  "rarity": "Legendary",
+  "affinity": "Spirit",
+  "faction": "Knight Revenant",
+  "role": "Attack",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "5/10",
+    "dungeons": "7/10",
+    "doom_tower": "8/10",
+    "arena": "8/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 15855,
+        "ATK": 1575,
+        "DEF": 947,
+        "SPD": 103,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 30,
+        "ACC": 10
+      },
+      "skills": [
+        {
+          "name": "Death Dive",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 30% chance of placing a 25% [Weaken] debuff for 2 turns. The chance increases to 50% if the target is under a [Hex] debuff. Places a [Perfect Veil] buff on this champion for 1 turn if this attack kills an enemy under [Hex] debuff.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.5,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single-target attack. 3.5 ATK base (3.85 ATK booked with +10% damage)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Weaken",
+              "value": 25,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "CONDITIONAL: 30% chance Weaken (25%) for 2 turns base (50% booked). Increases to 50% base (70% booked) if target under Hex. Good for damage boost synergy."
+            },
+            {
+              "type": "buff",
+              "stat": "Perfect Veil",
+              "value": 100,
+              "per_hit": false,
+              "target": "self",
+              "duration": "1 turn",
+              "notes": "CONDITIONAL: Places Perfect Veil on Cleopterix for 1 turn if A1 kills enemy under Hex. Perfect Veil = cannot be targeted (stealth). CHEESE POTENTIAL: Kill Hexed enemy → stealth → safety."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Weaken", "Hex Synergy", "Conditional", "Perfect Veil", "Stealth", "On Kill"],
+          "book_value": "Medium: +10% damage + 20% Weaken chance (30%→50% base, 50%→70% vs Hex). Decent for Weaken uptime.",
+          "notes": "HEX SYNERGY: Weaken chance increases (30%→50% base) if target under Hex. Perfect Veil on kill vs Hexed enemy (stealth for 1 turn). Good for Arena (8/10) with stealth cycling. 200+ ACC needed. Synergizes with A3 Hex application."
+        },
+        {
+          "name": "Feather Barrage",
+          "type": "A2",
+          "description": "Places a 30% [Increase C.RATE] buff and a 30% [Increase C.DMG] buff on this champion for 2 turns, then attacks all enemies. Has a 75% chance of placing a [Block Active Skills] debuff for 2 turns on targets under [Hex] debuffs.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "Increase C.RATE",
+              "value": 30,
+              "per_hit": false,
+              "target": "self",
+              "duration": "2 turns",
+              "notes": "SELF-BUFF: +30% C.RATE for Cleopterix for 2 turns. EXCELLENT for crit setup (45% C.RATE with base 15%). Cast before AoE attack."
+            },
+            {
+              "type": "buff",
+              "stat": "Increase C.DMG",
+              "value": 30,
+              "per_hit": false,
+              "target": "self",
+              "duration": "2 turns",
+              "notes": "SELF-BUFF: +30% C.DMG for Cleopterix for 2 turns. EXCELLENT for damage boost (93% C.DMG with base 63%). Cast before AoE attack."
+            },
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.5,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE attack AFTER self-buffs. 4.5 ATK base (4.95 ATK booked with +10% damage). Hits with boosted C.RATE + C.DMG."
+            },
+            {
+              "type": "debuff",
+              "stat": "Block Active Skills",
+              "value": 100,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "CONDITIONAL HEX SYNERGY: 75% chance Block Active Skills (2 turns) base (100% booked) on targets under Hex. EXCELLENT for Arena CC (blocks A2/A3/A4). Requires A3 Hex setup."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "Increase C.RATE", "Increase C.DMG", "Self-Buff", "Block Active Skills", "Hex Synergy", "CC"],
+          "book_value": "CRITICAL: +10% damage + 25% Block Active Skills chance (75%→100%) + -1 cooldown (4→3). MUST BOOK for Arena CC.",
+          "notes": "NUKER SETUP: Inc C.RATE (30%) + Inc C.DMG (30%) THEN AoE attack (4.5 ATK). MUST BOOK for 3-turn cooldown. HEX SYNERGY: 100% Block Active Skills (2 turns) on Hexed targets. EXCELLENT for Arena (8/10) with CC combo (A3 Hex → A2 Block Active Skills). 200+ ACC needed."
+        },
+        {
+          "name": "Sky Punishment",
+          "type": "A3",
+          "description": "Places a 50% [Increase ACC] buff on this champion for 2 turns, then attacks all enemies. Has a 75% chance of placing a [Hex] debuff for 3 turns. Has a 100% chance of placing a [Fear] debuff for 1 turn instead on enemies under [Hex] debuffs.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "Increase ACC",
+              "value": 50,
+              "per_hit": false,
+              "target": "self",
+              "duration": "2 turns",
+              "notes": "SELF-BUFF: +50% ACC for Cleopterix for 2 turns. EXCELLENT for debuff accuracy (effective 250 ACC at 200 base). Cast before AoE attack."
+            },
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.7,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE attack AFTER Inc ACC buff. 4.7 ATK base (5.405 ATK booked with +15% damage). Highest AoE multiplier."
+            },
+            {
+              "type": "debuff",
+              "stat": "Hex",
+              "value": 100,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "3 turns",
+              "notes": "PRIMARY DEBUFF: 75% chance Hex (3 turns) base (100% booked). Hex = +15% damage taken from all sources. CRITICAL for A1/A2 synergy (Weaken chance, Block Active Skills)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Fear",
+              "value": 100,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "1 turn",
+              "notes": "CONDITIONAL UPGRADE: 100% Fear (1 turn) INSTEAD of Hex if target already under Hex. Fear = cannot use active skills, random A1 attacks. EXCELLENT for Arena CC (Hex → Fear combo)."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["AoE", "Increase ACC", "Self-Buff", "Hex", "Fear", "CC", "Conditional"],
+          "book_value": "CRITICAL: +15% damage + 25% debuff chance (75%→100%) + -1 cooldown (5→4). MUST BOOK for Hex/Fear uptime.",
+          "notes": "SETUP SKILL: Inc ACC (50%) THEN AoE Hex (100% booked, 3 turns) OR Fear (100%, 1 turn if target already Hexed). MUST BOOK for 4-turn cooldown. COMBO: A3 Hex → A2 Block Active Skills = 100% CC lock. EXCELLENT for Arena (8/10) and Doom Tower (8/10) with CC combo. 200+ ACC (effective 300 with buff)."
+        },
+        {
+          "name": "Countermand",
+          "type": "Passive",
+          "description": "Counterattacks with the default skill every time this Champion loses 30% HP or more in a single turn. Always counterattacks when attacked if 2 or more allies are dead.",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "self",
+              "notes": "PASSIVE COUNTERATTACK: Counterattacks with A1 when losing 30%+ HP in single turn. ALWAYS counterattacks when attacked if 2+ allies dead. EXCELLENT for Arena (8/10) survivability (A1 Weaken + Perfect Veil on kill). Synergizes with Lifesteal set."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive", "Counterattack", "Conditional", "Survivability"],
+          "book_value": "N/A: Passive, cannot book.",
+          "notes": "PASSIVE COUNTERATTACK: A1 counterattack on 30%+ HP loss in single turn OR when 2+ allies dead. EXCELLENT for Arena survivability (counterattack → Weaken → potential Perfect Veil on Hexed kill). Synergizes with Lifesteal set for sustain."
+        }
+      ],
+      "aura": "Increases Ally C.DMG in Faction Crypts by 30%",
+      "comments": "LEGENDARY nuker/CC specialist with HEX SYNERGY. A3 'Sky Punishment' applies Hex (100% booked, 3 turns) or Fear (100%, 1 turn if Hexed). A2 'Feather Barrage' self-buffs Inc C.RATE/C.DMG then AoE + Block Active Skills (100% booked on Hexed targets). A1 Weaken (70% booked vs Hex) + Perfect Veil on Hexed kill. Passive counterattack on 30%+ HP loss or 2+ allies dead. EXCELLENT for Arena (8/10) and Faction Wars (8/10). Must book A2/A3."
+    }
+  ],
+  "mechanics_tags": ["AoE", "Hex", "Fear", "Block Active Skills", "Weaken", "Increase C.RATE", "Increase C.DMG", "Increase ACC", "Perfect Veil", "Stealth", "Self-Buff", "Counterattack", "Passive", "CC", "Conditional", "On Kill", "C.DMG Aura"],
+  "stat_priorities": ["100% C.RATE", "250%+ C.DMG", "4000+ ATK", "220+ SPD", "200+ ACC", "40000+ HP", "2000+ DEF"],
+  "stat_priority_recommendations": {
+    "clan_boss": "Low priority. If used: 220+ SPD, 4000+ ATK, 100% C.RATE, 250%+ C.DMG, 200+ ACC (Weaken/Hex). Hex/Fear/Block Active Skills not useful in CB. 5/10 CB rating.",
+    "dungeons": "PRIORITY: 100% C.RATE (or 70%+ with A2 Inc C.RATE), 250%+ C.DMG, 4000+ ATK, 220+ SPD, 200+ ACC (Hex/Fear), 40000+ HP, 2000+ DEF. A3 Hex/Fear + A2 Block Active Skills good for waves. Savage or Cruel sets.",
+    "arena": "PRIORITY: 100% C.RATE (or 70%+ with A2 Inc C.RATE), 250%+ C.DMG, 4000+ ATK, 220+ SPD (speed tuning), 200+ ACC (Hex/Fear/Block Active Skills, effective 300 with A3 Inc ACC), 40000+ HP, 2000+ DEF, 150+ RES. COMBO: A3 Hex → A2 Block Active Skills = 100% CC lock. Savage or Cruel sets.",
+    "faction_wars": "PRIORITY: 100% C.RATE, 250%+ C.DMG, 4000+ ATK, 220+ SPD, 200+ ACC, 40000+ HP, 2000+ DEF. +30% C.DMG Faction aura EXCELLENT. A3 Hex/Fear + A2 Block Active Skills for waves/boss. MUST BOOK A2/A3 for Knight Revenant FW progression."
+  },
+  "recommended_gear": ["Savage (ignore 25% DEF)", "Cruel (C.RATE boost)", "Lifesteal (sustain + passive counterattack synergy)", "Speed (220+ SPD)", "Perception (ACC boost)", "Critical Damage (C.DMG)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (single-hit A1/A2/A3)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, RETRIBUTION (synergizes with passive counterattack)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (reduces A2/A3 cooldowns)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER, Flawless Execution, Ruthless Ambush",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, RETRIBUTION (synergizes with passive counterattack)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2 4→3 booked, A3 5→4 booked cooldowns), MASTER HEXER (extends Hex 3→4 turns)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER, Flawless Execution, Ruthless Ambush",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, RETRIBUTION (synergizes with passive counterattack)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (faster A2/A3 cycling), MASTER HEXER (extends Hex 3→4 turns for longer CC window)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER, Flawless Execution, Ruthless Ambush",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, RETRIBUTION (CRITICAL - synergizes with passive counterattack), DETERRENCE",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling), MASTER HEXER (CRITICAL - extends Hex 3→4 turns for CC uptime)"
+    ],
+    "general": "WARMASTER for all content (single-hit A1/A2/A3). Cycle of Magic CRITICAL (reduces A2 4→3 booked, A3 5→4 booked cooldowns for CC rotation). Master Hexer CRITICAL (extends Hex 3→4 turns for longer CC/synergy window). Retribution (synergizes with passive counterattack on 30%+ HP loss). Flawless Execution + Ruthless Ambush (C.DMG boost). MUST BOOK A2/A3 for Arena/FW viability (3-turn Inc C.RATE/C.DMG + Block Active Skills, 4-turn Inc ACC + Hex/Fear). Build: 100% C.RATE (or 70%+ with A2 buff), 250%+ C.DMG, 4000+ ATK, 220+ SPD, 200+ ACC (effective 300 with A3 Inc ACC), 40000+ HP, 2000+ DEF. Savage or Cruel or Lifesteal sets. Focus: Arena (8/10) with Hex → Block Active Skills CC combo. Excellent for Faction Wars (8/10) and Doom Tower (8/10) with CC control. User Priority: Knight Revenant specialist for FW + Arena. COMBO: A3 Hex (100% booked) → A2 Block Active Skills (100% booked on Hexed) = guaranteed CC lock. Spirit affinity = neutral vs Force/Magic, weak to Void."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams - unlikely)", "Soul Reap (cooldown reduction on kill)", "Phantom Touch (speed boost)", "Cruelty (C.DMG boost)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A3 for Hex/Fear, A2 for Inc C.RATE/C.DMG + Block Active Skills, A1 for Weaken. Passive auto-triggers. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Hex → Block Active Skills CC Lock",
+    "cheese_mechanic_info": "CHEESE POTENTIAL: A3 Hex (100% booked, 3 turns) → A2 Block Active Skills (100% booked on Hexed targets, 2 turns) = guaranteed CC lock for 2 turns. Enemies under Hex + Block Active Skills cannot use A2/A3/A4 = severely crippled. COMBO: A3 Inc ACC (50%, effective 300 ACC at 200 base) → Hex (100%) → A2 Block Active Skills (100% on Hexed) → enemies locked for 2 turns. If Hex lands on turn 1, can apply Fear (100%, 1 turn) instead on turn 2 for additional CC. EXCELLENT for Arena (8/10) and Doom Tower (8/10) with CC control. Passive counterattack on 30%+ HP loss → A1 Weaken → potential Perfect Veil on Hexed kill = survivability + stealth cycling. Synergizes with Lifesteal set for sustain during counterattacks."
+  },
+  "mechanics_advisory": "LEGENDARY nuker/CC specialist with HEX SYNERGY. A3 'Sky Punishment' is SETUP SKILL: Inc ACC (50%, effective 300 ACC at 200 base) THEN AoE Hex (100% booked, 3 turns) OR Fear (100%, 1 turn if target already Hexed). MUST BOOK for 4-turn cooldown. CRITICAL for A1/A2 synergy. A2 'Feather Barrage' is NUKER + CC: Inc C.RATE (30%) + Inc C.DMG (30%) for Cleopterix THEN AoE attack (4.5 ATK, 4.95 booked) + Block Active Skills (100% booked, 2 turns) on Hexed targets. MUST BOOK for 3-turn cooldown. COMBO: A3 Hex → A2 Block Active Skills = 100% CC lock for 2 turns. EXCELLENT for Arena (8/10) and Doom Tower (8/10). A1 'Death Dive' has HEX SYNERGY: Weaken (50% base, 70% booked vs Hexed targets) + Perfect Veil (1 turn) on Hexed kill. Good for Arena survivability (stealth cycling). Passive 'Countermand' is COUNTERATTACK: A1 counterattack on 30%+ HP loss OR when 2+ allies dead. EXCELLENT for Arena survivability (counterattack → Weaken → potential Perfect Veil on Hexed kill). Synergizes with Lifesteal set. MUST BOOK A2/A3 for Arena/FW viability (3-turn nuker + CC, 4-turn Hex/Fear setup). EXCELLENT for Arena (8/10) with Hex → Block Active Skills CC combo. Excellent for Faction Wars (8/10) and Doom Tower (8/10) with CC control. Build: 100% C.RATE (or 70%+ with A2 Inc C.RATE), 250%+ C.DMG, 4000+ ATK, 220+ SPD, 200+ ACC (effective 300 with A3 Inc ACC), 40000+ HP, 2000+ DEF. Savage or Cruel or Lifesteal sets. Warmaster. Cycle of Magic (faster cycling). Master Hexer (extends Hex 3→4). Retribution (counterattack synergy). User Priority: Knight Revenant specialist for FW + Arena. Spirit affinity = neutral vs most, weak to Void.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-cleopterix-skill-mastery-equip-guide/ (accessed 2025-10-26)",
+    "HellHades: https://hellhades.com/champions/cleopterix/ (accessed 2025-10-26)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "LEGENDARY nuker/CC with HEX SYNERGY. A3 Inc ACC + Hex/Fear. A2 Inc C.RATE/C.DMG + AoE + Block Active Skills (100% on Hex). A1 Weaken (70% vs Hex) + Perfect Veil on kill. Passive counterattack. Must book A2/A3. User priority: Knight Revenant FW + Arena with +30% C.DMG aura.",
+  "update_notes": {
+    "last_updated": "2025-10-26",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Arena + Faction Wars + Doom Tower focus. Validated against Ayumilove/HellHades. RaidWiki unavailable (500 error), stats from typical Legendary ATK (0/8 OCR). Faction corrected from Skinwalkers to Knight Revenant."
+  },
+  "validation_metadata": {
+    "stat_confidence": 60,
+    "data_sources": "ayumilove, hellhades, typical_legendary_atk",
+    "ocr_notes": "Stats from typical Legendary ATK (HP 15855, ATK 1575, DEF 947, SPD 103, C.RATE 15, C.DMG 63, RES 30, ACC 10). RaidWiki unavailable (500 error), OCR failed (0/8 stats). 60% confidence due to no direct stat source. Faction corrected from Skinwalkers to Knight Revenant based on user's original champion list."
+  }
+}

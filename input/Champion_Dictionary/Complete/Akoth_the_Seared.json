@@ -207,27 +207,38 @@
   ],
   "masteries": {
     "clan_boss": [
-      "Defense tree: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
-      "Support tree: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, Master Hexer (extends HP Burn)"
+      "Offense: Deadly Precision, Keen Strike, Life Drinker, Bring it Down, Methodical, Warmaster (DEF scaling, single-hit skills)",
+      "Defense: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "Support: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, Master Hexer (CRITICAL - extends HP Burn duration)"
     ],
     "dungeons": [
-      "Defense tree: Tough Skin, Blastproof, Improved Parry, Bloodthirst, Warmaster",
-      "Support tree: Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel"
+      "Offense: Deadly Precision, Keen Strike, Life Drinker, Bring it Down, Warmaster (DEF scaling)",
+      "Defense: Tough Skin, Blastproof, Improved Parry, Bloodthirst, Harvest Despair (60% Leech when passive places Fear)",
+      "Support: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Lore of Steel, Master Hexer (extends HP Burn)"
     ],
     "arena": [
-      "Not recommended for Arena"
+      "NOT RECOMMENDED - Arena rating 3/10, too slow for Arena meta"
     ],
     "doom_tower": [
-      "Defense tree: Tough Skin, Blastproof, Resurgent, Improved Parry, Harvest Despair (60% Leech when placing Fear from passive), Warmaster",
-      "Support tree: Pinpoint Accuracy, Charged Focus, Lore of Steel, Evil Eye, Master Hexer (extends HP Burn)"
+      "Offense: Deadly Precision, Keen Strike, Life Drinker, Bring it Down, Warmaster",
+      "Defense: Tough Skin, Blastproof, Resurgent, Improved Parry, Harvest Despair (Leech on Fear), Delay Death",
+      "Support: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Lore of Steel, Evil Eye, Master Hexer (extends HP Burn)"
     ],
     "faction_wars": [
-      "Defense tree: Tough Skin, Blastproof, Improved Parry, Bloodthirst, Harvest Despair (Leech on Fear), Warmaster",
-      "Support tree: Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel"
+      "Offense: Deadly Precision, Keen Strike, Life Drinker, Bring it Down, Warmaster",
+      "Defense: Tough Skin, Blastproof, Improved Parry, Bloodthirst, Harvest Despair (Leech on Fear from passive), Delay Death",
+      "Support: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Lore of Steel, Master Hexer (extends HP Burn)"
     ],
     "general": [
-      "Warmaster T6 (DEF scaling), Master Hexer for HP Burn extension",
-      "KEY SYNERGY: Harvest Despair (60% chance to place Leech when passive places Fear on HP Burn tick)"
+      "KEY SYNERGIES:",
+      "- Master Hexer: CRITICAL for HP Burn extension (30% chance to extend HP Burn by 1 turn) - maximizes A2/passive synergy",
+      "- Harvest Despair: 60% chance to place Leech when passive places Fear on HP Burn tick - sustain synergy",
+      "- Warmaster: DEF-scaling champion, single-hit skills → 60% proc rate for 4% MAX HP damage",
+      "- Life Drinker: Sustain when HP ≤50% (5% of damage inflicted)",
+      "- Pinpoint Accuracy + Swarm Smiter + Evil Eye: High ACC required for HP Burn, Cooldown Increase, Decrease C.RATE",
+      "- Lore of Steel: Boosts Lifesteal/Accuracy set bonuses",
+      "SKIP Opportunist: Arena rating 3/10, not worth mastery point for low Arena usage (Fear is passive proc, not primary mechanic)",
+      "DEF-BASED BUILD: Warmaster (not Giant Slayer) - all skills are single-hit AOE"
     ]
   },
   "blessings": [
@@ -253,8 +264,8 @@
   "author": "GitHub Copilot",
   "comments": "DEF-based HP Burn specialist with Rian synergy. Strong for Demonspawn Faction Wars and dungeon waves. User Priority: Dungeons (HP Burn team preference), Faction Wars (Demonspawn in progress).",
   "update_notes": {
-    "last_updated": "2025-10-24",
-    "last_patch": "Initial entry creation - Option C workflow (user stats + AI research)"
+    "last_updated": "2025-10-25",
+    "last_patch": "Expanded masteries section with complete offense tree (Warmaster for DEF scaling), detailed Master Hexer synergy (HP Burn extension), Harvest Despair explanation (Leech on Fear), and ACC masteries (Pinpoint + Swarm Smiter + Evil Eye). Added note to SKIP Opportunist (Arena 3/10, not worth mastery point). Clarified Warmaster choice (single-hit skills, DEF scaling)."
   },
   "validation_metadata": {
     "stat_confidence": 100,

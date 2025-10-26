@@ -132,12 +132,32 @@
   },
   "recommended_gear": ["Speed", "Perception", "Accuracy", "Relentless"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Master Hexer", "Evil Eye"],
-    "dungeons": ["Giant Slayer", "Master Hexer", "Evil Eye"],
-    "arena": ["Evil Eye", "Helmsmasher", "Cycle of Violence"],
-    "doom_tower": ["Warmaster", "Master Hexer"],
-    "faction_wars": ["Warmaster", "Master Hexer"],
-    "general": ["Support/Defense as needed"]
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'One-Two' attacks 2 times, 30% proc per hit = ~51% total proc chance). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A1 synergy, extra damage per hit), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total, reliable Dec DEF/Leech/Dec SPD landing), Lore of Steel, MASTER HEXER (CRITICAL - extends Dec DEF/Leech/Dec SPD debuffs for team support)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'One-Two' attacks 2 times, 30% proc per hit = ~51% total proc chance). Correct T6 for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A1 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends Dec DEF/Leech/Dec SPD), CYCLE OF MAGIC (reduces A2/A3 cooldowns)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, HELMSMASHER (Ignore DEF for burst damage in Arena) OR Giant Slayer if using multi-hit A1 setup",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (multi-hit A1 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for reliable Dec DEF/Dec SPD landing in Arena), Lore of Steel, Cycle of Violence (speed boost)"
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'One-Two' attacks 2 times, 30% proc per hit = ~51% total proc chance). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A1 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends Dec DEF/Leech/Dec SPD)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1 'One-Two' attacks 2 times, 30% proc per hit = ~51% total proc chance). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A1 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends Dec DEF/Leech/Dec SPD)"
+    ],
+    "general": "CORRECTED: Giant Slayer for all PVE content (A1 'One-Two' attacks 2 times = multi-hit, 30% proc per hit = ~51% total proc chance). Warmaster INCORRECT for multi-hit champion. Swarm Smiter CRITICAL (multi-hit A1 synergy - extra damage per hit). Master Hexer CRITICAL (extends Dec DEF/Leech/Dec SPD debuffs for team support). Eagle Eye CRITICAL (+50 ACC for 250+ total, reliable debuff landing). Arena can use Helmsmasher for Ignore DEF burst instead of Giant Slayer."
   },
   "blessings": ["Cruelty", "Phantom Touch", "Brimstone"],
   "ai_quirks": {

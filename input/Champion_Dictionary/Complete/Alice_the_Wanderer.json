@@ -106,12 +106,43 @@
   },
   "recommended_gear": ["Savage", "Lethal", "Merciless", "Perception", "Cruel", "Relentless", "Bloodthirst", "Impulse", "Stoneskin"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Evil Eye", "Support"],
-    "dungeons": ["Helmsmasher", "Cycle of Violence", "Bring it Down", "Kill Streak", "Methodical"],
-    "arena": ["Helmsmasher", "Shield Breaker", "Ruthless Ambush", "Single Out", "Cycle of Violence", "Kill Streak"],
-    "doom_tower": ["Helmsmasher", "Cycle of Violence", "Kill Streak"],
-    "faction_wars": ["Helmsmasher", "Cycle of Violence", "Kill Streak"],
-    "general": ["Offense/Support as needed"]
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (critical for A1 2-3 hit)",
+      "Defense: Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Swarm Smiter, Evil Eye (TM control synergy), Lore of Steel"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Cycle of Violence (cooldown reduction on high damage), Kill Streak, GIANT SLAYER (A1 multi-hit)",
+      "Defense: Improved Parry, Bloodthirst",
+      "Support: Pinpoint Accuracy, Swarm Smiter, Lore of Steel"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory (speed nuke), Shield Breaker, Ruthless Ambush (+8% first hit), Single Out, Cycle of Violence, Kill Streak, Helmsmasher (stacks with A3 ignore 20% DEF)",
+      "Defense: Improved Parry",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC for cooldown increase), Swarm Smiter, Lore of Steel"
+    ],
+    "doom_tower": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Cycle of Violence, Kill Streak, GIANT SLAYER (A1 multi-hit) or Helmsmasher",
+      "Defense: Blastproof, Improved Parry, Delay Death",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC), Swarm Smiter, Lore of Steel"
+    ],
+    "faction_wars": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Cycle of Violence, Kill Streak, GIANT SLAYER (A1 multi-hit)",
+      "Defense: Blastproof, Improved Parry, Bloodthirst",
+      "Support: Pinpoint Accuracy, Eagle Eye (+50 ACC), Swarm Smiter, Lore of Steel"
+    ],
+    "general": [
+      "KEY SYNERGIES:",
+      "- GIANT SLAYER vs Helmsmasher:",
+      "  - GIANT SLAYER: A1 is 2-3 hit attack (2 base + 1 extra if target has skill on cooldown) → multi-proc synergy for PVE bosses",
+      "  - Helmsmasher: Arena nuke builds → stacks additively with A3 ignore 20% DEF (total 45% DEF ignore)",
+      "- Cycle of Violence: 30% chance to reduce cooldown when damage exceeds 30% of target MAX HP → synergizes with passive cooldown reset on kill",
+      "- Kill Streak: +6% damage per kill (max +12%) → snowball damage in waves",
+      "- Eagle Eye + Pinpoint Accuracy: High ACC required for A2 cooldown increase (75% chance) and TM manipulation",
+      "- Evil Eye: A1 TM control synergy (-20% single-target or -5% AoE)",
+      "ARENA PRIORITY: Helmsmasher for DEF ignore stacking (45% total with A3)",
+      "PVE PRIORITY: Giant Slayer for A1 multi-hit proc synergy"
+    ]
   },
   "blessings": ["Crushing Rend", "Heaventcast"],
   "ai_quirks": {
@@ -123,13 +154,20 @@
     "cheese_type": "",
     "cheese_mechanic_info": "Not a cheese champion."
   },
-  "mechanics_advisory": "Best used as a nuker and control champion. Synergizes with cooldown manipulation teams. Passive bonus damage is maximized when enemy skills are on cooldown.",
+  "mechanics_advisory": "Alice the Wanderer is a top-tier attack champion for control and nuking. A1 is 2-3 hit attack (2 base + 1 extra if target has skill on cooldown) → benefits from Giant Slayer in PVE. A2 cooldown increase synergizes with passive bonus damage (+3% per turn on cooldown). A3 chains to lowest HP enemy if first target dies (both hits ignore 20% DEF). Passive resets one skill cooldown per kill (once per skill). Best used for Arena nuking (Helmsmasher stacks with A3), Doom Tower control, and dungeon wave clear. Build for ATK%, C.RATE, C.DMG, SPD, and ACC (cooldown increase requires 350+ ACC in Arena).",
+  "validation_sources": [
+    "Ayumilove (https://ayumilove.net/raid-shadow-legends-alice-the-wanderer-skill-mastery-equip-guide/)",
+    "HellHades (https://hellhades.com/champions/alice-the-wanderer/)",
+    "Masteries.md (mastery synergies)"
+  ],
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-alice-the-wanderer-skill-mastery-equip-guide/ (accessed 2025-06-10)",
     "HellHades: https://hellhades.com/champions/alice-the-wanderer/ (accessed 2025-06-10)"
   ],
   "update_notes": {
-    "last_updated": "2025-06-10",
-    "last_patch": "Patch 10.10 (2025-01-08): Champion released."
-  }
+    "last_updated": "2025-10-25",
+    "last_patch": "MAJOR UPDATE: Added complete masteries section with Giant Slayer synergy (A1 2-3 hit multi-proc), Helmsmasher for Arena (stacks with A3 ignore 20% DEF to 45% total), Cycle of Violence (cooldown reduction synergy with passive), Kill Streak (snowball damage), Eagle Eye/Pinpoint Accuracy (high ACC for cooldown increase), and content-specific recommendations. Expanded mechanics_advisory with strategic guidance. Added validation_sources."
+  },
+  "author": "GitHub Copilot",
+  "draft": false
 }

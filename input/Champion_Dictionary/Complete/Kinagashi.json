@@ -1,0 +1,174 @@
+{
+  "name": "Kinagashi",
+  "rarity": "Epic",
+  "affinity": "Spirit",
+  "faction": "Shadowkin",
+  "role": "Support",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "4/10",
+    "dungeons": "6/10",
+    "doom_tower": "6/10",
+    "arena": "6/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 18165,
+        "ATK": 1079,
+        "DEF": 1013,
+        "SPD": 105,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Leaping Sword Art",
+          "type": "A1",
+          "description": "Attacks 1 enemy 2 times. Each hit has a 30% chance of decreasing the target's Turn Meter by 10%.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.95,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "2-hit attack. 1.95 ATK per hit base (2.145 ATK booked with +10% damage). Total: 3.9 ATK base, 4.29 ATK booked."
+            },
+            {
+              "type": "turn_meter_steal",
+              "stat": "Turn Meter",
+              "value": 10,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "30% chance TM reduction (10%) per hit base (40% booked with +10% debuff chance). 2 hits = 2 chances for TM control. Decent for TM manipulation but not guaranteed."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Multi-hit", "Turn Meter Manipulation", "TM Reduction"],
+          "book_value": "Low-Medium: +10% damage + 10% TM chance (30%→40%). Decent but not critical.",
+          "notes": "2-hit A1 with TM reduction (40% per hit booked = 10% TM reduction each). Not guaranteed but provides some TM control. 200+ ACC needed. Good for cycling and minor TM manipulation."
+        },
+        {
+          "name": "United Front",
+          "type": "A2",
+          "description": "Teams up with a random ally to attack a single enemy. Also fills the Turn Meters of all allies by 15%.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Team-up attack: Kinagashi + random ally attack target. Damage based on Kinagashi and ally stats. Good for extra damage and cycling ally abilities."
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 15,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "notes": "+15% TM for all allies. Team-wide speed boost. EXCELLENT for team cycling and speed manipulation."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Team-up", "Turn Meter Manipulation", "TM Boost", "Team Support"],
+          "book_value": "HIGH: -2 cooldown (5→3). MUST BOOK for team-up + TM boost cycling.",
+          "notes": "TEAM-UP: Kinagashi + random ally attack target + ALL allies get +15% TM. MUST BOOK for 3-turn cooldown. EXCELLENT for team cycling (team-up triggers ally + TM boost for all). Good for Arena (6/10) and Faction Wars (8/10) with speed manipulation."
+        },
+        {
+          "name": "Recall from Death",
+          "type": "A3",
+          "description": "Revives an ally with 50% HP and 50% Turn Meter. Also places a 60% [Increase DEF] buff on the ally for 2 turns.",
+          "effects": [
+            {
+              "type": "revive",
+              "stat": "HP",
+              "value": 50,
+              "per_hit": false,
+              "target": "single_ally",
+              "notes": "Revives ally with 50% HP and 50% TM. Standard revive mechanic."
+            },
+            {
+              "type": "buff",
+              "stat": "Increase DEF",
+              "value": 60,
+              "per_hit": false,
+              "target": "revived_ally",
+              "duration": "2 turns",
+              "notes": "60% Inc DEF buff on revived ally for 2 turns. Good survivability boost after revive."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Revive", "Increase DEF", "Team Support"],
+          "book_value": "CRITICAL: -2 cooldown (6→4). MUST BOOK for revive uptime.",
+          "notes": "REVIVE: Revives ally with 50% HP + 50% TM + 60% Inc DEF (2 turns). MUST BOOK for 4-turn cooldown. EXCELLENT for Faction Wars (8/10) and dungeons (6/10) with revive + Inc DEF survivability. Standard revive but functional."
+        }
+      ],
+      "aura": "Increases Ally SPD in Faction Crypts by 24%",
+      "comments": "Support specialist with revive, team-up, and TM manipulation. A3 'Recall from Death' revives with 50% HP/TM + Inc DEF (60%). A2 'United Front' team-up + ALL allies +15% TM. A1 2-hit TM reduction (40% per hit booked). EXCELLENT for Faction Wars (8/10) with +24% SPD aura. Must book A2/A3."
+    }
+  ],
+  "mechanics_tags": ["Revive", "Increase DEF", "Team-up", "Turn Meter Manipulation", "TM Boost", "TM Reduction", "Multi-hit", "Team Support", "Speed Aura"],
+  "stat_priorities": ["220+ SPD", "200+ ACC", "40000+ HP", "2000+ DEF", "100+ RES"],
+  "stat_priority_recommendations": {
+    "clan_boss": "Low priority. If used: 220+ SPD, 200+ ACC (TM reduction), 40000+ HP. Revive not useful in CB. Team-up unreliable (random ally). 4/10 CB rating.",
+    "dungeons": "PRIORITY: 220+ SPD (revive cycling), 200+ ACC (TM reduction), 40000+ HP (survivability), 2000+ DEF. A3 revive + A2 team-up/TM boost good for waves. Speed or Immortal sets.",
+    "arena": "MEDIUM: 220+ SPD, 200+ ACC, 40000+ HP, 2000+ DEF, 150+ RES. +24% SPD aura helpful. A2 TM boost + team-up for cycling. A3 revive for safety net. 6/10 Arena rating.",
+    "faction_wars": "PRIORITY: 220+ SPD (CRITICAL - +24% SPD aura = effective 272 SPD at 220 base), 200+ ACC (TM reduction), 40000+ HP, 2000+ DEF, 100+ RES. A3 revive + A2 team-up/TM boost + A1 TM reduction EXCELLENT for boss waves. MUST BOOK A2/A3 for Shadowkin FW progression."
+  },
+  "recommended_gear": ["Speed (220+ SPD for revive/TM cycling)", "Immortal (HP + sustain)", "Perception (ACC boost for TM reduction)", "Regeneration (sustain)", "Divine Speed (speed + heal synergy)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (2-hit A1 for extra procs)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (tanky support)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (reduces A2/A3 cooldowns)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2 5→3 booked, A3 6→4 booked cooldowns), LASTING GIFTS (extends Inc DEF buff on revived ally)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, DETERRENCE",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (faster A2/A3 cycling), LASTING GIFTS (extends Inc DEF buff)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (tanky support for survivability), UNSHAKEABLE (+50 RES for debuff resistance)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2 team-up/TM boost + A3 revive cycling), LASTING GIFTS (extends Inc DEF buff on revived ally for boss waves)"
+    ],
+    "general": "WARMASTER for all content (2-hit A1 for extra procs). Cycle of Magic CRITICAL (reduces A2 5→3 booked, A3 6→4 booked cooldowns for team-up/TM boost + revive uptime). Lasting Gifts (extends Inc DEF buff on revived ally). Deterrence (tanky support survivability). Unshakeable (+50 RES for debuff resistance). MUST BOOK A2/A3 for 3-turn team-up/TM boost, 4-turn revive. Build: 220+ SPD (revive/TM cycling, 272 effective with +24% aura), 200+ ACC (TM reduction), 40000+ HP, 2000+ DEF. Speed or Immortal sets. Focus: Faction Wars (8/10) with +24% SPD aura + revive + team-up/TM boost. Good for dungeons (6/10) and Arena (6/10) with TM manipulation and revive support. User Priority: Shadowkin specialist for Faction Wars progression. Spirit affinity = neutral vs Force/Magic, weak to Void."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams - unlikely)", "Soul Reap (cooldown reduction on kill)", "Phantom Touch (speed boost)", "Polymorph (CC support)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A3 revive when ally dead, A2 for team-up/TM boost, A1 for TM reduction. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "No cheese mechanics. Standard revive + team-up support with TM manipulation."
+  },
+  "mechanics_advisory": "Support specialist with revive, team-up, and TM manipulation. A3 'Recall from Death' is REVIVE MECHANIC: Revives ally with 50% HP + 50% TM + 60% Inc DEF (2 turns). MUST BOOK for 4-turn cooldown. EXCELLENT for Faction Wars (8/10) and dungeons (6/10) with revive + Inc DEF survivability. Standard revive but functional. A2 'United Front' is TEAM-UP + TM BOOST: Kinagashi + random ally attack target + ALL allies get +15% TM. MUST BOOK for 3-turn cooldown. EXCELLENT for team cycling (team-up triggers ally abilities + TM boost for all). Good for Arena (6/10) and Faction Wars (8/10) with speed manipulation. A1 'Leaping Sword Art' has 2-hit TM reduction (40% per hit booked = 10% TM reduction each). Not guaranteed but provides some TM control. MUST BOOK A2/A3 for FW viability (3-turn team-up/TM boost, 4-turn revive). EXCELLENT for Faction Wars (8/10) with +24% SPD aura (effective 272 SPD at 220 base) + revive + team-up/TM boost. Good for dungeons (6/10) and Arena (6/10) with TM manipulation and revive support. Build: 220+ SPD (revive/TM cycling), 200+ ACC (TM reduction), 40000+ HP, 2000+ DEF. Speed or Immortal sets. Warmaster for 2-hit A1. Cycle of Magic (faster cycling). Lasting Gifts (extends Inc DEF). User Priority: Shadowkin specialist for Faction Wars progression. Spirit affinity = neutral vs most, weak to Void.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-kinagashi-skill-mastery-equip-guide/ (accessed 2025-10-26)",
+    "HellHades: https://hellhades.com/champions/kinagashi/ (accessed 2025-10-26)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Support specialist for Faction Wars. A3 revive with 50% HP/TM + Inc DEF. A2 team-up + ALL allies +15% TM. A1 2-hit TM reduction (40% per hit). Must book A2/A3. User priority: Shadowkin FW with +24% SPD aura.",
+  "update_notes": {
+    "last_updated": "2025-10-26",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Faction Wars + dungeons focus. Validated against Ayumilove/HellHades. RaidWiki unavailable (500 error), stats from Ayumilove OCR (100% confidence - 8/8 stats)."
+  },
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "ayumilove_ocr, hellhades",
+    "ocr_notes": "Stats from Ayumilove OCR (HP 18165, ATK 1079, DEF 1013, SPD 105, C.RATE 15, C.DMG 50, RES 30, ACC 0). 100% OCR extraction (8/8 stats). RaidWiki unavailable (500 error). 100% confidence."
+  }
+}

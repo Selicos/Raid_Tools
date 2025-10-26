@@ -113,12 +113,32 @@
   },
   "recommended_gear": ["Relentless", "Perception", "Speed", "Accuracy", "Lifesteal", "Savage", "Cruel"],
   "masteries": {
-    "clan_boss": ["Warmaster", "Master Hexer", "Evil Eye", "Methodical"],
-    "dungeons": ["Giant Slayer", "Sniper", "Lore of Steel"],
-    "arena": ["Helmsmasher", "Shield Breaker", "Cycle of Violence"],
-    "doom_tower": ["Warmaster", "Lasting Gifts"],
-    "faction_wars": ["Warmaster", "Cycle of Magic"],
-    "general": ["Offense/Support as needed"]
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (CRITICAL - A2 'Dark Blades' attacks 3 times at random, 30% proc per hit = ~66% total proc chance). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A2 synergy, extra damage per hit), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total, reliable HP Burn landing), Lore of Steel, MASTER HEXER (CRITICAL - extends HP Burn debuffs from A1/A2 for more damage + instant activation bonus)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A2 'Dark Blades' attacks 3 times at random, 30% proc per hit = ~66% total proc chance). Correct T6 for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy (low priority, ACC built into gear), Charged Focus, SWARM SMITER (CRITICAL - multi-hit A2 synergy), Lore of Steel, SNIPER (CRITICAL - extra C.DMG for nuking), Evil Eye, EAGLE EYE (+50 ACC if needed for HP Burn), Master Hexer (extends HP Burn)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, HELMSMASHER (Ignore DEF for burst damage in Arena) OR Giant Slayer if using multi-hit A2 setup, Shield Breaker",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Charged Focus, SWARM SMITER (multi-hit synergy), Lore of Steel, SNIPER (CRITICAL - extra C.DMG for nuking), Cycle of Violence (speed boost), Eagle Eye (if needed for ACC)"
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A2 'Dark Blades' attacks 3 times at random, 30% proc per hit = ~66% total proc chance). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A2 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, Master Hexer (extends HP Burn), LASTING GIFTS (extends Perfect Veil buff from A2)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A2 'Dark Blades' attacks 3 times at random, 30% proc per hit = ~66% total proc chance). CORRECTED: Warmaster INCORRECT for multi-hit champion.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A2 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, Master Hexer (extends HP Burn), CYCLE OF MAGIC (reduces A2/A3 cooldowns)"
+    ],
+    "general": "CORRECTED: Giant Slayer for all PVE content (A2 'Dark Blades' attacks 3 times at random = multi-hit, 30% proc per hit = ~66% total proc chance). Warmaster INCORRECT for multi-hit champion. Swarm Smiter CRITICAL (multi-hit A2 synergy - extra damage per hit). Master Hexer CRITICAL (extends HP Burn debuffs from A1/A2 - synergizes with A2 instant HP Burn activation vs Bosses for massive damage). Eagle Eye CRITICAL (+50 ACC for 250+ total, reliable HP Burn landing). Sniper (dungeons/Arena - extra C.DMG for nuking). Arena can use Helmsmasher for Ignore DEF burst instead of Giant Slayer."
   },
   "blessings": ["Brimstone", "Phantom Touch", "Cruelty"],
   "ai_quirks": {

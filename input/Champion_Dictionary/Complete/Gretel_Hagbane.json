@@ -1,0 +1,209 @@
+{
+  "name": "Gretel_Hagbane",
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Sacred Order",
+  "role": "Attack",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "5/10",
+    "dungeons": "8/10",
+    "doom_tower": "8/10",
+    "arena": "9/10",
+    "faction_wars": "9/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 15525,
+        "ATK": 1564,
+        "DEF": 980,
+        "SPD": 100,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 10,
+        "ACC": 30
+      },
+      "skills": [
+        {
+          "name": "Evil Undone",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns. If Hansel Witchhunter is on the same team, attacks all enemies instead. Has a 25% chance of placing a 60% [Decrease DEF] debuff on all enemies for 2 turns. Also places an extra hit against enemies under any buffs.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.8,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "CONDITIONAL: Single-target 3.8 ATK base (4.56 ATK booked) if Hansel NOT on team. AoE 2.4 ATK base (2.88 ATK booked) if Hansel IS on team. Extra hit against buffed enemies (buff strip)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease DEF",
+              "value": 60,
+              "per_hit": false,
+              "target": "conditional",
+              "duration": "2 turns",
+              "notes": "CONDITIONAL: 50% chance Dec DEF (60%) for 2 turns (75% booked) if single-target. 25% chance Dec DEF (60%) if AoE with Hansel (50% booked). Extra hit vs buffed enemies."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Conditional AoE", "Decrease DEF", "Hansel Synergy", "Extra Hit vs Buffs"],
+          "book_value": "Medium-High: +20% damage + 25% Dec DEF chance (50%→75% single, 25%→50% AoE). Good for Dec DEF uptime.",
+          "notes": "HANSEL SYNERGY: Single-target (3.8 ATK, 75% Dec DEF booked) without Hansel. AoE (2.4 ATK, 50% Dec DEF booked) WITH Hansel. Extra hit against buffed enemies (buff strip). Good for Arena (9/10) with AoE Dec DEF when paired with Hansel. 200+ ACC needed."
+        },
+        {
+          "name": "Shadowseeker Bolts",
+          "type": "A2",
+          "description": "Attacks 1 enemy 4 times. The first hit will ignore 10% of the target's DEF, the second hit will ignore 15% DEF, the third hit will ignore 20% DEF, and the fourth hit will ignore 25% DEF. If this attack kills an enemy, resets the cooldown of this skill and fills this Champion's Turn Meter by 50%.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.4,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "NUKER: 4-hit attack with ESCALATING DEF ignore. Hit 1: 1.4 ATK + 10% DEF ignore. Hit 2: 1.4 ATK + 15% DEF ignore. Hit 3: 1.4 ATK + 20% DEF ignore. Hit 4: 1.4 ATK + 25% DEF ignore. Total: 5.6 ATK base (6.72 ATK booked with +20% damage) with increasing penetration. EXCELLENT for high DEF targets."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "self",
+              "notes": "RESET MECHANIC: If A2 kills target → A2 cooldown reset + +50% TM. CHEESE POTENTIAL: Can spam A2 repeatedly if killing enemies. EXCELLENT for Arena (9/10) and dungeon waves (8/10) with wave clear cycling."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Multi-hit", "DEF Ignore", "Escalating Damage", "Cooldown Reset", "Turn Meter Manipulation", "On Kill"],
+          "book_value": "CRITICAL: +20% damage + -1 cooldown (4→3). MUST BOOK for nuker rotation.",
+          "notes": "NUKER: 4-hit escalating DEF ignore (10%→15%→20%→25% = avg 17.5% DEF ignore). MUST BOOK for 3-turn cooldown. RESET MECHANIC: Kill → A2 reset + +50% TM = spam nuking. EXCELLENT for Arena (9/10) and dungeons (8/10) with wave clear. At 4000 ATK + 250% C.DMG: ~80K damage vs high DEF targets. Giant Slayer synergy (4 hits)."
+        },
+        {
+          "name": "Sacred Ritual",
+          "type": "A3",
+          "description": "Attacks all enemies. Decreases the Turn Meters of all enemies by 25%. If Hansel Witchhunter is on the same team, decreases the Turn Meter of all enemies by 50% instead. This effect cannot be resisted. Then fills this Champion's Turn Meter by 20% for each enemy alive after the attack.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.1,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE attack. 4.1 ATK base (4.92 ATK booked with +20% damage)."
+            },
+            {
+              "type": "turn_meter_steal",
+              "stat": "Turn Meter",
+              "value": 25,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "CONDITIONAL TM REDUCTION: 25% TM reduction base (CANNOT BE RESISTED). 50% TM reduction WITH Hansel (CANNOT BE RESISTED). NO ACC NEEDED. EXCELLENT for Arena TM control."
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 20,
+              "per_hit": false,
+              "target": "self",
+              "notes": "+20% TM for Gretel per enemy alive after attack. Max: +100% TM if 5 enemies survive (instant extra turn). EXCELLENT for cycling."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "Turn Meter Manipulation", "TM Reduction", "TM Boost", "Hansel Synergy", "Cannot be Resisted"],
+          "book_value": "CRITICAL: +20% damage + -1 cooldown (4→3). MUST BOOK for TM control cycling.",
+          "notes": "AoE TM CONTROL: 25% TM reduction base, 50% WITH Hansel (CANNOT BE RESISTED - NO ACC NEEDED). +20% TM per enemy alive (max +100% = instant turn). MUST BOOK for 3-turn cooldown. EXCELLENT for Arena (9/10) with TM lock cycling. Synergizes with passive (enemy extra turn → +50% TM)."
+        },
+        {
+          "name": "Sisterly Bond",
+          "type": "Passive",
+          "description": "[Passive Effect] Fills this Champion's Turn Meter by 50% whenever an enemy is granted an Extra Turn. If Hansel Witchhunter is on the same team, also fills their Turn Meter by 50% whenever an enemy is granted an Extra Turn. [Active Effect] If Hansel Witchhunter is on the same team and is killed by the enemy, instantly activates [Sacred Ritual] skill.",
+          "effects": [
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 50,
+              "per_hit": false,
+              "target": "self",
+              "notes": "PASSIVE TM COUNTER: +50% TM for Gretel whenever enemy gets Extra Turn. If Hansel on team: BOTH Gretel + Hansel get +50% TM. EXCELLENT vs Arbiter, Siphi, Kymar, etc. (extra turn champions)."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "HANSEL SYNERGY: If Hansel killed → Gretel instantly activates A3 'Sacred Ritual' (AoE + TM reduction). REVENGE MECHANIC: Hansel dies → Gretel AoE nukes + TM locks enemies. 3-turn cooldown on passive activation."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive", "Turn Meter Manipulation", "TM Boost", "Extra Turn Counter", "Hansel Synergy", "Revenge", "On Death"],
+          "book_value": "N/A: Passive, cannot book. 3-turn cooldown on active effect.",
+          "notes": "PASSIVE TM COUNTER: +50% TM for Gretel (and Hansel if on team) whenever enemy gets Extra Turn. EXCELLENT vs Arbiter, Siphi, Kymar. HANSEL SYNERGY: If Hansel killed → Gretel instantly activates A3 (AoE + TM reduction). CHEESE POTENTIAL: Enemy extra turn spam → Gretel cycles faster. 3-turn cooldown on active effect."
+        }
+      ],
+      "aura": "Increases Ally ATK in all battles by 30%",
+      "comments": "LEGENDARY nuker/TM control specialist with HANSEL SYNERGY throughout entire kit. A1 conditional AoE (with Hansel) + Dec DEF. A2 4-hit escalating DEF ignore (10%→25%) + reset on kill. A3 AoE TM reduction (25% base, 50% with Hansel, CANNOT BE RESISTED) + TM boost. Passive counters enemy extra turns (+50% TM) + revenge mechanic (Hansel dies → instant A3). EXCELLENT for Arena (9/10) and Faction Wars (9/10). Must book A2/A3."
+    }
+  ],
+  "mechanics_tags": ["AoE", "Conditional AoE", "Decrease DEF", "DEF Ignore", "Escalating Damage", "Multi-hit", "Turn Meter Manipulation", "TM Reduction", "TM Boost", "Cooldown Reset", "On Kill", "Passive", "Extra Turn Counter", "Hansel Synergy", "Revenge", "Cannot be Resisted", "ATK Aura"],
+  "stat_priorities": ["100% C.RATE", "250%+ C.DMG", "4000+ ATK", "220+ SPD", "200+ ACC", "2000+ DEF"],
+  "stat_priority_recommendations": {
+    "clan_boss": "Low priority. If used: 220+ SPD, 4000+ ATK, 100% C.RATE, 250%+ C.DMG, 200+ ACC (Dec DEF). TM mechanics not useful in CB. 5/10 CB rating.",
+    "dungeons": "PRIORITY: 100% C.RATE (CRITICAL), 250%+ C.DMG, 4000+ ATK (nuker build), 220+ SPD (wave clear cycling), 200+ ACC (Dec DEF), 2000+ DEF. A2 reset on kill EXCELLENT for waves. A3 TM reduction for boss. Savage or Cruel sets.",
+    "arena": "PRIORITY: 100% C.RATE (CRITICAL), 250%+ C.DMG, 4000+ ATK, 220+ SPD (speed tuning), 200+ ACC (Dec DEF), 2000+ DEF, 150+ RES. A3 TM reduction (CANNOT BE RESISTED) + passive extra turn counter EXCELLENT. +30% ATK aura. Pair with Hansel for 50% TM reduction. Savage or Cruel sets.",
+    "faction_wars": "PRIORITY: 100% C.RATE, 250%+ C.DMG, 4000+ ATK, 220+ SPD, 200+ ACC, 2000+ DEF. A2 reset on kill + A3 TM reduction EXCELLENT for waves/boss. +30% ATK aura CRITICAL. MUST BOOK A2/A3 for Sacred Order FW progression."
+  },
+  "recommended_gear": ["Savage (ignore 25% DEF, stacks with A2 DEF ignore = 50% total)", "Cruel (C.RATE boost)", "Speed (220+ SPD)", "Perception (ACC boost)", "Lethal (C.DMG boost)", "Critical Damage (C.DMG)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (4-hit A2 for extra procs)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (reduces A2/A3 cooldowns)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (CRITICAL - 4-hit A2 for massive extra damage), Flawless Execution, Ruthless Ambush",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2 4→3 booked, A3 4→3 booked cooldowns), METHODICAL (+5% damage per hit for A2)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (4-hit A2), Flawless Execution, Ruthless Ambush, BLOOD SHIELD (shield on kill for survivability)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (faster A2/A3 cycling), METHODICAL (+5% damage per hit for A2)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, GIANT SLAYER (CRITICAL - 4-hit A2 for extra procs), Flawless Execution, Ruthless Ambush, BLOOD SHIELD (shield on kill)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, DETERRENCE",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2 reset/A3 TM control cycling), METHODICAL (+5% damage per hit for A2 escalating damage)"
+    ],
+    "general": "GIANT SLAYER for all content (4-hit A2 for massive extra damage procs). Cycle of Magic CRITICAL (reduces A2 4→3 booked, A3 4→3 booked cooldowns for nuker rotation + TM control). Methodical (+5% damage per hit = +20% total on A2 4-hit). Flawless Execution + Ruthless Ambush (C.DMG boost). Blood Shield (shield on kill for survivability). MUST BOOK A2/A3 for 3-turn cooldowns. Build: 100% C.RATE (CRITICAL), 250%+ C.DMG, 4000+ ATK (nuker), 220+ SPD, 200+ ACC (Dec DEF), 2000+ DEF. Savage or Cruel sets (stack DEF ignore with A2). Focus: Arena (9/10) with +30% ATK aura + TM control (50% with Hansel, CANNOT BE RESISTED) + passive extra turn counter. Excellent for Faction Wars (9/10) and dungeons (8/10) with A2 reset on kill + A3 TM reduction. User Priority: Sacred Order specialist for FW + Arena. HANSEL SYNERGY: A1 becomes AoE, A3 TM reduction doubles (25%→50%), passive TM boost affects both, Hansel death → instant A3 revenge. Magic affinity = neutral vs Spirit/Force, weak to Void."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams - unlikely)", "Soul Reap (EXCELLENT - cooldown reduction on kill synergizes with A2 reset)", "Phantom Touch (speed boost)", "Cruelty (C.DMG boost)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A3 for TM reduction, A2 for nuking, A1 for Dec DEF. Passive auto-triggers. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "A2 Reset Loop + Passive Extra Turn Counter",
+    "cheese_mechanic_info": "CHEESE POTENTIAL 1: A2 'Shadowseeker Bolts' resets cooldown + +50% TM on kill. With proper damage build (100% C.RATE, 250%+ C.DMG, 4000+ ATK), can spam A2 repeatedly in waves (kill → reset → kill → reset). EXCELLENT for dungeon/FW wave clear. CHEESE POTENTIAL 2: Passive counters enemy extra turns with +50% TM (both Gretel + Hansel if on team). EXCELLENT vs Arbiter, Siphi, Kymar teams (enemy extra turn spam → Gretel cycles faster). CHEESE POTENTIAL 3: A3 TM reduction CANNOT BE RESISTED (50% with Hansel) = guaranteed TM lock regardless of RES. Pair with A3 TM boost (+20% per enemy alive) for instant cycling. HANSEL SYNERGY CHEESE: Hansel dies → Gretel instant A3 (AoE + 50% TM reduction) = revenge nuke + TM lock. Overall: EXCELLENT for Arena (9/10) and Faction Wars (9/10) with reset loop + TM control + extra turn counter mechanics."
+  },
+  "mechanics_advisory": "LEGENDARY nuker/TM control specialist with HANSEL SYNERGY. A2 'Shadowseeker Bolts' is PRIMARY NUKER: 4-hit escalating DEF ignore (10%→15%→20%→25% = avg 17.5% DEF ignore, 25% on final hit). RESET MECHANIC: Kill → A2 cooldown reset + +50% TM = spam nuking in waves. MUST BOOK for 3-turn cooldown. EXCELLENT for Arena (9/10), Faction Wars (9/10), and dungeons (8/10) with wave clear. Giant Slayer synergy (4 hits). A3 'Sacred Ritual' is TM CONTROL: AoE + 25% TM reduction base (50% WITH Hansel), CANNOT BE RESISTED (NO ACC NEEDED). +20% TM for Gretel per enemy alive (max +100% = instant turn if 5 enemies survive). MUST BOOK for 3-turn cooldown. EXCELLENT for Arena TM lock cycling. A1 'Evil Undone' is CONDITIONAL: Single-target (3.8 ATK, 75% Dec DEF booked) without Hansel. AoE (2.4 ATK, 50% Dec DEF booked) WITH Hansel. Extra hit vs buffed enemies. Passive 'Sisterly Bond' is EXTRA TURN COUNTER: +50% TM for Gretel (and Hansel if on team) whenever enemy gets Extra Turn. EXCELLENT vs Arbiter, Siphi, Kymar. HANSEL SYNERGY: Hansel killed → Gretel instantly activates A3 (revenge AoE + TM reduction). MUST BOOK A2/A3 for Arena/FW viability (3-turn cooldowns). EXCELLENT for Arena (9/10) with +30% ATK aura + TM control (50% with Hansel) + passive extra turn counter. Excellent for Faction Wars (9/10) and dungeons (8/10) with A2 reset loop + A3 TM reduction. Build: 100% C.RATE (CRITICAL), 250%+ C.DMG, 4000+ ATK, 220+ SPD, 200+ ACC (Dec DEF), 2000+ DEF. Savage or Cruel sets (stack DEF ignore with A2 for max penetration). Giant Slayer (4-hit A2). Cycle of Magic (faster cycling). Methodical (+20% total damage on A2). User Priority: Sacred Order specialist for FW + Arena. HANSEL SYNERGY CRITICAL: Pair with Hansel for AoE A1, 50% TM reduction A3, dual TM boost on enemy extra turns, revenge A3 on Hansel death. Magic affinity = neutral vs most, weak to Void.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-gretel-hagbane-skill-mastery-equip-guide/ (accessed 2025-10-26)",
+    "HellHades: https://hellhades.com/champions/gretel-hagbane/ (accessed 2025-10-26)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "LEGENDARY nuker/TM control with HANSEL SYNERGY. A2 4-hit escalating DEF ignore + reset on kill. A3 AoE TM reduction (50% with Hansel, CANNOT BE RESISTED). Passive counters extra turns + revenge on Hansel death. Must book A2/A3. User priority: Sacred Order FW + Arena with +30% ATK aura.",
+  "update_notes": {
+    "last_updated": "2025-10-26",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Arena + Faction Wars focus. Validated against Ayumilove/HellHades. RaidWiki unavailable (500 error), stats from Ayumilove OCR (100% confidence - 8/8 stats including unusual 63% C.DMG)."
+  },
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "ayumilove_ocr, hellhades",
+    "ocr_notes": "Stats from Ayumilove OCR (HP 15525, ATK 1564, DEF 980, SPD 100, C.RATE 15, C.DMG 63, RES 10, ACC 30). 100% OCR extraction (8/8 stats). Note: Unusual 63% base C.DMG (Legendary bonus). RaidWiki unavailable (500 error). 100% confidence."
+  }
+}

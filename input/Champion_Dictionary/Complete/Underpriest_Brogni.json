@@ -127,12 +127,32 @@
     "Shield", "Relentless", "Regeneration", "Immortal", "Perception", "Speed", "Reflex", "Stoneskin", "Protection"
   ],
   "masteries": {
-    "clan_boss": ["Giant Slayer", "Lasting Gifts", "Shieldbearer", "Cycle of Magic"],
-    "dungeons": ["Giant Slayer", "Lasting Gifts", "Shieldbearer", "Cycle of Magic"],
-    "arena": ["Unshakeable", "Lasting Gifts", "Shieldbearer"],
-    "doom_tower": ["Giant Slayer", "Lasting Gifts", "Shieldbearer"],
-    "faction_wars": ["Giant Slayer", "Lasting Gifts"],
-    "general": ["Offense/Support/Defense as needed"]
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 'Deepcrystal Scourge' single-target ATK-scaling, 60% proc per skill). CORRECTED: Giant Slayer INCORRECT (no multi-hit skills).",
+      "DEFENSE: Tough Skin, Blastproof, Shield Bearer (CRITICAL - synergizes with A2/A3 Shield buffs), Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total, reliable HP Burn/debuff removal), Lore of Steel, MASTER HEXER (CRITICAL - extends HP Burn debuffs from A1), LASTING GIFTS (CRITICAL - extends Shield buffs from A2/A3/passive for longer protection), CYCLE OF MAGIC (CRITICAL - reduces A2/A3 cooldowns for more frequent Shield/cleanse)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 'Deepcrystal Scourge' single-target ATK-scaling, 60% proc per skill). CORRECTED: Giant Slayer INCORRECT (no multi-hit skills).",
+      "DEFENSE: Tough Skin, Blastproof, Shield Bearer (CRITICAL - synergizes with A2/A3 Shield buffs), Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total, reliable HP Burn/debuff removal), Lore of Steel, MASTER HEXER (CRITICAL - extends HP Burn), LASTING GIFTS (CRITICAL - extends Shield buffs), CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 single-target ATK-scaling, 60% proc per skill) OR Helmsmasher for burst",
+      "DEFENSE: Tough Skin, Blastproof, Shield Bearer (CRITICAL - synergizes with A2/A3 Shield buffs), Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for reliable debuff removal/HP Burn), Lore of Steel, UNSHAKEABLE (CRITICAL - +50 RES for 140 total, immunity to CC for support/shield role), LASTING GIFTS (CRITICAL - extends Shield buffs)"
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 'Deepcrystal Scourge' single-target ATK-scaling, 60% proc per skill). CORRECTED: Giant Slayer INCORRECT (no multi-hit skills).",
+      "DEFENSE: Tough Skin, Blastproof, Shield Bearer (CRITICAL - synergizes with A2/A3 Shield buffs), Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends HP Burn), LASTING GIFTS (CRITICAL - extends Shield buffs for longer protection in boss fights)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 'Deepcrystal Scourge' single-target ATK-scaling, 60% proc per skill). CORRECTED: Giant Slayer INCORRECT (no multi-hit skills).",
+      "DEFENSE: Tough Skin, Blastproof, Shield Bearer (CRITICAL - synergizes with A2/A3 Shield buffs), Resurgent, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (extends HP Burn), LASTING GIFTS (CRITICAL - extends Shield buffs)"
+    ],
+    "general": "CORRECTED: Warmaster for all PVE content (A1 'Deepcrystal Scourge' single-target ATK-scaling, 60% proc per skill). Giant Slayer INCORRECT (no multi-hit skills). Shield Bearer CRITICAL (synergizes with A2/A3 Shield buffs - increases Shield value by 15%). Lasting Gifts CRITICAL (extends Shield buffs from A2/A3/passive for longer team protection). Master Hexer CRITICAL (extends HP Burn debuffs from A1). Eagle Eye CRITICAL (+50 ACC for 250+ total, reliable HP Burn landing and debuff removal). Cycle of Magic CRITICAL (reduces A2/A3 cooldowns for more frequent Shield/cleanse). Unshakeable CRITICAL (Arena - +50 RES for 140 total, immunity to CC for support role)."
   },
   "blessings": ["Brimstone", "Soul Reap", "Cruelty"],
   "ai_quirks": {

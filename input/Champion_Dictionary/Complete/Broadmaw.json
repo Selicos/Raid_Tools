@@ -1,0 +1,180 @@
+{
+  "name": "Broadmaw",
+  "rarity": "Rare",
+  "affinity": "Spirit",
+  "faction": "Lizardmen",
+  "role": "HP",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "4/10",
+    "dungeons": "5/10",
+    "doom_tower": "5/10",
+    "arena": "3/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 18660,
+        "ATK": 1101,
+        "DEF": 958,
+        "SPD": 104,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Bone Hammer",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 30% chance of placing a 50% [Decrease ATK] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.15,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single-hit. 0.15x HP multiplier. HP-scaling champion."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease ATK",
+              "value": 50,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "30% base (40% booked) chance to place 50% Dec ATK."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Single Target", "Decrease ATK", "HP Scaling"],
+          "book_value": "Low: +25% damage, +10% Dec ATK chance (30%→40%). Not priority.",
+          "notes": "Single-hit HP-scaling A1. Dec ATK useful but low proc chance. Not main focus."
+        },
+        {
+          "name": "Fell Swoop",
+          "type": "A2",
+          "description": "Attacks all enemies. Places a 25% [Weaken] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.2,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE attack. 0.2x HP multiplier per target. HP-scaling."
+            },
+            {
+              "type": "debuff",
+              "stat": "Weaken",
+              "value": 25,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "100% chance to place 25% Weaken on all enemies (no ACC check per Ayumilove - always lands)."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "Weaken", "HP Scaling"],
+          "book_value": "Medium: +20% damage, -1 cooldown (4→3). Useful for Weaken uptime.",
+          "notes": "AoE Weaken for team damage boost. No ACC check (always lands per Ayumilove). Useful in Faction Wars."
+        },
+        {
+          "name": "Devour",
+          "type": "A3",
+          "description": "Revives a dead ally with 50% HP and 50% Turn Meter, then places a [Block Debuffs] buff on them for 2 turns.",
+          "effects": [
+            {
+              "type": "revive",
+              "stat": "HP",
+              "value": 50,
+              "per_hit": false,
+              "target": "single_ally",
+              "notes": "Revives with 50% HP and 50% TM."
+            },
+            {
+              "type": "buff",
+              "stat": "Block Debuffs",
+              "value": 0,
+              "per_hit": false,
+              "target": "revived_ally",
+              "duration": "2 turns",
+              "notes": "Places Block Debuffs on revived ally for 2 turns. Protects from crowd control."
+            }
+          ],
+          "cooldown_booked": 5,
+          "mechanics_tags": ["Revive", "Block Debuffs"],
+          "book_value": "CRITICAL: -1 cooldown (6→5). Essential for faster revive cycling. Priority book.",
+          "notes": "Core reviver skill. 50% HP + 50% TM + Block Debuffs protection. Must book for 5-turn cooldown. Excellent for Lizardmen Faction Wars."
+        }
+      ],
+      "aura": "None",
+      "comments": "Budget Rare reviver for Lizardmen Faction Wars (8/10). Revive with Block Debuffs protection. HP-scaling. Must book A3 for 5-turn cooldown. Low priority for general content but essential for Lizardmen FW progression (user near completion)."
+    }
+  ],
+  "mechanics_tags": ["Revive", "Block Debuffs", "Weaken", "Decrease ATK", "HP Scaling", "AoE"],
+  "stat_priorities": ["40000+ HP", "180+ SPD", "150+ ACC", "2000+ DEF"],
+  "stat_priority_recommendations": {
+    "clan_boss": "Low priority. If used: 180+ SPD, 200+ ACC for Weaken, 40000+ HP.",
+    "dungeons": "Low priority. If used: 180+ SPD, 40000+ HP, 2000+ DEF for survivability.",
+    "arena": "Very low priority. Not recommended.",
+    "faction_wars": "PRIORITY: 40000+ HP (HP-scaling damage + survivability), 180+ SPD (speed tuning), 150+ ACC (Dec ATK if needed), 2000+ DEF (tanky reviver). Immortal or Lifesteal sets for sustain."
+  },
+  "recommended_gear": ["Immortal (Faction Wars survivability)", "Lifesteal (sustain)", "Speed (speed tuning)", "Perception (ACC boost if needed)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (HP-scaling champion, single-hit A1/A2, Warmaster optimal)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence (HP-based, extra tankiness)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC for Dec ATK/Weaken), Lore of Steel, CYCLE OF MAGIC (reduces A2/A3 cooldowns)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (HP-scaling, single-hit)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE, Lore of Steel, Cycle of Magic"
+    ],
+    "arena": [
+      "Not recommended for Arena. Focus on Faction Wars."
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (faster revive)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (HP-scaling, single-hit A1/A2)",
+      "DEFENSE: Tough Skin, Blastproof, Shield Bearer, Resurgent, Delay Death, Retribution, DETERRENCE (CRITICAL - HP-based tank, reduces incoming damage), UNSHAKEABLE (+50 RES for reviver survivability)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC), Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A3 6→5 booked cooldown for faster revive cycling), LASTING GIFTS (extends Block Debuffs buff on revived ally)"
+    ],
+    "general": "Warmaster for all content (HP-scaling champion, single-hit A1/A2). Deterrence CRITICAL (HP-based tank, reduces incoming damage). Unshakeable for Faction Wars (+50 RES for reviver survivability). Cycle of Magic CRITICAL (reduces A3 revive cooldown). Lasting Gifts (extends Block Debuffs on revived ally for longer protection). Must book A3 for 5-turn cooldown. Focus: Lizardmen Faction Wars (user near completion - High priority for FW progression)."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams)", "Polymorph (CC support)", "Phantom Touch (speed boost)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use revive when ally is dead. Uses A2 for Weaken. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion. Budget reviver for Faction Wars."
+  },
+  "mechanics_advisory": "Budget Rare reviver for Lizardmen Faction Wars. Revive with 50% HP + 50% TM + Block Debuffs protection. HP-scaling damage (build 40000+ HP). A2 Weaken is useful team support (no ACC check per Ayumilove - always lands). MUST BOOK A3 for 5-turn cooldown for Faction Wars progression. Low priority for general content (4-5/10 Clan Boss/Dungeons) but EXCELLENT for Lizardmen Faction Wars (8/10). User Priority: Faction Wars (Priority 5) - Lizardmen near completion, Broadmaw is key reviver for final stages. Build tanky with Immortal sets, 40000+ HP, 180+ SPD, 2000+ DEF. Warmaster for HP-scaling damage. Cycle of Magic + Deterrence + Unshakeable for Faction Wars survivability and revive cycling.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-broadmaw-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/broadmaw/ (accessed 2025-10-25)",
+    "RaidWiki: https://raidwiki.com/champion/broadmaw (accessed 2025-10-25)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Budget Rare reviver for Lizardmen Faction Wars. Must book A3. Build tanky HP. User priority: Lizardmen FW near completion - Broadmaw key for final stages.",
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Faction Wars focus. Validated against Ayumilove/HellHades/RaidWiki."
+  },
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "raidwiki, ayumilove, hellhades",
+    "ocr_notes": "Stats from RaidWiki (HP/ATK/DEF/SPD/C.RATE/C.DMG/RES validated)"
+  }
+}

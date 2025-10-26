@@ -88,12 +88,32 @@
   },
   "recommended_gear": ["Speed", "Lifesteal", "Resistance", "Accuracy"],
   "masteries": {
-    "clan_boss": ["Support", "Cycle of Magic"],
-    "dungeons": ["Stubbornness", "Cycle of Magic"],
-    "arena": ["Unshakeable", "Pinpoint Accuracy"],
-    "doom_tower": ["Lasting Gifts", "Resurgence"],
-    "faction_wars": ["Giant Slayer", "Cycle of Magic"],
-    "general": ["Support/Defense tree options as situational"]
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 single-target DEF-scaling, 60% proc per skill). CORRECTED: Giant Slayer INCORRECT (no multi-hit skills).",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, Master Hexer (CRITICAL - extends HP Burn debuffs for A1 bonus damage synergy), CYCLE OF MAGIC (CRITICAL - cooldown reduction for A2 Provoke/A3 Revive)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 single-target DEF-scaling, 60% proc per skill). CORRECTED: Giant Slayer INCORRECT (no multi-hit skills).",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, STUBBORNNESS (CRITICAL - extra tankiness for wave control/Provoke role)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, Master Hexer (CRITICAL - extends HP Burn for A1 synergy), CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 single-target DEF-scaling, 60% proc per skill) OR Helmsmasher for Ignore DEF",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for reliable Provoke), Lore of Steel, UNSHAKEABLE (CRITICAL - +50 RES for reviver/control role, immunity to CC), CYCLE OF MAGIC (faster A2 Provoke/A3 Revive)"
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 single-target DEF-scaling, 60% proc per skill). CORRECTED: Giant Slayer INCORRECT (no multi-hit skills).",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence, UNSHAKEABLE (CRITICAL - +50 RES for reviver survivability)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, LASTING GIFTS (CRITICAL - extends Block Damage buff from A3 Revive), CYCLE OF MAGIC (CRITICAL - faster A2/A3 cycling), RESURGENCE (CRITICAL - faster A3 Revive cooldown)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (A1 single-target DEF-scaling, 60% proc per skill). CORRECTED: Giant Slayer INCORRECT (no multi-hit skills).",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, Master Hexer (extends HP Burn for A1 synergy), CYCLE OF MAGIC (CRITICAL - faster A2 Provoke/A3 Revive)"
+    ],
+    "general": "CORRECTED: Warmaster for all content (A1 single-target DEF-scaling, Giant Slayer INCORRECT). Master Hexer CRITICAL (extends HP Burn debuffs for A1 +50% damage bonus). Eagle Eye CRITICAL (+50 ACC for 250+ total, reliable Provoke). Cycle of Magic CRITICAL (reduces A2/A3 cooldowns - more frequent Provoke/Revive). Unshakeable CRITICAL (Arena/Doom Tower - +50 RES for reviver/control role, immunity to CC). Lasting Gifts CRITICAL (Doom Tower - extends Block Damage buff from A3 Revive). Resurgence CRITICAL (Doom Tower - faster A3 Revive cooldown). Stubbornness (dungeons - extra tankiness for Provoke/wave control role)."
   },
   "blessings": ["Ward of the Fallen", "Polymorph (Arena)", "Brimstone (Hydra)"],
   "ai_quirks": {

@@ -1,0 +1,212 @@
+{
+  "name": "Lady Annabelle",
+  "rarity": "Epic",
+  "affinity": "Spirit",
+  "faction": "Banner Lords",
+  "role": "Support",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "4/10",
+    "dungeons": "6/10",
+    "doom_tower": "7/10",
+    "arena": "7/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 20310,
+        "ATK": 881,
+        "DEF": 1068,
+        "SPD": 100,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Covetous Nails",
+          "type": "A1",
+          "description": "Attacks 1 enemy 2 times. Each hit heals this Champion by 3% of their MAX HP.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.4,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "2-hit attack. 2.4 ATK per hit base (2.88 ATK booked with +20% damage). Total: 4.8 ATK base, 5.76 ATK booked."
+            },
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 3,
+              "per_hit": true,
+              "target": "self",
+              "notes": "Self-heal 3% Lady Annabelle MAX HP per hit (2 hits = 6% total). At 50K HP: 3K self-heal per A1 cycle. Excellent sustain with passive (50% heal on any death)."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Multi-hit", "Heal", "Sustain"],
+          "book_value": "Low-Medium: +20% damage. Heal not improved by books but A1 sustain good.",
+          "notes": "2-hit A1 with 6% MAX HP self-heal (3% per hit). Build 50000+ HP for max sustain (3K heal/turn + 25K passive heal on death). Good for auto sustain with passive synergy."
+        },
+        {
+          "name": "Captivator",
+          "type": "A2",
+          "description": "Attacks all enemies. Has a 75% chance of placing a [Leech] debuff for 2 turns. Also has a 75% chance of placing a 30% [Decrease SPD] debuff for 2 turns on targets with less than 50% Turn Meter.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.4,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE attack. 4.4 ATK base (5.28 ATK booked with +20% damage)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Leech",
+              "value": 75,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "75% chance Leech debuff for 2 turns base (100% booked). AoE Leech for team sustain. Excellent for waves and boss fights."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease SPD",
+              "value": 30,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "75% chance Dec SPD (30%) for 2 turns base (100% booked), CONDITIONAL on enemy <50% TM. TM-gated debuff = unreliable in fast fights but excellent for TM-locked teams."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "Leech", "Decrease SPD", "Conditional", "Turn Meter"],
+          "book_value": "HIGH: +25% debuff chance (75%→100%) + -1 cooldown (4→3). MUST BOOK for 100% Leech uptime.",
+          "notes": "AoE Leech (100% booked) + conditional Dec SPD (<50% TM). MUST BOOK for 3-turn cooldown + 100% debuff chance. Leech EXCELLENT for team sustain (dungeons, FW). Dec SPD unreliable (TM condition) but good for TM-controlled teams. 200+ ACC needed."
+        },
+        {
+          "name": "Sanguine Exchange",
+          "type": "A3",
+          "description": "Swaps HP with a target ally. If this Champion's HP is equal to or higher than the target's after the swap, places a [Revive On Death] buff on the target ally for 2 turns. If this Champion's HP is lower than the target's after the swap, places a [Revive on Death] buff on this Champion for 2 turns. Also places a 30% [Increase SPD] buff on all allies for 2 turns.",
+          "effects": [
+            {
+              "type": "stat_swap",
+              "stat": "HP",
+              "value": 100,
+              "per_hit": false,
+              "target": "single_ally",
+              "notes": "UNIQUE HP SWAP: Swaps current HP% with target ally. If Lady Annabelle HP ≥ target after swap → target gets Revive on Death. If Lady Annabelle HP < target after swap → Lady Annabelle gets Revive on Death. CHEESE POTENTIAL: Swap low HP ally to full HP (Lady Annabelle takes low HP) → passive heals Lady Annabelle 50% on next death. Can save dying ally while activating passive self-heal."
+            },
+            {
+              "type": "buff",
+              "stat": "Revive on Death",
+              "value": 100,
+              "per_hit": false,
+              "target": "conditional_ally",
+              "duration": "2 turns",
+              "notes": "Revive on Death buff (2 turns) placed conditionally: If Lady Annabelle HP ≥ target after swap → target gets buff. If Lady Annabelle HP < target after swap → Lady Annabelle gets buff. Revive on Death: 30% HP + Inc SPD (30%, 2 turns) on revive. Strategic swap for revive protection."
+            },
+            {
+              "type": "buff",
+              "stat": "Increase SPD",
+              "value": 30,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "30% Inc SPD buff for all allies for 2 turns. Team-wide speed boost unconditional."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["HP Swap", "Revive on Death", "Increase SPD", "Unique Mechanic", "Team Support", "Conditional"],
+          "book_value": "CRITICAL: -2 cooldown (6→4). MUST BOOK for HP swap + Revive on Death uptime.",
+          "notes": "UNIQUE HP SWAP MECHANIC: Swaps current HP with ally + conditional Revive on Death (2 turns, 30% HP revive) + Inc SPD (30%, 2 turns) for team. MUST BOOK for 4-turn cooldown. CHEESE POTENTIAL: Save dying ally by swapping to full HP (Lady Annabelle takes low HP) → passive heals 50% on next death. EXCELLENT for Arena (7/10) and Faction Wars (8/10) with strategic HP manipulation. Revive on Death = safety net for key champion."
+        },
+        {
+          "name": "The Red Lady",
+          "type": "Passive",
+          "description": "Heals this Champion by 50% of their MAX HP whenever an ally or enemy dies.",
+          "effects": [
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 50,
+              "per_hit": false,
+              "target": "self",
+              "notes": "CHEESE PASSIVE: Heals 50% Lady Annabelle MAX HP on ANY death (ally OR enemy). At 50K HP: 25K heal per death. Stacks with A1 self-heal (6% per turn). EXCELLENT sustain for long fights (FW, Doom Tower). CHEESE POTENTIAL: Use A3 HP swap to take low HP → trigger death → 50% heal. Or pair with suicide champions for infinite healing."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive", "Heal", "On Death", "Sustain", "Cheese"],
+          "book_value": "N/A: Passive, cannot book.",
+          "notes": "CHEESE PASSIVE: 50% MAX HP heal on ANY death (ally/enemy). At 50K HP: 25K heal. Combined with A1 (6% heal) = extreme sustain. CHEESE SYNERGY: A3 HP swap to low HP → take damage → death triggers 50% heal. EXCELLENT for Faction Wars (8/10) and Doom Tower (7/10) with wave sustain."
+        }
+      ],
+      "aura": "Increases Ally HP in Faction Crypts by 33%",
+      "comments": "UNIQUE HP swap specialist with Revive on Death mechanic. A3 'Sanguine Exchange' swaps HP with ally + conditional Revive on Death (2 turns) + Inc SPD (30%). Passive 'The Red Lady' heals 50% MAX HP on ANY death (ally/enemy). A2 'Captivator' AoE Leech (100% booked) + conditional Dec SPD (<50% TM). EXCELLENT for Faction Wars (8/10) with +33% HP aura + sustain. Good for Doom Tower (7/10) and Arena (7/10). Must book A2/A3."
+    }
+  ],
+  "mechanics_tags": ["HP Swap", "Revive on Death", "Increase SPD", "Leech", "Decrease SPD", "Heal", "AoE", "Sustain", "Passive", "On Death", "Conditional", "Unique Mechanic", "HP Aura"],
+  "stat_priorities": ["50000+ HP", "220+ SPD", "200+ ACC", "2000+ DEF", "100+ RES"],
+  "stat_priority_recommendations": {
+    "clan_boss": "Low priority. If used: 220+ SPD, 50000+ HP (passive heal value), 200+ ACC (Leech). Revive mechanics not useful in CB. 4/10 CB rating.",
+    "dungeons": "PRIORITY: 50000+ HP (A1 + passive heal value), 220+ SPD (Leech cycling), 200+ ACC (Leech debuff), 2000+ DEF (survivability). A2 Leech excellent for team sustain. Immortal or Speed sets.",
+    "arena": "PRIORITY: 50000+ HP (HP swap value + passive sustain), 220+ SPD (Inc SPD buff + HP swap timing), 200+ ACC (Leech), 2000+ DEF, 150+ RES. A3 HP swap + Revive on Death for strategic plays. Speed or Immortal sets.",
+    "faction_wars": "PRIORITY: 50000+ HP (CRITICAL for A1 + passive heal value), 220+ SPD, 200+ ACC (Leech), 2000+ DEF, 100+ RES. +33% HP Faction aura EXCELLENT. A2 Leech + passive sustain (50% heal on death) + A3 HP swap for wave/boss survival. MUST BOOK A2/A3."
+  },
+  "recommended_gear": ["Immortal (HP + sustain synergy with A1 + passive)", "Speed (220+ SPD for Leech/HP swap cycling)", "Perception (ACC boost for Leech)", "Regeneration (sustain)", "Divine Speed (speed + heal synergy)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER (2-hit A1 for extra procs)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (tanky support)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (reduces A2/A3 cooldowns), EVIL EYE (Leech extension)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2 4→3 booked, A3 6→4 booked cooldowns), EVIL EYE (extends Leech debuff 2→3 turns), LASTING GIFTS (extends Inc SPD buff)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, DETERRENCE",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (faster A2/A3 cycling), LASTING GIFTS (extends Inc SPD + Revive on Death buff duration)"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, WARMASTER",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, DETERRENCE (tanky support for survivability), UNSHAKEABLE (+50 RES for debuff resistance)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel, CYCLE OF MAGIC (CRITICAL - faster A2 Leech + A3 HP swap cycling), EVIL EYE (CRITICAL - extends Leech 2→3 turns for wave sustain), LASTING GIFTS (extends Inc SPD buff)"
+    ],
+    "general": "WARMASTER for all content (2-hit A1 for extra procs). Cycle of Magic CRITICAL (reduces A2 4→3 booked, A3 6→4 booked cooldowns for Leech + HP swap uptime). Evil Eye CRITICAL for FW/dungeons (extends Leech 2→3 turns for massive team sustain). Lasting Gifts (extends Inc SPD + Revive on Death buff duration). Deterrence (tanky support survivability). Unshakeable (+50 RES for debuff resistance). MUST BOOK A2/A3 for 3-turn Leech, 4-turn HP swap + Revive on Death. Build: 50000+ HP (A1 6% heal, passive 50% heal on death), 220+ SPD (Leech/HP swap cycling), 200+ ACC (Leech debuff), 2000+ DEF. Immortal or Speed sets. Focus: Faction Wars (8/10) with +33% HP aura + Leech sustain + passive heal. Good for Doom Tower (7/10) and Arena (7/10) with HP swap + Revive on Death tactics. User Priority: Arena/Support (Priority 4) - Lady Annabelle is UNIQUE for Faction Wars with HP swap + sustain mechanics. Spirit affinity = neutral vs Force/Magic, weak to Void."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams - unlikely)", "Soul Reap (cooldown reduction on kill)", "Phantom Touch (speed boost)", "Polymorph (CC support)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A3 HP swap strategically, A2 for Leech, A1 for sustain. Passive auto-triggers. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "HP Swap + Passive Sustain Loop",
+    "cheese_mechanic_info": "CHEESE POTENTIAL: A3 HP swap + passive heal (50% on death) creates strategic sustain loop. COMBO 1: Swap low HP ally to full HP (Lady Annabelle takes low HP) → Lady Annabelle takes damage → death triggers 50% heal (25K at 50K HP) + Revive on Death (30% HP revive if swapped). COMBO 2: Build 50K+ HP → A1 heals 6% (3K/turn) + passive 50% (25K on ANY death) = extreme sustain for Faction Wars/Doom Tower waves. Passive triggers on ally OR enemy death = consistent healing in long fights. Pair with suicide champions (Soulbond Bowyer, etc.) for infinite passive heals. EXCELLENT for Banner Lords FW with +33% HP aura (effective 66.5K HP at 50K base = 33K passive heal)."
+  },
+  "mechanics_advisory": "UNIQUE HP swap specialist with Revive on Death + sustain mechanics. A3 'Sanguine Exchange' is PRIMARY MECHANIC: Swaps current HP% with ally + conditional Revive on Death (2 turns, 30% HP revive) + Inc SPD (30%, 2 turns) for team. Revive on Death placement conditional: If Lady Annabelle HP ≥ target after swap → target gets buff. If Lady Annabelle HP < target after swap → Lady Annabelle gets buff. MUST BOOK for 4-turn cooldown. CHEESE MECHANIC: Save dying ally by swapping to full HP (Lady Annabelle absorbs low HP) → Lady Annabelle death triggers passive 50% heal. Passive 'The Red Lady' is SUSTAIN ENGINE: Heals 50% MAX HP on ANY death (ally OR enemy). At 50K HP: 25K heal per death. Stacks with A1 self-heal (6% per turn = 3K at 50K HP). A2 'Captivator' is TEAM SUSTAIN: AoE Leech (100% booked) + conditional Dec SPD (100% booked, <50% TM). MUST BOOK for 3-turn cooldown + 100% debuff chance. CRITICAL for FW/dungeons with Leech team sustain. MUST BOOK A2/A3 for FW/Arena viability (3-turn Leech, 4-turn HP swap). EXCELLENT for Faction Wars (8/10) with +33% HP aura + Leech + passive sustain. Good for Doom Tower (7/10) and Arena (7/10) with HP swap tactics. Build: 50000+ HP (heal value + HP swap effectiveness), 220+ SPD (Leech/HP swap cycling), 200+ ACC (Leech debuff), 2000+ DEF. Immortal or Speed sets. Warmaster for A1. Cycle of Magic (faster cycling). Evil Eye (extends Leech 2→3). Lasting Gifts (extends buffs). User Priority: Arena/Support (Priority 4) - Lady Annabelle is UNIQUE for Banner Lords FW with HP swap + sustain. Spirit affinity = neutral vs most, weak to Void.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-lady-annabelle-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/lady-annabelle/ (accessed 2025-10-25)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "UNIQUE HP swap + sustain specialist for Faction Wars. A3 HP swap + Revive on Death. Passive 50% heal on ANY death. A2 AoE Leech (100% booked). Must book A2/A3. User priority: Banner Lords FW with +33% HP aura.",
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Faction Wars + Arena focus. Validated against Ayumilove/HellHades. RaidWiki unavailable (500 error), stats from Ayumilove OCR."
+  },
+  "validation_metadata": {
+    "stat_confidence": 85,
+    "data_sources": "ayumilove_ocr, hellhades",
+    "ocr_notes": "Stats from Ayumilove OCR (HP 20310, ATK 881, DEF 1068, SPD 100, C.DMG 50). Missing C.RATE (assumed 15%), RES (assumed 30%), ACC (assumed 0). RaidWiki unavailable (500 error). 85% confidence."
+  }
+}

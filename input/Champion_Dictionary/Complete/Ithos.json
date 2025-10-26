@@ -1,0 +1,195 @@
+{
+  "name": "Ithos",
+  "rarity": "Legendary",
+  "affinity": "Void",
+  "faction": "High Elves",
+  "role": "Attack",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "4/10",
+    "dungeons": "9/10",
+    "doom_tower": "8/10",
+    "arena": "9/10",
+    "faction_wars": "9/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 18825,
+        "ATK": 1608,
+        "DEF": 716,
+        "SPD": 99,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Gouge",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 20% chance of granting an Extra Turn. Decreases enemy MAX HP by 15% of damage dealt.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.8,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single-hit. 3.8x ATK multiplier (4.9 ATK fully booked with +30% damage)."
+            },
+            {
+              "type": "other",
+              "stat": "ENEMY_MAX_HP",
+              "value": 15,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "permanent",
+              "notes": "Decreases enemy MAX HP by 15% of damage dealt. Permanent reduction (not a debuff, cannot be cleansed). Excellent for reducing boss/tanky enemy HP pools."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 20,
+              "per_hit": false,
+              "target": "self",
+              "notes": "20% chance to grant Extra Turn (no booking). Can chain into A2/A3 for massive burst damage."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Single Target", "Extra Turn", "MAX HP Reduction"],
+          "book_value": "Medium: +30% damage (3.8→4.9 ATK). No Extra Turn chance increase. Good for A1 filler damage.",
+          "notes": "Single-hit A1 with MAX HP reduction (permanent, 15% of damage dealt). 20% Extra Turn chance can chain into A2/A3 for burst. Excellent for boss HP reduction."
+        },
+        {
+          "name": "Outburst",
+          "type": "A2",
+          "description": "Attacks all enemies 3 times. Places a 25% [Weaken] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.35,
+              "per_hit": true,
+              "target": "aoe_enemies",
+              "notes": "AoE 3-hit. 1.35x ATK per hit = 4.05 ATK total base (5.27 ATK fully booked with +30% damage). Triggers Giant Slayer 3x per cast for massive T6 mastery damage."
+            },
+            {
+              "type": "debuff",
+              "stat": "Weaken",
+              "value": 25,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "100% chance to place 25% Weaken on all enemies (no ACC check per Ayumilove - always lands). Increases team damage by 25%."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AoE", "Weaken", "Multi-Hit"],
+          "book_value": "CRITICAL: +30% damage, -1 cooldown (4→3). Must book for wave clear and Giant Slayer procs.",
+          "notes": "AoE 3-hit for Giant Slayer procs + Weaken. Total: 4.05 ATK base (5.27 booked). Weaken always lands (no ACC check). Must book for 3-turn cooldown wave clearing."
+        },
+        {
+          "name": "Extinguish Life",
+          "type": "A3",
+          "description": "Attacks all enemies. This attack is always critical.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.4,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "notes": "AoE nuke. 4.4x ATK multiplier (5.72 ATK fully booked with +30% damage). ALWAYS CRITS (ignores C.RATE stat, guaranteed critical hit). Build 350%+ C.DMG for max damage. ICONIC Arena/Dungeon wave nuke."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["AoE", "Always Critical", "Nuke"],
+          "book_value": "CRITICAL: +30% damage, -2 cooldown (6→4). MUST BOOK for Arena/Dungeon viability. Reduces cooldown from 6 to 4 turns.",
+          "notes": "PRIMARY NUKE: 4.4 ATK AoE (5.72 booked) + ALWAYS CRITS. Ignores C.RATE stat (no C.RATE needed), build 350%+ C.DMG for max damage. MUST BOOK for 4-turn cooldown. ICONIC Arena/Dungeon wave clear nuke. Pair with Dec DEF for max damage."
+        },
+        {
+          "name": "Silent Death [P]",
+          "type": "A4",
+          "description": "Fills this Champion's Turn Meter by 25% whenever an enemy is killed by this Champion.",
+          "effects": [
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 25,
+              "per_hit": false,
+              "target": "self",
+              "notes": "+25% TM per kill. Excellent for chaining turns in Arena/Dungeons. If Ithos kills 4 enemies with A3, gains 100% TM for instant next turn. Synergizes with Extra Turn on A1 for cycling nukes."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Turn Meter Manipulation", "Passive", "On Kill"],
+          "book_value": "N/A: Passive, cannot book.",
+          "notes": "TM boost passive on kill. +25% TM per kill = potential instant turn after A3 wipe (4 kills = 100% TM). Excellent for Arena speed chaining and Dungeon wave clear cycling."
+        }
+      ],
+      "aura": "Increases Ally C.RATE in the Arena by 33%.",
+      "comments": "GLASS CANNON AoE nuker. A3 'Extinguish Life' ALWAYS CRITS (build 350%+ C.DMG, 0% C.RATE viable). A2 3-hit Giant Slayer procs + Weaken. Passive TM boost on kill for turn cycling. ICONIC Arena/Dungeon champion. Void affinity = no weak hits. Must book A2/A3 for cooldown reduction. CRITICAL: 716 DEF = extreme glass cannon, requires protection or one-shot strategy."
+    }
+  ],
+  "mechanics_tags": ["AoE", "Always Critical", "Nuke", "Weaken", "Extra Turn", "MAX HP Reduction", "Turn Meter Manipulation", "Multi-Hit", "Passive", "Glass Cannon"],
+  "stat_priorities": ["0% C.RATE (A3 always crits)", "350%+ C.DMG", "4500+ ATK", "200+ SPD", "150+ ACC"],
+  "stat_priority_recommendations": {
+    "clan_boss": "Low priority. If used: 200+ SPD, 100% C.RATE (A1/A2), 250%+ C.DMG, 150+ ACC for Weaken. Not optimal for CB (4/10).",
+    "dungeons": "PRIORITY: 0% C.RATE (A3 always crits, C.RATE WASTED STAT), 350%+ C.DMG (CRITICAL for A3 nuke damage), 4500+ ATK (glass cannon max ATK build), 200+ SPD (speed tuning for wave clear), 150+ ACC (Weaken debuff). Savage or Cruel sets for ignore DEF nuking. MUST BOOK A2/A3 for 3-turn A2, 4-turn A3 cooldowns.",
+    "arena": "PRIORITY: 0% C.RATE, 350%+ C.DMG, 4500+ ATK, 250+ SPD (speed nuke or follow Dec DEF), 150+ ACC (Weaken). +33% C.RATE Arena aura excellent for team. Pair with Dec DEF for max damage. One-shot or get one-shot (716 DEF glass cannon).",
+    "faction_wars": "PRIORITY: 0% C.RATE, 350%+ C.DMG, 4500+ ATK, 200+ SPD, 150+ ACC (Weaken for boss waves). Savage or Cruel sets. Must book A2/A3. Excellent wave clear + boss damage (9/10 FW)."
+  },
+  "recommended_gear": ["Savage (BEST - ignore DEF for A3 nuke)", "Cruel (ignore DEF + free C.RATE for A1/A2)", "Speed (200+ SPD for wave clear cycling)", "Perception (ACC boost for Weaken)", "Lethal Damage (extreme C.DMG for A3)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Ruthless Ambush, GIANT SLAYER (A2 3-hit multi-hit triggers 3x per cast for MASSIVE T6 damage)",
+      "DEFENSE: Tough Skin, Blastproof (CRITICAL - 716 DEF glass cannon needs damage reduction)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC for Weaken), Lore of Steel, CYCLE OF MAGIC (reduces A2/A3 cooldowns)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Ruthless Ambush, GIANT SLAYER (CRITICAL - A2 3-hit triggers 3x per cast = massive wave clear damage, synergizes with A3 always-crit nuke)",
+      "DEFENSE: Tough Skin, Blastproof (716 DEF glass cannon, needs damage reduction)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC for Weaken), Lore of Steel, CYCLE OF MAGIC (CRITICAL - reduces A2 4→3 booked, A3 6→4 booked cooldowns)"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Ruthless Ambush, GIANT SLAYER (A2 3-hit backup), CYCLE OF VIOLENCE (cooldown reduction on kill for chaining A3 nukes)",
+      "DEFENSE: Tough Skin, Blastproof (glass cannon protection)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE, Lore of Steel, CYCLE OF MAGIC"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Ruthless Ambush, GIANT SLAYER (A2 3-hit wave clear + A3 nuke)",
+      "DEFENSE: Tough Skin, Blastproof (CRITICAL - 716 DEF glass cannon), Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Evil Eye, EAGLE EYE (+50 ACC for Weaken), Lore of Steel, CYCLE OF MAGIC (faster A2/A3 cycling)"
+    ],
+    "general": "GIANT SLAYER CRITICAL (A2 3-hit AoE triggers 3x per cast for MASSIVE T6 damage on waves + bosses, synergizes with A3 always-crit nuke). Cycle of Magic CRITICAL (reduces A2 4→3 booked, A3 6→4 booked cooldowns). Eagle Eye CRITICAL (+50 ACC for Weaken uptime). Blastproof CRITICAL (716 DEF = extreme glass cannon, needs damage reduction). MUST BOOK A2/A3 for cooldown reduction (A2 4→3, A3 6→4). Build: 0% C.RATE (A3 always crits, C.RATE WASTED STAT), 350%+ C.DMG, 4500+ ATK, 200+ SPD, 150+ ACC. Savage sets for ignore DEF nuking. Focus: Arena (9/10) + Dungeons (9/10) + Faction Wars (9/10). User Priority: Doom Tower + Advanced PVE (Priority 3) - Ithos is ICONIC AoE wave clear champion for all content. Void affinity = no weak hits = excellent universal nuker."
+  },
+  "blessings": ["Brimstone (if used in HP Burn teams - unlikely)", "Soul Reap (BEST - cooldown reduction on kill for Arena/Dungeons wave chaining)", "Phantom Touch (speed boost)", "Polymorph (CC support)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A3 nuke when available, A2 for multi-hit wave clear. A1 Extra Turn chance can chain into A2/A3 for burst. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion. ICONIC glass cannon AoE nuker for Arena/Dungeons/Faction Wars."
+  },
+  "mechanics_advisory": "GLASS CANNON AoE nuker (716 DEF = extreme fragility). A3 'Extinguish Life' is PRIMARY NUKE: 4.4 ATK AoE (5.72 booked) + ALWAYS CRITS (ignores C.RATE stat, build 0% C.RATE + 350%+ C.DMG for max damage). A2 'Outburst' is 3-hit AoE for Giant Slayer procs (triggers 3x per cast for MASSIVE T6 damage) + Weaken (always lands, no ACC check). A1 'Gouge' has 20% Extra Turn chance + MAX HP reduction (15% of damage dealt, permanent). Passive 'Silent Death' gives +25% TM per kill for turn cycling (4 kills = 100% TM instant turn). MUST BOOK A2/A3 for cooldown reduction (A2 4→3, A3 6→4). ICONIC for Arena/Dungeons/Faction Wars (9/10 all content). Void affinity = no weak hits = universal nuker. +33% C.RATE Arena aura excellent for team. Build: 0% C.RATE (A3 always crits, C.RATE WASTED STAT), 350%+ C.DMG, 4500+ ATK, 200+ SPD, 150+ ACC (Weaken). Savage sets for ignore DEF nuking. Giant Slayer CRITICAL for A2 3-hit wave clear. Cycle of Magic CRITICAL for faster A2/A3 cycling. CRITICAL WARNING: 716 DEF = extreme glass cannon, requires protection or one-shot strategy (kill everything before enemy turns). Pair with Dec DEF for max damage. User Priority: Advanced PVE (Priority 3) - Ithos is BEST AoE wave clear champion for Doom Tower, dungeons, and Faction Wars. Void affinity makes him safe in all content.",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-ithos-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/ithos/ (accessed 2025-10-25)",
+    "RaidWiki: https://raidwiki.com/champion/ithos (accessed 2025-10-25)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "ICONIC glass cannon AoE nuker. A3 always crits (0% C.RATE build viable). A2 3-hit Giant Slayer. Passive TM boost on kill. Void affinity universal. Must book A2/A3. User priority: Advanced PVE wave clear specialist.",
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Arena/Dungeons/Faction Wars focus. Validated against Ayumilove/HellHades/RaidWiki."
+  },
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "raidwiki, ayumilove_ocr, hellhades",
+    "ocr_notes": "Stats from RaidWiki + Ayumilove OCR (8/8 stats 100% match: HP/ATK/DEF/SPD/C.RATE/C.DMG/RES/ACC validated)"
+  }
+}

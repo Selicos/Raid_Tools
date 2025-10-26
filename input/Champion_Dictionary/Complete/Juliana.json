@@ -1,0 +1,217 @@
+{
+  "name": "Juliana",
+  "rarity": "Epic",
+  "affinity": "Magic",
+  "faction": "Sacred Order",
+  "role": "Attack",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "10/10",
+    "dungeons": "6/10",
+    "doom_tower": "7/10",
+    "arena": "4/10",
+    "faction_wars": "7/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 15360,
+        "ATK": 1398,
+        "DEF": 881,
+        "SPD": 103,
+        "C.RATE": 15,
+        "C.DMG": 60,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Battledance",
+          "type": "A1",
+          "description": "Attacks 1 enemy 2 times. Each critical hit fills this Champion's Turn Meter by 10%.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.4,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "2-hit multi-hit. 2.4x ATK per hit."
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 10,
+              "per_hit": true,
+              "target": "self",
+              "notes": "Each critical hit fills TM by 10%. At 100% C.RATE, 2 hits = 20% TM boost."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Multi-Hit", "Turn Meter Boost", "Single Target"],
+          "book_value": "Low: +15% damage total. Not priority vs A2/A3.",
+          "notes": "Multi-hit A1 synergizes with Giant Slayer (2 hits = ~51% proc). TM boost requires 100% C.RATE. Good for turn cycling."
+        },
+        {
+          "name": "Lethal Partner",
+          "type": "A2",
+          "description": "Places a 30% [Increase C.RATE] buff on this Champion, then attacks 1 enemy 2 times. Places a 5% [Poison] debuff on the target for 3 turns if this attack is critical.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "Increase C.RATE",
+              "value": 30,
+              "per_hit": false,
+              "target": "self",
+              "duration": "1 turn",
+              "notes": "Places 30% Inc C.RATE on self BEFORE attacking. Enables Poison without external C.RATE buffs."
+            },
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.0,
+              "per_hit": true,
+              "target": "single_enemy",
+              "notes": "2-hit multi-hit. 3.0x ATK per hit."
+            },
+            {
+              "type": "debuff",
+              "stat": "Poison",
+              "value": 5,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "3 turns",
+              "notes": "Each critical hit places ONE 5% Poison for 3 turns. At 100% C.RATE, 2 hits = TWO Poisons."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Multi-Hit", "Poison", "Increase C.RATE", "Self Buff", "Single Target"],
+          "book_value": "Medium: +20% damage. A3 higher priority for books.",
+          "notes": "Core Clan Boss Poison skill. Self-buffs C.RATE before attacking = more reliable Poison. At 100% C.RATE, places TWO 5% Poisons per use. Multi-hit synergizes with Giant Slayer."
+        },
+        {
+          "name": "Fire of Purgation",
+          "type": "A3",
+          "description": "Attacks 1 enemy. Removes all buffs from the target. Has a 75% chance of placing a [HP Burn] debuff for 3 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 6.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Single-hit. 6.0x ATK multiplier. Huge nuke."
+            },
+            {
+              "type": "buff_removal",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "notes": "Removes ALL buffs from target before damage. Useful for Arena/dungeons."
+            },
+            {
+              "type": "debuff",
+              "stat": "HP Burn",
+              "value": 0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "3 turns",
+              "notes": "75% base (100% booked) chance to place HP Burn for 3 turns."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["HP Burn", "Buff Removal", "Single Target", "Nuke"],
+          "book_value": "CRITICAL: +20% damage, +25% HP Burn chance (75%→100%). Essential for reliable HP Burn.",
+          "notes": "Buff strip + HP Burn. Must book for 100% HP Burn chance. Huge damage multiplier (6.0x). Primary Clan Boss HP Burn source."
+        },
+        {
+          "name": "Resonance (Passive)",
+          "type": "Passive",
+          "description": "Has a 50% chance of placing a 5% [Poison] debuff for 2 turns when hitting an enemy under a [HP Burn] debuff.",
+          "effects": [
+            {
+              "type": "debuff",
+              "stat": "Poison",
+              "value": 5,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "50% chance per hit to place 5% Poison when hitting enemy with HP Burn. Synergizes with A3 HP Burn and multi-hit A1/A2."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Poison", "HP Burn Synergy", "Passive"],
+          "book_value": "N/A (passive)",
+          "notes": "AMAZING Clan Boss passive. A3 places HP Burn, then A1/A2 multi-hits trigger passive for extra Poisons. At 100% C.RATE with HP Burn up: A1 (2 hits) + A2 (2 hits) can place up to 4 extra Poisons per rotation via passive + A2 crits."
+        }
+      ],
+      "aura": "Increases Ally SPD in Dungeons by 19%",
+      "comments": "Elite Clan Boss Epic champion. Poison specialist with HP Burn. Passive enables massive Poison stacking when HP Burn is active. Must build 100% C.RATE for maximum Poison output. Fully book A3 for 100% HP Burn reliability."
+    }
+  ],
+  "mechanics_tags": ["Poison", "HP Burn", "Multi-Hit", "Increase C.RATE", "Buff Removal", "Turn Meter Boost"],
+  "stat_priorities": ["100% C.RATE (CRITICAL)", "250+ ACC", "220+ SPD", "70% C.DMG", "2500+ DEF"],
+  "stat_priority_recommendations": {
+    "clan_boss": "PRIORITY: 100% C.RATE (CRITICAL for Poison on A2 + passive procs), 250+ ACC (reliable debuffs), 220+ SPD (speed tuning), 70%+ C.DMG, 2500+ DEF (survivability). Lifesteal set mandatory.",
+    "dungeons": "220+ SPD, 200+ ACC, 100% C.RATE, DEF%/HP% for survivability. Savage or Cruel sets.",
+    "arena": "Low priority. If used: 250+ SPD, 100% C.RATE, C.DMG focus."
+  },
+  "recommended_gear": ["Lifesteal + Speed (Clan Boss)", "Savage + Cruel (Dungeons)", "Toxic (Clan Boss alternative)"],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, GIANT SLAYER (CRITICAL - A1 'Battledance' attacks 2 times, A2 'Lethal Partner' attacks 2 times, 30% proc per hit). Multi-hit champion = Giant Slayer optimal.",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution (if Lifesteal), Deterrence",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit A1/A2 synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC for 250+ total), Lore of Steel, MASTER HEXER (CRITICAL - extends Poison/HP Burn from 2→3 or 3→4 turns), Cycle of Magic (reduces A2/A3 cooldowns)"
+    ],
+    "dungeons": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1/A2 multi-hit)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL - multi-hit synergy), Evil Eye, EAGLE EYE (CRITICAL - +50 ACC), Lore of Steel, Master Hexer, Cycle of Violence"
+    ],
+    "arena": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, HELMSMASHER (Ignore DEF burst) OR Giant Slayer",
+      "DEFENSE: Tough Skin, Blastproof",
+      "SUPPORT: Charged Focus, Lore of Steel, Cycle of Violence"
+    ],
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1/A2 multi-hit)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL), Evil Eye, EAGLE EYE (CRITICAL), Lore of Steel, Master Hexer"
+    ],
+    "faction_wars": [
+      "OFFENSE: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, GIANT SLAYER (CRITICAL - A1/A2 multi-hit)",
+      "DEFENSE: Tough Skin, Blastproof, Resurgent, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, SWARM SMITER (CRITICAL), Evil Eye, EAGLE EYE (CRITICAL), Lore of Steel, Master Hexer"
+    ],
+    "general": "Giant Slayer CRITICAL (A1 attacks 2 times, A2 attacks 2 times = multi-hit, 30% proc per hit). Master Hexer CRITICAL (extends Poison/HP Burn debuffs for massive damage). Eagle Eye CRITICAL (+50 ACC for 250+ total). Swarm Smiter CRITICAL (multi-hit A1/A2 synergy). 100% C.RATE non-negotiable for Poison reliability (A2 places Poison on crit, passive triggers on HP Burn hits). Must book A3 for 100% HP Burn chance."
+  },
+  "blessings": ["Brimstone (Clan Boss/Hydra - HP Burn synergy with passive)", "Cruelty (damage boost)", "Soul Reap (extra damage)", "Phantom Touch (speed boost)"],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI. Will use A2/A3 when available. No major issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not a cheese champion. Pure Poison/HP Burn specialist for Clan Boss."
+  },
+  "mechanics_advisory": "TOP-TIER Clan Boss Epic champion. Elite Poison specialist with HP Burn. UNIQUE PASSIVE: Places extra 5% Poisons when hitting enemies under HP Burn (50% chance per hit). Combo: A3 places HP Burn → A1/A2 multi-hits trigger passive for extra Poisons → A2 crit hits place more Poisons = MASSIVE Poison stacking. REQUIRES 100% C.RATE for maximum output (A2 places Poison on crit, passive needs hits). MUST BOOK A3 for 100% HP Burn reliability. Lifesteal set mandatory. Master Hexer extends debuffs for more damage. User Priority: Clan Boss UNM (Priority 1) - Juliana is MUST-BUILD for UNM Poison teams. Self-sufficient with Inc C.RATE buff on A2. Dungeon aura (+19% SPD) is bonus. Sacred Order Faction Wars viable (7/10).",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-juliana-skill-mastery-equip-guide/ (accessed 2025-10-25)",
+    "HellHades: https://hellhades.com/champions/juliana/ (accessed 2025-10-25)",
+    "RaidWiki: https://raidwiki.com/champion/juliana (accessed 2025-10-25)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Clan Boss UNM Poison specialist. Passive is AMAZING for Poison stacking when HP Burn is active. Must have 100% C.RATE. Must book A3 for 100% HP Burn. Giant Slayer + Master Hexer + Eagle Eye non-negotiable.",
+  "update_notes": {
+    "last_updated": "2025-10-25",
+    "last_patch": "Completed from DRAFT with full effects, masteries, and meta analysis. Validated against Ayumilove/HellHades/RaidWiki."
+  },
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "raidwiki, ayumilove, hellhades",
+    "ocr_notes": "Stats from RaidWiki + Ayumilove OCR validation (100% match on HP/ATK/DEF/SPD)"
+  }
+}
