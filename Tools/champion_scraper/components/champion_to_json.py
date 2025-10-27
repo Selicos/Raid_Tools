@@ -149,8 +149,6 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
     # Patch: Map scraped_data['stats'] to forms[0]['base_stats'] if present
     if 'stats' in scraped_data and scraped_data['stats']:
         if 'forms' in template and isinstance(template['forms'], list) and len(template['forms']) > 0:
-            print(f"[DEBUG] Mapping stats to template: {scraped_data['stats']}")
-            print(f"[DEBUG] Stats keys: {list(scraped_data['stats'].keys())}")
             # Map stat names to template field names (should already be mapped in champion_scraper.py)
             # These keys should match the valid_stats in champion_scraper.py
             stat_mapping = {
@@ -166,7 +164,6 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
             for scraped_name, template_name in stat_mapping.items():
                 if scraped_name in scraped_data['stats']:
                     value = scraped_data['stats'][scraped_name]
-                    print(f"[DEBUG] Mapping {scraped_name} ({value}) -> {template_name}")
                     # Convert to int if possible (handle decimal format from Fandom)
                     try:
                         # Special handling for C.RATE and C.DMG - convert decimal to int if needed
@@ -182,8 +179,6 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
                             template['forms'][0]['base_stats'][template_name] = int(value)
                     except (ValueError, TypeError):
                         template['forms'][0]['base_stats'][template_name] = value
-                else:
-                    print(f"[DEBUG] Stat {scraped_name} not found in scraped data")
     champion_json = fill_template_with_data(template, scraped_data)
     
     # Handle draft status
@@ -194,7 +189,6 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
 
     # Add validation metadata if available
     validation_info = scraped_data.get('validation', {})
-    print(f"[DEBUG] Validation info in scraped_data: {validation_info}")
     if validation_info:
         champion_json['validation_metadata'] = {
             'stat_confidence': validation_info.get('stat_confidence', 0),
@@ -202,7 +196,6 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
             'source_priority': validation_info.get('source_priority', {}),
             'ocr_notes': ', '.join(validation_info.get('validation_notes', []))
         }
-        print(f"[DEBUG] Added validation_metadata to champion JSON")
     
     # Pass through owned override if specified (for table update)
     if '_owned_override' in scraped_data:

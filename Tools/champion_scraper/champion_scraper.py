@@ -238,10 +238,6 @@ def try_all_scrapers(champion_name: str, debug: bool = False) -> dict | None:
             if invalid_stats:
                 print(f"[4-Source]   Invalid: {', '.join(invalid_stats)}")
         
-        if debug:
-            print(f"[DEBUG] final_stats after priority selection: {final_stats}")
-            print(f"[DEBUG] stats_source: {stats_source}")
-        
         # Info priority: Fandom > Ayumilove > HellHades
         final_info = ayumilove_data.get('info', {})
         info_source = 'ayumilove'
@@ -443,19 +439,14 @@ def main() -> None:
                 'mechanics_tags': template_mechanics_tags
             }
             # Pass through validation metadata if available
-            print(f"[DEBUG] Keys in data dict: {list(data.keys())}")
             if 'validation' in data:
-                print(f"[DEBUG] Validation data found: {data['validation']}")
                 scraped_data['validation'] = data['validation']
-            else:
-                print(f"[DEBUG] No validation key in data")
             
             # Pass through draft status if scrape failed
             if 'draft' in data and data['draft'] == 'scrape failed':
                 scraped_data['draft'] = 'scrape failed'
                 print(f"[WARNING] Scrape failed for {champ_name} - marking as draft: 'scrape failed'")
             
-            print(f"[DEBUG] Final scraped_data keys: {list(scraped_data.keys())}")
             # If Ayumilove fallback used, map extra overview fields to comments
             if source.startswith('ayumilove') and info:
                 comments = []
