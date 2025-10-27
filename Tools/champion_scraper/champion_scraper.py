@@ -3,8 +3,10 @@ import sys
 import os
 import time
 import random
-from components.scrape_raidwiki import scrape_raidwiki_champion
 from components.scrape_ayumilove import scrape_ayumilove_champion
+from components.scrape_hellhades import scrape_hellhades_champion
+from components.scrape_fandom import scrape_fandom_champion
+from components.scrape_raidwiki import scrape_raidwiki_champion
 from components.champion_to_json import generate_champion_json, diff_champion_jsons
 
 def merge_champion_data(primary, fallback):
@@ -104,87 +106,230 @@ def compare_stats(raidwiki_stats, ayumilove_stats, champion_name):
 
 
 def try_all_scrapers(champion_name):
-    # Hybrid approach: Try RaidWiki first for stats, Ayumilove for everything else
-    # ALWAYS pull Ayumilove OCR for comparison/validation
+    # FOUR-SOURCE APPROACH: Champion_stats.md (local reference) → Ayumilove (primary) → HellHades (secondary) → RaidWiki (tiebreaker)
+    # Priority: Champion_stats.md (validated) → Ayumilove (skills) → HellHades (info) → RaidWiki (tiebreaker)
+    # Decision rule: Use Champion_stats.md for stats when available, ALWAYS use Ayumilove for skills
     
-    # Try RaidWiki first (most reliable for stats)
-    print("[Hybrid] Trying RaidWiki for stats...")
-    raidwiki_data = scrape_raidwiki_champion(champion_name)
+    # SOURCE 1: Champion_stats.md (local reference table - instant, validated)
+    print("[4-Source] Checking Champion_stats.md (local reference)...")
+    fandom_data = scrape_fandom_champion(champion_name)
+    has_fandom_stats = (fandom_data and fandom_data.get('stats') and 
+                        any(v for v in fandom_data.get('stats', {}).values() if v and v != '' and v != '-' and v != '\\-'))
+    has_fandom_info = (fandom_data and fandom_data.get('info'))
     
-    has_raidwiki_stats = (raidwiki_data and 
-                          raidwiki_data.get('stats') and 
-                          any(v for v in raidwiki_data.get('stats', {}).values()))
+    if has_fandom_stats:
+        fandom_stats = fandom_data.get('stats', {})
+        stats_count = sum(1 for v in fandom_stats.values() if v and v != '' and v != '-' and v != '\\-')
+        print(f"[4-Source] ✓ Champion_stats.md has {stats_count}/8 stats (validated reference)")
+    elif has_fandom_info:
+        print(f"[4-Source] ⚠️  Champion_stats.md has info only (no stats)")
+    else:
+        print(f"[4-Source] ⚠️  Champion not in Champion_stats.md")
+        print(f"[4-Source] → Will add to table after scrape if --update-table flag set")
     
-    # ALWAYS fetch Ayumilove (for skills/info and OCR comparison)
-    print("[Hybrid] Fetching Ayumilove data (skills, info, and OCR for validation)...")
-    ayumilove_data = scrape_ayumilove_champion(champion_name, skip_stats=False)  # Always OCR
+    # SOURCE 2: ALWAYS fetch Ayumilove (skills + info + OCR validation)
+    print("[4-Source] Fetching Ayumilove data (skills, info, OCR)...")
+    ayumilove_data = scrape_ayumilove_champion(champion_name, skip_stats=False)  # ALWAYS run OCR for validation
     
-    if has_raidwiki_stats and ayumilove_data:
-        # Both sources available - compare stats
-        print("[Hybrid] ✓ Both sources available - comparing stats...")
-        use_raidwiki, confidence, differences = compare_stats(
-            raidwiki_data.get('stats', {}),
+    # Validate Ayumilove OCR vs Fandom reference (if Fandom has stats)
+    ocr_vs_fandom_confidence = 0
+    ocr_vs_fandom_notes = []
+    
+    if has_fandom_stats and ayumilove_data and ayumilove_data.get('stats'):
+        use_fandom, ocr_vs_fandom_confidence, ocr_diffs = compare_stats(
+            fandom_data.get('stats', {}),
             ayumilove_data.get('stats', {}),
             champion_name
         )
+        ocr_vs_fandom_notes = ocr_diffs
         
-        # Use RaidWiki stats + Ayumilove everything else
+        # Decision: Use Fandom stats (validated), but flag low OCR confidence
+        # NOTE: If this threshold (90%) causes issues with accurate champions, review and adjust
+        if ocr_vs_fandom_confidence >= 90:
+            print(f"[4-Source] ✓ High OCR validation: Fandom vs Ayumilove ({ocr_vs_fandom_confidence:.0f}%)")
+        elif ocr_vs_fandom_confidence >= 75:
+            print(f"[4-Source] ⚠️  Good OCR validation: Fandom vs Ayumilove ({ocr_vs_fandom_confidence:.0f}%)")
+        else:
+            print(f"[4-Source] ❌ Low OCR validation: Fandom vs Ayumilove ({ocr_vs_fandom_confidence:.0f}%)")
+            print(f"[4-Source] → Using Fandom (validated), but flagging for manual review")
+            for diff in ocr_vs_fandom_notes[:3]:
+                print(f"[4-Source]   - {diff}")
+    
+    # SOURCE 3: Try HellHades for info validation
+    print("[4-Source] Attempting HellHades for info validation...")
+    hellhades_data = None
+    has_hellhades_stats = False
+    
+    try:
+        hellhades_data = scrape_hellhades_champion(champion_name, skip_stats=True)  # Skip stats, use for info only
+        has_hellhades_info = (hellhades_data and hellhades_data.get('info'))
+        if has_hellhades_info:
+            print("[4-Source] ✓ HellHades info available")
+        else:
+            print("[4-Source] ⚠️  HellHades returned no data (404 or not found)")
+    except Exception as e:
+        print(f"[4-Source] ⚠️  HellHades failed (skipping): {str(e)[:100]}")
+    
+    # Decision logic: Build final data from best available sources
+    if ayumilove_data and ayumilove_data.get('skills'):
+        # Ayumilove succeeded (has skills - essential data)
+        ocr_stats = ayumilove_data.get('stats', {})
+        stats_found = sum(1 for v in ocr_stats.values() if v and v != '')
+        total_stats = 8
+        ocr_confidence = (stats_found / total_stats) * 100 if total_stats > 0 else 0
+        
+        # Determine which sources we have
+        sources_available = []
+        if has_fandom_stats:
+            sources_available.append('fandom')
+        if ocr_stats and stats_found > 0:
+            sources_available.append('ayumilove_ocr')
+        if hellhades_data and hellhades_data.get('info'):
+            sources_available.append('hellhades')
+        
+        print(f"[4-Source] Sources available: {', '.join(sources_available) if sources_available else 'Ayumilove only (info)'}")
+        
+        # Stats priority: Fandom (validated) > Ayumilove OCR
+        final_stats = fandom_data.get('stats', {}) if has_fandom_stats else ocr_stats
+        stats_source = 'fandom' if has_fandom_stats else 'ayumilove_ocr'
+        
+        # Info priority: Fandom > Ayumilove > HellHades
+        final_info = ayumilove_data.get('info', {})
+        info_source = 'ayumilove'
+        
+        # Fill missing info from Fandom if available
+        if has_fandom_info:
+            fandom_info = fandom_data.get('info', {})
+            for key in ['faction', 'affinity', 'rarity', 'role']:
+                if not final_info.get(key) and fandom_info.get(key):
+                    final_info[key] = fandom_info[key]
+                    info_source = 'fandom+ayumilove'
+                    print(f"[4-Source] ✓ Using Fandom {key}: {fandom_info[key]}")
+        
+        # Fill remaining missing info from HellHades
+        if hellhades_data and hellhades_data.get('info'):
+            hh_info = hellhades_data.get('info', {})
+            for key in ['faction', 'affinity', 'rarity', 'role']:
+                if not final_info.get(key) and hh_info.get(key):
+                    final_info[key] = hh_info[key]
+                    if 'hellhades' not in info_source:
+                        info_source = info_source + '+hellhades'
+                    print(f"[4-Source] ✓ Using HellHades {key}: {hh_info[key]}")
+        
+        # Build validation metadata with source priority
+        validation_notes = []
+        if has_fandom_stats:
+            validation_notes.append(f"Fandom: Primary stats source (validated)")
+            if ocr_vs_fandom_confidence > 0:
+                validation_notes.append(f"Ayumilove OCR vs Fandom: {ocr_vs_fandom_confidence:.0f}% match")
+        else:
+            validation_notes.append(f"Ayumilove OCR: Primary stats source ({stats_found}/{total_stats} extracted)")
+        
+        validation_notes.append(f"Ayumilove: Skills source (canonical)")
+        
+        if hellhades_data and hellhades_data.get('info'):
+            validation_notes.append(f"HellHades: Info validation")
+        
+        # Calculate overall confidence
+        overall_confidence = ocr_vs_fandom_confidence if has_fandom_stats else ocr_confidence
+        
+        validation_meta = {
+            'stat_confidence': overall_confidence,
+            'data_sources': '+'.join(sources_available),
+            'source_priority': {
+                'stats': stats_source,
+                'skills': 'ayumilove',
+                'info': info_source
+            },
+            'validation_notes': validation_notes
+        }
+        
+        # Determine source label for output
+        if len(sources_available) >= 3:
+            source_label = f"4-source ({', '.join(sources_available)})"
+        elif len(sources_available) == 2:
+            source_label = f"2-source ({', '.join(sources_available)})"
+        else:
+            source_label = f'ayumilove_only ({stats_found}/{total_stats} stats)'
+            if ocr_confidence < 75:
+                print(f"[WARNING] Low OCR confidence: {stats_found}/{total_stats} stats extracted ({ocr_confidence:.1f}%)")
+                print(f"[WARNING] Consider manual verification for this champion")
+        
+        # Build final merged data
         merged_data = {
-            'info': ayumilove_data.get('info', {}),
-            'stats': raidwiki_data.get('stats', {}),  # RaidWiki stats (validated)
+            'info': final_info,
+            'stats': final_stats,
             'skills': ayumilove_data.get('skills', []),
             'aura': ayumilove_data.get('aura', ''),
             'mechanics_tags': ayumilove_data.get('mechanics_tags', []),
-            'validation': {
-                'confidence': confidence,
-                'differences': differences,
-                'sources': 'raidwiki_stats+ayumilove_ocr_validated'
-            }
+            'validation': validation_meta,
+            'in_fandom_table': has_fandom_stats  # Track if champion was in table
         }
-        return merged_data, f'raidwiki_stats+ayumilove (validated: {confidence:.1f}%)'
+        return merged_data, source_label
     
-    elif has_raidwiki_stats:
-        # RaidWiki only (Ayumilove failed)
-        print("[Hybrid] ⚠️  Ayumilove failed - using RaidWiki only")
-        return raidwiki_data, 'raidwiki'
+    elif hellhades_data and hellhades_data.get('info'):
+        # Ayumilove failed, HellHades has at least info (rare fallback)
+        print("[4-Source] ⚠️  Ayumilove failed - using HellHades only (unusual)")
+        validation_meta = {
+            'stat_confidence': 0,
+            'data_sources': 'hellhades_only',
+            'source_priority': {
+                'stats': 'none',
+                'skills': 'none',
+                'info': 'hellhades'
+            },
+            'validation_notes': ['Ayumilove failed - HellHades fallback (no skills/stats)']
+        }
+        hellhades_data['validation'] = validation_meta
+        hellhades_data['in_fandom_table'] = False
+        return hellhades_data, 'hellhades_only'
     
-    elif ayumilove_data and ayumilove_data.get('info') and ayumilove_data.get('skills'):
-        # Ayumilove only (RaidWiki not available)
-        print("[Hybrid] RaidWiki stats not available - using Ayumilove OCR only")
-        
-        # Check OCR confidence
-        stats = ayumilove_data.get('stats', {})
-        stats_found = sum(1 for v in stats.values() if v and v != '')
-        total_stats = 8
-        confidence = (stats_found / total_stats) * 100 if total_stats > 0 else 0
-        
-        if confidence < 75:
-            print(f"[WARNING] Low OCR confidence: {stats_found}/{total_stats} stats extracted ({confidence:.1f}%)")
-            print(f"[WARNING] Consider manual verification for this champion")
-        
-        return ayumilove_data, 'ayumilove_ocr'
+    # All sources failed - mark as scrape failure
+    print("[ERROR] All sources (Fandom + Ayumilove + HellHades) failed - no data available")
+    print("[ERROR] Setting draft: 'scrape failed' in JSON")
     
-    # Fallback: use whatever data we have
-    if raidwiki_data:
-        print("[Hybrid] ⚠️  Using incomplete RaidWiki data")
-        return raidwiki_data, 'raidwiki_partial'
-    elif ayumilove_data:
-        print("[Hybrid] ⚠️  Using incomplete Ayumilove data")
-        return ayumilove_data, 'ayumilove_partial'
-    
-    return None, None
+    # Return minimal data structure with failure marker
+    failed_data = {
+        'info': {'name': champion_name},
+        'stats': {},
+        'skills': [],
+        'validation': {
+            'stat_confidence': 0,
+            'data_sources': 'none',
+            'source_priority': {
+                'stats': 'none',
+                'skills': 'none',
+                'info': 'none'
+            },
+            'validation_notes': ['All scrape sources failed']
+        },
+        'draft': 'scrape failed',
+        'in_fandom_table': False
+    }
+    return failed_data, 'scrape_failed'
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python champion_scraper.py <champion name> | --list <file>")
-        sys.exit(1)
-
-    if sys.argv[1] == '--list' and len(sys.argv) >= 3:
-        with open(sys.argv[2], 'r', encoding='utf-8') as f:
+    import argparse
+    
+    parser = argparse.ArgumentParser(description='Scrape champion data from multiple sources')
+    parser.add_argument('champion', nargs='?', help='Champion name to scrape (or use --list)')
+    parser.add_argument('--list', type=str, metavar='FILE', help='File with list of champion names (one per line)')
+    parser.add_argument('--rarity', type=str, help='Champion rarity (for HellHades URL, optional)')
+    parser.add_argument('--update-table', action='store_true', 
+                        help='Auto-update Champion_stats.md after scraping (default: False)')
+    
+    args = parser.parse_args()
+    
+    # Determine champion list
+    if args.list:
+        with open(args.list, 'r', encoding='utf-8') as f:
             champ_names = [line.strip() for line in f if line.strip() and not line.strip().startswith('#')]
+    elif args.champion:
+        champ_names = [args.champion]
     else:
-        champ_names = [sys.argv[1]]
-
+        parser.print_help()
+        sys.exit(1)
+    
     template_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../input/Templates/Champion_Dictionary_Template.json'))
     out_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '../../input/Champion_Dictionary'))
 
@@ -260,6 +405,12 @@ def main():
                 scraped_data['validation'] = data['validation']
             else:
                 print(f"[DEBUG] No validation key in data")
+            
+            # Pass through draft status if scrape failed
+            if 'draft' in data and data['draft'] == 'scrape failed':
+                scraped_data['draft'] = 'scrape failed'
+                print(f"[WARNING] Scrape failed for {champ_name} - marking as draft: 'scrape failed'")
+            
             print(f"[DEBUG] Final scraped_data keys: {list(scraped_data.keys())}")
             # If Ayumilove fallback used, map extra overview fields to comments
             if source.startswith('ayumilove') and info:
@@ -272,7 +423,16 @@ def main():
                     comments.append(f"Tomes: {info['tomes']}")
                 if comments:
                     scraped_data['comments'] = ' '.join(comments)
-            generate_champion_json(champ_name, scraped_data, template_path, output_path)
+            
+            # Generate JSON with optional table update
+            in_fandom = data.get('in_fandom_table', False)
+            generate_champion_json(
+                champ_name, 
+                scraped_data, 
+                template_path, 
+                output_path,
+                update_table=args.update_table and not in_fandom  # Only update if not already in table
+            )
             print(f"Champion JSON for {champ_name} written to {output_path} (source: {source})")
             # Diff log
             if old_json:

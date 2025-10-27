@@ -29,7 +29,7 @@
 | Deacon Armstrong | Epic | Force | Knights Revenant | 2025-10-15 |
 | Deudan the Runic | Rare | Magic | Barbarians | 2025-10-18 |
 | Dhukk the Pierced | Epic | Magic | Skinwalkers | 2025-10-15 |
-| Djamarsa | Epic | Spirit | Demonspawn | 2025-10-15 |
+| Djamarsa | Epic | Spirit | Barbarian | 2025-10-15 |
 | Drexthar Bloodtwin | Legendary | Force | Demonspawn | 2025-10-15 |
 | Elenaril | Legendary | Magic | High Elves | 2025-10-15 |
 | Embrys the Anomaly | Mythic | Force | Knights Revenant | 2025-10-18 |

@@ -54,41 +54,42 @@ def extract_base_info(soup):
     for p in soup.find_all('p'):
         txt = p.get_text(" ", strip=True)
         if "NAME:" in txt and "FACTION:" in txt:
-            # Iterate over the children of the <p> block
-            last_label = None
-            for elem in p.children:
-                if hasattr(elem, 'string') and elem.string:
-                    label = elem.string.strip()
-                    if label.startswith("NAME:"):
-                        # Get value after colon, or next sibling if empty
-                        val = label.replace("NAME:", "").strip()
-                        if not val:
-                            next_elem = elem.next_sibling
-                            if next_elem and hasattr(next_elem, 'get_text'):
-                                val = next_elem.get_text(strip=True)
-                        info["name"] = val
-                        last_label = "name"
-                    elif label.startswith("FACTION:"):
-                        next_elem = elem.next_sibling
-                        if next_elem and hasattr(next_elem, 'get_text'):
-                            info["faction"] = next_elem.get_text(strip=True)
-                        last_label = "faction"
-                    elif label.startswith("RARITY:"):
-                        next_elem = elem.next_sibling
-                        if next_elem and hasattr(next_elem, 'get_text'):
-                            info["rarity"] = next_elem.get_text(strip=True)
-                        last_label = "rarity"
-                    elif label.startswith("ROLE:"):
-                        next_elem = elem.next_sibling
-                        if next_elem and hasattr(next_elem, 'get_text'):
-                            info["role"] = next_elem.get_text(strip=True)
-                        last_label = "role"
-                    elif label.startswith("AFFINITY:"):
-                        next_elem = elem.next_sibling
-                        if next_elem and hasattr(next_elem, 'get_text'):
-                            info["affinity"] = next_elem.get_text(strip=True)
-                        last_label = "affinity"
+            # Use regex for more reliable extraction instead of fragile next_sibling parsing
+            # This handles variations in HTML structure better
+            
+            # Extract NAME (first capture group after "NAME:")
+            name_match = re.search(r'NAME:\s*([A-Za-z\s\'-]+?)(?:\s+FACTION:|$)', txt, re.IGNORECASE)
+            if name_match:
+                info["name"] = name_match.group(1).strip()
+            
+            # Extract FACTION (capture until next label or end)
+            faction_match = re.search(r'FACTION:\s*([A-Za-z\s]+?)(?:\s+RARITY:|$)', txt, re.IGNORECASE)
+            if faction_match:
+                info["faction"] = faction_match.group(1).strip()
+            
+            # Extract RARITY (capture until next label or end)
+            rarity_match = re.search(r'RARITY:\s*([A-Za-z]+?)(?:\s+ROLE:|$)', txt, re.IGNORECASE)
+            if rarity_match:
+                info["rarity"] = rarity_match.group(1).strip()
+            
+            # Extract ROLE (capture until next label or end)
+            role_match = re.search(r'ROLE:\s*([A-Za-z]+?)(?:\s+AFFINITY:|$)', txt, re.IGNORECASE)
+            if role_match:
+                info["role"] = role_match.group(1).strip()
+            
+            # Extract AFFINITY (capture until end or next section)
+            affinity_match = re.search(r'AFFINITY:\s*([A-Za-z]+?)(?:\s|$)', txt, re.IGNORECASE)
+            if affinity_match:
+                info["affinity"] = affinity_match.group(1).strip()
+            
+            # Log extracted values for debugging
+            print(f"[Ayumilove][INFO] Extracted info: Name={info.get('name')}, Faction={info.get('faction')}, "
+                  f"Rarity={info.get('rarity')}, Role={info.get('role')}, Affinity={info.get('affinity')}")
             break
+    
+    if not info.get("faction") or not info.get("affinity"):
+        print("[Ayumilove][WARNING] Failed to extract faction/affinity - verify with Owned_champion_list.md")
+    
     return info
 
 def extract_stats_from_image(image_url):

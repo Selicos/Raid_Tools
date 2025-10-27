@@ -13,7 +13,7 @@
       "type": "object",
       "additionalProperties": { "type": "string" }
     },
-    "forms": {
+    "frmso": {
       "type": "array",
       "items": {
         "type": "object",

@@ -1,0 +1,235 @@
+{
+  "name": "Djamarsa",
+  "rarity": "Epic",
+  "affinity": "Spirit",
+  "faction": "Demonspawn",
+  "role": "Support",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "4/10",
+    "dungeons": "6/10",
+    "doom_tower": "7/10",
+    "arena": "7/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 19320,
+        "ATK": 936,
+        "DEF": 1079,
+        "SPD": 105,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Night's Finger",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 50% chance of placing a [Sleep] debuff for 1 turn. If Crohnam is on the same team, and the [Sleep] debuff was resisted or blocked, place a 30% [Decrease SPD] debuff instead for 2 turns. This debuff cannot be blocked.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Single-target attack with 4 ATK scaling"
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "1 turn",
+              "notes": "50% chance (booked) to place Sleep debuff"
+            },
+            {
+              "type": "debuff",
+              "stat": "SPD",
+              "value": -30,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "CONDITIONAL: If Crohnam is on team and Sleep is resisted/blocked, place Dec SPD instead (CANNOT BE BLOCKED)"
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Sleep", "Decrease SPD", "Crohnam synergy"],
+          "book_value": "Moderate - increases Sleep chance from 30% to 50%, improving CC consistency",
+          "notes": "CROHNAM SYNERGY: If Sleep is resisted/blocked with Crohnam on team, automatically places Dec SPD (30%, 2 turns) that CANNOT BE BLOCKED. This makes Djamarsa + Crohnam a reliable CC/debuff combo."
+        },
+        {
+          "name": "Radiant Moon",
+          "type": "A2",
+          "description": "Heals a target ally by 50% of their MAX HP and fills their Turn Meter by 30%. If this skill is used on Crohnam, he will instantly activate his Berserker's Delight Skill.",
+          "effects": [
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 50,
+              "per_hit": false,
+              "target": "single_ally",
+              "duration": "NA",
+              "notes": "Heals 50% of target's MAX HP (booked)"
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 30,
+              "per_hit": false,
+              "target": "single_ally",
+              "duration": "NA",
+              "notes": "Fills target's TM by 30%"
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "single_ally",
+              "duration": "NA",
+              "notes": "CONDITIONAL: If used on Crohnam, he instantly activates his A3 (Berserker's Delight) - unique skill activation synergy"
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Heal", "Turn Meter Boost", "Crohnam synergy", "Skill activation"],
+          "book_value": "High - reduces cooldown from 4 to 3 turns, increases heal from 30% to 50% MAX HP. Critical for sustain and TM boost uptime.",
+          "notes": "PRIMARY SUPPORT SKILL. Huge heal (50% MAX HP booked) + TM boost (30%) on target ally. CROHNAM SYNERGY: Using this on Crohnam instantly triggers his A3 (Berserker's Delight), allowing for extra damage and control cycling. Pair Djamarsa + Crohnam for powerful heal + instant nuke combo."
+        },
+        {
+          "name": "Moonlit March",
+          "type": "A3",
+          "description": "Revives all dead allies with 30% HP and 30% Turn Meter",
+          "effects": [
+            {
+              "type": "revive",
+              "stat": "NA",
+              "value": 30,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "NA",
+              "notes": "Revives ALL dead allies with 30% HP and 30% TM"
+            }
+          ],
+          "cooldown_booked": 5,
+          "mechanics_tags": ["Team Revive", "AoE Revive"],
+          "book_value": "High - reduces cooldown from 7 to 5 turns, significantly improving team survivability and revive frequency",
+          "notes": "TEAM REVIVE SKILL. Revives ALL dead allies (not just 1) with 30% HP and 30% TM. Extremely valuable for Doom Tower, Faction Wars, and Arena defense. 5-turn cooldown (booked) is fast for a team revive. Can turn losing fights around if timed correctly."
+        },
+        {
+          "name": "Phasing",
+          "type": "Passive",
+          "description": "Whenever an ally uses an Active Skill, has a 20% chance of decreasing the cooldown of that skill by 1 turn",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 20,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "NA",
+              "notes": "20% chance per ally skill use to reduce that skill's cooldown by 1 turn. Passive has 0-turn cooldown when booked (always active)."
+            }
+          ],
+          "cooldown_booked": 0,
+          "mechanics_tags": ["Cooldown reduction", "Passive"],
+          "book_value": "High - reduces passive cooldown from 3 to 0 turns, making it ALWAYS ACTIVE. Massive value for cycling team skills faster.",
+          "notes": "PASSIVE COOLDOWN REDUCTION. 20% chance to reduce cooldown of ANY ally active skill by 1 turn. BOOKS ARE CRITICAL: Passive cooldown goes from 3 turns to 0 turns when fully booked, making it always active. This effectively increases team skill cycling by ~20%, very powerful with high-impact skills (revives, nukes, debuffs)."
+        }
+      ],
+      "aura": "Increase Ally C. DMG in Faction Crypts by 23%",
+      "comments": "Djamarsa is a unique support champion with Crohnam synergy and team-wide cooldown reduction. Her A3 team revive is rare and valuable for hard content. Her passive (when booked) provides 20% chance to reduce any ally skill cooldown, effectively speeding up the entire team. Pair with Crohnam for Sleep/Dec SPD combo (A1) and instant Berserker's Delight activation (A2). Excellent in Faction Wars, Doom Tower, and Arena defense."
+    }
+  ],
+  "mechanics_tags": ["Sleep", "Decrease SPD", "Heal", "Turn Meter Boost", "Team Revive", "Cooldown reduction", "Crohnam synergy"],
+  "stat_priorities": [
+    "180+ SPD (for faster cycling and support actions)",
+    "High HP% (for survivability, no scaling on heals/revive)",
+    "100+ ACC (for Sleep debuff consistency)",
+    "RES% (for defense teams in Arena)"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "180+ SPD, 150+ ACC (Sleep on Stun target), HP% for survivability - low priority (limited CB value)",
+    "dungeons": "200+ SPD, 100+ ACC, HP% chestplate, focus on fast cycling for heals/revive",
+    "doom_tower": "180+ SPD, 150+ ACC, high HP% and RES (150+) for boss floors, team revive is critical",
+    "arena": "200+ SPD, 150+ RES (defense), HP% for survivability, use as reviver or Crohnam support",
+    "faction_wars": "180+ SPD, 100+ ACC, HP% and DEF% for survivability, team revive + passive cooldown reduction = high value"
+  },
+  "recommended_gear": [
+    "Speed + Perception (fast cycling + ACC for Sleep)",
+    "Speed + Immortal (fast cycling + sustain)",
+    "Speed + Resistance (Arena defense)",
+    "Prioritize: 180+ SPD, HP% chestplate, HP% gloves, SPD boots, ACC for Sleep consistency"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Warmaster (Offense T6 - damage contribution, though limited)",
+      "Cycle of Magic (Support T5 - cooldown reduction on A2/A3)",
+      "Arcane Celerity (Support T2 - +6 SPD)"
+    ],
+    "dungeons": [
+      "Warmaster (Offense T6)",
+      "Cycle of Magic (Support T5)",
+      "Rapid Response (Defense T4 - +18% TM when ally receives crit, faster cycling)",
+      "Arcane Celerity (Support T2)",
+      "Lore of Steel (Defense T2)"
+    ],
+    "doom_tower": [
+      "Warmaster (Offense T6)",
+      "Cycle of Magic (Support T5)",
+      "Lasting Gifts (Support T5 - extends Sleep debuff duration)",
+      "Unshakeable (Defense T5 - -30% debuff duration for survivability)",
+      "Deterrence (Defense T3 - +5% RES)",
+      "Arcane Celerity (Support T2)",
+      "Lore of Steel (Defense T2)"
+    ],
+    "arena": [
+      "Warmaster (Offense T6)",
+      "Cycle of Magic (Support T5)",
+      "Deterrence (Defense T3)",
+      "Arcane Celerity (Support T2)",
+      "Lore of Steel (Defense T2)"
+    ],
+    "faction_wars": [
+      "Warmaster (Offense T6)",
+      "Cycle of Magic (Support T5)",
+      "Rapid Response (Defense T4)",
+      "Lasting Gifts (Support T5)",
+      "Arcane Celerity (Support T2)",
+      "Lore of Steel (Defense T2)"
+    ]
+  },
+  "blessings": {
+    "best": "Cruelty (Offense) - extends Sleep/Dec SPD debuff duration",
+    "alternatives": [
+      "Survival Instinct (Life) - survivability boost for reviver",
+      "Polymorph (Phantom Touches) - additional CC chance",
+      "Ward of the Fallen (Life) - team damage reduction when Djamarsa is alive"
+    ]
+  },
+  "mechanics_advisory": {
+    "cheese_strategy": "Team Revive Loop - use with other revivers (Scyl, Rector Drath) to create revive chain. Passive cooldown reduction speeds up revive cycling.",
+    "ai_quirks": "AI uses A3 revive intelligently when 2+ allies are dead. A2 prioritizes low HP allies. Passive triggers automatically. AI will use A2 on Crohnam if both are on team.",
+    "general_strategy": "SUPPORT + REVIVER WITH CROHNAM SYNERGY: Djamarsa excels as a healer, reviver, and team skill accelerator. Her passive (booked to 0 CD) provides 20% cooldown reduction on all ally skills, speeding up the entire team. Pair with Crohnam for unique synergies: A1 Sleep → Dec SPD fallback (cannot be blocked), A2 on Crohnam = instant Berserker's Delight activation. Team revive (A3) is rare and valuable for hard content. HIGH PRIORITY FOR USER: Aligns with Priority 3 (Doom Tower - team revive), Priority 5 (Faction Wars - Demonspawn), and Arena defense. Fully book her passive (3→0 CD) for maximum value."
+  },
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "ayumilove_ocr_only",
+    "ocr_notes": "OCR extracted 8/8 stats (100% confidence). Affinity and faction CORRECTED from scraper output ('Force', 'Barbarians') to Owned_champion_list.md values ('Spirit', 'Demonspawn').",
+    "validation_date": "2025-10-26"
+  },
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-djamarsa-skill-mastery-equip-guide/",
+    "HellHades: https://hellhades.com/champions/djamarsa/",
+    "User Owned_champion_list.md: Affinity (Spirit) and Faction (Demonspawn) corrected from scraper output"
+  ],
+  "author": "GitHub Copilot + User",
+  "last_updated": "2025-10-26",
+  "update_notes": "Initial Complete/ entry creation using updated scraper (Ayumilove-first approach, 100% OCR success). Affinity and faction corrected from scraper output to match Owned_champion_list.md (Spirit/Demonspawn vs Force/Barbarians). Scraper may need champion info validation enhancement."
+}

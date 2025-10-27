@@ -101,11 +101,11 @@
       "form_name": "Alternate",
       "base_stats": {
         "HP": 22140,
-        "ATK": 1101,
-        "DEF": 1277,
-        "SPD": 111,
+        "ATK": 991,
+        "DEF": 1222,
+        "SPD": 105,
         "C.RATE": 15,
-        "C.DMG": 50,
+        "C.DMG": 63,
         "RES": 30,
         "ACC": 20
       },

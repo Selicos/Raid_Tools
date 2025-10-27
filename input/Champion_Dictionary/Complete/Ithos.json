@@ -23,7 +23,7 @@
         "C.RATE": 15,
         "C.DMG": 63,
         "RES": 30,
-        "ACC": 0
+        "ACC": 10
       },
       "skills": [
         {

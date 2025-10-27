@@ -16,12 +16,12 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": 16185,
-        "ATK": 1398,
-        "DEF": 936,
-        "SPD": 105,
+        "HP": 13710,
+        "ATK": 1663,
+        "DEF": 727,
+        "SPD": 99,
         "C.RATE": 15,
-        "C.DMG": 50,
+        "C.DMG": 57,
         "RES": 30,
         "ACC": 0
       },

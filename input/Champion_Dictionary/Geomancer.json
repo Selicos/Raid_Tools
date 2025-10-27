@@ -1,0 +1,208 @@
+{
+  "name": "Geomancer",
+  "rarity": "Epic",
+  "affinity": "Force",
+  "faction": "Dwarves",
+  "role": "Attack",
+  "draft": true,
+  "meta_ratings": {
+    "clan_boss": "X/10",
+    "dungeons": "X/10",
+    "doom_tower": "X/10",
+    "arena": "X/10",
+    "faction_wars": "X/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 15525,
+        "ATK": 1343,
+        "DEF": 925,
+        "SPD": 94,
+        "C.RATE": "",
+        "C.DMG": "",
+        "RES": "",
+        "ACC": ""
+      },
+      "skills": [
+        {
+          "name": "Tremor Staff",
+          "type": "A1",
+          "description": "Attacks all enemies. Has a 30% chance of placing a 50% [Decrease ACC] debuff for 2 turns.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Buff/Debuff Chance +5%\nLevel 6: Buff/Debuff Chance +5%\nDamage Multiplier: 2.4 ATK",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "Creeping Petrify (Cooldown: 4 turns)",
+          "type": "A2",
+          "description": "Removes all buffs from a target enemy, then attacks them. Steals all buffs if the target is under a [HP Burn] debuff placed by this champion. Reduces the cooldown of Quicksand Grasp by 2 turns if the target is killed by this skill while under a [HP Burn] debuff placed by this Champion.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +10%\nLevel 5: Cooldown -1\nDamage Multiplier: 6 ATK",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "Quicksand Grasp (Cooldown: 5 turns)",
+          "type": "A3",
+          "description": "Fully depletes the target’s Turn Meter. Fills the Champion’s Turn Meter by the amount the target loses. Has a 75% chance of placing a [HP Burn] and a 25% [Weaken] debuff on the target for 3 turns.\nLevel 2: Debuff/Buff Chance +5%\nLevel 3: Debuff/Buff Chance +5%\nLevel 4: Debuff/Buff Chance +5%\nLevel 5: Debuff/Buff Chance +10%\nLevel 6: Cooldown -1\nLevel 7: Cooldown -1",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "Stoneguard (Passive)",
+          "type": "Passive",
+          "description": "Decreases the damage all allies receive by 15% and deflects that damage onto each enemy under a [HP Burn] debuff placed by this Champion. Whenever this Champion is attacked, deflects 30% of the damage instead. When deflecting damage, on each hit, has a 30% chance of dealing additional damage equal to 3% of the target’s MAX HP.\nNote: In Patch 4.70, the Stoneguard passive skill has been adjusted. The reflected damage is now classified as “damage reflect” rather than a “damage hit.” Consequently, this change prevents it from triggering the Giant Slayer or Warmaster masteries, and it also disables the effects of certain artifact sets like Stun, Lifesteal, and Toxic. To optimize Geomancer’s performance, it’s advisable to switch his Tier 6 Offense mastery to Warmaster, as this mastery now offers a higher activation chance, thereby enhancing his overall damage output.",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "",
+          "type": "A5",
+          "description": "",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        }
+      ],
+      "aura": "Increases Ally HP in all battles by 25%.",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
+    }
+  ],
+  "mechanics_tags": [
+    "Relevant mechanic tags"
+  ],
+  "stat_priorities": [
+    "Stat priorities for main content(s)",
+    "e.g. 100% Crit Rate, 250+ ACC"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "e.g. 250+ ACC, 220+ SPD, 100% C.RATE",
+    "dungeons": "e.g. 220+ SPD, 200+ ACC, HP%/DEF% for survivability",
+    "arena": "e.g. 300+ SPD, 100% C.RATE, C.DMG, RES for tank"
+  },
+  "recommended_gear": [
+    "Recommended sets and stats for main content(s)"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Recommended masteries for Clan Boss"
+    ],
+    "dungeons": [
+      "Recommended masteries for Dungeons"
+    ],
+    "arena": [
+      "Recommended masteries for Arena"
+    ],
+    "doom_tower": [
+      "Recommended masteries for Doom Tower"
+    ],
+    "faction_wars": [
+      "Recommended masteries for Faction Wars"
+    ],
+    "general": [
+      "Offense/Support/Defense as needed"
+    ]
+  },
+  "blessings": [
+    "Recommended blessings for priority content(s)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Describe problematic skill priority, targeting, or auto-play behavior"
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "unkillable/max HP/passive sustain/etc.",
+    "cheese_mechanic_info": "If true, describe the cheese mechanic and requirements"
+  },
+  "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",
+    "HellHades: https://hellhades.com/champions/champion-name/ (accessed YYYY-MM-DD)"
+  ],
+  "author": "Author Name (e.g., GitHub Copilot)",
+  "comments": "Top-level comments about the entry. For form-specific notes use forms[*].comments.",
+  "update_notes": {
+    "last_updated": "YYYY-MM-DD",
+    "last_patch": "Patch version/date and summary of change"
+  },
+  "validation_metadata": {
+    "stat_confidence": 50.0,
+    "stat_differences": [],
+    "data_sources": "ayumilove_ocr_only",
+    "ocr_notes": "OCR only - consider manual verification"
+  }
+}
