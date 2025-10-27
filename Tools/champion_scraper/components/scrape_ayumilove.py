@@ -142,51 +142,141 @@ def extract_stats_from_image(image_url):
                 value = match.group(1).replace(',', '')
                 stats[stat_name] = value
         
-        # If no labeled stats found, try positional extraction (Ayumilove format)
-        if not stats:
-            print("[OCR][INFO] No labeled stats found, trying positional extraction...")
-            # Find all numbers (with optional commas)
-            # Look for the stat block after "Total Stats" or similar
-            numbers = re.findall(r'\d[\d,]+', text)
-            
-            print(f"[OCR][DEBUG] All numbers found: {numbers}")
-            
-            # Clean numbers (remove commas)
-            clean_numbers = [n.replace(',', '') for n in numbers]
-            
-            # Ayumilove stats are in order: HP (4-5 digits), ATK (3-4 digits), DEF (3-4 digits), 
-            # SPD (2-3 digits), C.RATE (1-2 digits), C.DMG (2-3 digits), RESIST (1-3 digits), ACC (1-3 digits)
-            # Look for a sequence that matches these patterns
-            stat_candidates = []
-            for i, num in enumerate(clean_numbers):
-                try:
-                    val = int(num)
-                    # Skip level (60, typically first) but include all other numbers
-                    # HP is usually 10000+, so start from first 4-5 digit number
-                    if i == 0 and val <= 100:
-                        # Likely level number, skip
-                        continue
-                    # Include all reasonable stat values (10-30000)
-                    if 10 <= val <= 30000:
-                        stat_candidates.append(num)
-                except ValueError:
+        labeled_count = len(stats)
+        if labeled_count > 0:
+            print(f"[OCR][INFO] Found {labeled_count} labeled stats")
+        
+        # HYBRID APPROACH: Always try positional extraction to fill missing stats
+        # This handles cases where OCR only partially recognizes stat labels
+        print("[OCR][INFO] Attempting positional extraction to fill missing stats...")
+        
+        # Find all numbers (with optional commas)
+        numbers = re.findall(r'\d[\d,]+', text)
+        
+        print(f"[OCR][DEBUG] All numbers found: {numbers}")
+        
+        # Clean numbers (remove commas)
+        clean_numbers = [n.replace(',', '') for n in numbers]
+        
+        # Ayumilove stats are in order: HP (4-5 digits), ATK (3-4 digits), DEF (3-4 digits), 
+        # SPD (2-3 digits), C.RATE (1-2 digits), C.DMG (2-3 digits), RESIST (1-3 digits), ACC (1-3 digits)
+        # Look for a sequence that matches these patterns
+        stat_candidates = []
+        for i, num in enumerate(clean_numbers):
+            try:
+                val = int(num)
+                # Skip level (60, typically first) but include all other numbers
+                # HP is usually 10000+, so start from first 4-5 digit number
+                if i == 0 and val <= 100:
+                    # Likely level number, skip
                     continue
+                # Include all reasonable stat values (10-30000)
+                if 10 <= val <= 30000:
+                    stat_candidates.append(num)
+            except ValueError:
+                continue
+        
+        print(f"[OCR][DEBUG] Stat candidates: {stat_candidates}")
+        
+        # Fill in missing stats using SMART positional mapping
+        # Match candidates to stat positions based on typical value ranges
+        # Ayumilove order: HP, ATK, DEF, SPD, C.RATE, C.DMG, RESIST, ACC
+        if len(stat_candidates) >= 6:  # Need at least 6 to make smart guesses
+            stat_names = ['HP', 'ATK', 'DEF', 'SPD', 'C. RATE', 'C. DMG', 'RESIST', 'ACC']
             
-            print(f"[OCR][DEBUG] Stat candidates: {stat_candidates}")
+            # Categorize candidates by value range (typical stat distributions)
+            categorized = {
+                'HP': [],      # 10000-25000
+                'ATK': [],     # 700-1700
+                'DEF': [],     # 700-1700
+                'SPD': [],     # 90-120
+                'C.RATE': [],  # 10-30
+                'C.DMG': [],   # 50-75
+                'RESIST': [],  # 20-60
+                'ACC': []      # 0-30
+            }
             
-            # Take the first 8 candidates if we have enough
-            # Ayumilove order: HP, ATK, DEF, SPD, C.RATE, C.DMG, RESIST, ACC
-            if len(stat_candidates) >= 8:
-                stat_names = ['HP', 'ATK', 'DEF', 'SPD', 'C. RATE', 'C. DMG', 'RESIST', 'ACC']
-                for i in range(8):
+            for candidate in stat_candidates:
+                val = int(candidate)
+                if 10000 <= val <= 25000:
+                    categorized['HP'].append(candidate)
+                elif 700 <= val <= 1700:
+                    # Could be ATK or DEF - add to both
+                    categorized['ATK'].append(candidate)
+                    categorized['DEF'].append(candidate)
+                elif 90 <= val <= 120:
+                    categorized['SPD'].append(candidate)
+                elif 50 <= val <= 75:
+                    categorized['C.DMG'].append(candidate)
+                elif 30 <= val <= 60:
+                    # Could be RESIST or C.DMG
+                    categorized['RESIST'].append(candidate)
+                    if val <= 75:
+                        categorized['C.DMG'].append(candidate)
+                elif 10 <= val <= 30:
+                    # Could be C.RATE, ACC, or RESIST
+                    categorized['C.RATE'].append(candidate)
+                    categorized['ACC'].append(candidate)
+                    categorized['RESIST'].append(candidate)
+            
+            # Fill stats with best candidates
+            positional_added = 0
+            # HP is unique (highest value)
+            if 'HP' not in stats and categorized['HP']:
+                stats['HP'] = categorized['HP'][0]
+                positional_added += 1
+            
+            # ATK/DEF are ambiguous (700-1700) - use both candidates if available
+            atk_def_candidates = [c for c in categorized['ATK'] if c != stats.get('HP')]
+            if 'ATK' not in stats and len(atk_def_candidates) >= 1:
+                stats['ATK'] = atk_def_candidates[0]
+                positional_added += 1
+            if 'DEF' not in stats and len(atk_def_candidates) >= 2:
+                stats['DEF'] = atk_def_candidates[1]
+                positional_added += 1
+            
+            # SPD is fairly unique (90-120)
+            if 'SPD' not in stats and categorized['SPD']:
+                stats['SPD'] = categorized['SPD'][0]
+                positional_added += 1
+            
+            # C.DMG (50-75, usually 50 or 57 or 63)
+            if 'C. DMG' not in stats and categorized['C.DMG']:
+                stats['C. DMG'] = categorized['C.DMG'][0]
+                positional_added += 1
+            
+            # RESIST/C.RATE/ACC are harder - use remaining candidates
+            remaining = [c for c in stat_candidates if c not in stats.values()]
+            if 'C. RATE' not in stats and categorized['C.RATE']:
+                # Usually 15 for base champs
+                crate_candidates = [c for c in categorized['C.RATE'] if int(c) <= 20]
+                if crate_candidates:
+                    stats['C. RATE'] = crate_candidates[0]
+                    positional_added += 1
+            
+            if 'RESIST' not in stats and categorized['RESIST']:
+                stats['RESIST'] = categorized['RESIST'][0]
+                positional_added += 1
+            
+            if 'ACC' not in stats and categorized['ACC']:
+                # Prefer lower values for ACC (0-20 common)
+                acc_candidates = [c for c in categorized['ACC'] if int(c) <= 20 and c not in stats.values()]
+                if acc_candidates:
+                    stats['ACC'] = acc_candidates[0]
+                    positional_added += 1
+            
+            if positional_added > 0:
+                print(f"[OCR][INFO] Added {positional_added} stats using SMART positional mapping ({len(stats)}/8 total)")
+        elif len(stat_candidates) >= 4:
+            # Fallback: Simple positional for HP, ATK, DEF, SPD only
+            stat_names = ['HP', 'ATK', 'DEF', 'SPD']
+            positional_added = 0
+            for i in range(min(4, len(stat_candidates))):
+                if stat_names[i] not in stats:
                     stats[stat_names[i]] = stat_candidates[i]
-                print(f"[OCR][INFO] Extracted {len(stats)} stats using positional mapping")
-            elif len(stat_candidates) >= 4:
-                # At minimum try to get HP, ATK, DEF, SPD
-                stat_names = ['HP', 'ATK', 'DEF', 'SPD']
-                for i in range(min(4, len(stat_candidates))):
-                    stats[stat_names[i]] = stat_candidates[i]
-                print(f"[OCR][INFO] Extracted {len(stats)} core stats using positional mapping")
+                    positional_added += 1
+            if positional_added > 0:
+                print(f"[OCR][INFO] Added {positional_added} core stats using positional mapping ({len(stats)}/8 total)")
         
         if stats:
             print(f"[OCR] ✓ Extracted {len(stats)} stats from image")
