@@ -197,9 +197,13 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
             'ocr_notes': ', '.join(validation_info.get('validation_notes', []))
         }
     
-    # Pass through owned override if specified (for table update)
-    if '_owned_override' in scraped_data:
-        champion_json['_owned_override'] = scraped_data['_owned_override']
+    # Set owned field (priority: scraped_data > table > 0)
+    if 'owned' in scraped_data:
+        # Use value from --owned flag (passed through scraped_data)
+        champion_json['owned'] = scraped_data['owned']
+    else:
+        # Read from Champion_stats.md table (or default to 0 if not found)
+        champion_json['owned'] = get_owned_count(champion_name, override=None)
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
@@ -318,10 +322,8 @@ def extract_champion_row_from_json(champion_json):
         except:
             pass
     
-    # Get owned count from Owned_champion_list.md (or use override if provided)
-    from pathlib import Path
-    owned_override = champion_json.get('_owned_override', None)
-    owned_count = get_owned_count(champion_json.get('name', ''), override=owned_override)
+    # Get owned count from Champion_stats.md table or use JSON value
+    owned_count = champion_json.get('owned', 0)
     
     # Build row cells (match Champion_stats.md column order with Owned column)
     row = [

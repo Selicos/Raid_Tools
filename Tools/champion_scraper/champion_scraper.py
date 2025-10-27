@@ -467,9 +467,9 @@ def main() -> None:
             else:
                 should_update_table = not in_fandom if not args.update_table else (args.update_table and not in_fandom)
             
-            # Add owned count override to scraped_data if --owned specified
+            # Add owned count to scraped_data (use --owned flag if provided, otherwise will read from table)
             if args.owned is not None:
-                scraped_data['_owned_override'] = args.owned
+                scraped_data['owned'] = args.owned
             
             generate_champion_json(
                 champ_name, 

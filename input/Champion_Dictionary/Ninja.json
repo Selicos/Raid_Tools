@@ -4,6 +4,7 @@
   "affinity": "Magic",
   "faction": "Shadowkin",
   "role": "Attack",
+  "owned": 1,
   "base_stats": {
     "HP": 16845,
     "ATK": 1509,

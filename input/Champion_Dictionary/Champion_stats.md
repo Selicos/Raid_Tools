@@ -5,6 +5,8 @@
 ## Updated with Complete/ champion JSONs - Complete/ data takes precedence
 
 
+
+
 | Name | Owned | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |
 | ---- | ----- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |
 | Abbess | 1 | The Sacred Order | Legendary | Attack | Force | 14040 | 1564 | 1079 | 96 | 0.15 | 0.63 | 30 | 10 | 1 | 1 | ATK | 0.34 | Faction Crypts | all |
@@ -149,7 +151,7 @@
 | Rector Drath | 2 | Knights Revenant | Epic | Support | Force | 17010 | 1 | 109 | 0.18 | 0.35 | 30 | \- | \- | \- | \- |
 | Relickeeper | 4 | The Sacred Order | Epic | Attack | Force | 14370 | 1365 | 980 | 90 | 0.15 | 0.6 | 30 | 0 | 4 | 4 | ATK | 0.4 | Campaign | all |
 | Reliquary Tender | 0 | High Elves | Rare | Support | Void | 18165 | 859 | 958 | 103 | 0.15 | 0.5 | 30 | 0 | \- | \- | \- | \- | \- | \- |
-| Rhazin Scarhide | 1 | Lizardmen | Legendary | Defense | Force | Force | \- | \- | \- |  |  |  |  | \- | \- | \- | \- |
+| Rhazin Scarhide | 2 | Lizardmen | Legendary | Defense | Force | Force | Force | Force | \- |  |  |  |  | \- | \- | \- | \- |
 | Rian the Conjurer | 1 | Dark Elves | Epic | Support | Force | \- | \- | \- | \- |
 | Richtoff the Bold | 0 | Banner Lords | Legendary | Attack | Spirit | 18825 | 1398 | 925 | 95 | 0.15 | 0.63 | 30 | 0 | \- | \- | ATK | 0.27 | Faction Crypts | all |
 | Robar | 1 | Orcs | Legendary | Attack | Force | 18990 | 1619 | 0.15 | 0.63 | 15 | \- | \- | \- | \- |

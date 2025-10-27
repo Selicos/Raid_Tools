@@ -9,6 +9,11 @@
     "affinity": { "type": "string" },
     "faction": { "type": "string" },
     "role": { "type": "string" },
+    "owned": { 
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of copies owned (0 = not owned, 1+ = owned count). Set by --owned flag in champion_scraper."
+    },
     "draft": { "type": "boolean" },
     "meta_ratings": {
       "type": "object",

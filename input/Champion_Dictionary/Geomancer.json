@@ -4,6 +4,7 @@
   "affinity": "Force",
   "faction": "Dwarves",
   "role": "Attack",
+  "owned": 1,
   "base_stats": {
     "HP": 15525,
     "ATK": 1343,

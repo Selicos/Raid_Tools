@@ -255,12 +255,35 @@ All entries must follow `input/Templates/Champion_Dictionary_Template.json`:
 
 ### Modified Files
 - `input/Champion_Dictionary/Champion_stats.md` - Updated Ninja row with complete stats + aura
+- `input/Templates/Champion_Dictionary_Template.json` - Added `owned` field (integer, above draft field) ✅
+- `input/Templates/Champion_Dictionary_Schema.json` - Added `owned` field validation (type: integer, minimum: 0) ✅
 - Todo list - Marked Ninja complete (Batch 2: 1/4), noted Rhazin in progress
 
 ### Deleted Files
 - `input/Champion_Dictionary/Rhazin_Scarhide.json` - ✅ Deleted draft (confirmed via directory listing)
 
 **Note**: VS Code may still show cached version in editor - close and reopen file to confirm deletion.
+
+---
+
+## 🔧 TEMPLATE UPDATES (2025-10-27)
+
+**Added `owned` field to canonical template:**
+```json
+"owned": 0,  // Number of copies owned (0 = not owned, 1+ = owned count)
+```
+
+**Location**: Above `draft` field (line 7 in template)
+
+**Schema Update**: Added validation (type: integer, minimum: 0, description documented)
+
+**Purpose**: 
+- Enables filtering owned vs aspirational champions
+- Supports batch operations on owned champions only
+- Syncs with `Champion_stats.md` Owned column
+- Set via `champion_scraper.py --owned N` flag
+
+**Migration Note**: Existing files with `_owned_override` field should migrate to `owned` field (deprecate underscore prefix).
 
 ---
 
