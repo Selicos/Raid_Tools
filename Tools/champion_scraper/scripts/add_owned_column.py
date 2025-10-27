@@ -17,9 +17,9 @@ def parse_owned_champions(owned_file: Path) -> dict:
     """
     Parse Owned_champion_list.md and return dict of {champion_name: count}.
     
-    Handles formats like:
-    - "Apothecary (x3)" -> {"Apothecary": 3}
-    - "Arbiter" -> {"Arbiter": 1}
+    Handles new format with dedicated Owned column:
+    | Name | Owned | Rarity | ...
+    | Apothecary | 3 | Rare | ...
     """
     owned = {}
     
@@ -29,21 +29,20 @@ def parse_owned_champions(owned_file: Path) -> dict:
             if not line.strip().startswith('|') or '|---' in line or '| Name |' in line:
                 continue
             
-            # Parse champion name (first column)
+            # Parse table cells
             parts = [p.strip() for p in line.split('|') if p.strip()]
-            if not parts:
+            if len(parts) < 2:
                 continue
             
-            name_field = parts[0]
+            # Format: | Name | Owned | Rarity | Affinity | Faction | Last Updated |
+            name = parts[0]
+            count_str = parts[1]
             
-            # Check for quantity like "Coldheart (x3)"
-            match = re.match(r'(.+?)\s*\(x(\d+)\)', name_field)
-            if match:
-                name = match.group(1).strip()
-                count = int(match.group(2))
-            else:
-                name = name_field.strip()
-                count = 1
+            try:
+                count = int(count_str)
+            except ValueError:
+                # If count isn't a number, skip this row
+                continue
             
             owned[name] = count
     

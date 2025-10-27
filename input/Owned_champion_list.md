@@ -2,101 +2,101 @@
 
 ## Champion List
 
-| Name | Rarity | Affinity | Faction | Last Updated |
-|------|--------|----------|---------|--------------|
-| Abbess | Legendary | Force | Sacred Order | 2025-10-15 |
-| Akoth the Seared | Epic | Force | Demonspawn | 2025-10-18 |
-| Alice the Wanderer | Legendary | Magic | ShadSacred Order | 2025-10-15 |
-| Alure | Epic | Spirit | Demonspawn | 2025-10-15 |
-| Apothecary (x3) | Rare | Magic | High Elves | 2025-10-15 |
-| Arbiter | Legendary | Void | High Elves | 2025-10-15 |
-| Archmage Hellmut | Epic | Force | Banner Lords | 2025-10-15 |
-| Artak | Legendary | Force | Barbarians | 2025-10-15 |
-| Astralon | Legendary | Magic | Dark Elves | 2025-10-15 |
-| Bad-el-Kazar | Legendary | Spirit | Undead Hordes | 2025-10-15 |
-| Black Knight | Legendary | Void | Banner Lords | 2025-10-15 |
-| Brakus the Shifter | Legendary | Magic | Ogryn Tribes | 2025-10-15 |
-| Broadmaw | Epic | Spirit | Lizardmen | 2025-10-15 |
-| Burangiri | Epic | Force | Shadowkin | 2025-10-15 |
-| Caolite the Asharrow | Epic | Magic | Sylvan Watchers | 2025-10-15 |
-| Chronicler Adelyn | Rare | Spirit | High Elves | 2025-10-15 |
-| Cleopterix | Legendary | Void | Demonspawn | 2025-10-15 |
-| Coldheart (x3) | Rare | Spirit | Dark Elves | 2025-10-15 |
-| Criodan the Blue | Epic | Force | Sylvan Watchers | 2025-10-15 |
-| Crohnam | Legendary | Force | Barbarians | 2025-10-15 |
-| Dark Athel | Rare | Magic | Undead Hordes | 2025-10-18 |
-| Dark Kael | Epic | Force | Undead Hordes | 2025-10-15 |
-| Deacon Armstrong | Epic | Force | Knights Revenant | 2025-10-15 |
-| Deudan the Runic | Rare | Magic | Barbarians | 2025-10-18 |
-| Dhukk the Pierced | Epic | Magic | Skinwalkers | 2025-10-15 |
-| Djamarsa | Epic | Spirit | Barbarian | 2025-10-15 |
-| Drexthar Bloodtwin | Legendary | Force | Demonspawn | 2025-10-15 |
-| Elenaril | Legendary | Magic | High Elves | 2025-10-15 |
-| Embrys the Anomaly | Mythic | Force | Knights Revenant | 2025-10-18 |
-| Eolfrig | Epic | Spirit | Barbarians | 2025-10-18 |
-| Fayne | Epic | Magic | Dark Elves | 2025-10-15 |
-| Fenshi | Epic | Spirit | Shadowkin | 2025-10-15 |
-| Frozen Banshee | Rare | Spirit | Undead Hordes | 2025-10-15 |
-| Geomancer | Epic | Magic | Barbarians | 2025-10-15 |
-| Ghostborn | Epic | Magic | Knights Revenant | 2025-10-18 |
-| Godseeker Aniri (x2) | Epic | Void | Sacred Order | 2025-10-18 |
-| Gretel Hagbane | Epic | Spirit | Sylvan Watchers | 2025-10-15 |
-| He-Man | Legendary | Magic | Sacred Order | 2025-10-18 |
-| High Khatun | Rare | Spirit | Barbarians | 2025-10-18 |
-| Hotatsu (x2) | Epic | Magic | Shadowkin | 2025-10-15 |
-| Husk | Rare | Force | Skinwalkers | 2025-10-18 |
-| Ithos | Legendary | Void | Sacred Order | 2025-10-15 |
-| Iudex Artor | Epic | Magic | Knights Revenant | 2025-10-18 |
-| Juliana | Epic | Magic | Knights Revenant | 2025-10-15 |
-| Kalvalax | Legendary | Magic | Demonspawn | 2025-10-15 |
-| Kantra the Cyclone | Legendary | Force | Barbarians | 2025-10-15 |
-| Kinagashi | Epic | Spirit | Shadowkin | 2025-10-15 |
-| Lady Annabelle | Epic | Magic | Knights Revenant | 2025-10-15 |
-| Leminisi the Gold-Wing | Legendary | Force | Sylvan Watchers | 2025-10-15 |
-| Loki the Deceiver | Legendary | Spirit | Barbarians | 2025-10-18 |
-| Lord Champfort | Legendary | Magic | Banner Lords | 2025-10-18 |
-| Lord Shazar | Legendary | Force | Demonspawn | 2025-10-15 |
-| Maulie Tankard | Legendary | Magic | Dwarves | 2025-10-15 |
-| Mausoleum Mage | Epic | Void | Undead Hordes | 2025-10-15 |
-| Michelangelo | Legendary | Spirit | Banner Lords | 2025-10-18 |
-| Mistrider Daithi | Epic | Force | Sylvan Watchers | 2025-10-15 |
-| Mithrala Lifebane | Legendary | Spirit | Undead Hordes | 2025-10-15 |
-| Narma the Returned | Epic | Void | Undead Hordes | 2025-10-15 |
-| Ninja | Legendary | Spirit | Shadowkin | 2025-10-15 |
-| Nogdar the Headhunter (x2) | Legendary | Force | Ogryn Tribes | 2025-10-18 |
-| Norog | Legendary | Magic | Skinwalkers | 2025-10-15 |
-| Pain Keeper (x3) | Epic | Void | Knights Revenant | 2025-10-18 |
-| Paragon | Rare | Void | Undead Hordes | 2025-10-18 |
-| Quargan the Crowned | Epic | Magic | Ogryn Tribes | 2025-10-15 |
-| Queen Eva | Legendary | Void | Banner Lords | 2025-10-15 |
-| Rathalos Blademaster | Legendary | Force | Lizardmen | 2025-10-15 |
-| Rector Drath (x2) | Epic | Spirit | Knights Revenant | 2025-10-15 |
-| Relickeeper (x4) | Legendary | Magic | Sacred Order | 2025-10-18 |
-| Rhazin Scarhide | Legendary | Magic | Lizardmen | 2025-10-15 |
-| Rian the Conjurer | Epic | Force | High Elves | 2025-10-15 |
-| Robar | Epic | Magic | Banner Lords | 2025-10-18 |
-| Runekeeper Dazdurk | Epic | Magic | Dwarves | 2025-10-15 |
-| Sanguinia (x2) | Epic | Spirit | Demonspawn | 2025-10-18 |
-| Scyl of the Drakes | Legendary | Spirit | Barbarians | 2025-10-15 |
-| Seeker (x2) | Epic | Force | High Elves | 2025-10-15 |
-| Skeletor | Legendary | Spirit | Knights Revenant | 2025-10-18 |
-| Skullcrown | Epic | Force | Undead Hordes | 2025-10-15 |
-| Skullcrusher | Epic | Void | Ogryn Tribes | 2025-10-15 |
-| Stag Knight | Epic | Spirit | Sacred Order | 2025-10-15 |
-| Sun Wukong | Legendary | Spirit | Skinwalkers | 2025-10-18 |
-| Tagoar | Epic | Force | Ogryn Tribes | 2025-10-15 |
-| Taurus | Epic | Force | Demonspawn | 2025-10-15 |
-| Taya | Epic | Force | High Elves | 2025-10-15 |
-| Tayrel | Epic | Spirit | High Elves | 2025-10-15 |
-| Ugir the Wyrm Eater | Epic | Spirit | Skinwalkers | 2025-10-18 |
-| Ultimate Galek | Epic | Force | Orcs | 2025-10-18 |
-| Underpriest Brogni | Legendary | Magic | Dwarves | 2025-10-18 |
-| Uugo | Epic | Void | Skinwalkers | 2025-10-15 |
-| Venomage | Epic | Spirit | Lizardmen | 2025-10-15 |
-| Vergis | Epic | Spirit | Banner Lords | 2025-10-18 |
-| Vergumkaar | Legendary | Magic | Demonspawn | 2025-10-15 |
-| Visix the Unbowed | Legendary | Void | Dark Elves | 2025-10-15 |
-| Vogoth (x2) | Epic | Force | Demonspawn | 2025-10-15 |
-| Vrask | Epic | Spirit | Skinwalkers | 2025-10-15 |
-| Warchief | Legendary | Force | Ogryn Tribes | 2025-10-15 |
-| White Dryad Nia | Epic | Magic | Sylvan Watchers | 2025-10-15 |
+| Name | Owned | Rarity | Affinity | Faction | Last Updated |
+|------|-------|--------|----------|---------|--------------|
+| Abbess | 1 | Legendary | Force | Sacred Order | 2025-10-15 |
+| Akoth the Seared | 1 | Epic | Force | Demonspawn | 2025-10-18 |
+| Alice the Wanderer | 1 | Legendary | Magic | Sacred Order | 2025-10-15 |
+| Alure | 1 | Epic | Spirit | Demonspawn | 2025-10-15 |
+| Apothecary | 3 | Rare | Magic | High Elves | 2025-10-15 |
+| Arbiter | 1 | Legendary | Void | High Elves | 2025-10-15 |
+| Archmage Hellmut | 1 | Epic | Force | Banner Lords | 2025-10-15 |
+| Artak | 1 | Legendary | Force | Orcs | 2025-10-15 |
+| Astralon | 1 | Legendary | Magic | Sacred Order | 2025-10-15 |
+| Bad-el-Kazar | 1 | Legendary | Spirit | Undead Hordes | 2025-10-15 |
+| Black Knight | 1 | Legendary | Void | Banner Lords | 2025-10-15 |
+| Brakus the Shifter | 1 | Legendary | Magic | Skinwalkers | 2025-10-15 |
+| Broadmaw | 1 | Epic | Spirit | Lizardmen | 2025-10-15 |
+| Burangiri | 1 | Epic | Force | Shadowkin | 2025-10-15 |
+| Caolite the Asharrow | 1 | Epic | Magic | Sylvan Watchers | 2025-10-15 |
+| Chronicler Adelyn | 1 | Rare | Spirit | Banner Lords | 2025-10-15 |
+| Cleopterix | 1 | Legendary | Void | Skinwalkers | 2025-10-15 |
+| Coldheart | 3 | Rare | Spirit | Dark Elves | 2025-10-15 |
+| Criodan the Blue | 1 | Epic | Force | Sylvan Watchers | 2025-10-15 |
+| Crohnam | 1 | Legendary | Force | Barbarians | 2025-10-15 |
+| Dark Athel | 1 | Rare | Magic | Undead Hordes | 2025-10-18 |
+| Dark Kael | 1 | Epic | Force | Dark Elves | 2025-10-15 |
+| Deacon Armstrong | 1 | Epic | Force | Sacred Order | 2025-10-15 |
+| Duedan the Runic | 1 | Rare | Magic | Sylvan Watchers | 2025-10-18 |
+| Dhukk the Pierced | 1 | Epic | Magic | Orcs | 2025-10-15 |
+| Djamarsa | 1 | Epic | Spirit | Barbarian | 2025-10-15 |
+| Drexthar Bloodtwin | 1 | Legendary | Force | Demonspawn | 2025-10-15 |
+| Elenaril | 1 | Legendary | Magic | High Elves | 2025-10-15 |
+| Embrys the Anomaly | 1 | Mythic | Force | Knights Revenant | 2025-10-18 |
+| Eolfrig | 1 | Epic | Spirit | Banner Lords | 2025-10-18 |
+| Fayne | 1 | Epic | Magic | Skinwalkers | 2025-10-15 |
+| Fenshi | 1 | Epic | Spirit | Shadowkin | 2025-10-15 |
+| Frozen Banshee | 1 | Rare | Spirit | Undead Hordes | 2025-10-15 |
+| Geomancer | 1 | Epic | Magic | Dwarves | 2025-10-15 |
+| Ghostborn | 1 | Epic | Magic | Dark Elves | 2025-10-18 |
+| Godseeker Aniri | 2 | Epic | Void | Sacred Order | 2025-10-18 |
+| Gretel Hagbane | 1 | Epic | Spirit | Sylvan Watchers | 2025-10-15 |
+| He-Man | 1 | Legendary | Magic | Sacred Order | 2025-10-18 |
+| High Khatun | 1 | Rare | Spirit | Barbarians | 2025-10-18 |
+| Hotatsu | 2 | Epic | Magic | Shadowkin | 2025-10-15 |
+| Husk | 1 | Rare | Force | Skinwalkers | 2025-10-18 |
+| Ithos | 1 | Legendary | Void | Sacred Order | 2025-10-15 |
+| Iudex Artor | 1 | Epic | Magic | Knights Revenant | 2025-10-18 |
+| Juliana | 1 | Epic | Magic | Knights Revenant | 2025-10-15 |
+| Kalvalax | 1 | Legendary | Magic | Demonspawn | 2025-10-15 |
+| Kantra the Cyclone | 1 | Legendary | Force | Barbarians | 2025-10-15 |
+| Kinagashi | 1 | Epic | Spirit | Shadowkin | 2025-10-15 |
+| Lady Annabelle | 1 | Epic | Magic | Knights Revenant | 2025-10-15 |
+| Leminisi the Gold-Wing | 1 | Legendary | Force | Sylvan Watchers | 2025-10-15 |
+| Loki the Deceiver | 1 | Legendary | Spirit | Barbarians | 2025-10-18 |
+| Lord Champfort | 1 | Legendary | Magic | Banner Lords | 2025-10-18 |
+| Lord Shazar | 1 | Legendary | Force | Demonspawn | 2025-10-15 |
+| Maulie Tankard | 1 | Legendary | Magic | Dwarves | 2025-10-15 |
+| Mausoleum Mage | 1 | Epic | Void | Undead Hordes | 2025-10-15 |
+| Michelangelo | 1 | Legendary | Spirit | Banner Lords | 2025-10-18 |
+| Mistrider Daithi | 1 | Epic | Force | Sylvan Watchers | 2025-10-15 |
+| Mithrala Lifebane | 1 | Legendary | Spirit | Undead Hordes | 2025-10-15 |
+| Narma the Returned | 1 | Epic | Void | Undead Hordes | 2025-10-15 |
+| Ninja | 1 | Legendary | Spirit | Shadowkin | 2025-10-15 |
+| Nogdar the Headhunter | 2 | Legendary | Force | Ogryn Tribes | 2025-10-18 |
+| Norog | 1 | Legendary | Magic | Skinwalkers | 2025-10-15 |
+| Pain Keeper | 3 | Epic | Void | Knights Revenant | 2025-10-18 |
+| Paragon | 1 | Rare | Void | Undead Hordes | 2025-10-18 |
+| Quargan the Crowned | 1 | Epic | Magic | Ogryn Tribes | 2025-10-15 |
+| Queen Eva | 1 | Legendary | Void | Banner Lords | 2025-10-15 |
+| Rathalos Blademaster | 1 | Legendary | Force | Lizardmen | 2025-10-15 |
+| Rector Drath | 2 | Epic | Spirit | Knights Revenant | 2025-10-15 |
+| Relickeeper | 4 | Legendary | Magic | Sacred Order | 2025-10-18 |
+| Rhazin Scarhide | 1 | Legendary | Magic | Lizardmen | 2025-10-15 |
+| Rian the Conjurer | 1 | Epic | Force | High Elves | 2025-10-15 |
+| Robar | 1 | Epic | Magic | Banner Lords | 2025-10-18 |
+| Runekeeper Dazdurk | 1 | Epic | Magic | Dwarves | 2025-10-15 |
+| Sanguinia | 2 | Epic | Spirit | Demonspawn | 2025-10-18 |
+| Scyl of the Drakes | 1 | Legendary | Spirit | Barbarians | 2025-10-15 |
+| Seeker | 2 | Epic | Force | High Elves | 2025-10-15 |
+| Skeletor | 1 | Legendary | Spirit | Knights Revenant | 2025-10-18 |
+| Skullcrown | 1 | Epic | Force | Undead Hordes | 2025-10-15 |
+| Skullcrusher | 1 | Epic | Void | Ogryn Tribes | 2025-10-15 |
+| Stag Knight | 1 | Epic | Spirit | Sacred Order | 2025-10-15 |
+| Sun Wukong | 1 | Legendary | Spirit | Skinwalkers | 2025-10-18 |
+| Tagoar | 1 | Epic | Force | Ogryn Tribes | 2025-10-15 |
+| Taurus | 1 | Epic | Force | Demonspawn | 2025-10-15 |
+| Taya | 1 | Epic | Force | High Elves | 2025-10-15 |
+| Tayrel | 1 | Epic | Spirit | High Elves | 2025-10-15 |
+| Ugir the Wyrm Eater | 1 | Epic | Spirit | Skinwalkers | 2025-10-18 |
+| Ultimate Galek | 1 | Epic | Force | Orcs | 2025-10-18 |
+| Underpriest Brogni | 1 | Legendary | Magic | Dwarves | 2025-10-18 |
+| Uugo | 1 | Epic | Void | Skinwalkers | 2025-10-15 |
+| Venomage | 1 | Epic | Spirit | Lizardmen | 2025-10-15 |
+| Vergis | 1 | Epic | Spirit | Banner Lords | 2025-10-18 |
+| Vergumkaar | 1 | Legendary | Magic | Demonspawn | 2025-10-15 |
+| Visix the Unbowed | 1 | Legendary | Void | Dark Elves | 2025-10-15 |
+| Vogoth | 2 | Epic | Force | Demonspawn | 2025-10-15 |
+| Vrask | 1 | Epic | Spirit | Skinwalkers | 2025-10-15 |
+| Warchief | 1 | Legendary | Force | Ogryn Tribes | 2025-10-15 |
+| White Dryad Nia | 1 | Epic | Magic | Sylvan Watchers | 2025-10-15 |
