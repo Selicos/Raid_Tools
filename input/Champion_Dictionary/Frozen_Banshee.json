@@ -22,7 +22,7 @@
         "SPD": 99,
         "C.RATE": 15,
         "C.DMG": 50,
-        "RES": 15,
+        "RES": "\\-",
         "ACC": "\\-"
       },
       "skills": [
@@ -171,7 +171,7 @@
     "stat_confidence": 100.0,
     "data_sources": "fandom+ayumilove_ocr+hellhades",
     "source_priority": {
-      "stats": "fandom+ocr",
+      "stats": "fandom",
       "skills": "ayumilove",
       "info": "ayumilove"
     },

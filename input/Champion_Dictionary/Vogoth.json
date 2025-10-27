@@ -16,13 +16,13 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": 19320,
-        "ATK": 804,
+        "HP": "",
+        "ATK": "",
         "DEF": 1211,
         "SPD": "",
         "C.RATE": "",
-        "C.DMG": 50,
-        "RES": 30,
+        "C.DMG": "",
+        "RES": "",
         "ACC": ""
       },
       "skills": [
@@ -193,7 +193,7 @@
     "stat_confidence": 100.0,
     "data_sources": "fandom+ayumilove_ocr+hellhades",
     "source_priority": {
-      "stats": "fandom+ocr",
+      "stats": "fandom",
       "skills": "ayumilove",
       "info": "ayumilove"
     },

@@ -210,34 +210,36 @@ def try_all_scrapers(champion_name: str, debug: bool = False) -> dict | None:
         
         print(f"[4-Source] Sources available: {', '.join(sources_available) if sources_available else 'Ayumilove only (info)'}")
         
-        # Stats priority: MERGE Fandom (validated) + Ayumilove OCR (fill missing)
-        # Strategy: Start with Fandom, fill empty stats from OCR
-        if has_fandom_stats:
-            final_stats = fandom_data.get('stats', {}).copy()
-            stats_source = 'fandom'
-            
-            # Fill missing stats from OCR
-            if ocr_stats:
-                filled_count = 0
-                for stat_name, ocr_value in ocr_stats.items():
-                    fandom_value = final_stats.get(stat_name, '')
-                    # Fill if Fandom is empty/missing and OCR has value
-                    if (not fandom_value or fandom_value in ['', '-', '\\-']) and ocr_value and ocr_value not in ['', '-', '\\-']:
-                        final_stats[stat_name] = ocr_value
-                        filled_count += 1
-                        if debug:
-                            print(f"[DEBUG] Filled {stat_name} from OCR: {ocr_value}")
-                
-                if filled_count > 0:
-                    stats_source = 'fandom+ocr'
-                    print(f"[4-Source] ✓ Merged stats: Fandom + OCR filled {filled_count} missing stats")
-        else:
-            # No Fandom stats - use OCR only
-            final_stats = ocr_stats
-            stats_source = 'ayumilove_ocr'
+        # Stats priority: Fandom (validated) > Ayumilove OCR
+        final_stats = fandom_data.get('stats', {}) if has_fandom_stats else ocr_stats
+        stats_source = 'fandom' if has_fandom_stats else 'ayumilove_ocr'
+        
+        # Log missing or invalid stats for manual review
+        missing_stats = []
+        invalid_stats = []
+        for stat_name in ['HP', 'ATK', 'DEF', 'SPD', 'C.RATE', 'C.DMG', 'RES', 'ACC']:
+            value = final_stats.get(stat_name, '')
+            if not value or value in ['', '-', '\\-', 0, '0']:
+                missing_stats.append(stat_name)
+            # Check for obviously wrong values (e.g., HP=15 when should be 15000)
+            elif stat_name == 'HP' and isinstance(value, (int, str)) and str(value).replace(',', '').isdigit():
+                hp_val = int(str(value).replace(',', ''))
+                if hp_val < 10000:  # HP should be 10k-25k for base stats
+                    invalid_stats.append(f"{stat_name}={value} (too low, expected 10k-25k)")
+            elif stat_name in ['ATK', 'DEF'] and isinstance(value, (int, str)) and str(value).replace(',', '').isdigit():
+                stat_val = int(str(value).replace(',', ''))
+                if stat_val < 500:  # ATK/DEF should be 500+ for base stats
+                    invalid_stats.append(f"{stat_name}={value} (too low, expected 500+)")
+        
+        if missing_stats or invalid_stats:
+            print(f"[4-Source] ⚠️  Stats validation for manual review:")
+            if missing_stats:
+                print(f"[4-Source]   Missing: {', '.join(missing_stats)}")
+            if invalid_stats:
+                print(f"[4-Source]   Invalid: {', '.join(invalid_stats)}")
         
         if debug:
-            print(f"[DEBUG] final_stats after merge: {final_stats}")
+            print(f"[DEBUG] final_stats after priority selection: {final_stats}")
             print(f"[DEBUG] stats_source: {stats_source}")
         
         # Info priority: Fandom > Ayumilove > HellHades
