@@ -5,51 +5,6 @@
 ## Updated with Complete/ champion JSONs - Complete/ data takes precedence
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 | Name | Owned | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |
 | ---- | ----- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |
 | Abbess | 1 | The Sacred Order | Legendary | Attack | Force | 14040 | 1564 | 1079 | 96 | 0.15 | 0.63 | 30 | 10 | 1 | 1 | ATK | 0.34 | Faction Crypts | all |
@@ -114,13 +69,12 @@
 | Errol | 0 | The Sacred Order | Legendary | Attack | Force | 16020 | 1674 | 837 | 104 | 0.15 | 0.63 | 30 | 0 | \- | \- | ATK | 0.35 | Dungeons | all |
 | Exemplar | 0 | High Elves | Epic | Attack | Void | 13545 | 1509 | 892 | 94 | 0.15 | 0.6 | 30 | 0 | \- | \- | C. Rate | 0.27 | Arena | all |
 | Fayne | 1 | Skinwalkers | Epic | Attack | Spirit | 13710 | 1663 | 727 | 99 | 0.15 | 0.57 | 30 | 0 | 1 | 1 | \- | \- | \- | \- |
-| Fellhound | 1 | Demonspawn | Rare | Defense | Void | Void | Void | 14865 | 958 | 10.79 | 0.92 | 0.15 | 0.50 | \- | \- | \- | \- |
 | Fenax | 0 | The Sacred Order | Epic | Attack | Spirit | 13875 | 1454 | 925 | 96 | 0.15 | 0.6 | 30 | 0 | \- | \- | \- | \- | \- | \- |
 | Fencer | 0 | High Elves | Rare | Attack | Force | 15360 | 1211 | 793 | 100 | 0.15 | 0.5 | 30 | 10 | \- | \- | ATK | 0.23 | Dungeons | all |
 | Fenshi | 1 | Shadowkin | Epic | Attack | Force | 16515 | 1465 | 738 | 97 | 0.15 | 0.60 | 30 | 0 | 1 | 1 | \- | \- | \- | \- |
 | Frostbringer | 0 | The Sacred Order | Epic | Support | Magic | 20310 | 870 | 1079 | 110 | 0.15 | 0.5 | 30 | 0 | \- | \- | DEF | 0.33 | Dungeons | all |
-| Frozen Banshee | 1 | Undead Hordes | Rare | Attack | Magic | 14700 | 1046 | 1002 | 99 | 0.15 | 0.50 | 30 | 10 | 1 | \- | \- | \- | \- |
-| Geomancer | 1 | Dwarves | Epic | Attack | Force | 15525 | 1343 | 925 | 94 | \- | \- | \- | \- | 1 |
+| Frozen Banshee | 1 | Undead Hordes | Rare | Attack | Magic | 14700 | 1046 | 1002 | 99 | 0.15 | 0.50 | 30 | 10 | 1 | \- | ACC | 0.35 | all Battles | all |
+| Geomancer | 1 | Dwarves | Epic | Attack | Force | 15525 | 1343 | 935 | 94 | 0.15 | 0.60 | 30 | 0 | 1 | \- | HP | 0.25 | all Battles | all |
 | Ghostborn | 1 | Dark Elves | Legendary | Support | Spirit | 18825 | 1211 | 1112 | 101 | 0.15 | 0.50 | 40 | 0 | 1 | 1 | \- | \- | \- | \- |
 | Godseeker Aniri | 2 | Sacred Order | Epic | Reviver / Healer / Support | Void | 15195 | 1046 | 1244 | 99 | 0.15 | 0.50 | 45 | 0 | 2 | 2 | \- | \- | \- | \- |
 | Grandmaster | 0 | Banner Lords | Rare | HP | Magic | 16185 | 892 | 1057 | 100 | 0.15 | 0.5 | 40 | 0 | \- | \- | HP | 0.17 | all | Magic |
@@ -180,11 +134,11 @@
 | Mother Superior | 0 | The Sacred Order | Rare | Support | Spirit | 16350 | 991 | 947 | 103 | 0.15 | 0.5 | 30 | 0 | \- | \- | SPD | 0.13 | all | all |
 | Myrmidon | 0 | Banner Lords | Rare | Defence | Magic | 15030 | 804 | 1222 | 99 | 0.15 | 0.5 | 30 | 10 | \- | \- | DEF | 0.2 | Dungeons | all |
 | Narma the Returned | 1 | Knights Revenant | Legendary | Support | Magic | 19815 | 1002 | 1255 | 100 | 0.15 | 0.50 | 30 | 20 | \- | \- | \- | \- |
-| Ninja | 1 | Shadowkin | Legendary | Attack | Magic | 1509 | 0.15 | 30 | \- | \- | \- | \- | 1 |
+| Ninja | 1 | Shadowkin | Legendary | Attack | Magic | 16845 | 1509 | 947 | 100 | 0.15 | 0.63 | 30 | 10 | \- | \- | None | \- |
 | Nogdar the Headhunter | 2 | Orcs | Legendary | Attack | Spirit | 12060 | 1696 | 1079 | 96 | 0.15 | 0.63 | 15 | 0 | \- | \- | \- | \- |
 | Norog | 1 | Skinwalkers | Legendary | Defense | Magic | 16845 | 1156 | 1299 | 106 | 0.15 | 0.50 | 15 | \- | \- | \- | \- |
 | Oathbound | 0 | Banner Lords | Epic | Defence | Force | 18330 | 782 | 1299 | 95 | 0.15 | 0.5 | 40 | 0 | \- | \- | \- | \- | \- | \- |
-| Pain Keeper | 3 | Dark Elves | Rare | HP | Void | 102 | 15 | 50 | 40 | 0.15 | \- | \- | \- | \- |
+| Pain Keeper | 3 | Dark Elves | Rare | HP | Void | 19320 | 969 | 771 | 102 | 0.15 | 0.50 | 40 | 0 | \- | \- | HP | 0.21 | Faction Crypts | all |
 | Paragon | 1 | Dark Elves | Rare | Defense | Void | \- | \- | \- | \- |
 | Penitent | 0 | The Sacred Order | Rare | Defence | Spirit | 14865 | 793 | 1244 | 93 | 0.15 | 0.5 | 40 | 0 | \- | \- | \- | \- | \- | \- |
 | Preserver | 0 | Banner Lords | Rare | Defence | Force | 16350 | 771 | 1167 | 102 | 0.15 | 0.5 | 40 | 0 | \- | \- | HP | 0.17 | all | all |
@@ -195,7 +149,7 @@
 | Rector Drath | 2 | Knights Revenant | Epic | Support | Force | 17010 | 1 | 109 | 0.18 | 0.35 | 30 | \- | \- | \- | \- |
 | Relickeeper | 4 | The Sacred Order | Epic | Attack | Force | 14370 | 1365 | 980 | 90 | 0.15 | 0.6 | 30 | 0 | 4 | 4 | ATK | 0.4 | Campaign | all |
 | Reliquary Tender | 0 | High Elves | Rare | Support | Void | 18165 | 859 | 958 | 103 | 0.15 | 0.5 | 30 | 0 | \- | \- | \- | \- | \- | \- |
-| Rhazin Scarhide | 1 | Lizardmen | Legendary | Defense | Force | \- | \- | \- | \- |
+| Rhazin Scarhide | 1 | Lizardmen | Legendary | Defense | Force | Force | \- | \- | \- |  |  |  |  | \- | \- | \- | \- |
 | Rian the Conjurer | 1 | Dark Elves | Epic | Support | Force | \- | \- | \- | \- |
 | Richtoff the Bold | 0 | Banner Lords | Legendary | Attack | Spirit | 18825 | 1398 | 925 | 95 | 0.15 | 0.63 | 30 | 0 | \- | \- | ATK | 0.27 | Faction Crypts | all |
 | Robar | 1 | Orcs | Legendary | Attack | Force | 18990 | 1619 | 0.15 | 0.63 | 15 | \- | \- | \- | \- |
@@ -216,7 +170,7 @@
 | Sir Nicholas | 0 | The Sacred Order | Legendary | HP | Void | 22800 | 936 | 1123 | 105 | 0.15 | 0.5 | 50 | 0 | \- | \- | HP | 0.33 | all | all |
 | Skeletor | 1 | Knights Revenant | Legendary | Support | Spirit | 21480 | 1046 | 4101 | 103 | 0.15 | 0.50 | 15 | \- | \- | \- | \- |
 | Skullcrown | 1 | Knights Revenant | Epic | Attack | Void | 44 | 1 | 60 | 30 | 0.15 | 30 | 0 | \- | \- | \- | \- |
-| Skullcrusher | 1 | Ogryn Tribes | Epic | Defense | Force | 19320 | 826 | 1189 | 98 | 0.15 | 0.50 | 45 | \- | \- | \- | \- |
+| Skullcrusher | 1 | Ogryn Tribes | Epic | Defense | Force | 19320 | 826 | 1189 | 98 | 0.15 | 0.50 | 45 | 0 | \- | \- | RESIST | 0.45 | Faction Crypts | all |
 | Stag Knight | 1 | Banner Lords | Epic | Support | Spirit | 20970 | 859 | 1046 | 107 | 0.15 | 0.50 | 30 | \- | 1 | \- | \- | \- |
 | Steadfast Marshal | 0 | Banner Lords | Rare | HP | Void | 20640 | 870 | 782 | 90 | 0.15 | 0.5 | 40 | 0 | \- | \- | \- | \- | \- | \- |
 | Sun Wukong | 1 | Skinwalkers | Legendary | Attack/Control | Spirit | 16515 | 1586 | 892 | 105 | 0.15 | 0.63 | 30 | 10 | 1 | 1 | \- | \- | \- | \- |

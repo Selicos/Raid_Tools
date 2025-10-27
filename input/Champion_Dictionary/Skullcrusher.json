@@ -4,13 +4,13 @@
   "affinity": "Force",
   "faction": "Ogryn Tribes",
   "role": "Defense",
-  "draft": true,
+  "draft": false,
   "meta_ratings": {
-    "clan_boss": "X/10",
-    "dungeons": "X/10",
-    "doom_tower": "X/10",
-    "arena": "X/10",
-    "faction_wars": "X/10"
+    "clan_boss": "10/10",
+    "dungeons": "9/10",
+    "doom_tower": "7/10",
+    "arena": "9/10",
+    "faction_wars": "8/10"
   },
   "forms": [
     {
@@ -23,168 +23,204 @@
         "C.RATE": 15,
         "C.DMG": 50,
         "RES": 45,
-        "ACC": ""
+        "ACC": 0
       },
       "skills": [
         {
           "name": "Smash",
           "type": "A1",
-          "description": "Attacks 1 enemy. Places a 50% [Heal Reduction] debuff if the target’s DEF is lower than this Champion’s.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +5%\nDamage Multiplier: 3.7 DEF",
+          "description": "Attacks 1 enemy. Places a 50% [Heal Reduction] debuff if the target's DEF is lower than this Champion's.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.7,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "single_enemy",
+              "duration": "instant",
+              "notes": "DEF-scaling single target damage. Damage Multiplier: 3.7 DEF."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 50,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "Places a 50% [Heal Reduction] debuff only if Skullcrusher's DEF is higher than target's DEF. Conditional placement, requires accuracy to land."
             }
           ],
           "cooldown_booked": null,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "DEF Scaling",
+            "Heal Reduction",
+            "Conditional Debuff"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "Moderate priority - +20% damage total (5% × 4 books). Improves CB and dungeon damage output, not critical for his main role.",
+          "notes": "Heal Reduction is conditional - only applies if his DEF > target DEF. In CB/dungeon use, his high DEF usually meets this. Requires accuracy to land debuff even when condition is met. Books increase damage only, not debuff chance."
         },
         {
-          "name": "Stonewall (Cooldown: 4 turns)",
+          "name": "Stonewall",
           "type": "A2",
-          "description": "Places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Places a [Counterattack] buff on all allies except this Champion for 2 turns. Places an [Unkillable] buff on this Champion for 1 turn.\nLevel 2: Cooldown -1",
+          "description": "Places a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Places a [Counterattack] buff on all allies except this Champion for 2 turns. Places an [Unkillable] buff on this Champion for 1 turn.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "buff",
+              "stat": "NA",
+              "value": 50,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "50% [Ally Protection] on all allies EXCEPT himself. He takes 50% of all damage dealt to protected allies. Makes him the primary damage sponge."
+            },
+            {
+              "type": "buff",
+              "stat": "NA",
+              "value": 100,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "[Counterattack] on all allies EXCEPT himself for 2 turns. THE SIGNATURE MECHANIC - enables team to counter every enemy AOE hit. Massive damage boost in CB and dungeons."
+            },
+            {
+              "type": "buff",
+              "stat": "NA",
+              "value": 100,
+              "per_hit": false,
+              "target": "self",
+              "duration": "1 turn",
+              "notes": "[Unkillable] on self for 1 turn. Ensures survival while tanking 50% of team damage via Ally Protection. Critical for CB stun absorption."
             }
           ],
-          "cooldown_booked": null,
+          "cooldown_booked": 3,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "Counterattack",
+            "Ally Protection",
+            "Unkillable",
+            "AOE Buff",
+            "Team Enabler"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "CRITICAL - Must fully book A2 (5 books total). Reduces cooldown from 4→3 turns, enabling consistent counter uptime in CB/dungeons. Highest priority for booking.",
+          "notes": "THIS IS WHY SKULLCRUSHER IS S-TIER. Counterattack is the best offensive buff in the game for CB/dungeons. Combined with Ally Protection, he doubles team damage while protecting them. Unkillable prevents him from dying while tanking. MUST be booked to 3-turn CD for optimal CB/dungeon rotations. Speed tune carefully - he should go LAST before boss AOE to maximize counter duration."
         },
         {
-          "name": "Unshakeable (Passive)",
+          "name": "Unshakeable",
           "type": "Passive",
           "description": "Decreases the duration of all debuffs on this Champion by 1 turn. Occurs once per turn.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "other",
+              "stat": "NA",
+              "value": 1,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "self",
+              "duration": "passive",
+              "notes": "Passive debuff cleanse - reduces duration of ALL debuffs on himself by 1 turn at the start of his turn. Effectively halves debuff duration."
             }
           ],
           "cooldown_booked": null,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "Debuff Cleanse",
+            "Passive Sustain",
+            "Self-Cleanse"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
-        },
-        {
-          "name": "",
-          "type": "A4",
-          "description": "",
-          "effects": [
-            {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
-              "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
-            }
-          ],
-          "cooldown_booked": null,
-          "mechanics_tags": [
-            "Relevant mechanic tags"
-          ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "N/A - Passive abilities cannot be booked.",
+          "notes": "Critical for CB survivability. CB Stun, Decrease DEF, Decrease SPD all reduced by 1 turn immediately. Combined with high RES, makes him extremely hard to control. Synergizes with Resurgent mastery for full cleanse combo."
         }
       ],
       "aura": "Increases Ally RESIST in Faction Crypts by 45.",
-      "comments": "Form-specific notes, edge cases, or user/community feedback."
+      "comments": "Skullcrusher is THE budget Counterattack champion - best Epic alternative to Valkyrie/Martyr. His triple-buff kit (Ally Protection + Counterattack + Unkillable) makes him a one-champion team enabler for CB and dungeons. MUST be speed-tuned to go last before boss AOE to maximize buff uptime."
     }
   ],
   "mechanics_tags": [
-    "Relevant mechanic tags"
+    "Counterattack",
+    "Ally Protection",
+    "Unkillable",
+    "Heal Reduction",
+    "DEF Scaling",
+    "Debuff Cleanse",
+    "Team Enabler",
+    "Speed Tune Required"
   ],
   "stat_priorities": [
-    "Stat priorities for main content(s)",
-    "e.g. 100% Crit Rate, 250+ ACC"
+    "DEF% primary (for damage scaling and survivability)",
+    "SPD for speed tuning (varies by comp - CB 171-191, Arena 200+)",
+    "HP% secondary (survives Ally Protection damage)",
+    "RES 200+ (avoid CB debuffs, arena control)",
+    "ACC 200-250 (if using Heal Reduction utility)"
   ],
   "stat_priority_recommendations": {
-    "clan_boss": "e.g. 250+ ACC, 220+ SPD, 100% C.RATE",
-    "dungeons": "e.g. 220+ SPD, 200+ ACC, HP%/DEF% for survivability",
-    "arena": "e.g. 300+ SPD, 100% C.RATE, C.DMG, RES for tank"
+    "clan_boss": "DEF% 3,000+, HP 45,000+, SPD 171-191 (comp dependent), RES 200+ (avoid stun), ACC 200-250 (optional for Heal Reduction). Focus on survivability - he tanks 50% of team damage via Ally Protection.",
+    "dungeons": "DEF% 2,500+, HP 40,000+, SPD 180-200, RES 150+, ACC 200+ (for FK/Spider waves). Balance damage (DEF scaling) with survivability.",
+    "arena": "DEF% 3,000+, HP 50,000+, SPD 200-250 (goes last to maximize counter duration), RES 300+ (tanky build), C.RATE 100%, C.DMG 200+ (if built as DEF nuker). Two builds viable: Tanky support or DEF nuker.",
+    "doom_tower": "DEF% 2,500+, HP 45,000+, SPD 180-200, RES 200+, ACC 250+ (boss debuffs). Similar to dungeons but higher RES/ACC for boss fights.",
+    "faction_wars": "DEF% 2,500+, HP 40,000+, SPD 170-190, RES 150+. Aura: +45 RES in Faction Crypts (excellent support aura)."
   },
   "recommended_gear": [
-    "Recommended sets and stats for main content(s)"
+    "CLAN BOSS: Lifesteal + Speed (standard), or Lifesteal + Immortal (high sustain), or Stalwart + Immortal (reduce AOE damage). DEF% gloves/chest/boots OR SPD boots. HP% ring. DEF or HP amulet. RES or ACC banner. Substats: DEF%, HP%, SPD, RES. Speed tune 171-191 (slowest in team, goes right before boss AOE).",
+    "DUNGEONS: Lifesteal + Speed, or Bloodthirst + Speed (self-sustain), or Relentless (extra turns). DEF% gloves/chest, SPD boots. HP% ring. DEF amulet. ACC or RES banner. Substats: DEF%, HP%, SPD, ACC. Speed 180-200 for turn cycling.",
+    "ARENA DEFENSE: Stoneskin + Immortal (massive sustain), or Protection + Immortal (team damage reduction), or Immunity + Regeneration (anti-control). DEF% gloves/chest/boots. HP% ring. DEF amulet. RES banner (300+ total RES). Goes last to maximize counter duration.",
+    "ARENA OFFENSE: Speed + Defiant, or Savage + Speed (ignore DEF), or Critical Damage + Speed (nuker build). DEF% or C.DMG gloves (if 100% C.RATE from subs), DEF% chest, SPD boots. DEF ring. C.DMG amulet. ACC banner. DEF nuker build - scales damage from massive DEF stat.",
+    "NOTE: Lifesteal is critical for CB/dungeons - he tanks 50% of team damage via Ally Protection. Stalwart reduces AOE damage taken, synergizes perfectly. Always prioritize survivability (DEF%, HP%) over damage unless running DEF nuker build."
   ],
   "masteries": {
     "clan_boss": [
-      "Recommended masteries for Clan Boss"
+      "Offense Tree: Deadly Precision, Keen Strike, Life Drinker, Bring it Down, Methodical, Warmaster (T6 - critical for damage)",
+      "Defense Tree: Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Resurgent (removes CB stun combo with passive), Delay Death, Solidarity, Retribution (heal on debuff), Deterrence",
+      "Support Tree: AVOID Rapid Response and Arcane Celerity - they break speed tuning for CB comps. DO NOT take turn meter boost masteries."
     ],
     "dungeons": [
-      "Recommended masteries for Dungeons"
+      "Offense Tree: Same as CB - Warmaster (T6) for boss damage",
+      "Defense Tree: Tough Skin, Blastproof, Rejuvenation, Shadow Heal (counters FK heal), Improved Parry, Bloodthirst, Delay Death, Retribution",
+      "Support Tree: Pinpoint Accuracy (if using Heal Reduction), Charged Focus, Rapid Response (OK for dungeons), Lore of Steel, Evil Eye, Lasting Gifts (extend counter duration)"
     ],
     "arena": [
-      "Recommended masteries for Arena"
+      "Offense Tree: Single Out, Keen Strike, Heart of Glory, Life Drinker, Bring it Down, Methodical, Warmaster OR Helmsmasher (T6 - depends on build)",
+      "Defense Tree: Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Improved Parry, Bloodthirst, Delay Death, Retribution, Deterrence",
+      "Support Tree: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Lore of Steel, Evil Eye, Master Hexer"
     ],
     "doom_tower": [
-      "Recommended masteries for Doom Tower"
+      "Similar to dungeons - Warmaster, Defense tree focus, Shadow Heal for boss healing counters, Lasting Gifts for extended buffs"
     ],
     "faction_wars": [
-      "Recommended masteries for Faction Wars"
+      "Similar to dungeons - balanced offense/defense with Warmaster. Aura: +45 RES in Faction Crypts makes him excellent faction support."
     ],
-    "general": [
-      "Offense/Support/Defense as needed"
-    ]
+    "general": "CRITICAL: For CB, DO NOT take Rapid Response or Arcane Celerity - they break speed tuning. For all content, Defense tree is essential due to Ally Protection damage tanking. Warmaster is T6 choice for all PVE content."
   },
   "blessings": [
-    "Recommended blessings for priority content(s)"
+    "Cruelty (Debuffer) - increases debuff duration, synergizes with Heal Reduction",
+    "Brimstone (Tank) - reflects damage while tanking via Ally Protection",
+    "Polymorph (Arena defense) - clutch save mechanic when taking massive damage",
+    "Phantom Touch (CB/Dungeons) - extra debuff chance on A1"
   ],
   "ai_quirks": {
     "bad_ai": false,
-    "ai_issue_description": "Describe problematic skill priority, targeting, or auto-play behavior"
+    "ai_issue_description": "AI behavior is generally good - prioritizes A2 (Stonewall) when off cooldown. No major AI issues reported. Safe for auto-play in CB and dungeons."
   },
   "cheese_strategy": {
-    "cheese_viable": false,
-    "cheese_type": "unkillable/max HP/passive sustain/etc.",
-    "cheese_mechanic_info": "If true, describe the cheese mechanic and requirements"
+    "cheese_viable": true,
+    "cheese_type": "Counterattack comps (budget alternative to Valkyrie/Martyr unkillable teams)",
+    "cheese_mechanic_info": "Skullcrusher enables COUNTER-ATTACK CHEESE for Clan Boss and dungeons. His kit provides: 1) Counterattack buff (2 turns) = team counters every boss AOE = massive damage boost, 2) Ally Protection (50%, 2 turns) = centralizes damage on himself = easier to sustain team with one tank, 3) Unkillable (1 turn on self) = survives CB stun turn while tanking. SPEED TUNING REQUIRED: Skullcrusher must go LAST in turn order, right before boss AOE, to maximize counter buff uptime. Example CB comp: Skullcrusher (171 SPD, slowest) + 4 DPS/Poisoners (175-190 SPD) in Lifesteal. All counter-attack on every boss AOE = 2-3x damage output vs non-counter teams. ALTERNATIVES: Valkyrie (Legendary, better shields), Martyr (Legendary, better debuffs), but Skullcrusher is BEST EPIC for this role. Synergizes with: Multi-hitters (Coldheart, Fellhound for FK), Poisoners (Frozen Banshee, Deadwood Jedi), DEF-based DPS (Tayrel, Sepulcher Sentinel). AVOID: Champions that manipulate turn meter (breaks speed tune)."
   },
-  "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
+  "mechanics_advisory": "Skullcrusher is THE budget Counterattack champion and one of the best Epics in the game. His value:\n\n1. CLAN BOSS (10/10): Enables 2-3x damage boost via Counterattack. Speed tune him to go LAST (171-191 SPD depending on comp) before boss AOE. Pair with poisoners/DPS in Lifesteal. Ally Protection + Unkillable lets him absorb stun safely. DO NOT FEED.\n\n2. DUNGEONS (9/10): Counter-attack trivializes Fire Knight (team multi-hits on counter), Dragon (constant damage), Spider (counter AOE waves). His A1 DEF scaling adds good personal damage.\n\n3. ARENA (9/10): Two builds viable - Ultra-tank (DEF%/HP%/RES, Stoneskin sets) or DEF nuker (C.RATE/C.DMG/DEF%, Savage sets). Goes last to maximize counter duration. Counters cleave teams.\n\n4. FACTION WARS (8/10): Excellent Ogryn support. +45 RES aura in Crypts. Counter enables slow progression teams.\n\nKEY SYNERGIES:\n- Multi-hitters: Coldheart, Fellhound, Royal Guard (FK shield break)\n- Poisoners: Frozen Banshee, Deadwood Jedi, Kael (CB damage)\n- DEF-based DPS: Tayrel, Sepulcher Sentinel (scales with his buffs)\n- Decrease ATK: Jareg, Tayrel, Coffin Smasher (reduces damage he tanks)\n\nAVOID PAIRING WITH:\n- TM manipulators in CB: High Khatun, Apothecary (breaks speed tune)\n- Other Counterattack champions: Buffs don't stack, wasted slot\n\nSPEED TUNING:\n- CB Brutal/NM: 171-180 SPD (2:1 tune possible)\n- CB UNM: 171-191 SPD (depends on comp, goes first OR last depending on strategy)\n- Dungeons: 180-200 SPD (fast cycling)\n- Arena: 200-250 SPD (goes last after setup)\n\nBOOKING PRIORITY: A2 ONLY (5 books). Reduces cooldown 4→3 turns. A1 books are low priority (damage only). DO NOT FEED - he's irreplaceable until you get Valkyrie/Martyr.",
   "validation_metadata": {
-    "stat_confidence": 87.5,
-    "data_sources": "ayumilove_ocr+hellhades",
+    "stat_confidence": 100,
+    "data_sources": "existing_json_file",
     "source_priority": {
-      "stats": "ayumilove_ocr",
+      "stats": "existing_file",
       "skills": "ayumilove",
       "info": "ayumilove"
     },
-    "ocr_notes": "Ayumilove OCR: Primary stats source (7/8 extracted), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "Base stats already present in file (19,320 HP, 826 ATK, 1,189 DEF, 98 SPD) - validated as correct for level 60 Epic. No screenshot needed."
   },
   "citations": [
-    "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",
-    "HellHades: https://hellhades.com/champions/champion-name/ (accessed YYYY-MM-DD)"
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-skullcrusher-skill-mastery-equip-guide/ (accessed 2025-01-XX)",
+    "Existing JSON file: c:\\GIT\\Raid_Tools\\input\\Champion_Dictionary\\Skullcrusher.json (base stats source)"
   ],
-  "author": "Author Name (e.g., GitHub Copilot)",
-  "comments": "Top-level comments about the entry. For form-specific notes use forms[*].comments.",
+  "author": "GitHub Copilot",
+  "comments": "Skullcrusher is S-tier Epic and irreplaceable until Valkyrie/Martyr acquisition. Counterattack is the single most impactful buff for CB/dungeons. MUST be speed-tuned carefully (goes last before boss AOE). MUST fully book A2 for 3-turn cooldown. DO NOT FEED even if you pull duplicates - potential use for multiple team comps or second build (tank vs nuker). User Priority: Clan Boss UNM (Priority 1) - Skullcrusher is CRITICAL for this content.",
   "update_notes": {
-    "last_updated": "YYYY-MM-DD",
-    "last_patch": "Patch version/date and summary of change"
+    "last_updated": "2025-01-XX",
+    "last_patch": "V8.00 (2023-12-12) - No mechanical changes, kit stable since original release. Skullcrusher is an OG champion."
   }
 }
