@@ -22,8 +22,8 @@
         "SPD": 99,
         "C.RATE": 15,
         "C.DMG": 50,
-        "RES": "",
-        "ACC": ""
+        "RES": "\\-",
+        "ACC": "\\-"
       },
       "skills": [
         {
@@ -168,14 +168,14 @@
   },
   "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
   "validation_metadata": {
-    "stat_confidence": 75.0,
-    "data_sources": "ayumilove_ocr+hellhades",
+    "stat_confidence": 100.0,
+    "data_sources": "fandom+ayumilove_ocr+hellhades",
     "source_priority": {
-      "stats": "ayumilove_ocr",
+      "stats": "fandom",
       "skills": "ayumilove",
       "info": "ayumilove"
     },
-    "ocr_notes": "Ayumilove OCR: Primary stats source (6/8 extracted), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "Fandom: Primary stats source (validated), Ayumilove OCR vs Fandom: 100% match, Ayumilove: Skills source (canonical), HellHades: Info validation"
   },
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",

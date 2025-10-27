@@ -116,7 +116,12 @@ def parse_champion_markdown_table(content, debug=False):
         # Parse data rows
         if in_table and line.strip().startswith('|'):
             cells = [cell.strip() for cell in line.split('|')]
-            cells = [c for c in cells if c]  # Remove empty elements
+            # Remove only the first and last empty elements (from leading/trailing |)
+            # DO NOT remove empty cells in the middle - they represent empty stat values!
+            if cells and cells[0] == '':
+                cells = cells[1:]
+            if cells and cells[-1] == '':
+                cells = cells[:-1]
             
             if len(cells) < 2:
                 continue
