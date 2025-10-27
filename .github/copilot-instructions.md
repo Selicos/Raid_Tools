@@ -60,6 +60,57 @@ Raid Tools is an automation-ready system for generating, validating, and maintai
 
 **All new entries must use the canonical template.**
 
+## Copilot Chat Start Prompt.
+# RAID Tools Project Context
+
+I'm working on the **Raid Tools** project - an automation-ready system for RAID Shadow Legends champion dictionary and boss guide generation.
+
+## Current Task
+[Describe what you want to do - e.g., "Add 5 new champions to the dictionary", "Update the Chimera boss guide", "Fix validation errors"]
+
+## Key Context
+- **Environment:** Python 3.10+, virtual environment at `.venv` (already activated)
+- **Main workflows:** Champion scraping (4-source validation), JSON validation, guide generation
+- **Critical files:**
+  - Champion Entry Template: `input/Templates/Champion_Dictionary_Template.json` (CANONICAL - never copy old champions)
+  - Stats table: `input/Champion_Dictionary/Champion_stats.md` (auto-updated, never edit manually)
+  - Intake queue: `input/Champion_Intake_list.md`
+  - Scraper: `Tools/champion_scraper/champion_scraper.py`
+  - Validator: `Tools/Validate/validate_json.py`
+
+- **New workflows:**
+  - Summarize champion review from json information for easy md files
+  - Create boss and other content mechanic documentation
+  - Using content info, build detailed guides that build teams for that content.
+  - Create teams for other content
+  - Review current builds vs team recommendations, or use them to make further team recommendations based on current champion setup in my account
+  - compare champions in similar roles or as requested
+  - Assist with other content and more
+
+## Project Rules (CRITICAL)
+1. ✅ Always use canonical template from `input/Templates/`
+2. ✅ Validate with 2+ authoritative sources (Ayumilove, HellHades, RaidHQ)
+3. ✅ Run `validate_json.py --schema` before committing
+4. ✅ Use chat edits for complex JSON updates (avoid PowerShell file operations)
+5. ✅ DRAFT-to-FINAL workflow for major changes
+6. ❌ NEVER edit `Champion_stats.md` manually (auto-updated by scraper), unless directly approved in chat.
+7. ❌ NEVER use old champion JSONs as templates
+8. ❌ If JSON corrupts, rename as CHAMPION_corrupt.json and re-scrape (don't manually fix). then work off the new file
+
+## User Content Priorities
+1. Clan Boss UNM (damage optimization, unkillable/cheese teams)
+2. Dungeons Stage 25 (HP Burn preferred, Poison teams weak)
+3. Advanced PVE (Doom Tower Hard, Cursed City, Hydra)
+4. Arena (Classic Gold 3+)
+5. Faction Wars (completing Normal → Hard)
+
+## Full Documentation
+- Comprehensive workflows: `.github/copilot-instructions.md` (997 lines)
+- Quick reference: `README.md` (includes chat created project summary)
+- All templates: `input/Templates/`
+
+---
+
 ### Critical Workflows
 
 **Environment setup:**
