@@ -4,6 +4,7 @@
   "affinity": "Force",
   "faction": "Dwarves",
   "role": "Attack",
+  "owned": 1,
   "meta_ratings": {
     "clan_boss": "10/10",
     "dungeons": "10/10",

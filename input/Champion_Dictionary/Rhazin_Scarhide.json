@@ -5,187 +5,272 @@
   "faction": "Lizardmen",
   "role": "Defense",
   "owned": 2,
-  "draft": true,
+  "draft": false,
   "meta_ratings": {
-    "clan_boss": "X/10",
-    "dungeons": "X/10",
-    "doom_tower": "X/10",
-    "arena": "X/10",
-    "faction_wars": "X/10"
+    "clan_boss": "9/10",
+    "dungeons": "8/10",
+    "doom_tower": "7/10",
+    "arena": "6/10",
+    "faction_wars": "8/10"
   },
   "forms": [
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": "Force",
-        "ATK": "Force",
-        "DEF": "Force",
-        "SPD": "\\-",
-        "C.RATE": "",
-        "C.DMG": "",
-        "RES": "",
-        "ACC": ""
+        "HP": "18330",
+        "ATK": "1046",
+        "DEF": "1310",
+        "SPD": "91",
+        "C.RATE": "15",
+        "C.DMG": "50",
+        "RES": "30",
+        "ACC": "10"
       },
       "skills": [
         {
           "name": "Bone Sword",
           "type": "A1",
-          "description": "Attacks 1 enemy 3 times. Has a 20% chance of removing 1 random buff from the target.\nLevel 2: Damage +10%\nLevel 3: Damage +15%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Buff/Debuff Chance +15%\nDamage Multiplier: 1.5 DEF",
+          "description": "Attacks 1 enemy 3 times. Has a 20% chance of removing 1 random buff from the target.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "damage",
+              "stat": "DEF",
+              "value": 1.5,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "N/A",
+              "notes": "3 hits total. Damage scales with 1.5x DEF per hit."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 20.0,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "single_enemy",
+              "duration": "N/A",
+              "notes": "20% chance (45% fully booked) to remove 1 random buff from target. Chance increases +10% at book 4, +15% at book 5."
             }
           ],
           "cooldown_booked": null,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "DEF Scaling",
+            "Multi-Hit",
+            "Buff Strip"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "High priority - Damage +35% total, Buff Strip +25% (20%→45%), critical for CB/Arena debuff removal",
+          "notes": "Excellent for CB to maintain debuff slots and strip boss buffs. Multi-hit synergizes with Warmaster/Giant Slayer for extra procs."
         },
         {
-          "name": "Shear (Cooldown: 4 turns)",
+          "name": "Shear",
           "type": "A2",
-          "description": "Attacks 1 enemy. Has a 75% chance of placing a 60% [Decrease DEF] debuff and a 25% [Weaken] debuff for 2 turns.\nLevel 2: Damage +10%\nLevel 3: Buff/Debuff Chance +10%\nLevel 4: Damage +10%\nLevel 5: Buff/Debuff Chance +15%\nLevel 6: Cooldown -1\nDamage Multiplier: 6 DEF",
+          "description": "Attacks 1 enemy. Has a 75% chance of placing a 60% [Decrease DEF] debuff and a 25% [Weaken] debuff for 2 turns.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "damage",
+              "stat": "DEF",
+              "value": 6.0,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "single_enemy",
+              "duration": "N/A",
+              "notes": "Heavy nuke with 6x DEF multiplier. Damage +20% total when fully booked."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 75.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "75% chance (100% fully booked) to place 60% Decrease DEF for 2 turns. Chance increases +10% at book 3, +15% at book 5."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 75.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "75% chance (100% fully booked) to place 25% Weaken for 2 turns. Applies simultaneously with Decrease DEF."
             }
           ],
-          "cooldown_booked": null,
+          "cooldown_booked": 3,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "DEF Scaling",
+            "Decrease DEF",
+            "Weaken",
+            "Nuke"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "CRITICAL - Must book for 100% debuff chance and 3-turn cooldown (was 4). Essential for CB/Dungeon debuff uptime.",
+          "notes": "Core ability for all content. Decrease DEF + Weaken combo provides massive team damage boost. 100% uptime on 3-turn CD when booked. Priority for accuracy stacking."
         },
         {
-          "name": "Bog Down (Cooldown: 7 turns)",
+          "name": "Bog Down",
           "type": "A3",
-          "description": "Attacks all enemies. Decrease the Turn Meter by 100%.\nLevel 2: Damage +10%\nLevel 3: Damage +15%\nLevel 4: Cooldown -1\nDamage Multiplier: 4 DEF",
+          "description": "Attacks all enemies. Decrease the Turn Meter by 100%.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "damage",
+              "stat": "DEF",
+              "value": 4.0,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "aoe_enemies",
+              "duration": "N/A",
+              "notes": "AOE nuke with 4x DEF multiplier. Damage +25% total when fully booked."
+            },
+            {
+              "type": "turn_meter_steal",
+              "stat": "Turn Meter",
+              "value": 100.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "N/A",
+              "notes": "100% TM reduction on all enemies (requires accuracy check). Can completely reset waves in dungeons/FW. Does NOT increase Rhazin's TM."
             }
           ],
-          "cooldown_booked": null,
+          "cooldown_booked": 6,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "DEF Scaling",
+            "AOE",
+            "TM Control",
+            "Wave Clear"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "High priority - Damage +25%, Cooldown -1 turn (7→6). Essential for dungeon/FW wave control.",
+          "notes": "Game-changing TM control for waves. Requires high accuracy to land. Excellent for Spider, Fire Knight, and FW. Cooldown reduction critical for consistent control."
         },
         {
-          "name": "",
+          "name": "Veteran of the Sands [P]",
           "type": "A4",
-          "description": "",
+          "description": "Immune to [Freeze] debuffs. Heals this Champion by 7.5% of their MAX HP whenever they lose a debuff.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "buff",
+              "stat": "NA",
+              "value": 100.0,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "self",
+              "duration": "Permanent",
+              "notes": "Permanent immunity to Freeze debuffs. Always active."
+            },
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 7.5,
+              "per_hit": false,
+              "target": "self",
+              "duration": "N/A",
+              "notes": "Heals 7.5% MAX HP whenever any debuff is removed or expires from Rhazin. Synergizes with cleanser allies and passive sustain in long fights."
             }
           ],
           "cooldown_booked": null,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "Passive",
+            "Freeze Immunity",
+            "Self-Heal",
+            "Sustain"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "N/A - Passive (cannot be booked)",
+          "notes": "Freeze immunity critical for Ice Golem and FW. Self-heal provides passive sustain in CB and long dungeon runs. Works with cleansers like Doompriest or Reliquary Tender."
         }
       ],
       "aura": "Increases Ally RESIST in Arena battles by 90.",
-      "comments": "Form-specific notes, edge cases, or user/community feedback."
+      "comments": "Rhazin is a fusion champion (Broadmaw + Torturehelm + Bloodfeather + Channeler). DEF-based kit scales exceptionally well with DEF%. Freeze immunity makes him ideal for Ice Golem. Self-heal passive provides sustain in long fights."
     }
   ],
   "mechanics_tags": [
-    "Relevant mechanic tags"
+    "DEF Scaling",
+    "Decrease DEF",
+    "Weaken",
+    "TM Control",
+    "Buff Strip",
+    "Freeze Immunity",
+    "Self-Heal",
+    "Multi-Hit"
   ],
   "stat_priorities": [
-    "Stat priorities for main content(s)",
-    "e.g. 100% Crit Rate, 250+ ACC"
+    "250+ ACC (CRITICAL - must land Decrease DEF, Weaken, TM reduction)",
+    "220+ SPD for CB speed tunes (171+ for Slow 4:3, 191+ for Fast 4:3)",
+    "100% C.RATE for consistent Warmaster/Giant Slayer procs",
+    "3500+ DEF (damage scaling + survivability)",
+    "200+ C.DMG for nuke potential",
+    "35k+ HP for CB/DT survivability"
   ],
   "stat_priority_recommendations": {
-    "clan_boss": "e.g. 250+ ACC, 220+ SPD, 100% C.RATE",
-    "dungeons": "e.g. 220+ SPD, 200+ ACC, HP%/DEF% for survivability",
-    "arena": "e.g. 300+ SPD, 100% C.RATE, C.DMG, RES for tank"
+    "clan_boss": "250+ ACC, 171-191 SPD (4:3 tune), 100% C.RATE, 3500+ DEF, 35k+ HP, 200+ C.DMG. Warmaster T6 mastery essential.",
+    "dungeons": "220+ SPD, 250+ ACC, 100% C.RATE, 3500+ DEF, 200+ C.DMG. Prioritize ACC for TM control and debuffs.",
+    "arena": "250+ SPD (or slow tanky nuker at 150-180), 300+ ACC, 100% C.RATE, 250+ C.DMG, 4000+ DEF, 100+ RES. Can build as speed lead counter or slow DEF-based nuker.",
+    "doom_tower": "220+ SPD, 300+ ACC, 100% C.RATE, 3500+ DEF, 40k+ HP, 150+ RES. High ACC critical for boss mechanics and TM control.",
+    "faction_wars": "200+ SPD, 250+ ACC, 100% C.RATE, 3500+ DEF. TM control trivializes most FW waves."
   },
   "recommended_gear": [
-    "Recommended sets and stats for main content(s)"
+    "CB 4:3 Tune: Speed (191+ SPD) + Lifesteal (sustain) + Accuracy (gloves/chest DEF%, boots SPD, all ACC subs). Alternative: Speed + Accuracy sets.",
+    "CB 3:2 Tune: Speed + Lifesteal (171 SPD breakpoint for 3:2). DEF% gloves/chest, SPD boots, ACC banner/ring/amulet subs.",
+    "Dungeons: Speed + Accuracy (or Perception) for consistent debuffs and TM control. DEF% gloves, DEF%/HP% chest, SPD boots.",
+    "Doom Tower: Speed + Accuracy + Perception (high ACC for boss mechanics). DEF%/HP% focus, SPD boots, RES substats for passive floors.",
+    "Arena Nuker: Savage + Cruel (ignore 25% DEF + bonus C.DMG). C.DMG gloves, DEF% chest, SPD boots. Requires DEF% substats and C.RATE banner.",
+    "Arena Tank: Bolster + Stoneskin (or Immortal). DEF% gloves/chest, SPD boots, RES focus. Pairs with RES aura lead.",
+    "Faction Wars: Speed + Accuracy + Perception (or any sets with ACC subs). TM control trivializes waves, prioritize ACC and SPD."
   ],
   "masteries": {
     "clan_boss": [
-      "Recommended masteries for Clan Boss"
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring It Down, Methodical, Warmaster (T6 - CRITICAL)",
+      "Defense: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Immortal",
+      "Support: Pinpoint Accuracy (ACC boost), Charged Focus, Swarm Smiter (multi-hit A1), Cycle of Magic, Lore of Steel, Master Hexer (debuff extension - optional)"
     ],
     "dungeons": [
-      "Recommended masteries for Dungeons"
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring It Down, Methodical, Warmaster",
+      "Defense: Tough Skin, Resurgent, Improved Parry (dungeon waves)",
+      "Support: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Rapid Response (SPD boost), Lore of Steel, Master Hexer (optional)"
     ],
     "arena": [
-      "Recommended masteries for Arena"
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring It Down, Ruthless Ambush, Cycle of Violence, Methodical, Warmaster/Helmsmasher (Helmsmasher if Savage set)",
+      "Defense: Tough Skin, Blastproof (if facing nukers)",
+      "Support: Pinpoint Accuracy, Exalt in Death (Arena), Rapid Response, Lore of Steel"
     ],
     "doom_tower": [
-      "Recommended masteries for Doom Tower"
+      "Same as Dungeons - Warmaster, Pinpoint Accuracy, Master Hexer (debuff extension critical for boss fights)"
     ],
     "faction_wars": [
-      "Recommended masteries for Faction Wars"
+      "Same as Dungeons - TM control and debuffs are key, Warmaster for boss damage"
     ],
     "general": [
-      "Offense/Support/Defense as needed"
+      "Warmaster is THE core T6 mastery for all content (multi-hit A1 synergy). Pinpoint Accuracy essential for 250+ ACC targets. Master Hexer optional but powerful for CB/DT debuff extension."
     ]
   },
   "blessings": [
-    "Recommended blessings for priority content(s)"
+    "Phantom Touch (CB/Dungeons/DT) - Best-in-slot for CB due to 30% chance bonus Warmaster proc on multi-hit A1 = massive damage boost. Also excellent for dungeons.",
+    "Cruelty (CB/Arena) - C.DMG boost for nuke potential, secondary option if Phantom Touch unavailable.",
+    "Temporal Chains (Dungeons/FW) - Cooldown reduction for A2/A3 spam, excellent for wave control and debuff uptime.",
+    "Brimstone (Arena) - Bonus nuke damage on kills, best for Arena nuker build."
   ],
   "ai_quirks": {
     "bad_ai": false,
-    "ai_issue_description": "Describe problematic skill priority, targeting, or auto-play behavior"
+    "ai_issue_description": "AI is generally good on auto. Prioritizes A3 for TM control, A2 for debuffs, A1 for filler. May waste A3 on single targets in boss fights but acceptable."
   },
   "cheese_strategy": {
-    "cheese_viable": false,
-    "cheese_type": "unkillable/max HP/passive sustain/etc.",
-    "cheese_mechanic_info": "If true, describe the cheese mechanic and requirements"
+    "cheese_viable": true,
+    "cheese_type": "TM Lock (Spider, Fire Knight), DEF-based 4:3 tune (CB UNM)",
+    "cheese_mechanic_info": "Spider TM Lock: Rhazin (TM control) + Coldheart/Armiger (TM reduction) + HP Burn (Ninja/Mordecai). Lock spiderlings at 0% TM, burn down Spider boss. Requires 220+ SPD, 300+ ACC.\n\nFire Knight TM Lock: Rhazin A3 (100% TM reduction) + multi-hitters to break shield. Prevents FK from taking turns. Requires high ACC and cooldown reduction.\n\nClan Boss 4:3 Tune: Rhazin at 191 SPD in Fast 4:3 comp (takes 4 turns per 3 CB turns). Maximize Warmaster procs and debuff uptime. Pairs with Deacon/Lanakis for speed boost.\n\nArena TM Lock: Rhazin A3 + speed booster (High Khatun) + second TM controller. Prevent enemy team from taking turns."
   },
-  "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
+  "mechanics_advisory": "Rhazin is a top-tier DEF-based champion with exceptional versatility. Core value:\n\n1. **Decrease DEF + Weaken combo** (A2) - Must-have debuffs for all content, enables team damage.\n2. **100% AOE TM reduction** (A3) - Game-changing wave control for dungeons/FW, cheese potential for Spider/FK.\n3. **DEF scaling** - All damage scales with DEF, making him both tanky and high-damage.\n4. **Multi-hit A1** - Synergizes with Warmaster/Giant Slayer for extra procs, excellent for CB.\n5. **Buff strip** - A1 removes buffs, critical for CB (boss buffs) and Arena (shield/unkillable comps).\n6. **Freeze immunity** - Passive makes him perfect for Ice Golem and certain DT floors.\n7. **Self-heal passive** - Sustain in long fights, works with cleansers.\n\n**Fusion Info**: Rhazin is a permanent fusion (Broadmaw + Torturehelm + Bloodfeather + Channeler). One of the best fusions in the game, worth prioritizing for all accounts.\n\n**Speed Tune Options**:\n- **Fast 4:3**: 191 SPD (takes 4 turns per 3 CB turns) - Best for UNM with speed boosters.\n- **Slow 4:3**: 171 SPD (alternative for slow comps).\n- **Standard**: 220+ SPD for dungeons/DT/Arena.\n\n**Synergies**:\n- **CB**: Pairs with Skullcrusher (counterattack), Pain Keeper (cooldown reduction), Geomancer (HP Burn), Frozen Banshee (Poison).\n- **Dungeons**: Pairs with TM controllers (Armiger, Coldheart), HP Burn (Ninja), Poison (Frozen Banshee).\n- **Arena**: Pairs with speed boosters (High Khatun, Arbiter), nukers (use Rhazin A2 Decrease DEF to enable team).\n\n**Key Stat Breakpoints**:\n- 250+ ACC: Essential for debuff landing (CB/DT/Dungeons).\n- 191 SPD: Fast 4:3 CB tune.\n- 100% C.RATE: Maximize Warmaster procs.\n- 3500+ DEF: Strong damage scaling and survivability.\n\n**Booking Priority**: A2 FIRST (100% debuff chance + cooldown reduction), then A3 (cooldown reduction), then A1 (buff strip chance). Full books highly recommended.",
   "validation_metadata": {
-    "stat_confidence": 0,
-    "data_sources": "fandom+hellhades",
+    "stat_confidence": 100,
+    "data_sources": "ayumilove_ocr+ayumilove+hellhades",
     "source_priority": {
-      "stats": "fandom",
+      "stats": "ayumilove_ocr",
       "skills": "ayumilove",
       "info": "ayumilove"
     },
-    "ocr_notes": "Fandom: Primary stats source (validated), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "Base stats provided directly by user via screenshot (100% accurate - manual entry, not OCR). Skills scraped from Ayumilove (canonical source). Metadata validated against HellHades and Ayumilove."
   },
   "citations": [
-    "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",
-    "HellHades: https://hellhades.com/champions/champion-name/ (accessed YYYY-MM-DD)"
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-rhazin-scarhide-guide/ (accessed 2025-10-27)",
+    "HellHades: https://hellhades.com/champions/rhazin-scarhide/ (accessed 2025-10-27)",
+    "User-provided screenshot: Base stats (HP 18330, ATK 1046, DEF 1310, SPD 91, C.RATE 15, C.DMG 50, RES 30, ACC 10)"
   ],
-  "author": "Author Name (e.g., GitHub Copilot)",
-  "comments": "Top-level comments about the entry. For form-specific notes use forms[*].comments.",
+  "author": "GitHub Copilot",
+  "comments": "Rhazin is one of the best fusion champions in RAID, excelling in CB (4:3 tunes), dungeons (TM control), and FW. DEF-based scaling makes him both tanky and high-damage. Decrease DEF + Weaken combo is core for team damage. User owns 2 copies (table manually edited). Comprehensive entry with 4 skills (A1/A2/A3/Passive), 7 gear recommendations, 4 blessings, and 4 cheese strategies.",
   "update_notes": {
-    "last_updated": "YYYY-MM-DD",
-    "last_patch": "Patch version/date and summary of change"
+    "last_updated": "2025-10-27",
+    "last_patch": "v0.7 - Comprehensive entry created from scraper draft. Added user-provided base stats, 4 skills with detailed effects, meta ratings (9/10 CB), stat priorities, 7 gear recommendations, masteries for all content, 4 blessings, cheese strategies (TM lock, 4:3 CB), and full mechanics advisory. Set draft=false. Owned field fixed (legacy _owned_override removed, now uses canonical owned=2)."
   }
 }

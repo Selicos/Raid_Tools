@@ -1,0 +1,285 @@
+{
+  "name": "Venomage",
+  "rarity": "Epic",
+  "affinity": "Magic",
+  "faction": "Lizardmen",
+  "role": "Support",
+  "owned": 1,
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "7/10",
+    "dungeons": "6/10",
+    "doom_tower": "5/10",
+    "arena": "4/10",
+    "faction_wars": "6/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": "17475",
+        "ATK": "1002",
+        "DEF": "1156",
+        "SPD": "96",
+        "C.RATE": "15",
+        "C.DMG": "50",
+        "RES": "30",
+        "ACC": "10"
+      },
+      "skills": [
+        {
+          "name": "Toxicity",
+          "type": "A1",
+          "description": "Attacks 1 enemy 2 times. Decreases the targets MAX HP by 75% of the damage inflicted if they are under [Heal Reduction] debuff. Each hit has a 35% chance of activating up to two Poison debuffs on the target.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.4,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "N/A",
+              "notes": "2 hits total. Damage scales with 2.4x ATK per hit. Damage +10% total when fully booked."
+            },
+            {
+              "type": "other",
+              "stat": "ENEMY_MAX_HP",
+              "value": 75.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "Permanent",
+              "notes": "If target is under Heal Reduction debuff, decreases their MAX HP by 75% of damage inflicted. Powerful vs high HP targets in extended fights."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 35.0,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "35% chance per hit (50% fully booked) to place 5% Poison debuff. 2 hits = 2 chances. Can place up to 2 Poison debuffs total (one per hit)."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "ATK Scaling",
+            "Multi-Hit",
+            "Poison",
+            "MAX HP Reduction",
+            "Heal Reduction Synergy"
+          ],
+          "book_value": "Medium priority - Damage +10%, Poison chance +15% (35%→50%), good for CB/FW poison stacking",
+          "notes": "MAX HP reduction mechanic is unique but situational - requires Heal Reduction on target AND extended fight. Best in Doom Tower boss fights. Poison chance makes this decent for CB if no better poisoners."
+        },
+        {
+          "name": "Neurotoxin",
+          "type": "A2",
+          "description": "Attacks 1 enemy. Has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns. Also has a 75% chance of placing a 50% [Decrease ATK] debuff for 2 turns if the target is under a [Poison] debuff.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 6.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "N/A",
+              "notes": "Heavy nuke with 6x ATK multiplier. Damage +10% when fully booked."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 75.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "75% chance (100% fully booked) to place 60% Decrease DEF for 2 turns. Chance increases +10% at book 3, +15% at book 4."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 75.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "75% chance (100% fully booked) to place 50% Decrease ATK for 2 turns. ONLY applies if target is already under Poison debuff. Requires poison first."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "ATK Scaling",
+            "Decrease DEF",
+            "Decrease ATK",
+            "Poison Synergy",
+            "Nuke"
+          ],
+          "book_value": "CRITICAL - Must book for 100% debuff chance and 3-turn cooldown (was 4). Decrease DEF essential for team damage.",
+          "notes": "Strong single-target debuffer. Decrease DEF works unconditionally, but Decrease ATK requires Poison on target first (synergizes with A1/A3). Book to 100% for reliable debuffs."
+        },
+        {
+          "name": "Fleshmelter Venom",
+          "type": "A3",
+          "description": "Attacks all enemies. Has a 75% chance of placing a 100% [Heal Reduction] debuff for 3 turns. Also has a 75% chance of placing two 5% [Poison] debuffs for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "N/A",
+              "notes": "AOE nuke with 4x ATK multiplier. Damage +10% when fully booked."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 75.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "3 turns",
+              "notes": "75% chance (100% fully booked) to place 100% Heal Reduction for 3 turns on all enemies. Enables A1 MAX HP reduction mechanic and counters healing bosses."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 75.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "75% chance (100% fully booked) to place TWO 5% Poison debuffs for 2 turns on all enemies. Strong AOE poison application."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "ATK Scaling",
+            "AOE",
+            "Heal Reduction",
+            "Poison",
+            "Wave Clear"
+          ],
+          "book_value": "CRITICAL - Must book for 100% debuff chance and 3-turn cooldown (was 4). Heal Reduction critical for many bosses, poison excellent for CB.",
+          "notes": "Core ability. Heal Reduction shuts down healing bosses (Scarab, DT bosses, some dungeon bosses). 2x Poison per target makes this strong for CB poison stacking. Book ASAP for 100% proc rate."
+        },
+        {
+          "name": "Pain Writhe [P]",
+          "type": "Passive",
+          "description": "Enemies under [Heal Reduction] debuffs inflict 15% less damage.",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 15.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "While Heal Reduction active",
+              "notes": "All enemies with Heal Reduction debuff deal 15% less damage. Passive defensive utility, always active when Heal Reduction is applied."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Passive",
+            "Damage Reduction",
+            "Heal Reduction Synergy",
+            "Defensive Utility"
+          ],
+          "book_value": "N/A - Passive (cannot be booked)",
+          "notes": "Provides passive damage mitigation for the team. Synergizes with A3 Heal Reduction. Excellent for survivability in extended boss fights where Heal Reduction is needed anyway."
+        }
+      ],
+      "aura": "Increases Ally ACC in all Battles by 45",
+      "comments": "Venomage is a solid Epic poisoner with unique Heal Reduction utility. Best used in content where healing needs to be shut down (Scarab, certain DT bosses). Passive damage reduction provides extra survivability."
+    }
+  ],
+  "mechanics_tags": [
+    "ATK Scaling",
+    "Poison",
+    "Heal Reduction",
+    "Decrease DEF",
+    "Decrease ATK",
+    "AOE",
+    "MAX HP Reduction",
+    "Damage Reduction"
+  ],
+  "stat_priorities": [
+    "200+ ACC (CRITICAL - must land Poison, Heal Reduction, Decrease DEF)",
+    "170-180 SPD for CB standard tune",
+    "3000+ DEF for survivability",
+    "30k+ HP for survivability",
+    "100% C.RATE recommended for Warmaster/Giant Slayer procs",
+    "150+ C.DMG if built as damage dealer"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "200+ ACC, 171-191 SPD (tune dependent), 100% C.RATE, 3000+ DEF, 30k+ HP. Warmaster/Giant Slayer for damage. Focus on poison uptime.",
+    "dungeons": "200+ ACC, 180+ SPD, 100% C.RATE, 3000+ DEF. Prioritize ACC for Heal Reduction and poison application.",
+    "arena": "Low priority - lacks control/nuke potential. If used: 200+ ACC, 200+ SPD, DEF%/HP% for survivability.",
+    "doom_tower": "250+ ACC, 180+ SPD, 100% C.RATE, 3500+ DEF, 35k+ HP, 100+ RES for passive floors. Heal Reduction critical for certain bosses.",
+    "faction_wars": "200+ ACC, 170+ SPD, 100% C.RATE, 3000+ DEF. Poison and Decrease DEF excellent for Lizardmen FW."
+  },
+  "recommended_gear": [
+    "CB Standard: Speed + Accuracy (or Perception) + Lifesteal. DEF% gloves, DEF%/HP% chest, SPD boots, ACC banner.",
+    "CB Unkillable: Speed + Accuracy (or Perception). No Lifesteal needed. DEF% gloves/chest, SPD boots, ACC focus.",
+    "Dungeons: Speed + Accuracy + Perception for high ACC. DEF%/HP% focus, SPD boots.",
+    "Doom Tower: Speed + Accuracy + Immortal (or HP sets). DEF%/HP% gloves/chest, SPD boots, RES substats for passive floors.",
+    "Faction Wars: Speed + Accuracy. DEF%/HP% focus, prioritize ACC and survivability."
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring It Down, Methodical, Warmaster (T6 - standard) OR Giant Slayer (if multi-hit A1 preference)",
+      "Defense: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Immortal",
+      "Support: Pinpoint Accuracy (ACC boost), Charged Focus, Lore of Steel, Master Hexer (poison/debuff extension - HIGHLY RECOMMENDED)"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring It Down, Methodical, Warmaster",
+      "Defense: Tough Skin, Resurgent",
+      "Support: Pinpoint Accuracy, Charged Focus, Lore of Steel, Master Hexer (debuff extension)"
+    ],
+    "arena": [
+      "Low priority - Venomage not ideal for Arena. If used: Standard offense tree with Warmaster, Pinpoint Accuracy."
+    ],
+    "doom_tower": [
+      "Same as Dungeons - Warmaster, Pinpoint Accuracy, Master Hexer (debuff extension critical for boss fights)"
+    ],
+    "faction_wars": [
+      "Same as Dungeons - Poison and debuffs are key for Lizardmen FW"
+    ],
+    "general": [
+      "Warmaster is standard T6 mastery. Master Hexer highly recommended for poison/Heal Reduction extension in CB/DT."
+    ]
+  },
+  "blessings": [
+    "Brimstone (CB/DT) - Extra damage on poisoned targets, synergizes with poison-heavy kit.",
+    "Cruelty (CB) - C.DMG boost for damage potential.",
+    "Temporal Chains (Dungeons/DT) - Cooldown reduction for more frequent A3 Heal Reduction and poison application.",
+    "Phantom Touch (CB) - Bonus Warmaster/Giant Slayer proc chance (if using multi-hit A1)."
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI is acceptable on auto. Prioritizes A3 for AOE Heal Reduction/Poison, A2 for Decrease DEF, A1 for filler. May not optimize Decrease ATK conditional (requires poison first) but usable."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Heal Reduction specialist (Scarab King, DT bosses)",
+    "cheese_mechanic_info": "Scarab King (DT): Venomage + Poison team. Use A3 to apply Heal Reduction (prevents Scarab from healing shields), then poison him down. Requires high ACC (250+) and survivability.\n\nDT Boss Heal Counter: Many DT bosses have healing mechanics. Venomage A3 shuts down healing entirely with 100% Heal Reduction. Pair with poison damage for boss kills.\n\nCB Poison Stacking: Venomage A3 places 2x Poison debuffs AOE, A1 can place 2 more single-target. With Master Hexer, can maintain high poison uptime. Pairs with Frozen Banshee, Geomancer for max poison.\n\nFW Poison Carry: Lizardmen FW benefits from poison damage and Decrease DEF. Venomage can solo-carry early stages."
+  },
+  "mechanics_advisory": "Venomage is a mid-tier Epic support champion with strong Heal Reduction and poison application. Core value:\n\n1. **100% Heal Reduction** (A3) - Shuts down healing bosses (Scarab King, DT bosses, some dungeon bosses). 3-turn duration is excellent.\n2. **AOE Poison** (A3) - Places 2x Poison debuffs on all enemies, strong for CB and FW.\n3. **Decrease DEF** (A2) - 60% Decrease DEF enables team damage, works unconditionally.\n4. **Conditional Decrease ATK** (A2) - Requires target under Poison first, but useful for survivability.\n5. **Passive Damage Reduction** - 15% damage reduction when enemies have Heal Reduction. Synergizes with A3.\n6. **ACC Aura** - +45 ACC aura for all battles, helpful for early/mid game teams lacking ACC.\n\n**Best Use Cases**:\n- **Scarab King (DT)**: Heal Reduction prevents shield healing, poison kills boss.\n- **Clan Boss**: Poison stacking (not top tier, but usable if lacking better poisoners like Frozen Banshee).\n- **Doom Tower Bosses**: Heal Reduction shuts down healing mechanics on certain bosses.\n- **Lizardmen FW**: Poison and Decrease DEF excellent for faction progression.\n\n**Limitations**:\n- **Low priority** vs top-tier poisoners (Frozen Banshee, Elenaril, etc.).\n- **No TM control** or hard CC, limiting dungeon/arena use.\n- **ATK-based scaling** - squishier than DEF-based champions, requires HP%/DEF% investment.\n- **Conditional A2 Decrease ATK** - requires poison first, not always reliable.\n\n**Synergies**:\n- **CB**: Pairs with Frozen Banshee (more poison), Geomancer (HP Burn), Rhazin (Decrease DEF backup), Skullcrusher (counterattack).\n- **DT/Scarab**: Pairs with poison specialists, revive champs (Scyl, Rector Drath), HP Burn (Ninja).\n- **FW**: Pairs with Rhazin (Decrease DEF/Weaken), any Lizardmen DPS.\n\n**Booking Priority**: A3 FIRST (100% Heal Reduction/Poison proc + cooldown reduction), then A2 (100% Decrease DEF + cooldown), then A1 (poison chance). Full books recommended for CB/DT use.",
+  "validation_metadata": {
+    "stat_confidence": 85,
+    "data_sources": "fandom+ayumilove_ocr+hellhades",
+    "source_priority": {
+      "stats": "fandom",
+      "skills": "ayumilove",
+      "info": "ayumilove"
+    },
+    "ocr_notes": "Stats from Fandom table (HP 17475, ATK 1002, DEF 1156 validated). OCR had errors (read ATK as HP value). SPD/RES/ACC filled from standard Epic Support baselines (96/30/10). Skills scraped from Ayumilove (canonical source). Metadata validated against HellHades."
+  },
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-venomage-skill-mastery-equip-guide/ (accessed 2025-10-27)",
+    "HellHades: https://hellhades.com/champions/venomage/ (accessed 2025-10-27)",
+    "Fandom (Champion_stats.md): HP 17475, ATK 1002, DEF 1156 (validated reference)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Venomage is a solid mid-tier Epic poisoner with niche Heal Reduction utility. Best for Scarab King (DT), certain DT bosses, and Lizardmen FW. Not top-tier for CB but usable if lacking better poisoners. User owns 1 copy. ACC aura (+45) useful for early/mid game teams.",
+  "update_notes": {
+    "last_updated": "2025-10-27",
+    "last_patch": "v0.7 - Comprehensive entry created from scraper draft. Added 4 skills with detailed effects (A1 poison/MAX HP reduction, A2 Decrease DEF/ATK, A3 Heal Reduction/AOE poison, Passive damage reduction). Meta ratings (7/10 CB, 6/10 FW/Dungeons). Stat priorities, 5 gear recommendations, masteries (Master Hexer recommended), 4 blessings, cheese strategies (Scarab King, DT bosses, CB poison stacking). Set draft=false after validation."
+  }
+}
