@@ -71,15 +71,18 @@ This is the canonical workflow for completing champion dictionary entries:
 
 ## Directory Drop Points
 
-| Entry Type                | Directory Path (relative to repo root)                |
-|--------------------------|------------------------------------------------------|
-| Champion Dictionary      | input/Champion_Dictionary/                           |
-| Mechanic Dictionary      | input/Mechanic_Dictionary/                           |
-| Templates                | input/Templates/                                     |
-| Prompts                  | input/Prompts/                                       |
-| Boss Guides              | Output/Boss_Guides/                                  |
-| Build Evaluations        | Output/Build_Evaluations/                            |
-| Mechanic Dictionary (Out)| Output/Mechanic_Dictionary/                          |
+| Entry Type                | Directory Path (relative to repo root)                | Notes |
+|--------------------------|------------------------------------------------------|--------|
+| Champion Dictionary      | input/Champion_Dictionary/                           | JSON files for completed champions |
+| Champion Intake Queue    | input/Champion_Intake_list.md                        | List of champions to process (intake queue) |
+| Owned Champions          | input/Owned_champion_list.md                         | Master list of owned champions with counts |
+| Champion Stats Table     | input/Champion_Dictionary/Champion_stats.md          | Reference table with all champion base stats |
+| Mechanic Dictionary      | input/Mechanic_Dictionary/                           | Mechanic reference files |
+| Templates                | input/Templates/                                     | Canonical templates for all entry types |
+| Prompts                  | input/Prompts/                                       | Automation prompts |
+| Boss Guides              | Output/Boss_Guides/                                  | Generated boss guides |
+| Build Evaluations        | Output/Build_Evaluations/                            | Champion build analysis |
+| Mechanic Dictionary (Out)| Output/Mechanic_Dictionary/                          | Output mechanic files |
 
 ## Where to Find Templates
 
