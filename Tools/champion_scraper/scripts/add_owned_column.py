@@ -55,7 +55,8 @@ def add_owned_column_to_table(table_file: Path, owned_dict: dict):
     """
     Add 'Owned' column to Champion_stats.md table.
     
-    Inserts the column after ACC (column 12) and before Aura (column 13).
+    Inserts the column right after Name (column 1).
+    Shows number owned (1, 2, 3...) or 0 if not owned.
     """
     with open(table_file, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -84,40 +85,39 @@ def add_owned_column_to_table(table_file: Path, owned_dict: dict):
         
         # Check if this is the header row
         if cells[0] == 'Name':
-            # Header already has Owned column (added manually)
-            updated_lines.append(line)
+            # Insert 'Owned' header after Name
+            new_cells = [cells[0], 'Owned'] + cells[1:]
+            new_line = '| ' + ' | '.join(new_cells) + ' |\n'
+            updated_lines.append(new_line)
             continue
         
         # Check if this is the separator row
         if '---' in cells[0]:
-            # Separator already updated (added manually)
-            updated_lines.append(line)
+            # Insert separator for Owned column
+            new_cells = [cells[0], '-----'] + cells[1:]
+            new_line = '| ' + ' | '.join(new_cells) + ' |\n'
+            updated_lines.append(new_line)
             continue
         
         # This is a data row
         champion_name = cells[0]
         
-        # Get owned count
+        # Get owned count (0 if not owned)
         owned_count = owned_dict.get(champion_name, 0)
-        owned_value = str(owned_count) if owned_count > 0 else '\\-'
+        owned_value = str(owned_count) if owned_count else '0'
         
-        # Insert 'Owned' column after ACC (index 12)
-        # Column order: Name(0), Faction(1), Rarity(2), Role(3), Affinity(4), 
+        # Insert 'Owned' column after Name (index 0)
+        # Column order: Name(0), [INSERT OWNED HERE], Faction(1), Rarity(2), Role(3), Affinity(4), 
         #               HP(5), ATK(6), DEF(7), SPD(8), C.Rate(9), C.DMG(10), RES(11), ACC(12),
-        #               [INSERT OWNED HERE], Aura(13), Aura mag(14), Aura loc(15), Aura for(16)
+        #               Aura(13), Aura mag(14), Aura loc(15), Aura for(16)
         
-        if len(cells) >= 13:
-            # Insert owned column before index 13 (Aura)
-            new_cells = cells[:13] + [owned_value] + cells[13:]
-        else:
-            # Table has fewer columns, just append
-            new_cells = cells + [owned_value]
+        new_cells = [cells[0], owned_value] + cells[1:]
         
         # Rebuild row
         new_line = '| ' + ' | '.join(new_cells) + ' |\n'
         updated_lines.append(new_line)
         
-        if owned_count > 0:
+        if owned_count and owned_count > 0:
             updated_count += 1
     
     # Write updated table
