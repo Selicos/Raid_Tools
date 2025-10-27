@@ -24,7 +24,30 @@
 4. Activate the virtual environment before running tests or scripts:
    - Windows: `.venv\Scripts\activate`
    - macOS/Linux: `source .venv/bin/activate`
-5. Use the Makefile or VS Code tasks for all core operations (intake, analysis, summary, test, lint, format).
+
+## Core Workflows
+
+### Champion Intake (4-Source Validation)
+```sh
+python Tools/champion_scraper/champion_scraper.py --champion "Champion Name" --rarity Legendary
+```
+- Scrapes Fandom table → Ayumilove (OCR) → HellHades
+- Auto-validates and updates `Champion_stats.md` table
+- Creates JSON in `input/Champion_Dictionary/`
+
+### Table Sync
+```sh
+# Sync Champion_stats.md with all JSON files
+python Tools/champion_scraper/scripts/sync_table_from_json.py
+
+# Add Owned column (reads Owned_champion_list.md)
+python Tools/champion_scraper/scripts/add_owned_column.py
+```
+
+### JSON Validation
+```sh
+python Tools/Validate/validate_json.py --schema
+```
 
 ## Champion Dictionary Completion Workflow
 
