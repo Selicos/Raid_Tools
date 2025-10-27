@@ -86,6 +86,41 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 | Name | Owned | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |
 | ---- | ----- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |
 | Abbess | 1 | The Sacred Order | Legendary | Attack | Force | 14040 | 1564 | 1079 | 96 | 0.15 | 0.63 | 30 | 10 | 1 | 1 | ATK | 0.34 | Faction Crypts | all |
@@ -228,7 +263,7 @@
 | Queen Eva | 0 | Dark Elves | Legendary | Attack | Spirit | 15690 | 1696 | 837 | 101 | 0.15 | 0.63 | 15 | 10 | \- | \- | \- | \- |
 | Raglin | 0 | Banner Lords | Legendary | Support | Void | 20310 | 1156 | 1068 | 104 | 0.15 | 0.5 | 50 | 0 | \- | \- | DEF | 0.33 | all | all |
 | Rathalos Blademaster | 0 | Banner Lords | Legendary | Attack | Force | 16185 | 1487 | 1013 | 105 | 0.15 | 0.63 | 15 | \- | \- | \- | \- |
-| Rector Drath | 1 | Knights Revenant | Epic | Support | Force | Force | Force | 17010 | 1 | 1.09 | 0.18 | 0.35 | 30 | \- | \- | \- | \- |
+| Rector Drath | 2 | Knights Revenant | Epic | Support | Spirit | 17010 | 1035 | 1134 | 109 | 0.15 | 0.50 | 30 | 10 | \- | \- | \- | \- |
 | Relickeeper | 4 | The Sacred Order | Epic | Attack | Force | 14370 | 1365 | 980 | 90 | 0.15 | 0.6 | 30 | 0 | 4 | 4 | ATK | 0.4 | Campaign | all |
 | Reliquary Tender | 0 | High Elves | Rare | Support | Void | 18165 | 859 | 958 | 103 | 0.15 | 0.5 | 30 | 0 | \- | \- | \- | \- | \- | \- |
 | Rhazin Scarhide | 2 | Lizardmen | Legendary | Defense | Force | 18330 | 1046 | 1310 | 91 | 0.15 | 0.50 | 30 | 10 | \- | \- | \- | \- |
@@ -282,6 +317,6 @@
 | Warcaster | 0 | Banner Lords | Epic | Support | Void | 20145 | 1013 | 947 | 106 | 0.15 | 0.5 | 30 | 0 | \- | \- | C. Rate | 0.23 | all | Void |
 | Warchief | 1 | Skinwalkers | Legendary | Defense | Force | \- | \- | \- | \- |
 | Warpriest | 0 | The Sacred Order | Rare | Support | Spirit | 18165 | 683 | 1134 | 97 | 0.15 | 0.5 | 30 | 0 | \- | \- | \- | \- | \- | \- |
-| White Dryad Nia | 0 | Sylvan Watchers | Epic | Defense | Void | 20145 | 683 | 98 | 0.15 | 0.50 | 45 | 0 | \- | \- | \- | \- |
+| White Dryad Nia | 0 | Sylvan Watchers | Epic | Defense | Void | 20145 | 683 |  | 98 | 0.15 | 0.50 | 45 | 0 | \- | \- | \- | \- |
 | Witness | 0 | The Sacred Order | Rare | Support | Magic | 14865 | 1134 | 903 | 103 | 0.15 | 0.5 | 30 | 0 | \- | \- | RES | 30 | Faction Crypts | all |
 | Yannica | 0 | High Elves | Legendary | Attack | Spirit | 15525 | 1487 | 1057 | 100 | 0.15 | 0.63 | 30 | 10 | \- | \- | ATK | 0.3 | all | all |

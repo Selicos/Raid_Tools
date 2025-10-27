@@ -419,6 +419,83 @@ Follow the unified standards in Sections 12 (Validation and Documentation Standa
 - **Forgetting to update schema** → When adding new fields to template, update `Champion_Dictionary_Schema.json` immediately
 - **Not documenting sources** → Always cite at least 2 authoritative sources in validation_metadata
 
+### File Corruption Recovery Process
+
+**When a JSON file becomes corrupted (duplicate keys, malformed structure, or file creation errors):**
+
+1. **Delete the corrupted file**:
+   ```powershell
+   Remove-Item "c:\GIT\Raid_Tools\input\Champion_Dictionary\Champion_Name.json"
+   ```
+
+2. **Re-run the champion scraper** to generate a fresh draft:
+   ```bash
+   python Tools/champion_scraper/champion_scraper.py "Champion Name" --owned 1
+   ```
+   - This creates a clean draft with proper structure
+   - 4-source validation will attempt to populate stats (may have OCR errors)
+   - Draft will have `draft: true` and template placeholders
+
+3. **Complete the entry** using the standard workflow:
+   - Fix any stat/affinity errors from OCR (check Champion_stats.md reference)
+   - Populate all 4 skills with comprehensive effects
+   - Add all comprehensive content (gear, masteries, blessings, strategies)
+   - Update validation_metadata with correct sources
+   - Set `draft: false` when complete
+
+4. **Validate and sync**:
+   ```bash
+   python Tools/Validate/validate_json.py --schema Champion_Name.json
+   python Tools/champion_scraper/scripts/sync_table_from_json.py
+   ```
+
+**DO NOT:**
+- ❌ Try to manually fix corrupted JSON with multiple replace operations
+- ❌ Create new files from scratch without running scraper
+- ❌ Copy from backup without re-validating structure
+
+**Key Principle:** When in doubt, delete and re-scrape. The scraper provides a known-good baseline structure.
+
+### Best Practices for Champion Entry Completion
+
+**Preferred Editing Method:**
+- ✅ **Use Copilot chat edits** for complex JSON population (skills, comprehensive content)
+- ❌ **Avoid PowerShell file operations** for JSON editing (Copy-Item, file manipulation can cause corruption)
+- ✅ **Validate immediately** after completion: `validate_json.py --schema Champion_Name.json`
+
+**Completion Checklist:**
+1. Fix OCR errors (stats, affinity) - use Ayumilove/HellHades as reference
+2. Clean skill descriptions (remove `\nLevel 2:...` level-up text)
+3. Populate all 4 skills with comprehensive effects arrays
+4. Add comprehensive content (gear, masteries, blessings, strategies)
+5. Update validation_metadata with correct sources and confidence
+6. Set `draft: false` when complete
+7. **Run validation**: `python Tools/Validate/validate_json.py --schema input/Champion_Dictionary/Champion_Name.json`
+8. **Sync table**: `python Tools/champion_scraper/scripts/sync_table_from_json.py`
+9. **Move to Complete/**: Only after validation passes
+10. **Delete any backup files** created during editing
+
+**OCR Failure Handling:**
+- If OCR stats are scrambled (values like "Force", "1", swapped fields):
+  1. Check Champion_stats.md table for reference values
+  2. Verify with Ayumilove (https://ayumilove.net/raid-shadow-legends-[champion-name]-skill-mastery-equip-guide/)
+  3. Cross-check affinity (HellHades sometimes has incorrect data)
+  4. Document OCR failure in validation_metadata.ocr_notes
+  5. Set stat_confidence appropriately (90 for manual verification, <50 for unverified OCR)
+
+**String Replacement Issues:**
+- If replace_string_in_file fails repeatedly (especially on skill descriptions with `\n` escapes):
+  1. Use chat edits to populate skills section
+  2. Do NOT attempt multiple retry cycles (causes slowdown)
+  3. Validate immediately after chat edit completion
+
+**File Management:**
+- After successful validation and table sync:
+  1. Move validated JSON to `input/Champion_Dictionary/Complete/`
+  2. Delete any backup files created during editing
+  3. Verify table sync updated Champion_stats.md correctly
+- Use git for version control, not manual file backups
+
 ### Champion Dictionary Entry Completion Process
 
 **Standard Workflow: Option A (Hybrid - User Stats + AI Research)**
@@ -902,6 +979,7 @@ Maintain a clear, chronological record of all major changes, updates, and versio
 
 | Date       | Author           | Description                                      | Sections/Files                |
 |------------|------------------|--------------------------------------------------|-------------------------------|
+| 2025-10-27 | GitHub Copilot   | Completed Batch 2 (Rector Drath), added File Corruption Recovery Process + Best Practices for Champion Entry Completion to Section 7 | Section 7, Rector_Drath.json, Champion_stats.md |
 | 2025-10-26 | GitHub Copilot   | Fixed stats table parsing bug (empty cell preservation), simplified stats approach, added table sync script, added Owned column to Champion_stats.md | scrape_fandom.py, champion_scraper.py, sync_table_from_json.py, add_owned_column.py, Champion_stats.md |
 | 2025-10-26 | GitHub Copilot   | Implemented 4-source validation (Fandom→Ayumilove→HellHades→OCR), added hybrid OCR extraction (400% accuracy improvement) | champion_scraper.py, scrape_*.py modules |
 | 2025-10-24 | GitHub Copilot   | Restructured file: ToC moved to top, added section numbers, removed duplicates | All sections |
