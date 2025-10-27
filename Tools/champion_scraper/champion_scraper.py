@@ -470,8 +470,11 @@ def main() -> None:
             
             # Generate JSON with optional table update
             in_fandom = data.get('in_fandom_table', False)
-            # Auto-update table if champion not in Fandom table (unless --update-table explicitly set)
-            should_update_table = not in_fandom if not args.update_table else (args.update_table and not in_fandom)
+            # Force table update if --owned is specified, otherwise auto-update if not in Fandom table
+            if args.owned is not None:
+                should_update_table = True  # Always update table when --owned is specified
+            else:
+                should_update_table = not in_fandom if not args.update_table else (args.update_table and not in_fandom)
             
             # Add owned count override to scraped_data if --owned specified
             if args.owned is not None:

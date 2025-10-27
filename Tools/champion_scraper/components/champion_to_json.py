@@ -203,6 +203,10 @@ def generate_champion_json(champion_name, scraped_data, template_path, output_pa
             'ocr_notes': ', '.join(validation_info.get('validation_notes', []))
         }
         print(f"[DEBUG] Added validation_metadata to champion JSON")
+    
+    # Pass through owned override if specified (for table update)
+    if '_owned_override' in scraped_data:
+        champion_json['_owned_override'] = scraped_data['_owned_override']
 
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, 'w', encoding='utf-8') as f:
