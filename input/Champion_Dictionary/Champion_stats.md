@@ -6,8 +6,9 @@
 
 
 
-| Name | Owned | Owned | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |
-| ---- | ----- | ----- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |
+
+| Name | Owned | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |
+| ---- | ----- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |
 | Abbess | 1 | The Sacred Order | Legendary | Attack | Force | 14040 | 1564 | 1079 | 96 | 0.15 | 0.63 | 30 | 10 | 1 | 1 | ATK | 0.34 | Faction Crypts | all |
 | Adjudicator | 0 | High Elves | Rare | Attack | Magic | 13545 | 1255 | 870 | 94 | 0.15 | 0.57 | 30 | 0 | \- | \- | ACC | 40 | all | all |
 | Adriel | 0 | The Sacred Order | Epic | Support | Magic | 18330 | 1101 | 980 | 98 | 0.15 | 0.5 | 30 | 15 | \- | \- | SPD | 0.21 | all | Magic |
@@ -123,6 +124,7 @@
 | Myrmidon | 0 | Banner Lords | Rare | Defence | Magic | 15030 | 804 | 1222 | 99 | 0.15 | 0.5 | 30 | 10 | \- | \- | DEF | 0.2 | Dungeons | all |
 | Ninja | 1 | Shadowkin | Legendary | Attack | Magic | 1509 | 0.15 | 30 | \- | \- | \- | \- | 1 |
 | Oathbound | 0 | Banner Lords | Epic | Defence | Force | 18330 | 782 | 1299 | 95 | 0.15 | 0.5 | 40 | 0 | \- | \- | \- | \- | \- | \- |
+| Paragon | 1 | Dark Elves | Rare | Defense | Void |  |  |  |  |  |  |  |  | \- | \- | \- | \- |
 | Penitent | 0 | The Sacred Order | Rare | Defence | Spirit | 14865 | 793 | 1244 | 93 | 0.15 | 0.5 | 40 | 0 | \- | \- | \- | \- | \- | \- |
 | Preserver | 0 | Banner Lords | Rare | Defence | Force | 16350 | 771 | 1167 | 102 | 0.15 | 0.5 | 40 | 0 | \- | \- | HP | 0.17 | all | all |
 | Raglin | 0 | Banner Lords | Legendary | Support | Void | 20310 | 1156 | 1068 | 104 | 0.15 | 0.5 | 50 | 0 | \- | \- | DEF | 0.33 | all | all |

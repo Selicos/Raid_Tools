@@ -321,9 +321,14 @@ def extract_champion_row_from_json(champion_json):
         except:
             pass
     
-    # Build row cells (match Champion_stats.md column order)
+    # Get owned count from Owned_champion_list.md
+    from pathlib import Path
+    owned_count = get_owned_count(champion_json.get('name', ''))
+    
+    # Build row cells (match Champion_stats.md column order with Owned column)
     row = [
         champion_json.get('name', ''),
+        str(owned_count),  # Owned column (position 2)
         champion_json.get('faction', ''),
         champion_json.get('rarity', ''),
         champion_json.get('role', ''),
@@ -345,6 +350,30 @@ def extract_champion_row_from_json(champion_json):
     return row
 
 
+def get_owned_count(champion_name):
+    """Get owned count for a champion from Owned_champion_list.md"""
+    from pathlib import Path
+    
+    owned_file = Path('c:/GIT/Raid_Tools/input/Owned_champion_list.md')
+    if not owned_file.exists():
+        return 0
+    
+    try:
+        with open(owned_file, 'r', encoding='utf-8') as f:
+            for line in f:
+                if line.strip().startswith('|') and '|---' not in line and '| Name |' not in line:
+                    parts = [p.strip() for p in line.split('|') if p.strip()]
+                    if len(parts) >= 2 and parts[0] == champion_name:
+                        try:
+                            return int(parts[1])
+                        except ValueError:
+                            return 0
+    except Exception as e:
+        print(f"[WARNING] Failed to read owned count for {champion_name}: {e}")
+    
+    return 0
+
+
 def write_updated_table(table_path, sorted_champions, original_content):
     """Write updated champion table back to Champion_stats.md"""
     # Preserve header/notes from original content
@@ -359,8 +388,8 @@ def write_updated_table(table_path, sorted_champions, original_content):
     # Build new table
     new_lines = header_lines
     new_lines.append('')
-    new_lines.append('| Name | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |')
-    new_lines.append('| ---- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |')
+    new_lines.append('| Name | Owned | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |')
+    new_lines.append('| ---- | ----- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |')
     
     for name, cells in sorted_champions.items():
         row = '| ' + ' | '.join(cells) + ' |'
