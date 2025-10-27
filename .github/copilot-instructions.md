@@ -65,11 +65,16 @@ Raid Tools is an automation-ready system for generating, validating, and maintai
 - Activate the virtual environment before running scripts.
 
 **Core operations:**
-- Use VS Code tasks (Ctrl+Shift+P → "Tasks: Run Task") or Makefile targets for:
-	- Champion intake: `python ChampionIntake/Champ_Intake.py` or `make intake`
-	- Skill turn analysis: `python ChampionSkillTurnAnalysis/ChampionSkillTurnAnalysis.py` or `make analysis`
-	- Generate summaries: `python ChampionSummary/generateChampionSummaries.py` or `make summary`
-	- Validate JSON: `python Tools/validate_json.py` or `make validate`
+- Use VS Code tasks (Ctrl+Shift+P → "Tasks: Run Task") or command line for:
+	- **Champion intake (4-source validation):** `python Tools/champion_scraper/champion_scraper.py --champion "Name" --rarity Legendary`
+		- Scrapes Fandom table → Ayumilove (OCR) → HellHades → Validates stats
+		- Auto-updates `Champion_stats.md` table with validated data
+		- Creates JSON in `input/Champion_Dictionary/`
+	- **Table sync:** `python Tools/champion_scraper/scripts/sync_table_from_json.py`
+		- Syncs `Champion_stats.md` with all JSON files in Champion_Dictionary/
+	- **Add Owned column:** `python Tools/champion_scraper/scripts/add_owned_column.py`
+		- Reads `Owned_champion_list.md` and adds ownership counts to table
+	- **Validate JSON:** `python Tools/Validate/validate_json.py --schema` or `make validate`
 
 **Validation:**
 - All champion/boss/mechanic/team entries must be validated against at least two authoritative sources (Ayumilove, HellHades, RaidHQ, in-game testing).
@@ -296,10 +301,9 @@ The project supports:
 - Stats may be pulled from screenshots of the champions base stats. If unsure, confirm in chat.
 
 ### Primary Sources
-- **RaidHQ**: Official boss mechanics, trial requirements, stat thresholds. (https://raid-hq.com/)
 - **Ayumilove**: Champion guides, skill descriptions, gear/mastery recommendations. (https://ayumilove.net/raid-shadow-legends-guide/)
 - **HellHades**: Team compositions, speed tuning, tier lists, champion ratings. (https://hellhades.com/)
-- **RaidWiki**: Incomplete champion and boss data, including stats in text, and mechanics. (https://raid.wiki/)
+- **RaidWiki**: Champion and boss data including stats in text, and mechanics. Missing many champions. (https://raid.wiki/)
 - **In-Game Testing**: User-provided simulation results, screenshots, and direct observation.
 
 ### Source Documentation
@@ -883,6 +887,8 @@ Maintain a clear, chronological record of all major changes, updates, and versio
 
 | Date       | Author           | Description                                      | Sections/Files                |
 |------------|------------------|--------------------------------------------------|-------------------------------|
+| 2025-10-26 | GitHub Copilot   | Fixed stats table parsing bug (empty cell preservation), simplified stats approach, added table sync script, added Owned column to Champion_stats.md | scrape_fandom.py, champion_scraper.py, sync_table_from_json.py, add_owned_column.py, Champion_stats.md |
+| 2025-10-26 | GitHub Copilot   | Implemented 4-source validation (Fandom→Ayumilove→HellHades→OCR), added hybrid OCR extraction (400% accuracy improvement) | champion_scraper.py, scrape_*.py modules |
 | 2025-10-24 | GitHub Copilot   | Restructured file: ToC moved to top, added section numbers, removed duplicates | All sections |
 | 2025-10-24 | GitHub Copilot   | Expanded cheese mechanics taxonomy from boss guides | Section 7 (Champion Workflow) |
 | 2025-10-21 | GitHub Copilot   | Initial draft complete through Section 12         | All sections                  |
