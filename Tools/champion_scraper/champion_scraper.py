@@ -210,12 +210,34 @@ def try_all_scrapers(champion_name: str, debug: bool = False) -> dict | None:
         
         print(f"[4-Source] Sources available: {', '.join(sources_available) if sources_available else 'Ayumilove only (info)'}")
         
-        # Stats priority: Fandom (validated) > Ayumilove OCR
-        final_stats = fandom_data.get('stats', {}) if has_fandom_stats else ocr_stats
-        stats_source = 'fandom' if has_fandom_stats else 'ayumilove_ocr'
+        # Stats priority: MERGE Fandom (validated) + Ayumilove OCR (fill missing)
+        # Strategy: Start with Fandom, fill empty stats from OCR
+        if has_fandom_stats:
+            final_stats = fandom_data.get('stats', {}).copy()
+            stats_source = 'fandom'
+            
+            # Fill missing stats from OCR
+            if ocr_stats:
+                filled_count = 0
+                for stat_name, ocr_value in ocr_stats.items():
+                    fandom_value = final_stats.get(stat_name, '')
+                    # Fill if Fandom is empty/missing and OCR has value
+                    if (not fandom_value or fandom_value in ['', '-', '\\-']) and ocr_value and ocr_value not in ['', '-', '\\-']:
+                        final_stats[stat_name] = ocr_value
+                        filled_count += 1
+                        if debug:
+                            print(f"[DEBUG] Filled {stat_name} from OCR: {ocr_value}")
+                
+                if filled_count > 0:
+                    stats_source = 'fandom+ocr'
+                    print(f"[4-Source] ✓ Merged stats: Fandom + OCR filled {filled_count} missing stats")
+        else:
+            # No Fandom stats - use OCR only
+            final_stats = ocr_stats
+            stats_source = 'ayumilove_ocr'
         
         if debug:
-            print(f"[DEBUG] final_stats after priority selection: {final_stats}")
+            print(f"[DEBUG] final_stats after merge: {final_stats}")
             print(f"[DEBUG] stats_source: {stats_source}")
         
         # Info priority: Fandom > Ayumilove > HellHades
