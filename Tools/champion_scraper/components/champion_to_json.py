@@ -321,9 +321,10 @@ def extract_champion_row_from_json(champion_json):
         except:
             pass
     
-    # Get owned count from Owned_champion_list.md
+    # Get owned count from Owned_champion_list.md (or use override if provided)
     from pathlib import Path
-    owned_count = get_owned_count(champion_json.get('name', ''))
+    owned_override = champion_json.get('_owned_override', None)
+    owned_count = get_owned_count(champion_json.get('name', ''), override=owned_override)
     
     # Build row cells (match Champion_stats.md column order with Owned column)
     row = [
@@ -350,8 +351,19 @@ def extract_champion_row_from_json(champion_json):
     return row
 
 
-def get_owned_count(champion_name):
-    """Get owned count for a champion from Owned_champion_list.md"""
+def get_owned_count(champion_name, override=None):
+    """Get owned count for a champion from Owned_champion_list.md
+    
+    Args:
+        champion_name: Name of the champion
+        override: If specified, returns this value instead of reading from file
+    
+    Returns:
+        int: Owned count (0 if not found or override is None)
+    """
+    if override is not None:
+        return override
+    
     from pathlib import Path
     
     owned_file = Path('c:/GIT/Raid_Tools/input/Owned_champion_list.md')
@@ -372,6 +384,62 @@ def get_owned_count(champion_name):
         print(f"[WARNING] Failed to read owned count for {champion_name}: {e}")
     
     return 0
+
+
+def update_owned_list(champion_name, owned_count, rarity, affinity, faction):
+    """Update or add champion entry in Owned_champion_list.md
+    
+    Args:
+        champion_name: Name of the champion
+        owned_count: Number owned (0 to remove, >0 to add/update)
+        rarity: Champion rarity
+        affinity: Champion affinity
+        faction: Champion faction
+    """
+    from pathlib import Path
+    from datetime import date
+    
+    owned_file = Path('c:/GIT/Raid_Tools/input/Owned_champion_list.md')
+    
+    if not owned_file.exists():
+        print(f"[WARNING] Owned_champion_list.md not found, skipping update")
+        return
+    
+    # Read existing file
+    with open(owned_file, 'r', encoding='utf-8') as f:
+        lines = f.readlines()
+    
+    # Find champion row
+    found_index = None
+    for i, line in enumerate(lines):
+        if line.strip().startswith('|') and '|---' not in line and '| Name |' not in line:
+            parts = [p.strip() for p in line.split('|') if p.strip()]
+            if len(parts) >= 1 and parts[0] == champion_name:
+                found_index = i
+                break
+    
+    today = date.today().strftime('%Y-%m-%d')
+    
+    if owned_count == 0:
+        # Remove entry if owned count is 0
+        if found_index is not None:
+            del lines[found_index]
+            print(f"[INFO] Removed {champion_name} from Owned_champion_list.md (owned=0)")
+    else:
+        # Create/update entry
+        new_row = f"| {champion_name} | {owned_count} | {rarity} | {affinity} | {faction} | {today} |\n"
+        
+        if found_index is not None:
+            lines[found_index] = new_row
+            print(f"[INFO] Updated {champion_name} in Owned_champion_list.md (owned={owned_count})")
+        else:
+            # Add new entry before the last line (or append if no table end)
+            lines.append(new_row)
+            print(f"[INFO] Added {champion_name} to Owned_champion_list.md (owned={owned_count})")
+    
+    # Write back
+    with open(owned_file, 'w', encoding='utf-8') as f:
+        f.writelines(lines)
 
 
 def write_updated_table(table_path, sorted_champions, original_content):

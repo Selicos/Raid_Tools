@@ -364,7 +364,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description='Scrape champion data from multiple sources')
     parser.add_argument('champion', nargs='?', help='Champion name to scrape (or use --list)')
     parser.add_argument('--list', type=str, metavar='FILE', help='File with list of champion names (one per line)')
-    parser.add_argument('--rarity', type=str, help='Champion rarity (for HellHades URL, optional)')
+    parser.add_argument('--owned', type=int, default=None, metavar='N',
+                        help='Owned count (0-N). If specified, updates Owned_champion_list.md. If omitted, reads from existing file.')
     parser.add_argument('--update-table', action='store_true', 
                         help='Auto-update Champion_stats.md after scraping (default: False)')
     
@@ -471,6 +472,11 @@ def main() -> None:
             in_fandom = data.get('in_fandom_table', False)
             # Auto-update table if champion not in Fandom table (unless --update-table explicitly set)
             should_update_table = not in_fandom if not args.update_table else (args.update_table and not in_fandom)
+            
+            # Add owned count override to scraped_data if --owned specified
+            if args.owned is not None:
+                scraped_data['_owned_override'] = args.owned
+            
             generate_champion_json(
                 champ_name, 
                 scraped_data, 
@@ -479,6 +485,18 @@ def main() -> None:
                 update_table=should_update_table
             )
             print(f"Champion JSON for {champ_name} written to {output_path} (source: {source})")
+            
+            # Update Owned_champion_list.md if --owned specified
+            if args.owned is not None:
+                from components.champion_to_json import update_owned_list
+                update_owned_list(
+                    champ_name,
+                    args.owned,
+                    scraped_data['info'].get('rarity', 'Unknown'),
+                    scraped_data['info'].get('affinity', 'Unknown'),
+                    scraped_data['info'].get('faction', 'Unknown')
+                )
+            
             # Diff log
             if old_json:
                 new_json = None
