@@ -32,8 +32,10 @@ def load_fandom_table(force_reload=False, debug=False):
     if _fandom_table_cache is not None and not force_reload:
         return _fandom_table_cache
     
-    table_path = Path('c:/GIT/Raid_Tools/input/Champion_Dictionary/Champion_stats.md')
-    
+    # Use relative path from script location
+    # Path calculation: __file__ → components/ → champion_scraper/ → Tools/ → repo_root/
+    table_path = Path(__file__).parent.parent.parent.parent / 'input/Champion_Dictionary/Champion_stats.md'
+        
     if not table_path.exists():
         raise FileNotFoundError(f"Champion_stats.md not found at {table_path}")
     

@@ -9,8 +9,31 @@ from components.scrape_fandom import scrape_fandom_champion
 from components.scrape_raidwiki import scrape_raidwiki_champion
 from components.champion_to_json import generate_champion_json, diff_champion_jsons
 
-def merge_champion_data(primary, fallback):
-    # Merge missing fields from fallback into primary
+# ============================================================================
+# STAT NAME STANDARDIZATION
+# ============================================================================
+# Canonical format (right side) matches JSON template: C.RATE, C.DMG, RES (no spaces)
+# This constant is the SINGLE SOURCE OF TRUTH for all stat name mapping across the project
+STAT_NAME_MAPPING = {
+    # Crit Rate - both formats supported
+    'C. RATE': 'C.RATE',  # Ayumilove OCR format (with space)
+    'C.RATE': 'C.RATE',   # Fandom/JSON format (no space) - CANONICAL
+    # Crit Damage - both formats supported
+    'C. DMG': 'C.DMG',    # Ayumilove OCR format (with space)
+    'C.DMG': 'C.DMG',     # Fandom/JSON format (no space) - CANONICAL
+    # Resistance - both formats supported
+    'RESIST': 'RES',      # Ayumilove OCR format (long form)
+    'RES': 'RES',         # Fandom/JSON format (short form) - CANONICAL
+    # Standard stats (same across all sources)
+    'HP': 'HP',
+    'ATK': 'ATK',
+    'DEF': 'DEF',
+    'SPD': 'SPD',
+    'ACC': 'ACC'
+}
+
+def merge_champion_data(primary: dict | None, fallback: dict | None) -> dict:
+    """Merge missing fields from fallback into primary."""
     if not primary:
         return fallback
     if not fallback:
@@ -20,7 +43,7 @@ def merge_champion_data(primary, fallback):
         merged[key] = primary.get(key) if primary.get(key) else fallback.get(key)
     return merged
 
-def compare_stats(raidwiki_stats, ayumilove_stats, champion_name):
+def compare_stats(raidwiki_stats: dict, ayumilove_stats: dict, champion_name: str) -> tuple[bool, float, list]:
     """
     Compare stats from RaidWiki and Ayumilove OCR.
     Returns: (use_raidwiki: bool, confidence: float, differences: list)
@@ -31,22 +54,10 @@ def compare_stats(raidwiki_stats, ayumilove_stats, champion_name):
     if not ayumilove_stats or not any(v for v in ayumilove_stats.values()):
         return True, 100.0, ["No Ayumilove OCR stats available - using RaidWiki"]
     
-    # Normalize stat keys for comparison
-    stat_map = {
-        'C. RATE': 'C.RATE',
-        'C. DMG': 'C.DMG',
-        'RESIST': 'RES',
-        'ACC': 'ACC',
-        'HP': 'HP',
-        'ATK': 'ATK',
-        'DEF': 'DEF',
-        'SPD': 'SPD'
-    }
-    
-    # Normalize Ayumilove stats
+    # Normalize Ayumilove stats using canonical STAT_NAME_MAPPING
     normalized_ocr = {}
     for k, v in ayumilove_stats.items():
-        mapped_key = stat_map.get(k, k)
+        mapped_key = STAT_NAME_MAPPING.get(k, k)
         if v and v != '':
             try:
                 normalized_ocr[mapped_key] = int(str(v).replace(',', ''))
@@ -105,7 +116,17 @@ def compare_stats(raidwiki_stats, ayumilove_stats, champion_name):
     return use_raidwiki, confidence, differences
 
 
-def try_all_scrapers(champion_name, debug=False):
+def try_all_scrapers(champion_name: str, debug: bool = False) -> dict | None:
+    """
+    FOUR-SOURCE APPROACH: Champion_stats.md → Ayumilove → HellHades → RaidWiki
+    
+    Args:
+        champion_name: Name of champion to scrape
+        debug: Enable debug output
+        
+    Returns:
+        dict: Combined champion data from all sources, or None if all sources fail
+    """
     # FOUR-SOURCE APPROACH: Champion_stats.md (local reference) → Ayumilove (primary) → HellHades (secondary) → RaidWiki (tiebreaker)
     # Priority: Champion_stats.md (validated) → Ayumilove (skills) → HellHades (info) → RaidWiki (tiebreaker)
     # Decision rule: Use Champion_stats.md for stats when available, ALWAYS use Ayumilove for skills
@@ -312,7 +333,8 @@ def try_all_scrapers(champion_name, debug=False):
     }
     return failed_data, 'scrape_failed'
 
-def main():
+def main() -> None:
+    """Main entry point for champion scraper CLI."""
     import argparse
     
     parser = argparse.ArgumentParser(description='Scrape champion data from multiple sources')
@@ -369,24 +391,14 @@ def main():
             mapped_info = {}
             for k, v in info.items():
                 mapped_info[k.lower()] = v
+            
             # Only allow valid stat keys, fill missing with blank or zero
             valid_stats = ['HP', 'ATK', 'DEF', 'SPD', 'C.RATE', 'C.DMG', 'RES', 'ACC']
             mapped_stats = {k: '' for k in valid_stats}
-            stat_map = {
-                'HP': 'HP',
-                'ATK': 'ATK',
-                'DEF': 'DEF',
-                'SPD': 'SPD',
-                'C. RATE': 'C.RATE',  # Ayumilove OCR format
-                'C.RATE': 'C.RATE',   # Fandom format
-                'C. DMG': 'C.DMG',    # Ayumilove OCR format
-                'C.DMG': 'C.DMG',     # Fandom format
-                'RESIST': 'RES',      # Ayumilove OCR format
-                'RES': 'RES',         # Fandom format
-                'ACC': 'ACC'
-            }
+            
+            # Use canonical STAT_NAME_MAPPING for stat normalization
             for k, v in stats.items():
-                mapped_key = stat_map.get(k, None)
+                mapped_key = STAT_NAME_MAPPING.get(k, None)
                 if mapped_key and mapped_key in mapped_stats:
                     mapped_stats[mapped_key] = v
             # Build scraped_data for template
