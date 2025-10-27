@@ -47,6 +47,7 @@
 
 
 
+
 | Name | Owned | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |
 | ---- | ----- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |
 | Abbess | 1 | The Sacred Order | Legendary | Attack | Force | 14040 | 1564 | 1079 | 96 | 0.15 | 0.63 | 30 | 10 | 1 | 1 | ATK | 0.34 | Faction Crypts | all |
@@ -111,6 +112,7 @@
 | Errol | 0 | The Sacred Order | Legendary | Attack | Force | 16020 | 1674 | 837 | 104 | 0.15 | 0.63 | 30 | 0 | \- | \- | ATK | 0.35 | Dungeons | all |
 | Exemplar | 0 | High Elves | Epic | Attack | Void | 13545 | 1509 | 892 | 94 | 0.15 | 0.6 | 30 | 0 | \- | \- | C. Rate | 0.27 | Arena | all |
 | Fayne | 1 | Skinwalkers | Epic | Attack | Spirit | 13710 | 1663 | 727 | 99 | 0.15 | 0.57 | 30 | 0 | 1 | 1 | \- | \- | \- | \- |
+| Fellhound | 0 | Demonspawn | Rare | Defense | Void | 14865 | 958 | 1079 | 92 | 0.15 | 0.50 | 15 |  | \- | \- | \- | \- |
 | Fenax | 0 | The Sacred Order | Epic | Attack | Spirit | 13875 | 1454 | 925 | 96 | 0.15 | 0.6 | 30 | 0 | \- | \- | \- | \- | \- | \- |
 | Fencer | 0 | High Elves | Rare | Attack | Force | 15360 | 1211 | 793 | 100 | 0.15 | 0.5 | 30 | 10 | \- | \- | ATK | 0.23 | Dungeons | all |
 | Fenshi | 1 | Shadowkin | Epic | Attack | Force | 16515 | 1465 | 738 | 97 | 0.15 | 0.60 | 30 | 0 | 1 | 1 | \- | \- | \- | \- |
@@ -242,6 +244,6 @@
 | Warcaster | 0 | Banner Lords | Epic | Support | Void | 20145 | 1013 | 947 | 106 | 0.15 | 0.5 | 30 | 0 | \- | \- | C. Rate | 0.23 | all | Void |
 | Warchief | 1 | Skinwalkers | Legendary | Defense | Force | \- | \- | \- | \- |
 | Warpriest | 0 | The Sacred Order | Rare | Support | Spirit | 18165 | 683 | 1134 | 97 | 0.15 | 0.5 | 30 | 0 | \- | \- | \- | \- | \- | \- |
-| White Dryad Nia | 1 | Sylvan Watchers | Epic | Defense | Void | 20145 | 683 |  | 98 | 0.15 | 0.50 | 45 | 0 | \- | \- | \- | \- |
+| White Dryad Nia | 1 | Sylvan Watchers | Epic | Defense | Void | 20145 | 683 | 98 | 0.15 | 0.50 | 45 | 0 | \- | \- | \- | \- |
 | Witness | 0 | The Sacred Order | Rare | Support | Magic | 14865 | 1134 | 903 | 103 | 0.15 | 0.5 | 30 | 0 | \- | \- | RES | 30 | Faction Crypts | all |
 | Yannica | 0 | High Elves | Legendary | Attack | Spirit | 15525 | 1487 | 1057 | 100 | 0.15 | 0.63 | 30 | 10 | \- | \- | ATK | 0.3 | all | all |

@@ -52,8 +52,7 @@ Raid Tools is an automation-ready system for generating, validating, and maintai
 |--------------------|----------------------------------|--------------------------------------------------|--------|
 | Champion           | input/Champion_Dictionary/       | input/Templates/Champion_Dictionary_Template.json | Completed champion JSON files |
 | Champion Intake    | input/Champion_Intake_list.md    | N/A                                              | Queue of champions to process |
-| Owned Champions    | input/Owned_champion_list.md     | N/A                                              | Master list with owned counts |
-| Stats Table        | input/Champion_Dictionary/Champion_stats.md | N/A                               | Reference table (auto-updated by scraper) |
+| Stats Table        | input/Champion_Dictionary/Champion_stats.md | N/A                               | Reference table with Owned column (auto-updated by scraper) |
 | Mechanic           | input/Mechanic_Dictionary/       | input/Templates/Mechanic_Entry_Template.json      | Mechanic reference files |
 | Boss Guide         | Output/Boss_Guides/              | input/Templates/Boss_Guide_Template.md            | Generated boss guides |
 | Team               | Output/Build_Evaluations/        | input/Templates/Team_Entry_Template.md            | Team compositions |
@@ -69,10 +68,10 @@ Raid Tools is an automation-ready system for generating, validating, and maintai
 
 **Core operations:**
 - Use VS Code tasks (Ctrl+Shift+P → "Tasks: Run Task") or command line for:
-	- **Champion intake (4-source validation):** `python Tools/champion_scraper/champion_scraper.py --champion "Name" --rarity Legendary`
+	- **Champion intake (4-source validation):** `python Tools/champion_scraper/champion_scraper.py "Name" --owned 1`
 		- Scrapes Fandom table → Ayumilove (OCR) → HellHades → Validates stats
 		- Auto-updates `Champion_stats.md` table with validated data
-		- Automatically populates Owned column from `Owned_champion_list.md`
+		- `--owned N` updates Owned column in Champion_stats.md table
 		- Creates JSON in `input/Champion_Dictionary/`
 	- **Batch intake:** `python Tools/champion_scraper/champion_scraper.py --list input/Champion_Intake_list.md`
 		- Processes all champions in the intake queue
@@ -82,19 +81,15 @@ Raid Tools is an automation-ready system for generating, validating, and maintai
 		- Syncs `Champion_stats.md` with all JSON files in Champion_Dictionary/
 	- **Validate JSON:** `python Tools/Validate/validate_json.py --schema` or `make validate`
 
-**Three-File Workflow:**
+**Two-File Workflow:**
 1. **Champion_Intake_list.md** - Work queue for champions to process
    - Add champion names (one per line)
    - Run scraper with `--list` flag
    - Remove names after successful processing
-2. **Owned_champion_list.md** - Master owned champions list (permanent record)
-   - Tracks ownership counts with metadata (rarity, affinity, faction)
-   - Scraper auto-reads owned counts from this file
-   - Update when acquiring/retiring champions
-3. **Champion_stats.md** - Comprehensive reference table (auto-updated)
-   - Contains all champions (owned and unowned)
-   - Owned column auto-populated by scraper from Owned_champion_list.md
-   - Never edit manually - always updated by scraper/sync scripts
+2. **Champion_stats.md** - Comprehensive reference table (auto-updated)
+   - Contains all champions with base stats
+   - Owned column tracks ownership counts
+   - Auto-updated by scraper - never edit manually
 
 **Validation:**
 - All champion/boss/mechanic/team entries must be validated against at least two authoritative sources (Ayumilove, HellHades, RaidHQ, in-game testing).
