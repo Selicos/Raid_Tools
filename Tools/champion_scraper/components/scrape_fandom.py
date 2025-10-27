@@ -43,7 +43,7 @@ def load_fandom_table(force_reload=False, debug=False):
     with open(table_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    champions = parse_champion_markdown_table(content)
+    champions = parse_champion_markdown_table(content, debug=debug)
     
     # Build lookup dict: key = champion name (exact match)
     _fandom_table_cache = {}
@@ -75,6 +75,10 @@ def load_fandom_table(force_reload=False, debug=False):
                     'affinity': champ.get('aura_for', ''),
                 }
             }
+            
+            # Debug for Scyl
+            if debug and name == "Scyl of the Drakes":
+                print(f"[DEBUG] Scyl in cache: stats = {_fandom_table_cache[name]['stats']}")
     
     if debug:
         print(f"[FANDOM] Loaded {len(_fandom_table_cache)} champions from Champion_stats.md")
@@ -82,12 +86,13 @@ def load_fandom_table(force_reload=False, debug=False):
     return _fandom_table_cache
 
 
-def parse_champion_markdown_table(content):
+def parse_champion_markdown_table(content, debug=False):
     """
     Parse the champion table from Champion_stats.md markdown file.
     
     Args:
         content (str): Full markdown file content
+        debug (bool): Print debug info
     
     Returns:
         list: List of champion dicts with stats and info
@@ -122,6 +127,35 @@ def parse_champion_markdown_table(content):
             
             # Extract champion data (column order from Champion_stats.md)
             # Columns: Name, Faction, Rarity, Role, Affinity, HP, ATK, DEF, SPD, C.Rate, C.DMG, RES, ACC, Aura, Aura magnitude, Aura location, Aura for
+            
+            # Helper function to convert decimal to percentage (0.15 → 15)
+            def decimal_to_percent(value):
+                if not value or value in ['-', '\\-']:
+                    return ''
+                try:
+                    num = float(value)
+                    if num < 1:  # Decimal format (0.15)
+                        result = str(int(num * 100))
+                        if debug and name == "Scyl of the Drakes":
+                            print(f"[DEBUG] decimal_to_percent({value}) → {result}")
+                        return result
+                    else:  # Already percentage (15)
+                        result = str(int(num))
+                        if debug and name == "Scyl of the Drakes":
+                            print(f"[DEBUG] decimal_to_percent({value}) → {result}")
+                        return result
+                except (ValueError, TypeError):
+                    if debug and name == "Scyl of the Drakes":
+                        print(f"[DEBUG] decimal_to_percent({value}) → ERROR → {value}")
+                    return value
+            
+            # Debug for Scyl
+            if debug and name == "Scyl of the Drakes":
+                print(f"[DEBUG] Parsing Scyl: len(cells)={len(cells)}")
+                print(f"[DEBUG] cells[9] (C.RATE): '{cells[9]}'" if len(cells) > 9 else "[DEBUG] No cells[9]")
+                print(f"[DEBUG] cells[10] (C.DMG): '{cells[10]}'" if len(cells) > 10 else "[DEBUG] No cells[10]")
+                print(f"[DEBUG] cells[11] (RES): '{cells[11]}'" if len(cells) > 11 else "[DEBUG] No cells[11]")
+            
             champ = {
                 'name': name,
                 'faction': cells[1] if len(cells) > 1 else '',
@@ -132,8 +166,8 @@ def parse_champion_markdown_table(content):
                 'atk': cells[6].replace(',', '') if len(cells) > 6 else '',
                 'def': cells[7].replace(',', '') if len(cells) > 7 else '',
                 'spd': cells[8].replace(',', '') if len(cells) > 8 else '',
-                'crate': cells[9].replace('%', '').replace(',', '') if len(cells) > 9 else '',
-                'cdmg': cells[10].replace('%', '').replace(',', '') if len(cells) > 10 else '',
+                'crate': decimal_to_percent(cells[9]) if len(cells) > 9 else '',
+                'cdmg': decimal_to_percent(cells[10]) if len(cells) > 10 else '',
                 'resist': cells[11].replace(',', '') if len(cells) > 11 else '',
                 'accuracy': cells[12].replace(',', '') if len(cells) > 12 else '',
                 'aura': cells[13] if len(cells) > 13 else '',
@@ -141,6 +175,9 @@ def parse_champion_markdown_table(content):
                 'aura_location': cells[15] if len(cells) > 15 else '',
                 'aura_for': cells[16] if len(cells) > 16 else '',
             }
+            
+            if debug and name == "Scyl of the Drakes":
+                print(f"[DEBUG] Scyl parsed stats: crate='{champ['crate']}', cdmg='{champ['cdmg']}', resist='{champ['resist']}'")
             
             champions.append(champ)
     

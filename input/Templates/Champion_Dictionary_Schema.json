@@ -9,11 +9,12 @@
     "affinity": { "type": "string" },
     "faction": { "type": "string" },
     "role": { "type": "string" },
+    "draft": { "type": "boolean" },
     "meta_ratings": {
       "type": "object",
       "additionalProperties": { "type": "string" }
     },
-    "frmso": {
+    "forms": {
       "type": "array",
       "items": {
         "type": "object",
@@ -23,14 +24,14 @@
           "base_stats": {
             "type": "object",
             "properties": {
-              "HP": { "type": "number" },
-              "ATK": { "type": "number" },
-              "DEF": { "type": "number" },
-              "SPD": { "type": "number" },
-              "C.RATE": { "type": "number" },
-              "C.DMG": { "type": "number" },
-              "RES": { "type": "number" },
-              "ACC": { "type": "number" }
+              "HP": { "type": ["number", "string"] },
+              "ATK": { "type": ["number", "string"] },
+              "DEF": { "type": ["number", "string"] },
+              "SPD": { "type": ["number", "string"] },
+              "C.RATE": { "type": ["number", "string"] },
+              "C.DMG": { "type": ["number", "string"] },
+              "RES": { "type": ["number", "string"] },
+              "ACC": { "type": ["number", "string"] }
             },
             "required": ["HP","ATK","DEF","SPD","C.RATE","C.DMG","RES","ACC"]
           },
@@ -57,7 +58,7 @@
                       },
                       "per_hit": { "type": "boolean" },
                       "target": { "type": "string" },
-                      "duration": { "type": "integer" },
+                      "duration": { "type": ["integer", "string", "null"] },
                       "notes": { "type": "string" }
                     },
                     "required": ["type"]
@@ -84,6 +85,37 @@
     "ai_quirks": { "type": "object" },
     "cheese_strategy": { "type": "object" },
     "mechanics_advisory": { "type": "string" },
+    "validation_metadata": {
+      "type": "object",
+      "required": ["stat_confidence", "data_sources", "source_priority"],
+      "properties": {
+        "stat_confidence": { 
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "data_sources": { "type": "string" },
+        "source_priority": {
+          "type": "object",
+          "required": ["stats", "skills", "info"],
+          "properties": {
+            "stats": { 
+              "type": "string",
+              "enum": ["fandom", "ayumilove_ocr", "hellhades", "raidwiki", "none"]
+            },
+            "skills": { 
+              "type": "string",
+              "enum": ["ayumilove", "hellhades", "none"]
+            },
+            "info": { 
+              "type": "string",
+              "enum": ["fandom", "ayumilove", "hellhades", "raidwiki", "none"]
+            }
+          }
+        },
+        "ocr_notes": { "type": "string" }
+      }
+    },
     "citations": { "type": "array" },
     "update_notes": { "type": "object" },
     "author": { "type": "string" },

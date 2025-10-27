@@ -132,7 +132,7 @@ def validate_all_jsons_with_mapping(directory, schema=None, strict=False):
         # Normalize paths for comparison
         if os.path.abspath(directory).endswith(os.path.normpath(dir_key)):
             try:
-                with open(os.path.join(os.path.dirname(__file__), '..', schema_path), 'r', encoding='utf-8') as sf:
+                with open(os.path.join(os.path.dirname(__file__), '..', '..', schema_path), 'r', encoding='utf-8') as sf:
                     schema_to_use = json.load(sf)
             except Exception as e:
                 print(f"! Could not load schema from {schema_path}: {e}")
@@ -183,7 +183,7 @@ if __name__ == "__main__":
         for dir_key, schema_path in TEMPLATE_MAP.items():
             if dir_key in args.file:
                 try:
-                    with open(os.path.join(os.path.dirname(__file__), '..', schema_path), 'r', encoding='utf-8') as sf:
+                    with open(os.path.join(os.path.dirname(__file__), '..', '..', schema_path), 'r', encoding='utf-8') as sf:
                         schema = json.load(sf)
                 except Exception as e:
                     print(f"! Could not load schema from {schema_path}: {e}")

@@ -78,6 +78,16 @@
     "cheese_mechanic_info": "If true, describe the cheese mechanic and requirements"
   },
   "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
+  "validation_metadata": {
+    "stat_confidence": 0,
+    "data_sources": "List of sources used (e.g., fandom+ayumilove+hellhades)",
+    "source_priority": {
+      "stats": "Source used for base stats (fandom/ayumilove_ocr/hellhades/raidwiki/none)",
+      "skills": "Source used for skills (ayumilove/hellhades/none)",
+      "info": "Source used for info/faction/affinity/role (fandom/ayumilove/hellhades/raidwiki/none)"
+    },
+    "ocr_notes": "Notes about OCR confidence, validation, or data conflicts"
+  },
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",
     "HellHades: https://hellhades.com/champions/champion-name/ (accessed YYYY-MM-DD)"

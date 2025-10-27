@@ -5,6 +5,9 @@
 ## Updated with Complete/ champion JSONs - Complete/ data takes precedence
 
 
+
+
+
 | Name | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |
 | ---- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |
 | Abbess | The Sacred Order | Legendary | Attack | Force | 14040 | 1564 | 1079 | 96 | 0.15 | 0.63 | 30 | 10 | ATK | 0.34 | Faction Crypts | all |
@@ -67,6 +70,7 @@
 | Fencer | High Elves | Rare | Attack | Force | 15360 | 1211 | 793 | 100 | 0.15 | 0.5 | 30 | 10 | ATK | 0.23 | Dungeons | all |
 | Fenshi | Shadowkin | Epic | Attack | Force | 16515 | 1465 | 738 | 97 | 0.15 | 0.60 | 30 | 0 | \- | \- | \- | \- |
 | Frostbringer | The Sacred Order | Epic | Support | Magic | 20310 | 870 | 1079 | 110 | 0.15 | 0.5 | 30 | 0 | DEF | 0.33 | Dungeons | all |
+| Frozen Banshee | Undead Hordes | Rare | Attack | Magic | 14700 | 1046 | 1002 | 99 | 0.15 | 0.50 | \- | \- | \- | \- |
 | Geomancer | Dwarves | Epic | Attack | Force | 15525 | 1343 | 935 | 94 | 0.15 | 0.60 | 30 | 0 | \- | \- | \- | \- |
 | Ghostborn | Dark Elves | Legendary | Support | Spirit | 18825 | 1211 | 1112 | 101 | 0.15 | 0.50 | 40 | 0 | \- | \- | \- | \- |
 | Godseeker Aniri | Sacred Order | Epic | Reviver / Healer / Support | Void | 15195 | 1046 | 1244 | 99 | 0.15 | 0.50 | 45 | 0 | \- | \- | \- | \- |
@@ -115,6 +119,7 @@
 | Minaya | Banner Lords | Legendary | Support | Force | 21645 | 1002 | 1134 | 111 | 0.15 | 0.5 | 40 | 0 | SPD | 0.19 | all | all |
 | Missionary | The Sacred Order | Epic | HP | Force | 19485 | 969 | 1035 | 96 | 0.15 | 0.5 | 45 | 0 | HP | 0.33 | Dungeons | all |
 | Mistress of Hymns | The Sacred Order | Epic | Support | Spirit | 18990 | 1024 | 1013 | 103 | 0.15 | 0.5 | 30 | 0 | DEF | 0.25 | all | all |
+| Mistrider Daithi | Sylvan Watchers | Epic | Attack | Force | 15360 | 1376 | 903 | 15 |  |  |  |  | \- | \- | \- | \- |
 | Mithrala Lifebane | Dark Elves | Legendary | Support / Debuffer / Cleanser | Void | 20310 | 870 | 1354 | 109 | 0.15 | 0.50 | 30 | 10 | \- | \- | \- | \- |
 | Mother Superior | The Sacred Order | Rare | Support | Spirit | 16350 | 991 | 947 | 103 | 0.15 | 0.5 | 30 | 0 | SPD | 0.13 | all | all |
 | Myrmidon | Banner Lords | Rare | Defence | Magic | 15030 | 804 | 1222 | 99 | 0.15 | 0.5 | 30 | 10 | DEF | 0.2 | Dungeons | all |
@@ -152,6 +157,7 @@
 | Valerie | Banner Lords | Rare | Support | Magic | 15855 | 969 | 1002 | 98 | 0.15 | 0.5 | 30 | 0 | HP | 0.22 | Faction Crypts | all |
 | Valkyrie | Barbarians | Legendary | Defence | Spirit | 17835 | 793 | 1597 | 104 | 0.15 | 0.5 | 50 | 0 | DEF | 0.33 | Faction Crypts | all |
 | Vanguard | Banner Lords | Rare | Defence | Void | 14700 | 958 | 1090 | 96 | 0.15 | 0.5 | 40 | 0 | RES | 30 | all | all |
+| Venomage | Lizardmen | Epic | Support | Magic | 17475 | 11002 | 1156 | 96 | 0.50 | \- | \- | \- | \- |
 | Venus | The Sacred Order | Legendary | Support | Void | 22635 | 1090 | 980 | 112 | 0.15 | 0.5 | 30 | 20 | HP | 0.33 | all | all |
 | Vergis | High Elves | Epic | Defence | Spirit | 16020 | 925 | 1310 | 98 | 0.15 | 0.5 | 45 | 0 | DEF | 0.33 | Dungeons | all |
 | Warcaster | Banner Lords | Epic | Support | Void | 20145 | 1013 | 947 | 106 | 0.15 | 0.5 | 30 | 0 | C. Rate | 0.23 | all | Void |

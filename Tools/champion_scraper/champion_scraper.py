@@ -105,14 +105,14 @@ def compare_stats(raidwiki_stats, ayumilove_stats, champion_name):
     return use_raidwiki, confidence, differences
 
 
-def try_all_scrapers(champion_name):
+def try_all_scrapers(champion_name, debug=False):
     # FOUR-SOURCE APPROACH: Champion_stats.md (local reference) → Ayumilove (primary) → HellHades (secondary) → RaidWiki (tiebreaker)
     # Priority: Champion_stats.md (validated) → Ayumilove (skills) → HellHades (info) → RaidWiki (tiebreaker)
     # Decision rule: Use Champion_stats.md for stats when available, ALWAYS use Ayumilove for skills
     
     # SOURCE 1: Champion_stats.md (local reference table - instant, validated)
     print("[4-Source] Checking Champion_stats.md (local reference)...")
-    fandom_data = scrape_fandom_champion(champion_name)
+    fandom_data = scrape_fandom_champion(champion_name, debug=debug)
     has_fandom_stats = (fandom_data and fandom_data.get('stats') and 
                         any(v for v in fandom_data.get('stats', {}).values() if v and v != '' and v != '-' and v != '\\-'))
     has_fandom_info = (fandom_data and fandom_data.get('info'))
@@ -192,6 +192,10 @@ def try_all_scrapers(champion_name):
         # Stats priority: Fandom (validated) > Ayumilove OCR
         final_stats = fandom_data.get('stats', {}) if has_fandom_stats else ocr_stats
         stats_source = 'fandom' if has_fandom_stats else 'ayumilove_ocr'
+        
+        if debug:
+            print(f"[DEBUG] final_stats after priority selection: {final_stats}")
+            print(f"[DEBUG] stats_source: {stats_source}")
         
         # Info priority: Fandom > Ayumilove > HellHades
         final_info = ayumilove_data.get('info', {})
@@ -335,7 +339,7 @@ def main():
 
     for i, champ_name in enumerate(champ_names):
         print(f"Processing: {champ_name}")
-        data, source = try_all_scrapers(champ_name)
+        data, source = try_all_scrapers(champ_name, debug=False)  # Set to True for debugging
         output_path = os.path.join(out_dir, f"{champ_name.replace(' ', '_')}.json")
         if data:
             # If file exists, generate diff log
@@ -373,9 +377,12 @@ def main():
                 'ATK': 'ATK',
                 'DEF': 'DEF',
                 'SPD': 'SPD',
-                'C. RATE': 'C.RATE',
-                'C. DMG': 'C.DMG',
-                'RESIST': 'RES',
+                'C. RATE': 'C.RATE',  # Ayumilove OCR format
+                'C.RATE': 'C.RATE',   # Fandom format
+                'C. DMG': 'C.DMG',    # Ayumilove OCR format
+                'C.DMG': 'C.DMG',     # Fandom format
+                'RESIST': 'RES',      # Ayumilove OCR format
+                'RES': 'RES',         # Fandom format
                 'ACC': 'ACC'
             }
             for k, v in stats.items():
@@ -426,12 +433,14 @@ def main():
             
             # Generate JSON with optional table update
             in_fandom = data.get('in_fandom_table', False)
+            # Auto-update table if champion not in Fandom table (unless --update-table explicitly set)
+            should_update_table = not in_fandom if not args.update_table else (args.update_table and not in_fandom)
             generate_champion_json(
                 champ_name, 
                 scraped_data, 
                 template_path, 
                 output_path,
-                update_table=args.update_table and not in_fandom  # Only update if not already in table
+                update_table=should_update_table
             )
             print(f"Champion JSON for {champ_name} written to {output_path} (source: {source})")
             # Diff log
