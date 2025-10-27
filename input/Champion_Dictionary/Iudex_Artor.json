@@ -1,9 +1,9 @@
 {
-  "name": "Paragon",
-  "rarity": "Rare",
-  "affinity": "Void",
-  "faction": "Dark Elves",
-  "role": "Defense",
+  "name": "Iudex Artor",
+  "rarity": "Legendary",
+  "affinity": "Spirit",
+  "faction": "Sacred Order",
+  "role": "Support",
   "draft": true,
   "meta_ratings": {
     "clan_boss": "X/10",
@@ -16,20 +16,20 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": "Void",
-        "ATK": "\\-",
-        "DEF": "\\-",
-        "SPD": "\\-",
-        "C.RATE": "",
-        "C.DMG": "",
-        "RES": "",
+        "HP": 19980,
+        "ATK": 980,
+        "DEF": 1266,
+        "SPD": 102,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 15,
         "ACC": ""
       },
       "skills": [
         {
-          "name": "Power Drain",
+          "name": "Censer Whirl",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 50% chance of decreasing the target’s Turn Meter by 10%.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +5%\nDamage Multiplier: 3.9 DEF",
+          "description": "Attacks all enemies. Heals all allies by 5% of this Champion’s MAX HP.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +5%\nDamage Multiplier: 3.4 ATK",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -49,9 +49,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Damage Control (Cooldown: 4 turns)",
+          "name": "Incense of Inspiration (Cooldown: 5 turns)",
           "type": "A2",
-          "description": "Places a [Unkillable] buff and a 25% [Increase ATK] buff on a target ally for 2 turns.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
+          "description": "Places a 50% [Increase ATK] buff and a 25% [Strengthen] buff on all allies for 2 turns. Fills the Turn Meters of all allies by 15%.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -71,9 +71,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Life Shackles (Cooldown: 5 turns)",
+          "name": "Revival Mandate (Cooldown: 6 turns)",
           "type": "A3",
-          "description": "Attacks 3 times at random. Each hit has a 30% chance of placing a 100% [Heal Reduction] debuff and a 50% [Decrease ATK] debuff for 2 turns.\nLevel 2: Buff/Debuff Chance +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Cooldown -1\nDamage Multiplier: 2.6 DEF",
+          "description": "Revives an ally with 50% HP and 50% Turn Meter. Also places a 50% [Increase ATK] buff on that ally for 1 turn. Then activates the revived ally’s default skill, targeting the enemy with the lowest HP.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -93,9 +93,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "",
-          "type": "A4",
-          "description": "",
+          "name": "Sentenced to Life (Passive, Cooldown: 4 turns)",
+          "type": "Passive",
+          "description": "If an enemy is killed by an ally’s default skill after being revived by the [Revival Mandate] skill, resets the cooldown of the [Revival Mandate] skill.\nLevel 2: Cooldown -1",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -115,7 +115,7 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-      "aura": "Aura description (if any)",
+      "aura": "Increases Ally SPD in Arena by 25%",
       "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
   ],
@@ -168,14 +168,14 @@
   },
   "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
   "validation_metadata": {
-    "stat_confidence": 0,
-    "data_sources": "fandom+hellhades",
+    "stat_confidence": 87.5,
+    "data_sources": "ayumilove_ocr+hellhades",
     "source_priority": {
-      "stats": "fandom",
+      "stats": "ayumilove_ocr",
       "skills": "ayumilove",
       "info": "ayumilove"
     },
-    "ocr_notes": "Fandom: Primary stats source (validated), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "Ayumilove OCR: Primary stats source (7/8 extracted), Ayumilove: Skills source (canonical), HellHades: Info validation"
   },
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",

@@ -1,9 +1,9 @@
 {
-  "name": "Paragon",
-  "rarity": "Rare",
-  "affinity": "Void",
-  "faction": "Dark Elves",
-  "role": "Defense",
+  "name": "Skeletor",
+  "rarity": "Legendary",
+  "affinity": "Spirit",
+  "faction": "Knights Revenant",
+  "role": "Support",
   "draft": true,
   "meta_ratings": {
     "clan_boss": "X/10",
@@ -16,20 +16,20 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": "Void",
-        "ATK": "\\-",
-        "DEF": "\\-",
-        "SPD": "\\-",
-        "C.RATE": "",
-        "C.DMG": "",
-        "RES": "",
+        "HP": 21480,
+        "ATK": 1046,
+        "DEF": 4101,
+        "SPD": 103,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 15,
         "ACC": ""
       },
       "skills": [
         {
-          "name": "Power Drain",
+          "name": "Havoc Scythe",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 50% chance of decreasing the target’s Turn Meter by 10%.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +5%\nDamage Multiplier: 3.9 DEF",
+          "description": "Attacks 1 enemy 2 times. Each hit has a 75% chance of increasing the duration of a random debuff on the target by 1 turn.\nLevel 2: Damage +5%\nLevel 3: Buff/Debuff Chance +10%\nLevel 4: Damage +10%\nLevel 5: Buff/Debuff Chance +15%\nDamage Multiplier: 0.12 HP",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -49,9 +49,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Damage Control (Cooldown: 4 turns)",
+          "name": "Skull Comet (Cooldown: 5 turns)",
           "type": "A2",
-          "description": "Places a [Unkillable] buff and a 25% [Increase ATK] buff on a target ally for 2 turns.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
+          "description": "Attacks 1 enemy. Has a 75% chance of placing a [Petrification] debuff on the target for 1 turn. If the target is a Boss, places a 50% [Decrease ATK] debuff and a 30% [Decrease SPD] debuff for 2 turns instead. Whenever a [Petrification] debuff is removed or expires on an enemy, has a 50% chance to place a 30% [Decrease SPD] debuff on that enemy for 1 turn.\nLevel 2: Damage +15%\nLevel 3: Buff/Debuff Chance +10%\nLevel 4: Cooldown -1\nLevel 5: Buff/Debuff Chance +15%\nLevel 6: Cooldown -1\nDamage Multiplier: 0.32 HP",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -71,9 +71,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Life Shackles (Cooldown: 5 turns)",
+          "name": "Begone, Fools! (Cooldown: 5 turns)",
           "type": "A3",
-          "description": "Attacks 3 times at random. Each hit has a 30% chance of placing a 100% [Heal Reduction] debuff and a 50% [Decrease ATK] debuff for 2 turns.\nLevel 2: Buff/Debuff Chance +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Cooldown -1\nDamage Multiplier: 2.6 DEF",
+          "description": "Places a 50% [Increase ACC] buff on all allies for 2 turns. Also has a 75% chance to steal any [Block Debuffs] buffs and one other random buff from each enemy. Then decreases all enemies’ Turn Meters by 15%. If an enemy is from the Telerian League, decreases that enemy’s Turn Meter by 30% instead.\nLevel 2: Buff/Debuff Chance +10%\nLevel 3: Cooldown -1\nLevel 4: Buff/Debuff Chance +15%\nLevel 5: Cooldown -1",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -93,9 +93,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "",
-          "type": "A4",
-          "description": "",
+          "name": "Master of Evil (Passive)",
+          "type": "Passive",
+          "description": "Whenever this Champion attempts to place a debuff, steal a buff, decrease an enemy’s Turn Meter, or increase the duration of a debuff on an enemy, increases this Champion’s ACC by 20 for each buff on that enemy. Whenever this Champion is hit, has a 40% chance to place a 50% [Decrease RES] debuff on the attacker for 1 turn. The chance increases to 75% against Champions from the Telerian League.",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -115,7 +115,7 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-      "aura": "Aura description (if any)",
+      "aura": "Increases Ally ACC in All Battles by 60",
       "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
   ],
@@ -168,14 +168,14 @@
   },
   "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
   "validation_metadata": {
-    "stat_confidence": 0,
-    "data_sources": "fandom+hellhades",
+    "stat_confidence": 87.5,
+    "data_sources": "ayumilove_ocr+hellhades",
     "source_priority": {
-      "stats": "fandom",
+      "stats": "ayumilove_ocr",
       "skills": "ayumilove",
       "info": "ayumilove"
     },
-    "ocr_notes": "Fandom: Primary stats source (validated), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "Ayumilove OCR: Primary stats source (7/8 extracted), Ayumilove: Skills source (canonical), HellHades: Info validation"
   },
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",

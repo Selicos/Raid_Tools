@@ -1,9 +1,9 @@
 {
-  "name": "Paragon",
-  "rarity": "Rare",
-  "affinity": "Void",
-  "faction": "Dark Elves",
-  "role": "Defense",
+  "name": "High Khatun",
+  "rarity": "Epic",
+  "affinity": "Spirit",
+  "faction": "Barbarians",
+  "role": "Support",
   "draft": true,
   "meta_ratings": {
     "clan_boss": "X/10",
@@ -16,20 +16,20 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": "Void",
-        "ATK": "\\-",
-        "DEF": "\\-",
-        "SPD": "\\-",
-        "C.RATE": "",
-        "C.DMG": "",
-        "RES": "",
-        "ACC": ""
+        "HP": 16350,
+        "ATK": 1024,
+        "DEF": 1189,
+        "SPD": 104,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 0
       },
       "skills": [
         {
-          "name": "Power Drain",
+          "name": "Imperial Grace",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 50% chance of decreasing the target’s Turn Meter by 10%.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +5%\nDamage Multiplier: 3.9 DEF",
+          "description": "Attacks 1 enemy. Has a 25% chance of placing 30% [Decrease SPD] debuff for 2 turns.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +10%\nLevel 5: Buff/Debuff Chance +5%\nLevel 6: Buff/Debuff Chance +10%\nDamage Multiplier: 3.7 ATK",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -49,9 +49,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Damage Control (Cooldown: 4 turns)",
+          "name": "Rally the Horde (Cooldown: 4 turns)",
           "type": "A2",
-          "description": "Places a [Unkillable] buff and a 25% [Increase ATK] buff on a target ally for 2 turns.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
+          "description": "Fill the Turn Meters of all allies by 15% and places a 30% [Increase SPD] buff on all allies for 2 turns.\nLevel 2: Cooldown -1",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -71,9 +71,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Life Shackles (Cooldown: 5 turns)",
+          "name": "Shamanic Lightning (Cooldown: 5 turns)",
           "type": "A3",
-          "description": "Attacks 3 times at random. Each hit has a 30% chance of placing a 100% [Heal Reduction] debuff and a 50% [Decrease ATK] debuff for 2 turns.\nLevel 2: Buff/Debuff Chance +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Cooldown -1\nDamage Multiplier: 2.6 DEF",
+          "description": "Attacks all enemies. Has a 50% chance of decreasing the Turn Meters by 15%\nLevel 2: Damage +10%\nLevel 3: Damage +10%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Buff/Debuff Chance +15%\nLevel 6: Cooldown -1\nDamage Multiplier: 3.5 ATK",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -115,7 +115,7 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-      "aura": "Aura description (if any)",
+      "aura": "Increases Ally SPD in all Battles by 19%",
       "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
   ],
@@ -168,14 +168,14 @@
   },
   "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
   "validation_metadata": {
-    "stat_confidence": 0,
-    "data_sources": "fandom+hellhades",
+    "stat_confidence": 100.0,
+    "data_sources": "ayumilove_ocr+hellhades",
     "source_priority": {
-      "stats": "fandom",
+      "stats": "ayumilove_ocr",
       "skills": "ayumilove",
       "info": "ayumilove"
     },
-    "ocr_notes": "Fandom: Primary stats source (validated), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "Ayumilove OCR: Primary stats source (8/8 extracted), Ayumilove: Skills source (canonical), HellHades: Info validation"
   },
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",

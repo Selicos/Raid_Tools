@@ -1,9 +1,9 @@
 {
-  "name": "Paragon",
-  "rarity": "Rare",
+  "name": "Taya",
+  "rarity": "Epic",
   "affinity": "Void",
-  "faction": "Dark Elves",
-  "role": "Defense",
+  "faction": "Shadowkin",
+  "role": "Attack",
   "draft": true,
   "meta_ratings": {
     "clan_boss": "X/10",
@@ -16,20 +16,20 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": "Void",
-        "ATK": "\\-",
-        "DEF": "\\-",
-        "SPD": "\\-",
+        "HP": "",
+        "ATK": "",
+        "DEF": "",
+        "SPD": "",
         "C.RATE": "",
-        "C.DMG": "",
-        "RES": "",
+        "C.DMG": 60,
+        "RES": 30,
         "ACC": ""
       },
       "skills": [
         {
-          "name": "Power Drain",
+          "name": "Daze Powder",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 50% chance of decreasing the target’s Turn Meter by 10%.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +5%\nDamage Multiplier: 3.9 DEF",
+          "description": "Attacks 1 enemy. Has a 50% chance of placing a 50% [Decrease ACC] debuff for 2 turns.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Buff/Debuff Chance +5%\nLevel 5: Buff/Debuff Chance +5%\nDamage Multiplier: 3.65 ATK",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -49,9 +49,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Damage Control (Cooldown: 4 turns)",
+          "name": "Venom Kunai (Cooldown: 4 turns)",
           "type": "A2",
-          "description": "Places a [Unkillable] buff and a 25% [Increase ATK] buff on a target ally for 2 turns.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
+          "description": "Attacks 1 enemy 3 times. Each hit has a 75% chance of placing a 5% [Poison] debuff for 2 turns\nLevel 2: Damage +5%\nLevel 3: Damage +10%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Buff/Debuff Chance +15%\nLevel 6: Cooldown -1\nDamage Multiplier: 1.95 ATK",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -71,9 +71,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Life Shackles (Cooldown: 5 turns)",
+          "name": "Blood Boil (Cooldown: 4 turns)",
           "type": "A3",
-          "description": "Attacks 3 times at random. Each hit has a 30% chance of placing a 100% [Heal Reduction] debuff and a 50% [Decrease ATK] debuff for 2 turns.\nLevel 2: Buff/Debuff Chance +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Cooldown -1\nDamage Multiplier: 2.6 DEF",
+          "description": "Attacks 1 enemy. Has a 75% chance of instantly activating any [Poison] debuffs and [HP Burn] debuffs on the target. Also has a 75% chance of placing a 100% [Heal Reduction] debuff for 2 turns.\nLevel 2: Damage +10%\nLevel 3: Damage +10%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Buff/Debuff Chance +15%\nLevel 6: Cooldown -1\nDamage Multiplier: 5.5 ATK",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -115,7 +115,7 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-      "aura": "Aura description (if any)",
+      "aura": "Increases Ally ACC in all Battles by 50.",
       "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
   ],
@@ -168,14 +168,14 @@
   },
   "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
   "validation_metadata": {
-    "stat_confidence": 0,
-    "data_sources": "fandom+hellhades",
+    "stat_confidence": 25.0,
+    "data_sources": "ayumilove_ocr+hellhades",
     "source_priority": {
-      "stats": "fandom",
+      "stats": "ayumilove_ocr",
       "skills": "ayumilove",
       "info": "ayumilove"
     },
-    "ocr_notes": "Fandom: Primary stats source (validated), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "Ayumilove OCR: Primary stats source (2/8 extracted), Ayumilove: Skills source (canonical), HellHades: Info validation"
   },
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",

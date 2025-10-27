@@ -1,9 +1,9 @@
 {
-  "name": "Paragon",
-  "rarity": "Rare",
+  "name": "Skullcrown",
+  "rarity": "Epic",
   "affinity": "Void",
-  "faction": "Dark Elves",
-  "role": "Defense",
+  "faction": "Knights Revenant",
+  "role": "Attack",
   "draft": true,
   "meta_ratings": {
     "clan_boss": "X/10",
@@ -16,20 +16,20 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": "Void",
-        "ATK": "\\-",
-        "DEF": "\\-",
-        "SPD": "\\-",
-        "C.RATE": "",
+        "HP": 44,
+        "ATK": 1,
+        "DEF": 60,
+        "SPD": 30,
+        "C.RATE": 15,
         "C.DMG": "",
-        "RES": "",
-        "ACC": ""
+        "RES": 30,
+        "ACC": 0
       },
       "skills": [
         {
-          "name": "Power Drain",
+          "name": "Wave of Souls",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 50% chance of decreasing the target’s Turn Meter by 10%.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +5%\nDamage Multiplier: 3.9 DEF",
+          "description": "Attacks all enemies. Places an extra hit if the target has more than 50% HP.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +5%\nDamage Multiplier: 1.8 ATK",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -49,9 +49,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Damage Control (Cooldown: 4 turns)",
+          "name": "Corrupting Touch (Cooldown: 4 turns)",
           "type": "A2",
-          "description": "Places a [Unkillable] buff and a 25% [Increase ATK] buff on a target ally for 2 turns.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
+          "description": "Attacks all enemies. Has a 50% chance of placing a 25% [Weaken] debuff for 2 turns.\nLevel 2: Damage +10%\nLevel 3: Buff/Debuff Chance +10%\nLevel 4: Buff/Debuff Chance +15%\nLevel 5: Cooldown -1\nDamage Multiplier: 4.3 ATK",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -71,9 +71,31 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Life Shackles (Cooldown: 5 turns)",
-          "type": "A3",
-          "description": "Attacks 3 times at random. Each hit has a 30% chance of placing a 100% [Heal Reduction] debuff and a 50% [Decrease ATK] debuff for 2 turns.\nLevel 2: Buff/Debuff Chance +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Cooldown -1\nDamage Multiplier: 2.6 DEF",
+          "name": "Resilient (Passive, Cooldown: 6 turns)",
+          "type": "Passive",
+          "description": "Places an [Unkillable] buff on this Champion for 1 turn every time their HP drops below 20%.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "From Beyond (Passive, Cooldown: 8 turns)",
+          "type": "Passive",
+          "description": "Revives this Champion with 30% HP. [Only available when Sinesha is on the same team]\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -94,7 +116,7 @@
         },
         {
           "name": "",
-          "type": "A4",
+          "type": "A5",
           "description": "",
           "effects": [
             {
@@ -115,7 +137,7 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-      "aura": "Aura description (if any)",
+      "aura": "Increases Ally SPD in the Arena by 23%.",
       "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
   ],
@@ -168,14 +190,14 @@
   },
   "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
   "validation_metadata": {
-    "stat_confidence": 0,
-    "data_sources": "fandom+hellhades",
+    "stat_confidence": 87.5,
+    "data_sources": "ayumilove_ocr+hellhades",
     "source_priority": {
-      "stats": "fandom",
+      "stats": "ayumilove_ocr",
       "skills": "ayumilove",
       "info": "ayumilove"
     },
-    "ocr_notes": "Fandom: Primary stats source (validated), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "Ayumilove OCR: Primary stats source (7/8 extracted), Ayumilove: Skills source (canonical), HellHades: Info validation"
   },
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",

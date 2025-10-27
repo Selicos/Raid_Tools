@@ -1,8 +1,8 @@
 {
-  "name": "Paragon",
-  "rarity": "Rare",
-  "affinity": "Void",
-  "faction": "Dark Elves",
+  "name": "Norog",
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Skinwalkers",
   "role": "Defense",
   "draft": true,
   "meta_ratings": {
@@ -16,20 +16,20 @@
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": "Void",
-        "ATK": "\\-",
-        "DEF": "\\-",
-        "SPD": "\\-",
-        "C.RATE": "",
-        "C.DMG": "",
-        "RES": "",
+        "HP": 16845,
+        "ATK": 1156,
+        "DEF": 1299,
+        "SPD": 106,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 15,
         "ACC": ""
       },
       "skills": [
         {
-          "name": "Power Drain",
+          "name": "Maul",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 50% chance of decreasing the target’s Turn Meter by 10%.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +5%\nDamage Multiplier: 3.9 DEF",
+          "description": "Attacks 1 enemy. Has a 55% chance of decreasing the duration of all buffs on the target by 1 turn. Also has an 80% chance of placing a [Block Active Skills] debuff for 1 turn.\nLevel 2: Damage +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Damage +10%\nLevel 5: Buff/Debuff Chance +10%\nDamage Multiplier: 4 DEF",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -49,9 +49,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Damage Control (Cooldown: 4 turns)",
+          "name": "Ice Pillar (Cooldown: 4 turns)",
           "type": "A2",
-          "description": "Places a [Unkillable] buff and a 25% [Increase ATK] buff on a target ally for 2 turns.\nLevel 2: Cooldown -1\nLevel 3: Cooldown -1",
+          "description": "Attacks all enemies. Places a [Block Buffs] debuff for 2 turns and a 60% [Decrease DEF] debuff for 2 turns.\nLevel 2: Damage +10%\nLevel 3: Damage +10%\nLevel 4: Cooldown -1\nDamage Multiplier: 3.8 DEF",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -71,9 +71,9 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         },
         {
-          "name": "Life Shackles (Cooldown: 5 turns)",
-          "type": "A3",
-          "description": "Attacks 3 times at random. Each hit has a 30% chance of placing a 100% [Heal Reduction] debuff and a 50% [Decrease ATK] debuff for 2 turns.\nLevel 2: Buff/Debuff Chance +5%\nLevel 3: Buff/Debuff Chance +5%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Cooldown -1\nDamage Multiplier: 2.6 DEF",
+          "name": "Thick Skin (Passive)",
+          "type": "Passive",
+          "description": "Immune to [Stun], [Freeze], [Sleep], [Fear], [True Fear], [Provoke], [Sheep], and [Petrification] debuffs. Decreases the damage taken by all alies that are under 1 or more buffs by 15%. Decreases the damage taken by all allies that are under no active buffs by 25%.",
           "effects": [
             {
               "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
@@ -115,7 +115,7 @@
           "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
         }
       ],
-      "aura": "Aura description (if any)",
+      "aura": "Increases Ally DEF in Dungeons by 40%.",
       "comments": "Form-specific notes, edge cases, or user/community feedback."
     }
   ],
@@ -168,14 +168,14 @@
   },
   "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
   "validation_metadata": {
-    "stat_confidence": 0,
-    "data_sources": "fandom+hellhades",
+    "stat_confidence": 87.5,
+    "data_sources": "ayumilove_ocr+hellhades",
     "source_priority": {
-      "stats": "fandom",
+      "stats": "ayumilove_ocr",
       "skills": "ayumilove",
       "info": "ayumilove"
     },
-    "ocr_notes": "Fandom: Primary stats source (validated), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "Ayumilove OCR: Primary stats source (7/8 extracted), Ayumilove: Skills source (canonical), HellHades: Info validation"
   },
   "citations": [
     "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",
