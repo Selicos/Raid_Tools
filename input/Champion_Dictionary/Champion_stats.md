@@ -121,6 +121,7 @@
 
 
 
+
 | Name | Owned | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |
 | ---- | ----- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |
 | Abbess | 1 | The Sacred Order | Legendary | Attack | Force | 14040 | 1564 | 1079 | 96 | 0.15 | 0.63 | 30 | 10 | 1 | 1 | ATK | 0.34 | Faction Crypts | all |
@@ -137,7 +138,8 @@
 | Arbiter | 1 | High Elves | Legendary | Support / Speed Lead / Reviver | Void | 21135 | 1068 | 1101 | 110 | 0.15 | 0.50 | 30 | 10 | 1 | 1 | \- | \- | \- | \- |
 | Archmage Hellmut | 1 | Banner Lords | Epic | Support | Magic | 18825 | 925 | 1123 | 108 | 0.15 | 0.50 | 30 | 0 | 1 | 1 | \- | \- | \- | \- |
 | Artak | 1 | Orcs | Legendary | HP Burner / Debuffer / Soloist | Magic | 22140 | 936 | 1167 | 100 | 0.15 | 0.63 | 30 | 10 | 1 | 1 | \- | \- | \- | \- |
-| Astralon | 0 | Sacred Order | Legendary | Attack | Magic | 16845 | 1619 | 837 | 102 | 0.15 | 0.63 | 30 | 0 | \- | \- | \- | \- |
+| Astralon | 1 | Sacred Order | Legendary | Attack | Magic | 16845 | 1619 | 837 | 102 | 0.15 | 0.63 | 30 | 0 | \- | \- | \- | \- |
+| Astrolon | 0 | Faction Name | Legendary/Epic/Rare/etc. | Primary Role(s) | Magic/Force/Spirit/Void |  |  |  |  |  |  |  |  | \- | \- | \- | \- |
 | Athel | 0 | The Sacred Order | Rare | Attack | Magic | 13545 | 1189 | 936 | 104 | 0.15 | 0.57 | 30 | 0 | \- | \- | HP | 0.15 | all | all |
 | Atur | 0 | Barbarians | Epic | HP | Magic | 19980 | 826 | 1145 | 96 | 0.15 | 0.5 | 45 | 0 | \- | \- | \- | \- | \- | \- |
 | Avenger | 0 | High Elves | Rare | Attack | Magic | 12225 | 1398 | 815 | 104 | 0.15 | 0.57 | 30 | 0 | \- | \- | ATK | 0.17 | Faction Crypts | all |
@@ -317,6 +319,6 @@
 | Warcaster | 0 | Banner Lords | Epic | Support | Void | 20145 | 1013 | 947 | 106 | 0.15 | 0.5 | 30 | 0 | \- | \- | C. Rate | 0.23 | all | Void |
 | Warchief | 1 | Skinwalkers | Legendary | Defense | Force | \- | \- | \- | \- |
 | Warpriest | 0 | The Sacred Order | Rare | Support | Spirit | 18165 | 683 | 1134 | 97 | 0.15 | 0.5 | 30 | 0 | \- | \- | \- | \- | \- | \- |
-| White Dryad Nia | 0 | Sylvan Watchers | Epic | Defense | Void | 20145 | 683 |  | 98 | 0.15 | 0.50 | 45 | 0 | \- | \- | \- | \- |
+| White Dryad Nia | 0 | Sylvan Watchers | Epic | Defense | Void | 20145 | 683 | 98 | 0.15 | 0.50 | 45 | 0 | \- | \- | \- | \- |
 | Witness | 0 | The Sacred Order | Rare | Support | Magic | 14865 | 1134 | 903 | 103 | 0.15 | 0.5 | 30 | 0 | \- | \- | RES | 30 | Faction Crypts | all |
 | Yannica | 0 | High Elves | Legendary | Attack | Spirit | 15525 | 1487 | 1057 | 100 | 0.15 | 0.63 | 30 | 10 | \- | \- | ATK | 0.3 | all | all |
