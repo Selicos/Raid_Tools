@@ -4,26 +4,27 @@
   "affinity": "Force",
   "faction": "Skinwalkers",
   "role": "Defense",
-  "draft": true,
+  "owned": 1,
+  "draft": false,
   "meta_ratings": {
-    "clan_boss": "X/10",
-    "dungeons": "X/10",
-    "doom_tower": "X/10",
-    "arena": "X/10",
-    "faction_wars": "X/10"
+    "clan_boss": "3/10",
+    "dungeons": "5/10",
+    "doom_tower": "10/10",
+    "arena": "5/10",
+    "faction_wars": "7/10"
   },
   "forms": [
     {
       "form_name": "Base",
       "base_stats": {
-        "HP": "",
-        "ATK": "",
-        "DEF": "",
-        "SPD": "",
-        "C.RATE": "",
-        "C.DMG": "",
-        "RES": "",
-        "ACC": ""
+        "HP": 18990,
+        "ATK": 848,
+        "DEF": 1465,
+        "SPD": 102,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 50,
+        "ACC": 10
       },
       "skills": [
         {
@@ -120,71 +121,102 @@
     }
   ],
   "mechanics_tags": [
-    "Relevant mechanic tags"
+    "Provoke",
+    "AOE Provoke",
+    "Buff Steal",
+    "Shield",
+    "AOE Shield",
+    "Self Heal",
+    "Ally Heal",
+    "Conditional Heal",
+    "DEF Scaling",
+    "DEF Stacking",
+    "Multi-Hit",
+    "Lowest HP Target",
+    "Increase Accuracy Aura",
+    "Force Affinity"
   ],
   "stat_priorities": [
-    "Stat priorities for main content(s)",
-    "e.g. 100% Crit Rate, 250+ ACC"
+    "PRIMARY: DEF% (scales damage, Shield value, survivability)",
+    "SECONDARY: ACC 200-250+ (Provoke reliability, content-dependent)",
+    "TERTIARY: SPD 170-180+ (turn cycling, Magma Dragon uptime)",
+    "QUATERNARY: HP% 40k-50k+ (sustain, A1 healing scales MAX HP)",
+    "OPTIONAL: C.RATE 100%, C.DMG (Doom Tower nuker build)"
   ],
   "stat_priority_recommendations": {
-    "clan_boss": "e.g. 250+ ACC, 220+ SPD, 100% C.RATE",
-    "dungeons": "e.g. 220+ SPD, 200+ ACC, HP%/DEF% for survivability",
-    "arena": "e.g. 300+ SPD, 100% C.RATE, C.DMG, RES for tank"
+    "clan_boss": "200+ ACC, 170+ SPD, HP 40k+, DEF 3000+. Low priority (reflect nerf).",
+    "dungeons": "200+ ACC, 170+ SPD, DEF 3000+, HP 40k+. FK multi-hit, moderate utility.",
+    "doom_tower": "250+ ACC (Magma Dragon 100% uptime), 180+ SPD, DEF 4000+, HP 50k+, 100% C.RATE, C.DMG. TOP TIER Kuldath.",
+    "arena": "200+ ACC, 200+ SPD, DEF 3500+, HP 45k+, RES 200+. Provoke tank build. Moderate priority.",
+    "faction_wars": "220+ ACC, 180+ SPD, DEF 3500+, HP 45k+. Provoke + sustain. Good utility."
   },
   "recommended_gear": [
-    "Recommended sets and stats for main content(s)"
+    "Lifesteal + Speed (Doom Tower Magma Dragon): DEF%, C.RATE, C.DMG, ACC, SPD. Sustain via Lifesteal + A1 heals.",
+    "DEF + Speed (Doom Tower/Dungeons): DEF%, SPD, ACC, HP%. Max DEF for Shield value and damage.",
+    "Perception + Speed (High ACC): DEF%, ACC, SPD, HP%. Late-game Doom Tower Hard (250+ ACC Magma Dragon).",
+    "Retaliation + DEF (Arena cheese): DEF%, ACC, RES, HP%. Extra Provoke attempts on counterattack. Community-recommended.",
+    "Immortal + Speed (Faction Wars): DEF%, SPD, ACC, HP%. Passive regen + A1 heals = extreme sustain."
   ],
   "masteries": {
-    "clan_boss": [
-      "Recommended masteries for Clan Boss"
+    "doom_tower": [
+      "OFFENSE: Deadly Precision, Keen Strike, Single Out, Wrath of the Slain, Cycle of Violence, Bring It Down, Blood Shield, Giant Slayer (multi-hit A1)",
+      "DEFENSE: Defiant, Improved Parry, Bloodthirst, Delay Death, Retribution (extra Provoke attempts)",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel",
+      "Priority: Giant Slayer > Retribution > Delay Death > Pinpoint Accuracy. Magma Dragon specialist."
     ],
     "dungeons": [
-      "Recommended masteries for Dungeons"
-    ],
-    "arena": [
-      "Recommended masteries for Arena"
-    ],
-    "doom_tower": [
-      "Recommended masteries for Doom Tower"
+      "OFFENSE: Deadly Precision, Keen Strike, Single Out, Giant Slayer",
+      "DEFENSE: Defiant, Improved Parry, Bloodthirst, Delay Death",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel",
+      "Priority: Giant Slayer > Pinpoint Accuracy > Delay Death. FK multi-hit synergy."
     ],
     "faction_wars": [
-      "Recommended masteries for Faction Wars"
+      "OFFENSE: Deadly Precision, Keen Strike, Single Out, Giant Slayer",
+      "DEFENSE: Defiant, Improved Parry, Bloodthirst, Delay Death, Retribution",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Lore of Steel",
+      "Priority: Giant Slayer > Delay Death > Retribution. Sustain + Provoke."
     ],
     "general": [
-      "Offense/Support/Defense as needed"
+      "Defense tree masteries (Defiant, Improved Parry, Bloodthirst, Delay Death, Retribution)",
+      "Giant Slayer T6 for multi-hit A1 (3 hits)",
+      "Pinpoint Accuracy for debuff landing",
+      "Retribution for extra Provoke attempts (community-tested Arena/Retaliation builds)"
     ]
   },
   "blessings": [
-    "Recommended blessings for priority content(s)"
+    "Brimstone (PRIMARY - Doom Tower Magma Dragon): Debuffer role, increases Provoke damage synergy.",
+    "Polymorph (Arena): Transform on death cheese, second-chance Provoke tank.",
+    "Temporal Chains (Arena/Doom Tower): Turn meter control after Provoke lands, lockdown synergy."
   ],
   "ai_quirks": {
     "bad_ai": false,
-    "ai_issue_description": "Describe problematic skill priority, targeting, or auto-play behavior"
+    "ai_issue_description": "AI behavior generally good. Prioritizes A2 Marauder when available (correct for Provoke uptime). No major issues reported for Doom Tower auto-play Magma Dragon."
   },
   "cheese_strategy": {
-    "cheese_viable": false,
-    "cheese_type": "unkillable/max HP/passive sustain/etc.",
-    "cheese_mechanic_info": "If true, describe the cheese mechanic and requirements"
+    "cheese_viable": true,
+    "cheese_type": "Provoke lock, Retaliation spam",
+    "cheese_mechanic_info": "Magma Dragon 100% Provoke lock prevents devastating attacks (TOP TIER cheese). Arena Retaliation set: counterattack on hit = extra Provoke attempts, can lock entire teams with decent support. Historical reflect damage cheese nerfed Patch 1.14 (Dec 2019) - no longer viable for CB/Spider."
   },
-  "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
+  "mechanics_advisory": "NICHE SPECIALIST: TOP TIER Doom Tower Kuldath Magma Dragon (100% Provoke uptime prevents devastating attacks, community-rated god-tier boss killer). Historical context: Was strong CB utility until reflect damage nerfed Patch 1.14 (Dec 2019) → vault lord → redeemed by Doom Tower release Dec 2020. Patch 4.70 buff: A2 cooldown 4→3 (Oct 2021). Current role: Magma Dragon specialist, moderate utility elsewhere (Fire Knight multi-hit, Faction Wars sustain, Arena Provoke tank). Exceptional +60 ACC aura (all content). Build priority: Doom Tower (DEF/C.RATE/C.DMG Lifesteal), DEF scaling all skills (4.3 DEF A2, Shield value), Provoke synergy with Passive (+10% DEF per Provoked enemy). MUST BOOK A2 for 100% Magma Dragon uptime (cooldown 4→3 critical). Community consensus: 'God-like Kuldath', 'Vault lord everywhere else'. If you face Magma Dragon regularly (Doom Tower Hard rotation), S-rank specialist. Otherwise, B-rank situational.",
   "validation_metadata": {
-    "stat_confidence": 0.0,
-    "data_sources": "hellhades",
+    "stat_confidence": 100,
+    "data_sources": "user_screenshot, ayumilove, hellhades",
     "source_priority": {
-      "stats": "ayumilove_ocr",
+      "stats": "user_screenshot",
       "skills": "ayumilove",
-      "info": "ayumilove"
+      "info": "ayumilove_hellhades"
     },
-    "ocr_notes": "Ayumilove OCR: Primary stats source (0/8 extracted), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "User screenshot: 100% stat confidence (HP 18990, ATK 848, DEF 1465, SPD 102, C.RATE 15, C.DMG 50, RES 50, ACC 10). Skills from Ayumilove canonical, cross-validated HellHades."
   },
   "citations": [
-    "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",
-    "HellHades: https://hellhades.com/champions/champion-name/ (accessed YYYY-MM-DD)"
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-warchief-skill-mastery-equip-guide/ (accessed 2025-10-28)",
+    "HellHades: https://hellhades.com/champions/warchief/ (accessed 2025-10-28)",
+    "User screenshot (base stats, accessed 2025-10-28)"
   ],
-  "author": "Author Name (e.g., GitHub Copilot)",
-  "comments": "Top-level comments about the entry. For form-specific notes use forms[*].comments.",
+  "author": "GitHub Copilot",
+  "comments": "Legendary Defense Force, Skinwalkers faction. TOP TIER Doom Tower Kuldath Magma Dragon specialist (100% Provoke uptime). Historical vault lord post-reflect nerf (Patch 1.14 Dec 2019), redeemed by Doom Tower release (Dec 2020). Exceptional +60 ACC aura all content. MUST BOOK A2 for Magma Dragon viability. Community: 'God-like Kuldath', 'Vault lord everywhere else'.",
   "update_notes": {
-    "last_updated": "YYYY-MM-DD",
-    "last_patch": "Patch version/date and summary of change"
+    "last_updated": "2025-10-28",
+    "last_patch": "Patch 4.70 (Oct 2021): A2 Marauder cooldown reduced 4→3 turns. Patch 1.14 (Dec 2019): Reflect damage nerf (Lifesteal no longer works with reflect damage)."
   }
 }

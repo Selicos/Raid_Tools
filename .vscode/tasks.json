@@ -14,17 +14,59 @@
 			},
 			"problemMatcher": []
 		},
-		// task to run teh champion scraper tool and intake a champion.
+		// task to run the champion scraper tool and intake a champion.
 		{
 			"label": "Add Champion to Dictionary",
 			"type": "shell",
-			"command": ".\\.venv\\Scripts\\python.exe ./tools/champion_scraper/champion_scraper.py --champion ${input:ChampName} --rarity ${input:Rarity}",
+			"command": ".\\.venv\\Scripts\\python.exe Tools/champion_scraper/champion_scraper.py --champion ${input:ChampName} --rarity ${input:Rarity}",
 			"group": {
 				"kind": "build",
 				"isDefault": true
 			},
 			"presentation": {
 				"reveal": "always"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Validate Champion JSON",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe Tools/Validate/validate_json.py --schema ${file}",
+			"group": {
+				"kind": "test",
+				"isDefault": false
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Validate Champion JSON by Name",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe Tools/Validate/validate_json.py --schema input/Champion_Dictionary/${input:ChampionFileName}.json",
+			"group": {
+				"kind": "test",
+				"isDefault": false
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "Validate Any JSON by Path",
+			"type": "shell",
+			"command": ".\\.venv\\Scripts\\python.exe Tools/Validate/validate_json.py --schema ${input:JsonFilePath}",
+			"group": {
+				"kind": "test",
+				"isDefault": false
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "shared"
 			},
 			"problemMatcher": []
 		}	
@@ -41,6 +83,18 @@
 			"type": "promptString",
 			"description": "Enter rarity (6/Mythic, 5/Legendary, 4/Epic, 3/Rare)",
 			"default": "5"
+		},
+		{
+			"id": "ChampionFileName",
+			"type": "promptString",
+			"description": "Enter champion filename (without .json extension)",
+			"default": "Skullcrown"
+		},
+		{
+			"id": "JsonFilePath",
+			"type": "promptString",
+			"description": "Enter JSON file path (relative to project root)",
+			"default": "input/Champion_Dictionary/Skullcrown.json"
 		}
 	]
 }

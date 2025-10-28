@@ -1,0 +1,228 @@
+{
+  "name": "Stag Knight",
+  "rarity": "Epic",
+  "affinity": "Spirit",
+  "faction": "Banner Lords",
+  "role": "Support",
+  "meta_ratings": {
+    "clan_boss": "9/10",
+    "dungeons": "10/10",
+    "doom_tower": "10/10",
+    "arena": "9/10",
+    "faction_wars": "10/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 20970,
+        "ATK": 859,
+        "DEF": 1046,
+        "SPD": 107,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": ""
+      },
+      "skills": [
+        {
+          "name": "Spot Quarry",
+          "type": "A1",
+          "description": "Attacks 1 enemy 2 times. Each hit has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.0,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Hits twice, 4 ATK multiplier per hit (total 8 ATK if both hit). Effectively one of highest damage A1 skills in game."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease Speed",
+              "value": 30.0,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "30% base chance (50% booked). Each hit independent chance. Crucial for turn meter control (Spider, Fire Knight, Iron Twins)."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Multi-Hit",
+            "Decrease Speed",
+            "ATK Scaling",
+            "Turn Meter Control",
+            "Single Target"
+          ],
+          "book_value": "HIGH PRIORITY - Damage +25% total (5+5+10%), Debuff chance +20% (5+5+10% = 50% final). Essential for Fire Knight shield break and Spider/Iron Twins control.",
+          "notes": "Pairs with HP Burn teams (Spider). Does NOT place Decrease Speed on Clan Boss (immune). Passive triggers on resist. Base 30% → 50% booked."
+        },
+        {
+          "name": "Huntmaster",
+          "type": "A2",
+          "description": "Attacks all enemies. Has a 70% chance of placing a 60% [Decrease DEF] debuff and a 50% [Decrease ATK] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.5,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "AOE attack with 3.5 ATK multiplier. Lower multiplier than A1 but critical debuff delivery mechanism."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease Defense",
+              "value": 60.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "70% base chance (90% booked). Essential for amplifying team damage. Pairs with nukers (Seer, Royal Guard, Coldheart)."
+            },
+            {
+              "type": "debuff",
+              "stat": "Decrease Attack",
+              "value": 50.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "70% base chance (90% booked). Critical survivability buff. Reduces incoming damage by 50%. Clan Boss essential."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "AOE Damage",
+            "Decrease Defense",
+            "Decrease Attack",
+            "Debuffer",
+            "ATK Scaling",
+            "Clan Boss Core"
+          ],
+          "book_value": "HIGHEST PRIORITY - Damage +10%, Debuff chance +20% (5+10+10% = 90% final), Cooldown -1 turn. Book this first for 100% uptime (3-turn CD, 2-turn duration with Sniper mastery).",
+          "notes": "CORE ABILITY. Speed-tune to go first before nukers. Clan Boss: 100% uptime on Decrease ATK critical for survival past 5min mark. Dungeons: Enables Savage set nukers (Royal Guard, Seer, Coldheart). Passive triggers if debuffs resisted."
+        },
+        {
+          "name": "Lead the Pack",
+          "type": "Passive",
+          "description": "Places a 50% [Increase ACC] buff on an ally for 1 turn each time the ally has a debuff resisted by an enemy.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "Increase Accuracy",
+              "value": 50.0,
+              "per_hit": false,
+              "target": "single_ally",
+              "duration": "1 turn",
+              "notes": "Triggers when ANY ally debuff is RESISTED (not blocked by Block Debuffs). Helps debuffers land abilities in high-RES content (Doom Tower, Iron Twins). Does NOT trigger on self."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Passive",
+            "Increase Accuracy",
+            "Ally Support",
+            "Debuffer Synergy",
+            "Late Game Utility"
+          ],
+          "book_value": "N/A - Passive skill, cannot be booked.",
+          "notes": "Exceptional passive for late-game content (Agreth Nether Spider HP Burn, Iron Twins Decrease SPD spam). Pairs with debuff-heavy teams (Geomancer HP Burn, Poison explosion). Only triggers on RESIST, not Block Debuffs. Self-synergy: If A1/A2 resisted, boosts ally ACC for next turn."
+        }
+      ],
+      "aura": "None",
+      "comments": "Epic Spirit Support, Banner Lords. Battle Pass Gold exclusive (Feb 2020). 'Legendary in disguise' - community consensus. One of best Epic champions in game."
+    }
+  ],
+  "mechanics_tags": [
+    "AOE Damage",
+    "Decrease Defense",
+    "Decrease Attack",
+    "Decrease Speed",
+    "Increase Accuracy Passive",
+    "Debuffer",
+    "Turn Meter Control",
+    "Ally Support",
+    "Multi-Hit A1",
+    "ATK Scaling",
+    "Clan Boss Core",
+    "Dungeon Speed-Tuning"
+  ],
+  "stat_priorities": [
+    "SPD 220-250+",
+    "ACC 250-350+",
+    "HP 40k+ or DEF 2.5k+",
+    "ATK 2.5k+",
+    "C.RATE 85-100%",
+    "C.DMG 150-200%+"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "250-300+ ACC, 220+ SPD (speed-tuned), HP 40k+/DEF 2.5k+, ATK secondary",
+    "dungeons": "220-250+ SPD (speed-tune first), 200-250+ ACC, HP%/DEF% survivability",
+    "arena": "250-300+ SPD, 250+ ACC, HP%/DEF% or ATK%/C.DMG",
+    "doom_tower": "250-350+ ACC (high RES bosses), 220+ SPD, HP 50k+/DEF 3k+",
+    "faction_wars": "200+ ACC, 200+ SPD, HP%/DEF% focus",
+    "iron_twins": "350+ ACC (boss 400+ RES), 250+ SPD"
+  },
+  "recommended_gear": [
+    "Lifesteal + Speed (CB/Dungeons) - SPD/ACC primary, Warmaster sustain",
+    "Speed + Accuracy (All content) - SPD/ACC primary",
+    "Perception + Speed (High ACC) - Iron Twins, DT Hard",
+    "Cruel + Speed (Arena damage) - ATK%/C.RATE/C.DMG",
+    "Reflex + Speed (Cooldown reduction) - RNG-dependent"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Warmaster. SUPPORT: Pinpoint Accuracy, Master Hexer, Sniper (90%→100% debuff). Remove Arcane Celerity for Counter teams."
+    ],
+    "dungeons": [
+      "OFFENSE: Warmaster. SUPPORT: Pinpoint Accuracy, Arcane Celerity, Master Hexer, Sniper."
+    ],
+    "arena": [
+      "OFFENSE: Warmaster. SUPPORT: Pinpoint Accuracy, Master Hexer, Sniper."
+    ],
+    "doom_tower": [
+      "Same as dungeons. Sniper essential for high-RES bosses."
+    ],
+    "faction_wars": [
+      "Same as dungeons."
+    ],
+    "general": [
+      "ALWAYS: Warmaster (multi-hit A1), Sniper (100% debuff), Master Hexer (extend duration)."
+    ]
+  },
+  "blessings": [
+    "Cruelty (Debuffer) - Increases debuff duration",
+    "Phantom Touch (Damage) - Extra hit chance on A1",
+    "Brimstone (Debuffer) - HP Burn on debuff"
+  ],
+  "ai_quirks": {
+    "bad_ai": true,
+    "ai_issue_description": "Ice Golem: Will NOT use A2 while minions alive. Only uses A2 after minions killed. Requires manual play."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "N/A",
+    "cheese_mechanic_info": "Not cheese champion. Enables cheese for others (Decrease DEF for Seer, Savage nukers)."
+  },
+  "mechanics_advisory": "LEGENDARY IN DISGUISE - S-tier Epic. Core debuffer all content. Speed-tune FIRST before nukers. CB: 100% uptime Decrease ATK essential (book A2, use Sniper). Dungeons: Pairs with MAX HP dealers (Seer, Royal Guard, Coldheart). Spider: A1 Decrease SPD + HP Burn teams. Iron Twins: Passive ACC boost. Battle Pass Gold exclusive (Feb 2020).",
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-stag-knight-skill-mastery-equip-guide/ (accessed 2025-10-28)",
+    "HellHades: https://hellhades.com/champions/stag-knight/ (accessed 2025-10-28)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Epic Spirit Support, Banner Lords. Battle Pass Gold exclusive (Feb 2020). 'Legendary in disguise' - community consensus. S-tier Epic, top 5 all Epics. Lore: Forthwin 'Stag Knight', slew corrupt King Guarin with Arbiter's blessing.",
+  "update_notes": {
+    "last_updated": "2025-10-28",
+    "last_patch": "Patch V8.00 (2023-12-12): No changes to Stag Knight."
+  },
+  "validation_metadata": {
+    "stat_confidence": 100.0,
+    "stat_differences": [],
+    "data_sources": "scraper validated (4-source) + ayumilove + hellhades",
+    "ocr_notes": "Stats pre-validated by scraper. No OCR errors."
+  },
+  "draft": false
+}

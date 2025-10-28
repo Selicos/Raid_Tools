@@ -1,0 +1,282 @@
+{
+  "name": "Vogoth",
+  "rarity": "Epic",
+  "affinity": "Spirit",
+  "faction": "Undead Hordes",
+  "role": "HP",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "5/10",
+    "dungeons": "6/10",
+    "doom_tower": "9/10",
+    "arena": "6/10",
+    "faction_wars": "7/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 19320,
+        "ATK": 804,
+        "DEF": 1211,
+        "SPD": 89,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 15
+      },
+      "skills": [
+        {
+          "name": "Horrendous Strength",
+          "type": "A1",
+          "description": "Attacks 1 enemy 3 times. Each hit has a 30% chance of increasing the duration of 1 random debuff on the target by 1 turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.07,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "3 hits total, 0.07 HP multiplier per hit. Extremely low damage - focus is debuff extension, not damage output."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 30.0,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "1 turn extension",
+              "notes": "Each hit has 30% chance (40% when fully booked) to extend 1 random debuff duration by 1 turn. SYNERGY: Pairs with Poison/Decrease ATK/DEF/Weaken champions for Clan Boss. Works on ALL debuffs."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "HP Scaling",
+            "Multi-Hit (3x)",
+            "Debuff Extension",
+            "Clan Boss Synergy"
+          ],
+          "book_value": "LOW PRIORITY. Damage +15% total, debuff chance +10% (30% → 40%). Books only marginally improve debuff extension chance. A2 and Passive are higher priorities.",
+          "notes": "SYNERGY SKILL. Multi-hit + debuff extension makes Vogoth excellent for Clan Boss when paired with Poison (Frozen Banshee), Decrease ATK/DEF (Rhazin), Weaken champions. Also synergizes with Giant Slayer mastery (3 hits = 3 proc chances). Low damage is intentional - Vogoth is support/tank, not damage dealer."
+        },
+        {
+          "name": "Wave of Revulsion",
+          "type": "A2",
+          "description": "Attacks all enemies. Has a 60% chance of placing a [Provoke] debuff on all enemies for 1 turn. Also has a 60% chance of placing a 50% [Decrease ATK] debuff for 2 turns on targets who receive [Provoke] debuff from this skill.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 0.2,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "AOE attack, 0.2 HP multiplier. Minimal damage - skill's value is in debuff application."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 60.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "1 turn",
+              "notes": "60% chance (75% when fully booked) to place Provoke debuff on ALL enemies for 1 turn. Forces enemies to target Vogoth. Requires ACC to land."
+            },
+            {
+              "type": "debuff",
+              "stat": "ATK",
+              "value": 50.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "60% chance (75% when fully booked) to place 50% Decrease ATK for 2 turns ONLY on targets who received Provoke. Two-stage RNG: Provoke must land FIRST, then Decrease ATK has separate 60% check. CRITICAL for survivability in Clan Boss, Doom Tower, Arena Defense."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "HP Scaling",
+            "AOE Damage",
+            "Provoke",
+            "Decrease ATK",
+            "Tank Synergy",
+            "Bommal Counter"
+          ],
+          "book_value": "HIGH PRIORITY. Cooldown -1 (4 → 3 turns) is CRITICAL for consistent uptime. Debuff chance +15% total (60% → 75%). Essential for Bommal and CB survivability.",
+          "notes": "CORE DEFENSIVE SKILL. Provoke forces enemies to attack Vogoth, synergizing with his passive healing (Festering Dynamo heals allies when Vogoth is hit). Decrease ATK reduces incoming damage by 50%. Two-stage proc: Provoke must land before Decrease ATK can apply. BOMMAL SYNERGY: Provoke + Decrease ATK reduces Bommal damage significantly. Book to 3-turn CD for consistent protection."
+        },
+        {
+          "name": "Festering Dynamo (Passive)",
+          "type": "Passive",
+          "description": "Whenever this Champion is attacked, heals all allies by 50% of the damage received. Only heals by 25% of the damage received from boss attacks. This champion only receives half of the heal that all other allies receive.",
+          "effects": [
+            {
+              "type": "heal",
+              "stat": "NA",
+              "value": 50.0,
+              "per_hit": true,
+              "target": "aoe_allies",
+              "duration": "instant",
+              "notes": "Heals all allies for 50% of damage Vogoth receives from non-boss attacks. BOSS MECHANIC: Only 25% heal from boss attacks. Vogoth receives 50% of the heal allies get (so if allies heal 1000, Vogoth heals 500)."
+            },
+            {
+              "type": "heal",
+              "stat": "NA",
+              "value": 25.0,
+              "per_hit": true,
+              "target": "aoe_allies",
+              "duration": "instant",
+              "notes": "BOSS ATTACK HEAL: Only 25% of damage received from boss attacks heals allies (half of normal 50%). IMPORTANT: Dreadbombs are classified as ENEMIES (not bosses), so they trigger 50% heal."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Passive Healing",
+            "AOE Heal",
+            "Tank Synergy",
+            "Bommal Counter",
+            "Boss Mechanic"
+          ],
+          "book_value": "PASSIVE - cannot be booked.",
+          "notes": "GOD-TIER PASSIVE for Bommal Dreadhorn. Dreadbombs are ENEMIES (not bosses), triggering full 50% healing. Positioning matters: place Vogoth LAST in team for maximum AOE healing (enemies attack left-to-right). Synergizes with Provoke (A2) forcing enemies to attack Vogoth. Enables LIFESTEAL removal from team (allies heal from Vogoth's passive instead). Community tested: Guardian gear set does NOT stack with this passive. Pairs with Geomancer (Burn reflection + healing combo)."
+        },
+        {
+          "name": "Eerie Presence (Passive)",
+          "type": "Passive",
+          "description": "When attacked, places a Leech debuff on the attacker for 2 turns. If the attacker is under a Provoke debuff placed by this Champion, also has a 70% chance of increasing the cooldown of a random skill on the attacker by 2 turns. Occurs once per attack.",
+          "effects": [
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 100.0,
+              "per_hit": true,
+              "target": "attacker",
+              "duration": "2 turns",
+              "notes": "Automatically places Leech debuff on attacker for 2 turns. NO ACC CHECK NEEDED per tooltip (but community reports ACC still required - validate in testing). Leech heals attacker's allies based on damage dealt."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 70.0,
+              "per_hit": true,
+              "target": "attacker",
+              "duration": "2 turn cooldown increase",
+              "notes": "CONDITIONAL: If attacker is under Vogoth's Provoke debuff, 70% chance (100% when fully booked) to increase random skill cooldown by 2 turns. Requires books for +30% chance. SYNERGY: Pair with A2 Wave of Revulsion (Provoke) for consistent cooldown disruption."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Leech",
+            "Cooldown Increase",
+            "Passive Debuff",
+            "Provoke Synergy",
+            "Control"
+          ],
+          "book_value": "MEDIUM PRIORITY. Books add +30% cooldown increase chance (70% → 100%). Essential for PVP and Bommal control. 4 books total.",
+          "notes": "DUAL-PURPOSE PASSIVE. Leech applies automatically when attacked (no Provoke needed). Cooldown increase ONLY triggers if attacker under Vogoth's Provoke. BOMMAL SYNERGY: Provoke from A2 + cooldown increase disrupts Bombal's ability rotation. ARENA: Strong defensive passive against speed teams. Books recommended for 100% cooldown increase chance."
+        }
+      ],
+      "aura": "Increases Ally ACC in all Battles by 40.",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
+    }
+  ],
+  "mechanics_tags": [
+    "HP Scaling",
+    "Multi-Hit (3x)",
+    "Debuff Extension",
+    "AOE Damage",
+    "Provoke",
+    "Decrease ATK",
+    "Passive Healing",
+    "AOE Heal",
+    "Leech",
+    "Cooldown Increase",
+    "Tank",
+    "Support",
+    "Clan Boss Synergy",
+    "Bommal Counter",
+    "Control"
+  ],
+  "stat_priorities": [
+    "HP% 50k+ (70-80k for Dreadhorn)",
+    "ACC 225+ (debuffs must land)",
+    "DEF% 2000+ (survivability)",
+    "SPD 170-190 (Dreadhorn), 180-200 (general)",
+    "C.RATE 50%+ (Lifesteal healing)",
+    "RES 150+ (Arena Defense)"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "50k+ HP, 225 ACC, 2000 DEF, 171-191 SPD (speed tune dependent), 50% C.RATE for Lifesteal healing",
+    "dungeons": "50k+ HP, 225 ACC, 2000 DEF, 180-200 SPD, 50% C.RATE, C.DMG for faster clears",
+    "arena": "60k+ HP, 225 ACC, 2500 DEF, 150+ RES (tank role), Swift Parry set for counterattack"
+  },
+  "recommended_gear": [
+    "ALL-ROUNDER: Lifesteal + Speed (50k+ HP, 225 ACC, 2000 DEF, 180-200 SPD, 50% C.RATE)",
+    "DREADHORN TANK: Regeneration + Immortal (70-80k HP, 2800-3200 DEF, 170-190 SPD, 225 ACC, LAST positioning)",
+    "ARENA DEFENSE: Swift Parry + Immortal (60k+ HP, 2500 DEF, 150+ RES, counterattack synergy)",
+    "CLAN BOSS: Lifesteal + Accuracy (50k+ HP, 225 ACC, speed tuned 171-191, enables team Lifesteal removal)",
+    "BOMMAL: Speed + Accuracy (50k+ HP, 225 ACC, 2000 DEF, Provoke uptime focus)",
+    "WARNING: Guardian set does NOT stack with Festering Dynamo passive (community tested)"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "OFFENSE: Giant Slayer T6 (multi-hit A1 synergy)",
+      "Deadly Precision, Keen Strike, Heart of Glory, Single Out, Life Drinker, Bring it Down, Kill Streak",
+      "SUPPORT: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Evil Eye, Lore of Steel, Master Hexer (debuff extension synergy), Sniper",
+      "AVOID: Rapid Response (wastes turns on low-damage A1)"
+    ],
+    "dungeons": [
+      "Same as Clan Boss: Giant Slayer T6 + Master Hexer for debuff extension"
+    ],
+    "arena": [
+      "DEFENSE: Offense tree (Giant Slayer), Support tree (Master Hexer), Defense tree if tank role (Improved Parry, Bloodthirst)"
+    ],
+    "doom_tower": [
+      "BOMMAL: Giant Slayer T6, Master Hexer, Pinpoint Accuracy, Evil Eye, Sniper",
+      "DREADHORN: Same as Bommal, positioning LAST slot critical for max healing"
+    ],
+    "faction_wars": [
+      "Giant Slayer T6, Master Hexer, Pinpoint Accuracy, Evil Eye, Sniper (standard PVE build)"
+    ],
+    "general": [
+      "Offense tree (Giant Slayer T6)",
+      "Support tree (Pinpoint Accuracy, Master Hexer, Evil Eye, Sniper)",
+      "Defense tree optional (tank role)"
+    ]
+  },
+  "blessings": [
+    "PRIORITY: Miracle Heal (Healer role, synergizes with passive healing)",
+    "ALTERNATIVE: Chainbreaker (Arena Defense, RES stacking)",
+    "PVE: Cruelty (ACC bonus for debuff landing)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI prioritizes A2 Wave of Revulsion on cooldown (good behavior). No known AI issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Double Vogoth Dreadhorn cheese, Geomancer synergy, Lifesteal removal enabler",
+    "cheese_mechanic_info": "DOUBLE VOGOTH DREADHORN: Run 2 Vogoth to heal each other + team (positioning critical, both LAST slots). Community-validated cheese for Dreadhorn Hard. GEOMANCER SYNERGY: Provoke forces enemies to attack Vogoth → Geomancer Burn reflection → Vogoth heals team from damage received. LIFESTEAL REMOVAL: Vogoth's passive healing replaces Lifesteal gear for entire team (gear flexibility). POSITIONING: Last slot maximizes AOE healing (enemies attack left-to-right)."
+  },
+  "mechanics_advisory": "GOD-TIER BOMMAL HEALER. Dreadbombs classified as ENEMIES (not bosses), triggering full 50% healing per hit. Positioning LAST slot critical for max AOE healing. Provoke (A2) + Decrease ATK synergizes with passive healing (forces enemies to attack Vogoth with reduced damage). Leech passive (A4) triggers automatically when attacked. LIFESTEAL ENABLER: Team doesn't need Lifesteal gear (Vogoth heals allies). Pairs with Geomancer (Burn reflection + healing combo), Frozen Banshee (Poison extension A1), Rhazin (Decrease DEF/Weaken extension). Guardian set does NOT work/stack with passive (community tested). Book priority: A2 for Provoke uptime (HIGH), A4 for cooldown increase (MEDIUM), A1 for marginal debuff chance (LOW). Affinity-friendly CB solution (Spirit affinity neutral to most affinities). IRON TWINS: Strong choice for debuff extension + survivability.",
+  "validation_metadata": {
+    "stat_confidence": 100.0,
+    "data_sources": "fandom+ayumilove_ocr+hellhades",
+    "source_priority": {
+      "stats": "fandom",
+      "skills": "ayumilove",
+      "info": "ayumilove"
+    },
+    "ocr_notes": "Fandom: Primary stats source (validated), Ayumilove OCR vs Fandom: 100% match, Ayumilove: Skills source (canonical), HellHades: Info validation"
+  },
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-vogoth-skill-mastery-equip-guide/ (accessed 2025-10-27)",
+    "HellHades: https://hellhades.com/champions/vogoth/ (accessed 2025-10-27)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Epic HP Spirit support/tank, Undead Hordes faction. Released Patch 3.20 (January 2021). Community consensus: god-tier Bommal healer, affinity-friendly CB solution, enables Lifesteal removal from team. Specialized builds: All-rounder (Lifesteal 50k HP), Dreadhorn Tank (Regen+Immortal 70-80k HP). Pairs with Geomancer (Burn synergy), Frozen Banshee (Poison extension), Rhazin (Decrease DEF/Weaken extension). Guardian set does NOT work per community testing.",
+  "update_notes": {
+    "last_updated": "2025-10-27",
+    "last_patch": "Current as of 2025-10-27. No recent patches affecting Vogoth mechanics."
+  }
+}

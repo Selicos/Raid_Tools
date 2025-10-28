@@ -26,15 +26,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 | Name | Owned | Faction | Rarity | Role | Affinity | HP | ATK | DEF | SPD | C. Rate | C. DMG | RES | ACC | Aura | Aura magnitude | Aura location | Aura for |
 | ---- | ----- | ------- | ------ | ---- | -------- | -- | --- | --- | --- | ------- | ------ | --- | --- | ---- | -------------- | ------------- | -------- |
 | Abbess | 1 | The Sacred Order | Legendary | Attack | Force | 14040 | 1564 | 1079 | 96 | 0.15 | 0.63 | 30 | 10 | 1 | 1 | ATK | 0.34 | Faction Crypts | all |
@@ -217,7 +208,7 @@
 | Ugir the Wyrm Eater | 1 | Faction Name | Legendary/Epic/Rare/etc. | Primary Role(s) | Magic/Force/Spirit/Void | \- | \- | \- | \- |
 | Ultimate Galek | 0 | Orcs | Epic | Attack | Magic | 18195 | 11382 | 958 | 98 | 0.15 | 0.60 | 15 | \- | \- | \- | \- |
 | Underpriest Brogni | 1 | Dwarves | Legendary | Support / Shield / Cleanser | Magic | 22965 | 782 | 1266 | 100 | 0.15 | 0.50 | 90 | 0 | 1 | 1 | \- | \- | \- | \- |
-| Uugo | 1 | Ogryn Tribes | Epic | Support | Magic | \- | \- | \- | \- |
+| Uugo | 2 | Ogryn Tribes | Epic | Support | Magic | Magic | \- | \- | \- |  |  |  |  | \- | \- | \- | \- |
 | Valerie | 0 | Banner Lords | Rare | Support | Magic | 15855 | 969 | 1002 | 98 | 0.15 | 0.5 | 30 | 0 | \- | \- | HP | 0.22 | Faction Crypts | all |
 | Valkyrie | 0 | Barbarians | Legendary | Defence | Spirit | 17835 | 793 | 1597 | 104 | 0.15 | 0.5 | 50 | 0 | \- | \- | DEF | 0.33 | Faction Crypts | all |
 | Vanguard | 0 | Banner Lords | Rare | Defence | Void | 14700 | 958 | 1090 | 96 | 0.15 | 0.5 | 40 | 0 | \- | \- | RES | 30 | all | all |
@@ -229,8 +220,8 @@
 | Vogoth | 0 | Undead Hordes | Epic | HP | Spirit | 19320 | 804 | 1211 | 89 | 0.15 | 0.50 | 30 | 15 | \- | \- | \- | \- |
 | Vrask | 0 | Orcs | Epic | HP | Spirit | 23460 | 870 | 870 | 97 | 0.15 | 0.50 | 15 | \- | \- | \- | \- |
 | Warcaster | 0 | Banner Lords | Epic | Support | Void | 20145 | 1013 | 947 | 106 | 0.15 | 0.5 | 30 | 0 | \- | \- | C. Rate | 0.23 | all | Void |
-| Warchief | 1 | Skinwalkers | Legendary | Defense | Force | \- | \- | \- | \- |
+| Warchief | 1 | Skinwalkers | Legendary | Defense | Force | Force | 18990 | 848 | 1465 | 1.02 | 0.15 | 0.50 | 50 | \- | \- | \- | \- |
 | Warpriest | 0 | The Sacred Order | Rare | Support | Spirit | 18165 | 683 | 1134 | 97 | 0.15 | 0.5 | 30 | 0 | \- | \- | \- | \- | \- | \- |
-| White Dryad Nia | 0 | Sylvan Watchers | Epic | Defense | Void | 20145 | 683 |  | 98 | 0.15 | 0.50 | 45 | 0 | \- | \- | \- | \- |
+| White Dryad Nia | 0 | Sylvan Watchers | Epic | Defense | Void | 20145 | 683 | 98 | 0.15 | 0.50 | 45 | 0 | \- | \- | \- | \- |
 | Witness | 0 | The Sacred Order | Rare | Support | Magic | 14865 | 1134 | 903 | 103 | 0.15 | 0.5 | 30 | 0 | \- | \- | RES | 30 | Faction Crypts | all |
 | Yannica | 0 | High Elves | Legendary | Attack | Spirit | 15525 | 1487 | 1057 | 100 | 0.15 | 0.63 | 30 | 10 | \- | \- | ATK | 0.3 | all | all |

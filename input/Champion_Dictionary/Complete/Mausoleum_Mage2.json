@@ -22,7 +22,7 @@
         "SPD": 104,
         "C.RATE": 15,
         "C.DMG": 50,
-        "RES": 15,
+        "RES": 30,
         "ACC": 0
       },
       "skills": [

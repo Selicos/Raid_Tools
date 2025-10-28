@@ -526,9 +526,14 @@ Follow the unified standards in Sections 12 (Validation and Documentation Standa
 6. Update validation_metadata with correct sources and confidence
 7. Set `draft: false` when complete
 8. **Run validation**: `python Tools/Validate/validate_json.py --schema input/Champion_Dictionary/Champion_Name.json`
-9. **Sync table**: `python Tools/champion_scraper/scripts/sync_table_from_json.py`
-10. **Move to Complete/**: Only after validation passes
-11. **Delete any backup files** created during editing
+9. **Move to Complete/**: Only after validation passes
+10. **Delete any backup files** created during editing
+
+**Table Sync Workflow:**
+- **DO NOT sync after each champion** - this adds unnecessary operations and slows workflow
+- **Sync at end of session/batch**: Run `python Tools/champion_scraper/scripts/sync_table_from_json.py` once after completing multiple champions or before commit
+- **Batch efficiency**: Syncing 1 champion = 1 operation, syncing 10 champions = 1 operation (same cost)
+- **When to sync**: Before git commit, end of work session, or after completing a logical batch (5+ champions)
 
 **OCR Failure Handling:**
 - If OCR stats are scrambled (values like "Force", "1", swapped fields):
@@ -684,15 +689,20 @@ python Tools/Validate/validate_json.py --schema input/Champion_Dictionary/Champi
 
 **Step 6: Final Validation & Documentation**
 - Set `draft: false` when complete
-- **Run validation** (single operation): `python Tools/Validate/validate_json.py --schema input/Champion_Dictionary/Champion_Name.json`
-- **Sync stats table**: `python Tools/champion_scraper/scripts/sync_table_from_json.py`
+- **Run validation** using `run_in_terminal`:
+  1. **Automated in chat**: `python Tools/Validate/validate_json.py --schema input/Champion_Dictionary/Champion_Name.json`
+  2. **BENEFIT**: Fully automated, no user prompts required
+  3. **Manual alternative**: VS Code task "Validate Champion JSON by Name" (Ctrl+Shift+P → Run Task)
 - Cite all sources in `citations[]`
 - Set `author` and update `update_notes`
+- **After validation passes**: Move to Complete/ directory: `Move-Item "input/Champion_Dictionary/Champion_Name.json" "input/Champion_Dictionary/Complete/Champion_Name.json"`
+- **DO NOT sync stats table yet** - wait until end of session/batch (see Table Sync Workflow in Best Practices)
 
 **Efficiency Metrics:**
 - **Previous workflow**: ~40+ operations (serial data fetching, individual field updates)
-- **Optimized workflow**: ~20-22 operations (parallel fetching, atomic operations, batch updates, immediate validation)
-- **Time savings**: 45-50% reduction in tool calls
+- **Optimized workflow**: ~11-12 operations (parallel fetching, atomic operations, batch updates, immediate validation, deferred table sync)
+- **Time savings**: ~70% reduction in tool calls per champion
+- **Real execution validated**: Rathalos Blademaster completed in 12 operations (vs 42 for Mausoleum Mage pre-optimization)
 - **Quality maintained**: Same comprehensive coverage, validation, and documentation
 
 **Key Efficiency Improvements (from Mausoleum Mage analysis):**
@@ -1125,6 +1135,7 @@ Maintain a clear, chronological record of all major changes, updates, and versio
 
 | Date       | Author           | Description                                      | Sections/Files                |
 |------------|------------------|--------------------------------------------------|-------------------------------|
+| 2025-10-27 | GitHub Copilot   | **REAL EXECUTION VALIDATION**: Completed Rathalos Blademaster entry (Monster Hunter Legendary, LIMITED AVAILABILITY, boss killer specialist) using fully optimized workflow. **RESULT: 12 operations** (vs 11 simulated, 9% variance). Real execution breakdown: (1) parallel fetch, (2) A1 skill, (3) A3 skill, (4) Passive skill, (5) remove empty slots, (6) validate skills, (7) template reference, (8) batch comprehensive, (9) fix bracket error, (10) remove duplicate, (11) meta_ratings + draft:false, (12) final validation. **70% improvement validated** (12 ops vs 42 for Mausoleum Mage). Updated Step 6: moved stats table sync to end of session/batch (adds unnecessary operation per champion). Updated Completion Checklist: removed step 9 table sync, added Table Sync Workflow section. Updated efficiency metrics: ~11-12 operations per champion (70% reduction), real execution validated. | Section 7 (Champion Workflow, Step 6, Completion Checklist, Efficiency Metrics), Rathalos_Blademaster.json, copilot-instructions.md |
 | 2025-10-27 | GitHub Copilot   | **CRITICAL EFFICIENCY UPDATE**: Section 7 updated with 3 major improvements after Mausoleum Mage analysis: (1) ATOMIC OPERATIONS PRINCIPLE - separate skill population from skill removal (saves 4 ops/champion), (2) PRE-BATCH TEMPLATE REFERENCE - Step 4.5 added to prevent object/array bracket errors (saves 2-3 ops/champion), (3) DO NOT OVER-INVESTIGATE validation errors - trust validator line numbers, fix immediately (saves 4 ops/champion). Updated efficiency target: ~40+ operations → ~20-22 operations (45-50% reduction). Added 3 new common mistakes. Validated with Mausoleum Mage completion (Undead Hordes Epic Support, 9/10 Arena, CB stun blocker, Seer synergy). | Section 7 (Champion Workflow), copilot-instructions.md |
 | 2025-10-27 | GitHub Copilot   | Completed Mausoleum Mage entry (Undead Hordes Epic Force Support, CB stun blocker Block Debuffs 3-turn rotation, Seer synergy 3 buffs, full cleanse + heal). Community-rated far higher than official scores (HellHades 5/5 Arena/Hydra). Demonstrated workflow issues that led to efficiency analysis: A3 string replacement failed 3x (combining operations), object/array bracket confusion (stat_priority_recommendations), over-investigation debugging (5 ops instead of 1). Total: 42 operations vs target 20-22. Analysis led to critical workflow improvements. | Mausoleum_Mage.json |
 | 2025-10-27 | GitHub Copilot   | Completed Mistrider Daithi entry (Sylvan Watchers Epic Force, turn cycling specialist, 4/10 ratings, Faction Wars AOE Decrease DEF). Used optimized workflow with stat validation (user screenshot SPD 19 vs OCR error 15). ~27 operations (on target). Cheese viable: Relentless turn spam 7-8 consecutive turns in FW21. | Mistrider_Daithi.json |

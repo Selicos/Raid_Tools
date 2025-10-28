@@ -1,0 +1,249 @@
+{
+  "name": "Skullcrown",
+  "rarity": "Epic",
+  "affinity": "Void",
+  "faction": "Knights Revenant",
+  "role": "Attack",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "3/10",
+    "dungeons": "9/10",
+    "doom_tower": "8/10",
+    "arena": "10/10",
+    "faction_wars": "9/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 14535,
+        "ATK": 1509,
+        "DEF": 826,
+        "SPD": 96,
+        "C.RATE": 15,
+        "C.DMG": 60,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Wave of Souls",
+          "type": "A1",
+          "description": "Attacks all enemies. Places an extra hit if the target has more than 50% HP.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.8,
+              "per_hit": true,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "AOE attack, 1.8 ATK multiplier per hit. Low base damage but ARENA BLENDER CORE."
+            },
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.8,
+              "per_hit": true,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "CONDITIONAL EXTRA HIT: If target has >50% HP, places additional 1.8 ATK hit. BLENDER SYNERGY: With counterattack/Retaliation, can deal 2 hits per target per proc. WAVE CLEAR: Extremely effective at cleaning up waves in dungeons/Faction Wars."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "AOE Damage",
+            "Extra Hit Conditional",
+            "Arena Blender",
+            "Wave Clear",
+            "ATK Scaling"
+          ],
+          "book_value": "HIGH PRIORITY. Damage +20% total (4 books). ESSENTIAL for arena blender comp - maximizes damage output. Books significantly improve wave clear speed.",
+          "notes": "ARENA BLENDER CORE SKILL. Extra hit mechanic doubles damage potential against high HP targets. Synergizes with: Retaliation set (35% counter chance), Counterattack buffs, Stun set (dual proc chance). Community feedback: 'god-tier arena nuker', '7-second Brutal 12-3 farmer', 'game-changing champion'. Book A1 FIRST for blender comps."
+        },
+        {
+          "name": "Corrupting Touch",
+          "type": "A2",
+          "description": "Attacks all enemies. Has a 50% chance of placing a 25% Weaken debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.3,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "AOE attack, 4.3 ATK multiplier. High damage nuke - 2.4x multiplier of A1."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 50.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "50% chance (75% when fully booked) to place 25% Weaken debuff for 2 turns. Weaken reduces enemy damage and healing by 25%. SYNERGY: Pairs with Decrease DEF for maximum team survivability."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "AOE Damage",
+            "Weaken",
+            "High Multiplier Nuke",
+            "ATK Scaling"
+          ],
+          "book_value": "MEDIUM-HIGH PRIORITY. Damage +10%, Weaken chance +25% (50% → 75%), cooldown -1 (4 → 3 turns). Books improve debuff reliability for PVE content.",
+          "notes": "HIGH DAMAGE AOE NUKE. 4.3 ATK multiplier makes this one of highest damage AOE skills for Epic Attack champions. Weaken debuff adds utility for PVE (Faction Wars, Doom Tower). Book priority: A1 FIRST for blender, then A2 for dungeons/wave clear."
+        },
+        {
+          "name": "Resilient (Passive)",
+          "type": "Passive",
+          "description": "Places an Unkillable buff on this Champion for 1 turn every time their HP drops below 20%.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "NA",
+              "value": 100.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "1 turn",
+              "notes": "AUTOMATIC UNKILLABLE: When HP drops below 20%, places Unkillable buff on self for 1 turn (cannot die). Cooldown: 6 turns (4 turns when fully booked). ARENA SURVIVAL: Allows Skullcrown to tank initial nuke, then counter with A1 blender. GEAR SYNERGY: Pair with Retaliation/Savage for slow but deadly build."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": [
+            "Unkillable",
+            "Passive Buff",
+            "Self-Sustain",
+            "Arena Defense"
+          ],
+          "book_value": "MEDIUM PRIORITY. Cooldown -2 (6 → 4 turns). Books improve Unkillable uptime for extended fights. Essential for Faction Wars/Doom Tower survivability.",
+          "notes": "GAME-CHANGING PASSIVE for arena defense and PVE survivability. Allows Skullcrown to survive fatal damage, proc counterattack/Retaliation, then wipe enemies with A1. COMMUNITY FEEDBACK: 'Makes her nearly unkillable in arena', 'Essential for slow but deadly build'. Pairs with Lifesteal/Immortal sets for self-sustain between Unkillable procs."
+        },
+        {
+          "name": "From Beyond (Passive)",
+          "type": "Passive",
+          "description": "Revives this Champion with 30% HP. Only available when Sinesha is on the same team.",
+          "effects": [
+            {
+              "type": "revive",
+              "stat": "HP",
+              "value": 30.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "instant",
+              "notes": "CONDITIONAL REVIVE: Only triggers if Sinesha (her sister) is on team. Revives Skullcrown with 30% HP. Cooldown: 8 turns (6 turns when fully booked). NICHE SYNERGY: Skullcrown + Sinesha pairing for Faction Wars/Arena Defense. Sinesha also has resurrection mechanic (revive allies)."
+            }
+          ],
+          "cooldown_booked": 6,
+          "mechanics_tags": [
+            "Conditional Revive",
+            "Sinesha Synergy",
+            "Passive",
+            "Self-Revive"
+          ],
+          "book_value": "LOW PRIORITY. Cooldown -2 (8 → 6 turns). Requires Sinesha on team (niche). Most players don't book this passive unless running Skullcrown + Sinesha comp.",
+          "notes": "SISTER SYNERGY PASSIVE. Only active when Sinesha is on team. Community feedback: 'Fun but niche', 'Not essential for meta builds'. Sinesha (Epic HP Magic, Knights Revenant) has ally revive + Skullcrown synergy. Recommended for Faction Wars if both owned, otherwise skip booking."
+        }
+      ],
+      "aura": "Increases Ally SPD in Arena by 23%.",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
+    }
+  ],
+  "mechanics_tags": [
+    "AOE Damage",
+    "Extra Hit Conditional",
+    "Arena Blender",
+    "Wave Clear",
+    "ATK Scaling",
+    "Weaken",
+    "Unkillable",
+    "Self-Sustain",
+    "Conditional Revive",
+    "Sinesha Synergy",
+    "High Multiplier Nuke",
+    "Void Affinity"
+  ],
+  "stat_priorities": [
+    "ATK% (primary damage stat)",
+    "C.RATE 100% (maximize crit damage)",
+    "C.DMG 200%+ (arena nuke potential)",
+    "SPD 170-200 (arena blender), SPD 100-120 (slow Retaliation build)",
+    "ACC 150-200 (Weaken debuff for PVE)",
+    "HP%/DEF% (survivability for Unkillable proc)"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "NOT RECOMMENDED. Void affinity neutral but lacks CB utility (no Poison/Decrease DEF/ATK). Use only if lacking better options.",
+    "dungeons": "ATK% 3000+, C.RATE 100%, C.DMG 200%+, SPD 170-200, ACC 150-200 (Weaken for waves). Stun set for wave control, Savage for damage.",
+    "arena": "BLENDER: ATK% 3500+, C.RATE 100%, C.DMG 250%+, SPD 170-200 (speed tuned after booster), ACC NOT needed (pure damage). SLOW TANK: ATK% 3000+, C.RATE 100%, C.DMG 200%+, SPD 100-120, HP 40k+ (Unkillable survivability), Retaliation set."
+  },
+  "recommended_gear": [
+    "ARENA BLENDER: Savage + Cruel (ignore DEF, maximize damage), ATK% chest, C.DMG amulet, ATK% ring, SPD boots",
+    "SLOW TANK (Arena Defense): Retaliation + Immortal (counterattack + sustain), ATK% chest, C.DMG amulet, ATK% ring, SPD boots, 40k+ HP",
+    "DUNGEONS/FW (Wave Clear): Stun + Speed (crowd control + turn cycling), ATK% chest, C.DMG amulet, ATK% ring, SPD boots",
+    "CAMPAIGN FARMER: Lifesteal + Cruel (self-sustain + damage), ATK% chest, C.DMG amulet, ATK% ring, SPD boots (7-second Brutal 12-3)",
+    "DOOM TOWER: Stun + Accuracy (wave control + Weaken debuff), ATK%/HP% chest, C.DMG amulet, ATK% ring, SPD boots"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "NOT RECOMMENDED for CB. Use Warmaster T6 if forced to bring."
+    ],
+    "dungeons": [
+      "OFFENSE: Warmaster T6 (boss damage), Deadly Precision, Keen Strike, Grim Resolve, Single Out, Ruthless Ambush, Bring it Down, Cycle of Violence, Kill Streak, Methodical",
+      "DEFENSE: Tough Skin, Rejuvenation, Bloodthirst, Delay Death, Retribution (Lifesteal synergy)"
+    ],
+    "arena": [
+      "BLENDER: OFFENSE: Flawless Execution T6 (single-hit nuke), Deadly Precision, Keen Strike, Shield Breaker, Life Drinker, Whirlwind of Death, Bring it Down, Cycle of Violence, Kill Streak, Blood Shield",
+      "DEFENSE: Defiant, Rejuvenation, Resurgent, Delay Death, Retribution (Retaliation synergy)"
+    ],
+    "doom_tower": [
+      "OFFENSE: Warmaster T6, Deadly Precision, Keen Strike, Grim Resolve, Single Out, Bring it Down, Cycle of Violence, Kill Streak",
+      "DEFENSE: Tough Skin, Rejuvenation, Bloodthirst, Delay Death, Retribution"
+    ],
+    "faction_wars": [
+      "OFFENSE: Warmaster T6, Deadly Precision, Keen Strike, Grim Resolve, Single Out, Bring it Down, Cycle of Violence, Kill Streak",
+      "DEFENSE: Tough Skin, Rejuvenation, Bloodthirst, Delay Death, Retribution"
+    ],
+    "general": [
+      "ARENA: Flawless Execution T6 (single-hit focus)",
+      "PVE: Warmaster T6 (multi-hit proc)",
+      "DEFENSE tree: Retribution for Lifesteal/Retaliation synergy"
+    ]
+  },
+  "blessings": [
+    "PRIORITY: Crushing Rend (Damage Dealer role, arena blender synergy)",
+    "ALTERNATIVE: Brimstone (Void affinity, AOE damage boost)",
+    "PVE: Cruelty (ACC bonus for Weaken debuff)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI prioritizes A2 Corrupting Touch on cooldown (good behavior for damage). A1 used intelligently for extra hits. No known AI issues."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Unkillable passive + Retaliation counterattack blender",
+    "cheese_mechanic_info": "SLOW RETALIATION BUILD: Gear Skullcrown with low SPD (100-120), high ATK/C.DMG, Retaliation set. When enemies attack, 35% chance to counter with A1 Wave of Souls (AOE + extra hit). Resilient passive triggers Unkillable when HP <20%, allowing Skullcrown to survive nuke then wipe team with counterattacks. Community-validated: 'Makes her unkillable in arena defense', 'Wipes speed teams'. Pairs with Reviver (Arbiter, Duchess) for safety net."
+  },
+  "mechanics_advisory": "GOD-TIER ARENA NUKER. Community consensus: 'One of best Epic champions', '7-second Brutal 12-3 farmer', 'Game-changing for mid-game players'. A1 Wave of Souls is BLENDER CORE (extra hit mechanic doubles damage vs high HP targets). Resilient passive (Unkillable <20% HP) enables slow tank build or arena defense cheese. BOOK PRIORITY: A1 FIRST for blender (damage +20%), A2 second for dungeons (Weaken chance +25%, CD -1), Resilient last if using slow build. VOID AFFINITY: Never weak, always neutral (excellent for Faction Wars/Doom Tower). Pairs with: Sinesha (sister revive synergy), Counterattack buffs (Skullwalker, Valkyrie), Speed boosters (Arbiter, High Khatun). GEAR FLEXIBILITY: Savage (arena blender), Retaliation (slow tank), Stun (wave clear), Lifesteal (campaign farmer). Updated Patch V8.10 (2024-01-04) - no significant changes to mechanics.",
+  "validation_metadata": {
+    "stat_confidence": 100.0,
+    "data_sources": "user_screenshot+ayumilove+hellhades",
+    "source_priority": {
+      "stats": "user_screenshot",
+      "skills": "ayumilove",
+      "info": "ayumilove+hellhades"
+    },
+    "ocr_notes": "User screenshot: HP 14535, ATK 1509, DEF 826, SPD 96, C.RATE 15%, C.DMG 60%, RES 30, ACC 0. All 8 stats validated, 100% confidence."
+  },
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-skullcrown-skill-mastery-equip-guide/ (accessed 2025-10-27)",
+    "HellHades: https://hellhades.com/champions/skullcrown/ (accessed 2025-10-27)",
+    "User screenshot: Base stats validated 2025-10-27"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Epic Attack Void affinity champion, Knights Revenant faction. Community consensus: 'God-tier arena nuker', 'Best Epic Attack champion', '7-second Brutal 12-3 farmer'. Lore: Almira, daughter of necromancer Ulrath, joined Cult of K'Leth for immortality, became Skullcrown (enforcer wearing Demonspawn skull helm). Pairs with Sinesha (sister, conditional revive synergy). Void shard only (cannot be pulled from Sacred/Ancient). Book priority: A1 > A2 > Resilient (A1 first for blender damage +20%).",
+  "update_notes": {
+    "last_updated": "2025-10-27",
+    "last_patch": "Patch V8.10 (2024-01-04). No significant mechanics changes per Ayumilove update notes."
+  }
+}

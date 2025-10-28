@@ -1,0 +1,291 @@
+{
+  "name": "Rathalos Blademaster",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "Banner Lords",
+  "role": "Attack",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "5/10 (UNM capable with HP Burn synergy, irresistible Decrease DEF, 100% DEF ignore vs bosses, 200% damage 5th skill, pairs with Counterattack for cycling)",
+    "hydra": "5/10 (ABSOLUTE KILLER with HP Burn, +50% passive damage, 1M+ damage on 5th skill reported, 100% DEF ignore vs heads, irresistible Decrease DEF)",
+    "dungeons": "4/10 (Dragon/FK/IG/Spider boss killer, A2 AOE wave clear, Savage set mandatory, 100% DEF ignore vs bosses, +30% ATK aura)",
+    "doom_tower": "4/10 (Boss killer focus, irresistible Decrease DEF critical for bosses, HP Burn synergy for floors, 100% DEF ignore vs bosses)",
+    "arena": "5/10 (Arena Offense nuker, one-shot potential with A2, Helmsmasher DEF ignore stacking, Inc C.DMG/SPD self buff, slower nuker needs booster)",
+    "faction_wars": "4/10 (Banner Lords faction, boss killer with irresistible Decrease DEF, A2 AOE wave clear, 100% DEF ignore vs bosses, +30% ATK aura)"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 16185,
+        "ATK": 1487,
+        "DEF": 1013,
+        "SPD": 105,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 15,
+        "ACC": ""
+      },
+      "skills": [
+        {
+          "name": "Spirit Thrust",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 50% chance of placing a 60% [Decrease DEF] debuff for 2 turns. If the target is a Boss, this debuff cannot be resisted.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.2,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Single-target ATK-scaling damage. Damage Multiplier: 3.2 ATK (high for Attack role). Books increase damage +20% total."
+            },
+            {
+              "type": "debuff",
+              "stat": "DEF",
+              "value": 60.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "50% chance to place 60% Decrease DEF debuff for 2 turns (65% when booked). KEY MECHANIC: If target is a Boss, this debuff CANNOT BE RESISTED (bypasses accuracy check). Critical for boss fights."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Single Target Damage",
+            "Decrease DEF",
+            "Boss Killer",
+            "Irresistible Debuff"
+          ],
+          "book_value": "Medium priority. Damage +10% (2 books), Debuff chance +15% total (50% → 65%). A2 and A3 are higher priority.",
+          "notes": "KEY MECHANIC: Decrease DEF cannot be resisted against bosses. This bypasses the accuracy vs resist check entirely - only the 65% proc chance applies. Extremely valuable for Clan Boss, Hydra, Doom Tower bosses, dungeon bosses. Requires ACC for non-boss targets."
+        },
+        {
+          "name": "Spirit Step Slash (Cooldown: 4 turns)",
+          "type": "A2",
+          "description": "Attacks 1 enemy. Every second use of this skill in a Round will attack all enemies instead. Will also ignore 25% of the target’s DEF. If the target is a boss, will ignore 100% of the target’s DEF.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +10%\nLevel 5: Cooldown -1\nDamage Multiplier: 4 ATK",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "Overhead Slash",
+          "type": "A3",
+          "description": "Attacks all enemies. Before attacking, places a 30% [Increase C.DMG] buff and a 30% [Increase SPD] buff on this Champion for 2 turns.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "C.DMG",
+              "value": 30.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "2 turns",
+              "notes": "Places 30% Increase C.DMG buff on self BEFORE attacking. Lasts 2 turns. Increases crit damage output significantly."
+            },
+            {
+              "type": "buff",
+              "stat": "SPD",
+              "value": 30.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "2 turns",
+              "notes": "Places 30% Increase SPD buff on self BEFORE attacking. Lasts 2 turns. Enables faster skill cycling and passive stacking."
+            },
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.1,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "AOE ATK-scaling damage. Damage Multiplier: 4.1 ATK (highest multiplier in kit). Attacks after self-buffing. Books increase damage +20% total."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "AOE Damage",
+            "Increase C.DMG",
+            "Increase SPD",
+            "Self Buff",
+            "Skill Cycling"
+          ],
+          "book_value": "HIGH priority. Damage +20% total, Cooldown -1 (4 → 3 turns). Cooldown reduction critical for maintaining buffs uptime and faster passive cycling.",
+          "notes": "SETUP SKILL. Buffs self before attacking: Inc C.DMG boosts damage output, Inc SPD enables faster cycling to 5th skill passive. Highest multiplier (4.1 ATK). Book to 3-turn cooldown for more frequent use and better buff uptime. Pairs with A2 for devastating rotations."
+        },
+        {
+          "name": "Rathalos Mastery",
+          "type": "Passive",
+          "description": "Inflicts 50% more damage against targets under [HP Burn] debuffs. Receives 25% less damage from enemies under [HP Burn] debuffs. Every fifth skill used by this Champion deals 200% more damage.",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 50.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "permanent",
+              "notes": "+50% damage vs targets under HP Burn debuff (passive, always active). Synergizes with HP Burn champions (Venus, Ignatius, Drexthar, etc.). Multiplicative damage boost."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": -25.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "permanent",
+              "notes": "-25% damage taken from enemies under HP Burn debuff (passive, always active). Defensive utility vs HP Burn enemies."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 200.0,
+              "per_hit": false,
+              "target": "NA",
+              "duration": "permanent",
+              "notes": "Every 5th skill deals 200% MORE damage (3x damage total). Counter: A1, A1, A2, A3, A1 (5th) = 3x damage. Synergizes with Counterattack buff, Ally Join Attacks, Relentless set, Retaliation set, Retribution mastery for faster cycling."
+            }
+          ],
+          "cooldown_booked": 0,
+          "mechanics_tags": [
+            "HP Burn Synergy",
+            "Damage Amplification",
+            "Skill Cycling",
+            "Counterattack Synergy",
+            "Passive Damage"
+          ],
+          "book_value": "NA (passive, cannot be booked).",
+          "notes": "CORE MECHANIC. +50% vs HP Burn targets makes him devastating with HP Burn champions. 200% damage every 5th skill is HUGE - community reports 1M+ damage on 5th hit vs Hydra. Best cycling: Relentless set (extra turns, fastest) > Counterattack buff > Retaliation set > Retribution mastery. Pairs with Ally Join Attacks (Cardiel, Warlord, etc.) for more skill uses. Track skill count for optimal rotation."
+        }
+      ],
+      "aura": "Increases Ally ATK in Dungeons by 30%",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
+    }
+  ],
+  "mechanics_tags": [
+    "Boss Killer",
+    "Single Target Damage",
+    "AOE Damage",
+    "Decrease DEF",
+    "Irresistible Debuff",
+    "Ignore DEF",
+    "Increase C.DMG",
+    "Increase SPD",
+    "HP Burn Synergy",
+    "Damage Amplification",
+    "Skill Cycling",
+    "Counterattack Synergy",
+    "Passive Damage",
+    "Alternating Skill",
+    "Self Buff",
+    "ATK Scaling",
+    "Dungeons Aura"
+  ],
+  "stat_priorities": [
+    "100% C.RATE (critical for damage)",
+    "250+ C.DMG (maximize passive 5th skill damage)",
+    "4000+ ATK (high ATK scaling on all skills)",
+    "180+ SPD (cycle skills faster, not speed tuned)",
+    "150+ ACC (Decrease DEF vs non-boss targets, optional vs bosses due to irresistible)"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "100% C.RATE, 250+ C.DMG, 4000+ ATK, 171+ SPD (speed tune UNM), 150+ ACC (optional due to irresistible Decrease DEF). Pair with HP Burn and Decrease DEF champions.",
+    "hydra": "100% C.RATE, 300+ C.DMG, 4500+ ATK, 180+ SPD, 200+ ACC. Pair with HP Burn for +50% passive damage. Track skill count for 5th hit nuke (200% damage).",
+    "dungeons": "100% C.RATE, 250+ C.DMG, 4000+ ATK, 180+ SPD, 150+ ACC. Savage set mandatory for DEF ignore stacking (25% + 100% vs bosses = devastating).",
+    "arena": "100% C.RATE, 300+ C.DMG, 5000+ ATK, 200+ SPD (slower nuker, needs booster), Helmsmasher for DEF ignore stacking. One-shot potential with A2.",
+    "doom_tower": "100% C.RATE, 250+ C.DMG, 4000+ ATK, 180+ SPD, 200+ ACC. Irresistible Decrease DEF critical for bosses. Pair with HP Burn for floors.",
+    "faction_wars": "100% C.RATE, 250+ C.DMG, 4000+ ATK, 180+ SPD, 150+ ACC. Banner Lords faction. Wave clear with A2 AOE, boss killer with A1 irresistible."
+  },
+  "recommended_gear": [
+    "Savage + Cruel/Fatal/Lethal (late game, boss killer focus: 25% DEF ignore from Savage + 100% from A2 vs bosses = devastating, Cruel for C.DMG boost)",
+    "Lifesteal + Speed (early/mid, farmer build: solo sustain for Campaign Brutal 12-3, Minotaur farming)",
+    "Relentless + Cruel (skill cycling focus: extra turns for faster 5th skill passive, best for passive cycling per community)",
+    "Retaliation + Cruel (counterattack build: cycle to 5th skill faster, but slower than Relentless)",
+    "Stats: Gloves C.DMG, Chest ATK%, Boots SPD, all with C.RATE/C.DMG/ATK%/SPD substats"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "WARMASTER T6 (high multipliers = strong Warmaster procs)",
+      "Offense tree: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Life Drinker, Bring it Down, Cycle of Violence (skill cycling), Methodical, Kill Streak (skill cycling), Warmaster",
+      "Defense tree: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution (counterattacks for 5th skill cycling)"
+    ],
+    "hydra": [
+      "WARMASTER T6 (boss killer focus)",
+      "Same as Clan Boss: Cycle of Violence + Kill Streak for skill cycling, Retribution for counterattacks"
+    ],
+    "dungeons": [
+      "WARMASTER T6 (PVE general damage)",
+      "Same as Clan Boss"
+    ],
+    "arena": [
+      "HELMSMASHER T6 (DEF ignore stacking with Savage set and A2 for maximum penetration)",
+      "Offense tree: Deadly Precision, Keen Strike, Shield Breaker, Single Out, Ruthless Ambush, Cycle of Violence, Bring it Down, Kill Streak, Methodical, Helmsmasher",
+      "Defense tree: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution"
+    ],
+    "doom_tower": [
+      "WARMASTER T6 (boss focus)",
+      "Same as Clan Boss"
+    ],
+    "faction_wars": [
+      "WARMASTER T6",
+      "Same as Clan Boss"
+    ],
+    "general": [
+      "Cycle of Violence + Kill Streak for skill cycling to 5th passive faster",
+      "Retribution for counterattack cycling (pairs with Retaliation set or Counterattack buff)",
+      "Warmaster for PVE, Helmsmasher for PVP/Arena"
+    ]
+  },
+  "blessings": [
+    "Brimstone (Nuker, highest priority: +30% C.DMG, +15% C.RATE vs bosses)",
+    "Cruelty (Debuffer priority: +20% C.DMG, +10% damage vs debuffed, synergizes with Decrease DEF)",
+    "Crushing Rend (Damage Dealer: +10% DEF ignore, stacks with Savage/Helmsmasher/A2)",
+    "Phantom Touch (Damage Dealer: lifesteal on crit)",
+    "Soul Reap (Damage Dealer: heal on kill, for sustain)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI uses skills appropriately. A2 alternates ST/AOE automatically (every 2nd use). No major issues reported."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "DEF Ignore Stacking + HP Burn Synergy",
+    "cheese_mechanic_info": "CHEESE BUILD: Savage set (25% DEF ignore) + A2 (100% DEF ignore vs bosses) + Helmsmasher mastery = massive DEF penetration. Pair with HP Burn champions (Venus, Ignatius, Drexthar, Mordecai) for +50% passive damage. Use Relentless set or Counterattack buff to cycle to 5th skill faster for 200% damage nuke (community reports 1M+ damage vs Hydra). Irresistible Decrease DEF guarantees debuff vs bosses (bypasses ACC check). Track skill count: A1, A1, A2, A3, A1 (5th) = 3x damage."
+  },
+  "mechanics_advisory": "LIMITED AVAILABILITY - Monster Hunter collaboration event (Jan 9 - Mar 5 2024), 7-day login reward, cannot be summoned from shards. Boss killer specialist with unique mechanics: (1) Irresistible Decrease DEF vs bosses (bypasses accuracy check, only 65% proc applies), (2) 100% DEF ignore on A2 vs bosses (devastating with Savage set stacking), (3) +50% damage vs HP Burn targets (pair with Venus/Ignatius/Drexthar), (4) 200% damage every 5th skill (community: '1M+ damage', 'absolute killer vs Hydra'). Best build: Savage + Cruel, 100% C.RATE, 250+ C.DMG, Warmaster/Helmsmasher, Brimstone blessing. Cycling: Relentless set > Counterattack buff > Retaliation set > Retribution mastery. Book priority: 10/10 - A2 and A3 HIGH priority for damage + cooldown reduction (4 → 3 turns). Pairs with: HP Burn champions (Venus, Ignatius), Counterattack (Skullcrusher, Valkyrie), Ally Join Attacks (Cardiel, Warlord), Decrease DEF (Stag Knight, Rhazin). Community consensus: underrated, best Monster Hunter champion.",
+  "validation_metadata": {
+    "stat_confidence": 90,
+    "data_sources": "fandom (stats table) + ayumilove (OCR, skills, masteries, gear, blessings, community feedback) + hellhades (ratings, strategy, meta positioning)",
+    "source_priority": {
+      "stats": "fandom (base table), 7/8 stats validated (ACC inferred as 0 standard for Attack)",
+      "skills": "ayumilove (canonical skill multipliers 3.2/4/4.1 ATK, mechanics, book levels)",
+      "info": "fandom + ayumilove (faction Banner Lords, affinity Force, role Attack, Monster Hunter collaboration Jan-Mar 2024)"
+    },
+    "ocr_notes": "7/8 stats validated. ACC inferred as 0 (standard for Attack role, Decrease DEF requires ACC vs non-bosses but is irresistible vs bosses). stat_confidence 90 due to missing ACC stat."
+  },
+  "citations": [
+    "Fandom: https://raid-shadow-legends.fandom.com/wiki/Rathalos_Blademaster (accessed 2025-10-27)",
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-rathalos-blademaster-skill-mastery-equip-guide/ (accessed 2025-10-27)",
+    "HellHades: https://hellhades.com/champions/rathalos-blademaster/ (accessed 2025-10-27)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "LIMITED AVAILABILITY Monster Hunter collaboration champion (Jan-Mar 2024 event-exclusive). Boss killer specialist rated 5/5 CB, 5/5 Hydra, 5/5 Arena by HellHades. Community-rated far higher than you'd expect - 'absolute killer vs Hydra with HP burn', '1M+ damage on 5th skill', 'underrated', 'best Monster Hunter champ'. Unique irresistible Decrease DEF mechanic (bypasses accuracy vs bosses). Book priority 10/10 - must book A2 and A3 for cooldown reduction. Savage set mandatory for late game.",
+  "update_notes": {
+    "last_updated": "2025-10-27",
+    "last_patch": "Entry created 2025-10-27 using optimized workflow (parallel fetch, atomic skill operations, batch comprehensive update). Monster Hunter collaboration event Jan-Mar 2024. No known champion nerfs/buffs since release."
+  }
+}
