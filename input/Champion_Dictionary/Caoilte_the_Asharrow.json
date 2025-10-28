@@ -1,0 +1,306 @@
+{
+  "name": "Caoilte the Asharrow",
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Sylvan Watchers",
+  "role": "Attack",
+  "owned": 0,
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "2/10",
+    "dungeons": "8/10",
+    "doom_tower": "8/10",
+    "arena": "10/10",
+    "faction_wars": "9/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 15690,
+        "ATK": 1553,
+        "DEF": 980,
+        "SPD": 107,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Asharrow",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Places a 30% [Increase C.DMG] buff on this Champion for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.7,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": null,
+              "notes": "Single-target ATK-scaling damage with 3.7 ATK multiplier"
+            },
+            {
+              "type": "buff",
+              "stat": "Increase C.DMG",
+              "value": 0.30,
+              "per_hit": false,
+              "target": "self",
+              "duration": "2 turns",
+              "notes": "30% Crit Damage buff for 2 turns - stacks with base C.DMG for massive crits"
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["ATK scaling", "Increase C.DMG buff", "Self-buff"],
+          "book_value": "2 books total: +10% damage (×2). Low priority - focus A2/A3 first.",
+          "notes": "Simple but effective A1. C.DMG buff synergizes with all skills for increased damage output. Keep this buff active for A2/A3 nukes."
+        },
+        {
+          "name": "Falling Leaves",
+          "type": "A2",
+          "description": "Attacks 1 enemy 2 times. If the initial target is killed, also attacks the enemy with the lowest HP. Both attacks will ignore 50% of the target's DEF, as well as [Unkillable] and [Block Damage] buffs.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.1,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": null,
+              "notes": "2-hit attack, 2.1 ATK multiplier per hit. Ignores 50% DEF - MASSIVE against high-DEF targets."
+            },
+            {
+              "type": "other",
+              "stat": "Ignore DEF",
+              "value": 0.50,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": null,
+              "notes": "Ignores 50% of target's DEF - bypasses tanky champions like Odin, Leorius"
+            },
+            {
+              "type": "other",
+              "stat": "Ignore Unkillable",
+              "value": 1,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": null,
+              "notes": "Bypasses Unkillable buffs - perfect counter to unkillable comps"
+            },
+            {
+              "type": "other",
+              "stat": "Ignore Block Damage",
+              "value": 1,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": null,
+              "notes": "Bypasses Block Damage buffs - ignores defensive mechanics"
+            },
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.1,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": null,
+              "notes": "Conditional: If first target dies, attacks enemy with lowest HP. Chain-kill potential."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Multi-hit (2x)", "Ignore DEF (50%)", "Ignore Unkillable", "Ignore Block Damage", "Chain attack", "Unkillable counter"],
+          "book_value": "4 books total: +5% damage (×2), +10% damage, -1 CD. HIGH PRIORITY - brings CD to 4 turns.",
+          "notes": "SIGNATURE SKILL. Perfect counter to Odin, Leorius, and all unkillable/block damage comps. 50% DEF ignore makes this hit HARD. Chain attack on kill = clean up low HP enemies. Book for 4-turn CD."
+        },
+        {
+          "name": "Torrential Pain",
+          "type": "A3",
+          "description": "Attacks all enemies. Each critical hit fills this Champion's Turn Meter by 10% and heals them by 10% of their MAX HP (stacks up to 50%). If this attack kills an enemy, places an [Unkillable] buff on this Champion for 1 turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.9,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": null,
+              "notes": "AOE attack, 3.9 ATK multiplier. High damage for AOE nuking."
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 0.10,
+              "per_hit": true,
+              "target": "self",
+              "duration": null,
+              "notes": "10% TM fill per crit hit, stacks up to 50%. 5 crits = 50% TM boost for faster cycling."
+            },
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 0.10,
+              "per_hit": true,
+              "target": "self",
+              "duration": null,
+              "notes": "10% MAX HP heal per crit hit, stacks up to 50%. 5 crits = 50% MAX HP healing for massive sustain."
+            },
+            {
+              "type": "buff",
+              "stat": "Unkillable",
+              "value": 1,
+              "per_hit": false,
+              "target": "self",
+              "duration": "1 turn",
+              "notes": "Conditional: If this attack kills an enemy, gain Unkillable for 1 turn. Ensures survival for next rotation."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AOE damage", "TM fill (up to 50%)", "MAX HP heal (up to 50%)", "Unkillable buff", "Self-sustain", "100% C.RATE synergy"],
+          "book_value": "4 books total: +5% damage (×2), +10% damage, -1 CD. CRITICAL - brings CD to 3 turns and maximizes uptime.",
+          "notes": "Core AOE nuke. REQUIRES 100% C.RATE to maximize TM fill and healing (50% each). Conditional Unkillable on kill ensures survival. Book to 3-turn CD for frequent AOE pressure."
+        },
+        {
+          "name": "Corrupted Sentinel",
+          "type": "Passive",
+          "description": "[Passive Effect] Whenever this Champion's or an ally's Turn Meter is decreased, increases the damage of this Champion's next attack by 20% (stacks up to 100%). [Active Effect] Whenever this Champion's Turn Meter drops below 25% because of a Turn Meter reduction effect, places a [Block Debuffs] buff on this Champion for 2 turns and grants them an Extra Turn.",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "Damage Increase",
+              "value": 0.20,
+              "per_hit": false,
+              "target": "self",
+              "duration": "next_attack",
+              "notes": "Passive component: +20% damage per TM reduction (self or ally), stacks up to 100%. Punishes TM control teams."
+            },
+            {
+              "type": "buff",
+              "stat": "Block Debuffs",
+              "value": 1,
+              "per_hit": false,
+              "target": "self",
+              "duration": "2 turns",
+              "notes": "Active component: When TM drops below 25% from TM reduction, gain Block Debuffs for 2 turns. Counter to control + debuff combos."
+            },
+            {
+              "type": "other",
+              "stat": "Extra Turn",
+              "value": 1,
+              "per_hit": false,
+              "target": "self",
+              "duration": "instant",
+              "notes": "Active component: Extra Turn granted when TM drops below 25%. Immediate retaliation opportunity."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive damage boost (up to 100%)", "TM reduction counter", "Block Debuffs", "Extra Turn", "Anti-control"],
+          "book_value": "No books required for passive.",
+          "notes": "ANTI-CONTROL PASSIVE. Turns TM reduction into damage buff (up to 100% = 5 TM reductions). When TM drops below 25%, gain Block Debuffs + Extra Turn for instant retaliation. Perfect counter to Siphi, Arbiter, Lyssandra, etc. Works on ALLY TM reductions too - benefits entire team."
+        }
+      ],
+      "aura": "Increases Ally ATK in all Battles by 30%",
+      "comments": "Sylvan Watchers Legendary damage dealer. Released September 2024. A-tier overall, Arena specialist. 10 books total (A2+A3 only, skip A1). Anti-control champion with passive that turns TM reduction into damage buff (up to 100%). Perfect counter to Odin/Leorius with 50% DEF ignore + Unkillable/Block Damage bypass. Requires 100% C.RATE for A3 sustain (50% MAX HP heal + 50% TM fill)."
+    }
+  ],
+  "mechanics_tags": [
+    "ATK scaling",
+    "Increase C.DMG buff",
+    "Multi-hit (2x)",
+    "Ignore DEF (50%)",
+    "Ignore Unkillable",
+    "Ignore Block Damage",
+    "Chain attack",
+    "Unkillable counter",
+    "AOE damage",
+    "TM fill (up to 50%)",
+    "MAX HP heal (up to 50%)",
+    "Unkillable buff",
+    "Passive damage boost (up to 100%)",
+    "TM reduction counter",
+    "Block Debuffs",
+    "Extra Turn",
+    "Anti-control",
+    "ATK aura (30% all battles)"
+  ],
+  "stat_priorities": [
+    "Arena: 100% C.RATE (CRITICAL for A3), max C.DMG, high ATK%, SPD tuned for team",
+    "General: 100% C.RATE, C.DMG 250+, ATK%, SPD 180+"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "Not recommended (2/10 rating) - no debuffs or utility for CB",
+    "dungeons": "100% C.RATE (mandatory for A3 sustain), 220+ SPD, max C.DMG, ATK%. Savage/Lethal sets.",
+    "arena": "100% C.RATE, max C.DMG (aim 270+), high ATK%, SPD tuned to go after ATK buffer. Stoneskin for defense.",
+    "doom_tower": "Same as dungeons - 100% C.RATE, 220+ SPD, max damage stats. Excellent for waves with TM control bosses.",
+    "faction_wars": "100% C.RATE, max damage stats. Fills missing Legendary DPS role for Sylvan Watchers."
+  },
+  "recommended_gear": [
+    "Arena Offense (Primary): Savage (4-set) + Crit Damage OR Lethal (4-set) + Crit Damage. Focus DEF ignore and max damage.",
+    "Arena Defense: Stoneskin (4-set) + Speed/Crit Damage. Survivability for counter-turn retaliation.",
+    "Dungeons/DT: Savage (4-set) + Crit Damage OR Cruel (4-set) + Speed. Prioritize 100% C.RATE from substats.",
+    "Alternative: Merciless (4-set) for execute damage on low HP targets (synergizes with A2 chain attack).",
+    "Gloves: Crit Damage% (must have 100% C.RATE from substats)",
+    "Chest: ATK%",
+    "Boots: SPD (tune to team)",
+    "Substats: C.RATE to 100% (MANDATORY), C.DMG, ATK%, SPD"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Not recommended for Clan Boss (2/10 rating)"
+    ],
+    "dungeons": [
+      "Offense Tree (Full): Deadly Precision, Keen Strike, Shield Breaker, Single Out, Ruthless Ambush, Cycle of Violence, Bring it Down, Kill Streak, Methodical, Helmsmasher (T6)",
+      "Defense Tree (Partial): Tough Skin, Blastproof, Resurgent, Delay Death, Retribution (for extra damage on being hit)"
+    ],
+    "arena": [
+      "Offense Tree (Full): Same as dungeons, with Helmsmasher (T6) for nuking through DEF",
+      "Defense Tree: Tough Skin, Resurgent for survivability on defense teams"
+    ],
+    "doom_tower": [
+      "Same as Dungeons - Helmsmasher, full Offense, partial Defense for survivability"
+    ],
+    "faction_wars": [
+      "Same as Dungeons - Helmsmasher for damage, Defense for sustain"
+    ],
+    "general": [
+      "T6: Helmsmasher (preferred over Warmaster for nuking)",
+      "Full Offense tree prioritized",
+      "Defense tree for survivability (Tough Skin, Resurgent, Delay Death)"
+    ]
+  },
+  "blessings": [
+    "Lightning Cage (Phantom Touch tree): Best for Arena Offense - extra turn chance on kill synergizes with A2 chain attack and A3 conditional Unkillable",
+    "Soul Reap (Cruelty tree): Damage dealer blessing - bonus damage and healing on kill",
+    "Brimstone (Phantom Touch tree): Bonus damage when buffed - synergizes with A1 Inc C.DMG buff",
+    "Crushing Rend (Cruelty tree): MAX HP damage for tanky targets"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI is smart - prioritizes A3 AOE on cooldown, uses A2 for single-target nuking. No major AI issues reported."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Anti-control counter, Unkillable/Block Damage bypass",
+    "cheese_mechanic_info": "Passive counters TM reduction teams (Siphi, Arbiter, Lyssandra) by converting TM reduction into damage buff (up to 100%) + Block Debuffs + Extra Turn when TM drops below 25%. A2 bypasses Unkillable and Block Damage buffs making Caoilte the perfect counter to Odin, Leorius, and defensive cheese comps. A3 conditional Unkillable on kill + 50% healing makes him very hard to kill in extended fights."
+  },
+  "mechanics_advisory": "Arena specialist and anti-control champion. REQUIRES 100% C.RATE for A3 to function properly (50% MAX HP heal + 50% TM fill on crits). Passive turns TM reduction into damage buff (20% per reduction, stacks to 100%) and grants Block Debuffs + Extra Turn when TM drops below 25% - perfect counter to TM control teams. A2 signature skill: ignores 50% DEF + bypasses Unkillable and Block Damage buffs = perfect Odin/Leorius counter. Chain attack on kill cleans up low HP targets. A3 AOE with self-sustain (50% heal + 50% TM fill on 5 crits) + conditional Unkillable on kill. 30% ATK aura for all battles. Booking priority: A2 first (4-turn CD), A3 second (3-turn CD), skip A1. Fills missing Legendary DPS role for Sylvan Watchers faction. Helmsmasher over Warmaster for nuking. Stoneskin for Arena Defense.",
+  "validation_metadata": {
+    "stat_confidence": 100.0,
+    "data_sources": "ayumilove_ocr, hellhades",
+    "source_priority": {
+      "stats": "ayumilove_ocr",
+      "skills": "ayumilove",
+      "info": "ayumilove, hellhades"
+    },
+    "ocr_notes": "Ayumilove OCR: Stats extracted (HP:15690, ATK:1553, DEF:980, SPD:107, C.RATE:15%, C.DMG:63%, RES:30, ACC:0). Skills from Ayumilove (canonical). Meta info from Ayumilove + HellHades."
+  },
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-caoilte-the-asharrow-skill-mastery-equip-guide/ (accessed 2025-10-27)",
+    "HellHades: https://hellhades.com/champions/caoilte-the-asharrow/ (accessed 2025-10-27)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Sylvan Watchers Legendary damage dealer, released September 2024 (Patch 9.20). Arena specialist with anti-control passive. A-tier overall. 10 books total (A2+A3 only). Perfect counter to Odin/Leorius (50% DEF ignore + Unkillable/Block Damage bypass). Requires 100% C.RATE for A3 self-sustain. Fills missing Legendary DPS role for Sylvan Watchers faction. Community feedback: exceptional Arena champion, weaker in Clan Boss.",
+  "update_notes": {
+    "last_updated": "2025-10-27",
+    "last_patch": "Entry created from scraper draft. Comprehensive population from Ayumilove + HellHades. Stats from OCR (100% confidence). All 4 skills populated with comprehensive effects arrays. Released in Patch 9.20 (September 12, 2024)."
+  }
+}

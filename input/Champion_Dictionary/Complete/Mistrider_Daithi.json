@@ -1,0 +1,271 @@
+{
+  "name": "Mistrider Daithi",
+  "rarity": "Epic",
+  "affinity": "Force",
+  "faction": "Sylvan Watchers",
+  "role": "Attack",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "4/10",
+    "dungeons": "4/10",
+    "doom_tower": "4/10",
+    "arena": "4/10",
+    "faction_wars": "4/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 15360,
+        "ATK": 1376,
+        "DEF": 903,
+        "SPD": 97,
+        "C.RATE": "15%",
+        "C.DMG": "60%",
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Briar Arrows",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 50% chance of removing 1 random buff from the target. Also has a 10% chance of granting this Champion an Extra Turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.8,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Single-target ATK-scaling nuke. Damage Multiplier: 3.8 ATK. Books increase damage +20% total."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 50.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "50% chance to remove 1 random buff (60% when booked). Buff strip component."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 10.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "NA",
+              "notes": "10% chance to grant Extra Turn on use. RNG turn cycling mechanic. Synergizes with Relentless set for turn spam."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Single Target Damage",
+            "Buff Strip",
+            "Extra Turn"
+          ],
+          "book_value": "Medium priority. +20% damage, +10% buff strip chance (50% → 60%). Books improve reliability.",
+          "notes": "Turn cycling engine. Low Extra Turn chance but combos with Relentless set for multiple consecutive turns. Buff strip is conditional utility for Arena/FW."
+        },
+        {
+          "name": "Squall of Shafts",
+          "type": "A2",
+          "description": "Attacks all enemies. Has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns. Grants an Extra Turn if a 60% [Decrease DEF] debuff is placed on all enemies by this skill.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.9,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "AOE ATK-scaling damage. Damage Multiplier: 3.9 ATK. Books increase damage +20% total."
+            },
+            {
+              "type": "debuff",
+              "stat": "DEF",
+              "value": 60.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "75% chance to place 60% Decrease DEF debuff for 2 turns (100% when booked with +25% chance). Critical debuff for team damage amplification."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "NA",
+              "notes": "Grants Extra Turn if Decrease DEF is placed on ALL enemies. Conditional turn cycling. Requires high ACC to land on all targets."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": [
+            "AOE Damage",
+            "Decrease DEF",
+            "Extra Turn",
+            "Debuffer"
+          ],
+          "book_value": "HIGH PRIORITY. Cooldown unchanged at 4 turns, but +20% damage and +25% debuff chance (75% → 100%) massively improves reliability.",
+          "notes": "Core skill. Guaranteed Extra Turn if Decrease DEF lands on all enemies (when booked). Requires 250+ ACC for reliable placement. Pairs with A3 setup for 3-turn rotation (A3 → A2 → damage follow-up)."
+        },
+        {
+          "name": "Hunt the Mists",
+          "type": "A3",
+          "description": "Places a 50% [Increase ATK] buff and a 50% [Increase ACC] buff on this Champion for 3 turns, then grants an Extra Turn.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "ATK",
+              "value": 50.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "3 turns",
+              "notes": "50% Increase ATK buff for 3 turns. Damage amplification for A2 → follow-up rotation."
+            },
+            {
+              "type": "buff",
+              "stat": "ACC",
+              "value": 50.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "3 turns",
+              "notes": "50% Increase ACC buff for 3 turns. Ensures A2 Decrease DEF lands reliably. Reduces ACC stat requirements from gear."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "NA",
+              "notes": "Grants guaranteed Extra Turn after buffing. Setup skill for A3 → A2 → damage combo."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": [
+            "Increase ATK",
+            "Increase ACC",
+            "Extra Turn",
+            "Self-Buffer"
+          ],
+          "book_value": "HIGH PRIORITY. Cooldown reduction from 6 → 4 turns (-2 cooldown) dramatically improves uptime. Matches A2 cooldown for synchronized rotation.",
+          "notes": "Core setup skill. Guaranteed Extra Turn creates A3 → A2 combo (2 turns baseline). If A2 lands Decrease DEF on all enemies, grants 3rd turn for follow-up damage. Books reduce cooldown to 4 turns (matches A2), enabling synchronized rotation."
+        }
+      ],
+      "aura": "Increases Ally ACC in all Battles by 40",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
+    }
+  ],
+  "mechanics_tags": [
+    "Extra Turn",
+    "Turn Cycling",
+    "AOE Decrease DEF",
+    "Buff Strip",
+    "Self Buffer (Inc ATK)",
+    "Self Buffer (Inc ACC)",
+    "ATK Scaling Damage",
+    "Relentless Synergy",
+    "Faction Wars Specialist",
+    "Wave Clear",
+    "Debuffer",
+    "ACC Aura (All Battles)"
+  ],
+  "stat_priorities": [
+    "ATK% (primary damage stat)",
+    "C.RATE 100% (consistent damage)",
+    "C.DMG 200%+ (nuke potential)",
+    "ACC 250+ (debuff reliability, compensates for Inc ACC buff)",
+    "SPD 200+ (speed tuning, turn cycling)",
+    "HP%/DEF% if survivability needed (Epic squishiness)"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "ATK%, C.RATE 100%, C.DMG, ACC 250+, SPD 171-191 (speed tune). Not optimal for CB (better options available), but usable for debuff role.",
+    "dungeons": "ATK%, C.RATE 100%, C.DMG 200%+, ACC 250+, SPD 200+. Wave clear focus with AOE Decrease DEF. Relentless set recommended for turn spam.",
+    "arena": "ATK%, C.RATE 100%, C.DMG, ACC 250+, SPD 200+. Nuke setup with AOE Decrease DEF. Stoneskin for defense.",
+    "doom_tower": "ATK%, C.RATE 100%, C.DMG, ACC 250+, SPD 200+, HP%/DEF% for Hard waves. Relentless set for turn cycling on trash waves.",
+    "faction_wars": "ATK%, C.RATE 100%, C.DMG 200%+, ACC 250+, SPD 200+. PRIMARY USE CASE. Critical for Sylvan Watchers AOE Decrease DEF coverage. Relentless set breaks FW21."
+  },
+  "recommended_gear": [
+    "Relentless (PRIMARY RECOMMENDATION - turn spam synergy with Extra Turn mechanics, community reports 7-8 consecutive turns)",
+    "Savage (defense ignore stacking with Decrease DEF, high damage output)",
+    "Lethal (crit damage amplification for nuking)",
+    "Perception (ACC boost for debuff reliability, frees up other stats)",
+    "Cruel (nuker alternative)",
+    "Feral (nuker alternative)",
+    "Stoneskin (Arena defense survivability)",
+    "Speed set (turn cycling, speed tuning)",
+    "Accuracy set (debuff reliability if needed)"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "T6: Warmaster (Giant Slayer not recommended - low hit count)",
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Life Drinker, Bring it Down, Cycle of Violence, Methodical, Kill Streak, Warmaster",
+      "Defense: Defiant, Improved Parry, Bloodthirst, Delay Death, Retribution"
+    ],
+    "dungeons": [
+      "T6: Warmaster (wave clear + boss damage)",
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Whirlwind of Death, Ruthless Ambush, Cycle of Violence, Wrath of the Slain, Kill Streak, Warmaster",
+      "Defense: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence"
+    ],
+    "arena": [
+      "T6: Helmsmasher (nuker setup, ignore DEF stacking)",
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Whirlwind of Death, Ruthless Ambush, Cycle of Violence, Wrath of the Slain, Kill Streak, Helmsmasher",
+      "Defense: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution, Deterrence"
+    ],
+    "doom_tower": [
+      "T6: Warmaster (sustained damage for boss + waves)",
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Whirlwind of Death, Cycle of Violence, Wrath of the Slain, Kill Streak, Warmaster",
+      "Defense: Tough Skin, Resurgent, Delay Death, Retribution"
+    ],
+    "faction_wars": [
+      "T6: Warmaster or Helmsmasher (user preference - Warmaster for sustained, Helmsmasher for nuke)",
+      "Offense: Deadly Precision, Keen Strike, Heart of Glory, Whirlwind of Death, Ruthless Ambush, Cycle of Violence, Wrath of the Slain, Kill Streak, Warmaster/Helmsmasher",
+      "Defense: Tough Skin, Resurgent, Delay Death, Retribution"
+    ],
+    "general": [
+      "Full Offense tree priority for damage scaling",
+      "Defense tree: Survivability picks (Tough Skin, Delay Death, Retribution for squishy Epic)",
+      "T6 choice: Warmaster (general PVE) vs Helmsmasher (nuker Arena/FW)"
+    ]
+  },
+  "blessings": [
+    "Cruelty (Clan Boss - extra damage on Warmaster procs)",
+    "Crushing Rend (Dungeons/FW - damage dealer primary blessing, scales with ATK)",
+    "Chainbreaker (Debuffer alternative - if using as dedicated Decrease DEF role)",
+    "Brimstone (Arena - chain attack potential with Extra Turn cycling)",
+    "Faultless Defense (if survivability issues in Hard content)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI prioritizes A3 → A2 rotation correctly. No major AI issues reported. Auto-friendly for dungeons/FW."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Turn Spam / Relentless Extra Turn Loop",
+    "cheese_mechanic_info": "Relentless set + Extra Turn mechanics create turn spam loops. Community reports 7-8 consecutive turns in Faction Wars 21. Rotation: A3 (Inc ATK + Inc ACC + Extra Turn) → A2 (AOE Decrease DEF + Extra Turn if lands on all) → A1 spam with 10% Extra Turn chance. Relentless proc adds additional turns. Can solo carry FW waves with proper setup. Synergizes with Ronda for chaining. REQUIRES: 250+ ACC (to land Decrease DEF on all targets for A2 Extra Turn), 100% C.RATE, high C.DMG, books for A2/A3 cooldown sync (4 turns each)."
+  },
+  "mechanics_advisory": "Turn cycling specialist with AOE Decrease DEF. Core mechanic: A3 → A2 rotation grants 2 guaranteed turns, potentially 3 if Decrease DEF lands on all enemies. A1 adds 10% Extra Turn chance for sustain. Relentless set amplifies turn spam dramatically (community confirms 7-8 turn chains). Best use case: Sylvan Watchers Faction Wars (critical AOE Decrease DEF for faction). Also strong in dungeons/DT for wave clear. Not meta for CB/Arena but functional. Requires books (10 total, A2+A3 only) for cooldown sync and debuff reliability. Needs protection (squishy Epic base stats). Counters: Buff heavy teams (A1 buff strip conditional), RNG dependent (Extra Turn procs, debuff placement). Synergies: Ronda (Sylvan Watchers FW), any Inc ATK/ACC champions, TM boosters to cycle faster.",
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "user_screenshot+ayumilove+hellhades",
+    "source_priority": {
+      "stats": "user_screenshot",
+      "skills": "ayumilove",
+      "info": "ayumilove+hellhades"
+    },
+    "ocr_notes": "Stats manually provided by user via screenshot - 100% accurate. SPD corrected from OCR error (15 → 19). All other stats validated."
+  },
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-mistrider-daithi-skill-mastery-equip-guide/ (accessed 2025-10-27)",
+    "HellHades: https://hellhades.com/champions/mistrider-daithi/ (accessed 2025-10-27)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "B-tier Epic nuker with turn cycling mechanics. Primary use case: Sylvan Watchers Faction Wars (AOE Decrease DEF critical for faction). Community feedback: 'Absolutely destroys FW 20-21', '7-8 consecutive turns in Relentless', 'significantly improved clear times in Ice Golem, Dragon, FK'. Relentless set is MANDATORY for full potential. Requires full books (10 total) for A2/A3 cooldown sync. Compared to Whisper (similar turn cycling kit). October 2022 release (Patch 6.20). Not meta for endgame CB/Arena but excels in niche (FW, dungeon wave clear).",
+  "update_notes": {
+    "last_updated": "2025-10-27",
+    "last_patch": "Patch 6.20 (October 27, 2022) - Champion release with Sylvan Watchers faction"
+  }
+}

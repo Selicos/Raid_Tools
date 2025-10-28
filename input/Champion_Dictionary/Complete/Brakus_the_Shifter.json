@@ -1,0 +1,291 @@
+{
+  "name": "Brakus the Shifter",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "Skinwalkers",
+  "role": "Attack",
+  "owned": 1,
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "2/10",
+    "dungeons": "8/10",
+    "doom_tower": "7/10",
+    "arena": "9/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": "19815",
+        "ATK": "1465",
+        "DEF": "793",
+        "SPD": "101",
+        "C.RATE": "15%",
+        "C.DMG": "63%",
+        "RES": "40",
+        "ACC": "0"
+      },
+      "skills": [
+        {
+          "name": "Innocent Blood",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Heals this Champion by 15% of the damage inflicted.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 3.75,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": null,
+              "notes": "Single-target ATK-scaling damage with 3.75 ATK multiplier"
+            },
+            {
+              "type": "heal",
+              "stat": "damage_dealt",
+              "value": 0.15,
+              "per_hit": false,
+              "target": "self",
+              "duration": null,
+              "notes": "Self-heal 15% of damage inflicted, provides consistent sustain"
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["ATK scaling", "Self-heal", "Sustain"],
+          "book_value": "4 books total: +5% damage (×3), +10% damage. Decent value for sustain improvement.",
+          "notes": "Consistent self-healing every turn. Good sustain for prolonged fights. Respectable 3.75 ATK multiplier for A1."
+        },
+        {
+          "name": "Full Moon Rampage",
+          "type": "A2",
+          "description": "Attacks 1 enemy 6 times. Heals this Champion by 25% of the damage inflicted. Heals this Champion by 50% of the damage inflicted instead if the target is under a [Fear] or a [True Fear] debuff. After the first hit, has a 75% chance of placing a 25% [Weaken] debuff for 2 turns.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 0.97,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": null,
+              "notes": "6-hit attack, 0.97 ATK multiplier per hit. Excellent for Fire Knight shield, Warmaster procs twice per use."
+            },
+            {
+              "type": "heal",
+              "stat": "damage_dealt",
+              "value": 0.25,
+              "per_hit": false,
+              "target": "self",
+              "duration": null,
+              "notes": "Base heal 25% of total damage inflicted. Doubles to 50% if target has Fear or True Fear debuff - massive sustain."
+            },
+            {
+              "type": "debuff",
+              "stat": "Weaken",
+              "value": 0.25,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "75% chance unbooked, 100% booked. Applied after first hit. 25% reduction to ATK and DEF."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["Multi-hit (6x)", "Conditional heal", "Weaken", "Fire Knight specialist", "Warmaster synergy"],
+          "book_value": "7 books total: +10% damage, +15% damage, +10% debuff chance, +15% debuff chance, -1 CD (×2). CRITICAL - brings CD to 3 turns and Weaken to 100%.",
+          "notes": "Core nuking skill. 6 hits = 2× Warmaster procs for massive damage. Conditional 50% heal makes Brakus nearly unkillable vs Feared targets. Book to 100% Weaken for consistency."
+        },
+        {
+          "name": "Hunter's Howl",
+          "type": "A3",
+          "description": "Places a 50% [Increase ATK] buff on all allies for 3 turns, then attacks 1 enemy 3 times. Each hit has a 50% chance of placing a [True Fear] debuff for 1 turn. Has a 50% chance of placing a [Fear] debuff on 2 random enemies for 1 turn if the [True Fear] debuff is placed.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "Increase ATK",
+              "value": 0.50,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "3 turns",
+              "notes": "50% ATK buff placed BEFORE damage, affects all allies including self. Excellent for burst setups."
+            },
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 2.3,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": null,
+              "notes": "3-hit attack, 2.3 ATK multiplier per hit. Hits AFTER placing Inc ATK buff for self-boosted damage."
+            },
+            {
+              "type": "debuff",
+              "stat": "True Fear",
+              "value": 1,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "1 turn",
+              "notes": "50% chance unbooked, 75% booked PER HIT. True Fear = cannot use skills OR A1. More powerful than Fear."
+            },
+            {
+              "type": "debuff",
+              "stat": "Fear",
+              "value": 1,
+              "per_hit": false,
+              "target": "random_enemy",
+              "duration": "1 turn",
+              "notes": "Conditional: Only triggers if True Fear lands. 50% chance to Fear 2 random enemies. Fear = cannot use skills, can A1."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Team ATK buff", "True Fear", "Fear", "Multi-hit (3x)", "AOE control", "Synergy with A2"],
+          "book_value": "4 books total: +10% damage, +10% debuff chance, +15% debuff chance, -1 CD. HIGH VALUE - brings True Fear to 75% per hit and CD to 4 turns.",
+          "notes": "Signature skill. Inc ATK buff applies BEFORE damage for self-boosted nuke. True Fear is superior to Fear (blocks A1 too). 3 hits = up to 3 True Fear chances. Conditional Fear spread provides AOE control. Synergizes with A2's conditional 50% heal."
+        },
+        {
+          "name": "Beast Mode",
+          "type": "Passive",
+          "description": "Passive Effect: Damage increases by 40% when this Champion's HP drops below 40%. Active Effect: Revives this Champion with 20% HP when killed. Immediately grants an Extra Turn.",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "Damage Increase",
+              "value": 0.40,
+              "per_hit": false,
+              "target": "self",
+              "duration": "permanent_passive",
+              "notes": "Passive component: 40% damage increase when HP <40%. Always active below threshold."
+            },
+            {
+              "type": "revive",
+              "stat": "NA",
+              "value": 0.20,
+              "per_hit": false,
+              "target": "self",
+              "duration": "instant",
+              "notes": "Active component: Self-revive at 20% HP on death. 7 turn CD unbooked, 5 turns booked."
+            },
+            {
+              "type": "other",
+              "stat": "Extra Turn",
+              "value": 1,
+              "per_hit": false,
+              "target": "self",
+              "duration": "instant",
+              "notes": "Extra turn granted immediately upon revival. Allows instant A3 nuke or escape."
+            }
+          ],
+          "cooldown_booked": 5,
+          "mechanics_tags": ["Passive damage boost", "Self-revive", "Extra Turn", "Arena gimmick", "Swift Parry synergy"],
+          "book_value": "2 books total: -1 CD (×2). CRITICAL for Arena - reduces revive CD from 7 to 5 turns.",
+          "notes": "Signature passive. 40% damage boost makes Brakus hit HARD below 40% HP. Revive + Extra Turn = instant second chance for A3 nuke. Swift Parry set recommended for Arena: proc chance to 1-shot enemy on revive turn. Resurrection gimmick less useful in end-game Clan Boss but enables cheese revive comps."
+        }
+      ],
+      "aura": "Increases Ally SPD in Arena battles by 19%",
+      "comments": "Halloween 2019 'EXTREME FUSION' - intense grind event. Arena nuker with self-revive gimmick. 16 legendary books total (4+7+4+2). Fully booked recommended for Arena (100% Weaken, 75% True Fear, 5-turn revive CD). A-tier overall."
+    }
+  ],
+  "mechanics_tags": [
+    "ATK scaling",
+    "Self-heal",
+    "Sustain",
+    "Multi-hit (6x)",
+    "Multi-hit (3x)",
+    "Conditional heal",
+    "Weaken",
+    "Fire Knight specialist",
+    "Warmaster synergy",
+    "Team ATK buff",
+    "True Fear",
+    "Fear",
+    "AOE control",
+    "Passive damage boost",
+    "Self-revive",
+    "Extra Turn",
+    "Arena gimmick",
+    "Swift Parry synergy",
+    "Arena SPD aura (19%)"
+  ],
+  "stat_priorities": [
+    "Arena: 100% C.RATE, max C.DMG, high ATK%, SPD tuned for team",
+    "Fire Knight: 100% C.RATE, 220+ SPD, accuracy for Weaken",
+    "General: ATK%, C.RATE 100%, C.DMG, SPD"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "Not recommended (2/10 rating) - revive gimmick doesn't scale",
+    "dungeons": "Fire Knight: 100% C.RATE, 220+ SPD, 200+ ACC for Weaken, ATK%/C.DMG. Excellent 6-hit A2 for shield.",
+    "arena": "100% C.RATE, max C.DMG (aim 250+), high ATK%, SPD tuned to team (go after ATK buffer). Swift Parry set for proc-to-kill on revive turn.",
+    "doom_tower": "Similar to dungeons - use for waves/bosses with Fear synergy. 100% C.RATE, 220+ SPD, decent ACC.",
+    "faction_wars": "100% C.RATE, max damage stats, sustain via lifesteal or self-heals. Fear control useful for waves."
+  },
+  "recommended_gear": [
+    "Arena (Primary): Swift Parry (4-set) + Crit Damage (2-set) OR Savage/Cruel (4-set) + Crit Damage (2-set). Swift Parry provides extra turn proc chance on revive for instant nuke.",
+    "Dungeons: Savage (4-set) + Crit Damage OR Speed (4-set) + Crit Damage. Prioritize 100% C.RATE from substats.",
+    "Sustain Build (alternative): Lifesteal (4-set) + Speed/Crit Rate (2-set). Pairs with A1/A2 self-heals for tanky nuker.",
+    "Gloves: Crit Damage% (must have 100% C.RATE from substats)",
+    "Chest: ATK%",
+    "Boots: SPD (tune to team) or ATK% (if SPD from subs)",
+    "Substats: C.RATE to 100%, C.DMG, ATK%, SPD, ACC (200+ for Fire Knight Weaken)"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Not recommended for Clan Boss (2/10 rating)"
+    ],
+    "dungeons": [
+      "Offense Tree (Full): Deadly Precision, Keen Strike, Heart of Glory, Single Out, Cycle of Violence, Bring it Down, Methodical, Warmaster (T6)",
+      "Support Tree (Partial): Pinpoint Accuracy (ACC boost), Charged Focus (TM on crit), Arcane Celerity (SPD buff), Evil Eye (ACC from C.RATE), Master Hexer (debuff extension - NOTE: no longer affects Fear duration per 2023 patch)",
+      "Warmaster: Procs TWICE per A2 (6-hit skill) for massive damage boost"
+    ],
+    "arena": [
+      "Offense Tree (Full): Same as dungeons, with Warmaster OR Helmsmasher (HellHades recommends Helmsmasher for nuking through high DEF)",
+      "Support Tree: Pinpoint Accuracy, Charged Focus",
+      "Helmsmasher vs Warmaster: Helmsmasher better for Arena (ignores DEF), Warmaster better for multi-hit dungeons"
+    ],
+    "doom_tower": [
+      "Same as Dungeons - Warmaster, full Offense, partial Support"
+    ],
+    "faction_wars": [
+      "Same as Dungeons - Warmaster for damage, support for utility"
+    ],
+    "general": [
+      "T6: Warmaster (dungeons/PVE) OR Helmsmasher (Arena/PVP)",
+      "Full Offense tree prioritized",
+      "Support tree for ACC/SPD utility"
+    ]
+  },
+  "blessings": [
+    "Brimstone (Phantom Touch tree): Bonus damage on buffs - synergizes with A3 Inc ATK buff",
+    "Crushing Rend (Cruelty tree): Max HP damage - useful for tanky targets in Arena/Doom Tower",
+    "Blessings of Battle (Phantom Touch tree): Extra turn chance - pairs with passive revive for double nuke opportunity",
+    "Temporal Chains (Temporal Chains tree): TM control - extends control window after Fear lands"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI generally smart - prioritizes A3 on cooldown, uses A2 for damage/sustain. May waste A3 buff on low-health allies in some scenarios but not a significant issue."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Revive comp enabler, Swift Parry instant-kill gimmick",
+    "cheese_mechanic_info": "Revive passive enables end-game Clan Boss cheese comps (keep DPS alive longer). Arena cheese: Swift Parry set + Extra Turn = revive → instant proc chance → A3 nuke for 1-shot potential. Requires high C.DMG build and timing."
+  },
+  "mechanics_advisory": "Arena specialist with unique revive-nuke gimmick. True Fear is SUPERIOR to Fear (blocks A1 too). A3 Inc ATK buff applies BEFORE damage for self-boosted nuke - huge burst potential. A2 conditional 50% heal (vs Feared targets) synergizes with A3 Fear spread for massive sustain. Passive 40% damage boost <40% HP makes Brakus dangerous when low. Fire Knight specialist (6-hit A2 + 3-hit A3 = 9 hits for shield). Booking priority: A2 first (100% Weaken, -2 CD), then Passive (-2 CD for Arena), A3 last (True Fear 75%). Master Hexer no longer extends Fear duration (2023 patch) - community guide conflict. Warmaster procs twice on A2 for exceptional damage.",
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "user_screenshot, ayumilove, hellhades",
+    "source_priority": {
+      "stats": "user_screenshot",
+      "skills": "ayumilove",
+      "info": "hellhades"
+    },
+    "ocr_notes": "Stats manually provided by user via screenshot - 100% accurate (HP:19815, ATK:1465, DEF:793, SPD:101, C.RATE:15%, C.DMG:63%, RES:40, ACC:0). Skills validated from Ayumilove (canonical). Ratings and strategy from HellHades."
+  },
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-brakus-the-shifter-skill-mastery-equip-guide/ (accessed 2025-10-27)",
+    "HellHades: https://hellhades.com/champions/brakus-the-shifter/ (accessed 2025-10-27)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Halloween 2019 EXTREME FUSION event champion. 16 legendary books required for full potential. Arena nuker with resurrection gimmick (less useful for Clan Boss but enables cheese revive comps). Fire Knight specialist (9 total hits across A2+A3). Community feedback: A-tier overall, Master Hexer no longer extends Fear (2023 patch conflict in Ayumilove guide). Warmaster procs twice on A2 for exceptional damage. Swift Parry set recommended for Arena instant-kill gimmick on revive.",
+  "update_notes": {
+    "last_updated": "2025-10-27",
+    "last_patch": "Entry created from scraper draft. Comprehensive population from Ayumilove + HellHades. Base stats pending extraction (OCR failed). All 4 skills populated with effects arrays, masteries, gear, blessings, and strategies complete."
+  }
+}

@@ -1,0 +1,303 @@
+{
+  "name": "Astralon",
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Sacred Order",
+  "role": "Attack",
+  "owned": 1,
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "2/10",
+    "dungeons": "7/10",
+    "doom_tower": "8/10",
+    "arena": "9/10",
+    "faction_wars": "8/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 16845,
+        "ATK": 1619,
+        "DEF": 837,
+        "SPD": 102,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 30,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "Hellbinder",
+          "type": "A1",
+          "description": "Attacks 1 enemy 2 times. Has a 30% chance of placing a 60% [Decrease DEF] debuff for 2 turns. Countess Lix will team up and join the attack if they are in the same team. Countess Lix will use their default skill. Countess Lix will not team up on this attack if the skill is used when counterattacking or when teaming up to attack with another Champion.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 1.7,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Attacks 2 times (total 3.4 ATK multiplier). Team-up mechanic with Countess Lix only when both are on same team and not counterattacking."
+            },
+            {
+              "type": "debuff",
+              "stat": "DEF",
+              "value": -60,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "30% base chance, 50% when fully booked. Decrease Defense enables nuking setup."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Decrease DEF 60%",
+            "Multi-hit A1",
+            "Ally Join Attack (Countess Lix synergy)"
+          ],
+          "book_value": "Critical - books increase Decrease DEF chance from 30% to 50%, making him more reliable as DEF breaker. +10% damage also helps.",
+          "notes": "Strong A1 for ATK champion - double hit with DEF down. Countess Lix synergy is nice but not required for effectiveness. Total multiplier of 3.4 ATK when considering both hits makes this a 'Strong' rated A1 (HellHades)."
+        },
+        {
+          "name": "Divine Immanence",
+          "type": "A2",
+          "description": "Attacks 1 enemy. Will ignore [Increase DEF], [Strengthen] and [Ally Protection] buffs. Revives a random ally with 40% HP and places a [Shield] buff on them equal to 20% of their MAX HP for 2 turns if this attack kills an enemy. Also places a [Shield] buff on this Champion equal to 20% of their MAX HP for 2 turns if this attack kills an enemy.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 5.8,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Godlike multiplier (HellHades rating). Ignores Increase DEF, Strengthen, and Ally Protection buffs - excellent Arena counter to defensive setups."
+            },
+            {
+              "type": "revive",
+              "stat": "HP",
+              "value": 40,
+              "per_hit": false,
+              "target": "random_ally",
+              "duration": "NA",
+              "notes": "Conditional on killing the target. Revives with 40% HP. Niche but can clutch Arena battles if enemy support dies first."
+            },
+            {
+              "type": "shield",
+              "stat": "MAX HP",
+              "value": 20,
+              "per_hit": false,
+              "target": "random_ally",
+              "duration": "2 turns",
+              "notes": "Applied to revived ally. 20% of their MAX HP as shield."
+            },
+            {
+              "type": "shield",
+              "stat": "MAX HP",
+              "value": 20,
+              "per_hit": false,
+              "target": "self",
+              "duration": "2 turns",
+              "notes": "Applied to Astralon. 20% of his MAX HP as shield. Both shields only trigger on kill."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "Ignore DEF Buffs",
+            "Ignore Strengthen",
+            "Ignore Ally Protection",
+            "Single Target Nuke",
+            "Conditional Revive",
+            "Conditional Shield"
+          ],
+          "book_value": "High value - reduces cooldown from 4 turns to 3 turns, plus +20% damage. Makes him viable as primary nuker in Arena with faster cycling.",
+          "notes": "Primary Arena skill. Massive 5.8 ATK multiplier ignores common Arena defensive buffs. Revive is situational but can turn fights. Build full damage (ATK%, C.RATE, C.DMG) to maximize kill potential."
+        },
+        {
+          "name": "Light of Sanctity",
+          "type": "A3",
+          "description": "Remove all buffs from targets under [Veil] or [Perfect Veil] buffs, then places a 25% [Weaken] debuff on enemies who have [Veil] or [Perfect Veil] buffs removed, then attacks all enemies. Also has a 75% chance of placing a [Stun] debuff on all enemies for 1 turn.",
+          "effects": [
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "Removes ALL buffs from enemies with Veil or Perfect Veil. Hard counter to Lilitu and other Veil champions."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": -25,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "2 turns",
+              "notes": "25% Weaken applied to enemies who had Veil removed. Reduces enemy damage output."
+            },
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "AOE damage with strong 4.0 ATK multiplier. Godlike rated (HellHades)."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "1 turn",
+              "notes": "AOE Stun. 75% base chance, 100% when fully booked. Requires accuracy to land. Game-changing Arena control."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": [
+            "AOE Stun",
+            "AOE Damage",
+            "Buff Removal (Veil counter)",
+            "Weaken 25%",
+            "Arena Control"
+          ],
+          "book_value": "Mandatory - increases Stun chance from 75% to 100% and reduces cooldown from 5 to 4 turns. This makes Astralon reliable Arena control champion.",
+          "notes": "THE defining skill for Astralon. 100% AOE Stun when booked makes him S-tier Arena champion. Hard counter to Lilitu, Duchess, and other Veil teams. Build 250-300+ ACC to ensure stun lands. Prioritize this skill in Arena - use A3 first to lock enemy team."
+        },
+        {
+          "name": "Emissary",
+          "type": "Passive",
+          "description": "Fills this champion's turn meter by 3% every time an ally is hit. Decreases incoming damage by 25% if the attacker's ATK is lower than this Champion's.",
+          "effects": [
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 3,
+              "per_hit": true,
+              "target": "self",
+              "duration": "NA",
+              "notes": "Triggers every time ANY ally is hit (including Astralon). Excellent TM boost in multi-hit content like Iron Twins, Spider, and Hydra. Can cycle turns very fast."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": -25,
+              "per_hit": false,
+              "target": "self",
+              "duration": "permanent",
+              "notes": "Damage reduction when attacker's ATK < Astralon's ATK. Build high ATK to maximize this defensive passive. Works well with Cruel set (ATK boost + Ignore DEF)."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Turn Meter Boost",
+            "Damage Reduction",
+            "Passive Survivability"
+          ],
+          "book_value": "NA - Passive cannot be booked",
+          "notes": "Underrated passive. 3% TM per hit adds up fast in multi-hit content - can lap enemies in Iron Twins and Spider. Damage reduction makes him surprisingly tanky despite being ATK champion. Stack ATK% gear to trigger reduction more often."
+        }
+      ],
+      "aura": "No aura",
+      "comments": "Astralon is a premier Arena nuker and control champion with his 100% AOE Stun (when booked). Hard counter to Veil teams (Lilitu, Duchess). Also viable in Doom Tower Hard and Faction Wars. Weak in Clan Boss due to lack of sustain and boss mechanics immunity to CC. Community consensus: Build for Arena first, then consider Doom Tower/Faction Wars applications."
+    }
+  ],
+  "mechanics_tags": [
+    "AOE Stun",
+    "Arena Control",
+    "Veil Counter",
+    "Decrease DEF 60%",
+    "Ignore Defensive Buffs",
+    "Turn Meter Manipulation",
+    "High Damage Multipliers",
+    "Weaken",
+    "Conditional Revive"
+  ],
+  "stat_priorities": [
+    "Arena: 250-300+ ACC (for 100% stun), 100% C.RATE, 200%+ C.DMG, 180-220 SPD, 4000+ ATK",
+    "Doom Tower: 250+ ACC, 200+ SPD, 100% C.RATE, survivability secondary",
+    "Faction Wars: 220+ SPD, 200+ ACC, balanced damage/survivability"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "Not recommended - lacks sustain, boss immune to CC. 2/10 rating.",
+    "dungeons": "220+ SPD, 200+ ACC for waves, 100% C.RATE, C.DMG for damage. Good in Iron Twins (passive TM boost), Spider (AOE control), Fire Knight (multi-hit A1).",
+    "arena": "PRIMARY USE CASE. 250-300+ ACC (mandatory for stun), 100% C.RATE, 200%+ C.DMG, 4000+ ATK, 180-220 SPD. Build fast enough to go after speed lead but before enemy damage dealers.",
+    "doom_tower": "250+ ACC, 200+ SPD, 100% C.RATE, some HP%/DEF% for survivability. Excellent for Hard floors with Veil champions.",
+    "faction_wars": "220+ SPD, 200+ ACC, balanced offense/defense. Strong carry for Sacred Order."
+  },
+  "recommended_gear": [
+    "Arena (Priority): Savage + Perception/Accuracy (4000+ ATK, 100% C.RATE, 200%+ C.DMG, 250-300 ACC, 180-220 SPD)",
+    "Arena Alternative: Cruel + Perception (synergizes with passive damage reduction, provides ATK boost and Ignore DEF)",
+    "Doom Tower/Dungeons: Speed + Accuracy or Perception (200+ SPD, 250+ ACC, 100% C.RATE)",
+    "Budget: Broken sets prioritizing stats over set bonuses - ACC and C.RATE are mandatory",
+    "Glyphs Priority: ACC on Banner, SPD on Boots, C.DMG on Amulet, ATK% on Ring",
+    "Avoid: Lifesteal (he's a nuker, not sustain), Resist (offense only), Relentless (cooldowns too long)",
+    "Optimal Gear: Savage 4pc + Perception 2pc with ACC/C.RATE/C.DMG/SPD substats"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Not recommended for Clan Boss - invest in Arena/Doom Tower masteries instead"
+    ],
+    "dungeons": [
+      "Offense: Deadly Precision, Keen Strike, Shield Breaker, Whirlwind of Death, Single Out, Cycle of Violence, Bring it Down, Kill Streak, Methodical, Warmaster",
+      "Support: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Lore of Steel, Sniper"
+    ],
+    "arena": [
+      "Offense: Deadly Precision, Keen Strike, Shield Breaker, Ruthless Ambush, Single Out, Cycle of Violence, Bring it Down, Kill Streak, Methodical, Helmsmasher",
+      "Support: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Lore of Steel, Sniper",
+      "Alternative: Master Hexer if using as DEF breaker + stunner hybrid"
+    ],
+    "doom_tower": [
+      "Same as dungeons - Warmaster for T6 mastery, full Offense tree with Support for ACC"
+    ],
+    "faction_wars": [
+      "Same as dungeons - Warmaster, full Offense, Support for ACC and survivability"
+    ],
+    "general": [
+      "Always take Pinpoint Accuracy and Sniper in Support tree",
+      "Offense tree full clear to T6",
+      "Choose Helmsmasher (Arena) or Warmaster (PVE)",
+      "Master Hexer optional if using as hybrid DEF breaker/stunner"
+    ]
+  },
+  "blessings": [
+    "Arena: Lightning Cage (boost allies TM when attacked - synergizes with his passive)",
+    "Doom Tower/Dungeons: Temporal Chains (reduce cooldowns, get A3 stun more often)",
+    "Damage Focus: Soul Reap (extra damage on kills)",
+    "Budget: Any offensive blessing (Brimstone, Cruelty, etc.)",
+    "Recommended Priority: 1. Temporal Chains (cooldown reduction), 2. Lightning Cage (Arena), 3. Soul Reap (damage)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI prioritizes A3 first (good - AOE stun control), then cycles A2 and A1. No major AI issues reported. Works well on auto in Arena and dungeons."
+  },
+  "cheese_strategy": {
+    "cheese_viable": false,
+    "cheese_type": "NA",
+    "cheese_mechanic_info": "Not a cheese champion - straightforward nuker/control. Synergizes with Countess Lix (team-up on A1) but not considered cheese. Best used in standard Arena nuke/control comps."
+  },
+  "mechanics_advisory": "Astralon is a specialized Arena champion designed to counter Veil teams (Lilitu, Duchess, etc.). His A3 removes ALL buffs from Veiled enemies and stuns the entire team at 100% when booked. He requires 13 legendary books (steep investment) but becomes S-tier Arena control when fully booked. His passive grants surprising survivability and turn meter boost in multi-hit content. Build him for Arena first (250-300 ACC, 100% C.RATE, high C.DMG), then consider Doom Tower/Faction Wars. Not viable for Clan Boss. Pairs well with speed leads (Arbiter, High Khatun, Wukong) and buff strippers. Use A3 immediately after speed boost to lock enemy team before they move.",
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "ayumilove+hellhades",
+    "source_priority": {
+      "stats": "ayumilove (validated from base stat table)",
+      "skills": "ayumilove (canonical skill descriptions)",
+      "info": "ayumilove+hellhades (ratings, gear, masteries cross-validated)"
+    },
+    "ocr_notes": "Stats validated from Ayumilove base stats table and cross-checked with HellHades. Skill descriptions from Ayumilove canonical source. Ratings consensus from both sources (Ayumilove B-tier overall, HellHades 9/10 Arena, 7/10 Dungeons, 8/10 Doom Tower)."
+  },
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-astralon-skill-mastery-equip-guide/ (accessed 2025-10-27)",
+    "HellHades: https://hellhades.com/champions/astralon/ (accessed 2025-10-27)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Astralon is a Valentine 2021 fusion champion. Community feedback: underrated mid-game, S-tier in Arena when built correctly. Books are mandatory for 100% stun. Weak in Clan Boss (2/10) but excels in Arena (9/10), Doom Tower Hard (8/10), and Faction Wars (8/10). Hard counter to Lilitu/Veil meta. ACC is mandatory - 250+ minimum, 300 recommended for high-level Arena. Synergy with Countess Lix is nice flavor but not required.",
+  "update_notes": {
+    "last_updated": "2025-10-27",
+    "last_patch": "No recent changes - champion kit stable since February 2021 fusion release (Patch V3.30)"
+  }
+}

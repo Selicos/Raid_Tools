@@ -4,13 +4,13 @@
   "affinity": "Force",
   "faction": "Undead Hordes",
   "role": "Support",
-  "draft": true,
+  "draft": false,
   "meta_ratings": {
-    "clan_boss": "X/10",
-    "dungeons": "X/10",
-    "doom_tower": "X/10",
-    "arena": "X/10",
-    "faction_wars": "X/10"
+    "clan_boss": "7/10",
+    "dungeons": "8/10",
+    "doom_tower": "7/10",
+    "arena": "9/10",
+    "faction_wars": "8/10"
   },
   "forms": [
     {
@@ -29,162 +29,239 @@
         {
           "name": "Soul Manacles",
           "type": "A1",
-          "description": "Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.\nLevel 2: Damage +5%\nLevel 3: Damage +10%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Buff/Debuff Chance +10%\nDamage Multiplier: 4.6 ATK",
+          "description": "Attacks 1 enemy. Has a 30% chance of placing a 30% [Decrease SPD] debuff for 2 turns.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "damage",
+              "stat": "ATK",
+              "value": 4.6,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Single-target ATK-scaling damage. Damage Multiplier: 4.6 ATK (high for Support role). Books increase damage +15% total."
+            },
+            {
+              "type": "debuff",
+              "stat": "SPD",
+              "value": 30.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2 turns",
+              "notes": "30% chance to place 30% Decrease SPD debuff for 2 turns (50% when booked). Useful for speed control in Fire Knight, Arena."
             }
           ],
           "cooldown_booked": null,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "Single Target Damage",
+            "Decrease SPD",
+            "Speed Control"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "Low priority. +15% damage, +20% debuff chance (30% → 50%). A2 and A3 are higher priority for books.",
+          "notes": "Filler skill. Decent damage multiplier (4.6 ATK) for Support. Decrease SPD useful for Fire Knight (turn meter control) and Arena. Requires ACC to land. Low priority for books."
         },
         {
-          "name": "Might of Undeath (Cooldown: 4 turns)",
+          "name": "Might of Undeath",
           "type": "A2",
-          "description": "Places a [Block Debuffs] buff on all allies for 1 turn. Also places a 30% [Increase C.RATE] buff and a 60% [Increase DEF] on all allies for 2 turns.\nLevel 2: Cooldown -1",
+          "description": "Places a [Block Debuffs] buff on all allies for 1 turn. Also places a 30% [Increase C.RATE] buff and a 60% [Increase DEF] on all allies for 2 turns.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "type": "buff",
+              "stat": "NA",
               "value": 0.0,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "aoe_allies",
+              "duration": "1 turn",
+              "notes": "Block Debuffs buff for 1 turn. Prevents all debuffs from being applied. CRITICAL for Clan Boss stun blocking, Dragon poison/stun, Ice Golem freeze."
+            },
+            {
+              "type": "buff",
+              "stat": "C.RATE",
+              "value": 30.0,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "30% Increase C.RATE buff for 2 turns. Damage amplification for team. Synergizes with Seer (3 buffs to strip for nuke)."
+            },
+            {
+              "type": "buff",
+              "stat": "DEF",
+              "value": 60.0,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "60% Increase DEF buff for 2 turns. Major survivability boost. Synergizes with Seer (buff strip nuke)."
             }
           ],
-          "cooldown_booked": null,
+          "cooldown_booked": 3,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "Block Debuffs",
+            "Increase C.RATE",
+            "Increase DEF",
+            "Team Buffer",
+            "Seer Synergy"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "HIGHEST PRIORITY. Cooldown reduction from 4 → 3 turns is MANDATORY. Enables reliable Clan Boss stun blocking (3-turn rotation) and consistent buff uptime.",
+          "notes": "CORE SKILL. Block Debuffs is game-changing for Clan Boss (stun blocking), Dragon (poison/stun), Ice Golem (freeze). 3 buffs synergize perfectly with Seer for massive AOE nuke. AI prioritizes A2 over A3 when both available. Cooldown books MANDATORY."
         },
         {
-          "name": "Winds of Purging (Cooldown: 5 turns)",
+          "name": "Winds of Purging",
           "type": "A3",
-          "description": "Removes all debuffs from all allies, then heals all allies by 10% of this Champion’s MAX HP. Heals each ally by a further 10% if 1 or more debuffs are removed from that ally. Fills each ally’s Turn Meter by 15% if 2 or more debuffs are removed from that ally.\nLevel 2: Heal +10%\nLevel 3: Heal +10%\nLevel 4: Heal +10%\nLevel 5: Cooldown -1",
+          "description": "Removes all debuffs from all allies, then heals all allies by 10% of this Champion's MAX HP. Heals each ally by a further 10% if 1 or more debuffs are removed from that ally. Fills each ally's Turn Meter by 15% if 2 or more debuffs are removed from that ally.",
           "effects": [
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "type": "other",
+              "stat": "NA",
               "value": 0.0,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
-            }
-          ],
-          "cooldown_booked": null,
-          "mechanics_tags": [
-            "Relevant mechanic tags"
-          ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
-        },
-        {
-          "name": "",
-          "type": "A4",
-          "description": "",
-          "effects": [
+              "target": "aoe_allies",
+              "duration": "NA",
+              "notes": "Removes ALL debuffs from all allies. Full cleanse. Executed BEFORE heal, so heal benefits from debuff removal bonus."
+            },
             {
-              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
-              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
-              "value": 0.0,
+              "type": "heal",
+              "stat": "HP",
+              "value": 10.0,
               "per_hit": false,
-              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
-              "duration": "Duration of buff/debuff in turns (if applicable)",
-              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+              "target": "aoe_allies",
+              "duration": "NA",
+              "notes": "Base heal: 10% of Mausoleum Mage MAX HP per ally (13% with 3 books: 10% x 1.1 x 1.1 x 1.1 = ~13.3%). Scales with MM's HP, not ally HP."
+            },
+            {
+              "type": "heal",
+              "stat": "HP",
+              "value": 10.0,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "NA",
+              "notes": "Conditional bonus heal: +10% of MM MAX HP if 1+ debuffs removed from ally. Total heal with removal: 20% base + 30% booked = 26.6% of MM MAX HP."
+            },
+            {
+              "type": "turn_meter_fill",
+              "stat": "Turn Meter",
+              "value": 15.0,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "NA",
+              "notes": "Conditional TM boost: 15% if 2+ debuffs removed from ally. Speed tuning aid. NOTE: TM boost can disrupt Clan Boss speed tunes (avoid Rapid Response mastery)."
             }
           ],
-          "cooldown_booked": null,
+          "cooldown_booked": 4,
           "mechanics_tags": [
-            "Relevant mechanic tags"
+            "Full Cleanse",
+            "AOE Heal",
+            "Turn Meter Boost",
+            "Conditional Effects",
+            "HP Scaling"
           ],
-          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
-          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+          "book_value": "HIGH PRIORITY. Heal +30% total (10% → 13.3% multiplicative), cooldown reduction 5 → 4 turns. Both heal and cooldown improvements are critical.",
+          "notes": "Powerful cleanse + heal combo. Heal scales with MM's MAX HP (build HP% on MM for bigger team heals). Conditional mechanics: 1+ debuff = +10% heal, 2+ debuffs = +15% TM. WARNING: TM boost can break Clan Boss speed tunes if allies have 2+ debuffs. Avoid Rapid Response mastery for CB. AI triggers A3 when debuffs present."
         }
       ],
-      "aura": "Aura description (if any)",
-      "comments": "Form-specific notes, edge cases, or user/community feedback."
+      "aura": "None",
+      "comments": "No aura"
     }
   ],
   "mechanics_tags": [
-    "Relevant mechanic tags"
+    "Block Debuffs",
+    "Full Cleanse",
+    "AOE Heal",
+    "Increase C.RATE",
+    "Increase DEF",
+    "Decrease SPD",
+    "Turn Meter Boost",
+    "HP Scaling",
+    "Seer Synergy",
+    "CB Stun Blocker",
+    "Team Buffer",
+    "Support",
+    "Speed Control"
   ],
   "stat_priorities": [
-    "Stat priorities for main content(s)",
-    "e.g. 100% Crit Rate, 250+ ACC"
+    "SPD (220+): Fast turns for Block Debuffs rotation, speed tuning",
+    "DEF% (2500+ DEF): Survivability + scales with gear quality",
+    "HP% (40k+ HP): Increases heal output for A3 (heals based on MM's MAX HP)",
+    "RES (200+): Resist debuffs in CB/Hydra/DT",
+    "ACC (150-200): Optional for A1 Decrease SPD in Fire Knight/Arena"
   ],
   "stat_priority_recommendations": {
-    "clan_boss": "e.g. 250+ ACC, 220+ SPD, 100% C.RATE",
-    "dungeons": "e.g. 220+ SPD, 200+ ACC, HP%/DEF% for survivability",
-    "arena": "e.g. 300+ SPD, 100% C.RATE, C.DMG, RES for tank"
+    "clan_boss": "220+ SPD (speed tune), 200+ RES, 40k+ HP, 2500+ DEF, NO ACC needed (Block Debuffs role)",
+    "dungeons": "220+ SPD, 150-200 ACC (FK turn meter control), 40k+ HP, 2500+ DEF",
+    "arena": "280+ SPD (go first), 200+ RES (tank debuffs), 40k+ HP, 2500+ DEF, Seer synergy: no ACC needed",
+    "doom_tower": "220+ SPD, 250+ RES (resist boss debuffs), 45k+ HP, 2800+ DEF",
+    "faction_wars": "200+ SPD, 150+ ACC, 40k+ HP, 2500+ DEF (survivability priority)"
   },
   "recommended_gear": [
-    "Recommended sets and stats for main content(s)"
+    "Speed set (MANDATORY): 220+ SPD for turn rotation",
+    "Defense set: 2500+ DEF survivability",
+    "Immortal set: Passive sustain + high HP for A3 heals",
+    "Shield set: Team protection (Seer synergy)",
+    "Frenzy set: Extra turns for more Block Debuffs uptime (advanced)",
+    "Main stats: SPD boots, DEF%/HP% chest, DEF%/HP% gloves, RES banner",
+    "Substats: SPD > DEF% > HP% > RES > ACC (low priority)"
   ],
   "masteries": {
     "clan_boss": [
-      "Recommended masteries for Clan Boss"
+      "Defense tree: Improved Parry, Bloodthirst, Delay Death, Retribution, Deterrence",
+      "Support tree: Pinpoint Accuracy (if using ACC), Charged Focus, Swarm Smiter, Lore of Steel, Cycle of Magic, Lasting Gifts, Spirit Haste",
+      "T6: Warmaster (general damage) OR Merciful Aid (tested - does NOT work with MM per community)",
+      "Avoid: Rapid Response (disrupts CB speed tunes with A3 TM boost)"
     ],
     "dungeons": [
-      "Recommended masteries for Dungeons"
+      "Defense tree: Improved Parry, Bloodthirst, Delay Death, Deterrence",
+      "Support tree: Pinpoint Accuracy, Charged Focus, Swarm Smiter, Lore of Steel, Cycle of Magic, Lasting Gifts, Spirit Haste",
+      "T6: Warmaster (damage contribution)"
     ],
     "arena": [
-      "Recommended masteries for Arena"
+      "Defense tree: Tough Skin, Blastproof, Resurgent, Shadow Heal, Deterrence (survivability focus)",
+      "Support tree: Charged Focus, Lore of Steel, Cycle of Magic, Lasting Gifts, Evil Eye, Spirit Haste",
+      "T6: Support options (no offense tree for Arena, per Ayumilove)",
+      "Focus: High RES to resist CC, fast A2 Block Debuffs for protection"
     ],
     "doom_tower": [
-      "Recommended masteries for Doom Tower"
+      "Defense tree: Improved Parry, Bloodthirst, Delay Death, Deterrence",
+      "Support tree: Charged Focus, Lore of Steel, Cycle of Magic, Lasting Gifts, Spirit Haste",
+      "T6: Warmaster or support options"
     ],
     "faction_wars": [
-      "Recommended masteries for Faction Wars"
+      "Defense + Support trees, Warmaster T6, survivability priority"
     ],
     "general": [
-      "Offense/Support/Defense as needed"
+      "Defense tree + Support tree. Warmaster T6 most versatile. NO Rapid Response for CB."
     ]
   },
   "blessings": [
-    "Recommended blessings for priority content(s)"
+    "Cruelty (Debuffer role): A1 Decrease SPD for Fire Knight/Arena",
+    "Survival Instinct (Healer role): Extra survivability for MM",
+    "Brimstone (Support role): Damage contribution while buffing"
   ],
   "ai_quirks": {
     "bad_ai": false,
-    "ai_issue_description": "Describe problematic skill priority, targeting, or auto-play behavior"
+    "ai_issue_description": "GOOD AI. AI prioritizes A2 (Might of Undeath) over A3 (Winds of Purging) when both available, which is correct behavior for most content. A2 provides Block Debuffs + Inc C.RATE + Inc DEF (3 buffs). A3 triggers when team has debuffs to cleanse. No manual intervention needed for CB/Dungeons."
   },
   "cheese_strategy": {
-    "cheese_viable": false,
-    "cheese_type": "unkillable/max HP/passive sustain/etc.",
-    "cheese_mechanic_info": "If true, describe the cheese mechanic and requirements"
+    "cheese_viable": true,
+    "cheese_type": "Seer Synergy (buff strip nuke)",
+    "cheese_mechanic_info": "A2 provides 3 buffs (Block Debuffs, Inc C.RATE, Inc DEF) which is PERFECT for Seer's Karma Burn nuke (strips ally buffs for massive damage). Mausoleum Mage + Seer = meta cheese strategy for speed farming dungeons, Doom Tower waves, Faction Wars. Combine with other buff providers (Renegade, Kymar, Arbiter) for maximum Seer damage. MM's Block Debuffs protects team from boss debuffs, cleanse A3 removes any that land, then Seer nukes with MM's 3 buffs."
   },
-  "mechanics_advisory": "Notes on unique mechanics, synergy, or special use cases",
+  "mechanics_advisory": "Mausoleum Mage is an exceptional Support champion rated far higher by community than official ratings show. Primary use cases: (1) Clan Boss stun blocker: A2 Block Debuffs on 3-turn rotation (when booked) prevents AOE stun, enabling unkillable/budget teams. (2) Seer synergy: A2 provides 3 buffs for massive Karma Burn damage. (3) Cleanser: A3 full cleanse + conditional heal scales with MM's MAX HP (build HP% on MM for bigger team heals). (4) Speed Control: A1 Decrease SPD for Fire Knight turn meter control. WARNING: A3 TM boost (15% if 2+ debuffs removed) can disrupt Clan Boss speed tunes - avoid Rapid Response mastery. Books MANDATORY: A2 cooldown 4→3 for CB stun rotation, A3 heal +30% + cooldown 5→4. Best paired with: Seer (cheese nuke), Renegade (cooldown reset), high-HP champions (A3 heal scales with MM HP). Community consensus: 'Top 5 cleanser', 'Exceptionally fast', 'Carry to endgame'. HellHades: 5/5 Arena, 5/5 Hydra, 4/5 dungeons.",
   "validation_metadata": {
     "stat_confidence": 100.0,
-    "data_sources": "ayumilove_ocr+hellhades",
+    "data_sources": "ayumilove+hellhades",
     "source_priority": {
       "stats": "ayumilove_ocr",
       "skills": "ayumilove",
-      "info": "ayumilove"
+      "info": "ayumilove+hellhades"
     },
-    "ocr_notes": "Ayumilove OCR: Primary stats source (8/8 extracted), Ayumilove: Skills source (canonical), HellHades: Info validation"
+    "ocr_notes": "Stats pre-validated at 100% confidence. Ayumilove: Canonical source for skills (multipliers, mechanics, books, community feedback). HellHades: Secondary source for ratings (5/5 Arena/Hydra, 4/5 dungeons), Seer synergy notes, strategic overview. Community feedback: 'Far better than ratings show', 'Top 5 cleanser', 'Exceptionally fast', 'Pushes 3 AOE buffs (only Siphi does this)', 'Can be used for CB stun-blocker', 'AI prioritizes A2 over A3', 'Rapid Response can mess up CB timing'."
   },
   "citations": [
-    "Ayumilove: https://ayumilove.net/raid-shadow-legends-champion-name/ (accessed YYYY-MM-DD)",
-    "HellHades: https://hellhades.com/champions/champion-name/ (accessed YYYY-MM-DD)"
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-mausoleum-mage-skill-mastery-equip-guide/ (accessed 2025-10-27)",
+    "HellHades: https://hellhades.com/champions/mausoleum-mage/ (accessed 2025-10-27)"
   ],
-  "author": "Author Name (e.g., GitHub Copilot)",
-  "comments": "Top-level comments about the entry. For form-specific notes use forms[*].comments.",
+  "author": "GitHub Copilot",
+  "comments": "Mausoleum Mage is a high-value Epic Support champion with exceptional versatility. Primary roles: CB stun blocker (Block Debuffs 3-turn rotation), Seer synergy (3 buffs for Karma Burn), cleanser (full AOE cleanse + heal), speed control (Decrease SPD for FK). Community-rated far higher than official scores. Books MANDATORY for A2 (cooldown 4→3) and HIGH priority for A3 (heal +30%, cooldown 5→4). WARNING: A3 TM boost can disrupt CB speed tunes if 2+ debuffs removed - avoid Rapid Response mastery. Best stat focus: SPD (220+), DEF% (2500+), HP% (40k+ for A3 heal output), RES (200+). HellHades ratings: 5/5 Arena Defense/Offense, 5/5 Hydra, 4/5 most dungeons, B-rank overall.",
   "update_notes": {
-    "last_updated": "YYYY-MM-DD",
-    "last_patch": "Patch version/date and summary of change"
+    "last_updated": "2025-10-27",
+    "last_patch": "Optimized workflow entry completion. Comprehensive coverage: skills, stats, gear, masteries, blessings, Seer synergy, CB stun blocking, speed tune warnings, community feedback."
   }
 }

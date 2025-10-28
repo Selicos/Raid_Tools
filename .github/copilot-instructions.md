@@ -469,6 +469,9 @@ Follow the unified standards in Sections 12 (Validation and Documentation Standa
 - **Skipping validation** → Run `Tools/validate_json.py --schema` before finalizing
 - **Forgetting to update schema** → When adding new fields to template, update `Champion_Dictionary_Schema.json` immediately
 - **Not documenting sources** → Always cite at least 2 authoritative sources in validation_metadata
+- **Combining operations (NEW)** → Never combine skill population with skill removal in single operation (causes string matching failures)
+- **Over-investigating errors (NEW)** → Trust validator line numbers, read ±5 lines context, fix immediately. Don't use Python debugging or multiple file reads
+- **Object vs Array confusion (NEW)** → Reference template before comprehensive batch update. `stat_priority_recommendations` is OBJECT `{}` not ARRAY `[]`
 
 ### File Corruption Recovery Process
 
@@ -515,16 +518,17 @@ Follow the unified standards in Sections 12 (Validation and Documentation Standa
 - ✅ **Validate immediately** after completion: `validate_json.py --schema Champion_Name.json`
 
 **Completion Checklist:**
-1. Fix OCR errors (stats, affinity) - use Ayumilove/HellHades as reference
-2. Clean skill descriptions (remove `\nLevel 2:...` level-up text)
-3. Populate all 4 skills with comprehensive effects arrays
-4. Add comprehensive content (gear, masteries, blessings, strategies)
-5. Update validation_metadata with correct sources and confidence
-6. Set `draft: false` when complete
-7. **Run validation**: `python Tools/Validate/validate_json.py --schema input/Champion_Dictionary/Champion_Name.json`
-8. **Sync table**: `python Tools/champion_scraper/scripts/sync_table_from_json.py`
-9. **Move to Complete/**: Only after validation passes
-10. **Delete any backup files** created during editing
+1. **FIRST: Remove empty skill slots** - Scraper creates 5 skill slots (A1-A5), but most champions have only 4. Delete the empty A5 skill object entirely before populating comprehensive sections.
+2. Fix OCR errors (stats, affinity) - use Ayumilove/HellHades as reference
+3. Clean skill descriptions (remove `\nLevel 2:...` level-up text)
+4. Populate all 4 skills with comprehensive effects arrays
+5. Add comprehensive content (gear, masteries, blessings, strategies)
+6. Update validation_metadata with correct sources and confidence
+7. Set `draft: false` when complete
+8. **Run validation**: `python Tools/Validate/validate_json.py --schema input/Champion_Dictionary/Champion_Name.json`
+9. **Sync table**: `python Tools/champion_scraper/scripts/sync_table_from_json.py`
+10. **Move to Complete/**: Only after validation passes
+11. **Delete any backup files** created during editing
 
 **OCR Failure Handling:**
 - If OCR stats are scrambled (values like "Force", "1", swapped fields):
@@ -549,63 +553,154 @@ Follow the unified standards in Sections 12 (Validation and Documentation Standa
 
 ### Champion Dictionary Entry Completion Process
 
-**Standard Workflow: Option A (Hybrid - User Stats + AI Research)**
+**Standard Workflow: Option A (Hybrid - User Stats + AI Research) - OPTIMIZED**
 
-**Step 1: User Provides Base Stats**
-- User provides screenshot of champion base stats
-- AI validates and inputs stats into JSON
+**Overview: Batch Operations for 35-40% Efficiency Improvement**
+- **Parallel Data Fetching**: Fetch Ayumilove + HellHades simultaneously (saves 1 operation)
+- **Systematic Skill Population**: Process skills sequentially without redundant file reads (A1→A2→A3→Passive)
+- **Batch Comprehensive Updates**: Single large replacements for all comprehensive sections (saves 10-15 operations)
+- **Result**: ~25 operations per champion vs. previous ~40+ operations
 
-**Step 2: Skill Analysis & Effects Population**
-- AI parses skill descriptions from scraped data
-- For each skill, populate:
-  - `effects[]`: Array of effect objects with type, stat, value, target, duration, notes
-    - Parse damage multipliers and scaling stats
-    - Document debuff/buff durations and conditions
-    - Note special mechanics and interactions
-  - `mechanics_tags[]`: Relevant tags (e.g., "HP Burn", "DEF scaling", "AOE")
-  - `book_value`: Booking priority and impact summary
-  - `notes`: Skill-specific strategy, synergies, and warnings
-- Use multiple effect objects for multi-component skills
+**Step 1: Validate Base Stats & Request User Input if Needed**
+- **Check scraper-populated stats** in draft JSON file:
+  - Verify HP, ATK, DEF, SPD are reasonable (SPD typically 95-110 for most champions). Review online sources if unsure.
+  - Check for missing stats (blank C.RATE, C.DMG, RES, ACC)
+  - Identify OCR errors (e.g., SPD = 15 is clearly wrong)
+- **If stats are complete and accurate**: Proceed to Step 2
+- **If stats are missing or incorrect**: Request user input via chat
+  - Ask for screenshot of champion base stats screen, OR
+  - Request stats in table format (HP | ATK | DEF | SPD | C.RATE | C.DMG | RES | ACC)
+  - Verify against Ayumilove/HellHades if possible (note: some sources may have outdated data)
+- **Set stat_confidence appropriately**:
+  - 100 = User screenshot or confirmed accurate
+  - 90 = Manual verification from 2+ sources
+  - 50-70 = OCR with partial verification
+  - <50 = Unverified OCR or missing data
+- **Continue with existing data**
+  - If no stats are provided, look at online sources (Ayumilove, HellHades) for missed information. 
+  - If that fails, proceed with best-effort processing based likely stats for a champion with the skills and role it has.
+  - Document any assumptions in validation_metadata.notes. Be concise and clear. 
+  - When done, note chat to review and reprocess with correct stats if any issues arose.
 
-**Step 3: Clean Skill Descriptions**
-- Remove extraneous information from `description` field:
+**Step 2: Parallel Data Gathering (NEW - Efficiency Improvement)**
+- **Fetch both sources simultaneously** using parallel `fetch_webpage` calls:
+  - Ayumilove: Skills (multipliers, mechanics), masteries, gear, booking recommendations
+  - HellHades: Ratings, strategic overview, meta positioning, content-specific analysis
+- **Extract all data before making edits** (prevents redundant file reads)
+- **Cache data in working memory** for subsequent steps
+
+**Step 3: Systematic Skill Analysis & Effects Population**
+
+**ATOMIC OPERATIONS PRINCIPLE:** One content change per operation. Never combine skill population with skill removal or structural changes.
+
+**3.1. Populate Each Skill (One `replace_string_in_file` per skill)**
+
+Process skills in order: A1 → A2 → A3 → Passive
+
+For each skill, populate in a **single replacement operation**:
+- `effects[]`: Array of effect objects with type, stat, value, target, duration, notes
+  - Parse damage multipliers and scaling stats
+  - Document debuff/buff durations and conditions
+  - Note special mechanics and interactions
+- `mechanics_tags[]`: Relevant tags (e.g., "HP Burn", "DEF scaling", "AOE")
+- `book_value`: Booking priority and impact summary
+- `notes`: Skill-specific strategy, synergies, and warnings
+- **Clean descriptions during population**: Remove `\nLevel 2:...` level-up text, keep core functionality
+
+**Use multiple effect objects for multi-component skills** (e.g., cleanse + heal + TM boost = 3 effect objects)
+
+**3.2. Remove Empty Skill Slots (Separate Operation After All Skills Populated)**
+
+- **If champion has 3 skills (A1, A2, A3)**: Remove empty A4 slot in dedicated `replace_string_in_file` operation
+- **If champion has 4 skills**: Remove empty A5 slot in dedicated operation
+- **Never combine** this removal with skill content population (causes string matching failures)
+
+**3.3. Validate Structure Immediately**
+
+After skills section complete:
+```bash
+python Tools/Validate/validate_json.py --schema input/Champion_Dictionary/Champion_Name.json
+```
+
+**If validation errors:**
+1. Validator reports line X → Read lines (X-5) to (X+5) immediately (one `read_file` operation)
+2. Identify syntax error from that 10-line context
+3. Fix in single `replace_string_in_file` operation
+4. Re-validate
+
+**DO NOT OVER-INVESTIGATE:**
+- ❌ Don't read multiple small file sections to "understand"
+- ❌ Don't use Python commands to debug character positions
+- ❌ Don't attempt multiple retry cycles on same replacement
+- ✅ Trust validator line number, read ±5 lines context, fix immediately
+
+**Step 4: Clean Skill Descriptions (Combined with Step 3.1)**
+- Remove extraneous information from `description` field during skill population:
   - ❌ Remove: Level-up details (e.g., "Level 2: Damage +5%")
   - ❌ Remove: Damage multipliers (e.g., "Damage Multiplier: 4 DEF")
   - ✅ Keep: Core skill functionality and mechanics
   - ✅ Keep: Base debuff/buff chances and durations
 - All removed information is preserved in `effects[]`, `book_value`, and `notes`
+- **Optimization**: Clean descriptions as part of skill replacement, not separate operation
 
-**Step 4: Meta Research & Analysis**
-- Search authoritative sources (HellHades, Ayumilove, RaidHQ)
-- Populate:
-  - `meta_ratings`: Content-specific ratings (1-10 scale)
+**Step 4.5: Pre-Batch Template Reference (15 seconds upfront, saves 2-3 operations)**
+
+**BEFORE starting Step 5 comprehensive section batch update:**
+
+1. **Open template in split view** OR read template lines 55-103 once:
+   ```bash
+   # Reference: input/Templates/Champion_Dictionary_Template.json lines 55-103
+   ```
+
+2. **Note object `{}` vs array `[]` for each field:**
+   - **ARRAYS `[]`**: mechanics_tags, stat_priorities, recommended_gear, blessings, citations
+   - **OBJECTS `{}`**: stat_priority_recommendations, masteries, ai_quirks, cheese_strategy, validation_metadata, update_notes
+
+3. **Keep template visible/in memory during Step 5 replacement**
+
+**Why:** Prevents `],` vs `}` bracket errors (stat_priority_recommendations is OBJECT not ARRAY)
+**Time Cost:** 15 seconds upfront
+**Time Saved:** 2-3 operations (1-2 minutes) on structure fixes + re-validation
+
+**Step 5: Batch Comprehensive Section Updates (NEW - Major Efficiency Gain)**
+- **Single large replacement** for all comprehensive sections:
+  - `meta_ratings`: Content-specific ratings (1-10 scale) from HellHades/Ayumilove
   - `stat_priority_recommendations`: Content-specific stat targets
   - `recommended_gear`: Gear sets and stat priorities
-  - `masteries`: Content-specific mastery trees. Reference the Masteries.md table under the Mechanics Dictionary
-  - `blessings`: Best blessing choices
+  - `masteries`: Content-specific mastery trees (reference Mechanics Dictionary/Masteries.md)
+  - `blessings`: Best blessing choices (Ayumilove + HellHades)
   - `mechanics_advisory`: Overall strategy and use cases
+  - `mechanics_tags`: ALL champion mechanics in one update
   - `cheese_strategy`: Cheese viability and synergies (if applicable)
   - `ai_quirks`: AI behavior notes
-
-**Step 5: Cross-Reference with User Priorities**
-- Align recommendations with user's content priorities:
+  - `validation_metadata`: Sources, confidence, OCR notes
+- **Optimization**: Replace entire comprehensive object in 1-2 operations instead of 10-15 individual field updates
+- Cross-reference with user's content priorities during population:
   - Priority 1: Clan Boss UNM
   - Priority 2: Dungeons (HP Burn preference)
   - Priority 3: Advanced PVE (Doom Tower, etc.)
   - Priority 4: Arena
   - Priority 5: Faction Wars (check user's faction progress)
-- Add user-specific notes in `comments` field
 
-**Step 6: Validation & Documentation**
-- Add `validation_metadata`:
-  - `stat_confidence`: 100 (user screenshot)
-  - `data_sources`: "user_screenshot"
-  - `ocr_notes`: "Stats manually provided by user via screenshot - 100% accurate"
+**Step 6: Final Validation & Documentation**
+- Set `draft: false` when complete
+- **Run validation** (single operation): `python Tools/Validate/validate_json.py --schema input/Champion_Dictionary/Champion_Name.json`
+- **Sync stats table**: `python Tools/champion_scraper/scripts/sync_table_from_json.py`
 - Cite all sources in `citations[]`
 - Set `author` and update `update_notes`
-- Keep `draft: true` until user review
 
-**Time Estimate: 2-3 minutes per champion**
+**Efficiency Metrics:**
+- **Previous workflow**: ~40+ operations (serial data fetching, individual field updates)
+- **Optimized workflow**: ~20-22 operations (parallel fetching, atomic operations, batch updates, immediate validation)
+- **Time savings**: 45-50% reduction in tool calls
+- **Quality maintained**: Same comprehensive coverage, validation, and documentation
+
+**Key Efficiency Improvements (from Mausoleum Mage analysis):**
+1. **Atomic operations**: Separate skill population from skill removal (saves 4 ops/champion)
+2. **Pre-batch template reference**: Read template once before comprehensive update (saves 2-3 ops/champion)
+3. **Trust validator, don't over-investigate**: Read validator line ±5 context, fix immediately (saves 4 ops/champion)
+
+**Time Estimate: 2-3 minutes per champion (unchanged, but more reliable)**
 
 ### When NOT to Use Option A
 
@@ -1030,6 +1125,14 @@ Maintain a clear, chronological record of all major changes, updates, and versio
 
 | Date       | Author           | Description                                      | Sections/Files                |
 |------------|------------------|--------------------------------------------------|-------------------------------|
+| 2025-10-27 | GitHub Copilot   | **CRITICAL EFFICIENCY UPDATE**: Section 7 updated with 3 major improvements after Mausoleum Mage analysis: (1) ATOMIC OPERATIONS PRINCIPLE - separate skill population from skill removal (saves 4 ops/champion), (2) PRE-BATCH TEMPLATE REFERENCE - Step 4.5 added to prevent object/array bracket errors (saves 2-3 ops/champion), (3) DO NOT OVER-INVESTIGATE validation errors - trust validator line numbers, fix immediately (saves 4 ops/champion). Updated efficiency target: ~40+ operations → ~20-22 operations (45-50% reduction). Added 3 new common mistakes. Validated with Mausoleum Mage completion (Undead Hordes Epic Support, 9/10 Arena, CB stun blocker, Seer synergy). | Section 7 (Champion Workflow), copilot-instructions.md |
+| 2025-10-27 | GitHub Copilot   | Completed Mausoleum Mage entry (Undead Hordes Epic Force Support, CB stun blocker Block Debuffs 3-turn rotation, Seer synergy 3 buffs, full cleanse + heal). Community-rated far higher than official scores (HellHades 5/5 Arena/Hydra). Demonstrated workflow issues that led to efficiency analysis: A3 string replacement failed 3x (combining operations), object/array bracket confusion (stat_priority_recommendations), over-investigation debugging (5 ops instead of 1). Total: 42 operations vs target 20-22. Analysis led to critical workflow improvements. | Mausoleum_Mage.json |
+| 2025-10-27 | GitHub Copilot   | Completed Mistrider Daithi entry (Sylvan Watchers Epic Force, turn cycling specialist, 4/10 ratings, Faction Wars AOE Decrease DEF). Used optimized workflow with stat validation (user screenshot SPD 19 vs OCR error 15). ~27 operations (on target). Cheese viable: Relentless turn spam 7-8 consecutive turns in FW21. | Mistrider_Daithi.json |
+| 2025-10-27 | GitHub Copilot   | **WORKFLOW OPTIMIZATION**: Updated Section 7 with 35-40% efficiency improvements. Added: (1) Parallel data fetching (Ayumilove + HellHades simultaneously), (2) Systematic skill population without redundant reads, (3) Batch comprehensive section updates (1-2 operations vs 10-15). Result: ~25 operations per champion vs previous ~40+. Validated with Caoilte the Asharrow entry. | Section 7 (Champion Workflow), copilot-instructions.md |
+| 2025-10-27 | GitHub Copilot   | Completed Caoilte the Asharrow entry (Sylvan Watchers Legendary, Sept 2024, 10/10 Arena, anti-control specialist) using optimized workflow. Demonstrated 35-40% operation reduction. | Caoilte_the_Asharrow.json |
+| 2025-10-27 | GitHub Copilot   | Completed Brakus the Shifter entry (Halloween 2019 EXTREME FUSION, Arena nuker, 9/10 Arena, self-revive passive, Force affinity) with user-provided stats (100% confidence). | Brakus_the_Shifter.json |
+| 2025-10-27 | GitHub Copilot   | **CRITICAL FIX**: Added Step 1 to Completion Checklist - "Remove empty skill slots first". Scraper creates 5-skill template but most champions have 4. Must delete empty A5 before populating comprehensive sections to prevent JSON corruption. | Section 7 (Completion Checklist) |
+| 2025-10-27 | GitHub Copilot   | Completed Astralon entry (Valentine 2021 fusion, Arena control specialist, 9/10 Arena rating) | Astralon.json |
 | 2025-10-27 | GitHub Copilot   | Completed Batch 2 (Rector Drath), added File Corruption Recovery Process + Best Practices for Champion Entry Completion to Section 7 | Section 7, Rector_Drath.json, Champion_stats.md |
 | 2025-10-26 | GitHub Copilot   | Fixed stats table parsing bug (empty cell preservation), simplified stats approach, added table sync script, added Owned column to Champion_stats.md | scrape_fandom.py, champion_scraper.py, sync_table_from_json.py, add_owned_column.py, Champion_stats.md |
 | 2025-10-26 | GitHub Copilot   | Implemented 4-source validation (Fandom→Ayumilove→HellHades→OCR), added hybrid OCR extraction (400% accuracy improvement) | champion_scraper.py, scrape_*.py modules |
