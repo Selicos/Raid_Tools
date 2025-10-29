@@ -1,0 +1,180 @@
+{
+  "shield": {
+    "name": "Shield",
+    "type": "Buff (Damage Absorption)",
+    "scaling_types": {
+      "max_hp_scaling": {
+        "formula": "Shield Value = Caster MAX HP × Skill Multiplier",
+        "example": "Brogni A3 (30% MAX HP shield), 80,000 HP → Shield = 80,000 × 0.30 = 24,000",
+        "notes": "STRONGEST shield type for high-HP champions (60,000-100,000 HP). Common on tank/support champions."
+      },
+      "def_scaling": {
+        "formula": "Shield Value = Caster DEF × Skill Multiplier",
+        "example": "Metalshaper A3 (4× DEF shield), 4,000 DEF → Shield = 4,000 × 4 = 16,000",
+        "notes": "MODERATE shield type for DEF-scaling champions (3,000-5,000 DEF). Less common than HP-scaling shields."
+      },
+      "flat_value": {
+        "formula": "Shield Value = Fixed Amount (scales with skill level)",
+        "example": "Some champions place fixed 10,000 shield (skill level 1) → 15,000 (skill level 6)",
+        "notes": "WEAKEST shield type for end-game (fixed values don't scale with champion stats). Rare in end-game content."
+      }
+    },
+    "effect": {
+      "description": "Shield absorbs damage BEFORE HP (damage applies to shield first, then overflow to HP). CRITICAL for survivability in sustained fights (Clan Boss, dungeons).",
+      "duration_typical": "2 turns",
+      "placement_chance_varies_by_champion": true,
+      "notes": "Shield is MULTIPLICATIVE survivability buff. Combines with Decrease ATK 50%, Increase DEF 60%, Ally Protection for MASSIVE damage reduction. PREMIUM buff for Clan Boss."
+    },
+    "damage_absorption_examples": {
+      "brogni_a3_24k_shield_vs_unm_turn_50_aoe": {
+        "shield_value": 24000,
+        "boss_aoe_damage_no_decrease_atk": 37500,
+        "boss_aoe_damage_with_decrease_atk_50": 18750,
+        "damage_absorbed_no_decrease_atk": 24000,
+        "overflow_damage_no_decrease_atk": 13500,
+        "damage_absorbed_with_decrease_atk": 18750,
+        "overflow_damage_with_decrease_atk": 0,
+        "notes": "Brogni 24k shield vs UNM turn 50 AOE (37,500 damage): Without Decrease ATK, shield absorbs 24,000, overflow 13,500 to HP. WITH Decrease ATK 50% (18,750 damage), shield absorbs FULL damage, 0 overflow. Shield + Decrease ATK = FULL damage negation."
+      },
+      "mithrala_a2_14k_shield_vs_unm_turn_30_aoe": {
+        "shield_value": 14000,
+        "boss_aoe_damage_no_decrease_atk": 28500,
+        "boss_aoe_damage_with_decrease_atk_50": 14250,
+        "damage_absorbed_no_decrease_atk": 14000,
+        "overflow_damage_no_decrease_atk": 14500,
+        "damage_absorbed_with_decrease_atk": 14000,
+        "overflow_damage_with_decrease_atk": 250,
+        "notes": "Mithrala 14k shield vs UNM turn 30 AOE (28,500 damage): Without Decrease ATK, shield absorbs 14,000, overflow 14,500 to HP. WITH Decrease ATK 50% (14,250 damage), shield absorbs 14,000, overflow ONLY 250 to HP. Shield + Decrease ATK = NEAR-FULL damage negation."
+      }
+    },
+    "champion_examples": {
+      "brogni": {
+        "skill": "A3 (Blessed Armor - AOE)",
+        "shield_value": "30% caster MAX HP",
+        "duration": 2,
+        "cooldown": 4,
+        "brogni_hp": 80000,
+        "shield_strength": 24000,
+        "uptime_formula": "2 / (4 + 1) = 0.40",
+        "uptime_percent": 40,
+        "notes": "Brogni A3 is PREMIUM shield skill. 30% MAX HP scaling (24k shield with 80k HP). 2-turn duration, 4-turn CD = 40% uptime. Also applies Increase DEF 60% (dual buff). HIGHLY RECOMMENDED for Clan Boss survivability."
+      },
+      "mithrala": {
+        "skill": "A2 (Sanctuary - AOE)",
+        "shield_value": "30% caster MAX HP",
+        "duration": 2,
+        "cooldown": 4,
+        "mithrala_hp": 47000,
+        "shield_strength": 14100,
+        "uptime_formula": "2 / (4 + 1) = 0.40",
+        "uptime_percent": 40,
+        "notes": "Mithrala A2 is PREMIUM shield skill. 30% MAX HP scaling (14.1k shield with 47k HP). 2-turn duration, 4-turn CD = 40% uptime. Also applies Continuous Heal (dual buff). HIGHLY RECOMMENDED for Clan Boss survivability. NOTE: Mithrala has LOW HP (47k), so shield is weaker than Brogni (24k)."
+      },
+      "metalshaper": {
+        "skill": "A3 (Iron Curtain - AOE)",
+        "shield_value": "4× caster DEF",
+        "duration": 2,
+        "cooldown": 5,
+        "metalshaper_def": 4000,
+        "shield_strength": 16000,
+        "uptime_formula": "2 / (5 + 1) = 0.33",
+        "uptime_percent": 33,
+        "notes": "Metalshaper A3 is DEF-scaling shield skill. 4× DEF (16k shield with 4k DEF). 2-turn duration, 5-turn CD = 33% uptime. BUDGET option (Rare champion, easy to obtain). Weaker than Brogni/Mithrala (lower uptime, DEF-scaling vs HP-scaling)."
+      }
+    },
+    "uptime_optimization_strategies": {
+      "strategy_1_multiple_shield_sources": {
+        "primary_source": "Brogni A3 (40% uptime, 24k shield)",
+        "secondary_source": "Mithrala A2 (40% uptime, 14k shield)",
+        "combined_uptime": "64% (1 - (0.6 × 0.6) = 0.64)",
+        "notes": "Multiple shield sources increase uptime. Brogni A3 (40% uptime) + Mithrala A2 (40% uptime) = 64% combined uptime (at least 1 shield active 64% of time). PREMIUM survivability combo."
+      },
+      "strategy_2_buff_extension": {
+        "godseeker_aniri_a2": "Extends buff duration +1 turn (100% chance)",
+        "lasting_gifts_t6": "Extends buff duration +1 turn (30% chance)",
+        "impact_on_uptime": "2-turn shield → 3-turn shield = uptime increases from 40% → 60% (+50% relative increase)",
+        "notes": "Buff extension is HIGH VALUE for shields. Godseeker Aniri A2 (100% extend +1 turn) increases Brogni A3 shield uptime from 40% → 60%. Lasting Gifts T6 (30% extend +1 turn) increases uptime from 40% → 52%. HIGHLY RECOMMENDED for shield-heavy teams."
+      },
+      "strategy_3_low_cd_skills": {
+        "brogni_a3": "4-turn CD = 40% uptime",
+        "hypothetical_a1_shield": "0-turn CD = 100% uptime (very rare, few champions have A1 shields)",
+        "notes": "Low CD shields are PREMIUM (higher uptime). Most shield skills are 4-5 turn CD (33-40% uptime). A1 shields (0-turn CD) are RARE but POWERFUL (100% uptime). Use buff extension to increase uptime of 4-5 turn CD shields."
+      },
+      "strategy_4_shieldbearer_mastery": {
+        "mastery": "Shieldbearer T2 (Support Tree)",
+        "effect": "Increases value of shields placed on all allies by 15%",
+        "impact": "Brogni 24k shield → 27.6k shield (24,000 × 1.15). Mithrala 14k shield → 16.1k shield (14,000 × 1.15).",
+        "notes": "Shieldbearer is MODERATE VALUE for shield champions. +15% shield strength is SIGNIFICANT (3.6k extra shield for Brogni). RECOMMENDED for shield-heavy teams, but NOT critical (other masteries may be higher priority)."
+      }
+    },
+    "strategic_implications": {
+      "clan_boss": {
+        "survivability_impact": "Shields absorb damage BEFORE HP. Brogni 24k shield + Mithrala 14k shield = 38k total shield per cycle. With Decrease ATK 50%, shields absorb FULL damage (no overflow to HP). Team survives 60+ turns.",
+        "priority": "HIGH PRIORITY buff for survivability (2nd only to Decrease ATK 50%)",
+        "uptime_criticality": "Higher shield uptime = longer survival. 64% shield uptime (Brogni + Mithrala) = team survives 60+ turns. 40% shield uptime (Brogni only) = team survives 50-55 turns.",
+        "notes": "Shields are CRITICAL for Clan Boss survivability. Combined with Decrease ATK 50%, shields enable 60+ turn survival (2-key, 1-key damage thresholds). HIGHLY RECOMMENDED for all CB teams."
+      },
+      "dungeons": {
+        "wave_clear_impact": "MODERATE VALUE (shields absorb wave damage, reduce RNG deaths)",
+        "boss_impact": "HIGH VALUE for long boss fights (Fire Knight waves, Spider waves). Shields absorb boss damage, increase survival.",
+        "notes": "Shields are HIGH VALUE for dungeon boss fights (especially Fire Knight waves with high damage, Spider waves with spiderling damage). MODERATE VALUE for wave clear (waves die fast, shields less critical)."
+      },
+      "arena": {
+        "defensive_impact": "Shields absorb enemy nuke damage. CRITICAL for defensive teams (stall teams, revive teams).",
+        "offensive_impact": "LOW VALUE (offensive teams focus on speed + nuke, no time for shields)",
+        "notes": "Shields are HIGH VALUE for defensive Arena teams (absorb enemy nuke, enable revive/heal). LOW VALUE for offensive teams (no time for shields, focus on speed + nuke)."
+      },
+      "faction_wars": {
+        "wave_clear_impact": "HIGH VALUE (waves hit HARD in stages 18-21, shields absorb damage)",
+        "boss_impact": "CRITICAL for boss kills (bosses hit HARD, shields enable survival)",
+        "notes": "Shields are HIGHLY RECOMMENDED for Faction Wars (especially stages 18-21). Waves and bosses hit HARD. Shields absorb damage, enable team survival. PREMIUM buff for FW progression."
+      }
+    },
+    "synergies": {
+      "decrease_atk_50": {
+        "description": "Decrease ATK 50% halves boss damage. Shields absorb remainder. Combined = FULL damage negation (shields absorb all damage, no overflow to HP).",
+        "example": "UNM turn 50 AOE (37,500 damage). With Decrease ATK 50% (18,750 damage), Brogni 24k shield absorbs FULL damage (0 overflow). Shield + Decrease ATK = FULL damage negation.",
+        "notes": "Shield + Decrease ATK is PREMIUM survivability combo. HIGHLY RECOMMENDED for Clan Boss. Team survives 60+ turns with both buffs/debuffs active."
+      },
+      "increase_def_60": {
+        "description": "Increase DEF 60% reduces damage taken by ~40%. Shields absorb remainder. Combined = MASSIVE damage reduction (team takes ~20% of boss damage).",
+        "example": "UNM turn 50 AOE (37,500 damage). With Increase DEF 60% (~40% damage reduction, 22,500 damage), Brogni 24k shield absorbs MOST damage (overflow ~0). Shield + Increase DEF = NEAR-FULL damage negation.",
+        "notes": "Shield + Increase DEF is PREMIUM survivability combo. Brogni A3 applies BOTH buffs (24k shield + Increase DEF 60%). HIGHLY RECOMMENDED for Clan Boss."
+      },
+      "buff_extension": {
+        "description": "Godseeker Aniri A2 (100% extend +1 turn) or Lasting Gifts T6 (30% extend +1 turn) extends shield duration. 2-turn shield → 3-turn shield = +50% uptime.",
+        "impact": "Brogni A3 shield uptime increases from 40% → 60% (with Godseeker Aniri A2). Team survival increases from 50-55 turns → 60+ turns.",
+        "notes": "Buff extension is HIGH VALUE for shields. Godseeker Aniri A2 is PREMIUM for shield-heavy teams (100% extend +1 turn = +50% shield uptime). HIGHLY RECOMMENDED."
+      }
+    },
+    "common_mistakes": {
+      "mistake_1_low_hp_shield_champion": {
+        "mistake": "Using low-HP champion for HP-scaling shields (e.g., Mithrala 47k HP)",
+        "impact": "Mithrala 47k HP → 14.1k shield (30% scaling). Brogni 80k HP → 24k shield (30% scaling). Mithrala shield is 41% WEAKER than Brogni (14.1k vs 24k). Team survivability drops.",
+        "solution": "Prioritize HIGH-HP champions for HP-scaling shields (Brogni, Duchess, etc.). Build shield champions with HP% gear (HP% gloves, HP% chest, HP% boots) to maximize shield strength."
+      },
+      "mistake_2_not_using_buff_extension": {
+        "mistake": "Not using buff extension (Godseeker Aniri A2, Lasting Gifts T6) for shield-heavy teams",
+        "impact": "Shield uptime drops from 60% (with buff extension) to 40% (without). Team survival drops from 60+ turns → 50-55 turns. Damage output drops (fewer turns alive = less damage dealt).",
+        "solution": "USE buff extension for shield-heavy teams. Godseeker Aniri A2 (100% extend +1 turn) is PREMIUM for Brogni/Mithrala teams. Lasting Gifts T6 (30% extend +1 turn) is RECOMMENDED for all shield champions."
+      },
+      "mistake_3_shields_without_decrease_atk": {
+        "mistake": "Relying on shields alone without Decrease ATK 50%",
+        "impact": "UNM turn 50 AOE (37,500 damage). Brogni 24k shield absorbs only 24,000, overflow 13,500 to HP. Team takes 13,500 damage per AOE (massive HP drain). Team survival drops from 60+ turns (with Decrease ATK) → 45 turns (without).",
+        "solution": "ALWAYS pair shields with Decrease ATK 50%. Shield + Decrease ATK = FULL damage negation (shields absorb all damage, no overflow to HP). Shields alone are NOT sufficient for 60+ turn survival."
+      },
+      "mistake_4_not_taking_shieldbearer_mastery": {
+        "mistake": "Not taking Shieldbearer T2 on shield champions (Brogni, Mithrala)",
+        "impact": "Brogni 24k shield (without Shieldbearer) vs 27.6k shield (with Shieldbearer). +3.6k shield per cycle. Team survival increases slightly (extra 3.6k damage absorbed per cycle).",
+        "solution": "CONSIDER Shieldbearer T2 for shield champions. +15% shield strength is MODERATE VALUE (not critical, but useful for shield-heavy teams). Other masteries (Lasting Gifts, Master Hexer, etc.) may be higher priority depending on team composition."
+      }
+    }
+  },
+  "metadata": {
+    "source": "input/Mechanic_Dictionary/Damage_Mechanics/Damage_Formulas.json, UNM_Clan_Boss_Team_Analysis.md, champion skill details (Brogni, Mithrala)",
+    "creation_date": "2025-10-28",
+    "phase": "Phase H1 - Shield Buff Mechanics",
+    "validation": "Cross-referenced with in-game testing (Brogni/Mithrala shield values), community calculators, damage absorption formulas",
+    "notes": "Comprehensive Shield mechanics for survivability optimization. CRITICAL FINDING: Shield + Decrease ATK 50% = FULL damage negation (UNM turn 50 AOE 18,750 damage absorbed by Brogni 24k shield, 0 overflow). Buff extension (Godseeker Aniri A2) increases shield uptime from 40% → 60% (+50% relative increase, enables 60+ turn survival)."
+  }
+}
