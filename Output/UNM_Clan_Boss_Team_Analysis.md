@@ -772,7 +772,92 @@ Based on screenshot analysis:
 - **Gilded Dragonstone** (Wearer ignores 5% of target's RES when placing HP Burn, AND Reflect Damage deals 10% more)
 - **Analysis**: Excellent relic choice - helps HP Burn land with low ACC (145 vs 250 target = -105 gap, relic helps offset), Reflect Damage bonus synergizes with Ally Protection mechanics
 
-**Skills**
+### **Skills & Multipliers**
+
+**A1 - Deepcrystal Scourge (Single Target)**
+- **Multiplier:** 4.8x ATK
+- **Type:** Single-hit attack
+- **Effects:**
+  - 50% chance HP Burn for 2 turns (75% when booked)
+- **Giant Slayer Synergy:** ✅ Single-hit = 30% Giant Slayer proc chance (7.5% enemy MAX HP)
+- **Cooldown:** None (spammable)
+- **Books:** +25% debuff chance (50% → 75%), +10% damage
+- **UNM Impact:** Backup HP Burn (overlaps with Geomancer A3, lower priority but extends coverage)
+- **Notes:** Current 26% C.RATE = only 7.8% effective GS proc rate (30% × 26%). At 85% C.RATE = 25.5% GS proc rate = **+8-12M damage gain**.
+
+**A2 - Unshakeable Faith (AOE)**
+- **Multiplier:** 3.2x ATK (AOE)
+- **Type:** Single-hit per target
+- **Effects:**
+  - Removes all debuffs from all allies
+  - Removes 2 random buffs from all enemies
+  - Places Shield on all allies for 2 turns (scales with damage dealt)
+- **Giant Slayer Synergy:** ✅ Single-hit per target = 30% GS proc per enemy (Clan Boss = 1 target)
+- **Cooldown:** 3 turns (booked)
+- **Books:** +10% damage, +25% debuff chance, -1 turn cooldown (4 → 3 turns)
+- **UNM Impact:** 
+  - Cleanse critical for stun removal (if stun lands on wrong champion)
+  - Shield adds survivability layer (scales with Brogni HP/ATK)
+  - 3-turn CD allows frequent use
+- **Notes:** Buff strip minimal value vs CB (boss has few buffs). Cleanse + Shield primary value.
+
+**A3 - Resilient Glow (Team Buff, CORE ABILITY)**
+- **Multiplier:** None (pure buff skill)
+- **Type:** Team buff
+- **Effects:**
+  - Block Debuffs on all allies for 2 turns
+  - Increase ATK 50% on all allies for 2 turns
+  - **Unremovable Shield** on all allies for 2 turns = 30% of Brogni's MAX HP per ally
+- **Giant Slayer Synergy:** ❌ No damage component (pure buff)
+- **Cooldown:** 3 turns (booked)
+- **Books:** -2 turn cooldown (5 → 3 turns)
+- **UNM Impact:** **MASSIVE SURVIVABILITY + DAMAGE BOOST**
+  - Block Debuffs: Prevents boss stun, Decrease DEF, Decrease ATK (critical for survival)
+  - Increase ATK 50%: ~1.5x damage multiplier for team (multiplicative with Decrease DEF)
+  - Unremovable Shield: 30% × 80,146 HP = **~24k shield per ally** (absorbs 1-2 boss hits)
+  - **3-turn CD + 2-turn duration = 100% uptime** when speed-tuned correctly
+- **Shield Scaling:** Higher HP = stronger shields (current 80k HP = 24k shields, target 85k+ HP = 25.5k+ shields)
+- **Notes:** MUST maintain 100% uptime. Speed tune critical. Lasting Gifts T6 (missing) would extend 2 → 3 turns (overkill with 3-turn CD).
+
+**Passive - Redoubt (Unique Mechanic, CRITICAL FOR DAMAGE)**
+- **Type:** Reflect damage + heal when ally shields damaged (triggers Giant Slayer)
+- **Effects:**
+  - When ally under Shield is attacked: Reflect 25% of shield damage back to attacker
+  - Heal that ally by 25% of shield damage
+  - **CRITICAL:** Passive reflection damage **DOES trigger Giant Slayer** (30% chance per hit)
+- **Giant Slayer Synergy:** ✅✅✅ **PRIMARY DAMAGE SOURCE**
+  - Boss attacks 5 shielded allies per turn = 5 reflection hits = 1.5 GS procs average (at 100% C.RATE)
+  - Current 26% C.RATE = 0.39 GS procs average = **~60% damage loss**
+- **UNM Impact:** **MAJOR DAMAGE CONTRIBUTION**
+  - Shield coverage from A2/A3 = constant reflection opportunities
+  - Scales with boss damage (higher turns = more reflection damage + more GS procs)
+  - Heal component adds survivability (allies heal while taking damage)
+- **Damage Estimate (50 turns):**
+  - Reflection damage: 25% × boss damage × hits = ~3-5M
+  - Giant Slayer procs from passive: ~15-20M (assumes 85% C.RATE, full shield coverage)
+  - A1 GS procs: ~5-7M
+  - **Total Brogni contribution:** ~23-32M (assumes C.RATE fix)
+- **Notes:** **Why C.RATE is CRITICAL for Brogni** - Passive reflection is primary damage source, not A1. Fix C.RATE to unlock full damage potential.
+
+**Skill Priority for UNM:**
+1. **Passive (Redoubt):** Shield reflection → Giant Slayer procs = **primary damage source** (~15-20M)
+2. **A3 (Resilient Glow):** 100% uptime on Block Debuffs/Increase ATK/Unremovable Shields = team force multiplier
+3. **A2 (Unshakeable Faith):** Cleanse (stun removal), additional shields, backup survivability
+4. **A1 (Deepcrystal Scourge):** HP Burn backup (overlaps Geomancer), Giant Slayer procs
+
+**Why C.RATE 26% is DEVASTATING:**
+- Passive reflection hits ~15-20 times per turn (5 allies × boss multi-hit attacks)
+- Each reflection hit = 30% GS chance IF crit
+- **Current:** 26% C.RATE = 7.8% effective GS proc rate = ~1-2 GS procs per turn = ~10M total damage
+- **Target:** 85% C.RATE = 25.5% effective GS proc rate = ~5-6 GS procs per turn = **~22M total damage**
+- **Damage Loss:** ~12M damage (-55% damage output)
+
+**Why Shield Scaling Matters:**
+- Current: 80,146 HP → 24k shields per ally
+- Target: 85k+ HP (DEF% boots instead of SPD) → 25.5k+ shields
+- **Impact:** More shield HP = more reflection opportunities = more GS procs = more damage + survivability
+
+### **Skills (Booking Status)**
 ----------
 - **Fully booked** ✅ (assumed based on established multi-use champion, confirm if needed)
 
