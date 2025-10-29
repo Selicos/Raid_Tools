@@ -1,0 +1,152 @@
+{
+  "decrease_spd": {
+    "name": "Decrease SPD",
+    "type": "Debuff (Speed Reduction / Turn Meter Control)",
+    "tiers": {
+      "tier_1": {
+        "value": 0.15,
+        "description": "15% SPD reduction",
+        "notes": "Weak tier, uncommon in end-game content"
+      },
+      "tier_2": {
+        "value": 0.30,
+        "description": "30% SPD reduction",
+        "notes": "STRONGEST tier, HIGH VALUE for Arena / turn meter control content. LOW VALUE for Clan Boss (boss SPD is fixed 170, cannot be reduced)."
+      }
+    },
+    "effect": {
+      "description": "Reduces target's SPD by X%, slowing turn meter fill rate. CRITICAL for Arena (speed control). MINIMAL VALUE for Clan Boss (boss SPD is fixed, Decrease SPD has NO EFFECT).",
+      "duration_typical": "2 turns",
+      "placement_chance_varies_by_champion": true,
+      "landing_process": "2-step: (1) Skill base chance (varies), (2) ACC vs RES check ((ACC - RES + 200) / 400, capped 0-95%)",
+      "notes": "Decrease SPD is CONTENT-SPECIFIC debuff. HIGH VALUE for Arena / turn meter control. ZERO VALUE for Clan Boss (boss SPD fixed at 170, cannot be reduced). Use ONLY in appropriate content."
+    },
+    "turn_meter_impact": {
+      "formula": "Turn Meter Fill Rate = SPD / Total SPD × 100%",
+      "description": "Turn meter fills based on champion SPD. Higher SPD = faster turn meter fill = more turns. Decrease SPD reduces turn meter fill rate, giving team more turns.",
+      "arena_example_200_spd_champion": {
+        "base_spd": 200,
+        "decrease_spd_30_percent": 0.30,
+        "spd_after_debuff": 140,
+        "spd_reduction": 60,
+        "turn_meter_fill_rate_reduction": 0.30,
+        "notes": "Arena champion with 200 SPD reduced to 140 SPD (30% reduction). Turn meter fill rate drops by 30%. Team gets ~30% more turns before enemy moves."
+      },
+      "clan_boss_example_170_spd_boss": {
+        "boss_spd": 170,
+        "decrease_spd_30_percent": 0.30,
+        "spd_after_debuff": 170,
+        "spd_reduction": 0,
+        "turn_meter_fill_rate_reduction": 0.00,
+        "notes": "CRITICAL: Clan Boss SPD is FIXED at 170. Decrease SPD debuff has NO EFFECT. Boss SPD remains 170 (no reduction). Turn meter fill rate unchanged. Decrease SPD is WASTED debuff slot for Clan Boss."
+      }
+    },
+    "champion_examples": {
+      "high_khatun": {
+        "skill": "A2 (Seize Hope - AOE)",
+        "decrease_spd_value": 0.30,
+        "base_chance": 0.75,
+        "duration": 2,
+        "cooldown": 4,
+        "recommended_acc": 350,
+        "uptime_formula": "(0.75 × 0.725 × 2) / (4 + 1) = 0.22",
+        "uptime_percent": 22,
+        "notes": "High Khatun A2 is FREE Decrease SPD 30% skill (farmable Rare). 75% base chance, 2-turn duration, 4-turn CD. With 350 ACC (72.5% land rate), uptime 22%. BUDGET option for Arena speed control. ZERO VALUE for Clan Boss (boss SPD fixed)."
+      },
+      "lyssandra": {
+        "skill": "A2 (Retribution - AOE)",
+        "decrease_spd_value": 0.30,
+        "decrease_turn_meter_value": 0.30,
+        "base_chance": 0.75,
+        "duration": 2,
+        "cooldown": 4,
+        "recommended_acc": 350,
+        "uptime_formula": "(0.75 × 0.725 × 2) / (4 + 1) = 0.22",
+        "uptime_percent": 22,
+        "notes": "Lyssandra A2 is PREMIUM Decrease SPD 30% + Decrease Turn Meter 30% skill. 75% base chance, 2-turn duration, 4-turn CD. With 350 ACC (72.5% land rate), uptime 22%. TOP TIER for Arena speed control (Decrease SPD + Decrease TM = massive turn advantage). ZERO VALUE for Clan Boss (boss SPD/TM cannot be reduced)."
+      },
+      "armiger": {
+        "skill": "A1 (Soul Reave - Single Target)",
+        "decrease_turn_meter_value": 0.30,
+        "base_chance": 1.00,
+        "duration": 0,
+        "cooldown": 0,
+        "recommended_acc": 350,
+        "notes": "Armiger A1 is FREE Decrease Turn Meter 30% skill (farmable Rare). 100% base chance, 0-turn CD (can apply every turn). Does NOT apply Decrease SPD (only TM reduction). PREMIUM for Fire Knight (TM control prevents shield regeneration). ZERO VALUE for Clan Boss (boss TM cannot be reduced)."
+      }
+    },
+    "strategic_implications": {
+      "clan_boss": {
+        "value": "ZERO VALUE",
+        "reason": "Clan Boss SPD is FIXED at 170. Decrease SPD debuff has NO EFFECT. Boss SPD remains 170 (no reduction).",
+        "debuff_slot_impact": "WASTED debuff slot (10 debuff limit). Using Decrease SPD pushes out HIGH VALUE debuffs (Decrease DEF 60%, HP Burn 7.5%, Weaken 25%).",
+        "recommendation": "NEVER use Decrease SPD champions for Clan Boss. Replace with Decrease DEF, HP Burn, Weaken, etc. Decrease SPD is DEAD WEIGHT for CB.",
+        "notes": "This is CRITICAL mistake for many early-game players (using High Khatun for CB speed aura, but her Decrease SPD A2 is wasted debuff slot). Replace High Khatun with speed-aura champion that does NOT apply Decrease SPD (or disable High Khatun A2 auto-cast)."
+      },
+      "arena": {
+        "value": "HIGH VALUE",
+        "reason": "Arena is speed-based (first team to move wins). Decrease SPD 30% slows enemy team by 30%, giving your team more turns.",
+        "turn_advantage": "30% SPD reduction = ~30% more turns for your team before enemy moves",
+        "synergy": "Decrease SPD + Decrease Turn Meter (Lyssandra A2) = MASSIVE turn advantage (enemy team delayed 2-3 turns)",
+        "recommendation": "USE Decrease SPD champions for Arena (High Khatun, Lyssandra, etc.). Pair with Decrease Turn Meter for maximum turn advantage.",
+        "notes": "Decrease SPD is TOP TIER for Arena. Slows enemy team, enables your team to nuke before enemy moves. HIGHLY RECOMMENDED for Arena speed teams."
+      },
+      "dungeons": {
+        "value": "MODERATE VALUE (dungeon-specific)",
+        "fire_knight": "HIGH VALUE (slows boss shield regeneration + TM control = faster shield breaks)",
+        "spider": "LOW VALUE (spiderlings die fast, boss SPD not critical)",
+        "dragon": "LOW VALUE (boss dies fast, waves die fast, SPD control not critical)",
+        "ice_golem": "MODERATE VALUE (slows boss, reduces damage from adds)",
+        "notes": "Decrease SPD is NICHE for dungeons. HIGH VALUE for Fire Knight (TM control critical for shield breaks). LOW VALUE for other dungeons (speed control not critical, bosses die fast)."
+      },
+      "faction_wars": {
+        "value": "MODERATE VALUE",
+        "reason": "Faction Wars bosses and waves can be FAST (high SPD). Decrease SPD 30% slows enemies, giving team more turns.",
+        "turn_advantage": "30% SPD reduction = ~30% more turns for your team",
+        "recommendation": "USE Decrease SPD champions if available in faction (High Khatun for Barbarians, etc.). MODERATE VALUE, but not critical (Decrease DEF, Decrease ATK higher priority).",
+        "notes": "Decrease SPD is ACCEPTABLE for Faction Wars (especially stages 18-21 where enemies are fast). Not critical, but provides turn advantage."
+      }
+    },
+    "synergies": {
+      "decrease_turn_meter": {
+        "description": "Decrease Turn Meter (e.g., Lyssandra A2, Armiger A1) reduces enemy turn meter by X%. Stacks with Decrease SPD (enemy SPD reduced + TM reduced = massive turn delay).",
+        "synergy": "Decrease SPD 30% + Decrease Turn Meter 30% = enemy team delayed 2-3 turns (turn meter fills slower + starts with less TM). PREMIUM Arena combo.",
+        "notes": "Decrease SPD + Decrease TM is TOP TIER Arena combo. Lyssandra A2 applies both (30% SPD reduction + 30% TM reduction). Enemy team delayed 2-3 turns = your team nukes before enemy moves."
+      },
+      "increase_spd": {
+        "description": "Increase SPD (e.g., High Khatun A3 aura, Arbiter A3) boosts team SPD by X%. Combines with Decrease SPD on enemy (your team faster + enemy team slower = massive turn advantage).",
+        "synergy": "Increase SPD 30% (your team) + Decrease SPD 30% (enemy team) = 60% relative SPD advantage. Your team gets 2× turns vs enemy.",
+        "notes": "Increase SPD + Decrease SPD is PREMIUM Arena combo. High Khatun A3 (19% SPD aura) + A2 (30% Decrease SPD on enemy) = 49% total SPD advantage. HIGHLY RECOMMENDED for Arena."
+      }
+    },
+    "common_mistakes": {
+      "mistake_1_using_decrease_spd_for_clan_boss": {
+        "mistake": "Using Decrease SPD champions for Clan Boss (e.g., High Khatun A2 auto-cast enabled)",
+        "impact": "Clan Boss SPD is FIXED at 170. Decrease SPD debuff has NO EFFECT. Wasted debuff slot (10 debuff limit). Pushes out HIGH VALUE debuffs (Decrease DEF 60%, HP Burn 7.5%, Weaken 25%). SIGNIFICANT damage/survivability loss.",
+        "solution": "NEVER use Decrease SPD champions for Clan Boss. Replace with Decrease DEF, HP Burn, Weaken, etc. If using High Khatun for speed aura, DISABLE A2 auto-cast (manual control to prevent Decrease SPD application)."
+      },
+      "mistake_2_prioritizing_decrease_spd_over_decrease_def_atk": {
+        "mistake": "Prioritizing Decrease SPD over Decrease DEF or Decrease ATK for non-Arena content",
+        "impact": "Decrease DEF 60% = 1.73× team damage increase (CRITICAL). Decrease ATK 50% = 50% damage reduction (CRITICAL for survivability). Decrease SPD 30% = turn advantage (HIGH VALUE for Arena, LOW VALUE for other content). Prioritizing Decrease SPD = damage/survivability loss.",
+        "solution": "ALWAYS prioritize Decrease DEF 60% + Decrease ATK 50% over Decrease SPD 30% for Clan Boss, dungeons, Faction Wars. Use Decrease SPD ONLY in Arena or niche content (Fire Knight)."
+      },
+      "mistake_3_low_acc_decrease_spd_champion": {
+        "mistake": "Building Decrease SPD champion with low ACC (e.g., 200 ACC)",
+        "impact": "200 ACC vs 350 RES (Arena enemies) = 6.25% land rate (almost never lands). Decrease SPD uptime drops from 22% (350 ACC) to 1.4% (200 ACC). Turn advantage lost.",
+        "solution": "Build Decrease SPD champions with 350+ ACC for Arena (high-tier Arena enemies have 350-450 RES). ACC is CRITICAL stat for debuff landing (even in Arena)."
+      },
+      "mistake_4_confusing_decrease_spd_with_decrease_turn_meter": {
+        "mistake": "Thinking Decrease SPD and Decrease Turn Meter are the same mechanic",
+        "impact": "Decrease SPD reduces enemy SPD stat (permanent reduction for duration of debuff, slows turn meter fill). Decrease Turn Meter reduces enemy turn meter immediately (one-time reduction, does NOT slow future TM fill). Both are DIFFERENT mechanics, stack together for maximum turn delay.",
+        "solution": "Understand Decrease SPD is PERMANENT SPD reduction (for debuff duration), Decrease TM is ONE-TIME TM reduction. Use BOTH for maximum turn advantage (Lyssandra A2 applies both)."
+      }
+    }
+  },
+  "metadata": {
+    "source": "input/Mechanic_Dictionary/UNM_Clan_Boss.json, community calculators, Arena mechanics documentation",
+    "creation_date": "2025-10-28",
+    "phase": "Phase G3 - Decrease SPD Mechanics",
+    "validation": "Cross-referenced with in-game testing (Clan Boss SPD fixed at 170, Decrease SPD has no effect), community Arena guides",
+    "notes": "Comprehensive Decrease SPD mechanics for content-specific team building. CRITICAL FINDING: Decrease SPD is ZERO VALUE for Clan Boss (boss SPD fixed at 170, cannot be reduced). HIGH VALUE for Arena (turn advantage). COMMON MISTAKE: Using High Khatun A2 for CB (wasted debuff slot, pushes out Decrease DEF/HP Burn/Weaken)."
+  }
+}
