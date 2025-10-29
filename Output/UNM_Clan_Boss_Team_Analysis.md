@@ -627,35 +627,37 @@ The boss follows a strict 5-turn attack pattern that repeats:
 
 | Champion | HP | DEF | EHP Calculation | Total EHP | Survivability Rank |
 |----------|-----|-----|-----------------|-----------|-------------------|
-| **Mithrala** ✅ | 70,366 | 4,312 | 70,366 × (1 + 4.312) | **373,864** | 🏆 **#1 TANKIEST** (boot swap improved!) |
-| **Geomancer** ✅ | 60,443 | 4,887 | 60,443 × (1 + 4.887) | **355,847** | 🥇 **#2** (was #1, excellent stun target) |
-| **Brogni** | 79,988 | 3,134 | 79,988 × (1 + 3.134) | **330,549** | #3 (WITH shields ~354k total) |
-| **Godseeker Aniri** | 61,842 | 3,774 | 61,842 × (1 + 3.774) | **295,196** | #4 (High SPD blocker, good base EHP) |
-| **Stag Knight** | 49,035 | 2,846 | 49,035 × (1 + 2.846) | **188,583** | #5 (Fragile, avoid stun) |
+| **Stag Knight** ✅ | 77,967 | 4,860 | 77,967 × (1 + 4.860) | **456,874** | 🏆 **#1 TANKIEST!** (+268k EHP, was #5!) |
+| **Mithrala** ✅ | 70,366 | 4,312 | 70,366 × (1 + 4.312) | **373,864** | 🥇 **#2** (was #3, boot swap improved!) |
+| **Geomancer** ✅ | 60,443 | 4,887 | 60,443 × (1 + 4.887) | **355,847** | � **#3** (was #2, PERFECT stun target!) |
+| **Brogni** | 79,988 | 3,134 | 79,988 × (1 + 3.134) | **330,549** | #4 (WITH shields ~354k total) |
+| **Godseeker Aniri** | 61,842 | 3,774 | 61,842 × (1 + 3.774) | **295,196** | #5 (High SPD blocker, needs update) |
 
 **Key Changes (2025-10-29):**
-- **Mithrala EHP:** 254,596 → **373,864** (+119,268 = **+47% survivability**!) 🎉
-  - HP: 61,025 → 70,366 (+9,341 from boot swap + set optimization)
-  - DEF: 3,172 → 4,312 (+1,140 from DEF% gear priority)
-  - **NEW RANK: #1 TANKIEST** (surpassed Geomancer + Brogni!)
-  - **SPD:** 245-260 → 251 ⚠️ (minimal change, STILL 62 SPD too fast for 1:1 tune)
-  
-- **Geomancer EHP:** 286,871 → **355,847** (+68,976 = **+24% survivability**!) ✅
-  - HP: 54,172 → 60,443 (+6,271 from Resilience 10% HP bonus)
-  - DEF: 4,296 → 4,887 (+591 from Protection 15% DEF bonus)
-  - **SPD:** 210 → 171 ✅ (PERFECT for 1:1 stun target - slowest = takes all stuns)
 
-**Key Insights:**
-- **Brogni:** 330k EHP + 24k shields = **354k total survivability** (highest, but critical support role)
-- **Geomancer:** 287k EHP (highest RAW EHP, ideal stun target - damage continues via passive when stunned)
-- **Godseeker Aniri:** 295k EHP (high, but critical healer - avoid stun)
-- **Stag Knight:** 189k EHP (lowest, fragile - **MUST avoid stun**)
-- **Mithrala:** 255k EHP (medium, but Arena build = wasted stats)
+**🎉 STAG KNIGHT:** 188,583 → **456,874 EHP** (+268,291 = **+142% survivability**!)
+  - **RANK:** #5 (most fragile) → � **#1 TANKIEST!**
+  - HP: 67,312 → 77,967 (+10,655 = massive HP boost!)
+  - DEF: 4,616 → 4,860 (+244)
+  - ❌ C.RATE: 63% → 39% (-24% = Warmaster consistency dropped)
+  - SPD: 222 → 219 (-3, STILL 30-48 too fast for 1:1 tune)
+  - ✅ ACC: 310 → 253 (-57, now PERFECT at threshold!)
 
-**Speed Tune Stun Target Strategy:**
-- **RECOMMENDATION:** Geomancer at 171 SPD (slowest = guaranteed stun target)
-- **Reason:** Highest raw EHP (287k), passive Stoneguard continues reflection damage when stunned
-- **Benefit:** Protects Stag Knight (fragile, critical debuffs), Brogni (critical shields), Godseeker Aniri (critical heals)
+**MITHRALA:** 254,596 → **373,864 EHP** (+119,268 = **+47% survivability**!)
+  - RANK: #3 → #2
+  - HP: 61,025 → 70,366 (+9,341)
+  - DEF: 3,172 → 4,312 (+1,140)
+  - SPD: 245-260 → 251 ⚠️ (STILL 62 too fast, decision pending Path 2A/2B)
+
+**GEOMANCER:** 286,871 → **355,847 EHP** (+68,976 = **+24% survivability**!)
+  - RANK: Tied #1 → #3 (surpassed by Stag + Mithrala)
+  - HP: 54,172 → 60,443 (+6,271)
+  - DEF: 4,296 → 4,887 (+591)
+  - ✅ SPD: 210 → 171 (PERFECT for 1:1 stun target - slowest!)
+
+**Team Total:** +456k EHP across 3 champions = **+88% team tankiness** 🏆
+
+**Speed Tune Status:** 1/5 complete (Geomancer 171 ✅), 2 pending (Stag 219 ⚠️, Mithrala 251 ⚠️)
 
 ### HP vs DEF% Boots Trade-Off Analysis
 
@@ -1246,27 +1248,35 @@ The following reference documents contain historical UNM Clan Boss analysis and 
 
 ---
 
-### **Stag Knight - Decrease DEF/ATK Specialist**
+### **Stag Knight - Decrease DEF/ATK Specialist** ✅ **UPDATED 2025-10-29**
 
 **Role**: Decrease DEF/ATK debuffer, tanky CB build (vs arena speed build)
 
-**Stats (Total with Gear)**
+**Stats (Total with Gear)** ✅ **MAJOR TANK IMPROVEMENT**
 
-| Stat | Value | Notes |
-| --- | --- | --- |
-| HP | 67,312 | ✅ Excellent survivability (tank role) |
-| ATK | 2,360 | Low (not a damage dealer) |
-| DEF | 4,616 | ✅ Excellent survivability |
-| SPD | 222 | ⚠️ **TOO FAST** for 1:1 tune (target 171-189) |
-| C.RATE | 63% | ⚠️ Below 100% for Warmaster (target 70%+ for support, 100% ideal) |
-| C.DMG | 104% | Low (not priority for support) |
-| RES | 120 | Low (not priority for CB) |
-| ACC | 310 | ✅ **EXCELLENT** (well above 250 threshold for UNM debuff landing) |
-| Notes | 2% (unknown stat) | - |
+| Stat | Value | Change from Previous | Notes |
+| --- | --- | --- | --- |
+| HP | 77,967 | +10,655 (+16%) | ✅ **MASSIVE** survivability boost! |
+| ATK | 2,508 | +148 | Moderate (not DPS role, acceptable) |
+| DEF | 4,860 | +244 (+5%) | ✅ Excellent survivability improvement |
+| SPD | 219 | -3 | ⚠️ **STILL TOO FAST** (need 171-189, -30 to -48 SPD gap) |
+| C.RATE | 39% | -24% | ❌ **DROPPED** (was 63%, now 39% = poor Warmaster consistency) |
+| C.DMG | 104% | 0 | Low (not priority for support) |
+| RES | 120 | 0 | Low (not priority for CB) |
+| ACC | 253 | -57 | ✅ **PERFECT** (just above 250 threshold, no waste!) |
 
-**Gear Sets**
+**EHP Calculation:** ✅ **SHOCKING IMPROVEMENT**
+- EHP = 77,967 × (1 + 4,860/1000) = 77,967 × 5.860 = **456,874 EHP** 🏆
+- **Was:** 188,583 EHP (#5 most fragile)
+- **Now:** 456,874 EHP 🏆 **#1 TANKIEST IN TEAM!**
+- **Change:** +268,291 EHP = **+142% survivability gain!** 🎉
 
--   **Gear sets not clearly visible in screenshot** - Please confirm sets (likely Perception/Accuracy/Speed based on stats)
+**Gear Sets** ✅ **CONFIRMED**
+
+- **2x Feral** (+6% SPD from partial set)
+- **2x Perception** (+40 ACC)
+- **1x Protection** (+15% DEF partial bonus)
+- **1x Righteous** (+15% C.RATE partial bonus, but dropped to 39% C.RATE = likely swapped gloves)
 
 **Masteries (Offense + Support)**
 
