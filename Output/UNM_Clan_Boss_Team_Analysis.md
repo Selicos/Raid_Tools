@@ -627,17 +627,22 @@ The boss follows a strict 5-turn attack pattern that repeats:
 
 | Champion | HP | DEF | EHP Calculation | Total EHP | Survivability Rank |
 |----------|-----|-----|-----------------|-----------|-------------------|
-| **Geomancer** ✅ | 60,443 | 4,887 | 60,443 × (1 + 4.887) | **355,847** | 🥇 **#1 IMPROVED** (+69k EHP from regear!) |
-| **Stag Knight** | 49,035 | 2,846 | 49,035 × (1 + 2.846) | **188,583** | #5 (Fragile, avoid stun) |
-| **Brogni** | 79,988 | 3,134 | 79,988 × (1 + 3.134) | **330,549** | #2 (WITH shields ~354k total) |
-| **Mithrala** | 61,025 | 3,172 | 61,025 × (1 + 3.172) | **254,596** | #3 (Arena build, high RES wasted) |
+| **Mithrala** ✅ | 70,366 | 4,312 | 70,366 × (1 + 4.312) | **373,864** | 🏆 **#1 TANKIEST** (boot swap improved!) |
+| **Geomancer** ✅ | 60,443 | 4,887 | 60,443 × (1 + 4.887) | **355,847** | 🥇 **#2** (was #1, excellent stun target) |
+| **Brogni** | 79,988 | 3,134 | 79,988 × (1 + 3.134) | **330,549** | #3 (WITH shields ~354k total) |
 | **Godseeker Aniri** | 61,842 | 3,774 | 61,842 × (1 + 3.774) | **295,196** | #4 (High SPD blocker, good base EHP) |
+| **Stag Knight** | 49,035 | 2,846 | 49,035 × (1 + 2.846) | **188,583** | #5 (Fragile, avoid stun) |
 
 **Key Changes (2025-10-29):**
-- **Geomancer EHP:** 286,871 → **355,847** (+68,976 = **+24% survivability**!)
+- **Mithrala EHP:** 254,596 → **373,864** (+119,268 = **+47% survivability**!) 🎉
+  - HP: 61,025 → 70,366 (+9,341 from boot swap + set optimization)
+  - DEF: 3,172 → 4,312 (+1,140 from DEF% gear priority)
+  - **NEW RANK: #1 TANKIEST** (surpassed Geomancer + Brogni!)
+  - **SPD:** 245-260 → 251 ⚠️ (minimal change, STILL 62 SPD too fast for 1:1 tune)
+  
+- **Geomancer EHP:** 286,871 → **355,847** (+68,976 = **+24% survivability**!) ✅
   - HP: 54,172 → 60,443 (+6,271 from Resilience 10% HP bonus)
   - DEF: 4,296 → 4,887 (+591 from Protection 15% DEF bonus)
-  - **NEW ROLE:** TANKIEST champion (was tied #1, now clear #1)
   - **SPD:** 210 → 171 ✅ (PERFECT for 1:1 stun target - slowest = takes all stuns)
 
 **Key Insights:**
@@ -1604,30 +1609,33 @@ Based on screenshot analysis:
 
 ---
 
-### **Mithrala - Cleanse/Buff/Lead Specialist**
+### **Mithrala - Cleanse/Buff/Lead Specialist** ✅ **UPDATED 2025-10-29**
 
-**Role**: Cleanse, Increase ATK/SPD/C.RATE buffs, Aura Lead (+80 ACC to all allies), currently built for Arena (high SPD)
+**Role**: Cleanse, Increase ATK/SPD/C.RATE buffs, Aura Lead (+80 ACC to all allies), currently **SPLIT BUILD** (Arena + CB compromise)
 
-**Current Stats**
+**Current Stats (Split Build - Boot Swap Applied)** ✅ **NEW**
 -----------------
 
-| Stat | Value | Notes |
-| --- | --- | --- |
-| **HP** | 71,378 | Good survivability |
-| **ATK** | 2,963 | Low (not damage dealer) |
-| **DEF** | 4,746 | Excellent tank stats |
-| **SPD** | 245 | **EXTREME OVERKILL** for UNM 1:1 tune (target 171-189) |
-| **C.RATE** | 38% | **CRITICAL ISSUE** - Needs higher for consistent damage |
-| **C.DMG** | 81% | Low (not priority) |
-| **RES** | 61 | Very low (but Exuzar's Totem helps +5 per debuff) |
-| **ACC** | 526 | **MASSIVE OVERKILL** for UNM (250 threshold, +276 excess) |
-| **Notes** | 2% | Unknown stat |
+| Stat | Value | Change from Arena Build | Notes |
+| --- | --- | --- | --- |
+| **HP** | 70,366 | -1,012 | ✅ Still excellent survivability |
+| **ATK** | 2,441 | -522 | Reduced (acceptable, not DPS role) |
+| **DEF** | 4,312 | -434 | ⚠️ Still excellent, slight reduction from boot swap |
+| **SPD** | 251 | -9 to -14 | ⚠️ **STILL TOO FAST** (need 171-189 for 1:1 tune) |
+| **C.RATE** | 25% | -13% | Low (not priority for support) |
+| **C.DMG** | 88% | +7% | Low (not priority) |
+| **RES** | 118 | +57 | Improved! (was 61, Exuzar's Totem stacking helps) |
+| **ACC** | 691 | +165 | ❌ **WORSE OVERKILL** (+441 excess over 250 threshold!) |
 
-**Gear Sets**
+**EHP Calculation:**
+- EHP = 70,366 × (1 + 4,312/1000) = 70,366 × 5.312 = **373,864 EHP** 🏆
+- **RANK: #1 TANKIEST in team** (beats Geomancer's 355k EHP!)
+
+**Gear Sets** ✅ **NEW**
 -------------
-- **2x Feral** (SPD set, +12% SPD bonus)
-- **4x Perception** (+40 ACC per 2-set = +80 ACC total)
-- **Analysis**: Arena speed build with massive ACC overkill. Feral set adding unwanted SPD for CB. Perception sets contributing to +276 ACC excess beyond UNM requirements.
+- **All Perception sets** (6x Perception = +120 ACC total)
+- **1x Pinpoint** (partial set for ACC bonus)
+- **Analysis**: **EXTREME ACC OVERKILL** (691 ACC = +441 wasted stats). User preserving Arena viability, but 691 ACC is excessive even for Arena. Boot swap applied (likely SPD → DEF% or HP%), but still 251 SPD (62 SPD too fast for 1:1 tune).
 
 **Masteries**
 -------------
@@ -1757,79 +1765,241 @@ Based on screenshot analysis:
 ----------
 - **Fully booked** ✅ (assumed based on established multi-use champion, confirm if needed)
 
-**Critical Issues - Mithrala**
+**Critical Issues - Mithrala (Split Build Status)**
 ------------------------------
 
-1. **SPD EXTREME OVERKILL (245)**
-   - Current: 245 SPD
-   - Target: 171-189 SPD (1:1 tune) OR 180-190 SPD (mid-range)
-   - Overkill: +56-74 SPD excess (MASSIVE)
-   - Issue: Taking way too many extra turns → extreme speed tune chaos → buff timing issues (cleanse/buffs expiring early, turn meter desync, shield/buff extension misalignment)
-   - Fix: Remove Feral set (loses +12% SPD = ~30 SPD reduction), replace SPD boots with DEF%/HP% boots (loses ~40-50 SPD)
-   - Combined fix: 245 - 30 (Feral) - 45 (boots) = ~170 SPD → may need SPD substats to reach 180-190 target
-   - **HIGHEST PRIORITY** - Speed tune completely broken by this champion
+### **CURRENT STATE: Arena/CB Compromise Build**
 
-2. **ACC MASSIVE OVERKILL (526)**
-   - Current: 526 ACC
-   - Target: 250 ACC (UNM threshold)
-   - Overkill: +276 ACC excess (wasted stats)
-   - Issue: 4x Perception sets (+80 ACC) + ACC substats creating massive overkill
-   - Fix: Remove 2x Perception sets (loses -40 ACC), replace with Lifesteal/Immortal/Speed (CB-focused sets)
-   - After fix: 526 - 40 = ~486 ACC (still +236 overkill, but better)
-   - Note: Can drop ACC chest/banner for HP%/DEF% if needed (regearing dependent)
-   - Priority: MEDIUM (not hurting performance, just wasted stats)
+**✅ Boot Swap Applied:**
+- SPD boots → DEF%/HP% boots (estimated -40-50 SPD from boots, minimal change from 260→251)
+- Result: Small improvement, but **STILL 62 SPD TOO FAST** for 1:1 tune
 
-3. **CRIT RATE LOW (38%)**
-   - Current: 38% C.RATE
-   - Target: 70%+ for support / 100% ideal for Warmaster/Giant Slayer
-   - Gap: -32% to -62% depending on target
-   - Impact: If using Flawless Execution T6, not proccing consistently. Moderate damage loss.
-   - Fix: C.RATE gloves (38% → ~90%+ with Deadly Precision)
-   - Priority: MEDIUM (support role, but Flawless Execution suggests damage focus)
+**❌ Speed Tune STILL BROKEN:**
+- Current: **251 SPD**
+- Target: **171-189 SPD** (1:1 tune, Mithrala should be 186-189 as fastest for +80 ACC aura first)
+- **Gap: -62 SPD excess** (still massively breaking speed tune)
+- **Impact**: Mithrala taking ~47% more turns than rest of team → buff/debuff/shield desync → damage/survivability loss
 
-4. **MASTERIES SUBOPTIMAL FOR CB**
-   - Flawless Execution T6 (Offense): C.DMG bonus, but Mithrala is support not damage dealer
-   - Exalt in Death (Support): Arena mechanic (SPD on ally death), useless in CB
-   - Recommendation: Respec to Warmaster or Giant Slayer T6 for CB damage contribution
-   - Priority: LOW (works fine, but not optimal for CB)
+**❌ ACC WORSE Than Before:**
+- Was: 526 ACC (+276 overkill)
+- Now: **691 ACC (+441 overkill)**
+- **6x Perception + 1x Pinpoint** = ACC stacking to absurd levels
+- **Impact**: ~+400 wasted stat points (could be HP%, DEF%, SPD, C.RATE instead)
 
-5. **RES VERY LOW (61)**
-   - Current: 61 RES (before Exuzar's Totem stacking)
-   - Target: Not critical for CB, but low
-   - Mitigation: Exuzar's Totem stacks +5 per debuff placed = can reach 100+ RES during UNM fight
-   - Priority: LOW (relic handles it)
+---
 
-**Optimization Priority - Mithrala**
-------------------------------------
+### **THREE PATHS FORWARD FOR MITHRALA**
 
-| Priority | Change | Impact | Notes |
-| --- | --- | --- | --- |
-| **1. CRITICAL** | SPD boots → DEF%/HP% boots + Remove Feral set | Fix speed tune (TEAM BLOCKER) | 245 → 180-190 SPD target (-30 Feral, -45 boots = ~170 SPD, add substats to 180-190) |
-| **2. HIGH** | Replace 2x Perception with Lifesteal/Immortal | Better survivability, reduce ACC waste | 526 → ~280-300 ACC (still overkill but acceptable), gain survivability |
-| **3. MEDIUM** | C.RATE gloves | Support damage optimization | 38% → 90%+ C.RATE (if keeping Flawless Execution) |
-| **4. LOW** | Respec masteries | Warmaster/Giant Slayer T6 | Replace Flawless Execution + Exalt in Death with CB-optimized choices |
-| **5. LOW** | Validate Brimstone blessing | Clarity | Mithrala doesn't have HP Burn - may want different blessing (Cruelty for debuff extension?) |
+#### **PATH 1: Keep Split Build (Current State)** ⚠️ **COMPROMISED**
 
-**Regearing Strategy - Mithrala**
-- **SPD boots → DEF% boots**: 245 → ~200 SPD (loses ~45 SPD from boots)
-- **Remove 2x Feral set → Lifesteal or Immortal**: 200 → ~170 SPD (loses +12% SPD = ~30 SPD from set), gains survivability
-- **Target 180-190 SPD**: May need to add SPD substats after removing Feral + boots (current 170 → add +10-20 SPD via substats)
-- **Remove 2x Perception sets → other sets**: Reduces ACC overkill, opens slots for Lifesteal/Immortal/Speed for survivability
-- **C.RATE gloves**: 38% → 90%+ C.RATE (optional, depends on if damage contribution desired)
+**Pros:**
+- ✅ Arena team stays mostly viable (high ACC for debuff landing)
+- ✅ 373k EHP = tankiest champion in CB team
+- ✅ +80 ACC aura active
+- ✅ Boot swap applied (minor CB optimization)
 
-**Strengths - Mithrala**
-- ✅ **Aura Lead (+80 ACC)** - Helps entire team hit 250 ACC threshold (massive team benefit)
-- ✅ **Cleanse + Increase ATK/SPD/C.RATE** - Excellent support kit for team damage/survivability
-- ✅ **71k HP + 4.7k DEF** - Good tank stats for survivability
-- ✅ **Master Hexer T6** - Extends debuff duration +1 turn (good for Decrease DEF/ATK uptime)
-- ✅ **Exuzar's Totem** - RES stacking during fight helps survivability (61 → 100+ RES)
-- ✅ **Fully booked** (assumed) - Consistent buff/cleanse uptime
+**Cons:**
+- ❌ **251 SPD breaks 1:1 speed tune** (team optimization blocked)
+- ❌ 691 ACC massive overkill (+441 wasted stats)
+- ❌ Team damage/survivability ceiling reduced (~5-10M damage loss from poor speed tune)
+- ❌ Can't reach 65-75M target without fixing speed tune
 
-**Arena Build Conflict - Mithrala**
-- Current build is optimized for Arena (245 SPD, 526 ACC, Feral + Perception sets, Exalt in Death mastery)
-- Converting to CB will significantly weaken Arena team
-- **Regearing constraint**: User noted "avoid breaking Arena teams" - Mithrala may be core Arena champion
-- **Recommendation**: After all 5 champions documented, evaluate if Mithrala can be replaced in CB team with someone less critical to Arena (potential swap: Rector Drath for cleanse/revive, or Vogoth for Leech/survivability)
+**Recommendation:** ❌ **NOT VIABLE for 60M+ damage goal**
+- Speed tune is CRITICAL for 1:1 buff/shield rotation
+- Without 171-189 SPD range, team will never hit 60M+ consistently
+
+---
+
+#### **PATH 2A: Full CB Optimization (Breaks Arena)** ✅ **BEST DAMAGE**
+
+**Regearing Plan:**
+1. **Remove ALL Perception sets** → Replace with:
+   - **4x Lifesteal** (heal on damage for survivability)
+   - **2x Speed** (control SPD to exactly 186-189 range)
+2. **Keep current boots** (already swapped to DEF%/HP%)
+3. **Adjust accessories:**
+   - Remove ACC banner → HP%/DEF% banner
+   - Remove ACC chest → HP%/DEF% chest
+   - Keep ring (HP%/DEF% likely)
+4. **Target stats:**
+   - **SPD: 186-189** (fastest in team for +80 ACC aura to apply before debuffers act)
+   - **ACC: 250-280** (just enough for 100% debuff landing with Exuzar's Totem +50 RES ignore)
+   - **HP: 70k+** (maintain current)
+   - **DEF: 4.5k+** (maintain current)
+   - **C.RATE: 70%+** (for support damage contribution, optional)
+
+**Masteries Respec:**
+- **Remove:** Flawless Execution T6 (Offense), Exalt in Death (Support)
+- **Add:** 
+  - **Giant Slayer T6** (A1 is 2-hit multi-attack = 51% GS proc chance per turn)
+  - **Support tree:** Lasting Gifts T6 (extends buff duration +1 turn = synergy with Godseeker Aniri buff extension)
+  - **Lore of Steel** (keep, +15% set bonuses)
+
+**Blessing Change:**
+- **Remove:** Brimstone 2★ (Mithrala has no HP Burn)
+- **Add:** Cruelty 3★+ (extends debuff duration = Hex stays longer for passive Petrification synergy, though minimal CB value)
+- **OR:** Blessings of Renewal (heal on turn = synergy with Regeneration if added)
+
+**Projected Stats After Full CB Optimization:**
+| Stat | Current (Split) | Full CB Build | Change | Impact |
+|------|----------------|---------------|--------|--------|
+| **SPD** | 251 | **186-189** | -62 to -65 | ✅ **SPEED TUNE FIXED!** |
+| **ACC** | 691 | **250-280** | -411 to -441 | ✅ Overkill removed, stats reallocated |
+| **HP** | 70,366 | **75k-80k** | +5k-10k | ✅ Better survivability from HP% chest/banner |
+| **DEF** | 4,312 | **4.5k-5k** | +200-700 | ✅ Better survivability from DEF% substats |
+| **C.RATE** | 25% | **70%+** | +45% | ✅ Giant Slayer consistency |
+| **EHP** | 373,864 | **420k-480k** | +50k-110k | ✅ **EVEN TANKIER** |
+
+**Damage Impact:**
+- **Before (split build):** Team stuck at ~50-55M (speed tune broken)
+- **After (full CB):** Team reaches **65-75M** (speed tune fixed, 100% buff/debuff uptime)
+- **Mithrala personal damage:** +3-5M from Giant Slayer procs (A1 2-hit multi-attack)
+
+**Arena Impact:**
+- ❌ **BREAKS ARENA TEAM** 
+- 186 SPD = too slow for Arena speed race (loses first turn = loses match)
+- 250 ACC = marginal for Arena debuff landing (enemy RES often 300-400+)
+
+**Recommendation:** ✅ **ONLY if Arena team can be replaced**
+- If you have alternate Arena team (current shows Wukong, Mythrala, Loki, Ninja viable)
+- Requires full regearing (4-6 pieces minimum)
+- **BEST for CB damage ceiling** (enables 65-75M target)
+
+---
+
+#### **PATH 2B: Rector Drath Swap (Preserves Arena)** ✅ **RECOMMENDED**
+
+**Strategy:** Keep Mithrala for Arena, build Rector Drath fresh for CB cleanse/heal/revive role
+
+**Rector Drath Build Plan:**
+- **Role:** Cleanse, Heal, Revive, Block Debuffs (CB specialist, no Arena conflict)
+- **Target Stats:**
+  - **SPD: 180-186** (second-fastest after Stag Knight 189, before mid-pack)
+  - **HP: 60k-70k** (survivability)
+  - **DEF: 4k-5k** (survivability)
+  - **ACC: 200-250** (Block Debuffs is buff not debuff, so lower ACC acceptable)
+  - **C.RATE: 70%+** (Warmaster procs for damage contribution)
+  - **RES: 150+** (debuff resistance for safety)
+
+**Gear Sets:**
+- **4x Lifesteal** (heal on damage = sustain)
+- **2x Speed** (hit 180-186 SPD target)
+- **Boots:** SPD (required for 180-186 target)
+- **Chest:** HP% or DEF%
+- **Gloves:** C.RATE%
+- **Banner:** HP or DEF
+- **Ring:** HP or DEF
+- **Amulet:** HP or DEF
+
+**Masteries:**
+- **Offense:** Warmaster T6 (A1 single-hit = 60% proc chance)
+- **Defense:** Fearsome Presence or Wisdom of Battle T6
+- **Support:** Lasting Gifts T6 (extends buff duration +1 turn = Block Debuffs uptime boost)
+
+**Blessing:**
+- **Cruelty** or **Blessings of Renewal** (heal on turn)
+
+**Team Comparison:**
+
+| Aspect | Mithrala (Current) | Rector Drath (Fresh Build) |
+|--------|-------------------|----------------------------|
+| **Cleanse** | ✅ Full cleanse A3 (3-turn CD) | ✅ Full cleanse A3 (4-turn CD booked) |
+| **Heal** | ❌ None (relies on others) | ✅ Strong heal A2 (3-turn CD, scales with target MAX HP) |
+| **Revive** | ❌ None | ✅ Revive passive (30% chance on ally death) |
+| **Block Debuffs** | ❌ None | ✅ Block Debuffs A3 (2 turns, prevents stun!) |
+| **Buffs** | ✅ Inc ATK/DEF/SPD/C.RATE | ❌ Only Increase DEF (less variety) |
+| **Aura** | ✅ +80 ACC (MASSIVE) | ❌ +25% HP in all battles (good but not ACC) |
+| **SPD** | ❌ 251 (breaks tune) | ✅ 180-186 (perfect tune) |
+| **ACC** | ❌ 691 (overkill) | ✅ 200-250 (optimized) |
+| **Damage** | ~2-3M (Flawless Execution, low C.RATE) | ~4-6M (Warmaster, 70%+ C.RATE) |
+| **Arena Conflict** | ❌ Breaks Arena if regeared | ✅ No conflict (dedicated CB build) |
+
+**CRITICAL TRADE-OFF: +80 ACC Aura Lost**
+
+**Impact on Team:**
+- **Geomancer:** 201 ACC (was 201 + 80 = 281) → **201 ACC** ⚠️ Below 250 threshold!
+  - **Fix:** Add ACC banner or chest (201 → 250+)
+- **Stag Knight:** Likely 310 ACC → no change needed (already safe)
+- **Brogni:** 145 ACC (was 145 + 80 = 225) → **145 ACC** ❌ HP Burn fails often!
+  - **Fix:** Add ACC chest (145 → 203+), then ACC banner (203 → 261)
+- **Godseeker Aniri:** No debuffs (heal/revive only) → ACC not needed
+
+**Gear Adjustments Required if Rector Drath Swaps In:**
+1. **Geomancer:** Add ACC banner or substats (+50 ACC minimum) to reach 250+
+2. **Brogni:** Add ACC chest + banner (+116 ACC minimum) to reach 250+
+3. **Total regearing:** 2 champions need ACC fixes (Geomancer minor, Brogni major)
+
+**Damage Impact:**
+- **Lose:** Mithrala Increase ATK 50% buff (~5-8M team damage loss if not overlapping with Brogni A3)
+- **Gain:** Rector Drath Warmaster procs (~4-6M personal damage)
+- **Gain:** Block Debuffs = stun immunity (5-10 more turns survival = +5-10M damage)
+- **Net:** -3M to +7M depending on Increase ATK overlap and stun prevention value
+
+**Survivability Impact:**
+- **Lose:** Mithrala Strengthen 25% + shields 14k
+- **Gain:** Rector Drath revive passive + stronger heals + Block Debuffs (stun immunity!)
+- **Net:** ✅ **BETTER survivability** (Block Debuffs is MASSIVE for UNM)
+
+**Recommendation:** ✅ **BEST OPTION if:**
+1. You want to keep Arena team intact (Mithrala stays 251 SPD)
+2. You can regear Geomancer + Brogni for +ACC (to compensate for lost +80 aura)
+3. You value Block Debuffs stun immunity (enables 60+ turn survival)
+
+**Build Time:** 2-3 weeks (farm Dragon 25 for Lifesteal sets, level Rector Drath to 60, full masteries, ascend to 6★)
+
+---
+
+###  **PATH 3: Minimal CB Optimization (Split Build++)** ⚠️ **LEAST EFFECTIVE**
+
+**Strategy:** Keep Perception sets for Arena, make ONLY minor tweaks for CB
+
+**Minor Tweaks:**
+1. ✅ **Boot swap DONE** (SPD → DEF%/HP%)
+2. **Accessories:** Swap ACC banner → HP%/DEF% banner (loses ~60 ACC, gains survivability)
+3. **Masteries:** Respec Flawless Execution → Giant Slayer (no gear change, just mastery scrolls)
+4. **Blessing:** Swap Brimstone → Cruelty (no gear change)
+
+**Projected Stats After Minimal Tweaks:**
+| Stat | Current | After Tweaks | Change |
+|------|---------|--------------|--------|
+| **SPD** | 251 | **245-248** | -3 to -6 (accessories swap) |
+| **ACC** | 691 | **630-650** | -41 to -61 (banner swap) |
+| **HP** | 70,366 | **75k-78k** | +5k (HP% banner) |
+| **DEF** | 4,312 | **4.5k** | +200 (DEF% banner) |
+| **EHP** | 373,864 | **400k-420k** | +26k-46k |
+
+**Issues Remaining:**
+- ❌ **SPD still 245-248** (56-59 SPD too fast, speed tune STILL BROKEN)
+- ❌ **ACC still 630-650** (+380-400 overkill, wasted stats)
+- ❌ **Team damage ceiling: ~52-58M** (speed tune broken = can't hit 60M+ goal)
+
+**Recommendation:** ❌ **NOT RECOMMENDED**
+- Doesn't fix speed tune (team blocker)
+- Minimal gains (+2-3M damage, +5-10 turns survival)
+- **Can't reach 60M+ target** without fixing 171-189 SPD range for all 5 champions
+
+---
+
+### **MITHRALA PATH DECISION SUMMARY**
+
+| Path | SPD Fix? | Arena Impact | CB Damage | Build Time | Recommendation |
+|------|----------|--------------|-----------|------------|----------------|
+| **Path 1: Split Build (Current)** | ❌ NO (251 SPD) | ✅ Preserved | ~50-55M | Done | ❌ Insufficient |
+| **Path 2A: Full CB Optimization** | ✅ YES (186-189) | ❌ **BREAKS ARENA** | **65-75M** | 1-2 weeks | ✅ IF Arena can be replaced |
+| **Path 2B: Rector Drath Swap** | ✅ YES (Rector 180-186) | ✅ **Preserved** | **60-70M** | 2-3 weeks | ✅ **BEST if preserving Arena** |
+| **Path 3: Minimal Tweaks** | ❌ NO (245-248) | ✅ Preserved | ~52-58M | 1-2 days | ❌ Insufficient |
+
+**FINAL RECOMMENDATION:** **Path 2B (Rector Drath Swap)** ✅
+- Preserves Arena team (Mithrala stays fast)
+- Fixes CB speed tune (Rector 180-186 SPD)
+- Adds Block Debuffs (stun immunity = massive survivability boost)
+- Reaches 60-70M damage target (with full team speed tune)
+- Requires regearing Geomancer + Brogni for +ACC (minor fixes)
+
+**User Action Required:**
+1. **Decide:** Path 2A (break Arena, max CB damage) OR Path 2B (preserve Arena, use Rector Drath)?
+2. **If Path 2B:** Start building Rector Drath (level 60, full masteries, 4x Lifesteal + 2x Speed)
+3. **Continue stat intake:** Provide Stag Knight, Brogni, Godseeker Aniri stats to complete team analysis
 
 ---
 
