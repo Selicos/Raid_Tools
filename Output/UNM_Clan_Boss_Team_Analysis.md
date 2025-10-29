@@ -576,6 +576,234 @@ The boss follows a strict 5-turn attack pattern that repeats:
 
 ---
 
+## Survivability & Stat Safety Analysis
+
+### Effective HP Calculation
+
+**Effective HP (EHP)** measures champion's total survivability accounting for DEF mitigation.
+
+**Formula:** `EHP = HP × (1 + DEF / 1000)`
+
+**Example:** 60,000 HP × (1 + 4,000 DEF / 1000) = 60,000 × 5.0 = **300,000 EHP**
+
+**Interpretation:** A champion with 300k EHP can survive 300k raw damage before dying (accounting for DEF reduction).
+
+### Current Team Effective HP Table
+
+| Champion | HP | DEF | EHP Calculation | Total EHP | Survivability Rank |
+|----------|-----|-----|-----------------|-----------|-------------------|
+| **Geomancer** | 54,172 | 4,296 | 54,172 × (1 + 4.296) | **286,871** | 🥇 **#1** (Best stun target) |
+| **Stag Knight** | 49,035 | 2,846 | 49,035 × (1 + 2.846) | **188,583** | #5 (Fragile, avoid stun) |
+| **Brogni** | 79,988 | 3,134 | 79,988 × (1 + 3.134) | **330,549** | 🥇 **#1** (WITH shields) |
+| **Mithrala** | 61,025 | 3,172 | 61,025 × (1 + 3.172) | **254,596** | #3 (Arena build, high RES wasted) |
+| **Godseeker Aniri** | 61,842 | 3,774 | 61,842 × (1 + 3.774) | **295,196** | #2 (High SPD blocker, good base EHP) |
+
+**Key Insights:**
+- **Brogni:** 330k EHP + 24k shields = **354k total survivability** (highest, but critical support role)
+- **Geomancer:** 287k EHP (highest RAW EHP, ideal stun target - damage continues via passive when stunned)
+- **Godseeker Aniri:** 295k EHP (high, but critical healer - avoid stun)
+- **Stag Knight:** 189k EHP (lowest, fragile - **MUST avoid stun**)
+- **Mithrala:** 255k EHP (medium, but Arena build = wasted stats)
+
+**Speed Tune Stun Target Strategy:**
+- **RECOMMENDATION:** Geomancer at 171 SPD (slowest = guaranteed stun target)
+- **Reason:** Highest raw EHP (287k), passive Stoneguard continues reflection damage when stunned
+- **Benefit:** Protects Stag Knight (fragile, critical debuffs), Brogni (critical shields), Godseeker Aniri (critical heals)
+
+### HP vs DEF% Boots Trade-Off Analysis
+
+**Question:** Should champions use **HP% boots** or **DEF% boots**?
+
+**Answer:** Depends on champion's **base HP** and **base DEF** ratio. Generally:
+- **HP% boots preferred** if: Base HP > Base DEF × 15
+- **DEF% boots preferred** if: Base DEF > Base HP / 15
+- **Rule of thumb:** DEF% boots provide better **EHP per stat point** for most champions (70-80% of roster)
+
+**Current Team Boot Analysis:**
+
+| Champion | Current Boots | Current HP | Current DEF | EHP (Current) | **DEF% Boots (Projected)** | Projected HP | Projected DEF | EHP (Projected) | EHP Gain | Recommendation |
+|----------|---------------|------------|-------------|---------------|---------------------------|--------------|---------------|-----------------|----------|----------------|
+| **Geomancer** | DEF% | 54,172 | 4,296 | 286,871 | ✅ Already DEF% | 54,172 | 4,296 | 286,871 | 0 | **KEEP DEF%** |
+| **Stag Knight** | **SPD** | 49,035 | 2,846 | 188,583 | ⚠️ Consider DEF% | 49,035 | 3,415 (+569) | **216,940** | **+28,357** | **SWAP TO DEF%** |
+| **Brogni** | **HP%** | 79,988 | 3,134 | 330,549 | ⚠️ DEF% for shields | 67,990 (-11,998) | 3,761 (+627) | **323,821** | -6,728 | **KEEP HP%** (shields scale HP) |
+| **Mithrala** | **SPD** | 61,025 | 3,172 | 254,596 | ⚠️ Consider DEF% | 61,025 | 3,806 (+634) | **293,328** | **+38,732** | **SWAP TO DEF%** (Arena build, waste) |
+| **Godseeker Aniri** | **SPD** | 61,842 | 3,774 | 295,196 | ⚠️ Consider DEF% | 61,842 | 4,529 (+755) | **342,089** | **+46,893** | **SWAP TO DEF%** |
+
+**Boot Swap Recommendations (Phase 2 Optimization):**
+1. **Stag Knight:** SPD → DEF% boots = **+28k EHP** (improves fragility)
+2. **Godseeker Aniri:** SPD → DEF% boots = **+47k EHP** (highest gain, healer survivability)
+3. **Mithrala:** SPD → DEF% boots = **+39k EHP** (Arena build waste, CB optimization)
+
+**Total Team EHP Gain:** +113k EHP (if all 3 swap to DEF% boots + speed tune to 171-189 SPD)
+
+**Brogni Special Case:**
+- Brogni shields scale with MAX HP (24k shields at 80k HP)
+- DEF% boots reduce HP (79,988 → 67,990), reducing shields (24k → 20.4k)
+- **Trade-off:** -6.7k EHP + -3.6k shields = **-10.3k total survivability loss**
+- **RECOMMENDATION:** **KEEP HP% boots** (shields benefit entire team, outweighs personal EHP loss)
+
+### ACC Safety Thresholds & Debuff Land Rates
+
+**Boss RES:** 300 (fixed, does not scale)
+
+**ACC vs Land Rate Formula:** `Land Rate = (ACC - RES + 200) / 400 (capped at 90-95%)`
+
+**ACC Safety Thresholds:**
+
+| ACC Value | Land Rate vs 300 RES | Safety Level | Recommendation |
+|-----------|----------------------|--------------|----------------|
+| 150       | 37.5% | ❌ Unacceptable | Never use |
+| 200       | 50% | ❌ Unsafe | Too low |
+| 250       | 62.5% | ⚠️ Minimum | Bare minimum (50% uptime = gaps) |
+| 300       | 75% | ✅ Safe | Acceptable for non-critical debuffs |
+| 350       | 87.5% | ✅ Recommended | Good uptime |
+| 390       | 97.5% | ✅ Excellent | Near-perfect uptime |
+| 450       | 100% (capped at 95%) | ✅ Overkill | Wasted stats past 390 |
+
+**Current Team ACC Analysis (WITH Mithrala +80 ACC Aura):**
+
+| Champion | Base ACC | With +80 Aura | Land Rate | Uptime (2-turn debuff) | Critical Debuffs | Status |
+|----------|----------|---------------|-----------|------------------------|------------------|--------|
+| **Geomancer** | Unknown | ~230-250 (est) | ~65-72% | 65-72% (gaps likely) | HP Burn (3-turn CD) | ⚠️ **NEEDS VALIDATION** |
+| **Stag Knight** | 310 | **390** | **97.5%** | **~98%** | Decrease DEF/ATK | ✅ **EXCELLENT** |
+| **Brogni** | 145 | **225** | **56%** | 56% (major gaps) | HP Burn (A1, 75% chance) | ⚠️ **LOW** (non-critical) |
+| **Mithrala** | 446 | **526** | 95% (cap) | 95% | Poison (50% × 2 hits) | ⚠️ **OVERKILL** (+136 wasted ACC) |
+| **Godseeker Aniri** | 168 | **248** | **62%** | 62% (gaps) | None (support buffs only) | ✅ **ACCEPTABLE** |
+
+**Mithrala +80 ACC Aura Impact (CRITICAL):**
+- **Stag Knight:** 310 → 390 ACC = 75% → 97.5% land rate = **near-perfect Decrease DEF/ATK uptime** (reason for team slot)
+- **Brogni:** 145 → 225 ACC = 36% → 56% land rate = marginal (HP Burn A1 non-critical, A3 Block Debuffs primary role)
+- **Godseeker Aniri:** 168 → 248 ACC = 42% → 62% land rate = acceptable (no critical debuffs, support role only)
+
+**Geomancer ACC Validation Needed:**
+- **ISSUE:** Geomancer ACC stat not in current data
+- **CRITICAL:** HP Burn uptime depends on Geomancer A3 landing (100% chance if lands, but needs ACC check)
+- **ACTION ITEM:** Validate Geomancer ACC in game, confirm with +80 aura = 250+ ACC (target 65-70% land rate minimum)
+
+**ACC Optimization Recommendations:**
+- **Mithrala:** Reduce ACC from 526 to ~350-390 (frees up +136-176 ACC for SPD/DEF/HP substats)
+  - Current: 526 ACC (wasted overkill)
+  - Target: 350-390 ACC (95% land rate cap, CB-optimized)
+  - **Benefit:** Realloc ACC substats → SPD/DEF/HP = better survivability + speed tune
+
+### Stun Target Survivability Requirements
+
+**Boss Stun Damage Scaling (Single Target Hit):**
+
+| Turn | Stun Base Damage | Damage Multiplier | With Decrease ATK 50% | Minimum EHP Needed |
+|------|------------------|-------------------|-----------------------|--------------------|
+| 3    | 25,000           | 1.09×             | 13,625                | 15k EHP (trivial) |
+| 12   | 25,000           | 1.36×             | 17,000                | 20k EHP (easy) |
+| 24   | 25,000           | 1.72×             | 21,500                | 25k EHP (medium) |
+| 36   | 25,000           | 2.08×             | 26,000                | 30k EHP (high) |
+| 48   | 25,000           | 2.44×             | 30,500                | 35k EHP + shields |
+| 60   | 25,000           | 2.80×             | 35,000                | 40k EHP + shields |
+
+**With Shields + Increase DEF 60% (Projected):**
+- Geomancer 287k EHP + 24k Brogni shields + 14k Mithrala shields = **325k total survivability**
+- Turn 60 stun: 35k damage → absorbed by shields (no HP damage)
+- **CONCLUSION:** Geomancer can survive stuns through turn 60+ easily (stun damage is NOT the bottleneck)
+
+**Real Bottleneck:** **AOE damage scaling (4-5 AOE hits between stuns)**
+- Turn 50 AOE: 37,500 damage × 4 hits = 150k damage total
+- Even with shields + Decrease ATK, team takes 5-10k damage to HP per AOE (no shields)
+- **Survivability depends on:** Perfect buff rotation (shields + Decrease ATK + heals), not stun damage
+
+### Speed Tune Impact on Survivability
+
+**Current State (NO SPEED TUNE):**
+- All champions: 210-264 SPD (random turn order, unpredictable stun target)
+- **Issues:**
+  - Stun can hit Stag Knight (189k EHP, fragile) → Decrease DEF/ATK gaps → team damage loss
+  - Stun can hit Godseeker Aniri (295k EHP, healer) → heal gaps → team wipes
+  - Buff rotation imperfect (shields expire before refresh, Decrease ATK gaps)
+- **Estimated Survival:** 30-45 turns (boss overwhelms team by turn 40-45)
+
+**Phase 2 State (1:1 SPEED TUNE, 171-189 SPD):**
+- Geomancer: 171 SPD (designated stun target, 287k EHP + shields)
+- Brogni: 189 SPD (fastest, A3 shields every 3 turns, perfect overlap)
+- Stag Knight: 180 SPD (safe from stun, Decrease DEF/ATK 100% uptime)
+- Mithrala: 175 SPD (A2 Increase ATK/DEF + A3 shields rotation)
+- Godseeker Aniri: 172 SPD (safe from stun, heals + buff extension optimal timing)
+- **Benefits:**
+  - Geomancer guaranteed stun target (highest EHP, passive continues damage)
+  - Perfect buff rotation (Brogni shields → Mithrala shields → Godseeker heals, synchronized)
+  - Decrease ATK 100% uptime (Stag Knight never stunned, A2 every 3 turns)
+  - Shield overlap (Brogni 24k + Mithrala 14k = 38k shields, refresh before expire)
+- **Estimated Survival:** 50-60 turns (perfect rotation extends survivability, boss scaling overwhelms by turn 60-65)
+
+**Survivability Gain from Speed Tune:**
+- Turn survival: 30-45 → 50-60 turns = **+15 turns** (+33-50% more turns)
+- Damage output: 44M → 65-75M = **+21-31M** (+48-70% more damage)
+- **KEY INSIGHT:** Speed tune is **CRITICAL** for reaching 2-key UNM (67M threshold)
+
+### Champion-Specific Survivability Notes
+
+**Geomancer (Designated Stun Target):**
+- **Current EHP:** 287k (highest raw EHP)
+- **With Shields:** 287k + 24k (Brogni) + 14k (Mithrala) = **325k total**
+- **Passive Stoneguard:** Reflects 30% of damage as AOE (continues damage when stunned)
+- **Survivability Rating:** ✅ **EXCELLENT** (ideal stun target, high EHP, passive continues damage)
+- **Optimization:** DEF% boots already equipped (optimal), consider DEF% chest if possible (current unknown)
+
+**Stag Knight (MUST AVOID STUN):**
+- **Current EHP:** 189k (lowest, fragile)
+- **Critical Role:** Decrease DEF 60% / Decrease ATK 50% uptime = **team survivability depends on him**
+- **Risk:** If stunned, loses 2 turns → Decrease ATK gap → team takes 2× damage → wipe
+- **Speed Tune Solution:** 180 SPD (above Geomancer 171 SPD) = never hit by stun
+- **Optimization:** SPD → DEF% boots (+28k EHP), prioritize SPD/ACC/DEF substats
+
+**Brogni (Shield Support, HIGH EHP):**
+- **Current EHP:** 330k (highest with HP% boots)
+- **Shields:** 24k per ally (scales 80k HP × 0.3)
+- **Critical Role:** Block Debuffs + shields = team survivability
+- **Survivability Rating:** ✅ **EXCELLENT** (high EHP + shields)
+- **Optimization:** KEEP HP% boots (shield scaling > personal EHP), prioritize SPD/DEF substats for speed tune
+
+**Mithrala (Arena Build, Wasted Stats):**
+- **Current EHP:** 255k (medium)
+- **Issues:** 526 ACC (+136 overkill), 245 SPD (breaks tune), 587 RES (wasted vs non-resistable stun)
+- **Critical Role:** +80 ACC aura (team force multiplier), Increase ATK/DEF + shields (survivability)
+- **Survivability Rating:** ⚠️ **ACCEPTABLE** (sufficient EHP, but build waste)
+- **Optimization:** Rebuild for CB (reduce ACC to 350-390, SPD to 175, reduce RES, add DEF/HP substats) = **+39k EHP gain**
+
+**Godseeker Aniri (Healer, HIGH EHP):**
+- **Current EHP:** 295k (2nd highest)
+- **Critical Role:** Heals (A2 18% MAX HP AOE), revives (A3), buff extension +1 turn
+- **Risk:** If stunned, loses 2 turns → heal gap → team wipes
+- **Speed Tune Solution:** 172 SPD (above Geomancer 171 SPD) = never hit by stun
+- **Survivability Rating:** ✅ **EXCELLENT** (high EHP, avoid stun)
+- **Optimization:** SPD → DEF% boots (+47k EHP, highest gain), complete masteries (Lasting Gifts T6), reduce SPD from 264 to 172
+
+### Survivability Optimization Priority (Phase 2)
+
+**Quick Wins (Immediate EHP Gains):**
+1. **Godseeker Aniri SPD → DEF% boots:** +47k EHP (**highest gain**)
+2. **Mithrala SPD → DEF% boots:** +39k EHP (+ rebuild Arena → CB)
+3. **Stag Knight SPD → DEF% boots:** +28k EHP (fragility fix)
+
+**Total EHP Gain:** +114k team EHP (if all 3 boot swaps executed)
+
+**Speed Tune Implementation (1:1 Tune, 171-189 SPD):**
+- Geomancer: 171 SPD (stun target)
+- Godseeker Aniri: 172 SPD
+- Mithrala: 175 SPD
+- Stag Knight: 180 SPD
+- Brogni: 189 SPD
+- **Benefit:** Perfect buff rotation, guaranteed stun target, +15 turns survival
+
+**Mastery Completion (Godseeker Aniri):**
+- Complete Support tree (Lasting Gifts T6)
+- **Benefit:** Buff extension +1 → +2 turns (A2 +1, Lasting Gifts +1) = +5-10 turns survival
+
+**Combined Phase 2 Optimization:**
+- Boot swaps: +114k EHP
+- Speed tune: +15 turns survival (perfect rotation)
+- Masteries: +5-10 turns survival (buff extension)
+- **Estimated Total:** 30-45 turns → 50-60 turns = **+20-25 turn gain** = **65-75M damage** (2-key UNM achieved)
+
+---
+
 ## Analysis Workflow
 
 **Instructions for this analysis project**:
