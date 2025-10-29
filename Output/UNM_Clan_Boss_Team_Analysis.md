@@ -630,12 +630,21 @@ The boss follows a strict 5-turn attack pattern that repeats:
 | **Stag Knight** ✅ | 77,967 | 4,860 | 77,967 × (1 + 4.860) | **456,874** | 🏆 **#1 TANKIEST!** (+268k EHP, was #5!) |
 | **Mithrala** ✅ | 70,366 | 4,312 | 70,366 × (1 + 4.312) | **373,864** | 🥇 **#2** (was #3, boot swap improved!) |
 | **Geomancer** ✅ | 60,443 | 4,887 | 60,443 × (1 + 4.887) | **355,847** | � **#3** (was #2, PERFECT stun target!) |
-| **Brogni** | 79,988 | 3,134 | 79,988 × (1 + 3.134) | **330,549** | #4 (WITH shields ~354k total) |
+| **Brogni** ✅ | 91,092 | 4,922 | 91,092 × (1 + 4.922) | **539,491** | #1 **TANKIEST!** (+209k EHP, was #4!) |
 | **Godseeker Aniri** | 61,842 | 3,774 | 61,842 × (1 + 3.774) | **295,196** | #5 (High SPD blocker, needs update) |
 
 **Key Changes (2025-10-29):**
 
-**🎉 STAG KNIGHT:** 188,583 → **456,874 EHP** (+268,291 = **+142% survivability**!)
+**� BROGNI:** 330,549 → **539,491 EHP** (+208,942 = **+63% survivability**!)
+  - **RANK:** #4 → **#1 TANKIEST!** (surpassed Stag by +82k!)
+  - HP: 80,528 → 91,092 (+10,564 = **+13% massive HP boost!**)
+  - DEF: 5,034 → 4,922 (-112 from DEF% boot swap trade-off)
+  - ✅ SPD: 225 → 192 (-33, **ALMOST in 171-189 range!** Just 3-21 too fast)
+  - ❌ ACC: 145 → 116 (-29, worse! Needs 250+ = chest+banner fix)
+  - ❌ C.RATE: 26% (unchanged, CRITICAL for Giant Slayer = -8-12M damage)
+  - **Shield scaling:** 30% × 91k HP = **27.3k per ally** (was 24k, +3.3k!)
+
+**�🎉 STAG KNIGHT:** 188,583 → **456,874 EHP** (+268,291 = **+142% survivability**!)
   - **RANK:** #5 (most fragile) → � **#1 TANKIEST!**
   - HP: 67,312 → 77,967 (+10,655 = massive HP boost!)
   - DEF: 4,616 → 4,860 (+244)
@@ -644,20 +653,20 @@ The boss follows a strict 5-turn attack pattern that repeats:
   - ✅ ACC: 310 → 253 (-57, now PERFECT at threshold!)
 
 **MITHRALA:** 254,596 → **373,864 EHP** (+119,268 = **+47% survivability**!)
-  - RANK: #3 → #2
+  - RANK: #3 → #3 (unchanged)
   - HP: 61,025 → 70,366 (+9,341)
   - DEF: 3,172 → 4,312 (+1,140)
   - SPD: 245-260 → 251 ⚠️ (STILL 62 too fast, decision pending Path 2A/2B)
 
 **GEOMANCER:** 286,871 → **355,847 EHP** (+68,976 = **+24% survivability**!)
-  - RANK: Tied #1 → #3 (surpassed by Stag + Mithrala)
+  - RANK: Tied #1 → #4 (surpassed by Brogni, Stag, Mithrala)
   - HP: 54,172 → 60,443 (+6,271)
   - DEF: 4,296 → 4,887 (+591)
   - ✅ SPD: 210 → 171 (PERFECT for 1:1 stun target - slowest!)
 
-**Team Total:** +456k EHP across 3 champions = **+88% team tankiness** 🏆
+**Team Total:** +665k EHP across 4 champions = **+127% team tankiness** 🏆
 
-**Speed Tune Status:** 1/5 complete (Geomancer 171 ✅), 2 pending (Stag 219 ⚠️, Mithrala 251 ⚠️)
+**Speed Tune Status:** 1/5 complete (Geomancer 171 ✅), 1/5 almost (Brogni 192 ⚠️), 2 pending (Stag 219 ⚠️, Mithrala 251 ⚠️)
 
 ### HP vs DEF% Boots Trade-Off Analysis
 
@@ -1418,30 +1427,35 @@ The following reference documents contain historical UNM Clan Boss analysis and 
 
 ---
 
-### **Brogni (Underpriest Brogni) - Shield/Cleanse/HP Burn Specialist**
+### **Brogni (Underpriest Brogni) - Shield/Cleanse/HP Burn Specialist** ✅ **UPDATED 2025-10-29**
 
 **Role**: Shield bot, Cleanse, Increase DEF, HP Burn (resolved overlap with Geomancer - 22M damage contribution justified keeping both)
 
-**Current Stats**
+**Current Stats** ✅ **MASSIVE TANK IMPROVEMENT**
 -----------------
 
-| Stat | Value | Notes |
-| --- | --- | --- |
-| **HP** | 80,528 | Excellent tank stats |
-| **ATK** | 2,527 | Low (not damage dealer) |
-| **DEF** | 5,034 | Excellent for shield scaling + survivability |
-| **SPD** | 225 | **TOO FAST** for 1:1 tune (target 171-189) |
-| **C.RATE** | 26% | **CRITICAL ISSUE** - Giant Slayer passive needs higher C.RATE |
-| **C.DMG** | 100% | Low (base value, not priority) |
-| **RES** | 229 | High (good for debuff resistance) |
-| **ACC** | 145 | **LOW** for UNM (target 250+), affects HP Burn landing |
-| **Notes** | 2% | Unknown stat |
+| Stat | Value | Change from Previous | Notes |
+| --- | --- | --- | --- |
+| **HP** | 91,092 | +10,564 (+13%) | ✅ **MASSIVE** HP boost! |
+| **ATK** | 2,496 | -31 | Minimal (not DPS role) |
+| **DEF** | 4,922 | -112 | ⚠️ Minor loss from boot swap (SPD→DEF% trade-off) |
+| **SPD** | 192 | -33 | ✅ **ALMOST IN RANGE!** (just 3-21 too fast, target 171-189) |
+| **C.RATE** | 26% | 0 | ❌ **STILL CRITICAL ISSUE** - Giant Slayer needs 85%+ |
+| **C.DMG** | 110% | +10% | Low (not priority) |
+| **RES** | 229 | 0 | High (good for debuff resistance) |
+| **ACC** | 116 | -29 | ⚠️ **WORSE** (was 145, now 116, need 250+ for HP Burn landing) |
 
-**Gear Sets**
+**EHP Calculation:** ✅ **SHOCKING IMPROVEMENT**
+- EHP = 91,092 × (1 + 4,922/1000) = 91,092 × 5.922 = **539,491 EHP** 🏆
+- **Was:** 330,549 EHP (#4)
+- **Now:** 539,491 EHP 🏆 **#1 TANKIEST IN TEAM!**
+- **Change:** +208,942 EHP = **+63% survivability gain!** 🎉
+
+**Gear Sets** ✅ **CONFIRMED**
 -------------
-- **4x Bolster** (HP set, likely +15% HP bonus)
-- **2x Protection** (+15% DEF bonus)
-- **Analysis**: Tank-focused gear sets maximizing HP/DEF for shield strength and survivability. Good set choices for support role.
+- **2x Protection** (+15% DEF bonus, confirmed unchanged)
+- **4x Bolster** (likely, based on HP scaling, or other HP-focused sets)
+- **Boots:** SPD → **DEF%** swapped ✅
 
 **Masteries**
 -------------
@@ -1567,22 +1581,44 @@ Based on screenshot analysis:
 ----------
 - **Fully booked** ✅ (assumed based on established multi-use champion, confirm if needed)
 
-**Critical Issues - Brogni**
+**Critical Issues - Brogni** ✅ **UPDATED 2025-10-29**
 ----------------------------
 
-1. **SPD TOO HIGH (225)**
-   - Current: 225 SPD
+1. **SPD ALMOST FIXED! (192)** ⚠️ **CLOSE!**
+   - ✅ Previous: 225 SPD (36-54 too fast) → Current: 192 SPD (-33, **ALMOST PERFECT!**)
    - Target: 171-189 SPD (1:1 tune)
-   - Issue: Taking extra turns → speed tune chaos → shield timing issues (shields expire early, buff extension misalignment with Godseeker Aniri)
-   - Fix: Replace SPD boots with DEF%/HP% boots (synergizes with tank role + shield scaling)
-   - Target: 180-189 SPD (mid-range 1:1 tune, NOT stun target due to high HP 80k)
+   - Issue: Just 3-21 SPD too fast (192 vs 189 max) = minor speed tune gap
+   - Fix: Minor SPD reduction via substats (-3 to -21 SPD adjustment) = EASIEST FIX
+   - Target: 185-189 SPD (mid-range 1:1 tune, NOT stun target due to high HP 91k)
+   - **Status:** **90% COMPLETE** - DEF% boots swap worked perfectly! Just needs tiny substat tweak
 
-2. **CRIT RATE CRITICAL (26%)**
-   - Current: 26% C.RATE
-   - Target: 70%+ for Giant Slayer reliability / 100% ideal
-   - Impact: Giant Slayer passive only proccing ~26% of the time = significant damage loss (estimated 8-12M damage loss vs 70%+ C.RATE)
-   - Fix: C.RATE gloves (26% → ~80%+ with Deadly Precision mastery), or C.RATE substats focus
-   - Note: Higher priority than Stag Knight C.RATE fix (Brogni contributes 22M damage, Giant Slayer passive is damage multiplier)
+2. **CRIT RATE STILL CRITICAL (26%)** ❌ **URGENT**
+   - Current: 26% C.RATE (unchanged from before)
+   - Target: 85%+ for Giant Slayer reliability / 100% ideal
+   - Impact: Giant Slayer passive reflection damage only proccing ~26% of the time = **-8-12M damage loss** vs 85%+ C.RATE
+   - Fix: C.RATE gloves (26% → ~80%+ with Deadly Precision mastery +5%) = **+60% C.RATE gain**
+   - Note: **HIGHEST PRIORITY FIX** - Brogni passive reflection is primary damage source (~15-20M potential), not A1
+   - **Damage breakdown:**
+     * Current (26% C.RATE): ~10M total damage (passive reflection GS procs)
+     * Target (85% C.RATE): ~22M total damage = **+12M damage gain**
+
+3. **ACC WORSE AFTER REGEAR (116)** ❌ **CRITICAL**
+   - Previous: 145 ACC → Current: 116 ACC (-29, **WORSE!**)
+   - Target: 250+ ACC for 95%+ HP Burn landing (boss RES 300)
+   - Current: 116 + 80 Mithrala lead = 196 ACC (still below threshold!)
+   - Issue: HP Burn landing rate ~65% (vs 95%+ at 250 ACC) = missed debuff opportunities
+   - Fix: ACC chest + ACC banner = +134 ACC → 250 total (with Mithrala lead)
+   - Note: Gilded Dragonstone relic (-5% target RES for HP Burn) helps but not enough
+   - **If Mithrala replaced (Path 2B Rector Drath swap):** 116 base needs +134 ACC = **URGENT CHEST+BANNER FIX**
+
+4. **MASSIVE EHP IMPROVEMENT! (539k)** ✅ **SUCCESS!**
+   - Previous: 330,549 EHP (#4) → Current: 539,491 EHP (+208,942 = **+63%!**)
+   - **RANK:** #4 → **#1 TANKIEST!** (surpassed Stag's 457k by +82k)
+   - HP: 80,528 → 91,092 (+10,564 = **+13% massive boost!**)
+   - DEF: 5,034 → 4,922 (-112 from DEF% boot swap trade-off, acceptable)
+   - **Shield scaling improved:** 30% × 91k HP = **27.3k per ally** (was 24k, +3.3k improvement!)
+   - **Impact:** More shield HP = more reflection opportunities = more GS procs = more damage + survivability
+   - **Status:** **PERFECT** - DEF% boots swap was optimal choice for tank role!
 
 3. **ACC TOO LOW (145)**
    - Current: 145 ACC
