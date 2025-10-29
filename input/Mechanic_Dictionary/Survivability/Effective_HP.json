@@ -1,0 +1,136 @@
+{
+  "mechanic_name": "Effective HP (EHP)",
+  "mechanic_type": "survivability_metric",
+  "description": "Effective HP (EHP) is a calculated metric that represents how much effective health a champion has when both HP and DEF are considered together. EHP accounts for DEF's damage reduction effect. Higher EHP = champion survives longer. CRITICAL for designating CB stun target (lowest EHP = stun target).",
+  
+  "formula": {
+    "basic_formula": "EHP = HP × (1 + DEF / 1000)",
+    "explanation": "DEF reduces incoming damage. Every 1000 DEF reduces damage by 50% (champion takes 50% damage = effective HP doubles). Formula converts DEF into equivalent HP.",
+    "examples": [
+      {
+        "champion": "Geomancer (current)",
+        "hp": 60000,
+        "def": 3789,
+        "calculation": "60000 × (1 + 3789/1000) = 60000 × 4.789 = 287,340 EHP",
+        "notes": "Currently LOWEST EHP on team = designated stun target (correct strategy, Geomancer can revive with passive)"
+      },
+      {
+        "champion": "Brogni (current)",
+        "hp": 80000,
+        "def": 3130,
+        "calculation": "80000 × (1 + 3130/1000) = 80000 × 4.13 = 330,400 EHP",
+        "notes": "HIGH EHP due to high HP. With Shield 24k (30% MAX HP), effective EHP increases to ~354,400 (shield absorbs damage before HP)"
+      },
+      {
+        "champion": "Mithrala (current)",
+        "hp": 55000,
+        "def": 2500,
+        "calculation": "55000 × (1 + 2500/1000) = 55000 × 3.5 = 192,500 EHP",
+        "notes": "MODERATE EHP. With Shield 14k (25% MAX HP from A2), effective EHP increases to ~206,500"
+      },
+      {
+        "champion": "Hypothetical High DEF Champion",
+        "hp": 50000,
+        "def": 5000,
+        "calculation": "50000 × (1 + 5000/1000) = 50000 × 6 = 300,000 EHP",
+        "notes": "Lower HP but higher DEF = similar EHP to Brogni (330k). DEF is very efficient for EHP."
+      }
+    ]
+  },
+
+  "strategic_implications": {
+    "clan_boss": {
+      "priority": "CRITICAL",
+      "stun_target_designation": "Champion with LOWEST EHP is stunned. Geomancer 287k EHP = designated stun target (can revive with passive = optimal). If Geomancer EHP increases above another champion, stun target changes (BAD, other champion may not have revive).",
+      "ehp_optimization": "Balance HP and DEF to maintain Geomancer as lowest EHP while maximizing team survivability. All other champions should have EHP > 287k.",
+      "shield_impact": "Shields increase effective EHP (Brogni shield 24k = +24k EHP for 2 turns). With Godseeker Aniri buff extension, shield uptime 40% → 60% = average EHP increases by +14.4k (60% of 24k)."
+    },
+    "dungeons": {
+      "priority": "HIGH",
+      "wave_survivability": "Higher EHP = survives more hits from waves. CRITICAL for Spider (high damage waves + boss poisons/HP Burn). Mithrala with Continuous Heal + cleanse = effective EHP much higher than raw EHP (healing restores HP each turn).",
+      "boss_survivability": "Higher EHP = survives longer vs boss damage. Fire Knight high damage = high EHP CRITICAL. Dragon poison damage = high EHP MODERATE (poison ignores DEF, based on MAX HP)."
+    },
+    "arena": {
+      "priority": "MODERATE",
+      "speed_vs_ehp_tradeoff": "Arena speed > EHP. Fast nuker with low EHP (150k) better than slow tank with high EHP (400k). Exception: defensive teams (high EHP + high RES + Continuous Heal = outlast enemy).",
+      "burst_survivability": "High EHP allows surviving enemy first nuke, then counterattacking. Wukong A2 nuke ~80k damage = champion with 80k+ EHP can survive (if not weak affinity)."
+    },
+    "faction_wars": {
+      "priority": "HIGH",
+      "progression": "FW bosses high damage = high EHP CRITICAL. Geomancer 287k EHP may be too low for FW21 Hard (boss hits 50k+ = 6 hits to kill = risky). Target 350k+ EHP for FW21 Hard."
+    }
+  },
+
+  "ehp_optimization_strategies": {
+    "boots_tradeoff": {
+      "description": "Boots main stat: HP% vs DEF% vs SPD",
+      "hp_boots": "HP% boots give ~60% HP (Geomancer 60k HP → 96k HP). EHP calculation: 96k × 4.789 = 459,744 EHP (+172k EHP from HP boots).",
+      "def_boots": "DEF% boots give ~60% DEF (Geomancer 3789 DEF → 6062 DEF). EHP calculation: 60k × 7.062 = 423,720 EHP (+136k EHP from DEF boots).",
+      "recommendation": "HP% boots BETTER than DEF% boots for EHP (+172k vs +136k = +36k more EHP). HOWEVER, SPD boots CRITICAL for CB speed tune (171-189 SPD required). Use HP% or DEF% chest/gloves instead of boots.",
+      "trade_off_summary": "SPD boots REQUIRED for CB (speed tune). Use HP%/DEF% on chest/gloves. Prioritize DEF% chest over HP% chest (DEF also reduces damage taken, HP only increases health pool)."
+    },
+    "stat_balance": {
+      "description": "Balance HP and DEF for maximum EHP",
+      "rule_of_thumb": "Every 1000 DEF = 100% HP increase in EHP. Champion with 50k HP and 5k DEF has same EHP as champion with 100k HP and 3k DEF (both 300k EHP).",
+      "optimal_ratio": "For CB, aim for DEF 3000-4000 and HP 50k-80k. Higher DEF more efficient (also benefits from Increase DEF buff 60% = massive EHP increase).",
+      "example": "Geomancer: 60k HP, 3789 DEF = 287k EHP. If rebalance to 50k HP, 5000 DEF: 50k × 6 = 300k EHP (+13k EHP with lower HP but higher DEF)."
+    },
+    "buff_synergy": {
+      "increase_def": "Increase DEF 60% increases DEF by 1.6×. Geomancer 3789 DEF → 6062 DEF. EHP: 60k × 7.062 = 423,720 EHP (+136k EHP from Increase DEF buff, 47% EHP increase).",
+      "shield": "Shields add to EHP directly. Brogni 24k shield = +24k EHP for 2 turns. With buff extension 60% uptime, average EHP +14.4k over entire fight.",
+      "continuous_heal": "Continuous Heal 15% MAX HP/turn × 2 turns = 30% MAX HP restored. Geomancer 60k HP = 18k HP restored per Continuous Heal application. Effective EHP over 50 turns with 40% uptime = 60k + (18k × 0.4 × 25 applications) = 60k + 180k = 240k effective healing (adds to EHP indirectly)."
+    }
+  },
+
+  "stun_target_strategy": {
+    "description": "CB stuns champion with LOWEST EHP every 4 turns after turn 30. Designated stun target should be champion who can afford to lose 2 turns without crippling team.",
+    "ideal_stun_targets": [
+      "Geomancer (BEST): Can revive with passive after 2 turns stunned. HP Burn uptime maintained (A2 3-turn CD = can reapply after revive). Lowest base EHP (60k HP, 3.7k DEF = 287k EHP).",
+      "Champions with Unkillable buff: Stun does not matter if Unkillable active (champion cannot die). RARE for UNM (unkillable comps require specific speed tunes).",
+      "Champions with low cooldown buffs: If champion's primary role is buff/debuff application, 2 turns stunned = minimal impact if cooldowns reset during stun."
+    ],
+    "bad_stun_targets": [
+      "Brogni: Provides Shield + Increase DEF buffs. If stunned for 2 turns, buffs expire and team survivability drops (can cause team wipe).",
+      "Decrease ATK champion (Stag Knight, Jareg): If stunned for 2 turns, Decrease ATK expires and boss damage increases 2× (team wipe).",
+      "Decrease DEF champion (Rhazin, Stag Knight): If stunned for 2 turns, Decrease DEF expires and team damage drops by 42% (1.73× multiplier lost)."
+    ],
+    "ehp_tuning": "Maintain Geomancer LOWEST EHP by keeping HP/DEF lower than other champions. All other champions should have EHP > 290k (safe margin above Geomancer 287k). If Geomancer EHP increases above another champion, rebalance gear."
+  },
+
+  "common_mistakes": [
+    {
+      "mistake": "Using HP% boots instead of SPD boots for CB",
+      "explanation": "HP% boots give +60% HP (Geomancer 60k → 96k HP, EHP 287k → 459k). HUGE EHP increase BUT breaks speed tune (SPD drops from 180 → 140 = out of 171-189 SPD range = CB takes extra turns before champion).",
+      "solution": "ALWAYS use SPD boots for CB (speed tune CRITICAL). Use HP%/DEF% on chest/gloves instead. Accept lower EHP in exchange for correct speed tune."
+    },
+    {
+      "mistake": "Ignoring DEF in favor of pure HP stacking",
+      "explanation": "Stacking HP to 100k with 2k DEF gives EHP: 100k × 3 = 300k. Balancing to 60k HP and 4k DEF gives EHP: 60k × 5 = 300k (same EHP but 40k less HP needed). DEF is more efficient than HP for EHP.",
+      "solution": "Balance HP and DEF. Aim for DEF 3000-4000 and HP 50k-80k for CB. DEF also benefits from Increase DEF buff (60% DEF = massive EHP increase)."
+    },
+    {
+      "mistake": "Not accounting for shields when calculating EHP",
+      "explanation": "Brogni 80k HP, 3.1k DEF = 330k EHP. With Shield 24k active, effective EHP is 354k (shield absorbs damage before HP). If shield has 40% uptime, average EHP is 330k + (24k × 0.4) = 339.6k.",
+      "solution": "Include shield uptime in EHP calculations for stun target designation. Brogni with shield has HIGHER effective EHP than raw EHP suggests."
+    },
+    {
+      "mistake": "Not tuning stun target EHP after gear changes",
+      "explanation": "Geomancer 287k EHP designated stun target. After gear upgrade, Geomancer EHP increases to 320k, but Mithrala still at 192k EHP. CB now stuns Mithrala instead of Geomancer (Mithrala has no revive = 2 turns lost = damage drop).",
+      "solution": "After any gear change, recalculate ALL champion EHP. Ensure Geomancer remains LOWEST EHP (or designated stun target remains lowest). Rebalance gear if needed."
+    },
+    {
+      "mistake": "Not considering Continuous Heal for effective EHP",
+      "explanation": "Mithrala 55k HP, 2.5k DEF = 192k raw EHP. With Continuous Heal 40% uptime (15% MAX HP/turn × 2 turns), Mithrala restores 8.25k HP per turn on average (55k × 0.15 × 0.4). Over 50 turns, that's 412k HP restored = effective EHP much higher than raw EHP.",
+      "solution": "Factor Continuous Heal into survivability calculations. Champions with high Continuous Heal uptime can survive with lower raw EHP."
+    }
+  ],
+
+  "validation_sources": [
+    "Ayumilove (EHP formula, stun target mechanics)",
+    "HellHades (EHP calculators, stat optimization)",
+    "Community guides (stun target strategies, EHP tuning for CB)",
+    "In-game testing (Geomancer stun target confirmation, shield/heal EHP impact)"
+  ],
+
+  "notes": "EHP is CRITICAL for CB stun target designation. Geomancer 287k EHP = designated stun target (can revive with passive). All other champions should have EHP > 290k. Shields and Continuous Heal increase effective EHP (factor into calculations). DEF more efficient than HP for EHP (1000 DEF = 100% HP increase). Balance HP and DEF for maximum EHP. SPD boots REQUIRED for CB (speed tune) = cannot use HP% boots despite massive EHP increase. Recalculate EHP after every gear change to ensure stun target remains correct."
+}
