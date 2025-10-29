@@ -1208,7 +1208,101 @@ Based on screenshot analysis:
 - **Effect**: Wearer's Turn Meter increases by 10% whenever one of their allies dies
 - **Analysis**: Synergizes with revive passive (if allies die, Aniri gets turn meter boost → faster revive/heal rotation). Good relic choice for support role.
 
-**Skills**
+### **Skills & Multipliers**
+
+**A1 - Guiding Light (Single Target)**
+- **Multiplier:** 3.5x DEF
+- **Type:** Single-hit attack (DEF-scaling)
+- **Effects:** None (pure damage)
+- **Warmaster Synergy:** ✅ Single-hit = 60% Warmaster proc chance (if using Offense tree)
+- **Cooldown:** None (spammable)
+- **Books:** +15% damage total
+- **UNM Impact:** Minimal damage (DEF-scaling, not built for offense, masteries incomplete)
+- **Notes:** Filler skill. Primary role is support (heal/revive), not damage. Warmaster procs low priority.
+
+**A2 - Quest for Meaning (AOE, CORE ABILITY)**
+- **Multiplier:** 3.0x DEF (AOE)
+- **Type:** Single-hit per target (DEF-scaling)
+- **Effects:**
+  - Heals all allies by 15% of their MAX HP (18% when booked)
+  - **Increases duration of all buffs on all allies by +1 turn** (CRITICAL MECHANIC)
+  - Decreases duration of all buffs on all enemies by -1 turn (minimal CB value)
+- **Warmaster Synergy:** ✅ Single-hit per target = 60% Warmaster proc per enemy (low damage, low priority)
+- **Cooldown:** 3 turns (booked)
+- **Books:** +20% heal (15% → 18%), -1 turn cooldown (4 → 3 turns)
+- **UNM Impact:** **TEAM FORCE MULTIPLIER (Buff Extension)**
+  - Buff Extension +1 turn: Extends Brogni shields (2 → 3 turns), Decrease DEF/ATK (2 → 3 turns), Increase ATK/DEF (2 → 3 turns)
+  - **Synergy with Lasting Gifts T6 (MISSING):** If Lasting Gifts active, buffs extended by +2 turns total (A2 +1, Lasting Gifts +1)
+  - Heal 18% MAX HP: Moderate healing (team avg ~60k HP = 10.8k heal, ~1 boss hit absorbed)
+  - **3-turn CD + instant effect = flexible timing** (can extend buffs strategically)
+- **Current State:** Buff extension active, but **missing Lasting Gifts T6 = -50% potential** (+1 turn instead of +2 turns)
+- **Notes:** **REASON Aniri is valuable** - Buff extension synergizes with all team buffs (Brogni shields, Stag debuffs, Mithrala buffs).
+
+**A3 - Rise of Glory (Single Target Revive, CRITICAL SAFETY MECHANISM)**
+- **Multiplier:** None (pure revive/utility skill)
+- **Type:** Single target revive
+- **Effects:**
+  - Revives dead ally with 50% HP
+  - Fills revived ally Turn Meter by 50%
+  - **Resets all skill cooldowns** on revived ally (A2/A3 ready immediately)
+- **Cooldown:** 4 turns (booked)
+- **Books:** -3 turn cooldown (7 → 4 turns)
+- **UNM Impact:** **SAFETY NET + RESET EXPLOIT**
+  - Revive 50% HP: Brings back key champion (Stag, Brogni, Geomancer if killed by stun+burst)
+  - 50% TM fill: Revived ally acts soon (can reapply buffs/debuffs immediately)
+  - **Cooldown reset:** Revived Brogni can immediately use A3 shields, revived Stag can immediately use A2 Decrease DEF/ATK
+  - **4-turn CD:** Fast enough to revive multiple times in 50-turn fight (12-13 revive opportunities max)
+- **Notes:** Manual play can exploit cooldown reset (revive DPS mid-fight, they burst damage with fresh cooldowns). AUTO uses reactively.
+
+**Passive - Undying Zeal (Auto-Revive, ONCE PER BATTLE)**
+- **Type:** Self-revive on death
+- **Effects:**
+  - When Godseeker Aniri dies: Auto-revive with 50% HP and 50% Turn Meter
+  - **Triggers once per battle only**
+- **UNM Impact:** **INSURANCE POLICY**
+  - Ensures Aniri survives at least one death (can continue healing/reviving team)
+  - 50% HP + 50% TM: Returns quickly to action (1-2 turns delay)
+  - **Synergy with Demonic Effigy:** When Aniri revives, if allies died during her death, she gains +10% TM per death (faster return)
+- **Notes:** Does NOT reset A3 cooldown (unlike A3's revive). One-time safety only.
+
+**Skill Priority for UNM:**
+1. **A2 (Quest for Meaning):** Buff extension +1 turn = team force multiplier, 18% heal = survivability
+2. **A3 (Rise of Glory):** Revive + cooldown reset = safety net + strategic exploit
+3. **Passive (Undying Zeal):** Auto-revive once = insurance policy
+4. **A1 (Guiding Light):** Filler damage (low contribution)
+
+**Why Buff Extension is CRITICAL (+1 Turn Value):**
+- **Brogni A3 shields:** 2 → 3 turns = +50% shield uptime (24k shields × 1.5 = 36k effective shield absorption)
+- **Stag A2 Decrease DEF/ATK:** 2 → 3 turns = easier 100% uptime (less pressure on speed tune precision)
+- **Mithrala A2/A3 buffs:** 2 → 3 turns = Increase ATK/DEF/Strengthen extended (more damage + survivability)
+- **Estimated Impact:** +5-10M team damage (extended Decrease DEF uptime), +10-15 turns survival (extended shields/Decrease ATK)
+
+**Why Lasting Gifts T6 is MISSING (CRITICAL ISSUE):**
+- **Current:** A2 extends buffs +1 turn only
+- **With Lasting Gifts T6:** A2 extends buffs +2 turns total (A2 +1, Lasting Gifts +1)
+  - Brogni shields: 2 → 4 turns (100% uptime with 3-turn CD, +1 turn overlap buffer)
+  - Stag Decrease DEF/ATK: 2 → 4 turns (100% uptime with 3-turn CD, +1 turn overlap safety)
+  - Mithrala buffs: 2 → 4 turns (massive damage + survivability window)
+- **Estimated Impact of Missing Lasting Gifts:** **-3 to -5M team damage** (less Decrease DEF uptime), **-5 to -10 turns survival** (weaker buff coverage)
+- **Fix:** **HIGHEST PRIORITY** - Complete masteries with Support tree → Lasting Gifts T6
+
+**Why Masteries are INCOMPLETE (CRITICAL BOTTLENECK):**
+- Missing T6 from Offense (Warmaster low priority, DEF-scaling champion)
+- Missing T6 from Defense (Fearsome Presence or Warmaster of Wrath potential)
+- **Missing entire Support tree:** No Lasting Gifts T6, no Eagle-Eye ACC, no Master Hexer
+- **Impact:** Team losing ~10-20% effectiveness due to missing buff extension multiplier
+- **Fix Time:** ~2-3 hours to farm ~800 scrolls, complete Support tree to Lasting Gifts T6
+- **Priority:** **IMMEDIATE** - Quick win (+3-5M damage, +5-10 turns survival, requires scrolls only, no gear changes)
+
+**Why SPD is EXTREME BLOCKER (264 SPD):**
+- Current: 264 SPD = ~54% faster than 1:1 tune target (171 SPD)
+- Impact: Aniri extends buffs at wrong times (before buffs placed, wasting extension), heal rotation desyncs, revive timing off
+- **Fix:** Remove SPD boots → HP%/DEF% boots (-45 SPD) = 219 SPD, still +30-48 SPD over target
+  - May need full regear (swap out SPD substats, add HP%/DEF% substats)
+  - Target: 189 SPD (high end of 1:1 tune, acts before stun target but after DPS)
+- **Conflict:** None (Aniri not used in Arena, CB-specific build OK)
+
+### **Skills (Booking Status)**
 ----------
 - **Fully booked** ✅ (assumed based on established multi-use champion, confirm if needed)
 
