@@ -804,6 +804,202 @@ The boss follows a strict 5-turn attack pattern that repeats:
 
 ---
 
+## Team Archetype Comparison & Realistic Expectations
+
+### Current Team Archetype: Tanky Buff/Debuff Stack
+
+**Core Strategy:** Survive through layered damage mitigation (Decrease ATK, shields, heals, Increase DEF) + maximize damage through debuffs (Decrease DEF, HP Burn, Increase ATK)
+
+**Strengths:**
+- ✅ No rare/epic fusion requirements (realistic for current roster)
+- ✅ Multiple damage sources (Geomancer HP Burn + Warmaster procs, Brogni Giant Slayer reflection, Stag Knight debuffs)
+- ✅ Layered survivability (shields + heals + Decrease ATK + Increase DEF = turn 50+ viable)
+- ✅ Affinity-safe core (Brogni/Mithrala/Godseeker Aniri all Spirit/Void/Magic, only Geomancer weak on Spirit day)
+- ✅ Manual/Auto flexible (can AUTO with speed tune, manual micro-optimization available)
+
+**Weaknesses:**
+- ⚠️ Survivability ceiling (~60-65 turns max, boss scaling overwhelms by turn 65)
+- ⚠️ RNG variance (HP Burn, Weaken, Poison procs fluctuate, ±5-10M swing per run)
+- ⚠️ Speed tune CRITICAL (without 1:1 tune, buff rotation gaps = team wipes at turn 40)
+- ⚠️ Mithrala Arena build bleed (245 SPD breaks tune, 526 ACC overkill, requires rebuild)
+
+**Estimated Damage Range:**
+- **Baseline (no speed tune):** 30-45 turns = **44M** (validated)
+- **Phase 1 (C.RATE fixes):** 30-45 turns = **60-69M** (Geomancer +5-8M, Brogni +8-12M, Aniri +3-5M)
+- **Phase 2 (speed tune + boots):** 50-60 turns = **65-75M** (perfect rotation extends survival)
+- **Ceiling:** 60-65 turns = **75M max** (boss scaling 2.8×+ overwhelms team)
+
+### Alternative Team Archetypes
+
+#### Archetype 1: Unkillable Teams
+
+**Concept:** Use unkillable/block damage buffs to ignore boss damage entirely (100% uptime)
+
+**Example Champions:** Maneater, Painkeeper, Demytha, Warcaster, Roshcard, Valkyrie
+
+**Pros:**
+- ✅ Survivability ceiling: **INFINITE** (can survive turn 100+ with perfect tune)
+- ✅ Damage ceiling: **150-250M+** (limited only by damage dealer builds)
+- ✅ Consistent (no RNG deaths, speed tune = predictable rotation)
+
+**Cons:**
+- ❌ Requires specific champions (Maneater, Painkeeper, etc.) - **NOT in current roster**
+- ❌ Complex speed tune (190-195 SPD exact, 1 SPD variance = team wipes)
+- ❌ Affinity-dependent (Void Maneater required for all-affinity safety)
+
+**Realistic for Current Roster:** ❌ **NO** (do not own Maneater, Painkeeper, Demytha, or Warcaster)
+
+**Upgrade Path:** Pull Maneater (void, permanent fusion available) or Demytha (epic, limited fusion)
+
+---
+
+#### Archetype 2: Counterattack Teams
+
+**Concept:** Use counterattack buffs (Valkyrie, Skullcrusher, Martyr) to double team attack frequency = double Giant Slayer/Warmaster procs
+
+**Example Teams:**
+- Valkyrie (counterattack + shields) + 4 DPS with Giant Slayer/Warmaster
+- Skullcrusher (counterattack) + Decrease DEF/ATK + 3 DPS
+
+**Pros:**
+- ✅ Damage ceiling: **100-150M** (2× attack frequency = 2× Warmaster procs)
+- ✅ Faster runs (fewer turns needed for same damage)
+- ✅ Works with tanky champs (survives 50-70 turns with shields + Decrease ATK)
+
+**Cons:**
+- ❌ Requires specific champions (Valkyrie, Skullcrusher, Martyr) - **NOT in current roster**
+- ❌ Speed tune complex (counterattack buff must be active before boss AOE)
+- ❌ RNG variance (counterattack procs depend on boss AOE frequency)
+
+**Realistic for Current Roster:** ❌ **NO** (do not own Valkyrie, Skullcrusher, or Martyr)
+
+**Upgrade Path:** Pull Skullcrusher (epic, void recommended for all-affinity) or Valkyrie (legendary, rare pull)
+
+---
+
+#### Archetype 3: Poison Teams
+
+**Concept:** Stack 10 poison debuffs (debuff limit) + Poison Sensitivity = 15-20M damage per turn from poisons alone
+
+**Example Teams:**
+- Frozen Banshee (poison sensitivity) + Kael + Outlaw Monk + 2 support
+- Elenaril (poison explosion) + poison champions
+
+**Pros:**
+- ✅ Accessible (many rares/epics with poison: Kael, Frozen Banshee, Outlaw Monk)
+- ✅ Consistent damage (poison = 5% MAX HP per turn × 10 debuffs = 50% MAX HP every 2 turns)
+- ✅ Low gear requirement (poison damage ignores ATK/C.DMG)
+
+**Cons:**
+- ⚠️ **User notes:** "Poison teams NOT well-built" (Frozen Banshee, Elenaril, Narma weak)
+- ⚠️ Damage ceiling: **50-80M** (limited by turn survival + poison uptime)
+- ⚠️ Survivability bottleneck (poison champs often fragile, need heavy support)
+
+**Realistic for Current Roster:** ⚠️ **MAYBE** (own poison champions, but user notes "weak builds")
+
+**Upgrade Path:** Rebuild Frozen Banshee/Elenaril/Narma for CB (250+ ACC, 3500+ DEF, 171-189 SPD), add support (Decrease ATK, shields)
+
+**Why Current Team BETTER than Poison:**
+- Current team: 65-75M (with optimization) vs Poison team: 50-80M (requires rebuild)
+- Current team: Already built + validation complete vs Poison team: Requires full rebuild (user notes "weak")
+- **RECOMMENDATION:** Stick with current tanky buff/debuff team, skip poison archetype
+
+---
+
+#### Archetype 4: 2:1 Speed Tune Teams
+
+**Concept:** Team takes 2 turns for every 1 boss turn (250-280 SPD) = double attack frequency = faster damage ramp
+
+**Example Teams:**
+- 5 DPS at 250-280 SPD + Decrease DEF/ATK + heals/shields
+
+**Pros:**
+- ✅ Damage ceiling: **120-180M** (2:1 turn ratio = 2× Warmaster procs)
+- ✅ Faster runs (fewer boss turns needed)
+- ✅ Works without unkillable (survives via shields + Decrease ATK + heals)
+
+**Cons:**
+- ❌ **EXTREME** gear requirement (250-280 SPD + 250 ACC + 100% C.RATE + 3500 DEF + 50k HP = endgame gear)
+- ❌ Complex speed tune (252-254 SPD exact for all champions, 1 SPD variance = tune breaks)
+- ❌ Survivability difficult (2:1 tune = boss hits 2× harder per champion turn, need perfect buff rotation)
+
+**Realistic for Current Roster:** ❌ **NO** (gear not available, Mithrala 245 SPD = highest current, breaks tune)
+
+**Upgrade Path:** Farm Dragon/Spider/Fire Knight 25 for 2-3 months, build 5 champions with 250+ SPD + CB stats
+
+**Why Current Team BETTER than 2:1:**
+- Current team: 171-189 SPD (achievable with current gear) vs 2:1 team: 250-280 SPD (requires full gear farm)
+- Current team: 65-75M (realistic) vs 2:1 team: 120-180M (unrealistic gear requirement)
+- **RECOMMENDATION:** Stick with 1:1 tune, revisit 2:1 after 3+ months gear farm
+
+---
+
+### Realistic Expectations: Where Does Current Team Rank?
+
+**Damage Tier List (UNM Clan Boss):**
+
+| Tier | Damage Range | Team Archetype | Realistic for Current Roster? |
+|------|--------------|----------------|-------------------------------|
+| **S-Tier** | 150-250M+ | Unkillable teams (Maneater, Demytha, Warcaster) | ❌ NO (missing champions) |
+| **A-Tier** | 100-150M | Counterattack (Valkyrie, Skullcrusher) + 2:1 speed tune | ❌ NO (missing champions + gear) |
+| **B-Tier** | 65-100M | Tanky buff/debuff (shields, heals, Decrease ATK) + HP Burn | ✅ **YES** (current team) |
+| **C-Tier** | 40-65M | Poison teams (10 poisons + support) | ⚠️ MAYBE (user notes "weak builds") |
+| **D-Tier** | <40M | Untuned random teams (no synergy, gaps in rotation) | ✅ Current baseline (44M) |
+
+**Current Team Position:**
+- **Baseline (no tune):** D-Tier (44M)
+- **Phase 1 (C.RATE fixes):** C-Tier (60-69M)
+- **Phase 2 (speed tune + boots):** **B-Tier (65-75M)** ← **REALISTIC TARGET**
+- **Ceiling:** B-Tier max (75M, cannot reach A-Tier without Valkyrie/counterattack)
+
+**2-Key vs 3-Key Threshold:**
+- **3-Key UNM:** 67M per key × 3 keys = 200M boss HP (44M = 4-5 key pace currently)
+- **2-Key UNM:** 100M per key × 2 keys = 200M boss HP (need 100M team to 2-key)
+- **Current Team Ceiling:** 65-75M = **CANNOT 2-key solo** (need clan mates to contribute 125-135M)
+
+**Realistic Clan Boss Strategy:**
+- **Current State:** 44M = 3-4 other clan mates needed to down UNM (total 200M)
+- **Phase 2 State:** 65-75M = 2-3 other clan mates needed to down UNM
+- **Goal:** Maximize personal contribution (65-75M), rely on clan for remaining 125-135M
+
+**When to Upgrade to A/S-Tier:**
+- Pull Maneater or Demytha (unkillable) → rebuild team for S-Tier (150-250M)
+- Pull Valkyrie or Skullcrusher (counterattack) → rebuild team for A-Tier (100-150M)
+- Farm 3+ months gear (250+ SPD sets) → rebuild team for 2:1 speed tune A-Tier (120-180M)
+
+**For Now (Realistic Path):**
+- ✅ **Stick with current tanky buff/debuff team**
+- ✅ Execute Phase 1 (C.RATE fixes) = 60-69M
+- ✅ Execute Phase 2 (speed tune + boots) = 65-75M
+- ✅ **Accept B-Tier ceiling** (75M max), wait for champion pulls to unlock A/S-Tier
+
+---
+
+### Why Current Team is GOOD (Don't Chase Unrealistic Upgrades)
+
+**Realistic Assessment:**
+- ✅ Current team uses OWNED champions (no fusion grind, no pulls required)
+- ✅ Validation complete (44M baseline, mechanics understood)
+- ✅ Clear upgrade path (Phase 1 = +16-25M, Phase 2 = +5-10M, total 65-75M)
+- ✅ B-Tier performance achievable with CURRENT gear + optimizations
+- ✅ No major rebuild required (speed tune + boot swaps + masteries = done)
+
+**What to AVOID (Unrealistic Chases):**
+- ❌ Don't rebuild for poison teams (user notes "weak," current team stronger)
+- ❌ Don't chase 2:1 speed tune (requires 3+ months gear farm, marginal gain)
+- ❌ Don't wait for Maneater/Valkyrie pull (could be months/years, current team viable NOW)
+
+**Actionable Advice:**
+1. **Execute Phase 1** (Geomancer C.RATE, Brogni C.RATE, Aniri masteries) = **60-69M** (2-3 hours)
+2. **Execute Phase 2** (speed tune 171-189 SPD, boot swaps, Mithrala rebuild) = **65-75M** (1-2 weeks)
+3. **Test & Validate** (5 runs per phase, document results)
+4. **Accept B-Tier ceiling** (75M max), enjoy 2-key UNM with clan mates
+5. **Wait for champion pulls** (Maneater, Valkyrie, Demytha) to unlock A/S-Tier later
+
+**Bottom Line:** Current team is **GOOD ENOUGH** for 65-75M (B-Tier). Focus on optimizations, not chasing unrealistic upgrades.
+
+---
+
 ## Analysis Workflow
 
 **Instructions for this analysis project**:
