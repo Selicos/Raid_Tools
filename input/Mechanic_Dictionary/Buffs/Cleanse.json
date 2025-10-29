@@ -1,0 +1,146 @@
+{
+  "mechanic_name": "Cleanse",
+  "mechanic_type": "buff",
+  "description": "Cleanse removes debuffs from allies. Three types exist: full cleanse (removes ALL debuffs), partial cleanse (removes X random debuffs), and conditional cleanse (removes specific debuff types). Critical for removing stun in CB, removing CC in Arena, and removing boss debuffs in dungeons.",
+  
+  "cleanse_types": [
+    {
+      "type": "full_cleanse",
+      "description": "Removes ALL debuffs from target ally or allies",
+      "examples": [
+        "Brogni A1: 50% chance to remove ALL debuffs from ally with lowest HP (0-turn cooldown, can cleanse every turn)",
+        "Mithrala A3: Removes ALL debuffs from all allies (5-turn cooldown)",
+        "Mausoleum Mage A2: Removes ALL debuffs from all allies + places Block Debuffs 3 turns (5-turn cooldown)",
+        "Godseeker Aniri A1: 50% chance to remove ALL debuffs from target ally (0-turn cooldown)"
+      ],
+      "strategic_value": "HIGHEST priority for removing critical debuffs (stun, freeze, provoke, sleep). 100% chance full cleanse preferred over 50% chance (reliability)."
+    },
+    {
+      "type": "partial_cleanse",
+      "description": "Removes X random debuffs from target (typically 1-2 debuffs)",
+      "examples": [
+        "Some champions remove 1 random debuff (common on 3-turn cooldown skills)",
+        "Some champions remove 2 random debuffs (less common, typically 4-turn cooldown)"
+      ],
+      "strategic_value": "MODERATE priority. RNG-based (may not remove critical debuffs like stun). Unreliable for CB stun removal. Better than nothing for Arena."
+    },
+    {
+      "type": "conditional_cleanse",
+      "description": "Removes specific debuff types only (e.g., remove only stun/freeze/provoke, remove only poison/HP Burn)",
+      "examples": [
+        "Some champions remove only crowd control debuffs (stun, freeze, provoke, sleep)",
+        "Some champions remove only damage-over-time debuffs (poison, HP Burn)"
+      ],
+      "strategic_value": "NICHE priority. Only valuable if specific debuff type is problematic. Unreliable for CB (need full cleanse for stun). Can be high value for specific content (e.g., Spider poison removal)."
+    }
+  ],
+
+  "champion_examples": [
+    {
+      "champion": "Brogni",
+      "skill": "A1 (Purify)",
+      "cleanse_type": "full_cleanse",
+      "chance": "50%",
+      "target": "ally with lowest HP",
+      "cooldown": 0,
+      "notes": "Can cleanse every turn (0-turn CD). 50% chance = unreliable for critical cleanses. BEST for CB stun removal (targets lowest HP = stun target). Also places Shield 15% caster MAX HP on cleansed ally."
+    },
+    {
+      "champion": "Mithrala",
+      "skill": "A3 (Nature's Blessing)",
+      "cleanse_type": "full_cleanse",
+      "chance": "100%",
+      "target": "all allies",
+      "cooldown": 5,
+      "notes": "100% chance full cleanse = HIGHLY RELIABLE. Cleanses entire team. Also heals all allies 25% MAX HP + places Continuous Heal 2 turns. EXCELLENT for Arena (cleanse CC then counter)."
+    },
+    {
+      "champion": "Mausoleum Mage",
+      "skill": "A2 (Undying Veil)",
+      "cleanse_type": "full_cleanse",
+      "chance": "100%",
+      "target": "all allies",
+      "cooldown": 5,
+      "notes": "100% chance full cleanse + Block Debuffs 3 turns = PREMIUM. Prevents re-application of debuffs after cleanse. EXCELLENT for CB (cleanse stun + block next stun for 3 turns). Also useful for Arena/dungeons."
+    },
+    {
+      "champion": "Godseeker Aniri",
+      "skill": "A1 (Spiritual Guidance)",
+      "cleanse_type": "full_cleanse",
+      "chance": "50%",
+      "target": "target ally",
+      "cooldown": 0,
+      "notes": "Can cleanse every turn (0-turn CD). 50% chance = unreliable. Also places Continuous Heal 2 turns on cleansed ally. BACKUP cleanser only (prefer 100% chance champions)."
+    }
+  ],
+
+  "strategic_implications": {
+    "clan_boss": {
+      "value": "MODERATE",
+      "priority": "Stun removal (CB stuns 1 champion every 4 turns after turn 30)",
+      "notes": "Full cleanse REQUIRED (partial/conditional unreliable). 100% chance preferred (50% chance = 50% chance team wipes). Mausoleum Mage BEST (100% cleanse + Block Debuffs 3 turns = prevents next stun). Brogni GOOD (50% chance, 0-turn CD = multiple attempts, targets lowest HP = stun target). Godseeker Aniri BACKUP (50% chance, also heals).",
+      "common_mistakes": "Relying on 50% chance cleanse (team wipes when fails), not timing cleanse for stun turns (cleanse on turn 29 wastes cooldown), using partial cleanse (RNG = may not remove stun)"
+    },
+    "arena": {
+      "value": "HIGH",
+      "priority": "Remove crowd control (stun, freeze, provoke, sleep) to enable counterattack",
+      "notes": "Full cleanse PREMIUM (removes all CC debuffs). Mithrala EXCELLENT (100% cleanse all allies + heal 25% + Continuous Heal 2 turns = full team recovery). Mausoleum Mage EXCELLENT (100% cleanse + Block Debuffs 3 turns = prevents re-CC). Speed tuning CRITICAL (cleanser must go after enemy CC but before enemy damage dealers).",
+      "common_mistakes": "Cleanser too slow (team dies before cleanse), cleanser too fast (cleanses before enemy applies CC), relying on partial cleanse (may not remove stun/freeze/provoke), not bringing Block Debuffs after cleanse (enemy re-applies CC)"
+    },
+    "dungeons": {
+      "value": "HIGH",
+      "priority": "Remove boss debuffs (varies by dungeon: Spider poison/HP Burn, Dragon poison, Fire Knight Decrease DEF)",
+      "notes": "Full cleanse BEST (removes all debuffs from waves and boss). Mithrala EXCELLENT (100% cleanse all allies + heal = full team recovery after debuff waves). Conditional cleanse NICHE (Spider poison removal if only poison/HP Burn needed). Partial cleanse MODERATE (better than nothing for wave debuffs).",
+      "common_mistakes": "Not bringing cleanse for Spider (poison/HP Burn kills team), not timing cleanse for boss mechanics (cleanse too early wastes cooldown), relying on Continuous Heal instead of cleanse (debuffs still active)"
+    },
+    "faction_wars": {
+      "value": "HIGH",
+      "priority": "Remove boss and wave debuffs (varies by faction)",
+      "notes": "Full cleanse BEST. 100% chance CRITICAL (no retries in FW if team wipes). Mithrala EXCELLENT (if Sylvan Watchers faction), Mausoleum Mage EXCELLENT (if Undead Hordes faction). If no full cleanser in faction, partial cleanse or Continuous Heal required.",
+      "common_mistakes": "Not checking if faction has cleanser (some factions lack cleanse = need Continuous Heal + high RES), relying on 50% chance cleanse (FW no retries = team wipe), not gearing cleanser for survivability (cleanser dies = team wipes)"
+    }
+  },
+
+  "synergies": {
+    "block_debuffs": "EXCELLENT synergy. Cleanse removes existing debuffs, Block Debuffs prevents new debuffs. Mausoleum Mage A2 (100% cleanse + Block Debuffs 3 turns) = PREMIUM combo. CRITICAL for CB (cleanse stun + block next stun for 3 turns).",
+    "continuous_heal": "GOOD synergy. Cleanse removes debuffs, Continuous Heal restores HP lost to debuffs. Mithrala A3 (100% cleanse + heal 25% + Continuous Heal 2 turns) = EXCELLENT combo. CRITICAL for dungeons (cleanse poison/HP Burn + heal damage).",
+    "buff_extension": "GOOD synergy if cleanse places buffs. Godseeker Aniri A1 (50% cleanse + Continuous Heal 2 turns) synergizes with Godseeker Aniri A2 (extend Continuous Heal from 40% → 60% uptime). Mausoleum Mage A2 (100% cleanse + Block Debuffs 3 turns) synergizes with buff extension (Block Debuffs uptime 40% → 60% with Godseeker Aniri).",
+    "high_resistance": "ALTERNATIVE to cleanse. High RES (350-400 for CB, 500+ for Arena) reduces debuff landing chance. NOT RECOMMENDED for CB stun (boss ACC too high, stun always lands). MODERATE value for Arena (prevents initial CC, but if lands need cleanse). BACKUP strategy only (cleanse more reliable)."
+  },
+
+  "common_mistakes": [
+    {
+      "mistake": "Relying on partial cleanse for critical debuffs",
+      "explanation": "Partial cleanse removes X random debuffs. If champion has 5 debuffs including stun, partial cleanse (1 debuff removed) has only 20% chance to remove stun. UNRELIABLE for CB/Arena. Use full cleanse for critical debuffs.",
+      "solution": "Bring full cleanse champion (Mithrala, Mausoleum Mage, Brogni) for critical debuffs. Reserve partial cleanse for wave clearing or non-critical debuffs."
+    },
+    {
+      "mistake": "Not timing cleanse for CB stun turns",
+      "explanation": "CB stuns 1 champion every 4 turns after turn 30 (stun on turns 30, 34, 38, 42, 46, 50, etc.). If cleanse on 5-turn cooldown is used on turn 29, cooldown expires on turn 34 (too late to cleanse turn 30 stun, champion stunned for 2 turns, team damage lost).",
+      "solution": "Track stun turns (30, 34, 38, 42, 46, 50). Use cleanse AFTER stun lands (turn 30 stun → cleanse turn 31, champion unstunned turn 32, only 1 turn lost instead of 2). OR use Mausoleum Mage A2 (cleanse + Block Debuffs 3 turns prevents stun for 3 turns)."
+    },
+    {
+      "mistake": "Cleanser too slow in Arena",
+      "explanation": "If cleanser speed 180, enemy CC champion speed 200, enemy damage dealer speed 190: Enemy CC stuns team → enemy damage dealer nukes team → cleanser turn (but team dead). Cleanse must go AFTER enemy CC but BEFORE enemy damage dealers.",
+      "solution": "Speed tune cleanser to 195 SPD (after enemy CC 200 SPD, before enemy damage dealers 190 SPD). Requires speed lead + speed sets + speed boots. OR bring Block Debuffs instead of cleanse (prevents CC entirely)."
+    },
+    {
+      "mistake": "Relying on 50% chance cleanse for CB stun removal",
+      "explanation": "Brogni A1 50% chance cleanse. If fails (50% chance), stun target stunned for 2 turns, team loses ~2M damage per turn (4M total). Over 50 turns, 50% failure rate = expected 5 stun failures = 20M damage lost.",
+      "solution": "Use 100% chance cleanser (Mausoleum Mage A2, Mithrala A3) for CB stun removal. OR use Brogni as BACKUP cleanser only (pair with Mausoleum Mage: Mausoleum cleanses stun + blocks next 3 stuns, Brogni handles any stuns after Block Debuffs expires)."
+    },
+    {
+      "mistake": "Not bringing cleanse for Spider",
+      "explanation": "Spider places poison + HP Burn on all champions. Without cleanse, team takes 7.5% MAX HP/turn from HP Burn + 5% MAX HP/turn per poison (3 poisons = 22.5% MAX HP/turn total). Champion with 50k HP dies in 4-5 turns.",
+      "solution": "Bring full cleanse champion (Mithrala A3 100% cleanse all allies + heal 25% + Continuous Heal 2 turns = full team recovery). OR bring conditional cleanse (removes only poison/HP Burn). OR use HP Burn strategy (kill Spider before debuffs accumulate)."
+    }
+  ],
+
+  "validation_sources": [
+    "Ayumilove (champion skill descriptions, cleanse mechanics)",
+    "HellHades (Arena/CB cleanse strategies, champion ratings)",
+    "In-game testing (CB stun timing, Arena speed tuning, Spider cleanse requirements)"
+  ],
+
+  "notes": "Cleanse is CRITICAL for CB (stun removal), HIGH VALUE for Arena (CC removal), HIGH VALUE for dungeons (boss debuff removal). Full cleanse preferred over partial/conditional (reliability). 100% chance preferred over 50% chance (CB stun removal fails = team wipe). Mausoleum Mage BEST cleanser (100% cleanse + Block Debuffs 3 turns). Mithrala EXCELLENT cleanser (100% cleanse + heal 25% + Continuous Heal 2 turns). Brogni GOOD cleanser (50% chance, 0-turn CD, targets lowest HP = stun target). Speed tuning CRITICAL for Arena (cleanser after enemy CC, before enemy damage dealers). Timing CRITICAL for CB (cleanse after stun lands, not before)."
+}
