@@ -75,6 +75,25 @@
 
 ---
 
+## Primary Issues Identified
+- Maintain this section as issues are identified, remediated, and updated through the analysis process.
+
+1. **No Speed Tune**: Team runs chaotic speeds (brute force approach), causing:
+   - Shield drops (Brogni damage loss from taking damage when shields expire)
+   - Buff expiration before reapplication
+   - Turn meter desync breaking rotations
+   - **Mithrala Issue**: 240-260 SPD is MASSIVE OVERKILL for CB → should drop to 180-190 SPD for more HP%/DEF% substats
+   
+2. **Geomancer C.RATE 57%**: Needs 100% for Warmaster T6 (costing ~40% damage = 5-8M per run)
+   - **Fix**: Change gloves to C.RATE main stat (57% → 100%+ with Deadly Precision mastery)
+   - Add notes for each champion as relevant
+   
+3. **Geomancer SPD 210**: Too fast for 1:1 tune (target 171-189 SPD), breaking buff/shield sync
+   - **Fix**: Remove Feral set (4-piece gives +12% SPD), replace with Lifesteal/Savage
+   - **Target**: 171 SPD exactly (stun target candidate - low base HP, good DEF/HP)
+
+---
+
 ## **QUICK OPTIMIZATION GUIDE - 3 Steps Per Champion**
 
 **Baseline Confirmed**: 44M damage (2025-10-28 test)  
