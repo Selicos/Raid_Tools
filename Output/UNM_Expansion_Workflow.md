@@ -960,29 +960,55 @@ This formula accounts for damage reduction from DEF. Higher effective HP = bette
 
 ---
 
+## LLM Optimization & Commit Strategy
+
+**Recommended LLM:** Claude Sonnet 3.5 (current)
+- **Strengths:** Long context (200k tokens), excellent at structured edits, reliable JSON generation, good at markdown table formatting
+- **Limitations:** Single-threaded execution, works best with clear atomic tasks, benefits from frequent validation checkpoints
+- **Alternative:** GPT-4 (if Sonnet struggles with large file replacements or complex JSON structures)
+
+**Commit Strategy:** Frequent commits after each atomic task (not just phase completion)
+- **Phase B:** 6 commits (1 per champion skill section + 3 new sections + ToC update + final)
+- **Phases C-I:** 1 commit per JSON file created (18+ commits)
+- **Rationale:** Enables easy rollback, provides clear restoration points, shows incremental progress
+
+**Execution Mode:** Series execution (Option B - complete all phases, report progress, auto-continue)
+- Agent will execute all tasks in sequence
+- Git commit after each atomic task completion
+- Report progress after each phase
+- Continue automatically unless blocked by validation error
+
 ## Summary Timeline & Dependencies
 
 ```
-Phase A: Approval (BLOCKING) → 5 minutes
-  └─→ Phase B: Analysis Expansions → 65-85 minutes (no dependencies)
-  └─→ Phase C: Masteries JSON → 25-30 minutes (no dependencies)
-  └─→ Phase D: Clan Bosses → 40-45 minutes (depends on B2 for content)
-  └─→ Phase E: Core Mechanics → 50 minutes (no dependencies)
-  └─→ Phase F: Damage Mechanics → 75 minutes (depends on C for masteries)
-  └─→ Phase G: Debuffs → 40 minutes (depends on E4 for ACC formulas)
-  └─→ Phase H: Buffs → 55 minutes (no dependencies)
-  └─→ Phase I: Survivability & Speed Tunes → 70 minutes (depends on D for speed targets)
+✅ Phase A: Approval & Reorganization → COMPLETE (files moved to Core_Mechanics)
+  └─→ Phase B: Analysis Expansions → 65-85 minutes (6 commits)
+        B1: Add skill details (5 champions) → 5 commits (1 per champion)
+        B2: Add boss mechanics section → 1 commit
+        B3: Add survivability section → 1 commit
+        B4: Add team archetype section → 1 commit
+        B5: Update Table of Contents → 1 commit
+        B6: Final validation & phase commit → 1 commit (total 10 commits for Phase B)
+  └─→ Phase C: Masteries JSON → 25-30 minutes (1 commit)
+  └─→ Phase D: Clan Bosses → 40-45 minutes (2 commits: UNM_Mechanics.json + optional stun file)
+  └─→ Phase E: Core Mechanics → 50 minutes (3 commits: Affinity, Resistibility, Debuff_Landing)
+  └─→ Phase F: Damage Mechanics → 75 minutes (5 commits: Warmaster, Giant Slayer, HP Burn, Poison, Formulas)
+  └─→ Phase G: Debuffs → 40 minutes (3 commits: Decrease_DEF, Decrease_ATK, Decrease_SPD)
+  └─→ Phase H: Buffs → 55 minutes (4 commits: Shield, Increase_DEF, Buff_Extension, Cleanse)
+  └─→ Phase I: Survivability & Speed Tunes → 70 minutes (4 commits: Effective_HP, Stat_Priorities, 1-1_Tune, 2-1_Tune)
 ```
 
 **Total Estimated Time:** 455-485 minutes (7.5-8 hours)  
-**Recommended Batching:** 2-3 work sessions
-- Session 1: Phase A approval + Phase B (analysis expansions) → 70-90 minutes
-- Session 2: Phase C, D, E (masteries, clan bosses, core mechanics) → 115-125 minutes
-- Session 3: Phase F, G, H, I (damage, debuffs, buffs, survivability, speed tunes) → 240-270 minutes
+**Total Git Commits:** 32+ commits (detailed audit trail)  
+**Recommended Batching:** Continuous execution (Claude Sonnet handles well)
+- Automatic breaks at phase boundaries for user review
+- Can interrupt and resume at any commit point
+- Each commit = atomic restoration point
 
 **Restoration Approach:**
-- Each phase has completion checklist with git commit
-- Can return to any phase and resume from checklist
+- Each commit is a restoration point (not just phases)
+- If interrupted mid-phase, resume from last successful commit
+- Git log shows exactly what was completed
 - Dependencies clearly marked (won't break workflow if interrupted)
 
 ---
