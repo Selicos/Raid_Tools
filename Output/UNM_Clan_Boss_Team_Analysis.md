@@ -431,6 +431,75 @@ The following reference documents contain historical UNM Clan Boss analysis and 
 
 ### **Skills**
 
+### **Skills & Multipliers**
+
+**A1 - Sandblast (Single Target)**
+- **Multiplier:** 3.5x ATK
+- **Type:** Single-hit attack
+- **Effects:** 
+  - 50% chance Decrease ACC 50% for 2 turns (75% when booked)
+  - Removes 1 random buff from target
+- **Warmaster Synergy:** ✅ Single-hit = 60% Warmaster proc chance
+- **Cooldown:** None (spammable)
+- **Books:** +25% debuff chance (50% → 75%)
+- **Notes:** Primary Warmaster damage source. Single-hit means consistent procs, not diluted like multi-hit.
+
+**A2 - Rock Blast (Single Target)**
+- **Multiplier:** 4.8x ATK
+- **Type:** Single-hit attack
+- **Effects:**
+  - Steals 2 random buffs from target (becomes "Remove" if can't steal)
+  - Reduces cooldown of A3 by 1 turn if target under HP Burn
+- **Warmaster Synergy:** ✅ Single-hit = 60% Warmaster proc chance
+- **Cooldown:** 4 turns (booked)
+- **Books:** -1 turn cooldown (5 → 4 turns)
+- **Notes:** Cooldown reduction synergizes with HP Burn (passive + A3). Forces faster A3 cycling.
+
+**A3 - Rock Crush (AOE)**
+- **Multiplier:** 3.9x ATK (AOE)
+- **Type:** Single-hit per target
+- **Effects:**
+  - Fully depletes target Turn Meter (100% TM reduction)
+  - Fills Geomancer's TM by amount target loses
+  - 75% chance HP Burn for 3 turns (100% when booked)
+  - 25% chance Weaken 25% for 3 turns
+- **Warmaster Synergy:** ✅ Single-hit per target = 60% proc per enemy
+- **Cooldown:** 3 turns (booked)
+- **Books:** +25% debuff chance (75% → 100% HP Burn), -2 turn cooldown (5 → 3 turns)
+- **UNM Impact:** 100% HP Burn uptime (3-turn debuff, 3-turn CD) = **7.5% boss MAX HP per turn**
+- **Notes:** CRITICAL for UNM damage. Booked HP Burn = guaranteed application.
+
+**Passive - Stoneguard (Unique Mechanic)**
+- **Type:** Damage reduction + reflection (does NOT trigger Warmaster/Giant Slayer)
+- **Effects:**
+  - All allies take 15% less damage
+  - Deflects that 15% damage onto enemies under Geomancer's HP Burn
+  - When Geomancer attacked: deflects 30% damage instead
+  - 30% chance per deflection: Deal bonus damage = 3% enemy MAX HP
+- **Damage Formula:** Reflected Damage + (30% chance × 3% enemy MAX HP)
+- **Warmaster Synergy:** ❌ Reflected damage does NOT trigger Warmaster (unique mechanic, not a "hit")
+- **UNM Impact:** Continuous damage even when stunned. Scales with boss damage (higher turns = more reflection).
+- **Notes:** Main damage source alongside HP Burn. Build tanky (high DEF/HP) to survive and maximize reflection turns.
+
+**Skill Priority for UNM:**
+1. **A3 (Rock Crush):** 100% HP Burn uptime = 7.5% MAX HP/turn, highest damage skill
+2. **A1 (Sandblast):** Warmaster proc spam, consistent damage
+3. **Passive (Stoneguard):** Always active, scales with boss damage and survivability
+4. **A2 (Rock Blast):** Cooldown reduction for faster A3, Warmaster procs
+
+**Total Damage Estimate (UNM):**
+- HP Burn (A3): 7.5% boss MAX HP/turn = **~15M per turn** (200M boss HP)
+- Passive Reflection: Variable (3-5M/turn estimate)
+- Warmaster (A1/A3): 10% boss MAX HP on proc (60% chance) = **~12M/turn** (2-3 procs/turn)
+- **Estimated Total:** 30-32M/turn × 50 turns = **~50M+ contribution** (assumes 100% C.RATE)
+
+**Why C.RATE is CRITICAL:**
+- Current 57% C.RATE = only 34% effective Warmaster proc rate (60% × 57% = 34.2%)
+- 100% C.RATE = 60% Warmaster proc rate (full potential)
+- **Damage Loss:** ~40-50% Warmaster damage missing = **-5 to -8M total damage**
+
+### **Skills (Booking Status)**
+
 -   ✅ **Fully Booked** (all cooldowns reduced)
 
 * * * * *
