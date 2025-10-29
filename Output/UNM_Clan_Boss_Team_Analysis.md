@@ -971,7 +971,98 @@ Based on screenshot analysis:
 - **Exuzar's Totem** (Wearer's RES increases by 5 whenever a debuff is placed on them)
 - **Analysis**: Helps offset very low base RES (61). On UNM CB with constant debuffs, RES could stack to 100+ during fight.
 
-**Skills**
+### **Skills & Multipliers**
+
+**A1 - Lifebane (Multi-Hit, 2x Random Targets)**
+- **Multiplier:** 1.9x ATK per hit (2 hits = 3.8x ATK total)
+- **Type:** Multi-hit (2 random targets, can hit same target twice)
+- **Effects:**
+  - Each hit has 50% chance to place Poison 5% for 2 turns
+- **Flawless Execution Synergy:** ⚠️ Multi-hit = lower C.DMG effectiveness (current mastery choice suboptimal for CB)
+- **Giant Slayer Synergy:** ✅ Multi-hit = 30% GS proc per hit = ~51% total proc chance (better than Warmaster for multi-hit)
+- **Cooldown:** None (spammable)
+- **Books:** +15% damage total
+- **UNM Impact:** Poison damage (if lands) = 5% boss MAX HP/turn × 2 poisons = **10M/turn** (if 2 poisons active)
+- **Notes:** User notes "Poison teams NOT well-built" - Mithrala poison contribution likely minimal. Giant Slayer damage more reliable if masteries corrected.
+
+**A2 - Dread Draught (AOE)**
+- **Multiplier:** 4.0x ATK (AOE)
+- **Type:** Single-hit per target
+- **Effects:**
+  - Places Hex debuff on all enemies
+  - Places Increase DEF 60% on all allies for 2 turns
+  - Places Increase ATK 50% on all allies for 2 turns
+- **Flawless Execution Synergy:** ✅ Single-hit per target = full C.DMG benefit (if crits)
+- **Cooldown:** 3 turns (booked)
+- **Books:** -2 turn cooldown (5 → 3 turns)
+- **UNM Impact:**
+  - Increase ATK 50%: ~1.5x damage multiplier for team (stacks with Brogni A3 Increase ATK if overlapping)
+  - Increase DEF 60%: Massive survivability boost (reduces effective damage taken)
+  - Hex: Triggers Mithrala passive (Petrification on attacker if Mithrala/allies attacked by hexed enemy)
+  - **3-turn CD + 2-turn duration = 100% uptime** when speed-tuned correctly
+- **Notes:** Buff overlap with Brogni A3 possible (both Increase ATK). Coordinate timing or accept redundancy.
+
+**A3 - Brimming Cylix (Team Cleanse + Shield, CORE ABILITY)**
+- **Multiplier:** None (pure buff/cleanse skill)
+- **Type:** Team buff + cleanse
+- **Effects:**
+  - Removes all debuffs from all allies (full cleanse)
+  - Places Strengthen 25% on all allies for 2 turns (damage reduction)
+  - Places Shield on all allies for 2 turns = 30% of Mithrala's MAX HP per ally
+- **Cooldown:** 3 turns (booked)
+- **Books:** -2 turn cooldown (5 → 3 turns)
+- **UNM Impact:** **CRITICAL FOR SURVIVABILITY**
+  - Full cleanse: Removes boss stun, Decrease DEF, Decrease ATK (backup to Brogni A2, redundancy is safety)
+  - Strengthen 25%: Reduces damage taken by 25% (stacks multiplicatively with Decrease ATK, Increase DEF)
+  - Shield: 30% × 46,789 HP = **~14k shield per ally** (absorbs 1 boss hit)
+  - **3-turn CD + 2-turn duration = 100% uptime** when speed-tuned correctly
+- **Shield Scaling:** Current HP low (46,789) = weak shields. Target 55k+ HP for stronger shields (~16.5k).
+- **Notes:** Cleanse overlap with Brogni A2 provides redundancy (safety if one champion stunned/killed).
+
+**Passive - Gaze of Stone (Petrification + RES = ACC)**
+- **Type:** Counter-debuff + unique stat conversion
+- **Effects:**
+  - When Mithrala attacked by hexed enemy: 50% chance Petrification 1 turn on attacker
+  - When ally attacked by hexed enemy: 30% chance Petrification 1 turn on attacker
+  - **Unique:** Mithrala's RES increased by her ACC value (RES = base RES + ACC)
+- **UNM Impact:** **MINIMAL** (boss immune to Petrification-like effects)
+  - RES = ACC conversion: 526 ACC + 61 base RES = **587 total RES** (massive, but wasted vs CB - boss uses non-resistable stun)
+  - Petrification: Does NOT work vs Clan Boss (boss mechanics immune)
+- **Notes:** Passive designed for Arena/Doom Tower (high RES tank + Petrification control). Zero UNM value. **Arena bleed into CB build** (526 ACC overkill, RES wasted stat).
+
+**Aura - Increase Ally ACC +80 (ALL BATTLES, CRITICAL)**
+- **Type:** Team aura (always active)
+- **Effects:** All allies gain +80 ACC
+- **UNM Impact:** **MASSIVE TEAM FORCE MULTIPLIER**
+  - Stag Knight: 310 + 80 = 390 ACC (98%+ debuff land rate, overkill but safe)
+  - Brogni: 145 + 80 = 225 ACC (85-90% HP Burn land rate, marginal but acceptable)
+  - Geomancer: ??? + 80 = ??? (gear details needed, likely pushes above 250 safe threshold)
+  - Godseeker Aniri: 168 + 80 = 248 ACC (barely below 250 safe, 90% land rate if using debuffs)
+- **Value:** +80 ACC lead is TOP-TIER for CB. Allows champions to use HP%/DEF% chest instead of ACC chest (more survivability).
+- **Notes:** **REASON Mithrala is on team** despite Arena build bleed. Aura alone justifies slot.
+
+**Skill Priority for UNM:**
+1. **Aura (+80 ACC):** Always active, team force multiplier
+2. **A3 (Brimming Cylix):** Full cleanse + Strengthen + Shields = survivability core
+3. **A2 (Dread Draught):** Increase ATK/DEF = damage + survivability, 100% uptime
+4. **A1 (Lifebane):** Poison (weak, user notes) + Giant Slayer procs (if masteries corrected)
+5. **Passive:** Zero UNM value (Petrification immune, RES wasted vs non-resistable stun)
+
+**Why Mithrala is on Team Despite Arena Build:**
+- ✅ **+80 ACC Aura:** Allows team to hit 250+ ACC without ACC chest (more HP%/DEF% for survivability)
+- ✅ **Full Cleanse A3:** Backup stun removal (safety redundancy with Brogni A2)
+- ✅ **Increase ATK/DEF A2:** Team damage + survivability buffs
+- ⚠️ **Arena Build Bleed:** 526 ACC overkill (+276 wasted), 245 SPD breaks speed tune, 587 RES wasted, Flawless Execution T6 suboptimal
+- **Verdict:** Keep if swapping breaks Arena team. Consider Rector Drath swap (similar cleanse/support, CB-optimized build).
+
+**Why Speed Tune is BROKEN (245 SPD):**
+- Current: 245 SPD = ~44% faster than 1:1 tune target (171 SPD)
+- Impact: Mithrala takes extra turns → buffs expire early → team desync → damage/survivability drops
+- **Fix:** Remove 2x Feral (-30 SPD) + SPD boots → DEF%/HP% boots (-45 SPD) = 170 SPD, add SPD substats to 180-190 target
+- **Conflict:** Arena team likely needs 245 SPD (speed race). Regearing for CB breaks Arena.
+- **Solution:** Rector Drath swap (dedicated CB build, preserves Arena team with Mithrala).
+
+### **Skills (Booking Status)**
 ----------
 - **Fully booked** ✅ (assumed based on established multi-use champion, confirm if needed)
 
