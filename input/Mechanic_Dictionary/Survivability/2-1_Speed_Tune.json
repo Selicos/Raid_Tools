@@ -1,0 +1,113 @@
+{
+  "mechanic_name": "2:1 Speed Tune (CB)",
+  "mechanic_type": "advanced_speed_synchronization",
+  "description": "2:1 speed tune allows champions to take 2 turns for every 1 CB turn. This DOUBLES damage potential (2× turns = 2× damage) and increases buff/debuff uptime significantly. HOWEVER, requires EXTREME speed (250-280+ SPD) and precise speed tuning (exact SPD thresholds, no flexibility). VERY DIFFICULT to build for most rosters.",
+  
+  "speed_range": {
+    "minimum": 250,
+    "maximum": 280,
+    "explanation": "CB SPD is 170. For 2:1 ratio, champion SPD must be EXACTLY 2× CB SPD (340+ SPD ideal), BUT practical range is 250-280 SPD due to game mechanics (turn meter fills in increments, not continuous). Champions at 250-280 SPD can maintain 2:1 ratio with careful tuning.",
+    "formula": "CB SPD 170 × 2 = 340 SPD (ideal). Practical minimum: 250 SPD (with specific gear + speed lead + speed aura). Above 280 SPD requires EXTREME gear (near-perfect SPD rolls on all pieces).",
+    "exact_tuning_required": "Unlike 1:1 tune (171-189 SPD = 18 SPD flexibility), 2:1 tune requires EXACT SPD values (e.g., 267 SPD, 273 SPD). Off by 5 SPD = tune breaks, champions take 1 turn per CB turn instead of 2."
+  },
+
+  "why_difficult": {
+    "gear_requirements": [
+      {
+        "requirement": "SPD boots (REQUIRED)",
+        "value": "+40 SPD base (can roll up to +52 SPD with max rolls)"
+      },
+      {
+        "requirement": "SPD set (REQUIRED, 2 sets minimum)",
+        "value": "+24% SPD (2 SPD sets × 12% each). Champion with 100 base SPD → 124 SPD with 2 SPD sets."
+      },
+      {
+        "requirement": "SPD substats on ALL gear pieces",
+        "value": "+10-20 SPD per piece (gloves, chest, ring, amulet, banner). Total +50-100 SPD from substats (requires EXTREME luck or farming)."
+      },
+      {
+        "requirement": "SPD lead (REQUIRED)",
+        "value": "+19-30% SPD aura (Arbiter 30% SPD aura, Seeker 30% SPD aura, High Khatun 19% SPD aura). Champion with 124 SPD + 30% aura → 161 SPD."
+      },
+      {
+        "requirement": "SPD buff (OPTIONAL, helps reach threshold)",
+        "value": "+30% SPD buff (Apothecary A3, Seeker A2). Champion with 161 SPD + 30% buff → 209 SPD. Still 41 SPD short of 250 minimum (requires more substats)."
+      }
+    ],
+    "total_calculation": "Champion with 100 base SPD: +52 SPD (boots) + 24 SPD (2 SPD sets) + 100 SPD (substats) + 30% aura (52 SPD) + 30% buff (67 SPD) = 295 SPD. Achievable BUT requires near-perfect gear + speed lead + speed buff.",
+    "current_roster_limitations": "Most current champions have 95-105 base SPD. To reach 250 SPD minimum: SPD boots +40, 2 SPD sets +24, substats +60, 30% aura +48 = 267 SPD. Requires +60 SPD from substats (VERY HIGH, 6 pieces × +10 SPD average). Current best SPD gearing: Stag Knight 189 SPD (61 SPD short of 250 minimum)."
+  },
+
+  "advantages_disadvantages": {
+    "advantages": [
+      "DOUBLE damage potential: 2× turns per CB turn = 2× damage output. Typical 2:1 team: 65-80M damage per key (vs 44M for 1:1 tune).",
+      "HIGHER buff/debuff uptime: Buffs/debuffs applied 2× as often = higher uptime. Decrease DEF/ATK can be maintained 100% uptime (vs 75% for 1:1 tune with Godseeker Aniri extension).",
+      "FASTER cooldown cycling: 2× turns = cooldowns ready 2× faster. 4-turn CD skill ready every 2 CB turns instead of 4 CB turns.",
+      "POTENTIAL for unkillable synergy: Some 2:1 tunes use unkillable buff (Warcaster, Maneater) to prevent CB damage entirely. Unkillable + 2:1 tune = VERY HIGH damage (80M+ per key) with ZERO risk."
+    ],
+    "disadvantages": [
+      "EXTREME gear requirements: SPD 250-280+ requires near-perfect gear (SPD boots + 2 SPD sets + high SPD substats + speed lead). Most rosters cannot achieve this.",
+      "EXACT tuning required: Off by 5 SPD = tune breaks. 1:1 tune has 18 SPD flexibility (171-189), 2:1 tune has 0 SPD flexibility (must hit exact thresholds).",
+      "AFFINITY-DEPENDENT: Force affinity CB reduces Magic champion turn meter by 15% = breaks 2:1 tune. Spirit affinity CB reduces Force champion turn meter by 15% = breaks 2:1 tune. Must build separate teams for each affinity (3 teams total, VERY expensive).",
+      "REQUIRES specific champions: Most 2:1 tunes use Arbiter (30% SPD aura) or Seeker (30% SPD aura + 30% SPD buff). Without these champions, 2:1 tune nearly impossible.",
+      "LOWER survivability: Using SPD boots + 2 SPD sets + SPD substats = ZERO DEF/HP substats. Champions have low EHP (150k-200k EHP vs 300k+ for 1:1 tune). Requires unkillable buff or perfect Decrease ATK uptime to survive."
+    ]
+  },
+
+  "why_not_recommended_current_roster": {
+    "missing_champions": [
+      "Arbiter: 30% SPD aura + revive + turn meter boost (CRITICAL for 2:1 tune). User does NOT have Arbiter (arena progression not yet complete).",
+      "Seeker: 30% SPD aura + 30% SPD buff + turn meter boost (alternative to Arbiter). User does NOT have Seeker.",
+      "Maneater: Unkillable buff for 2:1 unkillable tune. User does NOT have Maneater.",
+      "Warcaster: Unkillable buff for 2:1 unkillable tune. User does NOT have Warcaster."
+    ],
+    "gear_limitations": "Current best SPD champion: Stag Knight 189 SPD. To reach 250 SPD minimum: +61 SPD required. Even with perfect SPD rolls on all gear pieces (+10 SPD per piece × 6 pieces = +60 SPD), still 1 SPD short. Would need +11 SPD average per piece (requires EXTREME luck).",
+    "affinity_issues": "User current CB team: Geomancer (Magic), Brogni (Magic), Mithrala (Magic), Godseeker Aniri (Void), Stag Knight (Magic). 4/5 champions are Magic affinity. Force affinity CB would break 2:1 tune for 4 champions (turn meter reduction). Would need to build separate team for Force CB (VERY expensive).",
+    "priority_conflict": "User priority: Increase CB damage from 44M → 65-75M. 2:1 tune CAN achieve this (80M+ possible) BUT requires 3-6 months of gear farming + pulling Arbiter/Seeker + building affinity-specific teams. BETTER short-term strategy: Fix current 1:1 tune issues (C.RATE to 70-100%, optimize stat priorities ACC > DEF > HP) = 60-65M achievable in 1-2 weeks."
+  },
+
+  "when_2_1_tune_makes_sense": {
+    "scenario_1": "User has Arbiter or Seeker (30% SPD aura) + EXTREME gear (near-perfect SPD rolls on all pieces)",
+    "scenario_2": "User has unkillable champions (Maneater, Warcaster) + can build 2:1 unkillable tune (80M+ damage, ZERO risk)",
+    "scenario_3": "User has completed 1:1 tune optimization (65-75M damage) and wants to push for 80M+ (2:1 tune is ONLY way to achieve this)",
+    "scenario_4": "User willing to farm gear for 3-6 months + build 3 affinity-specific teams (Force, Spirit, Magic CB) for 2:1 tune"
+  },
+
+  "recommendation_for_current_roster": {
+    "short_term": "STICK with 1:1 tune (171-189 SPD). Current team already has correct speed tune (Stag Knight 189, Brogni 185, Mithrala 180, Godseeker Aniri 175, Geomancer 171). Focus on OTHER optimizations: C.RATE 70-100% for all DPS champions, ACC 350-390 for all debuff appliers, DEF 3000-4000 for all champions (EHP optimization). These changes can increase damage from 44M → 60-65M (50% increase) in 1-2 weeks.",
+    "medium_term": "Farm gear for better SPD substats. If eventually pull Arbiter/Seeker + have near-perfect SPD gear, THEN consider 2:1 tune. Until then, 1:1 tune is BETTER (easier to build, affinity-independent, works for current roster).",
+    "long_term": "If aiming for 80M+ damage per key, 2:1 tune is ONLY way to achieve this. Requires: Arbiter/Seeker (30% SPD aura), near-perfect SPD gear (250-280 SPD on all champions), affinity-specific teams (3 teams total), unkillable champions (optional, but helps survivability). Time investment: 3-6 months gear farming + champion pulling + team building."
+  },
+
+  "common_mistakes": [
+    {
+      "mistake": "Attempting 2:1 tune without Arbiter/Seeker",
+      "explanation": "Without 30% SPD aura, champion with 100 base SPD + SPD boots (+40) + 2 SPD sets (+24) + SPD substats (+60) = 224 SPD. Still 26 SPD short of 250 minimum. High Khatun 19% SPD aura only gives +43 SPD (267 SPD total) = BARELY meets minimum, NO flexibility for affinity turn meter reduction.",
+      "solution": "DO NOT attempt 2:1 tune without Arbiter/Seeker. Focus on 1:1 tune optimization instead (much higher return on investment)."
+    },
+    {
+      "mistake": "Using 2:1 tune for single affinity only",
+      "explanation": "Build 2:1 tune for Magic champions only (works for Force and Spirit CB, breaks for Magic CB). Magic CB appears 1/3 of days = 2:1 tune only works 2/3 of days. On Magic CB days, tune breaks, team damage drops from 80M → 20M (worse than 1:1 tune 44M).",
+      "solution": "If building 2:1 tune, MUST build 3 affinity-specific teams (Force, Spirit, Magic champions). Each team works for 2/3 affinity CBs. Total investment: 15 champions (3 teams × 5 champions) with near-perfect SPD gear."
+    },
+    {
+      "mistake": "Sacrificing survivability for SPD",
+      "explanation": "Champion with SPD 260 (meets 2:1 requirement) BUT DEF 1500, HP 30k (EHP: 30k × 2.5 = 75k). CB turn 50 AOE hits for 37,500 damage = champion dies instantly (EHP too low). Team wipes turn 50.",
+      "solution": "2:1 tune requires unkillable buff OR perfect Decrease ATK uptime to survive. Without unkillable, champions need EHP 200k+ (DEF 3000+, HP 50k+) = impossible with SPD-focused gear. Use unkillable champions (Maneater, Warcaster) for 2:1 tune."
+    },
+    {
+      "mistake": "Not validating 2:1 tune for all affinities",
+      "explanation": "Build 2:1 tune with Magic champions, validate vs Force CB (works perfectly, 80M damage). Switch to Magic CB = turn meter reduced 15% for all Magic champions = tune breaks, champions take 1 turn per CB turn, damage drops to 30M.",
+      "solution": "Validate 2:1 tune for ALL 3 CB affinities (Force, Spirit, Magic). Build separate teams if needed (Force champions for Magic CB, Spirit champions for Force CB, Magic champions for Spirit CB)."
+    }
+  ],
+
+  "validation_sources": [
+    "Deadwood Jedi speed tune calculator (2:1 tune exact SPD thresholds)",
+    "HellHades (2:1 tune guides, unkillable synergy)",
+    "Community guides (2:1 tune gear requirements, affinity-specific teams)",
+    "In-game testing (affinity turn meter reduction, 2:1 tune validation)"
+  ],
+
+  "notes": "2:1 speed tune is ADVANCED strategy for ENDGAME rosters. Requires SPD 250-280+ (near-perfect gear), Arbiter/Seeker (30% SPD aura), affinity-specific teams (3 teams total), unkillable champions (optional, helps survivability). Damage potential: 65-80M per key (vs 44M for 1:1 tune). HOWEVER, current roster NOT READY for 2:1 tune (missing Arbiter/Seeker, SPD gear not sufficient, only 1 team built). RECOMMENDATION: Optimize 1:1 tune first (fix C.RATE, ACC, DEF/HP) = 60-65M achievable in 1-2 weeks. THEN consider 2:1 tune if pull Arbiter/Seeker + farm near-perfect SPD gear (3-6 months investment). 2:1 tune is ONLY way to reach 80M+ damage, but 1:1 tune is BETTER for most rosters (easier to build, affinity-independent, works with current champions)."
+}
