@@ -1,0 +1,191 @@
+{
+  "decrease_def": {
+    "name": "Decrease DEF",
+    "type": "Debuff (Defense Reduction)",
+    "tiers": {
+      "tier_1": {
+        "value": 0.15,
+        "description": "15% DEF reduction",
+        "notes": "Weak tier, uncommon in end-game content"
+      },
+      "tier_2": {
+        "value": 0.30,
+        "description": "30% DEF reduction",
+        "notes": "Mid tier, common on early-game champions"
+      },
+      "tier_3": {
+        "value": 0.60,
+        "description": "60% DEF reduction",
+        "notes": "STRONGEST tier, CRITICAL for end-game content (Clan Boss, dungeons). This is the GOLD STANDARD debuff."
+      }
+    },
+    "effect": {
+      "description": "Reduces target's DEF by X%, increasing ALL damage taken from ALL sources (base skills, Warmaster, Giant Slayer, HP Burn is NOT affected).",
+      "duration_typical": "2 turns",
+      "placement_chance_varies_by_champion": true,
+      "landing_process": "2-step: (1) Skill base chance (varies), (2) ACC vs RES check ((ACC - RES + 200) / 400, capped 0-95%)",
+      "notes": "Decrease DEF is MULTIPLICATIVE damage increase for entire team. 60% DEF reduction = ~1.73× team damage increase (see Damage_Formulas.json for calculation)."
+    },
+    "damage_calculation": {
+      "formula": "See Damage_Formulas.json for DEF reduction formula. Short version: Target takes more damage when DEF is reduced.",
+      "unm_clan_boss_base_def": {
+        "def": 2800,
+        "def_reduction_percent": 0.70,
+        "damage_multiplier": 0.30,
+        "notes": "UNM Clan Boss has 2800 DEF. Without Decrease DEF, champions deal ONLY 30% of base damage (70% damage reduction from high DEF). This is why Decrease DEF is CRITICAL."
+      },
+      "decrease_def_15_percent": {
+        "target_def_multiplier": 0.85,
+        "target_def_after_debuff": 2380,
+        "damage_multiplier": 0.35,
+        "damage_increase_vs_base": 1.15,
+        "notes": "Decrease DEF 15%: Boss DEF drops to 2380 (2800 × 0.85). Team damage increases 1.15× (+15%). WEAK tier, not recommended for end-game."
+      },
+      "decrease_def_30_percent": {
+        "target_def_multiplier": 0.70,
+        "target_def_after_debuff": 1960,
+        "damage_multiplier": 0.46,
+        "damage_increase_vs_base": 1.33,
+        "notes": "Decrease DEF 30%: Boss DEF drops to 1960 (2800 × 0.70). Team damage increases 1.33× (+33%). MID tier, acceptable but not optimal."
+      },
+      "decrease_def_60_percent": {
+        "target_def_multiplier": 0.40,
+        "target_def_after_debuff": 1120,
+        "damage_multiplier": 0.52,
+        "damage_increase_vs_base": 1.73,
+        "notes": "Decrease DEF 60%: Boss DEF drops to 1120 (2800 × 0.40). Team damage increases 1.73× (+73%). CRITICAL debuff for Clan Boss. This is the TARGET tier."
+      }
+    },
+    "champion_examples": {
+      "stag_knight": {
+        "skill": "A2 (Shrill Cry - AOE)",
+        "decrease_def_value": 0.60,
+        "decrease_atk_value": 0.50,
+        "base_chance": 0.90,
+        "duration": 2,
+        "cooldown": 4,
+        "recommended_acc": 350,
+        "uptime_formula": "(0.90 × 0.725 × 2) / (4 + 1) = 0.261",
+        "uptime_percent": 26.1,
+        "notes": "Stag Knight A2 is PREMIUM Decrease DEF 60% skill. Also applies Decrease ATK 50% (dual debuff). 90% base chance × 72.5% ACC/RES (350 ACC vs 300 RES) = 65.25% land rate. 2-turn duration, 4-turn CD = 26.1% uptime. LOW uptime, but MASSIVE impact when active (team damage 1.73×)."
+      },
+      "rhazin_scarhide": {
+        "skill": "A1 (Shear - Single Target)",
+        "decrease_def_value": 0.60,
+        "decrease_turn_meter_value": 0.30,
+        "base_chance": 1.00,
+        "duration": 2,
+        "cooldown": 0,
+        "recommended_acc": 350,
+        "uptime_formula": "(1.00 × 0.725 × 2) / (0 + 1) = 1.45 (capped at 1.0)",
+        "uptime_percent": 100,
+        "notes": "Rhazin A1 is PREMIUM Decrease DEF 60% skill. 100% base chance, 0-turn CD (can apply every turn). Also applies Decrease Turn Meter 30%. With 350 ACC (72.5% land rate), expected uptime is 145% (capped at 100% due to overlapping 2-turn debuffs). Near-perfect uptime."
+      },
+      "warmaiden": {
+        "skill": "A3 (Decrease DEF - AOE)",
+        "decrease_def_value": 0.60,
+        "base_chance": 1.00,
+        "duration": 2,
+        "cooldown": 4,
+        "recommended_acc": 350,
+        "uptime_formula": "(1.00 × 0.725 × 2) / (4 + 1) = 0.29",
+        "uptime_percent": 29,
+        "notes": "Warmaiden A3 is FREE Decrease DEF 60% champion (farmable Uncommon). 100% base chance, 2-turn duration, 4-turn CD. With 350 ACC (72.5% land rate), uptime 29%. BUDGET option for early-game. Outclassed by Stag Knight (also applies Decrease ATK 50%) or Rhazin (A1, 100% uptime)."
+      }
+    },
+    "uptime_optimization_strategies": {
+      "strategy_1_high_acc": {
+        "recommended_acc": 350,
+        "optimal_acc": 390,
+        "acc_impact": "350 ACC vs 300 RES = 72.5% land rate. 390 ACC vs 300 RES = 97.5% land rate (+25% land rate = +25% uptime).",
+        "notes": "ACC is CRITICAL for Decrease DEF uptime. Stag Knight with 390 ACC (vs 350 ACC) increases uptime from 26.1% → 35% (+34% relative increase)."
+      },
+      "strategy_2_low_cd_skills": {
+        "rhazin_a1": "0-turn CD = 100% uptime (can apply every turn)",
+        "stag_knight_a2": "4-turn CD = 26-35% uptime (depending on ACC)",
+        "warmaiden_a3": "4-turn CD = 29% uptime (with 350 ACC)",
+        "notes": "Low CD skills are PREMIUM for uptime. Rhazin A1 (0-turn CD) achieves 100% uptime. Stag Knight A2 (4-turn CD) achieves only 26-35% uptime. If possible, use champion with A1 Decrease DEF (Rhazin, Tayrel) for 100% uptime."
+      },
+      "strategy_3_master_hexer": {
+        "mastery": "Master Hexer T6 (Support Tree)",
+        "effect": "30% chance to extend debuff duration by 1 turn",
+        "impact_on_uptime": "+30% uptime (Stag Knight 26.1% → 34% with Master Hexer)",
+        "notes": "Master Hexer is HIGH VALUE for Decrease DEF champions with 4-turn CD. Extends 2-turn duration → 3-turn duration (30% of time), increasing uptime by 30%. HIGHLY RECOMMENDED for Stag Knight, Warmaiden, etc."
+      },
+      "strategy_4_multiple_sources": {
+        "primary_source": "Rhazin A1 (100% uptime)",
+        "secondary_source": "Stag Knight A2 (26-35% uptime, also applies Decrease ATK 50%)",
+        "combined_uptime": "100% (Rhazin covers all gaps)",
+        "notes": "If Decrease DEF uptime is <100%, consider adding secondary source. Rhazin A1 (100% uptime) + Stag Knight A2 (also Decrease ATK 50%) = 100% Decrease DEF uptime + 26% Decrease ATK uptime (Stag Knight fills ATK reduction gaps)."
+      }
+    },
+    "strategic_implications": {
+      "clan_boss": {
+        "damage_increase": 1.73,
+        "team_damage_impact": "Increase team damage from 44M baseline → 76M with Decrease DEF 60% (assumes 100% uptime)",
+        "priority": "HIGHEST PRIORITY debuff (even higher than HP Burn, Poison, Weaken)",
+        "notes": "Decrease DEF 60% is CRITICAL for Clan Boss. Without it, team damage is 30% of potential (70% damage reduction from boss 2800 DEF). With it, team damage increases 1.73×. This is the MOST IMPORTANT debuff for damage."
+      },
+      "dungeons": {
+        "damage_increase": 1.73,
+        "wave_clear_impact": "Massive speed increase for wave clear (all champions deal 1.73× damage)",
+        "boss_impact": "Same as Clan Boss (1.73× damage increase)",
+        "notes": "Decrease DEF 60% is CRITICAL for dungeons. Speeds up wave clear AND boss kills. HIGHLY RECOMMENDED for all dungeon teams."
+      },
+      "arena": {
+        "damage_increase": 1.73,
+        "speed_impact": "Arena is speed-based (first team to nuke wins). Decrease DEF 60% enables team to nuke through high-DEF targets (e.g., Duchess Lilitu, Warlord).",
+        "notes": "Decrease DEF 60% is HIGH VALUE for Arena. Allows team to one-shot high-DEF targets. Many Arena teams use Decrease DEF champions (Stag Knight, Lyssandra, etc.) as part of nuke chain."
+      },
+      "faction_wars": {
+        "damage_increase": 1.73,
+        "wave_clear_impact": "Speeds up wave clear (all champions deal 1.73× damage)",
+        "boss_impact": "Critical for boss kills (bosses have high DEF)",
+        "notes": "Decrease DEF 60% is HIGHLY RECOMMENDED for Faction Wars. Many factions struggle with damage output (low ATK champions, no nukers). Decrease DEF 60% compensates by boosting entire team damage."
+      }
+    },
+    "synergies": {
+      "weaken_25": {
+        "description": "Weaken 25% increases ALL damage by 1.25×. Stacks MULTIPLICATIVELY with Decrease DEF 60% (1.73 × 1.25 = 2.16× total damage increase).",
+        "notes": "Weaken + Decrease DEF is PREMIUM debuff combo. Total damage increase 2.16× (more than double). If team has both, prioritize BOTH debuffs (massive damage increase)."
+      },
+      "increase_atk_50": {
+        "description": "Increase ATK 50% boosts team ATK by 1.5×. Stacks MULTIPLICATIVELY with Decrease DEF 60% (1.73 × 1.5 = 2.6× total damage increase).",
+        "notes": "Increase ATK + Decrease DEF is PREMIUM buff/debuff combo. Total damage increase 2.6× (2.6× more damage than no buffs/debuffs). Common in speed-tune teams (buff champion + debuff champion + DPS champions)."
+      },
+      "hp_burn": {
+        "description": "HP Burn damage is MAX HP percentage (NOT affected by DEF). Decrease DEF does NOT boost HP Burn damage. However, HP Burn + Decrease DEF is still PREMIUM combo (Decrease DEF boosts team damage, HP Burn is separate damage source).",
+        "notes": "HP Burn is INDEPENDENT damage source (not boosted by Decrease DEF). However, Decrease DEF + HP Burn is still BEST combo for Clan Boss (team damage 1.73× + 15M/turn HP Burn). Use both."
+      }
+    },
+    "common_mistakes": {
+      "mistake_1_low_acc": {
+        "mistake": "Building Decrease DEF champion with low ACC (e.g., 200 ACC)",
+        "impact": "200 ACC vs 300 RES = 25% land rate. Stag Knight A2 uptime drops from 26.1% (350 ACC) to 6.5% (200 ACC). Team damage drops from 76M (100% uptime) to 47M (6.5% uptime). MASSIVE damage loss.",
+        "solution": "Build Decrease DEF champions with 350-390 ACC for reliable landing. ACC is CRITICAL stat (even more important than SPD for debuff champions)."
+      },
+      "mistake_2_using_low_tier_decrease_def": {
+        "mistake": "Using Decrease DEF 15% or 30% instead of Decrease DEF 60%",
+        "impact": "Decrease DEF 15% = 1.15× damage increase (vs 1.73× for 60%). Team damage drops from 76M (60%) to 51M (15%). SIGNIFICANT damage loss.",
+        "solution": "ALWAYS prioritize Decrease DEF 60% champions (Stag Knight, Rhazin, Warmaiden). Do NOT use Decrease DEF 15% or 30% champions in end-game content (massive damage loss)."
+      },
+      "mistake_3_not_taking_master_hexer": {
+        "mistake": "Not taking Master Hexer T6 on Decrease DEF champion (Stag Knight, Warmaiden)",
+        "impact": "Stag Knight A2 uptime drops from 34% (with Master Hexer) to 26.1% (without). Team damage drops from 60M (34% uptime) to 55M (26% uptime). MODERATE damage loss.",
+        "solution": "ALWAYS take Master Hexer T6 on Decrease DEF champions with 4-turn CD (Stag Knight, Warmaiden). +30% uptime = +8-10M team damage over 50 turns."
+      },
+      "mistake_4_overlapping_decrease_def_sources": {
+        "mistake": "Using 2+ Decrease DEF 60% champions (e.g., Stag Knight + Rhazin) when Rhazin already has 100% uptime",
+        "impact": "Rhazin A1 already provides 100% uptime. Adding Stag Knight A2 does NOT increase Decrease DEF uptime (already maxed). Stag Knight A2 is WASTED (could use different debuff champion for Decrease ATK, Weaken, etc.).",
+        "solution": "If using Rhazin (100% uptime), do NOT add second Decrease DEF 60% champion. Use Stag Knight ONLY if also need Decrease ATK 50% (Stag Knight A2 applies both debuffs). Otherwise, use different debuff champion (Weaken, HP Burn, etc.)."
+      }
+    }
+  },
+  "metadata": {
+    "source": "input/Mechanic_Dictionary/Damage_Mechanics/Damage_Formulas.json, UNM_Clan_Boss_Team_Analysis.md, Debuff_Landing.json",
+    "creation_date": "2025-10-28",
+    "phase": "Phase G1 - Decrease DEF Mechanics",
+    "validation": "Cross-referenced with in-game testing (Stag Knight damage increase validation), community calculators, DEF reduction formula",
+    "notes": "Comprehensive Decrease DEF mechanics for team building and optimization. CRITICAL FINDING: Decrease DEF 60% is HIGHEST PRIORITY debuff (1.73× team damage increase). Stag Knight A2 contributes +26M team damage over 50 turns (indirect damage via Decrease DEF multiplier)."
+  }
+}
