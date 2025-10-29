@@ -1,35 +1,55 @@
 # UNM Clan Boss Team Analysis
 
-**Date**: 2025-10-27  
-**Status**: DRAFT - Analysis Complete, Awaiting Implementation  
-**Goal**: Optimize existing 5-champion UNM team from 44M → 50M+ damage with proper speed tune
+**Date**: 2025-10-28  
+**Status**: OPTIMIZATION IN PROGRESS - 44M Baseline Confirmed  
+**Goal**: Optimize existing 5-champion UNM team from 44M → 60-75M damage with proper speed tune
+
+---
+
+## ⚡ **QUICK START: DO THESE 3 FIXES FIRST**
+
+**Baseline**: 44M damage (confirmed 2025-10-28)  
+**Target**: 60M+ damage after Phase 1 (1-2 hours work)
+
+| Priority | Champion | Fix | Impact | Difficulty |
+|----------|----------|-----|--------|------------|
+| **1** | **Geomancer** | C.RATE gloves (57% → 100%) | **+5-8M** | ⭐ EASY (5 min) |
+| **2** | **Brogni** | C.RATE gloves (26% → 85%) | **+8-12M** | ⭐ EASY (5 min) |
+| **3** | **Godseeker Aniri** | Complete masteries (Support + Lasting Gifts T6) | **+3-5M + turns** | ⭐⭐ MEDIUM (30 min + scrolls) |
+
+**Total Quick Win Impact**: +16-25M damage = **44M → 60-69M** ✅ **(EXCEEDS 50M GOAL!)**
+
+**After these 3 fixes, TEST before continuing!** Run 3 battles, measure damage increase.
 
 ---
 
 ## Table of Contents
 
-1. [Project Goals](#project-goals)
-2. [Current Team Performance](#current-team-performance)
-3. [Primary Issues Identified](#primary-issues-identified)
-4. [UNM Clan Boss Mechanics Reference](#unm-clan-boss-mechanics-reference)
-5. [Analysis Workflow](#analysis-workflow)
-6. [Reference Documents](#reference-documents)
-7. [Champion Intake Progress](#champion-intake-progress)
-8. [Champion Documentation](#champion-documentation)
+1. [Quick Start: Do These 3 Fixes First](#-quick-start-do-these-3-fixes-first)
+2. [Quick Optimization Guide - 3 Steps Per Champion](#quick-optimization-guide---3-steps-per-champion)
+3. [Implementation Priority Order](#implementation-priority-order)
+4. [Project Goals](#project-goals)
+5. [Current Team Performance](#current-team-performance)
+6. [Primary Issues Identified](#primary-issues-identified)
+7. [UNM Clan Boss Mechanics Reference](#unm-clan-boss-mechanics-reference)
+8. [Analysis Workflow](#analysis-workflow)
+9. [Reference Documents](#reference-documents)
+10. [Champion Intake Progress](#champion-intake-progress)
+11. [Champion Documentation](#champion-documentation)
    - [Geomancer - HP Burn DPS Specialist](#geomancer---hp-burn-dps-specialist)
    - [Stag Knight - Decrease DEF/ATK Specialist](#stag-knight---decrease-defattk-specialist)
    - [Brogni - Shield/Cleanse/HP Burn Specialist](#brogni-underpriest-brogni---shieldcleansehp-burn-specialist)
    - [Mithrala - Cleanse/Buff/Lead Specialist](#mithrala---cleansebufflead-specialist)
    - [Godseeker Aniri - Heal/Revive/Buff Extend Specialist](#godseeker-aniri---healrevivebuff-extend-specialist)
-9. [Speed Tune Analysis - 1:1 Tune Implementation](#speed-tune-analysis---11-tune-implementation)
-10. [Stat Gaps Analysis - UNM Requirements vs Current Team](#stat-gaps-analysis---unm-requirements-vs-current-team)
-11. [Ranked Recommendations (Priority 1-10)](#ranked-recommendations-priority-1-10)
-12. [Alternates Analysis - Owned Champion Swaps](#alternates-analysis---owned-champion-swaps)
-13. [Gear Audit Workflow - Speed Boot Optimization](#gear-audit-workflow---speed-boot-optimization)
-14. [Validation & Documentation Standards](#validation--documentation-standards)
-15. [Update Notes & Version History](#update-notes--version-history)
-16. [Cross-References & Related Files](#cross-references--related-files)
-17. [Glossary & Abbreviations](#glossary--abbreviations)
+12. [Speed Tune Analysis - 1:1 Tune Implementation](#speed-tune-analysis---11-tune-implementation)
+13. [Stat Gaps Analysis - UNM Requirements vs Current Team](#stat-gaps-analysis---unm-requirements-vs-current-team)
+14. [Ranked Recommendations (Priority 1-10)](#ranked-recommendations-priority-1-10)
+15. [Alternates Analysis - Owned Champion Swaps](#alternates-analysis---owned-champion-swaps)
+16. [Gear Audit Workflow - Speed Boot Optimization](#gear-audit-workflow---speed-boot-optimization)
+17. [Validation & Documentation Standards](#validation--documentation-standards)
+18. [Update Notes & Version History](#update-notes--version-history)
+19. [Cross-References & Related Files](#cross-references--related-files)
+20. [Glossary & Abbreviations](#glossary--abbreviations)
 16. [Glossary & Abbreviations](#glossary--abbreviations)
 
 ---
@@ -45,13 +65,196 @@
 ---
 
 ## Current Team Performance
- - to be updated after test run with current stats, Geomancer lead (HP aura)
+ - **VALIDATED 2025-10-28**: 44M damage confirmed in test run with current stats
 
 - **Team**: Underpriest Brogni, Mithrala, Geomancer, Stag Knight, Godseeker Aniri
-- **Damage**: 44M average (UNM Force affinity)
+- **Damage**: 44M average (UNM Force affinity) ✅ **BASELINE CONFIRMED**
 - **Survival**: 30-45 turns (inconsistent)
 - **Lead**: Mithrala (+80 ACC aura), or Geomancer (+25% HP)
 - **Archetype**: Traditional tanky, brute force (NO speed tune). Using favorites, not synergy/meta
+
+---
+
+## **QUICK OPTIMIZATION GUIDE - 3 Steps Per Champion**
+
+**Baseline Confirmed**: 44M damage (2025-10-28 test)  
+**Target**: 60-75M damage (+16-31M gain)  
+**Implementation**: Follow 3-step fixes below in priority order
+
+---
+
+### **🎯 GEOMANCER - HP Burn DPS** (Current: 57% C.RATE, 210 SPD)
+**Impact**: +5-8M damage from C.RATE fix alone
+
+**Step 1 - C.RATE FIX (URGENT)** ⚡ **+5-8M damage**
+- **Action**: Replace gloves with C.RATE% main stat gloves
+- **Result**: 57% → 100%+ C.RATE (with Deadly Precision +5%)
+- **Why**: Currently missing ~40% Warmaster procs = 5-8M damage loss per run
+- **Difficulty**: ⭐ EASY (single gear swap, 5 minutes)
+
+**Step 2 - SPEED TUNE FIX (URGENT)** 🎯 **Enables team speed tune**
+- **Action**: Remove 4x Feral set → Replace with Lifesteal or Savage sets
+- **Result**: 210 SPD → ~171-175 SPD (target 171 SPD for stun target role)
+- **Why**: Too fast for 1:1 tune, Feral set gives unwanted +12% SPD
+- **Difficulty**: ⭐⭐ MEDIUM (4-piece set swap, may need SPD substat adjustments)
+
+**Step 3 - OPTIMIZE C.DMG (MEDIUM PRIORITY)** 📈 **+2-3M damage**
+- **Action**: Upgrade C.DMG on gear substats or chest (current 139% → target 200%+)
+- **Result**: Higher Warmaster proc damage
+- **Why**: After C.RATE fix (100%), C.DMG becomes damage multiplier
+- **Difficulty**: ⭐⭐ MEDIUM (requires good gear with C.DMG substats)
+
+---
+
+### **🎯 BROGNI - Shield/HP Burn Specialist** (Current: 26% C.RATE, 225 SPD)
+**Impact**: +8-12M damage from C.RATE fix (Giant Slayer passive)
+
+**Step 1 - C.RATE FIX (URGENT)** ⚡ **+8-12M damage**
+- **Action**: Replace gloves with C.RATE% main stat gloves
+- **Result**: 26% → 80%+ C.RATE (with Deadly Precision +5% = 85%+)
+- **Why**: Giant Slayer passive only proccing 26% currently, should be 85%+ (massive damage gain)
+- **Difficulty**: ⭐ EASY (single gear swap, 5 minutes)
+
+**Step 2 - SPEED TUNE FIX (URGENT)** 🎯 **Enables shield timing**
+- **Action**: Replace SPD boots with DEF% boots
+- **Result**: 225 SPD → ~180-183 SPD (target 183 SPD mid-range)
+- **Why**: Too fast breaking shield timing, DEF% boots synergize with 5k DEF + shield scaling
+- **Difficulty**: ⭐ EASY (single boot swap, may already hit target)
+
+**Step 3 - ACC FIX (HIGH PRIORITY)** 🎲 **+2-4M damage**
+- **Action**: Add ACC via chest (ACC% main) OR banner (ACC) OR add 2x Perception sets
+- **Result**: 145 ACC → 250+ ACC (HP Burn lands consistently)
+- **Why**: HP Burn failing to land ~30-40% of time, reducing damage contribution
+- **Difficulty**: ⭐⭐ MEDIUM (chest/banner swap OR set addition, Gilded Dragonstone relic helps offset gap)
+
+---
+
+### **🎯 STAG KNIGHT - Decrease DEF/ATK** (Current: 63% C.RATE, 222 SPD)
+**Impact**: Speed tune alignment + moderate C.RATE improvement
+
+**Step 1 - SPEED TUNE FIX (URGENT)** 🎯 **Enables debuff timing**
+- **Action**: Replace SPD boots with DEF%/HP% boots
+- **Result**: 222 SPD → ~177-180 SPD (target 180 SPD)
+- **Why**: Too fast for 1:1 tune, breaking Decrease DEF/ATK rotation timing
+- **Difficulty**: ⭐ EASY (single boot swap, likely achieves target immediately)
+
+**Step 2 - CONFIRM GEAR SETS (LOW PRIORITY)** 🔍 **Clarity**
+- **Action**: Identify gear sets equipped (unclear from screenshot)
+- **Result**: Visibility into stat sources, optimize set bonuses if needed
+- **Why**: Can't optimize without knowing current sets (may have SPD set to remove)
+- **Difficulty**: ⭐ TRIVIAL (just check gear screen, no changes yet)
+
+**Step 3 - C.RATE OPTIMIZATION (OPTIONAL)** 📈 **+1-2M damage**
+- **Action**: Increase C.RATE via gloves or substats (current 63% → target 70%+)
+- **Result**: Better Warmaster proc consistency
+- **Why**: Support role (not primary DPS), lower priority than Geomancer/Brogni
+- **Difficulty**: ⭐⭐ MEDIUM (optional, only if not breaking other teams)
+
+**Note**: Stag Knight already excellent (310 ACC, 67k HP, 4.6k DEF) - speed tune is main fix needed
+
+---
+
+### **🎯 MITHRALA - Cleanse/Buff/Lead** (Current: 38% C.RATE, 245 SPD)
+**Impact**: ⚠️ **ARENA CONFLICT** - Defer until Option A/B decision
+
+**Step 1 - DECISION REQUIRED** ⚠️ **Arena vs CB priority**
+- **Action**: Choose Option A (optimize for CB, breaks Arena) OR Option B (keep for Arena, use Rector Drath instead)
+- **Result**: Determines if Mithrala regearing proceeds
+- **Why**: 245 SPD Arena build incompatible with 186 SPD CB target (-59 SPD gap)
+- **Difficulty**: N/A (user decision, not gear change)
+
+**Step 2 - IF OPTION A: SPEED TUNE FIX** 🎯 **Enables buff timing**
+- **Action**: Remove 2x Feral set + replace SPD boots with DEF% boots
+- **Result**: 245 SPD → ~187 SPD (close to 186 target)
+- **Why**: Too fast breaking cleanse/buff timing, Feral + boots causing +58 SPD excess
+- **Difficulty**: ⭐⭐⭐ HARD (breaks Arena team permanently)
+
+**Step 3 - IF OPTION A: ACC REDUCTION** 📉 **Stat efficiency**
+- **Action**: Remove 2x Perception sets → Replace with Lifesteal/Immortal
+- **Result**: 526 ACC → ~280-300 ACC (still overkill but better)
+- **Why**: +276 ACC wasted stats, Lifesteal/Immortal better for CB survivability
+- **Difficulty**: ⭐⭐ MEDIUM (combines with Step 2 regearing)
+
+**IF OPTION B**: No changes to Mithrala, build Rector Drath for CB instead (see Alternates section)
+
+---
+
+### **🎯 GODSEEKER ANIRI - Heal/Revive/Extend** (Current: 35% C.RATE, 264 SPD)
+**Impact**: +3-5M damage + 5-10 turns survival from masteries
+
+**Step 1 - COMPLETE MASTERIES (CRITICAL)** ⚡ **+3-5M + 5-10 turns**
+- **Action**: Add Support tree + Lasting Gifts T6 (extends buff duration +1 turn)
+- **Result**: Buff extension applies to Brogni shields, Stag debuffs, Mithrala buffs (massive team benefit)
+- **Why**: Missing T6 masteries = incomplete champion, Lasting Gifts synergizes with buff extend skill
+- **Difficulty**: ⭐⭐ MEDIUM (800 scrolls required, 30 minutes to assign)
+
+**Step 2 - SPEED TUNE FIX (HIGH PRIORITY)** 🎯 **Enables buff timing**
+- **Action**: Replace SPD boots with HP% boots + regear 2-3 pieces with lower SPD substats
+- **Result**: 264 SPD → ~189 SPD (target 189 SPD fastest in team)
+- **Why**: Worst speed blocker (-75 SPD gap), breaking buff extension timing
+- **Difficulty**: ⭐⭐⭐⭐ VERY HARD (boots + aggressive substat reduction via regearing)
+
+**Step 3 - VALIDATE ACC REQUIREMENT (CONDITIONAL)** 🔍 **Clarity**
+- **Action**: Check if Godseeker Aniri kit has debuffs (heal/revive/extend suggests no debuffs)
+- **Result**: If no debuffs, ignore 168 ACC (not needed). If debuffs exist, add +82 ACC to 250
+- **Why**: Don't waste stats on ACC if champion doesn't place debuffs
+- **Difficulty**: ⭐ TRIVIAL (just validate kit, no gear changes unless debuffs confirmed)
+
+---
+
+## **IMPLEMENTATION PRIORITY ORDER**
+
+### **Phase 1: IMMEDIATE WINS** (1-2 hours) ⚡ **+16-25M damage**
+Do these 3 fixes FIRST - easiest and highest impact:
+
+1. **Geomancer**: C.RATE gloves (57% → 100%) → **+5-8M damage**
+2. **Brogni**: C.RATE gloves (26% → 85%) → **+8-12M damage**
+3. **Godseeker Aniri**: Complete masteries (Support tree + Lasting Gifts T6) → **+3-5M + survival**
+
+**Expected Result After Phase 1**: 44M → **60-69M damage** ✅ (EXCEEDS 50M GOAL!)
+
+**Test After Phase 1**: Run 3 battles, measure damage increase, validate improvement before continuing
+
+---
+
+### **Phase 2: SPEED TUNE FOUNDATION** (2-4 hours) 🎯 **+5-10M damage + turn survival**
+After validating Phase 1 gains, implement speed tune:
+
+4. **Geomancer**: Remove 4x Feral set → Lifesteal/Savage (210 → 171 SPD)
+5. **Stag Knight**: SPD boots → DEF%/HP% boots (222 → 180 SPD)
+6. **Brogni**: SPD boots → DEF% boots (225 → 183 SPD)
+
+**Expected Result After Phase 2**: 60-69M → **65-75M damage** + 30-45 turns → **50+ turns** ✅
+
+**Test After Phase 2**: Run 5 battles, verify turn order consistency, validate buff/shield timing
+
+---
+
+### **Phase 3: FINAL OPTIMIZATIONS** (depends on Option A/B decision)
+
+**Option A** (Optimize Mithrala, breaks Arena): **+0-5M** additional damage
+7. Mithrala: Remove Feral + SPD boots (245 → 186 SPD)
+8. Godseeker Aniri: Aggressive SPD reduction (264 → 189 SPD)
+9. Brogni: ACC fix (145 → 250+ ACC)
+
+**Option B** (Rector Drath swap, preserves Arena): **-5M** vs Option A, but Arena intact
+7. Build Rector Drath for CB (fresh 186 SPD build)
+8. Godseeker Aniri: Aggressive SPD reduction (264 → 189 SPD)
+9. Brogni: ACC fix (145 → 250+ ACC)
+
+---
+
+## **PROJECTED FINAL PERFORMANCE**
+
+| Phase | Actions | Damage | Turns | Time Investment |
+|-------|---------|--------|-------|-----------------|
+| **Baseline** | Current setup (tested 2025-10-28) | 44M ✅ | 30-45 | N/A |
+| **After Phase 1** | C.RATE fixes + masteries | **60-69M** | 30-45 | 1-2 hours |
+| **After Phase 2** | Speed tune foundation | **65-75M** | **50+** | +2-4 hours |
+| **After Phase 3 (A)** | Full optimization + Mithrala | **70-75M** | **50+** | +2-4 hours |
+| **After Phase 3 (B)** | Rector Drath swap | **65-70M** | **50+** | +2-4 hours |
+
+**Both final configurations exceed 50M damage goal!** ✅
 
 ---
 
