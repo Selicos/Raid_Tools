@@ -1,0 +1,639 @@
+{
+  "masteries": {
+    "offense": {
+      "tier_1": [
+        {
+          "name": "Blade Disciple",
+          "effect": "+75 Attack",
+          "description": "This mastery is outclassed by Deadly Precision. Should only be taken on champions with guaranteed criticals or requires pure attack (e.g. Bomb Debuff champion). In late game with 100% Critical Rate equipment, this becomes more beneficial for damage dealers.",
+          "tier": 1,
+          "tree": "offense",
+          "recommended_for": ["bomb_debuff", "guaranteed_crit"],
+          "notes": "Outclassed by Deadly Precision for most champions"
+        },
+        {
+          "name": "Deadly Precision",
+          "effect": "+5% Critical Rate",
+          "description": "Commonly used by 99% of champions and benefits significantly for Attack role. Usually paired with Keen Strike to gain a 3% damage boost on average.",
+          "tier": 1,
+          "tree": "offense",
+          "recommended_for": ["all_dps", "clan_boss", "dungeons", "arena"],
+          "notes": "Core mastery for all damage dealers"
+        }
+      ],
+      "tier_2": [
+        {
+          "name": "Heart of Glory",
+          "effect": "+5% damage when attacking with full health",
+          "description": "Perfect for Arena. Great for champions with healing abilities or Lifesteal Set. Works well with Shield champions. Can boost Warmaster and Giant Slayer mastery damage.",
+          "tier": 2,
+          "tree": "offense",
+          "recommended_for": ["arena", "lifesteal_set", "shield_champions"],
+          "notes": "Boosts Warmaster/Giant Slayer damage"
+        },
+        {
+          "name": "Keen Strike",
+          "effect": "+10% critical damage",
+          "description": "Best offense mastery as it significantly boosts damage when combo'd with decent Critical Rate.",
+          "tier": 2,
+          "tree": "offense",
+          "recommended_for": ["all_dps", "clan_boss", "dungeons", "arena"],
+          "notes": "Core mastery for all damage dealers"
+        },
+        {
+          "name": "Shield Breaker",
+          "effect": "+25% damage to targets with [Shield] buff",
+          "description": "Useful against Shield champions in Arena and Magic Keep boss. Extra damage only applies to shield, not HP. Does not benefit champions whose skills ignore shield completely.",
+          "tier": 2,
+          "tree": "offense",
+          "recommended_for": ["arena", "magic_keep"],
+          "notes": "Niche mastery for shield-heavy content"
+        },
+        {
+          "name": "Grim Resolve",
+          "effect": "+5% damage when attacking with 50% HP or less",
+          "description": "Excellent for long battles. Synergizes with Lifesteal Set or Life Drinker mastery. Recommended on champions with self-revive passive or unkillable/block damage buffs when low health. Commonly used in Unkillable Clan Boss.",
+          "tier": 2,
+          "tree": "offense",
+          "recommended_for": ["unkillable_cb", "lifesteal_set", "self_revive"],
+          "notes": "Synergizes with Life Drinker (T3)"
+        }
+      ],
+      "tier_3": [
+        {
+          "name": "Single Out",
+          "effect": "+8% damage to targets with less than 40% HP",
+          "description": "Great against bosses like Clan Boss below 40% HP. Improves damage from skills and Tier 6 masteries (Warmaster/Giant Slayer). Does NOT enhance Poison or HP Burn damage.",
+          "tier": 3,
+          "tree": "offense",
+          "recommended_for": ["clan_boss", "dungeon_bosses"],
+          "notes": "Boosts Warmaster/Giant Slayer, NOT Poison/HP Burn"
+        },
+        {
+          "name": "Life Drinker",
+          "effect": "Heals by 5% of damage inflicted when attacking with 50% HP or less",
+          "description": "Synergizes well with Warmaster and Giant Slayer for high damage and healing simultaneously.",
+          "tier": 3,
+          "tree": "offense",
+          "recommended_for": ["clan_boss", "unkillable_cb", "dungeon_bosses"],
+          "notes": "Synergizes with Grim Resolve (T2), Warmaster/Giant Slayer (T6)"
+        },
+        {
+          "name": "Whirlwind of Death",
+          "effect": "+6 speed for each enemy killed, stacks across rounds, max +18 speed",
+          "description": "Only for attacker champions who do the killing. Does not apply to Spider's Den Spiderlings. Not recommended for speed-tuned teams unless there's sufficient speed gap. Safe on fastest champion (e.g. Decrease Defense debuffer).",
+          "tier": 3,
+          "tree": "offense",
+          "recommended_for": ["campaign_farmer", "wave_clear"],
+          "notes": "AVOID for speed-tuned Clan Boss teams"
+        },
+        {
+          "name": "Ruthless Ambush",
+          "effect": "+8% damage for the first hit on each enemy",
+          "description": "Useful in Arena and for Attackers who can guarantee a kill in the first hit.",
+          "tier": 3,
+          "tree": "offense",
+          "recommended_for": ["arena"],
+          "notes": "Arena specialist mastery"
+        }
+      ],
+      "tier_4": [
+        {
+          "name": "Bring It Down",
+          "effect": "+6% damage when attacking targets with higher max HP",
+          "description": "Best mastery for bosses or enemies with large HP pools.",
+          "tier": 4,
+          "tree": "offense",
+          "recommended_for": ["clan_boss", "dungeon_bosses", "hydra", "doom_tower"],
+          "notes": "Always active vs Clan Boss (200M HP)"
+        },
+        {
+          "name": "Wrath of the Slain",
+          "effect": "+5% damage for each dead ally, up to 10%",
+          "description": "Excellent for farmer champions when leveling fodder. Great for Defense or HP Champions who are usually last standing.",
+          "tier": 4,
+          "tree": "offense",
+          "recommended_for": ["campaign_farmer", "solo_champions"],
+          "notes": "Specialized for solo/farmer builds"
+        },
+        {
+          "name": "Cycle of Violence",
+          "effect": "30% chance to decrease random skill cooldown by 1 turn if damage exceeds 30% of target's max HP (once per turn)",
+          "description": "Usually taken by Attack champions who can burst high damage against weaker targets or pre-weakened enemies.",
+          "tier": 4,
+          "tree": "offense",
+          "recommended_for": ["arena", "wave_clear"],
+          "notes": "Requires high burst damage (30% MAX HP threshold)"
+        },
+        {
+          "name": "Opportunist",
+          "effect": "+12% damage to targets with [Stun], [Sleep], [Fear], [True Fear], [Freeze], or [Petrification] debuffs",
+          "description": "Useless against Dungeon bosses and Clan Boss (immune to these debuffs). Arena only.",
+          "tier": 4,
+          "tree": "offense",
+          "recommended_for": ["arena"],
+          "notes": "AVOID for PVE (bosses immune to crowd control)"
+        }
+      ],
+      "tier_5": [
+        {
+          "name": "Methodical",
+          "effect": "+2% damage on default skill each use, stacks across rounds, max +10%",
+          "description": "Best for champions not strong enough for final killing blow. Highly recommended for Dungeon Bosses and Clan Boss.",
+          "tier": 5,
+          "tree": "offense",
+          "recommended_for": ["clan_boss", "dungeon_bosses"],
+          "notes": "Increases A1 damage over time (critical for Clan Boss)"
+        },
+        {
+          "name": "Kill Streak",
+          "effect": "+6% damage in Arena/Siege (3% elsewhere) for each enemy killed, stacks across rounds, max +12%",
+          "description": "Best for Attack champions with multiple kills via devastating burst damage.",
+          "tier": 5,
+          "tree": "offense",
+          "recommended_for": ["arena"],
+          "notes": "Arena specialist mastery"
+        },
+        {
+          "name": "Blood Shield",
+          "effect": "Places [Shield] buff (15% of MAX HP) for 1 turn when killing an enemy (once per turn)",
+          "description": "Best for Attacker Champions to survive longer. Does not trigger on Spider's Den Spiderlings.",
+          "tier": 5,
+          "tree": "offense",
+          "recommended_for": ["arena", "wave_clear"],
+          "notes": "Does NOT trigger on Spider spiderlings"
+        },
+        {
+          "name": "Stoked to Fury",
+          "effect": "+4% damage for each debuff on this champion, max +12%",
+          "description": "Not generally useful. Can synergize with Gurptuk placing Poison on your champions. Popular in Spider's Den for Royal Guard. Conflicts with Heart of Glory unless using Shield Set.",
+          "tier": 5,
+          "tree": "offense",
+          "recommended_for": ["spider_den_royal_guard"],
+          "notes": "Niche mastery, conflicts with Heart of Glory"
+        }
+      ],
+      "tier_6": [
+        {
+          "name": "Warmaster",
+          "effect": "60% chance of bonus damage: 10% of target's MAX HP (4% for Bosses), once per skill",
+          "description": "Excellent for Clan Boss and Dungeon bosses. Higher proc chance than Giant Slayer. Does not count as hit on Fire Knight.",
+          "tier": 6,
+          "tree": "offense",
+          "recommended_for": ["clan_boss", "dungeon_bosses", "hydra", "doom_tower"],
+          "notes": "PRIMARY T6 mastery for 1-2 hit champions (vs Giant Slayer for multi-hit)",
+          "proc_rate": 0.60,
+          "damage_formula": {
+            "base": "10% of target MAX HP",
+            "boss": "4% of target MAX HP (3% for Clan Boss specifically)",
+            "requires_crit": true
+          }
+        },
+        {
+          "name": "Helmsmasher",
+          "effect": "50% chance to ignore 25% of target's DEF (additive with DEF-ignore skills)",
+          "description": "Great against high defense champions in Arena and Dungeons.",
+          "tier": 6,
+          "tree": "offense",
+          "recommended_for": ["arena", "high_def_dungeons"],
+          "notes": "Situational T6, outclassed by Warmaster/Giant Slayer/Flawless for most content"
+        },
+        {
+          "name": "Giant Slayer",
+          "effect": "30% chance of bonus damage: 7.5% of target's MAX HP (3% for Bosses), can occur on each hit",
+          "description": "Excellent for multi-hit champions like Coldheart. Does not count as hit on Fire Knight.",
+          "tier": 6,
+          "tree": "offense",
+          "recommended_for": ["clan_boss_multi_hit", "dungeon_bosses", "coldheart"],
+          "notes": "PRIMARY T6 mastery for 3+ hit champions (vs Warmaster for 1-2 hit)",
+          "proc_rate": 0.30,
+          "damage_formula": {
+            "base": "7.5% of target MAX HP",
+            "boss": "3% of target MAX HP",
+            "requires_crit": true,
+            "multi_hit": "Can proc on EACH hit (major advantage over Warmaster)"
+          }
+        },
+        {
+          "name": "Flawless Execution",
+          "effect": "+20% Critical Damage",
+          "description": "Take on anyone not getting Giant Slayer or Warmaster. Best for burst damage in Arena.",
+          "tier": 6,
+          "tree": "offense",
+          "recommended_for": ["arena", "non_boss_dps"],
+          "notes": "DEFAULT T6 if not using Warmaster/Giant Slayer"
+        }
+      ]
+    },
+    "defense": {
+      "tier_1": [
+        {
+          "name": "Tough Skin",
+          "effect": "+75 Defense",
+          "description": "Basic defensive stat boost.",
+          "tier": 1,
+          "tree": "defense"
+        },
+        {
+          "name": "Defiant",
+          "effect": "+10 Resistance",
+          "description": "Recommended for high resist builds or to unlock nearby Defense Masteries like Improved Parry.",
+          "tier": 1,
+          "tree": "defense",
+          "recommended_for": ["high_resist_builds"]
+        }
+      ],
+      "tier_2": [
+        {
+          "name": "Blastproof",
+          "effect": "-5% damage from AoE attacks",
+          "description": "Staple defensive mastery for PvE (most bosses use AoE). Pick over Improved Parry if enemy doesn't frequently crit.",
+          "tier": 2,
+          "tree": "defense",
+          "recommended_for": ["clan_boss", "dungeon_bosses", "all_pve"],
+          "notes": "CORE defensive mastery (bosses use frequent AOE)"
+        },
+        {
+          "name": "Rejuvenation",
+          "effect": "+5% healing and [Shield] buff value received",
+          "description": "Enhances Lifesteal Set effectiveness. Increases Continuous Heal buff and artifact sets (Immortal, Regeneration, Guardian).",
+          "tier": 2,
+          "tree": "defense",
+          "recommended_for": ["lifesteal_set", "heal_dependent_teams"]
+        },
+        {
+          "name": "Mighty Endurance",
+          "effect": "-10% damage received if champion has [Stun], [Sleep], [Fear], [True Fear], [Freeze], or [Petrification] debuffs",
+          "description": "Useful for champions who self-inflict crowd control (e.g. Skytouched Shaman, Tormin the Cold).",
+          "tier": 2,
+          "tree": "defense",
+          "recommended_for": ["self_cc_champions"],
+          "notes": "Niche mastery for specific champions"
+        },
+        {
+          "name": "Improved Parry",
+          "effect": "-8% damage received when hit with a critical hit",
+          "description": "Recommended for Arena (enemies have high Crit Rate). Pick over Blastproof for surviving boss crits, especially for solo dungeon champions.",
+          "tier": 2,
+          "tree": "defense",
+          "recommended_for": ["arena", "solo_dungeons"]
+        }
+      ],
+      "tier_3": [
+        {
+          "name": "Shadow Heal",
+          "effect": "Heals 6% of MAX HP each time an enemy is healed (once per turn)",
+          "description": "Common for HP and Defense champions to heal quickly when opponent heals (skills, Lifesteal, Continuous Heal). Excellent for Arena.",
+          "tier": 3,
+          "tree": "defense",
+          "recommended_for": ["arena", "hp_def_champions"]
+        },
+        {
+          "name": "Resurgent",
+          "effect": "50% chance to remove 1 random debuff when losing 25% of MAX HP or more from a single enemy skill",
+          "description": "Provides debuff cleanse on heavy hits.",
+          "tier": 3,
+          "tree": "defense",
+          "recommended_for": ["tanky_champions"]
+        },
+        {
+          "name": "Bloodthirst",
+          "effect": "Heals 10% of max HP when killing an enemy target (1 turn cooldown)",
+          "description": "Does not trigger on Spider's Den Spiderlings.",
+          "tier": 3,
+          "tree": "defense",
+          "recommended_for": ["campaign_farmer", "wave_clear"],
+          "notes": "Does NOT trigger on Spider spiderlings"
+        },
+        {
+          "name": "Wisdom of Battle",
+          "effect": "30% chance to place [Block Debuffs] buff for 1 turn when [Stun], [Sleep], [Fear], [True Fear], [Freeze], or [Petrification] debuffs expire",
+          "description": "Provides protection after crowd control expires.",
+          "tier": 3,
+          "tree": "defense",
+          "recommended_for": ["arena"]
+        }
+      ],
+      "tier_4": [
+        {
+          "name": "Solidarity",
+          "effect": "+5 Ally Resist for each buff placed on them by this Champion",
+          "description": "Increases team resistance through buff placement.",
+          "tier": 4,
+          "tree": "defense",
+          "recommended_for": ["buffer_support"]
+        },
+        {
+          "name": "Delay Death",
+          "effect": "-0.75% damage from specific enemy per hit, stacks up to -6% per enemy",
+          "description": "Gradually reduces damage from each enemy over multiple hits.",
+          "tier": 4,
+          "tree": "defense",
+          "recommended_for": ["long_battles"]
+        },
+        {
+          "name": "Harvest Despair",
+          "effect": "60% chance to place [Leech] debuff for 1 turn when placing [Stun], [Sleep], [Fear], [True Fear], [Freeze], or [Petrification] debuffs",
+          "description": "Adds sustain through leech when landing crowd control.",
+          "tier": 4,
+          "tree": "defense",
+          "recommended_for": ["cc_champions"]
+        },
+        {
+          "name": "Stubbornness",
+          "effect": "+10 RESIST for each debuff on this champion, max +30",
+          "description": "Increases resistance when debuffed.",
+          "tier": 4,
+          "tree": "defense",
+          "recommended_for": ["high_resist_builds"]
+        }
+      ],
+      "tier_5": [
+        {
+          "name": "Selfless Defender",
+          "effect": "-20% damage to ally from first enemy hit in each round; this Champion receives that damage instead",
+          "description": "Redirects first hit damage to protect allies.",
+          "tier": 5,
+          "tree": "defense",
+          "recommended_for": ["tanky_protectors"]
+        },
+        {
+          "name": "Cycle of Revenge",
+          "effect": "50% chance to increase Turn Meter by 15% when ally is attacked with a critical hit (once per skill)",
+          "description": "Provides turn meter boost when allies are critically hit.",
+          "tier": 5,
+          "tree": "defense",
+          "recommended_for": ["team_support"]
+        },
+        {
+          "name": "Retribution",
+          "effect": "50% chance to counterattack when losing 25% of MAX HP or more from a single enemy skill",
+          "description": "Counterattacks on heavy damage received.",
+          "tier": 5,
+          "tree": "defense",
+          "recommended_for": ["tanky_dps"]
+        },
+        {
+          "name": "Deterrence",
+          "effect": "20% chance to counterattack when enemy applies [Stun], [Sleep], [Fear], [True Fear], [Freeze], or [Petrification] debuff on an ally (1 turn cooldown)",
+          "description": "Counterattacks when allies are crowd controlled.",
+          "tier": 5,
+          "tree": "defense",
+          "recommended_for": ["team_support"]
+        }
+      ],
+      "tier_6": [
+        {
+          "name": "Iron Skin",
+          "effect": "+200 Defense",
+          "description": "Used for super tanky Clan Boss builds, but better masteries available for damage/synergy.",
+          "tier": 6,
+          "tree": "defense",
+          "notes": "Outclassed by other T6 masteries for most builds"
+        },
+        {
+          "name": "Bulwark",
+          "effect": "-5% damage to all allies; this Champion receives that damage instead",
+          "description": "Team-wide damage reduction with self-sacrifice.",
+          "tier": 6,
+          "tree": "defense",
+          "recommended_for": ["team_protector"]
+        },
+        {
+          "name": "Fearsome Presence",
+          "effect": "+5% chance to place [Stun], [Sleep], [Fear], [True Fear], [Freeze], or [Petrification] debuff from Skills or Artifacts",
+          "description": "Increases crowd control application rate.",
+          "tier": 6,
+          "tree": "defense",
+          "recommended_for": ["cc_champions"]
+        },
+        {
+          "name": "Unshakeable",
+          "effect": "+50 Resistance",
+          "description": "Recommended for Buffer support champions (revivers, healers, cleansers) to avoid disruption and maintain defensive capabilities.",
+          "tier": 6,
+          "tree": "defense",
+          "recommended_for": ["support_buffer", "healer", "reviver", "cleanser"],
+          "notes": "CORE T6 for support champions"
+        }
+      ]
+    },
+    "support": {
+      "tier_1": [
+        {
+          "name": "Steadfast",
+          "effect": "+810 Max HP",
+          "description": "Recommended for Support Champions who heal/shield based on HP. Good for champions without debuff skills who support through healing, cleansing, or reviving.",
+          "tier": 1,
+          "tree": "support",
+          "recommended_for": ["hp_based_support", "healer", "shield_support"]
+        },
+        {
+          "name": "Pinpoint Accuracy",
+          "effect": "+10 Accuracy",
+          "description": "Highly recommended for champions who inflict debuffs. More Accuracy = lower resist chance.",
+          "tier": 1,
+          "tree": "support",
+          "recommended_for": ["debuff_champions", "clan_boss", "dungeons"],
+          "notes": "CORE mastery for all debuff champions"
+        }
+      ],
+      "tier_2": [
+        {
+          "name": "Lay on Hands",
+          "effect": "+5% value of heals cast by this Champion",
+          "description": "Excellent for Healing champions. Increases Continuous Heal buff and artifact sets (Immortal, Regeneration, Guardian).",
+          "tier": 2,
+          "tree": "support",
+          "recommended_for": ["healer"]
+        },
+        {
+          "name": "Shieldbearer",
+          "effect": "+5% value of [Shield] buffs cast by this Champion",
+          "description": "Excellent for Shield champions. Effect is multiplicative (5% of base value, e.g., 20% becomes 21%).",
+          "tier": 2,
+          "tree": "support",
+          "recommended_for": ["shield_support"],
+          "notes": "Multiplicative increase (e.g. 20% → 21%)"
+        },
+        {
+          "name": "Exalt in Death",
+          "effect": "Heals 10% of Max HP the first time an enemy is killed in each round",
+          "description": "Great for Campaign solo farming. Does not require champion to land killing blow. Not useful in single-round battles (Spider's Den, Arena).",
+          "tier": 2,
+          "tree": "support",
+          "recommended_for": ["campaign_farmer"],
+          "notes": "AVOID for Arena/Spider (single-round battles)"
+        },
+        {
+          "name": "Charged Focus",
+          "effect": "+20 ACC when this Champion has no skills on Cooldown",
+          "description": "Worth taking for debuff champions. Better for champions with only 1 cooldown skill (e.g. Outlaw Monk).",
+          "tier": 2,
+          "tree": "support",
+          "recommended_for": ["debuff_champions"]
+        }
+      ],
+      "tier_3": [
+        {
+          "name": "Healing Savior",
+          "effect": "+10% healing and [Shield] buff value if target ally has 40% HP or less",
+          "description": "Excellent for Healing and Shield champions. Increases Continuous Heal buff and artifact sets (Immortal, Regeneration, Guardian).",
+          "tier": 3,
+          "tree": "support",
+          "recommended_for": ["healer", "shield_support"]
+        },
+        {
+          "name": "Rapid Response",
+          "effect": "30% chance to increase Turn Meter by 10% when a buff cast by this Champion is removed or expires",
+          "description": "Don't take for Counterattack Clan Boss teams (can mess up speed tune).",
+          "tier": 3,
+          "tree": "support",
+          "recommended_for": ["buffer_support"],
+          "notes": "AVOID for speed-tuned Clan Boss teams"
+        },
+        {
+          "name": "Swarm Smiter",
+          "effect": "+4 ACC for each enemy alive, max +16",
+          "description": "Great for Arena, decent elsewhere. Even Clan Boss gets +4 ACC. Good if you have debuffs.",
+          "tier": 3,
+          "tree": "support",
+          "recommended_for": ["arena", "debuff_champions"]
+        },
+        {
+          "name": "Arcane Celerity",
+          "effect": "30% chance to increase Turn Meter by 10% when a debuff cast by this Champion is removed or expires",
+          "description": "Does not trigger if enemy defeated before debuff expires/removed. Does not work on permanent debuffs (Block Revive). Don't take for Counterattack Clan Boss. Not recommended for 100% uptime non-stackable debuffs. Only Poison is stackable.",
+          "tier": 3,
+          "tree": "support",
+          "recommended_for": ["poison_champions"],
+          "notes": "AVOID for speed-tuned Clan Boss, AVOID for 100% uptime debuffs (Decrease DEF/ATK)"
+        }
+      ],
+      "tier_4": [
+        {
+          "name": "Merciful Aid",
+          "effect": "+15% healing and [Shield] buff value if target ally has [Stun], [Sleep], [Fear], [True Fear], [Freeze], or [Petrification] debuffs",
+          "description": "Increases Continuous Heal buff and artifact sets (Immortal, Regeneration, Guardian).",
+          "tier": 4,
+          "tree": "support",
+          "recommended_for": ["healer", "shield_support"]
+        },
+        {
+          "name": "Cycle of Magic",
+          "effect": "5% chance to decrease random skill cooldown by 1 turn at start of every turn",
+          "description": "Random cooldown reduction chance.",
+          "tier": 4,
+          "tree": "support",
+          "notes": "Low proc rate, random target, generally not recommended"
+        },
+        {
+          "name": "Lore of Steel",
+          "effect": "+15% to Set Bonuses of Basic Artifact Sets",
+          "description": "Multiplicative increase. Only applies to stat boosts (e.g., 12% Speed becomes 13.8%). Does NOT boost special set proc rates (Freeze, Stun, Retaliation, etc.).",
+          "tier": 4,
+          "tree": "support",
+          "recommended_for": ["speed_set_users", "lifesteal_set_users"],
+          "notes": "DOES NOT boost set proc rates (Freeze, Stun, etc.)"
+        },
+        {
+          "name": "Evil Eye",
+          "effect": "First hit with default skill: -20% Turn Meter (single-target) or -5% (AoE)",
+          "description": "Works even if special abilities used first. Must-have for Arena. Doesn't work on some bosses (Clan Boss). Requires accuracy.",
+          "tier": 4,
+          "tree": "support",
+          "recommended_for": ["arena"],
+          "notes": "MUST-HAVE for Arena, AVOID for Clan Boss"
+        }
+      ],
+      "tier_5": [
+        {
+          "name": "Lasting Gifts",
+          "effect": "30% chance to extend buff duration by 1 turn",
+          "description": "Will NOT extend [Block Damage], [Unkillable], or [Revive on Death]. Does not extend artifact buffs (Shield Set, Immunity Set, Bloodshield accessories).",
+          "tier": 5,
+          "tree": "support",
+          "recommended_for": ["buffer_support", "clan_boss", "dungeons"],
+          "notes": "CRITICAL for buff extension teams (e.g. Godseeker Aniri A2 + Lasting Gifts = +2 turn extension)",
+          "exclusions": ["Block Damage", "Unkillable", "Revive on Death", "artifact_buffs"]
+        },
+        {
+          "name": "Spirit Haste",
+          "effect": "+8 SPD for each dead ally, max +24",
+          "description": "Specialized for farmers, tankers, or champions who revive allies.",
+          "tier": 5,
+          "tree": "support",
+          "recommended_for": ["solo_champions", "reviver"],
+          "notes": "AVOID for speed-tuned teams"
+        },
+        {
+          "name": "Sniper",
+          "effect": "+5% chance to place any debuff from Skills or Artifacts",
+          "description": "Will NOT increase [Stun], [Sleep], [Fear], [True Fear], [Freeze], or [Petrification] chances. Useful for Toxic/Cursed Set. Works with skills showing 'Buff/Debuff Chance +x%' on skill upgrades. Works with Increase Debuff Duration, Remove Buff, Steal Buff per Plarium forum.",
+          "tier": 5,
+          "tree": "support",
+          "recommended_for": ["debuff_champions"],
+          "notes": "Does NOT increase crowd control chances",
+          "exclusions": ["Stun", "Sleep", "Fear", "True Fear", "Freeze", "Petrification"]
+        },
+        {
+          "name": "Master Hexer",
+          "effect": "30% chance to extend debuff duration by 1 turn",
+          "description": "Will NOT extend [Stun], [Sleep], [Fear], [True Fear], [Freeze], or [Petrification]. Suitable for DoTs (Poison, HP Burn) or performance debuffs (Decrease Attack/Defense/Speed, Weaken). Does NOT extend Debuff Extensions. DOES extend non-crowd-control artifact debuffs (Toxic, Cursed Sets).",
+          "tier": 5,
+          "tree": "support",
+          "recommended_for": ["poison_champions", "hp_burn_champions", "decrease_def_atk_champions"],
+          "notes": "CRITICAL for HP Burn/Poison uptime (e.g. Geomancer HP Burn 3-turn → 4-turn)",
+          "exclusions": ["Stun", "Sleep", "Fear", "True Fear", "Freeze", "Petrification"]
+        }
+      ],
+      "tier_6": [
+        {
+          "name": "Elixir of Life",
+          "effect": "+3000 Max HP",
+          "description": "Recommended for Support Champions in Arena (Gold~Platinum) or Faction Wars who heal/shield based on HP.",
+          "tier": 6,
+          "tree": "support",
+          "recommended_for": ["hp_based_support", "arena", "faction_wars"]
+        },
+        {
+          "name": "Timely Intervention",
+          "effect": "+20% Turn Meter whenever an ally drops below 25% HP",
+          "description": "Recommended for Support in Arena/Faction Wars. Enables quick turn for healing or reviving critical/dead allies.",
+          "tier": 6,
+          "tree": "support",
+          "recommended_for": ["healer", "reviver", "arena", "faction_wars"]
+        },
+        {
+          "name": "Oppressor",
+          "effect": "+2.5% Turn Meter fill rate for each active debuff cast by the Champion, max +10%",
+          "description": "Basically 10% speed buff at max (like Increase Speed buff). Recommended for multi-Poison or HP Burn champions. Champion should have high Speed (200+) to benefit most.",
+          "tier": 6,
+          "tree": "support",
+          "recommended_for": ["poison_champions", "hp_burn_champions"],
+          "notes": "Requires 4 active debuffs for max benefit (10% speed buff)"
+        },
+        {
+          "name": "Eagle Eye",
+          "effect": "+50 Accuracy",
+          "description": "Recommended for Support in Arena/Faction Wars. Boosts Accuracy to inflict debuffs on high-resist enemies for crowd control or setup for killing blow.",
+          "tier": 6,
+          "tree": "support",
+          "recommended_for": ["debuff_champions", "arena", "faction_wars"],
+          "notes": "CORE T6 for debuff support champions"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "source": "input/Mechanic_Dictionary/Masteries/Masteries.md",
+    "conversion_date": "2025-10-28",
+    "total_masteries": 63,
+    "trees": ["offense", "defense", "support"],
+    "tiers_per_tree": 6,
+    "t6_offense_masteries": ["Warmaster", "Giant Slayer", "Flawless Execution", "Helmsmasher"],
+    "t6_defense_masteries": ["Iron Skin", "Bulwark", "Fearsome Presence", "Unshakeable"],
+    "t6_support_masteries": ["Elixir of Life", "Timely Intervention", "Oppressor", "Eagle Eye"],
+    "notes": "Structured JSON conversion of all RAID Shadow Legends masteries for automation and cross-referencing"
+  }
+}
