@@ -600,7 +600,76 @@ The following reference documents contain historical UNM Clan Boss analysis and 
 
 -   **Gilded Dragonstone** - DEF increases 1% up to 10% per crit received (stacks survivability)
 
-**Skills**
+### **Skills & Multipliers**
+
+**A1 - Piercing Strike (Single Target)**
+- **Multiplier:** 4.0x ATK
+- **Type:** Single-hit attack
+- **Effects:**
+  - 30% chance Decrease SPD 30% for 2 turns (50% when booked)
+  - **Note:** Clan Boss is immune to Decrease SPD (effect does NOT apply vs UNM)
+- **Warmaster Synergy:** ✅ Single-hit = 60% Warmaster proc chance
+- **Cooldown:** None (spammable)
+- **Books:** +20% debuff chance (30% → 50%), +25% damage total
+- **UNM Notes:** Decrease SPD ineffective vs CB. Primary purpose = Warmaster procs for damage contribution.
+
+**A2 - Huntmaster (AOE, CORE ABILITY)**
+- **Multiplier:** 3.5x ATK (AOE)
+- **Type:** Single-hit per target
+- **Effects:**
+  - 70% chance Decrease DEF 60% for 2 turns (90% when booked)
+  - 70% chance Decrease ATK 50% for 2 turns (90% when booked)
+- **Warmaster Synergy:** ✅ Single-hit per target = 60% Warmaster proc per enemy (Clan Boss = 1 target)
+- **Cooldown:** 3 turns (booked)
+- **Books:** +20% debuff chance (70% → 90%), +10% damage, -1 turn cooldown (4 → 3 turns)
+- **UNM Impact:** **CRITICAL FOR TEAM**
+  - Decrease DEF 60% = ~2.5x damage multiplier for entire team (Geomancer, Brogni, Mithrala all benefit)
+  - Decrease ATK 50% = critical survivability (reduces boss damage by 50%)
+  - 3-turn CD + 2-turn duration = **100% uptime** when speed-tuned correctly
+- **ACC Requirement:** 250+ ACC for 95% land rate vs UNM (Current 310 ACC + 80 lead = 390 ACC = 98%+ land rate ✅)
+- **Notes:** MUST go first before DPS champions to maximize team damage. Speed tune critical for 100% uptime.
+
+**Passive - Lead the Pack (Utility)**
+- **Type:** Buff on ally debuff resist
+- **Effects:**
+  - When ally debuff is resisted: Place Increase ACC 50% on that ally for 1 turn
+- **UNM Impact:** Minimal (boss has no RES mechanics beyond 3% floor)
+  - Helps backup debuffers (Brogni HP Burn, Geomancer Decrease ACC) if ACC below safe threshold
+  - Current team has high ACC (Mithrala +80 lead) so passive rarely triggers
+- **Notes:** More useful in Doom Tower Hard, Iron Twins (high RES bosses). Low value for UNM.
+
+**Skill Priority for UNM:**
+1. **A2 (Huntmaster):** CORE ABILITY - Decrease DEF/ATK 100% uptime = team force multiplier
+2. **A1 (Piercing Strike):** Warmaster proc spam, consistent damage (Decrease SPD ineffective vs CB)
+3. **Passive:** Minimal UNM value (high ACC team, boss low RES mechanics)
+
+**Team Damage Multiplier (Decrease DEF 60%):**
+- **Formula:** Effective Damage = Base Damage / (1 - DEF Reduction)
+- Decrease DEF 60% = **~2.5x damage multiplier** for entire team
+- **Impact on 44M baseline:**
+  - Without Decrease DEF: ~18M team damage
+  - With Decrease DEF: ~44M team damage (current)
+  - **Stag Knight contribution:** **+26M team damage** (indirect, via debuff)
+  
+**Survivability Impact (Decrease ATK 50%):**
+- Boss damage reduced by 50% when debuff active
+- **100% uptime critical:** 3-turn CD + 2-turn duration = perfect sync at 1:1 speed tune
+- **If speed tune breaks:** Gaps in coverage = team takes 2x damage = wipe risk after turn 40+
+
+**Why ACC is Excellent (310 base, 390 with lead):**
+- UNM boss RES: 300
+- Required ACC for 95% land: 250
+- Current: 310 + 80 lead = 390 ACC
+- **Land rate:** 98%+ (above maximum, 3% base resist floor only)
+- **Verdict:** ✅ Debuffs land reliably, no ACC investment needed
+
+**Why Speed Tune is CRITICAL:**
+- Current 222 SPD = too fast for 1:1 tune (target 171-189)
+- Risk: Decrease DEF/ATK expires before refresh → gap in coverage → team damage drops → survivability fails
+- **Fix:** SPD boots → DEF%/HP% boots (222 → 180-189 SPD)
+- **Result:** Perfect 100% uptime on Decrease DEF/ATK = maximize team damage + survivability
+
+### **Skills (Booking Status)**
 
 -   ✅ **Fully Booked** (all cooldowns reduced)
 
