@@ -351,6 +351,231 @@ After validating Phase 1 gains, implement speed tune:
 
 ---
 
+## UNM Boss Mechanics - Detailed Analysis
+
+### Boss Base Stats
+
+| Stat | Value | Notes |
+|------|-------|-------|
+| **HP** | 200,000,000 | 200M total HP (3-key = 67M/key, 2-key = 100M/key) |
+| **ATK** | 3,500 | Base attack (scales with turn number) |
+| **DEF** | 2,800 | Fixed (does not scale) |
+| **RES** | 300 | Fixed (250 ACC = 90-95% debuff land rate) |
+| **ACC** | 250 | Fixed (200 RES = 85-90% resist rate) |
+| **SPD** | 170 | Fixed (determines speed tune targets) |
+| **C.RATE** | 5% | Minimal crit chance |
+| **C.DMG** | 50% | Minimal crit damage |
+
+### Damage Scaling Formula
+
+**Boss Damage = Base Damage × (1 + 0.03 × Turn Number)**
+
+The boss damage increases by **3% per turn**. This exponential scaling is why survivability becomes critical after turn 30-40.
+
+| Turn | Damage Multiplier | Example AOE Damage (15k base) | Survivability Requirement |
+|------|-------------------|-------------------------------|---------------------------|
+| 1    | 1.00×             | 15,000 per champion           | Low (basic DEF/HP) |
+| 10   | 1.30×             | 19,500 per champion           | Low-Medium |
+| 20   | 1.60×             | 24,000 per champion           | Medium |
+| 30   | 1.90×             | 28,500 per champion           | Medium-High (shields needed) |
+| 40   | 2.20×             | 33,000 per champion           | High (shields + Decrease ATK critical) |
+| 50   | 2.50×             | 37,500 per champion           | Very High (perfect buff rotation) |
+| 60   | 2.80×             | 42,000 per champion           | Extreme (unkillable teams only) |
+
+**Key Insight:** By turn 50 (typical UNM goal), boss deals **2.5x turn 1 damage**. Without scaling survivability (shields, Decrease ATK, healing), team wipes around turn 40-45.
+
+**Current Team Target:** 44M baseline → 65-75M optimized = **50-60 turns** (boss damage ~2.65× turn 1 at turn 60)
+
+### Attack Pattern Sequence
+
+The boss follows a strict 5-turn attack pattern that repeats:
+
+| Turn | Attack Type | Target | Effect | Damage Type | Notes |
+|------|-------------|--------|--------|-------------|-------|
+| 1    | AOE 1       | All    | None   | ~15k base (scales) | Opening hit |
+| 2    | AOE 2       | All    | None   | ~15k base (scales) | Standard rotation |
+| 3    | **Single + Stun** | **Slowest Champion** | **2-turn Stun (non-resistable)** | ~25k base (scales) | **CRITICAL MECHANIC** |
+| 4    | AOE 3       | All    | None   | ~18k base (scales) | Post-stun continuation |
+| 5    | AOE 4       | All    | None   | ~18k base (scales) | Pattern completes |
+| 6    | **Single + Stun** | **Slowest Champion** | **2-turn Stun (non-resistable)** | ~25k base (scales) | Pattern repeats... |
+
+**Pattern:** AOE → AOE → **STUN** → AOE → AOE → **STUN** (repeats)
+
+**Stun Frequency:** Every 3 turns (Turn 3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48...)
+
+**50-Turn Fight:** 16-17 stuns total (every 3 turns = ~16.67 stuns in 50 turns)
+
+### Stun Mechanics (CRITICAL - Non-Resistable)
+
+**Targeting Rule:** Boss stuns the champion with **lowest current SPD** at the time of stun turn.
+
+**Key Properties:**
+- **Non-Resistable:** RES stat does **NOT** affect stun chance. It lands **100% of the time** regardless of RES.
+- **Duration:** 2 turns (champion loses 2 actions)
+- **Frequency:** Every 3 turns (16-17 stuns in 50-turn fight)
+- **Damage:** Stun attack deals ~25k base damage (scales with turn number, ~62.5k at turn 50)
+
+**Speed Tune Implication (1:1 Tune):**
+- In 1:1 tune (171-189 SPD), the **slowest champion becomes designated stun target**
+- **Strategy:** Make slowest champion (171 SPD) the **tankiest** champion
+  - Highest Effective HP (HP × (1 + DEF/1000))
+  - DEF% boots + HP accessories prioritized
+  - Ideally champion with passive survivability (Geomancer Stoneguard reflection, self-healing, etc.)
+
+**Mitigation Options:**
+1. **Option A - Designated Stun Target (RECOMMENDED FOR 1:1 TUNE):**
+   - Set slowest champion to 171 SPD exactly
+   - Build that champion for max survivability (DEF% boots, HP chest, DEF/HP accessories)
+   - Rest of team 172-189 SPD (never hit by stun)
+   - **Current Team:** Geomancer ideal stun target (highest Effective HP, passive continues damage when stunned)
+
+2. **Option B - Block Debuffs Timing:**
+   - Use Block Debuffs buffs on stun turns (Brogni A3, other champions)
+   - Requires precise speed tune + manual play (difficult to AUTO)
+   - **Current Team:** Brogni A3 provides Block Debuffs, but 3-turn CD + 2-turn duration = can't cover all stun turns
+
+3. **Option C - Increase SPD Buff Rotation (Advanced):**
+   - Use Increase SPD buffs to dynamically shift stun target
+   - Requires complex speed tune + turn order calculation
+   - **Not viable for current team** (no Increase SPD champions)
+
+**Current Team Stun Status (NO SPEED TUNE):**
+- All champions 210-264 SPD (no designated stun target)
+- Stun lands on **random** champion each time (whoever is slowest at that moment, unpredictable)
+- **Risk:** Stun can hit Stag Knight (fragile, low EHP), Brogni (critical shields), or Godseeker Aniri (critical heals)
+- **Fix:** Implement 1:1 tune with Geomancer at 171 SPD (guaranteed stun target, highest survivability)
+
+### Affinity Rotation & Effects
+
+**4-Day Cycle:** Void → Spirit → Force → Magic (repeats)
+
+| Day | Boss Affinity | Strong Against | Weak Against | Current Team Impact |
+|-----|---------------|----------------|--------------|---------------------|
+| 1   | **Void**      | None           | None         | ✅ **BEST TESTING DAY** - All champions neutral |
+| 2   | **Spirit**    | Magic (Geomancer) | Force        | ⚠️ **RISK** - Geomancer weak (-15% damage, +30% glancing) |
+| 3   | **Force**     | Spirit         | Magic (Stag Knight) | ✅ **CURRENT TESTS** - Geomancer strong, Stag weak |
+| 4   | **Magic**     | Force          | Spirit       | ⚠️ **RISK** - Stag Knight weak, Mithrala strong |
+
+**Affinity Damage Modifiers:**
+- **Strong Affinity:** +15% damage dealt, -15% damage taken, 0% glancing hit chance
+- **Weak Affinity:** -15% damage dealt, +15% damage taken, **30% glancing hit chance** (glancing hits deal -30% damage and cannot crit)
+- **Neutral Affinity:** 0% modifiers, standard damage calculations
+
+**Glancing Hit Impact (Weak Affinity):**
+- 30% of attacks become glancing hits
+- Glancing hits deal 70% of normal damage (30% reduction)
+- **Glancing hits CANNOT crit** (eliminates Warmaster/Giant Slayer procs on those hits)
+- **Combined Impact:** -15% base damage + 30% chance of -30% damage + no crits = **~35-40% total damage loss**
+
+**Current Team Affinity Risks:**
+- **Spirit Boss (Day 2):** Geomancer (Magic affinity) weak
+  - Estimated damage loss: -10 to -15M total team damage (Geomancer contributes ~35M, loses ~30% = -10.5M, team total drops to ~34-39M)
+- **Magic Boss (Day 4):** Stag Knight (Force affinity) weak
+  - Lower risk (Stag Knight primary role is Decrease DEF/ATK, not damage)
+  - Estimated damage loss: -2 to -3M total team damage
+- **Force Boss (Day 3 - CURRENT TESTS):** Geomancer strong, team at peak performance (44M baseline)
+- **Void Boss (Day 1):** All neutral, expected similar to Force (44M)
+
+**Testing Recommendation:**
+- Baseline established on Force affinity (44M ✅)
+- **MUST test on Spirit affinity** to validate Geomancer weak affinity hypothesis (expected ~34-39M)
+- Consider champion swaps for Spirit days if damage drops below 2-key threshold
+
+### Debuff Limit & Priority
+
+**Maximum Debuffs on Boss:** 10 simultaneous debuffs
+
+**Current Team Debuff List:**
+1. Decrease DEF 60% (Stag Knight A2) - **PRIORITY 1** (team damage multiplier)
+2. Decrease ATK 50% (Stag Knight A2) - **PRIORITY 2** (survivability critical)
+3. HP Burn (Geomancer A3, Brogni A1) - **PRIORITY 3** (7.5% MAX HP/turn = 15M/turn)
+4. Weaken 25% (Geomancer A3, 25% chance) - **PRIORITY 4** (if lands, increases team damage)
+5. Decrease ACC 50% (Geomancer A1, 75% chance) - Low priority (boss uses non-resistable stun)
+6. Poison 5% (Mithrala A1, 50% chance × 2 hits) - Low priority (user notes poison teams weak)
+
+**Debuff Overflow Risk:** **LOW**
+- Core debuffs: 4 slots (Decrease DEF, Decrease ATK, HP Burn, Weaken if lands)
+- Remaining slots: 6 available for Poison, Decrease ACC, etc.
+- **Strategy:** Let Poison/Decrease ACC fill remaining slots naturally, prioritize HP Burn/Decrease DEF/ATK uptime
+
+**Debuff Extension:**
+- Godseeker Aniri A2 extends all buffs on allies by +1 turn (does NOT extend debuffs on boss)
+- Master Hexer T6 mastery (Geomancer): Extends debuffs placed by Geomancer by +1 turn
+  - HP Burn: 3 turns → 4 turns (overkill with 3-turn CD, but provides overlap safety)
+  - Decrease ACC: 2 turns → 3 turns (low value vs CB)
+
+### Turn Prediction & Survivability Thresholds
+
+**Turn 1-20 (Early Fight):**
+- Boss damage: 1.0× to 1.6× base (15k to 24k AOE per champion)
+- **Survivability:** Low requirement (basic DEF/HP sufficient)
+- **Strategy:** Establish debuffs (Decrease DEF/ATK, HP Burn), apply buffs (shields, Increase ATK/DEF)
+- **Expected Team State:** Full HP, all buffs active, clean rotation
+
+**Turn 21-40 (Mid Fight):**
+- Boss damage: 1.6× to 2.2× base (24k to 33k AOE per champion)
+- **Survivability:** Medium requirement (shields + Decrease ATK critical, heals needed)
+- **Strategy:** Maintain 100% uptime on Decrease ATK, refresh shields every 2-3 turns, heal after AOE bursts
+- **Expected Team State:** 70-90% HP average, occasional deaths if stun hits wrong champion (current no-tune state)
+
+**Turn 41-60 (Late Fight - Scaling Critical):**
+- Boss damage: 2.2× to 2.8× base (33k to 42k AOE per champion)
+- **Survivability:** High requirement (**perfect buff rotation or team wipes**)
+- **Critical Mechanics:**
+  - Decrease ATK **MUST** be active 100% of time (gaps = instant death)
+  - Shields **MUST** be refreshed every 2 turns (Brogni A3 + Mithrala A3 overlap)
+  - Heals **MUST** occur after every 2-3 AOE hits (Godseeker Aniri A2/A3)
+  - Stun target **MUST** survive stun + burst (Geomancer at 171 SPD with max EHP)
+- **Expected Team State:** 50-70% HP average, 1-2 deaths possible (revives used), tight turn order required
+
+**Turn 60+ (Extreme - Unkillable Territory):**
+- Boss damage: 2.8×+ base (42k+ AOE per champion)
+- **Survivability:** Extreme requirement (unkillable teams, or perfect Block Damage rotation)
+- **Current Team Ceiling:** ~60-65 turns max (estimated 65-75M damage)
+  - Without unkillable mechanics, team cannot survive 3.0×+ boss damage scaling
+  - Shields + Decrease ATK + heals insufficient past turn 60-65
+
+**Current Team Turn Estimate:**
+- **Baseline (no speed tune):** 30-45 turns = 44M damage
+- **Phase 1 (C.RATE fixes):** 30-45 turns = 60-69M damage (more damage per turn, same survival)
+- **Phase 2 (speed tune):** 50-60 turns = 65-75M damage (perfect buff rotation extends survival)
+- **Ceiling:** 60-65 turns max = ~75M damage (scaling overwhelms team past turn 65)
+
+### Boss Damage Mitigation Stack
+
+**Multiplicative Damage Reduction:** Effects stack multiplicatively, not additively.
+
+**Example: Decrease ATK 50% + Increase DEF 60% + Shield 24k**
+
+1. **Boss AOE at Turn 50:** 37,500 base damage (2.5× multiplier)
+2. **Decrease ATK 50%:** 37,500 × 0.5 = **18,750 damage** (after ATK reduction)
+3. **Increase DEF 60%:** Assume champion has 4,000 DEF → 6,400 DEF with buff
+   - Damage reduction formula: DEF / (600 + DEF) = 6,400 / 7,000 = **91.4% damage reduction**
+   - 18,750 × (1 - 0.914) = 18,750 × 0.086 = **1,613 damage to HP** (after DEF calculation)
+4. **Shield 24k:** 1,613 damage absorbed by shield (shield takes hit, HP untouched)
+5. **Strengthen 25% (if active):** Further reduces damage by 25% (1,613 × 0.75 = 1,210 damage)
+
+**Total Mitigation:** 37,500 → 1,210 final damage to HP = **96.8% damage reduction**
+
+**Why 100% Uptime on Decrease ATK is CRITICAL:**
+- **With Decrease ATK:** 37,500 → 1,210 damage (survives)
+- **Without Decrease ATK (gap in coverage):** 37,500 → 2,420 damage (double damage, shield breaks, HP hit)
+- **Gap Impact:** 1-2 turns without Decrease ATK at turn 50+ = team wipe (shields break, HP depleted)
+
+**Current Team Buff Stack (Optimal Rotation):**
+- Decrease ATK 50% (Stag Knight A2): ✅ Present
+- Increase DEF 60% (Brogni A3, Mithrala A2): ✅ Present (overlap possible)
+- Shields (Brogni A3 24k, Mithrala A3 14k): ✅ Present (38k total shields per ally)
+- Strengthen 25% (Mithrala A3): ✅ Present
+- Heals (Godseeker Aniri A2 18% MAX HP): ✅ Present
+
+**Projected Survivability (Turn 50 with perfect rotation):**
+- 37,500 damage → ~1,200 damage to HP after full mitigation stack
+- Team average HP: ~60k → can survive 50+ hits (50+ turns) if rotation perfect
+- **Bottleneck:** Speed tune critical to maintain 100% buff uptime
+
+---
+
 ## Analysis Workflow
 
 **Instructions for this analysis project**:
