@@ -1,0 +1,168 @@
+{
+  "debuff_landing_mechanics": {
+    "description": "Debuff landing combines skill base chance, ACC/RES check, and potential masteries/buffs to determine final success rate.",
+    "landing_process": {
+      "step_1": {
+        "name": "Skill Base Chance Check",
+        "description": "Each debuff has a base chance listed in skill description (e.g., 75% chance to place HP Burn). This check happens FIRST.",
+        "formula": "Random roll vs skill base chance",
+        "example": "Brogni A1: 75% chance to place HP Burn. 75% of attacks pass this check, 25% fail immediately (no ACC/RES check)."
+      },
+      "step_2": {
+        "name": "ACC/RES Check",
+        "description": "If step 1 passes, ACC/RES check determines if debuff lands or is resisted. Uses formula: (ACC - RES + 200) / 400.",
+        "formula": "(ACC - RES + 200) / 400 (capped 0-95%)",
+        "example": "Brogni A1 passed 75% base chance, now checks ACC/RES. With 225 ACC vs 300 RES: (225 - 300 + 200) / 400 = 31.25% land rate. Final HP Burn chance: 75% × 31.25% = 23.4%."
+      },
+      "step_3": {
+        "name": "Masteries/Buffs",
+        "description": "Sniper mastery (+5% debuff chance) and other buffs apply AFTER step 1. Does NOT affect ACC/RES check.",
+        "notes": "Sniper mastery increases base chance (e.g., 75% → 80%), NOT ACC/RES success rate."
+      }
+    },
+    "combined_success_rate": {
+      "formula": "Skill Base Chance × ACC/RES Success Rate",
+      "examples": [
+        {
+          "champion": "Stag Knight A2",
+          "skill_base_chance": 0.90,
+          "acc": 390,
+          "target_res": 300,
+          "acc_res_success": 0.725,
+          "final_land_rate": 0.6525,
+          "description": "90% base chance × 72.5% ACC/RES success = 65.25% final land rate per skill use"
+        },
+        {
+          "champion": "Geomancer A3",
+          "skill_base_chance": 1.00,
+          "acc": 250,
+          "target_res": 300,
+          "acc_res_success": 0.375,
+          "final_land_rate": 0.375,
+          "description": "100% base chance × 37.5% ACC/RES success = 37.5% final land rate (HP Burn, needs more ACC)"
+        },
+        {
+          "champion": "Mithrala A1",
+          "skill_base_chance": 0.50,
+          "hits": 2,
+          "acc": 526,
+          "target_res": 300,
+          "acc_res_success": 0.95,
+          "final_land_rate_per_hit": 0.475,
+          "final_land_rate_both_hits": 0.7256,
+          "description": "50% base chance × 95% ACC/RES success = 47.5% per hit. 2 hits = 1 - (1 - 0.475)² = 72.56% chance at least 1 poison lands."
+        }
+      ]
+    },
+    "uptime_calculation": {
+      "description": "Debuff uptime depends on final land rate, skill cooldown, and debuff duration.",
+      "formula": "Uptime = (Land Rate × Duration) / (Cooldown + 1)",
+      "examples": [
+        {
+          "debuff": "Decrease DEF 60% (Stag Knight A2)",
+          "skill_base_chance": 0.90,
+          "acc_res_success": 0.975,
+          "final_land_rate": 0.8775,
+          "duration_turns": 2,
+          "cooldown_turns": 3,
+          "uptime": 0.43875,
+          "uptime_percent": "43.9%",
+          "notes": "With 390 ACC (97.5% ACC/RES success), Stag Knight A2 has ~44% uptime (needs manual micro or buff extension for 100% uptime)"
+        },
+        {
+          "debuff": "HP Burn (Geomancer A3)",
+          "skill_base_chance": 1.00,
+          "acc_res_success": 0.625,
+          "final_land_rate": 0.625,
+          "duration_turns": 3,
+          "cooldown_turns": 3,
+          "uptime": 0.46875,
+          "uptime_percent": "46.9%",
+          "notes": "With 350 ACC (62.5% ACC/RES success), Geomancer A3 HP Burn has ~47% uptime. Needs Master Hexer T6 (30% extend) for better uptime."
+        },
+        {
+          "debuff": "HP Burn (Geomancer A3 with Master Hexer)",
+          "skill_base_chance": 1.00,
+          "acc_res_success": 0.625,
+          "final_land_rate": 0.625,
+          "duration_turns": 3,
+          "extended_duration_turns": 4,
+          "extension_chance": 0.30,
+          "average_duration": 3.3,
+          "cooldown_turns": 3,
+          "uptime": 0.515625,
+          "uptime_percent": "51.6%",
+          "notes": "Master Hexer (30% extend) increases average duration from 3 to 3.3 turns, uptime from 47% to 51.6%."
+        }
+      ]
+    },
+    "100_percent_uptime_strategies": {
+      "strategy_1": {
+        "name": "Buff Extension (Lasting Gifts, Champion Skills)",
+        "description": "Use buff extension masteries or champion skills to extend debuff duration, increasing uptime.",
+        "examples": [
+          "Godseeker Aniri A2 (+1 turn buff extension) extends ally buffs by 1 turn",
+          "Lasting Gifts T6 mastery (30% chance +1 turn) extends buffs randomly",
+          "Master Hexer T6 mastery (30% chance +1 turn) extends debuffs randomly"
+        ],
+        "notes": "Buff extension is RNG-dependent (30% chance for masteries). Champions with guaranteed extension (Godseeker Aniri A2) are more reliable."
+      },
+      "strategy_2": {
+        "name": "Multiple Debuff Sources (Redundancy)",
+        "description": "Use 2+ champions with same debuff to increase uptime through redundancy.",
+        "examples": [
+          "HP Burn: Geomancer A3 + Brogni A1 = higher uptime than single source",
+          "Decrease DEF: Stag Knight A2 + alternate champion = 100% uptime possible"
+        ],
+        "notes": "Requires team slot investment. Better for critical debuffs (Decrease DEF/ATK)."
+      },
+      "strategy_3": {
+        "name": "Low Cooldown Skills (2-turn CD or less)",
+        "description": "Champions with 2-turn CD debuffs can maintain near-100% uptime with high ACC.",
+        "examples": [
+          "2-turn CD + 2-turn duration + 90% land rate = ~90% uptime",
+          "3-turn CD + 3-turn duration + 90% land rate = ~68% uptime (needs extension)"
+        ],
+        "notes": "Cooldown reduction (e.g., books, Cycle of Violence mastery) improves uptime significantly."
+      },
+      "strategy_4": {
+        "name": "Guaranteed Debuff Placement (100% Base Chance)",
+        "description": "Champions with 100% base chance debuffs only need ACC/RES check, no RNG on skill.",
+        "examples": [
+          "Geomancer A3: 100% HP Burn base chance (only ACC/RES check)",
+          "Some champions have 'cannot be resisted' debuffs (ignores ACC/RES entirely)"
+        ],
+        "notes": "100% base chance reduces variance. Still needs high ACC for reliable landing."
+      }
+    },
+    "common_mistakes": {
+      "mistake_1": {
+        "mistake": "Confusing skill base chance with ACC/RES success",
+        "description": "Players assume 75% base chance = 75% land rate. WRONG. Must multiply by ACC/RES success rate.",
+        "example": "Brogni A1 75% HP Burn with 145 ACC vs 300 RES: 75% × 11.25% = 8.4% final land rate (not 75%)."
+      },
+      "mistake_2": {
+        "mistake": "Ignoring ACC requirement for 100% base chance skills",
+        "description": "Players assume 100% base chance = guaranteed landing. WRONG. Still requires ACC/RES check.",
+        "example": "Geomancer A3 100% HP Burn with 200 ACC vs 300 RES: 100% × 25% = 25% final land rate (not 100%)."
+      },
+      "mistake_3": {
+        "mistake": "Over-investing in ACC past soft cap",
+        "description": "Players stack 500+ ACC thinking it helps. WRONG. Diminishing returns past 390 ACC (vs 300 RES), hard cap at 95%.",
+        "example": "390 ACC = 72.5% land rate. 500 ACC = 87.5% land rate (capped at 95%). Only +15% gain for +110 ACC (wasted substats)."
+      },
+      "mistake_4": {
+        "mistake": "Building high RES for Clan Boss",
+        "description": "Players build 400+ RES for Clan Boss stun mitigation. WRONG. Boss stun is non-resistable, RES is wasted.",
+        "example": "Mithrala 587 RES vs UNM Clan Boss: RES does NOT help vs stun (non-resistable). 587 RES wasted, should reallocate to DEF/HP/SPD."
+      }
+    }
+  },
+  "metadata": {
+    "source": "UNM_Clan_Boss_Team_Analysis.md, Resistibility.json",
+    "creation_date": "2025-10-28",
+    "phase": "Phase E3 - Debuff Landing Mechanics",
+    "validation": "Cross-referenced with in-game testing (Stag Knight, Geomancer, Brogni land rates), community formulas",
+    "notes": "Comprehensive debuff landing mechanics for uptime calculations, ACC optimization, and team synergy analysis"
+  }
+}

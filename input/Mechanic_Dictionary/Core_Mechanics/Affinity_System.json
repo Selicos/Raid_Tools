@@ -1,0 +1,86 @@
+{
+  "affinity_system": {
+    "description": "RAID Shadow Legends uses a 4-affinity system with strength/weakness relationships similar to elemental systems in other games.",
+    "affinities": ["Magic", "Force", "Spirit", "Void"],
+    "relationships": [
+      {
+        "affinity": "Magic",
+        "strong_against": "Force",
+        "weak_against": "Spirit",
+        "neutral_against": ["Magic", "Void"]
+      },
+      {
+        "affinity": "Force",
+        "strong_against": "Spirit",
+        "weak_against": "Magic",
+        "neutral_against": ["Force", "Void"]
+      },
+      {
+        "affinity": "Spirit",
+        "strong_against": "Magic",
+        "weak_against": "Force",
+        "neutral_against": ["Spirit", "Void"]
+      },
+      {
+        "affinity": "Void",
+        "strong_against": "None",
+        "weak_against": "None",
+        "neutral_against": ["Magic", "Force", "Spirit", "Void"],
+        "notes": "Void affinity is always neutral (no strengths or weaknesses)"
+      }
+    ],
+    "damage_modifiers": {
+      "strong_affinity": {
+        "damage_dealt_multiplier": 1.15,
+        "damage_taken_multiplier": 0.85,
+        "glancing_hit_chance": 0.0,
+        "description": "+15% damage dealt, -15% damage taken, 0% glancing hit chance"
+      },
+      "weak_affinity": {
+        "damage_dealt_multiplier": 0.85,
+        "damage_taken_multiplier": 1.15,
+        "glancing_hit_chance": 0.30,
+        "glancing_hit_damage_multiplier": 0.70,
+        "glancing_hit_can_crit": false,
+        "description": "-15% damage dealt, +15% damage taken, 30% glancing hit chance (glancing hits deal 70% damage and cannot crit)",
+        "combined_damage_loss": "~35-40% total damage loss (base -15% + 30% chance of -30% damage + no crits on glancing hits = ~40% DPS loss for crit-dependent champions)"
+      },
+      "neutral_affinity": {
+        "damage_dealt_multiplier": 1.0,
+        "damage_taken_multiplier": 1.0,
+        "glancing_hit_chance": 0.0,
+        "description": "No modifiers, standard damage calculations"
+      }
+    },
+    "glancing_hit_mechanics": {
+      "trigger_condition": "Weak affinity matchup",
+      "chance": 0.30,
+      "damage_multiplier": 0.70,
+      "can_crit": false,
+      "can_proc_warmaster_giant_slayer": false,
+      "description": "When attacking with weak affinity, 30% of hits become glancing hits. Glancing hits deal 70% of normal damage and CANNOT crit. This eliminates Warmaster/Giant Slayer procs on glancing hits.",
+      "impact_on_dps": "For crit-dependent champions (Warmaster/Giant Slayer), glancing hits effectively remove 30% of attacks from damage calculation. Combined with base -15% damage, total DPS loss is ~35-40%.",
+      "notes": "Glancing hits are marked with a distinct visual indicator in combat (smaller damage numbers, different color)"
+    },
+    "strategic_implications": {
+      "clan_boss_affinity_rotation": {
+        "void_day": "BEST for testing and baseline damage (no affinity variance)",
+        "favorable_affinity_day": "Expected +10-15% team damage vs baseline (if champions have favorable affinity)",
+        "unfavorable_affinity_day": "Expected -10-15% team damage vs baseline (if champions have weak affinity)",
+        "example": "Geomancer (Magic affinity) vs Spirit Boss = weak affinity = -10 to -15M damage loss (from 44M baseline to ~34-39M)"
+      },
+      "team_building": {
+        "affinity_safe_core": "Build core team with neutral affinities to boss rotation (e.g., all Spirit/Void/Magic for Force boss days)",
+        "flex_swaps": "Keep affinity-weak champions as alternates (swap out on unfavorable days)",
+        "void_champions_value": "Void champions are always safe (no weak affinity), premium for consistent performance"
+      }
+    }
+  },
+  "metadata": {
+    "source": "UNM_Clan_Boss.json (affinity rotation section)",
+    "creation_date": "2025-10-28",
+    "phase": "Phase E1 - Affinity System Mechanics",
+    "validation": "Cross-referenced with in-game testing, community wikis (Ayumilove, HellHades)",
+    "notes": "Comprehensive affinity system mechanics for team building and damage variance analysis"
+  }
+}

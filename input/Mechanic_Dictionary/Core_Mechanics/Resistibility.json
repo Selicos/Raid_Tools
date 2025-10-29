@@ -1,0 +1,131 @@
+{
+  "resistibility_mechanics": {
+    "description": "Resistibility determines whether debuffs and buffs can be resisted by the target champion or boss. RES stat reduces debuff land chance, ACC stat increases debuff land chance.",
+    "debuff_landing_formula": {
+      "formula": "(ACC - RES + 200) / 400",
+      "cap_min": 0.0,
+      "cap_max": 0.95,
+      "description": "Debuff land rate = (Attacker ACC - Target RES + 200) / 400, capped between 0% and 95%. There is always a minimum 5% resist chance (or 10% based on some sources).",
+      "notes": "Formula applies to ALL resistable debuffs and buff removal attempts. Does NOT apply to non-resistable mechanics (e.g., UNM Clan Boss stun)."
+    },
+    "examples": [
+      {
+        "attacker_acc": 150,
+        "target_res": 300,
+        "calculation": "(150 - 300 + 200) / 400 = 50 / 400 = 0.125",
+        "land_rate": 0.125,
+        "safety_level": "Unacceptable (12.5% land rate = massive gaps)"
+      },
+      {
+        "attacker_acc": 250,
+        "target_res": 300,
+        "calculation": "(250 - 300 + 200) / 400 = 150 / 400 = 0.375",
+        "land_rate": 0.375,
+        "safety_level": "Minimum bare minimum (37.5% land rate = 50% uptime = gaps)"
+      },
+      {
+        "attacker_acc": 300,
+        "target_res": 300,
+        "calculation": "(300 - 300 + 200) / 400 = 200 / 400 = 0.50",
+        "land_rate": 0.50,
+        "safety_level": "Acceptable for non-critical debuffs (50% land rate)"
+      },
+      {
+        "attacker_acc": 350,
+        "target_res": 300,
+        "calculation": "(350 - 300 + 200) / 400 = 250 / 400 = 0.625",
+        "land_rate": 0.625,
+        "safety_level": "Recommended (62.5% land rate = good uptime)"
+      },
+      {
+        "attacker_acc": 390,
+        "target_res": 300,
+        "calculation": "(390 - 300 + 200) / 400 = 290 / 400 = 0.725",
+        "land_rate": 0.725,
+        "safety_level": "Excellent (72.5% land rate = near-perfect uptime)"
+      },
+      {
+        "attacker_acc": 450,
+        "target_res": 300,
+        "calculation": "(450 - 300 + 200) / 400 = 350 / 400 = 0.875",
+        "land_rate": 0.875,
+        "safety_level": "Overkill (87.5% land rate, approaching cap, wasted stats)"
+      },
+      {
+        "attacker_acc": 550,
+        "target_res": 300,
+        "calculation": "(550 - 300 + 200) / 400 = 450 / 400 = 1.125 → capped at 0.95",
+        "land_rate": 0.95,
+        "safety_level": "Maximum (95% cap, +160 ACC wasted)"
+      }
+    ],
+    "acc_thresholds_vs_unm_300_res": {
+      "minimum_viable": 250,
+      "recommended": 350,
+      "optimal": 390,
+      "maximum_useful": 490,
+      "notes": "Against UNM Clan Boss (300 RES), 390 ACC = 72.5% land rate (near-perfect). 450+ ACC is wasted (approaching 95% cap with diminishing returns)."
+    },
+    "non_resistable_mechanics": {
+      "description": "Some mechanics CANNOT be resisted regardless of RES stat. These mechanics have 100% success rate (unless blocked by immunity buffs).",
+      "examples": [
+        {
+          "mechanic": "UNM Clan Boss Stun",
+          "resistable": false,
+          "notes": "Boss stun lands 100% of the time regardless of target RES. RES stat is USELESS for stun mitigation. Must use Block Debuffs, Increase SPD, or designated stun target strategy."
+        },
+        {
+          "mechanic": "True Fear (some champions)",
+          "resistable": false,
+          "notes": "Some True Fear effects cannot be resisted (champion-specific)"
+        },
+        {
+          "mechanic": "Petrification (Mithrala Passive)",
+          "resistable": false,
+          "notes": "Petrification from Mithrala's passive cannot be resisted (activates on debuff placement)"
+        },
+        {
+          "mechanic": "Block Revive (some champions)",
+          "resistable": true,
+          "notes": "Block Revive CAN be resisted (not non-resistable, requires ACC check)"
+        }
+      ]
+    },
+    "buff_removal_mechanics": {
+      "description": "Buff removal attempts (e.g., Strip Buffs, Steal Buffs) use the same ACC/RES formula. Higher ACC = higher chance to remove buffs.",
+      "formula": "Same as debuff landing: (ACC - RES + 200) / 400",
+      "notes": "Some champions have guaranteed buff removal (ignores ACC/RES check). Check champion skill descriptions for 'ignores [Resist]' or 'cannot be resisted'."
+    },
+    "strategic_implications": {
+      "debuff_champions": {
+        "priority": "HIGH",
+        "target_acc_vs_unm": 350,
+        "optimal_acc_vs_unm": 390,
+        "notes": "Debuff champions (Decrease DEF/ATK, HP Burn, Poison) MUST hit ACC thresholds for reliable uptime. Below 250 ACC = massive gaps in debuff coverage."
+      },
+      "support_champions": {
+        "priority": "MEDIUM",
+        "target_res_arena": 350,
+        "optimal_res_arena": 450,
+        "notes": "Support champions (healers, cleansers, revivers) benefit from high RES to avoid crowd control in Arena. RES is LESS important for Clan Boss (boss uses non-resistable stun)."
+      },
+      "clan_boss_specific": {
+        "res_value": "LOW (boss uses non-resistable stun, RES is wasted stat)",
+        "acc_value": "HIGH (Decrease DEF/ATK, HP Burn require 350-390 ACC for reliable uptime)",
+        "recommendation": "Minimize RES on Clan Boss builds, maximize ACC for debuff champions. Redirect RES substats to DEF/HP/SPD for survivability."
+      },
+      "arena_specific": {
+        "res_value": "HIGH (avoid crowd control, resist buff removal)",
+        "acc_value": "VERY HIGH (land debuffs on high-RES enemies, 400+ ACC common in Gold+ Arena)",
+        "recommendation": "Debuff champions need 400+ ACC for Gold+ Arena (enemies have 350-450 RES). Support champions need 350+ RES to avoid crowd control."
+      }
+    }
+  },
+  "metadata": {
+    "source": "UNM_Clan_Boss.json (ACC/RES mechanics section)",
+    "creation_date": "2025-10-28",
+    "phase": "Phase E2 - Resistibility Mechanics",
+    "validation": "Cross-referenced with community testing, formula confirmed by Plarium",
+    "notes": "Comprehensive resistibility mechanics for ACC/RES stat optimization and debuff uptime calculations"
+  }
+}
