@@ -1,0 +1,219 @@
+{
+  "damage_formulas": {
+    "base_damage_calculation": {
+      "formula": "Base Damage = ATK × Skill Multiplier × (1 + Bonuses) × (1 - Target Damage Reduction)",
+      "skill_multiplier": "Each skill has unique multiplier (e.g., 3.5× ATK, 4× DEF, 0.2× MAX HP). See champion skill details.",
+      "bonuses": "Increase ATK 50%, Weaken 25%, Crit Damage, etc. (multiplicative stacking, see below)",
+      "target_damage_reduction": "Based on target DEF, Increase/Decrease DEF buffs (see DEF reduction formula below)",
+      "notes": "Base damage is ATK-scaled (or DEF/HP-scaled for specific skills). Affected by target DEF. Final damage is Base Damage × (1 - DEF reduction)."
+    },
+    "def_reduction_formula": {
+      "formula": "DEF Reduction = Target DEF / (Target DEF + 1200)",
+      "damage_multiplier": "Damage Taken = Base Damage × (1 - DEF Reduction)",
+      "example_high_def": {
+        "target_def": 2800,
+        "def_reduction": 0.70,
+        "damage_multiplier": 0.30,
+        "notes": "UNM Clan Boss has 2800 DEF. DEF reduction = 2800 / (2800 + 1200) = 0.70. Boss takes ONLY 30% of base damage (70% damage reduction from high DEF)."
+      },
+      "example_with_decrease_def_60": {
+        "target_def_base": 2800,
+        "decrease_def_60_percent": 0.60,
+        "target_def_after_debuff": 1120,
+        "def_reduction": 0.48,
+        "damage_multiplier": 0.52,
+        "damage_increase_vs_base": 1.73,
+        "notes": "With Decrease DEF 60% debuff, boss DEF drops to 1120 (2800 × 0.4). DEF reduction = 1120 / (1120 + 1200) = 0.48. Boss takes 52% of base damage. Damage increase = 0.52 / 0.30 = 1.73× (~73% more damage). This is why Decrease DEF 60% is CRITICAL for Clan Boss."
+      },
+      "decrease_def_tiers": {
+        "decrease_def_15": {
+          "target_def_multiplier": 0.85,
+          "damage_increase_vs_base": 1.15,
+          "notes": "Decrease DEF 15% reduces boss DEF to 2380 (2800 × 0.85). Damage increase ~1.15× (+15% damage)."
+        },
+        "decrease_def_30": {
+          "target_def_multiplier": 0.70,
+          "damage_increase_vs_base": 1.33,
+          "notes": "Decrease DEF 30% reduces boss DEF to 1960 (2800 × 0.70). Damage increase ~1.33× (+33% damage)."
+        },
+        "decrease_def_60": {
+          "target_def_multiplier": 0.40,
+          "damage_increase_vs_base": 1.73,
+          "notes": "Decrease DEF 60% reduces boss DEF to 1120 (2800 × 0.40). Damage increase ~1.73× (+73% damage). CRITICAL debuff for Clan Boss."
+        }
+      }
+    },
+    "crit_damage_formula": {
+      "formula": "Crit Damage = Base Damage × (1 + (C.DMG% - 50%) / 100)",
+      "c_dmg_base": 50,
+      "notes": "All champions have base 50% C.DMG. Additional C.DMG from gear/masteries is ADDITIVE. Final Crit Damage = Base Damage × (1 + (C.DMG - 50) / 100).",
+      "example_150_c_dmg": {
+        "base_damage": 10000,
+        "c_dmg_percent": 150,
+        "crit_damage": 20000,
+        "calculation": "10,000 × (1 + (150 - 50) / 100) = 10,000 × 2.0 = 20,000",
+        "notes": "150% C.DMG (base 50% + 100% from gear) = 2× damage on crit (doubles base damage)."
+      },
+      "example_250_c_dmg": {
+        "base_damage": 10000,
+        "c_dmg_percent": 250,
+        "crit_damage": 30000,
+        "calculation": "10,000 × (1 + (250 - 50) / 100) = 10,000 × 3.0 = 30,000",
+        "notes": "250% C.DMG (base 50% + 200% from gear) = 3× damage on crit (triples base damage). High C.DMG (200%+ from gear) is critical for Arena nukers."
+      }
+    },
+    "scaling_formulas": {
+      "atk_scaling": {
+        "formula": "Base Damage = ATK × Skill Multiplier",
+        "example": "Stag Knight A2 (3.5× ATK multiplier), 3000 ATK → Base Damage = 3000 × 3.5 = 10,500",
+        "notes": "Most skills are ATK-scaled. Skill multiplier varies by champion and skill (1× to 6× typical range)."
+      },
+      "def_scaling": {
+        "formula": "Base Damage = DEF × Skill Multiplier",
+        "example": "Geomancer A1 (4× DEF multiplier), 4000 DEF → Base Damage = 4000 × 4 = 16,000",
+        "notes": "DEF-scaling skills are STRONGER than ATK-scaling for tanks/DEF champions. DEF stats are typically HIGHER than ATK (3000-5000 DEF vs 2000-4000 ATK). DEF scaling also provides survivability (high DEF = damage reduction)."
+      },
+      "hp_scaling": {
+        "formula": "Base Damage = MAX HP × Skill Multiplier",
+        "example": "Brogni A3 (0.2× MAX HP multiplier), 80,000 HP → Base Damage = 80,000 × 0.2 = 16,000",
+        "notes": "HP-scaling skills are STRONGER for HP champions. HP multipliers are typically LOWER than ATK/DEF multipliers (0.1× to 0.3× typical range), but HP stats are HIGHER (60,000-100,000 HP vs 2000-5000 ATK/DEF). HP scaling also provides survivability (high HP = more turns survived)."
+      },
+      "target_max_hp_scaling": {
+        "formula": "Base Damage = Target MAX HP × Skill Multiplier",
+        "example": "Coldheart A3 (0.25× Target MAX HP multiplier), UNM CB 200M HP → Base Damage = 200,000,000 × 0.25 = 50,000,000",
+        "notes": "Target MAX HP scaling is STRONGEST against high-HP bosses (Clan Boss, Fire Knight, Spider). Coldheart A3 deals 50M damage base (before DEF reduction, crit, etc.) against UNM CB. This is why Coldheart is TOP TIER for boss-killing."
+      }
+    },
+    "multiplicative_vs_additive_stacking": {
+      "multiplicative_buffs": {
+        "description": "MOST buffs/debuffs stack MULTIPLICATIVELY (multiply together). Increase ATK 50% + Weaken 25% = 1.5 × 1.25 = 1.875× total damage (NOT 1.75×).",
+        "example_decrease_def_60_and_weaken_25": {
+          "decrease_def_60": 1.73,
+          "weaken_25": 1.25,
+          "combined_multiplier": 2.16,
+          "calculation": "1.73 × 1.25 = 2.16× total damage increase",
+          "notes": "Decrease DEF 60% (1.73×) + Weaken 25% (1.25×) = 2.16× total damage increase (multiplicative). This is why stacking debuffs is POWERFUL."
+        },
+        "example_increase_atk_50_and_increase_def_60": {
+          "increase_atk_50": 1.50,
+          "increase_def_60": 1.60,
+          "combined_multiplier": 2.40,
+          "calculation": "1.5 × 1.6 = 2.4× total damage increase (for DEF-scaling skill)",
+          "notes": "Increase ATK 50% + Increase DEF 60% (for DEF-scaling skill like Geomancer A1) = 2.4× damage increase. Buffs stack multiplicatively."
+        }
+      },
+      "additive_buffs": {
+        "description": "Some buffs/debuffs stack ADDITIVELY (add together). Multiple same-type debuffs do NOT stack (highest value applies). C.DMG from multiple sources is ADDITIVE.",
+        "example_multiple_decrease_def_60": {
+          "champion_1_decrease_def": 60,
+          "champion_2_decrease_def": 60,
+          "combined_effect": 60,
+          "notes": "Multiple Decrease DEF 60% debuffs do NOT stack. Only highest value applies (60%). Having 2 Decrease DEF champions is REDUNDANT (no additional benefit)."
+        },
+        "example_c_dmg_from_gear_and_masteries": {
+          "c_dmg_from_gear": 100,
+          "c_dmg_from_masteries": 30,
+          "c_dmg_from_buffs": 30,
+          "total_c_dmg": 160,
+          "notes": "C.DMG from multiple sources is ADDITIVE. Gear (100%) + Masteries (Keen Strike 10%, Ruthless Ambush 20%) + Buffs (Increase C.DMG 30%) = 160% total C.DMG from gear/buffs (base 50% + 160% = 210% total)."
+        }
+      }
+    },
+    "warmaster_giant_slayer_integration": {
+      "description": "Warmaster and Giant Slayer damage is INDEPENDENT of base skill damage. Calculated separately, added on top of base damage.",
+      "formula": "Total Damage = Base Damage (ATK/DEF/HP scaling) + Warmaster/Giant Slayer Damage (% MAX HP)",
+      "example_geomancer_a1_with_warmaster": {
+        "skill": "Geomancer A1 (4× DEF scaling)",
+        "geomancer_def": 4000,
+        "base_damage": 16000,
+        "crit_damage_150_c_dmg": 32000,
+        "def_reduction_70_percent": 9600,
+        "warmaster_proc": true,
+        "warmaster_damage": 6000000,
+        "total_damage": 6009600,
+        "notes": "Geomancer A1 with 4000 DEF, 150% C.DMG, vs UNM CB (70% DEF reduction): Base damage = 4000 × 4 × 2.0 × 0.30 = 9,600. Warmaster proc (60% chance) = 6,000,000. Total damage = 9,600 + 6,000,000 = 6,009,600 (~6M). Warmaster damage is 99.8% of total damage (base damage is negligible)."
+      },
+      "example_brogni_passive_reflection_with_giant_slayer": {
+        "skill": "Brogni Passive (Blessed Reflection - 1 hit per ally attacked)",
+        "allies_attacked_per_boss_aoe": 5,
+        "total_hits": 5,
+        "base_damage_per_hit": 5000,
+        "total_base_damage": 25000,
+        "giant_slayer_procs": 1.5,
+        "giant_slayer_damage": 9000000,
+        "total_damage": 9025000,
+        "notes": "Brogni passive reflection vs boss AOE (5 allies attacked): 5 hits × 5,000 base damage = 25,000. Giant Slayer procs (30% × 5 hits = 1.5 procs) = 9,000,000. Total damage = 25,000 + 9,000,000 = 9,025,000 (~9M). Giant Slayer damage is 99.7% of total damage. This is Brogni's PRIMARY damage source (passive reflection Giant Slayer procs, NOT base skill damage)."
+      }
+    },
+    "affinity_modifiers": {
+      "strong_affinity": {
+        "damage_dealt_multiplier": 1.15,
+        "damage_taken_multiplier": 0.85,
+        "notes": "Strong affinity (Magic vs Force, Force vs Spirit, Spirit vs Magic): +15% damage dealt, -15% damage taken. Total advantage ~35% (1.15 / 0.85 = 1.35×)."
+      },
+      "weak_affinity": {
+        "damage_dealt_multiplier": 0.85,
+        "damage_taken_multiplier": 1.15,
+        "glancing_hit_chance": 0.30,
+        "glancing_hit_damage_multiplier": 0.70,
+        "notes": "Weak affinity (Magic vs Spirit, Force vs Magic, Spirit vs Force): -15% damage dealt, +15% damage taken, 30% glancing hit chance. Glancing hits deal 70% damage, CANNOT crit (no Warmaster/Giant Slayer procs). Total disadvantage ~35-40%."
+      },
+      "void_affinity": {
+        "damage_dealt_multiplier": 1.00,
+        "damage_taken_multiplier": 1.00,
+        "glancing_hit_chance": 0.00,
+        "notes": "Void affinity is ALWAYS NEUTRAL (no advantages or disadvantages). Void champions are PREMIUM for affinity-rotation content (Clan Boss, Doom Tower)."
+      }
+    },
+    "turn_order_and_buff_timing": {
+      "description": "Damage is calculated AFTER all buffs/debuffs are applied. Speed tune determines buff/debuff application order.",
+      "example_decrease_def_before_damage": {
+        "turn_order": "Stag Knight A2 (Decrease DEF 60%) → Geomancer A1 (damage)",
+        "geomancer_damage_with_decrease_def": 16000,
+        "geomancer_damage_without_decrease_def": 9600,
+        "damage_increase": 1.67,
+        "notes": "If Stag Knight applies Decrease DEF 60% BEFORE Geomancer attacks, Geomancer deals 1.67× more damage (16,000 vs 9,600). Speed tune is CRITICAL for maximizing damage."
+      },
+      "example_increase_atk_before_damage": {
+        "turn_order": "Godseeker Aniri A3 (Increase ATK 50%) → Stag Knight A2 (damage)",
+        "stag_knight_damage_with_increase_atk": 15750,
+        "stag_knight_damage_without_increase_atk": 10500,
+        "damage_increase": 1.50,
+        "notes": "If Godseeker Aniri applies Increase ATK 50% BEFORE Stag Knight attacks, Stag Knight deals 1.5× more damage (15,750 vs 10,500). Buff timing is CRITICAL."
+      }
+    },
+    "damage_attribution_examples": {
+      "geomancer_total_damage_breakdown": {
+        "base_skill_damage": 480000,
+        "warmaster_damage": 180000000,
+        "hp_burn_damage": 352000000,
+        "total_damage": 532480000,
+        "damage_sources": {
+          "base_skills": 0.09,
+          "warmaster": 33.8,
+          "hp_burn": 66.1
+        },
+        "notes": "Geomancer total damage over 50 turns: Base skills ~480k (0.09%), Warmaster ~180M (33.8%), HP Burn ~352M (66.1%). HP Burn is PRIMARY damage source (66%), Warmaster secondary (34%), base skills negligible (<1%)."
+      },
+      "brogni_total_damage_breakdown": {
+        "base_skill_damage": 1250000,
+        "giant_slayer_passive_reflection": 360000000,
+        "giant_slayer_base_skills": 72000000,
+        "total_damage": 433250000,
+        "damage_sources": {
+          "base_skills": 0.29,
+          "giant_slayer_passive": 83.1,
+          "giant_slayer_base_skills": 16.6
+        },
+        "notes": "Brogni total damage over 50 turns: Base skills ~1.25M (0.29%), Giant Slayer passive reflection ~360M (83.1%), Giant Slayer base skills ~72M (16.6%). Passive reflection Giant Slayer is PRIMARY damage source (83%), base skill Giant Slayer secondary (17%), base skills negligible (<1%)."
+      }
+    }
+  },
+  "metadata": {
+    "source": "input/Mechanic_Dictionary/Masteries/masteries.json, UNM_Clan_Boss_Team_Analysis.md, Core_Mechanics/*.json",
+    "creation_date": "2025-10-28",
+    "phase": "Phase F5 - Damage Formulas",
+    "validation": "Cross-referenced with in-game testing (Geomancer/Brogni damage attribution), community calculators, DEF reduction formula validation",
+    "notes": "Comprehensive damage formulas for damage attribution modeling and team optimization. CRITICAL FINDINGS: (1) Warmaster/Giant Slayer damage is 95%+ of total damage for most champions (base skills negligible). (2) Decrease DEF 60% is CRITICAL debuff (1.73× damage increase). (3) Brogni passive reflection is primary damage source (83% of total damage from Giant Slayer procs). (4) Geomancer HP Burn is primary damage source (66% of total damage)."
+  }
+}

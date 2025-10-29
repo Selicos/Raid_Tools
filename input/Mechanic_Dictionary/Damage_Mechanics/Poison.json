@@ -1,0 +1,179 @@
+{
+  "poison": {
+    "name": "Poison",
+    "type": "Damage Debuff",
+    "damage_formula": {
+      "strong_poison": "5% of target MAX HP per turn",
+      "weak_poison": "2.5% of target MAX HP per turn",
+      "description": "Poison deals percentage damage of target's MAX HP at the START of target's turn (before target takes actions). NOT affected by target's DEF, Increase/Decrease DEF buffs, or Weaken. Fixed percentage damage.",
+      "notes": "Poison is MAX HP damage, meaning higher boss HP = higher Poison damage. Bosses limits to poison damage s limited. Check boss info for HP values and max damage."
+    },
+    "stacking_mechanics": {
+      "max_debuff_limit": 10,
+      "poison_stacking": "Poison stacks up to debuff limit (max 10 Poisons on target)",
+      "damage_calculation": "Total Poison damage = (Strong Poisons × 5%) + (Weak Poisons × 2.5%)",
+      "theoretical_max": "10 strong Poisons × 5% = 50% MAX HP per turn",
+      "notes": "Poison is ONLY debuff that stacks (same debuff type can have multiple instances). HP Burn, Decrease DEF, etc. do NOT stack."
+    },
+    "proc_mechanics": {
+      "trigger": "Start of target's turn (before actions)",
+      "duration_typical": "2 turns",
+      "placement_chance_varies_by_champion": true,
+      "landing_process": "2-step: (1) Skill base chance (varies), (2) ACC vs RES check ((ACC - RES + 200) / 400, capped 0-95%)",
+      "notes": "Poison placement requires both high base chance AND sufficient ACC. See Debuff_Landing.json for landing mechanics."
+    },
+    "damage_calculation_examples": {
+      "unm_clan_boss_200m_hp_1_poison": {
+        "target_max_hp": 200000000,
+        "strong_poison_count": 1,
+        "damage_per_turn": 10000000,
+        "turns_per_fight": 50,
+        "theoretical_max_damage": 500000000,
+        "notes": "UNM Clan Boss (200M HP) takes 10M damage per turn from 1 strong Poison (5% × 200M). Over 50 turns, theoretical max is 500M damage (assumes 100% uptime, unrealistic)."
+      },
+      "unm_clan_boss_200m_hp_10_poisons": {
+        "target_max_hp": 200000000,
+        "strong_poison_count": 10,
+        "damage_per_turn": 100000000,
+        "turns_per_fight": 50,
+        "theoretical_max_damage": 5000000000,
+        "notes": "UNM Clan Boss (200M HP) takes 100M damage per turn from 10 strong Poisons (50% × 200M). Over 50 turns, theoretical max is 5,000M (5 billion) damage. UNREALISTIC: Requires perfect uptime on 10 Poison stacks (never happens in practice)."
+      },
+      "realistic_poison_team_50_percent_uptime_6_poisons": {
+        "target_max_hp": 200000000,
+        "average_poison_count": 6,
+        "damage_per_turn": 60000000,
+        "uptime": 0.50,
+        "effective_damage_per_turn": 30000000,
+        "turns_per_fight": 50,
+        "total_damage": 1500000000,
+        "notes": "REALISTIC Poison team: 6 Poisons average (not 10), 50% uptime (Poisons fall off, RNG landing). Effective damage 30M/turn (60M × 50% uptime). Over 50 turns, 1,500M damage. This is HIGH-END Poison team (requires multiple Poison champions, high ACC, poison sensitivity)."
+      },
+      "current_team_weak_poison_setup": {
+        "champions": ["Frozen Banshee (weak build)", "Elenaril (weak build)", "Narma (weak build)"],
+        "average_poison_count": 2,
+        "damage_per_turn": 20000000,
+        "uptime": 0.30,
+        "effective_damage_per_turn": 6000000,
+        "turns_per_fight": 50,
+        "total_damage": 300000000,
+        "notes": "User's current Poison champions (Frozen Banshee, Elenaril, Narma) are WEAK BUILDS (low ACC, low speed, ungeared). Only maintain ~2 Poisons at 30% uptime. Total Poison damage ~300M over 50 turns. SIGNIFICANTLY WORSE than current team's HP Burn setup (Geomancer 352M HP Burn + Warmaster)."
+      }
+    },
+    "champion_examples": {
+      "frozen_banshee": {
+        "skill_a1": "Venomous Impact (2 Poisons 50% each)",
+        "skill_a3": "Poison Rain (AOE 2 Poisons 50% each)",
+        "passive": "Poison Sensitivity (extends Poison duration +1 turn when placed, 75% chance)",
+        "recommended_acc": 350,
+        "recommended_mastery": "Master Hexer T6 (30% extend +1 turn)",
+        "notes": "Frozen Banshee is TOP TIER Poison champion. A1 places 2 Poisons (can proc every turn), A3 places AOE 2 Poisons. Passive extends Poison duration (75% chance +1 turn). With Master Hexer T6 + Poison Sensitivity, Poisons can reach 4-5 turn duration (massive uptime). REQUIRES HIGH ACC (350+) and good gear."
+      },
+      "kael": {
+        "skill_a1": "Poison Strike (2.5% Poison 75% chance)",
+        "skill_a3": "Acid Rain (AOE 5% Poison 75% chance)",
+        "recommended_acc": 350,
+        "notes": "Kael is STARTER champion Poison specialist. A1 places weak Poison (2.5%), A3 places strong Poison AOE (5%). A1 is 0-turn CD (can apply every turn). Good early-game Poison champion, but outclassed late-game (low base chance 75%, only 1 Poison per skill)."
+      },
+      "outlaw_monk": {
+        "skill_a1": "Bane (5% Poison 50% chance)",
+        "recommended_acc": 350,
+        "notes": "Outlaw Monk is budget Poison champion. A1 places strong Poison (5%) with 50% base chance. A1 is 0-turn CD (can apply every turn). WEAK: Low base chance (50%), no AOE, no poison extension mechanics."
+      },
+      "elenaril": {
+        "skill_a2": "Poison Explosion (detonates Poisons for bonus damage)",
+        "damage_formula": "7.5% ATK per Poison exploded",
+        "notes": "Elenaril is POISON EXPLOSION specialist. A2 detonates Poisons (removes them, deals bonus damage). NICHE: Only good in Poison teams (needs 8-10 Poisons on boss to maximize explosion damage). WEAK for Clan Boss (removing Poisons loses future Poison ticks, net damage loss unless explosion is massive)."
+      }
+    },
+    "poison_team_strategies": {
+      "strategy_1_poison_stacking": {
+        "composition": "3-4 Poison champions (Frozen Banshee, Kael, Outlaw Monk, etc.)",
+        "goal": "Maintain 8-10 Poison stacks on boss at all times",
+        "requirements": "HIGH ACC (350-390 all champions), speed tune (171-189 SPD), Poison Sensitivity champion (Frozen Banshee)",
+        "expected_damage": "1,500M-2,000M over 50 turns (realistic high-end)",
+        "notes": "Poison stacking teams aim for 10 Poison debuff limit. Requires multiple Poison champions, high ACC, and Poison Sensitivity for extended duration."
+      },
+      "strategy_2_poison_explosion": {
+        "composition": "3 Poison champions + Elenaril (explosion) + support",
+        "goal": "Stack 8-10 Poisons, then detonate with Elenaril A2 for burst damage",
+        "requirements": "HIGH ACC (350-390), speed tune (Elenaril slowest for explosion timing), ATK-scaling gear for Elenaril",
+        "expected_damage": "Varies (explosion burst ~50M-100M per use, but loses future Poison ticks)",
+        "notes": "Poison explosion is NICHE strategy. Good for burst damage (Arena, dungeons), WEAK for sustained damage (Clan Boss). Removing Poisons loses future ticks (net damage loss long-term)."
+      },
+      "strategy_3_hybrid_poison_and_other_debuffs": {
+        "composition": "1-2 Poison champions + Decrease DEF + HP Burn + support",
+        "goal": "Balance Poison damage with other debuffs (Decrease DEF 60% boosts team damage, HP Burn 7.5%/turn)",
+        "requirements": "Moderate ACC (350), balanced gear (not all Poison specialists)",
+        "expected_damage": "800M-1,200M Poison + 300M-400M HP Burn + 2.5× team damage from Decrease DEF",
+        "notes": "Hybrid teams are BETTER for Clan Boss than pure Poison teams. Decrease DEF 60% boosts ALL damage sources (base skills, Warmaster, Giant Slayer, HP Burn). Pure Poison teams sacrifice team damage multipliers for Poison stacks (net damage loss)."
+      }
+    },
+    "debuff_limit_implications": {
+      "max_debuffs": 10,
+      "priority_for_clan_boss": "1. Decrease DEF 60%, 2. Decrease ATK 50%, 3. HP Burn 7.5%, 4. Weaken 25%, 5. Poison 5% (fill remaining slots)",
+      "poison_team_conflict": "Poison teams fill all 10 debuff slots with Poisons, pushing out Decrease DEF, HP Burn, etc. This REDUCES team damage (no Decrease DEF multiplier) and survivability (no Decrease ATK).",
+      "recommended_poison_count": "3-5 Poisons (leaves room for Decrease DEF, Decrease ATK, HP Burn, Weaken)",
+      "notes": "Poison teams sacrifice debuff slots for Poison stacks. This is NET DAMAGE LOSS for most teams (Decrease DEF 60% boosts team damage ~2.5×, HP Burn 7.5%/turn = 15M/turn, Weaken 25% boosts damage ~1.3×). Poison stacking is ONLY optimal if Poison uptime is >80% AND no better debuff champions available."
+    },
+    "strategic_implications": {
+      "clan_boss": {
+        "damage_potential_solo_poison": "10M per turn (5% × 200M HP UNM CB), 500M over 50 turns at 100% uptime",
+        "damage_potential_10_poisons": "100M per turn (50% × 200M HP), 5,000M over 50 turns at 100% uptime (UNREALISTIC)",
+        "realistic_damage_poison_team": "1,500M-2,000M over 50 turns (6-8 Poisons, 50% uptime)",
+        "realistic_damage_hybrid_team": "800M-1,200M Poison + 300M-400M HP Burn + 2.5× team damage from Decrease DEF = HIGHER total damage",
+        "notes": "Pure Poison teams are WEAKER than hybrid teams for Clan Boss. Decrease DEF 60% boosts ALL damage (base skills, Warmaster, Giant Slayer, HP Burn). Poison stacking sacrifices team damage multipliers for Poison ticks (net loss)."
+      },
+      "affinity_independence": {
+        "description": "Poison damage is MAX HP percentage, NOT affected by affinity (no weak affinity damage reduction)",
+        "notes": "Poison is AFFINITY-SAFE damage. Weak affinity only affects LANDING (glancing hits reduce ACC/RES success), not damage dealt."
+      },
+      "defensive_scaling": {
+        "description": "Poison damage ignores target DEF, Increase/Decrease DEF buffs, and Weaken. Fixed percentage damage.",
+        "notes": "Poison is PURE MAX HP damage. No DEF scaling, no ATK scaling. Only MAX HP matters."
+      },
+      "vs_hp_burn": {
+        "poison_damage": "5% MAX HP per turn (strong Poison)",
+        "hp_burn_damage": "7.5% MAX HP per turn",
+        "poison_advantage": "Stacks to 10 (50% MAX HP per turn total)",
+        "hp_burn_advantage": "+50% damage per debuff (7.5% vs 5%), leaves room for other debuffs",
+        "comparison": "1 HP Burn (7.5%/turn) = 1.5 Poisons (7.5% / 5% = 1.5). HP Burn is STRONGER per debuff. For Clan Boss, HP Burn + Decrease DEF + other debuffs is BETTER than 10 Poisons (no Decrease DEF = team damage loss).",
+        "notes": "HP Burn is BETTER for most Clan Boss teams. Leaves debuff slots for Decrease DEF 60% (team damage ~2.5×), Decrease ATK 50% (survivability), Weaken 25% (damage ~1.3×). Poison stacking is ONLY better if no HP Burn champions available OR Poison uptime >80% AND no Decrease DEF champion."
+      }
+    },
+    "common_mistakes": {
+      "mistake_1_pure_poison_team": {
+        "mistake": "Building pure Poison team (10 Poison stacks, no Decrease DEF or HP Burn)",
+        "impact": "Loses Decrease DEF 60% team damage multiplier (~2.5×), loses HP Burn 7.5%/turn (15M/turn). Net damage LOWER than hybrid team despite 10 Poison stacks.",
+        "solution": "Use hybrid team: 1 HP Burn (Geomancer), 1 Decrease DEF (Stag Knight), 3-5 Poisons (fill remaining debuff slots). Total damage HIGHER than pure Poison team."
+      },
+      "mistake_2_low_acc_poison_champions": {
+        "mistake": "Building Poison champions with low ACC (e.g., 200 ACC)",
+        "impact": "200 ACC vs 300 RES = 25% land rate. Poison uptime drops from 50% (350 ACC) to 12.5% (200 ACC). Poison damage drops from 1,500M to 375M.",
+        "solution": "Build Poison champions with 350-390 ACC for reliable landing."
+      },
+      "mistake_3_ignoring_poison_sensitivity": {
+        "mistake": "Not using Poison Sensitivity champion (Frozen Banshee passive)",
+        "impact": "Poison duration drops from 3-4 turns (with Poison Sensitivity + Master Hexer) to 2 turns (base). Poison uptime drops ~40-50%. Poison damage drops from 1,500M to 900M.",
+        "solution": "Use Frozen Banshee (or similar Poison Sensitivity champion) + Master Hexer T6 for extended Poison duration."
+      },
+      "mistake_4_poison_explosion_in_clan_boss": {
+        "mistake": "Using Elenaril A2 (Poison Explosion) in Clan Boss (removes Poisons for burst damage)",
+        "impact": "Removes 8-10 Poisons (loses future ticks). Explosion damage ~50M-100M, but loses 8-10 Poisons × 10M/turn × 10 turns = 800M-1,000M future damage. NET LOSS.",
+        "solution": "Do NOT use Poison Explosion in Clan Boss. Save for burst damage content (Arena, dungeons). For Clan Boss, maintain Poison stacks for sustained damage."
+      },
+      "mistake_5_confusing_poison_with_hp_burn": {
+        "mistake": "Thinking Poison and HP Burn are equivalent (both MAX HP damage)",
+        "impact": "Poison is 5%/turn (weaker but stacks), HP Burn is 7.5%/turn (stronger, does NOT stack). Building 10 Poison champions when 1 HP Burn champion is available = damage loss.",
+        "solution": "Understand HP Burn is STRONGER per debuff (7.5% vs 5%), does NOT stack. Use 1 HP Burn champion, fill rest of debuff slots with Poisons if no better debuffs available."
+      }
+    }
+  },
+  "metadata": {
+    "source": "input/Mechanic_Dictionary/Masteries/masteries.json, UNM_Clan_Boss_Team_Analysis.md, Debuff_Landing.json",
+    "creation_date": "2025-10-28",
+    "phase": "Phase F4 - Poison Mechanics",
+    "validation": "Cross-referenced with in-game testing, community calculators, user's weak Poison team setup (Frozen Banshee/Elenaril/Narma), hybrid team comparison",
+    "notes": "Comprehensive Poison mechanics for damage attribution modeling and team building. CRITICAL FINDING: Pure Poison teams are WEAKER than hybrid teams (HP Burn + Decrease DEF) for Clan Boss. User's current Poison setup (Frozen Banshee/Elenaril/Narma weak builds) only contributes ~300M damage over 50 turns. Current team's HP Burn setup (Geomancer 352M HP Burn + Warmaster) is SIGNIFICANTLY STRONGER."
+  }
+}

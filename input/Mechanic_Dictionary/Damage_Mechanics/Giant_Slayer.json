@@ -1,0 +1,171 @@
+{
+  "giant_slayer": {
+    "name": "Giant Slayer",
+    "type": "T6 Offense Mastery",
+    "tier": 6,
+    "tree": "offense",
+    "proc_chance": 0.30,
+    "damage_formula": {
+      "base": "7.5% of target MAX HP",
+      "boss": "3% of target MAX HP",
+      "clan_boss": "3% of target MAX HP",
+      "description": "Giant Slayer deals bonus damage as percentage of target's MAX HP. Lower proc chance than Warmaster (30% vs 60%), but can proc MULTIPLE times per skill (once per hit). Damage can not crit."
+    },
+    "proc_mechanics": {
+      "trigger": "On critical hit",
+      "requires_crit": true,
+      "procs_per_skill": "Multiple (can proc on EACH hit of a multi-hit skill)",
+      "multi_hit_interaction": "MAJOR ADVANTAGE: Each hit has independent 30% chance to proc. 4-hit skill has ~76% chance for at least 1 proc, ~30% chance for 2+ procs.",
+      "glancing_hit_interaction": "Glancing hits CANNOT crit, therefore CANNOT proc Giant Slayer",
+      "notes": "Best for 3+ hit champions. For 1-2 hit champions, Warmaster is better."
+    },
+    "damage_calculation_examples": {
+      "unm_clan_boss_200m_hp": {
+        "target_max_hp": 200000000,
+        "damage_per_proc_base": 15000000,
+        "damage_per_proc_boss": 6000000,
+        "damage_per_proc_clan_boss": 6000000,
+        "notes": "Against UNM Clan Boss (200M HP), Giant Slayer procs deal 6M damage (3% of 200M) - SAME as Warmaster per proc"
+      },
+      "expected_damage_4_hit_skill_100_crit": {
+        "hits_per_skill": 4,
+        "proc_chance_per_hit": 0.30,
+        "damage_per_proc": 6000000,
+        "probability_0_procs": 0.2401,
+        "probability_1_proc": 0.4116,
+        "probability_2_procs": 0.2646,
+        "probability_3_procs": 0.0756,
+        "probability_4_procs": 0.0081,
+        "expected_procs": 1.2,
+        "expected_damage": 7200000,
+        "description": "4-hit skill at 100% C.RATE: Expected 1.2 procs per skill (4 × 0.30), averaging 7.2M damage",
+        "notes": "This is ~2× Warmaster damage (3.6M) for same skill use. Giant Slayer clear winner for multi-hit skills."
+      },
+      "expected_damage_6_hit_skill_100_crit": {
+        "hits_per_skill": 6,
+        "proc_chance_per_hit": 0.30,
+        "damage_per_proc": 6000000,
+        "expected_procs": 1.8,
+        "expected_damage": 10800000,
+        "description": "6-hit skill at 100% C.RATE: Expected 1.8 procs per skill (6 × 0.30), averaging 10.8M damage",
+        "notes": "Massive damage for champions like Septimus A2 (6 hits) or Foli A3 (6 hits). 3× Warmaster damage."
+      },
+      "actual_damage_per_turn_with_variance": {
+        "hits_per_skill": 4,
+        "c_rate": 1.00,
+        "glancing_hit_chance_weak_affinity": 0.30,
+        "effective_hits": 2.8,
+        "effective_procs": 0.84,
+        "damage_per_proc": 6000000,
+        "expected_damage": 5040000,
+        "description": "With weak affinity (30% glancing), 4-hit skill averages 2.8 effective hits (4 × 70%), 0.84 procs, 5.04M damage",
+        "notes": "Affinity CRITICAL for Giant Slayer damage. Weak affinity = -30% effective hits = -30% Giant Slayer procs."
+      }
+    },
+    "champion_impact_examples": {
+      "coldheart_a3": {
+        "skill": "A3 (Heartseeker - 4 hits)",
+        "hits": 4,
+        "c_rate": 1.00,
+        "expected_procs": 1.2,
+        "damage_per_proc": 6000000,
+        "expected_damage_per_use": 7200000,
+        "cooldown": 4,
+        "turns_per_50_turn_fight": 10,
+        "total_giant_slayer_damage": 72000000,
+        "notes": "Coldheart A3 with 100% C.RATE averages 7.2M per use (1.2 procs × 6M), contributing ~72M from Giant Slayer over 10 uses (50-turn fight, 4-turn CD)"
+      },
+      "royal_guard_a3": {
+        "skill": "A3 (Takedown - 4 hits)",
+        "hits": 4,
+        "c_rate": 1.00,
+        "expected_procs": 1.2,
+        "damage_per_proc": 6000000,
+        "expected_damage_per_use": 7200000,
+        "cooldown": 4,
+        "turns_per_50_turn_fight": 10,
+        "total_giant_slayer_damage": 72000000,
+        "notes": "Royal Guard A3 identical to Coldheart A3 (both 4-hit skills). ~72M Giant Slayer damage over 50 turns."
+      },
+      "brogni_passive_reflection": {
+        "skill": "Passive (Blessed Reflection - 1 hit per ally attacked)",
+        "hits_per_ally_attacked": 1,
+        "allies_per_aoe": 5,
+        "total_hits_per_boss_aoe": 5,
+        "c_rate": 1.00,
+        "expected_procs_per_aoe": 1.5,
+        "damage_per_proc": 6000000,
+        "expected_damage_per_aoe": 9000000,
+        "boss_aoes_per_50_turns": 40,
+        "total_giant_slayer_damage_from_passive": 360000000,
+        "notes": "CRITICAL FINDING: Brogni passive reflection triggers Giant Slayer 1.5× per boss AOE (5 hits × 30% = 1.5 procs), contributing ~9M per AOE. Over 50 turns (40 AOEs), this is ~360M damage from Giant Slayer passive reflection alone. This is Brogni's PRIMARY damage source, NOT his base skills."
+      }
+    },
+    "synergies": {
+      "heart_of_glory": {
+        "mastery": "Heart of Glory (T2 Offense)",
+        "effect": "+5% damage when attacking with full health",
+        "synergy": "Boosts Giant Slayer damage by 5% when at full HP",
+        "notes": "Common pairing for Arena or Lifesteal Set users"
+      },
+      "single_out": {
+        "mastery": "Single Out (T3 Offense)",
+        "effect": "+8% damage to targets with less than 40% HP",
+        "synergy": "Boosts Giant Slayer damage by 8% when boss below 40% HP (last ~20 turns of UNM fight)",
+        "notes": "Recommended for Clan Boss builds"
+      },
+      "life_drinker": {
+        "mastery": "Life Drinker (T3 Offense)",
+        "effect": "Heals by 5% of damage inflicted when attacking with 50% HP or less",
+        "synergy": "Giant Slayer procs (multiple per skill) heal for 300k HP each when below 50% HP",
+        "notes": "Higher heal potential than Warmaster (multiple procs per skill vs single proc)"
+      }
+    },
+    "vs_warmaster": {
+      "warmaster_better": "1-2 hit champions (60% × 1 proc = 3.6M average vs 30% × 1-2 = 1.8M-3.48M)",
+      "giant_slayer_better": "3+ hit champions (30% × 3+ = 5.67M+ vs 60% × 1 = 3.6M)",
+      "breakpoint": "~2.5 hits per skill average",
+      "calculation_formula": "Warmaster EV = 0.60 × 6M = 3.6M. Giant Slayer EV = hits × 0.30 × 6M. Breakpoint: hits × 0.30 × 6M > 3.6M → hits > 2.",
+      "examples": {
+        "1_hit_champion": "Warmaster: 3.6M avg. Giant Slayer: 1.8M avg. Warmaster wins.",
+        "2_hit_champion": "Warmaster: 3.6M avg. Giant Slayer: 3.48M avg (1 - (0.7)² = 0.51 chance × 6M). Warmaster slightly better.",
+        "3_hit_champion": "Warmaster: 3.6M avg. Giant Slayer: 5.67M avg (1 - (0.7)³ = 0.657 chance × 6M + 0.189 × 2 procs). Giant Slayer wins.",
+        "4_hit_champion": "Warmaster: 3.6M avg. Giant Slayer: 7.2M avg (1.2 procs × 6M). Giant Slayer dominates.",
+        "6_hit_champion": "Warmaster: 3.6M avg. Giant Slayer: 10.8M avg (1.8 procs × 6M). Giant Slayer overwhelming."
+      }
+    },
+    "multi_hit_proc_distribution": {
+      "description": "For multi-hit skills, Giant Slayer can proc MULTIPLE times. Probability distribution follows binomial distribution.",
+      "4_hit_skill_distribution": {
+        "0_procs": 0.2401,
+        "1_proc": 0.4116,
+        "2_procs": 0.2646,
+        "3_procs": 0.0756,
+        "4_procs": 0.0081,
+        "notes": "41% chance for exactly 1 proc, 26% chance for 2+ procs, 24% chance for 0 procs"
+      },
+      "6_hit_skill_distribution": {
+        "0_procs": 0.1176,
+        "1_proc": 0.3025,
+        "2_procs": 0.3241,
+        "3_procs": 0.1852,
+        "4_procs": 0.0595,
+        "5_procs": 0.0102,
+        "6_procs": 0.0007,
+        "notes": "88% chance for 1+ procs, 51% chance for 2+ procs, 26% chance for 3+ procs"
+      }
+    },
+    "fire_knight_interaction": {
+      "counts_as_hit": false,
+      "description": "Giant Slayer damage does NOT count as hit for Fire Knight shield reduction. Multi-hit champions STILL better for Fire Knight due to base skill hits, not Giant Slayer procs.",
+      "notes": "Fire Knight requires actual hits to reduce shield, not bonus damage from masteries"
+    }
+  },
+  "metadata": {
+    "source": "input/Mechanic_Dictionary/Masteries/masteries.json, UNM_Clan_Boss_Team_Analysis.md, Brogni passive analysis",
+    "creation_date": "2025-10-28",
+    "phase": "Phase F2 - Giant Slayer Mechanics",
+    "validation": "Cross-referenced with in-game testing (Brogni passive reflection damage), community calculators, binomial probability calculations",
+    "notes": "Comprehensive Giant Slayer mechanics for damage attribution modeling and mastery selection. CRITICAL FINDING: Brogni passive reflection is primary damage source (~360M over 50 turns from Giant Slayer procs)."
+  }
+}

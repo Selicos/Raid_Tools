@@ -1,0 +1,114 @@
+{
+  "warmaster": {
+    "name": "Warmaster",
+    "type": "T6 Offense Mastery",
+    "tier": 6,
+    "tree": "offense",
+    "proc_chance": 0.60,
+    "damage_formula": {
+      "base": "10% of target MAX HP",
+      "boss": "4% of target MAX HP",
+      "clan_boss": "3% of target MAX HP (some sources say 4%)",
+      "description": "Warmaster deals bonus damage as percentage of target's MAX HP. Higher proc chance than Giant Slayer (60% vs 30%), but single proc per skill. Damage can not crit."
+    },
+    "proc_mechanics": {
+      "trigger": "On critical hit",
+      "requires_crit": true,
+      "procs_per_skill": 1,
+      "multi_hit_interaction": "Only procs ONCE per skill use, regardless of number of hits (A1/A2/A3 treated as single skill use)",
+      "glancing_hit_interaction": "Glancing hits CANNOT crit, therefore CANNOT proc Warmaster",
+      "notes": "Best for 1-2 hit champions. For multi-hit champions (3+ hits), Giant Slayer is better."
+    },
+    "damage_calculation_examples": {
+      "unm_clan_boss_200m_hp": {
+        "target_max_hp": 200000000,
+        "damage_per_proc_base": 20000000,
+        "damage_per_proc_boss": 8000000,
+        "damage_per_proc_clan_boss": 6000000,
+        "notes": "Against UNM Clan Boss (200M HP), Warmaster procs deal 6M damage (3% of 200M)"
+      },
+      "expected_damage_per_turn_100_crit": {
+        "proc_chance": 0.60,
+        "damage_per_proc": 6000000,
+        "expected_damage": 3600000,
+        "description": "With 100% C.RATE, Warmaster averages 3.6M damage per skill use (60% × 6M)",
+        "notes": "Over 50 turns (typical UNM fight), Warmaster contributes ~180M damage if every turn procs (unrealistic, assumes 100% C.RATE and no glancing hits)"
+      },
+      "actual_damage_per_turn_with_variance": {
+        "c_rate": 1.00,
+        "glancing_hit_chance_weak_affinity": 0.30,
+        "effective_proc_chance": 0.42,
+        "damage_per_proc": 6000000,
+        "expected_damage": 2520000,
+        "description": "With weak affinity (30% glancing), effective proc chance drops to 42% (60% × 70%), averaging 2.52M per turn",
+        "notes": "Affinity CRITICAL for Warmaster damage. Weak affinity = -30% Warmaster procs."
+      }
+    },
+    "champion_impact_examples": {
+      "geomancer": {
+        "base_c_rate": 0.57,
+        "target_c_rate": 1.00,
+        "skills_per_50_turns": 50,
+        "damage_per_proc": 6000000,
+        "baseline_damage_57_crit": 97740000,
+        "optimized_damage_100_crit": 180000000,
+        "damage_gain": 82260000,
+        "notes": "Geomancer C.RATE 57% → 100% = +82M Warmaster damage over 50 turns (unrealistic max, assumes no glancing hits and every turn procs)"
+      },
+      "geomancer_realistic": {
+        "c_rate": 1.00,
+        "warmaster_proc_chance": 0.60,
+        "a1_usage_percent": 0.70,
+        "a2_a3_usage_percent": 0.30,
+        "turns_per_50_turn_fight": 50,
+        "expected_warmaster_procs": 30,
+        "damage_per_proc": 6000000,
+        "total_warmaster_damage": 180000000,
+        "notes": "REALISTIC: Geomancer with 100% C.RATE averages 30 Warmaster procs over 50 turns (60% proc × 50 turns), contributing ~180M from Warmaster alone (NOT accounting for affinity variance)"
+      }
+    },
+    "synergies": {
+      "heart_of_glory": {
+        "mastery": "Heart of Glory (T2 Offense)",
+        "effect": "+5% damage when attacking with full health",
+        "synergy": "Boosts Warmaster damage by 5% when at full HP",
+        "notes": "Common pairing for Arena or Lifesteal Set users"
+      },
+      "single_out": {
+        "mastery": "Single Out (T3 Offense)",
+        "effect": "+8% damage to targets with less than 40% HP",
+        "synergy": "Boosts Warmaster damage by 8% when boss below 40% HP (last ~20 turns of UNM fight)",
+        "notes": "Recommended for Clan Boss builds"
+      },
+      "life_drinker": {
+        "mastery": "Life Drinker (T3 Offense)",
+        "effect": "Heals by 5% of damage inflicted when attacking with 50% HP or less",
+        "synergy": "Warmaster procs (6M damage) heal for 300k HP when below 50% HP",
+        "notes": "Synergizes well for survivability in long fights"
+      }
+    },
+    "vs_giant_slayer": {
+      "warmaster_best_for": "1-2 hit champions (A1/A2/A3 with single hit or double hit)",
+      "giant_slayer_best_for": "3+ hit champions (multi-hit skills like Coldheart A3)",
+      "breakpoint": "~2.5 hits per skill average",
+      "calculation": "Warmaster: 60% × 1 proc = 60% effective proc. Giant Slayer: 30% × 3 hits = ~65% effective proc (1 - (0.7)³ = 0.657).",
+      "examples": {
+        "geomancer": "A1 (1 hit), A2 (1 hit), A3 (1 hit AOE) = Warmaster better (60% × 1 = 60% vs 30% × 1 = 30%)",
+        "brogni": "A1 (1 hit), A2 (1 hit AOE), A3 (1 hit AOE) = Warmaster better (passive reflection counted separately)",
+        "coldheart": "A1 (1 hit), A2 (3 hits), A3 (4 hits) = Giant Slayer better (30% × 4 = ~76% proc chance vs 60% × 1)"
+      }
+    },
+    "fire_knight_interaction": {
+      "counts_as_hit": false,
+      "description": "Warmaster damage does NOT count as hit for Fire Knight shield reduction. Use multi-hit champions for Fire Knight, not Warmaster reliance.",
+      "notes": "Fire Knight requires actual hits to reduce shield, not bonus damage from masteries"
+    }
+  },
+  "metadata": {
+    "source": "input/Mechanic_Dictionary/Masteries/masteries.json, UNM_Clan_Boss_Team_Analysis.md",
+    "creation_date": "2025-10-28",
+    "phase": "Phase F1 - Warmaster Mechanics",
+    "validation": "Cross-referenced with in-game testing (Geomancer damage contribution), community calculators",
+    "notes": "Comprehensive Warmaster mechanics for damage attribution modeling and mastery selection"
+  }
+}
