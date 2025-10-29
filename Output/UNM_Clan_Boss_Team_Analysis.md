@@ -25,9 +25,11 @@
 10. [Stat Gaps Analysis - UNM Requirements vs Current Team](#stat-gaps-analysis---unm-requirements-vs-current-team)
 11. [Ranked Recommendations (Priority 1-10)](#ranked-recommendations-priority-1-10)
 12. [Alternates Analysis - Owned Champion Swaps](#alternates-analysis---owned-champion-swaps)
-13. [Validation & Documentation Standards](#validation--documentation-standards)
-14. [Update Notes & Version History](#update-notes--version-history)
-15. [Cross-References & Related Files](#cross-references--related-files)
+13. [Gear Audit Workflow - Speed Boot Optimization](#gear-audit-workflow---speed-boot-optimization)
+14. [Validation & Documentation Standards](#validation--documentation-standards)
+15. [Update Notes & Version History](#update-notes--version-history)
+16. [Cross-References & Related Files](#cross-references--related-files)
+17. [Glossary & Abbreviations](#glossary--abbreviations)
 16. [Glossary & Abbreviations](#glossary--abbreviations)
 
 ---
@@ -1282,6 +1284,243 @@ Based on current team bottlenecks and regearing constraints, evaluated owned cha
 - Regearing: High difficulty (Mithrala + Aniri aggressive SPD reductions)
 
 **User should decide**: Arena team priority vs +5-10M extra CB damage.
+
+---
+
+## **GEAR AUDIT WORKFLOW - Speed Boot Optimization**
+
+### **Objective**
+Identify which champions can drop SPD boots to hit 1:1 tune targets (171-189 SPD), calculate exact stat impact, and prioritize regearing decisions based on current gear configuration.
+
+### **Status**: ⏳ IN PROGRESS - Awaiting gear details from user
+
+---
+
+### **Current Known Gear Configuration**
+
+| Champion | Current SPD | SPD Sets Equipped | Target SPD | SPD Gap | Boot Status |
+|----------|-------------|-------------------|------------|---------|-------------|
+| **Geomancer** | 210 | 4x Feral (+12% SPD) | **171** (stun) | -39 | ❓ Unknown |
+| **Stag Knight** | 222 | Unknown sets | 180 | -42 | ❓ Unknown |
+| **Brogni** | 225 | 4x Bolster + 2x Protection (no SPD) | 183 | -42 | ❓ Unknown |
+| **Mithrala** | 245 | 2x Feral (+12% SPD) + 4x Perception | 186 | -59 | ❓ Unknown |
+| **Godseeker Aniri** | 264 | 2x Righteous + 4x Regeneration (no SPD) | 189 | -75 | ❓ Unknown |
+
+**Key Unknowns** (Required for analysis):
+1. ❓ Which champions have SPD boots equipped? (SPD main stat vs DEF%/HP%/ATK%)
+2. ❓ What are the SPD substats on each gear piece? (total SPD from substats)
+3. ❓ What gear sets are equipped on Stag Knight? (unclear from original screenshot)
+4. ❓ Replacement boots availability? (DEF%/HP% boots in inventory)
+
+---
+
+### **SPD Source Breakdown Methodology**
+
+**Total SPD Formula:**
+```
+Total SPD = Base Champion SPD + (Base SPD × Set Bonuses %) + Boots Main Stat + Sum of All Substats
+```
+
+**Standard Values:**
+- **SPD boots (5-6★)**: 40-50 SPD main stat
+- **DEF% boots (5-6★)**: 0 SPD main stat (only substats)
+- **HP% boots (5-6★)**: 0 SPD main stat (only substats)
+- **SPD set (2-piece)**: +12% base SPD
+- **Feral set (4-piece)**: +12% base SPD
+- **SPD substats per piece**: 3-6 SPD average per roll
+
+**Example Calculation (Brogni):**
+```
+Base SPD: 102 (from Champion_stats.md - need to validate)
+Set Bonus: 0% (Bolster + Protection = no SPD bonus)
+Boots: 45 SPD (assumed SPD boots)
+Substats: 78 SPD (assumed across 6 pieces, ~13 per piece)
+Total: 102 + 0 + 45 + 78 = 225 SPD ✅ (matches current)
+```
+
+---
+
+### **Data Collection Template**
+
+**Option 1 - Screenshots** (Preferred):
+- Gear details page showing all 6 pieces with main stats visible
+- Hover over each piece to show SPD substats (screenshot substat rolls)
+
+**Option 2 - Text Format**:
+```
+Champion: [Name]
+Base SPD: [X] (from Champion_stats.md)
+Current Total SPD: [X]
+
+Gear Breakdown:
+- Boots: [SPD/DEF%/HP%] main stat, [X] SPD substat
+- Gloves: [Current main], [X] SPD substat
+- Chest: [Current main], [X] SPD substat  
+- Helmet: [X] SPD substat
+- Weapon: [X] SPD substat
+- Shield: [X] SPD substat
+
+Total SPD from substats: [X]
+Set bonuses: [List sets, note any SPD sets]
+```
+
+---
+
+### **Predicted Boot Swap Impact (Preliminary Estimates)**
+
+Based on SPD gaps and set configurations, here are predicted scenarios:
+
+#### **🎯 Stag Knight** (222 → 180 SPD, gap -42) - **EASIEST**
+
+**Predicted Current Breakdown:**
+- Base SPD: ~100 (estimated)
+- Set bonus: Unknown (possibly SPD set = +12%)
+- Boots: ~45 SPD (likely SPD boots)
+- Substats: ~65 SPD (estimated)
+
+**Predicted Fix:**
+- Remove SPD boots (-45 SPD) → 222 - 45 = **177 SPD**
+- Add back DEF% boots with ~3 SPD substat → **180 SPD** ✅ (TARGET HIT!)
+
+**Stat Trade:**
+- Lose: -45 SPD (from main stat)
+- Gain: +60% DEF (main stat) on 4,616 base DEF = **+2,770 DEF** (tank role benefit)
+
+**Difficulty**: ⭐ EASY (single boot swap, likely achieves target)
+
+---
+
+#### **🎯 Brogni** (225 → 183 SPD, gap -42) - **EASIEST**
+
+**Predicted Current Breakdown:**
+- Base SPD: 102 (Sacred Order legendary, typical ~100-105)
+- Set bonus: 0% (Bolster + Protection)
+- Boots: ~45 SPD (likely SPD boots)
+- Substats: ~78 SPD (high substats across gear)
+
+**Predicted Fix:**
+- Remove SPD boots (-45 SPD) → 225 - 45 = **180 SPD**
+- Add back DEF% boots with ~3 SPD substat → **183 SPD** ✅ (TARGET HIT!)
+
+**Stat Trade:**
+- Lose: -45 SPD (from main stat)
+- Gain: +60% DEF on 5,034 base DEF = **+3,020 DEF** (shield scaling + survivability)
+
+**Difficulty**: ⭐ EASY (single boot swap, likely achieves target)
+
+---
+
+#### **🎯 Geomancer** (210 → 171 SPD, gap -39) - **MEDIUM**
+
+**Predicted Current Breakdown:**
+- Base SPD: ~95 (Shadowkin typical base)
+- Set bonus: +12% Feral = +11 SPD (95 × 0.12)
+- Boots: ~45 SPD (likely SPD boots)
+- Substats: ~59 SPD
+
+**Predicted Fix Option A** (Remove Feral only):
+- Remove 4x Feral (-11 SPD) → 210 - 11 = 199 SPD
+- Still -28 SPD over 171 target → needs boot adjustment
+
+**Predicted Fix Option B** (Remove Feral + adjust boots):
+- Remove Feral (-11 SPD) + Remove SPD boots (-45 SPD) → 210 - 56 = **154 SPD**
+- TOO LOW! Need +17 SPD from new gear
+- Replace with Lifesteal/Savage set + DEF%/HP% boots with SPD substats (need ~17 SPD substats total)
+
+**Stat Trade:**
+- Lose: -45 SPD (boots) + 12% SPD set bonus
+- Gain: Lifesteal (15% damage healed) OR Savage (25% ignore DEF) + DEF%/HP% survivability
+
+**Difficulty**: ⭐⭐ MEDIUM (set swap + boots + substat management)
+
+---
+
+#### **🎯 Godseeker Aniri** (264 → 189 SPD, gap -75) - **VERY HARD**
+
+**Predicted Current Breakdown:**
+- Base SPD: ~109 (Support role, high base SPD)
+- Set bonus: 0% (Righteous + Regeneration)
+- Boots: ~45 SPD (likely SPD boots)
+- Substats: ~110 SPD (VERY HIGH - likely high SPD rolls on all 6 pieces)
+
+**Predicted Fix:**
+- Remove SPD boots (-45 SPD) → 264 - 45 = **219 SPD**
+- Still -30 SPD over 189 target
+- Need to regear 2-3 pieces with lower SPD substats (-30 SPD total reduction)
+
+**Stat Trade:**
+- Lose: -45 SPD (boots) + ~30 SPD (substat reduction via regearing)
+- Gain: HP% boots (+60% HP on 76k base = +46k HP survivability) + better tank stats on replacement gear
+
+**Difficulty**: ⭐⭐⭐⭐ VERY HARD (boots + aggressive regearing of 2-3 pieces)
+
+---
+
+#### **⚠️ Mithrala** (245 → 186 SPD, gap -59) - **ARENA CONFLICT - DEFER**
+
+**Predicted Current Breakdown:**
+- Base SPD: ~108 (High Elf support, high base)
+- Set bonus: +12% Feral = +13 SPD
+- Boots: ~45 SPD (Arena speed boots)
+- Substats: ~79 SPD
+
+**Predicted Fix** (IF Option A chosen):
+- Remove Feral (-13 SPD) + Remove SPD boots (-45 SPD) → 245 - 58 = **187 SPD** ✅ (close to 186 target!)
+- Replace with Lifesteal/Immortal + DEF% boots
+
+**⚠️ RECOMMENDATION**: **DEFER** until Option A vs Option B decision made
+- If Option B (Rector Drath swap): Keep Mithrala for Arena, no regearing needed
+- If Option A: Proceed with regearing (breaks Arena team)
+
+**Difficulty**: ⭐⭐⭐ HARD (set swap + boots + Arena team impact)
+
+---
+
+### **Regearing Priority Order** (Easiest → Hardest)
+
+| Priority | Champion | Predicted Difficulty | Why | Do When |
+|----------|----------|----------------------|-----|---------|
+| **1** | Stag Knight | ⭐ EASY | Single boot swap likely hits target | Phase 2 (after C.RATE fixes) |
+| **2** | Brogni | ⭐ EASY | Single boot swap likely hits target | Phase 2 (after C.RATE fixes) |
+| **3** | Geomancer | ⭐⭐ MEDIUM | Set swap + boots + substat tuning | Phase 2 (blocking speed tune) |
+| **4** | Mithrala | ⭐⭐⭐ HARD | Arena conflict, defer decision | Phase 3 (after Option A/B choice) |
+| **5** | Godseeker Aniri | ⭐⭐⭐⭐ VERY HARD | Boots + regear 2-3 pieces | Phase 4 (final optimization) |
+
+---
+
+### **Next Steps: Data Collection**
+
+**User Action Required:**
+
+**Quick Start** (Recommended):
+1. Provide gear details for **Stag Knight** and **Brogni** only (easiest wins)
+2. We'll validate boot swap impact with exact calculations
+3. Once validated, expand to Geomancer and Aniri
+
+**Data Needed per Champion:**
+- Screenshot: Gear details page (all 6 pieces visible)
+- Screenshot: Hover over each piece to show SPD substats
+- OR Text: Fill out template above with main stats + SPD substats
+
+**Alternative** (if screenshots difficult):
+- Just confirm: "Does [Champion] have SPD boots equipped?" (yes/no for each)
+- I'll estimate impact and create preliminary recommendations
+
+---
+
+### **Expected Analysis Output** (After data received)
+
+Once gear details provided, I will create:
+
+1. **Exact SPD Breakdown Table** - Base + sets + boots + substats for each champion
+2. **Boot Swap Calculator** - Before/after SPD with exact values
+3. **Stat Trade-off Analysis** - DEF/HP gains vs SPD loss for each swap
+4. **Replacement Boots Recommendations** - DEF% vs HP% per champion role
+5. **Substat Requirements** - Minimum SPD substats needed on replacement gear
+6. **Gear Availability Check** - Confirm you have replacement boots/sets in inventory
+7. **Step-by-Step Regearing Plan** - Exact order of operations (which champion first, which piece first)
+
+**Status**: ⏳ Awaiting user gear data (screenshots or text format)
 
 ---
 
