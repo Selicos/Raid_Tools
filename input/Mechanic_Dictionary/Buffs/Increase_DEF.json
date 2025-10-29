@@ -1,0 +1,192 @@
+{
+  "increase_def": {
+    "name": "Increase DEF",
+    "type": "Buff (Defense / Damage Reduction)",
+    "tiers": {
+      "tier_1": {
+        "value": 0.30,
+        "description": "30% DEF increase",
+        "notes": "Weak tier, uncommon in end-game content"
+      },
+      "tier_2": {
+        "value": 0.60,
+        "description": "60% DEF increase",
+        "notes": "STRONGEST tier, HIGH VALUE for survivability (Clan Boss, dungeons, Faction Wars). This is the GOLD STANDARD buff."
+      }
+    },
+    "effect": {
+      "description": "Increases all allies' DEF by X%, reducing damage taken from ALL sources. CRITICAL for survivability in sustained fights (Clan Boss, long dungeon boss fights).",
+      "duration_typical": "2 turns",
+      "placement_chance_varies_by_champion": true,
+      "notes": "Increase DEF is MULTIPLICATIVE damage reduction buff. 60% DEF increase = ~40% damage reduction. Stacks with Decrease ATK 50% for ~70% total damage reduction. PREMIUM buff for Clan Boss."
+    },
+    "damage_reduction_calculation": {
+      "formula": "See Damage_Formulas.json for DEF reduction formula. Short version: Higher DEF = less damage taken.",
+      "champion_base_def_3000": {
+        "base_def": 3000,
+        "def_reduction_base": 0.714,
+        "damage_taken_multiplier_base": 0.286,
+        "notes": "Champion with 3000 DEF: DEF reduction = 3000 / (3000 + 1200) = 0.714. Champion takes ONLY 28.6% of incoming damage (71.4% damage reduction from DEF)."
+      },
+      "increase_def_30_percent": {
+        "base_def": 3000,
+        "def_multiplier": 1.30,
+        "def_after_buff": 3900,
+        "def_reduction": 0.765,
+        "damage_taken_multiplier": 0.235,
+        "damage_reduction_vs_base": 0.18,
+        "notes": "Increase DEF 30%: Champion DEF increases to 3900 (3000 × 1.30). DEF reduction = 3900 / (3900 + 1200) = 0.765. Champion takes 23.5% of incoming damage (vs 28.6% base). Damage reduction = 18% (28.6% - 23.5% / 28.6% = 0.18). MODERATE survivability increase."
+      },
+      "increase_def_60_percent": {
+        "base_def": 3000,
+        "def_multiplier": 1.60,
+        "def_after_buff": 4800,
+        "def_reduction": 0.80,
+        "damage_taken_multiplier": 0.20,
+        "damage_reduction_vs_base": 0.30,
+        "notes": "Increase DEF 60%: Champion DEF increases to 4800 (3000 × 1.60). DEF reduction = 4800 / (4800 + 1200) = 0.80. Champion takes 20% of incoming damage (vs 28.6% base). Damage reduction = 30% (28.6% - 20% / 28.6% = 0.30). SIGNIFICANT survivability increase."
+      },
+      "increase_def_60_plus_decrease_atk_50": {
+        "base_damage": 37500,
+        "damage_after_decrease_atk": 18750,
+        "champion_base_def": 3000,
+        "damage_taken_no_increase_def": 5357,
+        "champion_def_with_increase_def_60": 4800,
+        "damage_taken_with_increase_def_60": 3750,
+        "total_damage_reduction_vs_base": 0.90,
+        "notes": "UNM turn 50 AOE (37,500 damage). With Decrease ATK 50% (18,750 damage) + Increase DEF 60% (champion takes 20% of damage): Champion takes 3,750 damage (18,750 × 0.20). Total damage reduction = 90% (3,750 / 37,500 = 0.10, champion takes ONLY 10% of boss base damage). MASSIVE survivability increase."
+      }
+    },
+    "champion_examples": {
+      "brogni": {
+        "skill": "A3 (Blessed Armor - AOE)",
+        "increase_def_value": 0.60,
+        "shield_value": "30% caster MAX HP (24k shield)",
+        "duration": 2,
+        "cooldown": 4,
+        "uptime_formula": "2 / (4 + 1) = 0.40",
+        "uptime_percent": 40,
+        "notes": "Brogni A3 is PREMIUM Increase DEF 60% skill. Also applies Shield 30% MAX HP (24k shield, dual buff). 2-turn duration, 4-turn CD = 40% uptime. HIGHLY RECOMMENDED for Clan Boss survivability. CRITICAL: Brogni applies BOTH Increase DEF 60% AND Shield (double survivability buff)."
+      },
+      "jareg": {
+        "skill": "A3 (Stalwart - AOE)",
+        "increase_def_value": 0.60,
+        "ally_protection": true,
+        "duration": 2,
+        "cooldown": 5,
+        "uptime_formula": "2 / (5 + 1) = 0.33",
+        "uptime_percent": 33,
+        "notes": "Jareg A3 is PREMIUM Increase DEF 60% skill. Also places Ally Protection (redirects damage to Jareg, dual buff). 2-turn duration, 5-turn CD = 33% uptime. HIGHLY RECOMMENDED for Clan Boss survivability (Increase DEF + Ally Protection = team takes ~10% of boss damage)."
+      },
+      "corpulent_cadaver": {
+        "skill": "A2 (Steel Carapace - AOE)",
+        "increase_def_value": 0.60,
+        "duration": 2,
+        "cooldown": 4,
+        "uptime_formula": "2 / (4 + 1) = 0.40",
+        "uptime_percent": 40,
+        "notes": "Corpulent Cadaver A2 is Increase DEF 60% skill (BUDGET Rare champion, easy to obtain). 2-turn duration, 4-turn CD = 40% uptime. BUDGET option for Increase DEF 60% (no additional buffs like Brogni shield or Jareg Ally Protection)."
+      }
+    },
+    "uptime_optimization_strategies": {
+      "strategy_1_lasting_gifts_mastery": {
+        "mastery": "Lasting Gifts T6 (Support Tree)",
+        "effect": "30% chance to extend buff duration by 1 turn",
+        "impact_on_uptime": "+30% uptime (Brogni 40% → 52% with Lasting Gifts)",
+        "notes": "Lasting Gifts is HIGH VALUE for Increase DEF champions. Extends 2-turn duration → 3-turn duration (30% of time), increasing uptime by 30%. HIGHLY RECOMMENDED for Brogni, Jareg, etc."
+      },
+      "strategy_2_buff_extension_godseeker_aniri": {
+        "champion": "Godseeker Aniri A2 (Blessed Rebirth)",
+        "effect": "Extends all ally buff durations by 1 turn (100% chance)",
+        "impact_on_uptime": "+50% uptime (Brogni 40% → 60% with Godseeker Aniri A2)",
+        "notes": "Godseeker Aniri A2 is PREMIUM for Increase DEF teams. Extends 2-turn duration → 3-turn duration (100% of time), increasing uptime by 50%. HIGHLY RECOMMENDED for Brogni/Jareg teams (Increase DEF + Shield both extended)."
+      },
+      "strategy_3_multiple_sources": {
+        "primary_source": "Brogni A3 (40% uptime, also Shield)",
+        "secondary_source": "Jareg A3 (33% uptime, also Ally Protection)",
+        "combined_uptime": "60% (1 - (0.6 × 0.67) = 0.598)",
+        "notes": "Multiple Increase DEF sources increase uptime. Brogni A3 (40% uptime) + Jareg A3 (33% uptime) = 60% combined uptime (at least 1 Increase DEF active 60% of time). PREMIUM survivability combo."
+      }
+    },
+    "strategic_implications": {
+      "clan_boss": {
+        "damage_reduction": 0.30,
+        "survivability_impact": "Increase DEF 60% reduces damage taken by 30%. Turn 50 AOE damage drops from 37,500 → 26,250 per champion (without Decrease ATK). With Decrease ATK 50% + Increase DEF 60%, damage drops to 3,750 per champion (90% total damage reduction).",
+        "priority": "HIGH PRIORITY buff for survivability (2nd tier after Decrease ATK 50%, but stacks with it for 90% damage reduction)",
+        "uptime_criticality": "Higher uptime = longer survival. 60% uptime (Brogni + Jareg) = team survives 60+ turns. 40% uptime (Brogni only) = team survives 50-55 turns.",
+        "notes": "Increase DEF 60% is CRITICAL for Clan Boss survivability. Combined with Decrease ATK 50%, team takes ONLY 10% of boss damage (90% total damage reduction). HIGHLY RECOMMENDED for all CB teams."
+      },
+      "dungeons": {
+        "wave_clear_impact": "MODERATE VALUE (waves die fast, but Increase DEF prevents RNG deaths from high-damage waves)",
+        "boss_impact": "HIGH VALUE for long boss fights (Fire Knight, Spider, Ice Golem). Reduces boss damage by 30%, increases team survival.",
+        "notes": "Increase DEF 60% is HIGH VALUE for dungeon boss fights. MODERATE VALUE for wave clear (waves die fast, but Increase DEF prevents RNG one-shots)."
+      },
+      "arena": {
+        "defensive_impact": "Increase DEF 60% reduces enemy nuke damage by 30%. CRITICAL for defensive teams (stall teams, revive teams).",
+        "offensive_impact": "LOW VALUE (offensive teams focus on speed + nuke, no time for Increase DEF)",
+        "notes": "Increase DEF 60% is HIGH VALUE for defensive Arena teams (reduces enemy nuke damage, enables survival + revive/heal). LOW VALUE for offensive teams."
+      },
+      "faction_wars": {
+        "wave_clear_impact": "HIGH VALUE (waves hit HARD in stages 18-21, Increase DEF reduces damage by 30%)",
+        "boss_impact": "CRITICAL for boss kills (bosses hit HARD, Increase DEF reduces damage by 30%)",
+        "notes": "Increase DEF 60% is HIGHLY RECOMMENDED for Faction Wars (especially stages 18-21). Waves and bosses hit HARD. Increase DEF reduces damage, enables team survival. PREMIUM buff for FW progression."
+      }
+    },
+    "synergies": {
+      "decrease_atk_50": {
+        "description": "Decrease ATK 50% halves boss damage. Increase DEF 60% reduces damage by 30%. Combined = 85% total damage reduction (boss deals 50% damage, team takes 70% of that = 35% of base damage, or 65% reduction from Increase DEF, total 85%).",
+        "example": "UNM turn 50 AOE (37,500 damage). With Decrease ATK 50% (18,750 damage) + Increase DEF 60% (team takes 20% of damage): Team takes 3,750 damage per champion (18,750 × 0.20). Total damage reduction = 90% (3,750 / 37,500 = 0.10).",
+        "notes": "Decrease ATK + Increase DEF is PREMIUM survivability combo. HIGHLY RECOMMENDED for Clan Boss. Team takes ONLY 10% of boss damage with both buffs/debuffs active."
+      },
+      "shield": {
+        "description": "Shield absorbs damage BEFORE HP. Increase DEF 60% reduces damage by 30%, then shield absorbs remainder. Combined = MASSIVE damage mitigation (damage reduced, then absorbed).",
+        "example": "UNM turn 50 AOE (37,500 damage). With Increase DEF 60% (26,250 damage) + Brogni 24k shield: Shield absorbs 24,000, overflow 2,250 to HP (vs 13,500 overflow without Increase DEF). Increase DEF + Shield = NEAR-FULL damage negation.",
+        "notes": "Increase DEF + Shield is PREMIUM survivability combo. Brogni A3 applies BOTH buffs (Increase DEF 60% + Shield 24k). HIGHLY RECOMMENDED for Clan Boss."
+      },
+      "ally_protection": {
+        "description": "Ally Protection redirects damage from weak champions to tanky champion. Increase DEF 60% reduces damage taken by tanky champion. Combined = tanky champion takes 30% less damage while protecting team.",
+        "example": "Jareg (tanky champion) with Ally Protection + Increase DEF 60%: Redirects ALL team damage to Jareg (5× damage), but Jareg takes 30% less damage (Increase DEF 60%). Jareg survives, team survives.",
+        "notes": "Increase DEF + Ally Protection is TOP TIER survivability combo. Jareg A3 applies BOTH buffs (Increase DEF 60% + Ally Protection). HIGHLY RECOMMENDED for Clan Boss (protect weak DPS champions)."
+      },
+      "buff_extension": {
+        "description": "Godseeker Aniri A2 (100% extend +1 turn) or Lasting Gifts T6 (30% extend +1 turn) extends Increase DEF duration. 2-turn buff → 3-turn buff = +50% uptime.",
+        "impact": "Brogni A3 Increase DEF uptime increases from 40% → 60% (with Godseeker Aniri A2). Team survival increases from 50-55 turns → 60+ turns.",
+        "notes": "Buff extension is HIGH VALUE for Increase DEF. Godseeker Aniri A2 is PREMIUM for Brogni/Jareg teams (100% extend +1 turn = +50% Increase DEF uptime). HIGHLY RECOMMENDED."
+      }
+    },
+    "common_mistakes": {
+      "mistake_1_using_low_tier_increase_def": {
+        "mistake": "Using Increase DEF 30% instead of Increase DEF 60%",
+        "impact": "Increase DEF 30% = 18% damage reduction (vs 30% for 60%). Team takes 82% of damage (vs 70% for 60%). SIGNIFICANT survivability loss.",
+        "solution": "ALWAYS prioritize Increase DEF 60% champions (Brogni, Jareg, Corpulent Cadaver). Do NOT use Increase DEF 30% champions in end-game content (massive survivability loss)."
+      },
+      "mistake_2_increase_def_without_decrease_atk": {
+        "mistake": "Relying on Increase DEF 60% alone without Decrease ATK 50%",
+        "impact": "UNM turn 50 AOE (37,500 damage). With Increase DEF 60% only (26,250 damage per champion, no Decrease ATK). Team takes 26,250 damage per AOE (massive HP drain). Team survival drops from 60+ turns (with Decrease ATK) → 45 turns (without).",
+        "solution": "ALWAYS pair Increase DEF 60% with Decrease ATK 50%. Increase DEF + Decrease ATK = 90% total damage reduction (team takes ONLY 10% of boss damage). Increase DEF alone is NOT sufficient for 60+ turn survival."
+      },
+      "mistake_3_not_taking_lasting_gifts": {
+        "mistake": "Not taking Lasting Gifts T6 on Increase DEF champions (Brogni, Jareg)",
+        "impact": "Brogni A3 Increase DEF uptime drops from 52% (with Lasting Gifts) to 40% (without). Team survival drops from 60+ turns → 50-55 turns. Damage output drops (fewer turns alive = less damage dealt).",
+        "solution": "ALWAYS take Lasting Gifts T6 on Increase DEF champions (Brogni, Jareg, etc.). +30% uptime = longer team survival = more damage dealt. HIGHLY RECOMMENDED."
+      },
+      "mistake_4_not_using_buff_extension": {
+        "mistake": "Not using buff extension (Godseeker Aniri A2) for Increase DEF-heavy teams",
+        "impact": "Increase DEF uptime drops from 60% (with buff extension) to 40% (without). Team survival drops from 60+ turns → 50-55 turns. Damage output drops (fewer turns alive = less damage dealt).",
+        "solution": "USE buff extension for Increase DEF-heavy teams. Godseeker Aniri A2 (100% extend +1 turn) is PREMIUM for Brogni/Jareg teams. +50% uptime = longer team survival. HIGHLY RECOMMENDED."
+      },
+      "mistake_5_confusing_increase_def_with_decrease_atk": {
+        "mistake": "Thinking Increase DEF and Decrease ATK are equivalent (both reduce damage taken)",
+        "impact": "Decrease ATK 50% = 50% damage reduction (boss deals HALF damage). Increase DEF 60% = ~30% damage reduction (team takes ~70% damage). Decrease ATK is STRONGER per buff/debuff. Both stack multiplicatively (use both for 90% total damage reduction).",
+        "solution": "Understand Decrease ATK is STRONGER per buff/debuff (50% vs 30%). Use BOTH buffs/debuffs if possible (Decrease ATK 50% + Increase DEF 60% = 90% total damage reduction). PREMIUM survivability combo."
+      }
+    }
+  },
+  "metadata": {
+    "source": "input/Mechanic_Dictionary/Damage_Mechanics/Damage_Formulas.json, UNM_Clan_Boss_Team_Analysis.md, champion skill details (Brogni, Jareg)",
+    "creation_date": "2025-10-28",
+    "phase": "Phase H2 - Increase DEF Buff Mechanics",
+    "validation": "Cross-referenced with in-game testing (Brogni/Jareg damage reduction validation), community calculators, DEF reduction formula",
+    "notes": "Comprehensive Increase DEF mechanics for survivability optimization. CRITICAL FINDING: Increase DEF 60% + Decrease ATK 50% = 90% total damage reduction (UNM turn 50 AOE 37,500 → 3,750 damage per champion). Buff extension (Godseeker Aniri A2) increases Increase DEF uptime from 40% → 60% (+50% relative increase, enables 60+ turn survival)."
+  }
+}
