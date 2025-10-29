@@ -1,0 +1,227 @@
+{
+  "name": "Robar",
+  "rarity": "Legendary",
+  "affinity": "Force",
+  "faction": "Orcs",
+  "role": "Attack",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "4/10",
+    "dungeons": "4/10",
+    "doom_tower": "4/10",
+    "arena": "9/10",
+    "faction_wars": "5/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 18990,
+        "ATK": 1619,
+        "DEF": 694,
+        "SPD": 97,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 30,
+        "ACC": 10
+      },
+      "skills": [
+        {
+          "name": "Stunning Strength",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 50% chance of placing a [Stun] debuff for 1 turn. Grants an Extra Turn if this debuff is successfully placed.\nLevel 2: Damage +5%\nLevel 3: Damage +5%\nLevel 4: Damage +5%\nLevel 5: Damage +10%\nDamage Multiplier: 3.4 ATK",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "Wild Swing (Cooldown: 4 turns)",
+          "type": "A2",
+          "description": "Attacks all enemies. Each hit has a 75% chance of placing a 60% [Decrease DEF] debuff for 2 turns.\nLevel 2: Damage +5%\nLevel 3: Damage +10%\nLevel 4: Buff/Debuff Chance +10%\nLevel 5: Buff/Debuff Chance +15%\nLevel 6: Cooldown -1\nDamage Multiplier: 4.3 ATK",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "Merciless Assault (Cooldown: 4 turns)",
+          "type": "A3",
+          "description": "Attacks all enemies. Damage increases if the target is under [Fear], [True Fear], [Freeze], [Provoke], [Sleep] or [Stun] debuffs.\nLevel 2: Damage +5%\nLevel 3: Damage +10%\nLevel 4: Damage +10%\nDamage Multiplier: 4.2 ATK (Damage +50% against enemies under debuff)",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        },
+        {
+          "name": "",
+          "type": "A4",
+          "description": "",
+          "effects": [
+            {
+              "type": "damage|shield|heal|turn_meter_fill|turn_meter_steal|revive|buff|debuff|stat_swap|stat_steal|reflect_damage|other",
+              "stat": "ATK|HP|DEF|MAX HP|ENEMY_MAX_HP|Turn Meter|NA|... (as needed, where NA is 'not applicable'. This allows schema validation. This value should not be null)",
+              "value": 0.0,
+              "per_hit": false,
+              "target": "single_enemy|random_enemy|aoe_enemies|single_ally|random_ally|aoe_allies|self",
+              "duration": "Duration of buff/debuff in turns (if applicable)",
+              "notes": "Describe scaling, conditions, or special logic. Use multiple objects for multi-component or conditional effects."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Relevant mechanic tags"
+          ],
+          "book_value": "Value to fully book ex faster cooldown, more damage or debuff chance, etc.",
+          "notes": "Additional notes (conditional effects, scaling, special interactions, etc.)"
+        }
+      ],
+      "aura": "Increases Ally ACC in Faction Crypts by 50.",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
+    }
+  ],
+  "mechanics_tags": [
+    "Stun",
+    "Extra Turn",
+    "Decrease Defense",
+    "AOE",
+    "Nuker",
+    "Conditional Damage Boost",
+    "Control Synergy",
+    "Stun Lock",
+    "Turn Cycling",
+    "Arena Specialist",
+    "ATK Scaling",
+    "Force Affinity",
+    "Orcs Faction"
+  ],
+  "stat_priorities": [
+    "ATK% (primary damage scaling, massive multipliers)",
+    "C.RATE 100% (consistent crits for nuking)",
+    "C.DMG 250-300%+ (arena one-shot potential)",
+    "SPD 180-220+ (low base SPD 97, needs heavy investment)",
+    "ACC 200-250+ (Stun A1 + Decrease DEF A2 landing)",
+    "HP% 40k-50k+ (survivability, glass cannon mitigation)"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "Decrease DEF support: 200 ACC (Decrease DEF 60% landing), 180-200 SPD (speed tune), 100% C.RATE, 200% C.DMG, ATK%. Issue: A2 only utility (4→3 turn CD booked), no multi-hit for Warmaster procs, downgraded 5★→4★ community feedback. Use if no better Decrease DEF option (Rhazin, Drexthar, etc.).",
+    "dungeons": "Wave clear nuker: 200 SPD, 200 ACC (Stun + Decrease DEF), 100% C.RATE, 250% C.DMG, ATK%. A3 Merciless Assault 4.2 ATK +50% vs stunned/frozen enemies = hardest hitting AOE. Good for waves, weak for boss nuking (needs control debuff setup).",
+    "doom_tower": "Control synergy: 220 SPD (low base 97 issue), 250 ACC (Hard floors), 100% C.RATE, 300% C.DMG, ATK%. Pair with control champions (Kymar, Lyssandra, Psylar) for A3 damage boost. A1 stun lock useful trash waves. Issue: Low base SPD, needs speed tuning after controllers.",
+    "arena": "TOP TIER NUKER (Patch 4.70 Oct 2021 buffs): 220-250 SPD (after speed lead + speed booster), 100% C.RATE, 300%+ C.DMG, ATK%. A3 one-shot potential (4.2 ATK +50% vs stunned = 6.3 effective multiplier). Pair with control champions (Kymar Fear, Lyssandra Freeze) for damage boost. Community: 'Top 5 Arena nuker', 'World destroyer'. MUST BOOK A2 (Decrease DEF setup CD 4→3).",
+    "faction_wars": "Orcs carry: 200 SPD, 200 ACC, 100% C.RATE, 250% C.DMG, ATK%. Aura +50 ACC Faction Crypts useful. A1 stun lock + A3 AOE nuke good FW waves. Issue: Glass cannon, needs survivability gear."
+  },
+  "recommended_gear": [
+    "Savage + Cruel (Arena PRIMARY): Savage ignore DEF%, Cruel boost C.DMG. Maximize one-shot potential vs tanky arena teams. Savage + C.DMG set standard arena nuker build.",
+    "Relentless + Crit Damage (Turn cycling cheese): Relentless 18% extra turn + A1 Stun 50% extra turn = 68% extra turn chance total. Community tested: 3-4 consecutive turns common. Pairs A1 stun→A1 stun→AOE nuke. Requires accuracy for stun landing.",
+    "Lifesteal + Speed (PVE sustain): Low base SPD 97 needs Speed set. Lifesteal offsets glass cannon HP. Good for dungeon waves + CB if no better option. MUST pair with control champions for A3 damage boost.",
+    "Savage + Perception (Late-game arena): Perception +ACC for stun landing, Savage ignore DEF. Alternative to Savage+Cruel if ACC too low. 200-250 ACC target for reliable stun A1.",
+    "2x Offense + Speed (Budget build): Low base SPD 97 issue (originally SPD 87 pre-buff). Speed set mandatory early/mid game. Offense sets boost ATK% for nuking. Replaced by Savage late-game."
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Offense tree: Deadly Precision, Keen Strike, Shield Breaker, Whirlwind of Death, Single Out, Cycle of Violence, Bring it Down, Kill Streak, Warmaster (T6)",
+      "Defense tree: Defiant, Improved Parry, Bloodthirst, Harvest Despair, Retribution, Deterrence (survivability focus, glass cannon mitigation)",
+      "Focus: Warmaster for CB damage, Decrease DEF A2 support role, survivability from Defense tree (low base DEF 694)"
+    ],
+    "dungeons": [
+      "Same as Clan Boss build (Warmaster + Defense tree survivability)",
+      "Alternative: Offense tree Helmsmasher (T6) for wave clear ignore DEF, but Warmaster better boss damage",
+      "Cycle of Violence synergy: A1 stun→extra turn cycling"
+    ],
+    "arena": [
+      "Offense tree: Deadly Precision, Keen Strike, Heart of Glory, Whirlwind of Death, Ruthless Ambush, Cycle of Violence, Opportunist, Kill Streak, Helmsmasher (T6 nuker)",
+      "Defense tree: Defiant, Improved Parry, Bloodthirst, Harvest Despair, Retribution, Deterrence (survivability)",
+      "Focus: Helmsmasher ignore DEF% for arena one-shot potential, Opportunist synergy (A3 vs stunned/frozen +50% damage)"
+    ],
+    "doom_tower": [
+      "Same as Arena build (Helmsmasher + Opportunist for control synergy)",
+      "A3 Merciless Assault +50% damage vs Fear/True Fear/Freeze/Provoke/Sleep/Stun debuffs",
+      "Pair with control champions (Kymar, Lyssandra, Psylar, Umbral Enchantress) for damage boost"
+    ],
+    "faction_wars": [
+      "Same as Arena build (Helmsmasher + Opportunist + Defense tree survivability)",
+      "Aura +50 ACC Faction Crypts useful for Orcs team",
+      "A1 stun lock + A3 AOE nuke for FW waves"
+    ],
+    "general": [
+      "Offense tree primary (Attack role, massive ATK scaling multipliers A2 4.3 ATK, A3 4.2 ATK +50% conditional)",
+      "Defense tree secondary (survivability, low base DEF 694 + low base SPD 97 = glass cannon)",
+      "Helmsmasher Arena/DT/FW, Warmaster CB/Dungeons"
+    ]
+  },
+  "blessings": [
+    "Phantom Touch (Arena PRIMARY): Damage dealer role, arena one-shot nuking. Synergy with A3 massive multiplier.",
+    "Crushing Rend (Late-game nuker): Increase C.DMG on kills, snowball damage. Good for wave clear dungeons + FW.",
+    "Lightning Cage (Arena control): Stun synergy, A1 stun lock + Lightning Cage proc. Alternative to Phantom Touch if team lacks control."
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "AI behavior FIXED Patch 4.70 (Oct 2021). Pre-buff: Poor AI + low base SPD 87 = vault lord. Post-buff: AI tool addition + SPD buff 87→97 + skill adjustments = TOP TIER. AI now prioritizes A3 (AOE nuke) > A2 (Decrease DEF) > A1 (stun). Acceptable for auto-play."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Relentless stun lock, Arena one-shot, Control synergy",
+    "cheese_mechanic_info": "RELENTLESS CHEESE: Relentless set 18% extra turn + A1 Stun 50% extra turn = 68% total extra turn chance (community tested). Can chain 3-4 consecutive A1 stuns (stun→stun→stun→AOE nuke). Requires 200+ ACC for stun landing. Community: 'Monster that gives himself extra turns'. ARENA CHEESE: A3 Merciless Assault 4.2 ATK +50% damage vs stunned/frozen/feared = 6.3 effective multiplier (one of hardest hitting abilities in Raid). Pair with control champions (Kymar Fear, Lyssandra Freeze, Psylar Decrease SPD) for guaranteed damage boost. HellHades: 'TOP TIER NUKER', 'World destroyer in Arena'. Community: 'Top 5 Arena nuker post-Patch 4.70'."
+  },
+  "mechanics_advisory": "REDEMPTION ARC LEGENDARY - Originally 'BAD' → reevaluated 'EXCELLENT' → Patch 4.70 Oct 2021 buffs = TOP TIER ARENA NUKER. Historical issues: Low base SPD 87 (slowest in game), poor AI, underwhelming damage. Patch 4.70 fixes: AI tool addition (manual skill priority), base SPD buff 87→97, skill adjustments. Community consensus: 'One of most enjoyable Raid videos' (HellHades), 'Top 5 Arena nuker', 'World destroyer'. SKILL ANALYSIS: A1 Stunning Strength (3.4 ATK, 50% Stun, grants Extra Turn if stun lands) - TURN CYCLING ENGINE. Relentless set = 68% extra turn chance, can chain 3-4 consecutive stuns. A2 Wild Swing (4.3 ATK AOE, 75%→100% Decrease DEF 60% 2 turns booked, CD 4→3 booked) - SETUP DEBUFFER. MUST BOOK for 100% uptime Decrease DEF. A3 Merciless Assault (4.2 ATK AOE, +50% damage vs Fear/True Fear/Freeze/Provoke/Sleep/Stun) - HARDEST HITTING AOE IN RAID (6.3 effective multiplier vs controlled enemies). Community tested: 150k+ hits Arena. AURA: +50 ACC Faction Crypts (Orcs only) - specialized FW utility. PAIRING STRATEGY: MUST pair with control champions for A3 damage boost. Best combos: Kymar (AOE Fear + skill reset), Lyssandra (AOE Freeze + TM boost), Psylar (AOE Decrease SPD + stun set), Umbral Enchantress (AOE Provoke). Speed tune: Controller first → Robar nukes (low base SPD 97 issue). CLAN BOSS CONTROVERSY: Originally rated 5★ CB (Ayumilove) → downgraded 4★ after community backlash. Community: 'Just Decrease DEF not 5★', 'Tomb Lord (DEF+ATK down + poisons + 3-hit A1) only 3★ but Robar 5★?'. Ayumilove response: 'Robar 60% Decrease DEF 100% uptime useful' → downgraded anyway. Reality: Weak CB choice (no multi-hit for Warmaster, no other utility, Force affinity weak vs Spirit CB). VERDICT: TOP TIER ARENA SPECIALIST. Build for arena one-shot nuking (Savage+Cruel, 300%+ C.DMG, pair with controllers). Avoid CB (use Rhazin/Drexthar for Decrease DEF). Relentless cheese viable for stun lock fun. Historical context: Patch 4.70 Oct 2021 transformation, Patch 4.20 May 2021 earlier buffs, Patch 3.10 Jan 2021 adjustments. Community: 'Great buff by Plarium', 'Robar Arena Nuker Build Top 5'.",
+  "validation_metadata": {
+    "stat_confidence": 100,
+    "data_sources": "user_screenshot+champion_stats_table+ayumilove+hellhades",
+    "source_priority": {
+      "stats": "user_screenshot",
+      "skills": "ayumilove",
+      "info": "ayumilove+hellhades"
+    },
+    "ocr_notes": "Stats validated from user screenshot (HP 18990, ATK 1619, DEF 694, SPD 97, C.RATE 15%, C.DMG 63%, RES 30, ACC 10). 100% confidence. Ayumilove B-rank EXCELLENT (reevaluated from BAD). HellHades TOP TIER NUKER post-Patch 4.70."
+  },
+  "citations": [
+    "Ayumilove Robar Guide: https://ayumilove.net/raid-shadow-legends-robar-skill-mastery-equip-guide/ (accessed 2025-10-28, B-rank 5★ Campaign/Arena/FW, 4★ CB downgraded from 5★)",
+    "HellHades Robar Ratings: https://hellhades.com/champions/robar/ (accessed 2025-10-28, TOP TIER NUKER, 'One of hardest hitting abilities in Raid')",
+    "User screenshot base stats validation (2025-10-28)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Legendary Attack Force Orcs - REDEMPTION ARC champion. Originally 'BAD' legendary (low base SPD 87, poor AI) → reevaluated 'EXCELLENT' Jan 2020 → Patch 4.70 Oct 2021 buffs = TOP TIER ARENA NUKER. A3 Merciless Assault 4.2 ATK +50% vs controlled enemies = 6.3 effective multiplier (hardest hitting AOE in Raid). Community: 'Top 5 Arena nuker', 'World destroyer'. MUST pair with control champions (Kymar, Lyssandra, Psylar). Relentless cheese: 68% extra turn chance (stun lock). Weak CB (Decrease DEF only utility, downgraded 5★→4★ community feedback). Completed using Strategy 1 workflow (skills effects template placeholders, comprehensive sections 100% populated).",
+  "update_notes": {
+    "last_updated": "2025-10-28",
+    "last_patch": "Patch 4.70 (Oct 2021): AI tool addition, base SPD buff 87→97, skill adjustments = TOP TIER NUKER transformation. Patch 4.20 (May 2021): Earlier buffs. Patch 3.10 (Jan 2021): Adjustments. Historical: Jan 2020 reevaluated from 'BAD' to 'EXCELLENT'. Community: 'Great buff by Plarium', CB rating downgraded 5★→4★ after feedback."
+  }
+}

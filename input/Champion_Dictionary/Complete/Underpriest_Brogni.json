@@ -85,7 +85,7 @@
         {
           "name": "Redoubt",
           "type": "Passive",
-          "description": "Whenever an ally under [Shield] buff is attacked, reflects 25% of the damage inflicted on the [Shield] back to the attacker. Also heals that ally by 25% of the damage inflicted on the [Shield]. If multiple Champions have this skill, only one will activate.",
+          "description": "Whenever an ally under [Shield] buff is attacked, reflects 25% of the damage inflicted on the [Shield] back to the attacker. Also heals that ally by 25% of the damage inflicted on the [Shield]. If multiple Champions have this skill, only one will activate. Damage from this passive will trigger Giantslayer bonus damage.",
           "effects": [
             {
               "type": "reflect_damage",

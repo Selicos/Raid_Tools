@@ -77,7 +77,7 @@
         {
           "name": "Stoneguard",
           "type": "Passive",
-          "description": "Decreases the damage all allies receive by 15% and deflects that damage onto each enemy under a [HP Burn] debuff placed by this Champion. Whenever this Champion is attacked, deflects 30% of the damage instead. When deflecting damage, on each hit, has a 30% chance of dealing additional damage equal to 3% of the target’s MAX HP.",
+          "description": "Decreases the damage all allies receive by 15% and deflects that damage onto each enemy under a [HP Burn] debuff placed by this Champion. Whenever this Champion is attacked, deflects 30% of the damage instead. When deflecting damage, on each hit, has a 30% chance of dealing additional damage equal to 3% of the target’s MAX HP. This damage triggers Warmaster for added bonus damage.",
           "effects": [
             {
               "type": "conditional",
