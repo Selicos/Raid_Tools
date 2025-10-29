@@ -1,6 +1,7 @@
 ## This document has reference charts for scaling types if damage depending on base stat used for the skill/etc calculation. 
 - It shows charts for scaling the base state like attack or defense and then crit damage, in intervals based on the likely stat spread. 
 - Use these charts to recommend stat/gear builds in guides and reviews. 
+
 # Most damage charts this equation:
 - Note that attacks that scale off Attack and Defense are greater than 1, like 5x or 6.6x, while HP based attacks are often below 1, like 0.2x.
  
