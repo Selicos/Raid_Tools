@@ -1,0 +1,501 @@
+{
+  "boss_info": {
+    "name": "Ultra Nightmare Clan Boss",
+    "abbreviation": "UNM",
+    "difficulty": "Ultra Nightmare",
+    "location": "Clan Hall",
+    "total_hp": 200000000,
+    "key_thresholds": {
+      "3_key": 66666667,
+      "2_key": 100000000,
+      "1_key": 200000000
+    }
+  },
+  "base_stats": {
+    "hp": 200000000,
+    "atk": 3500,
+    "def": 2800,
+    "spd": 170,
+    "res": 300,
+    "acc": 250,
+    "c_rate": 5,
+    "c_dmg": 50
+  },
+  "damage_scaling": {
+    "formula": "Base Damage × (1 + 0.03 × Turn Number)",
+    "scaling_rate": 0.03,
+    "scaling_type": "multiplicative",
+    "description": "Boss damage increases by 3% per turn. By turn 50, boss deals 2.5× turn 1 damage.",
+    "examples": [
+      {
+        "turn": 1,
+        "multiplier": 1.00,
+        "aoe_damage_base_15k": 15000,
+        "survivability_requirement": "Low (basic DEF/HP)"
+      },
+      {
+        "turn": 10,
+        "multiplier": 1.30,
+        "aoe_damage_base_15k": 19500,
+        "survivability_requirement": "Low-Medium"
+      },
+      {
+        "turn": 20,
+        "multiplier": 1.60,
+        "aoe_damage_base_15k": 24000,
+        "survivability_requirement": "Medium"
+      },
+      {
+        "turn": 30,
+        "multiplier": 1.90,
+        "aoe_damage_base_15k": 28500,
+        "survivability_requirement": "Medium-High (shields needed)"
+      },
+      {
+        "turn": 40,
+        "multiplier": 2.20,
+        "aoe_damage_base_15k": 33000,
+        "survivability_requirement": "High (shields + Decrease ATK critical)"
+      },
+      {
+        "turn": 50,
+        "multiplier": 2.50,
+        "aoe_damage_base_15k": 37500,
+        "survivability_requirement": "Very High (perfect buff rotation)"
+      },
+      {
+        "turn": 60,
+        "multiplier": 2.80,
+        "aoe_damage_base_15k": 42000,
+        "survivability_requirement": "Extreme (unkillable teams only)"
+      }
+    ]
+  },
+  "attack_pattern": {
+    "sequence": ["AOE", "AOE", "STUN", "AOE", "AOE", "STUN"],
+    "cycle_length": 5,
+    "description": "Boss follows 5-turn pattern: AOE → AOE → STUN → AOE → AOE (repeats). Stun occurs every 3 turns.",
+    "attacks": [
+      {
+        "turn_in_cycle": 1,
+        "type": "AOE",
+        "target": "All champions",
+        "effect": "None",
+        "base_damage": 15000,
+        "notes": "Opening hit"
+      },
+      {
+        "turn_in_cycle": 2,
+        "type": "AOE",
+        "target": "All champions",
+        "effect": "None",
+        "base_damage": 15000,
+        "notes": "Standard rotation"
+      },
+      {
+        "turn_in_cycle": 3,
+        "type": "Single Target + Stun",
+        "target": "Slowest champion",
+        "effect": "2-turn Stun (non-resistable)",
+        "base_damage": 25000,
+        "notes": "CRITICAL MECHANIC - targets slowest champion, non-resistable"
+      },
+      {
+        "turn_in_cycle": 4,
+        "type": "AOE",
+        "target": "All champions",
+        "effect": "None",
+        "base_damage": 18000,
+        "notes": "Post-stun continuation"
+      },
+      {
+        "turn_in_cycle": 5,
+        "type": "AOE",
+        "target": "All champions",
+        "effect": "None",
+        "base_damage": 18000,
+        "notes": "Pattern completes, cycle repeats"
+      }
+    ],
+    "stun_turns": [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60],
+    "stun_frequency_per_50_turns": 16.67
+  },
+  "stun_mechanics": {
+    "targeting_rule": "Slowest champion (lowest SPD at time of stun turn)",
+    "resistable": false,
+    "duration_turns": 2,
+    "frequency": "Every 3 turns",
+    "description": "Boss stun is NON-RESISTABLE. RES stat does NOT affect stun chance. It lands 100% of the time regardless of resistance. Champion with lowest current SPD is targeted.",
+    "damage_scaling": [
+      {
+        "turn": 3,
+        "base_damage": 25000,
+        "multiplier": 1.09,
+        "with_decrease_atk_50": 13625,
+        "min_ehp_needed": 15000
+      },
+      {
+        "turn": 12,
+        "base_damage": 25000,
+        "multiplier": 1.36,
+        "with_decrease_atk_50": 17000,
+        "min_ehp_needed": 20000
+      },
+      {
+        "turn": 24,
+        "base_damage": 25000,
+        "multiplier": 1.72,
+        "with_decrease_atk_50": 21500,
+        "min_ehp_needed": 25000
+      },
+      {
+        "turn": 36,
+        "base_damage": 25000,
+        "multiplier": 2.08,
+        "with_decrease_atk_50": 26000,
+        "min_ehp_needed": 30000
+      },
+      {
+        "turn": 48,
+        "base_damage": 25000,
+        "multiplier": 2.44,
+        "with_decrease_atk_50": 30500,
+        "min_ehp_needed": 35000
+      },
+      {
+        "turn": 60,
+        "base_damage": 25000,
+        "multiplier": 2.80,
+        "with_decrease_atk_50": 35000,
+        "min_ehp_needed": 40000
+      }
+    ],
+    "mitigation_strategies": [
+      {
+        "strategy": "Designated Stun Target (1:1 Tune)",
+        "description": "Set slowest champion to 171 SPD exactly. Build for max survivability (DEF% boots, HP chest, DEF/HP accessories). Rest of team 172-189 SPD.",
+        "recommended": true,
+        "notes": "RECOMMENDED for 1:1 tune. Protects fragile debuffers and support champions."
+      },
+      {
+        "strategy": "Block Debuffs Timing",
+        "description": "Use Block Debuffs buffs on stun turns. Requires precise speed tune + manual play.",
+        "recommended": false,
+        "notes": "Difficult to AUTO, requires 3-turn CD buff with 2-turn duration or 100% uptime rotation."
+      },
+      {
+        "strategy": "Increase SPD Buff Rotation",
+        "description": "Use Increase SPD buffs to dynamically shift stun target. Requires complex speed tune + turn order calculation.",
+        "recommended": false,
+        "notes": "Advanced strategy, not viable for most teams."
+      }
+    ],
+    "speed_tune_implications": {
+      "1:1_tune": {
+        "speed_range": "171-189 SPD",
+        "stun_target": "171 SPD champion (slowest)",
+        "stun_target_requirements": "Highest Effective HP, DEF% boots, survivability passive ideal",
+        "benefits": "Predictable stun target, protects fragile champions, enables perfect buff rotation"
+      },
+      "2:1_tune": {
+        "speed_range": "250-280 SPD",
+        "stun_target": "250 SPD champion (slowest in tune)",
+        "notes": "2:1 tune = boss hits 2× harder per champion turn, extreme survivability requirement"
+      },
+      "no_tune": {
+        "speed_range": "Random (e.g. 210-264 SPD)",
+        "stun_target": "Unpredictable (whoever is slowest at that moment)",
+        "risk": "Stun can hit fragile debuffers, critical healers, or shield supports causing team wipe"
+      }
+    }
+  },
+  "affinity_rotation": {
+    "cycle": ["Void", "Spirit", "Force", "Magic"],
+    "cycle_length_days": 4,
+    "description": "Boss affinity rotates daily in 4-day cycle: Void → Spirit → Force → Magic (repeats).",
+    "affinities": [
+      {
+        "day": 1,
+        "affinity": "Void",
+        "strong_against": "None",
+        "weak_against": "None",
+        "damage_modifier": 0,
+        "glancing_chance": 0,
+        "notes": "BEST TESTING DAY - All champions neutral, no affinity variance"
+      },
+      {
+        "day": 2,
+        "affinity": "Spirit",
+        "strong_against": "Magic",
+        "weak_against": "Force",
+        "damage_modifier_strong": 0.15,
+        "damage_modifier_weak": -0.15,
+        "glancing_chance_weak": 0.30,
+        "notes": "RISK for Magic champions (e.g., Geomancer weak: -15% damage, +30% glancing)"
+      },
+      {
+        "day": 3,
+        "affinity": "Force",
+        "strong_against": "Spirit",
+        "weak_against": "Magic",
+        "damage_modifier_strong": 0.15,
+        "damage_modifier_weak": -0.15,
+        "glancing_chance_weak": 0.30,
+        "notes": "Magic champions weak (e.g., Stag Knight, Mithrala)"
+      },
+      {
+        "day": 4,
+        "affinity": "Magic",
+        "strong_against": "Force",
+        "weak_against": "Spirit",
+        "damage_modifier_strong": 0.15,
+        "damage_modifier_weak": -0.15,
+        "glancing_chance_weak": 0.30,
+        "notes": "Spirit champions weak"
+      }
+    ],
+    "affinity_mechanics": {
+      "strong_affinity": {
+        "damage_dealt_modifier": 1.15,
+        "damage_taken_modifier": 0.85,
+        "glancing_hit_chance": 0
+      },
+      "weak_affinity": {
+        "damage_dealt_modifier": 0.85,
+        "damage_taken_modifier": 1.15,
+        "glancing_hit_chance": 0.30,
+        "glancing_hit_damage": 0.70,
+        "glancing_hit_crit": false,
+        "combined_damage_loss": "~35-40% total (base -15% + 30% chance of -30% damage + no crits on glancing hits)"
+      },
+      "neutral_affinity": {
+        "damage_dealt_modifier": 1.0,
+        "damage_taken_modifier": 1.0,
+        "glancing_hit_chance": 0
+      }
+    }
+  },
+  "debuff_mechanics": {
+    "max_debuffs": 10,
+    "debuff_priority": [
+      {
+        "priority": 1,
+        "debuff": "Decrease DEF 60%",
+        "reason": "Team damage multiplier (~2.5× damage increase)",
+        "uptime_target": "100%"
+      },
+      {
+        "priority": 2,
+        "debuff": "Decrease ATK 50%",
+        "reason": "Survivability critical (boss damage halved)",
+        "uptime_target": "100%"
+      },
+      {
+        "priority": 3,
+        "debuff": "HP Burn",
+        "reason": "7.5% MAX HP per turn = 15M damage/turn",
+        "uptime_target": "100%"
+      },
+      {
+        "priority": 4,
+        "debuff": "Weaken 25%",
+        "reason": "If lands, increases team damage",
+        "uptime_target": "If available"
+      },
+      {
+        "priority": 5,
+        "debuff": "Poison 5%",
+        "reason": "5% MAX HP per turn × 10 stacks = 50% MAX HP every 2 turns",
+        "uptime_target": "Fill remaining slots"
+      }
+    ],
+    "overflow_risk": "Low for tanky buff/debuff teams (4-6 core debuffs, 4-6 slots remaining)"
+  },
+  "turn_prediction": {
+    "early_fight": {
+      "turn_range": "1-20",
+      "damage_multiplier_range": "1.0× to 1.6×",
+      "aoe_damage_range": "15k to 24k per champion",
+      "survivability_requirement": "Low (basic DEF/HP sufficient)",
+      "strategy": "Establish debuffs (Decrease DEF/ATK, HP Burn), apply buffs (shields, Increase ATK/DEF)",
+      "expected_team_state": "Full HP, all buffs active, clean rotation"
+    },
+    "mid_fight": {
+      "turn_range": "21-40",
+      "damage_multiplier_range": "1.6× to 2.2×",
+      "aoe_damage_range": "24k to 33k per champion",
+      "survivability_requirement": "Medium (shields + Decrease ATK critical, heals needed)",
+      "strategy": "Maintain 100% uptime on Decrease ATK, refresh shields every 2-3 turns, heal after AOE bursts",
+      "expected_team_state": "70-90% HP average, occasional deaths if stun hits wrong champion (no-tune teams)"
+    },
+    "late_fight": {
+      "turn_range": "41-60",
+      "damage_multiplier_range": "2.2× to 2.8×",
+      "aoe_damage_range": "33k to 42k per champion",
+      "survivability_requirement": "High (PERFECT buff rotation or team wipes)",
+      "critical_mechanics": [
+        "Decrease ATK MUST be active 100% of time (gaps = instant death)",
+        "Shields MUST be refreshed every 2 turns (overlap required)",
+        "Heals MUST occur after every 2-3 AOE hits",
+        "Stun target MUST survive stun + burst (designated stun target critical)"
+      ],
+      "expected_team_state": "50-70% HP average, 1-2 deaths possible (revives used), tight turn order required"
+    },
+    "extreme_fight": {
+      "turn_range": "60+",
+      "damage_multiplier_range": "2.8×+",
+      "aoe_damage_range": "42k+ per champion",
+      "survivability_requirement": "Extreme (unkillable teams or perfect Block Damage rotation)",
+      "notes": "Tanky teams cannot survive past turn 60-65. Requires unkillable mechanics (Maneater, Demytha, etc.)"
+    }
+  },
+  "damage_mitigation": {
+    "formula": "Multiplicative stacking (not additive)",
+    "example_turn_50": {
+      "base_damage": 37500,
+      "decrease_atk_50": 18750,
+      "increase_def_60_with_4000_base_def": {
+        "total_def": 6400,
+        "damage_reduction": 0.914,
+        "damage_after_def": 1613
+      },
+      "shield_24k": {
+        "damage_to_hp": 0,
+        "damage_to_shield": 1613,
+        "notes": "Shield absorbs all damage, HP untouched"
+      },
+      "strengthen_25": 1210,
+      "total_mitigation": 0.968,
+      "final_damage_to_hp": 1210,
+      "notes": "96.8% damage reduction with full buff stack"
+    },
+    "critical_buffs": [
+      {
+        "buff": "Decrease ATK 50%",
+        "importance": "CRITICAL",
+        "uptime_requirement": "100%",
+        "gap_impact": "2× damage taken = instant team wipe at turn 40+"
+      },
+      {
+        "buff": "Shields (24k Brogni + 14k Mithrala = 38k total)",
+        "importance": "High",
+        "uptime_requirement": "Refresh every 2-3 turns",
+        "gap_impact": "Direct HP damage, survivability drops significantly"
+      },
+      {
+        "buff": "Increase DEF 60%",
+        "importance": "High",
+        "uptime_requirement": "100%",
+        "gap_impact": "Damage mitigation drops from 91% to ~80% (2× damage to HP)"
+      },
+      {
+        "buff": "Heals (18% MAX HP AOE)",
+        "importance": "Medium-High",
+        "uptime_requirement": "Every 2-3 AOE hits",
+        "gap_impact": "HP depletes, team wipes within 5-10 turns"
+      }
+    ]
+  },
+  "acc_res_mechanics": {
+    "boss_res": 300,
+    "boss_acc": 250,
+    "debuff_land_formula": "(ACC - RES + 200) / 400 (capped at 90-95%)",
+    "acc_thresholds": [
+      {
+        "acc": 150,
+        "land_rate_vs_300_res": 0.125,
+        "safety_level": "Unacceptable"
+      },
+      {
+        "acc": 200,
+        "land_rate_vs_300_res": 0.25,
+        "safety_level": "Unsafe"
+      },
+      {
+        "acc": 250,
+        "land_rate_vs_300_res": 0.375,
+        "safety_level": "Minimum (bare minimum, 50% uptime = gaps)"
+      },
+      {
+        "acc": 300,
+        "land_rate_vs_300_res": 0.50,
+        "safety_level": "Acceptable for non-critical debuffs"
+      },
+      {
+        "acc": 350,
+        "land_rate_vs_300_res": 0.625,
+        "safety_level": "Recommended (good uptime)"
+      },
+      {
+        "acc": 390,
+        "land_rate_vs_300_res": 0.725,
+        "safety_level": "Excellent (near-perfect uptime)"
+      },
+      {
+        "acc": 450,
+        "land_rate_vs_300_res": 0.875,
+        "safety_level": "Overkill (wasted stats past 390, cap at 90-95%)"
+      }
+    ],
+    "recommended_acc": 350,
+    "optimal_acc": 390,
+    "notes": "Stun is NON-RESISTABLE (RES does not help). Focus RES on debuff resistance for other content, not Clan Boss."
+  },
+  "team_archetypes": {
+    "tanky_buff_debuff": {
+      "damage_range": "65-75M",
+      "tier": "B-Tier",
+      "survivability_ceiling": "50-60 turns",
+      "strengths": ["No rare champion requirements", "Multiple damage sources", "Layered survivability", "Manual/Auto flexible"],
+      "weaknesses": ["Survivability ceiling ~60 turns", "RNG variance ±5-10M", "Speed tune CRITICAL", "Boss scaling overwhelms by turn 65"],
+      "recommended": true
+    },
+    "unkillable": {
+      "damage_range": "150-250M+",
+      "tier": "S-Tier",
+      "survivability_ceiling": "Infinite (turn 100+)",
+      "required_champions": ["Maneater", "Painkeeper", "Demytha", "Warcaster", "Roshcard"],
+      "strengths": ["Infinite survivability", "Consistent (no RNG deaths)", "Damage ceiling 150-250M+"],
+      "weaknesses": ["Requires specific champions", "Complex speed tune (190-195 SPD exact)", "Affinity-dependent (Void required for all-affinity)"],
+      "recommended": false,
+      "notes": "NOT viable without Maneater/Demytha/Warcaster"
+    },
+    "counterattack": {
+      "damage_range": "100-150M",
+      "tier": "A-Tier",
+      "survivability_ceiling": "50-70 turns",
+      "required_champions": ["Valkyrie", "Skullcrusher", "Martyr"],
+      "strengths": ["2× attack frequency = 2× Warmaster procs", "Faster runs (fewer turns for same damage)", "Works with tanky champions"],
+      "weaknesses": ["Requires specific champions", "Speed tune complex", "RNG variance (counterattack procs depend on boss AOE frequency)"],
+      "recommended": false,
+      "notes": "NOT viable without Valkyrie/Skullcrusher/Martyr"
+    },
+    "poison": {
+      "damage_range": "50-80M",
+      "tier": "C-Tier",
+      "survivability_ceiling": "40-50 turns",
+      "required_champions": ["Frozen Banshee", "Kael", "Outlaw Monk"],
+      "strengths": ["Accessible (many rares/epics)", "Consistent damage (poison = 5% MAX HP per turn)", "Low gear requirement"],
+      "weaknesses": ["Damage ceiling 50-80M", "Survivability bottleneck (poison champions often fragile)", "Requires heavy support"],
+      "recommended": false,
+      "notes": "User notes: 'Poison teams NOT well-built' (Frozen Banshee, Elenaril, Narma weak)"
+    },
+    "2:1_speed_tune": {
+      "damage_range": "120-180M",
+      "tier": "A-Tier",
+      "survivability_ceiling": "40-50 turns (2:1 turn ratio = boss hits harder per champion turn)",
+      "speed_requirement": "250-280 SPD (exact tune required)",
+      "strengths": ["2:1 turn ratio = 2× Warmaster procs", "Faster runs (fewer boss turns needed)", "Works without unkillable"],
+      "weaknesses": ["EXTREME gear requirement (250-280 SPD + 250 ACC + 100% C.RATE + 3500 DEF + 50k HP)", "Complex speed tune (1 SPD variance = tune breaks)", "Survivability difficult"],
+      "recommended": false,
+      "notes": "NOT viable without 3+ months gear farm (Dragon/Spider/Fire Knight 25)"
+    }
+  },
+  "metadata": {
+    "source": "Output/UNM_Clan_Boss_Team_Analysis.md (Boss Mechanics Deep Dive section)",
+    "creation_date": "2025-10-28",
+    "phase": "Phase D - Clan Boss Mechanics JSON",
+    "validation": "Cross-referenced with Ayumilove, HellHades, RaidHQ, in-game testing (44M baseline)",
+    "notes": "Comprehensive UNM Clan Boss mechanics for automation, team building, and damage attribution modeling"
+  }
+}
