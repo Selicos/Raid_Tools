@@ -1,8 +1,18 @@
 # UNM Clan Boss Team Analysis
 
-**Date**: 2025-10-28  
-**Status**: OPTIMIZATION IN PROGRESS - 44M Baseline Confirmed  
+**Date**: 2025-10-29  
+**Status**: OPTIMIZATION IN PROGRESS - Gear Updates Applied  
 **Goal**: Optimize existing 5-champion UNM team from 44M → 60-75M damage with proper speed tune
+
+**⚡ LATEST UPDATES 2025-10-29:**
+- **Geomancer Regear COMPLETE**: 3x Feral + 2x Resilience + 1x Protection
+  - SPD: 210 → **171** ✅ (PERFECT for 1:1 tune stun target!)
+  - DEF: 4,520 → **4,887** (+367, excellent for survivability)
+  - HP: 57,756 → **60,443** (+2,687, tank improvement)
+  - C.RATE: 57% → **33%** ❌ (NEXT PRIORITY: Replace gloves with C.RATE%)
+  - ACC: 249 → **201** ⚠️ (Below 250 threshold, may need Mithrala +80 ACC lead)
+  - **SPEED TUNE STATUS**: 1/5 champions at target (171 SPD) ✅
+  - **NEXT CHAMPION**: Stag Knight (222 → 180-189 SPD needed)
 
 ---
 
@@ -13,11 +23,14 @@
 
 | Priority | Champion | Fix | Impact | Difficulty |
 |----------|----------|-----|--------|------------|
-| **1** | **Geomancer** | C.RATE gloves (57% → 100%) | **+5-8M** | ⭐ EASY (5 min) |
+| **1** | **Geomancer** | C.RATE gloves (33% → 100%) | **+10-15M** | ⭐ EASY (5 min) |
 | **2** | **Brogni** | C.RATE gloves (26% → 85%) | **+8-12M** | ⭐ EASY (5 min) |
 | **3** | **Godseeker Aniri** | Complete masteries (Support + Lasting Gifts T6) | **+3-5M + turns** | ⭐⭐ MEDIUM (30 min + scrolls) |
 
-**Total Quick Win Impact**: +16-25M damage = **44M → 60-69M** ✅ **(EXCEEDS 50M GOAL!)**
+**Total Quick Win Impact**: +21-32M damage = **44M → 65-76M** ✅ **(EXCEEDS 60M GOAL!)**
+
+**✅ GEOMANCER SPEED TUNE COMPLETE**: 171 SPD (was 210) - Ready for 1:1 stun target role!  
+**⚠️ GEOMANCER C.RATE**: Dropped to 33% (was 57%) during regear - **URGENT** gloves fix needed!
 
 **After these 3 fixes, TEST before continuing!** Run 3 battles, measure damage increase.
 
@@ -610,15 +623,22 @@ The boss follows a strict 5-turn attack pattern that repeats:
 
 **Interpretation:** A champion with 300k EHP can survive 300k raw damage before dying (accounting for DEF reduction).
 
-### Current Team Effective HP Table
+### Current Team Effective HP Table ✅ **UPDATED 2025-10-29**
 
 | Champion | HP | DEF | EHP Calculation | Total EHP | Survivability Rank |
 |----------|-----|-----|-----------------|-----------|-------------------|
-| **Geomancer** | 54,172 | 4,296 | 54,172 × (1 + 4.296) | **286,871** | 🥇 **#1** (Best stun target) |
+| **Geomancer** ✅ | 60,443 | 4,887 | 60,443 × (1 + 4.887) | **355,847** | 🥇 **#1 IMPROVED** (+69k EHP from regear!) |
 | **Stag Knight** | 49,035 | 2,846 | 49,035 × (1 + 2.846) | **188,583** | #5 (Fragile, avoid stun) |
-| **Brogni** | 79,988 | 3,134 | 79,988 × (1 + 3.134) | **330,549** | 🥇 **#1** (WITH shields) |
+| **Brogni** | 79,988 | 3,134 | 79,988 × (1 + 3.134) | **330,549** | #2 (WITH shields ~354k total) |
 | **Mithrala** | 61,025 | 3,172 | 61,025 × (1 + 3.172) | **254,596** | #3 (Arena build, high RES wasted) |
-| **Godseeker Aniri** | 61,842 | 3,774 | 61,842 × (1 + 3.774) | **295,196** | #2 (High SPD blocker, good base EHP) |
+| **Godseeker Aniri** | 61,842 | 3,774 | 61,842 × (1 + 3.774) | **295,196** | #4 (High SPD blocker, good base EHP) |
+
+**Key Changes (2025-10-29):**
+- **Geomancer EHP:** 286,871 → **355,847** (+68,976 = **+24% survivability**!)
+  - HP: 54,172 → 60,443 (+6,271 from Resilience 10% HP bonus)
+  - DEF: 4,296 → 4,887 (+591 from Protection 15% DEF bonus)
+  - **NEW ROLE:** TANKIEST champion (was tied #1, now clear #1)
+  - **SPD:** 210 → 171 ✅ (PERFECT for 1:1 stun target - slowest = takes all stuns)
 
 **Key Insights:**
 - **Brogni:** 330k EHP + 24k shields = **354k total survivability** (highest, but critical support role)
