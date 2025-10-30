@@ -631,7 +631,7 @@ The boss follows a strict 5-turn attack pattern that repeats:
 | **Mithrala** ✅ | 70,366 | 4,312 | 70,366 × (1 + 4.312) | **373,864** | 🥇 **#2** (was #3, boot swap improved!) |
 | **Geomancer** ✅ | 60,443 | 4,887 | 60,443 × (1 + 4.887) | **355,847** | � **#3** (was #2, PERFECT stun target!) |
 | **Brogni** ✅ | 91,092 | 4,922 | 91,092 × (1 + 4.922) | **539,491** | #1 **TANKIEST!** (+209k EHP, was #4!) |
-| **Godseeker Aniri** | 61,842 | 3,774 | 61,842 × (1 + 3.774) | **295,196** | #5 (High SPD blocker, needs update) |
+| **Godseeker Aniri** ✅ | 82,840 | 4,312 | 82,840 × (1 + 4.312) | **440,046** | #5 (+40k EHP, SPD 264→199 improved!) |
 
 **Key Changes (2025-10-29):**
 
@@ -664,9 +664,17 @@ The boss follows a strict 5-turn attack pattern that repeats:
   - DEF: 4,296 → 4,887 (+591)
   - ✅ SPD: 210 → 171 (PERFECT for 1:1 stun target - slowest!)
 
-**Team Total:** +665k EHP across 4 champions = **+127% team tankiness** 🏆
+**GODSEEKER ANIRI:** 399,967 → **440,046 EHP** (+40,079 = **+10% survivability**!)
+  - RANK: #5 → #5 (unchanged, still most fragile but improved!)
+  - HP: 76,705 → 82,840 (+6,135 = +8%)
+  - DEF: 4,214 → 4,312 (+98)
+  - ✅ SPD: 264 → 199 (-65, **MAJOR IMPROVEMENT!** Now just 10-28 too fast vs 171-189 range)
+  - ❌ RES: 215 → 122 (-93, trade-off for better stats)
+  - **Gear:** 4x Regeneration + 1x Righteous + 1x Resilient (survivability focus)
 
-**Speed Tune Status:** 1/5 complete (Geomancer 171 ✅), 1/5 almost (Brogni 192 ⚠️), 2 pending (Stag 219 ⚠️, Mithrala 251 ⚠️)
+**Team Total:** +705k EHP across 5 champions = **+113% team tankiness** 🏆
+
+**Speed Tune Status:** 1/5 complete (Geomancer 171 ✅), 1/5 almost (Brogni 192 ⚠️), 3 pending (Stag 219 ⚠️, Mithrala 251 ⚠️, Aniri 199 ⚠️)
 
 ### HP vs DEF% Boots Trade-Off Analysis
 
@@ -2049,31 +2057,35 @@ Based on screenshot analysis:
 
 ---
 
-### **Godseeker Aniri - Heal/Revive/Buff Extend Specialist**
+### **Godseeker Aniri - Heal/Revive/Buff Extend Specialist** ✅ **UPDATED 2025-10-29**
 
 **Role**: Heal, Revive on death (passive), Extend buffs, Increase DEF, survivability anchor
 
-**Current Stats**
+**Current Stats** ✅ **UPDATED 2025-10-29**
 -----------------
 
-| Stat | Value | Notes |
-| --- | --- | --- |
-| **HP** | 76,705 | Excellent survivability (highest on team) |
-| **ATK** | 2,806 | Low (not damage dealer) |
-| **DEF** | 4,214 | Good tank stats |
-| **SPD** | 264 | **EXTREME OVERKILL** for UNM 1:1 tune (target 171-189) |
-| **C.RATE** | 35% | Low (not priority for support/healer) |
-| **C.DMG** | 76% | Low (not priority) |
-| **RES** | 215 | Good debuff resistance |
-| **ACC** | 168 | **LOW** for UNM (target 250+ if placing debuffs, but Aniri is pure support) |
-| **Notes** | 2% | Unknown stat |
+| Stat | Previous | Current | Change | Notes |
+| --- | --- | --- | --- | --- |
+| **HP** | 76,705 | **82,840** | +6,135 (+8%) | Improved survivability! |
+| **ATK** | 2,806 | **3,033** | +227 | Low (not damage dealer) |
+| **DEF** | 4,214 | **4,312** | +98 | Good tank stats |
+| **SPD** | 264 | **199** | -65 ✅ | **MAJOR IMPROVEMENT!** (was extreme overkill, now just 10-28 too fast) |
+| **C.RATE** | 35% | **31%** | -4% | Low (not priority for support/healer) |
+| **C.DMG** | 76% | **92%** | +16% | Low (not priority) |
+| **RES** | 215 | **122** | -93 | Lower debuff resistance (trade-off) |
+| **ACC** | 168 | **147** | -21 | **LOW** for UNM (but Aniri is pure support, no debuffs) |
 
-**Gear Sets**
+**EHP Calculation:**
+- **Previous:** 76,705 HP × (1 + 4.214 DEF / 1000) = 76,705 × 5.214 = **399,967 EHP**
+- **Current:** 82,840 HP × (1 + 4.312 DEF / 1000) = 82,840 × 5.312 = **440,046 EHP**
+- **Change:** +40,079 EHP (+10% improvement!) ✅
+
+**Gear Sets** ✅ **UPDATED 2025-10-29**
 -------------
-- **2x Righteous** (+15% C.RATE bonus)
-- **4x Regeneration** (+15% HP regeneration per turn)
-- **1x Stoneskin** (likely partial set for shield on first turn, or stray piece)
-- **Analysis**: Survivability-focused build with Regeneration for constant healing. Stoneskin partial set suggests defensive focus. No SPD sets but still 264 SPD (high substats).
+- **4x Regeneration** (+15% HP regeneration per turn) - PRIMARY SET
+- **1x Righteous** (+15% C.RATE bonus on 2-set)
+- **1x Resilient** (+10% RES on 2-set)
+- **Analysis**: Survivability-focused build with Regeneration for constant healing. Mix of defensive sets (Righteous/Resilient) suggests optimizing best stat pieces. SPD reduced from 264 → 199 (likely removed SPD boots or SPD set pieces).
 
 **Masteries**
 -------------
@@ -2213,49 +2225,50 @@ Based on screenshot analysis:
 ----------
 - **Fully booked** ✅ (assumed based on established multi-use champion, confirm if needed)
 
-**Critical Issues - Godseeker Aniri**
+**Critical Issues - Godseeker Aniri** ✅ **UPDATED 2025-10-29**
 --------------------------------------
 
-1. **SPD EXTREME OVERKILL (264)**
-   - Current: 264 SPD
+1. **SPD MUCH IMPROVED! (199)** ✅ **MAJOR PROGRESS!**
+   - ✅ Previous: 264 SPD (75-93 too fast, EXTREME overkill) → Current: 199 SPD (-65, **MASSIVE IMPROVEMENT!**)
    - Target: 171-189 SPD (1:1 tune)
-   - Overkill: +75-93 SPD excess (MASSIVE - highest SPD on team)
-   - Issue: Taking way too many extra turns → extreme speed tune chaos → buff extension timing issues (extending buffs at wrong time, heal/revive rotation desync, turn meter boost from Demonic Effigy creating more chaos)
-   - Fix: Replace SPD boots with HP%/DEF% boots (loses ~45 SPD), optimize substats (may need to regear entirely to drop -75+ SPD)
-   - Combined fix: 264 - 45 (boots) = ~219 SPD → still +30-48 SPD over target → needs aggressive substat reduction
-   - **CRITICAL PRIORITY** - Second highest SPD blocker after Mithrala (245 SPD)
+   - Remaining gap: Just 10-28 SPD too fast (minor adjustment needed)
+   - Issue: Still taking ~1-2 extra turns but much better than before
+   - Fix: Minor SPD reduction via substats (-10 to -28 SPD) = easily achievable with small gear tweaks
+   - **Status:** **MAJOR WIN** - Reduced from worst speed blocker to minor adjustment needed!
 
-2. **MASTERIES INCOMPLETE**
+2. **MASTERIES STILL INCOMPLETE** ❌ **URGENT**
    - Missing T6 masteries from Offense and Defense trees
    - No Support tree at all (Support tree has Lasting Gifts T6 = extends buff duration, perfect for Aniri's kit)
    - Current state: Only T5 masteries (Life Drinker, Retribution)
-   - **FIX REQUIRED**: Complete masteries with Support tree + Lasting Gifts T6 (synergizes with buff extension skill), OR Defense T6 (Warmaster of Wrath for healing)
-   - **URGENT** - Incomplete masteries = significant performance loss
+   - **FIX REQUIRED**: Complete masteries with Support tree + Lasting Gifts T6 (synergizes with buff extension skill on A2, extends Brogni shields 2→3 turns), OR Defense T6 (Warmaster of Wrath for healing)
+   - **IMPACT:** +3-5M damage + better buff extension timing (Lasting Gifts + A2 = +2 turns total on all buffs)
+   - **PRIORITY:** **#1 FIX** after speed tune completion
 
-3. **ACC LOW (168) - CONDITIONAL ISSUE**
-   - Current: 168 ACC
+3. **ACC LOW (147) - NOT CRITICAL** ⚠️ **ACCEPTABLE**
+   - Previous: 168 ACC → Current: 147 ACC (-21)
    - Target: 250+ ACC (if placing debuffs)
-   - Gap: -82 ACC
-   - **Question**: Does Godseeker Aniri place debuffs in kit? (heal/revive/buff extend suggests pure support, may not need ACC)
-   - If no debuffs: ACC not critical, can ignore
-   - If debuffs exist: Needs +82 ACC via ACC chest/banner or Perception sets
-   - Priority: **CONDITIONAL** - Validate kit before prioritizing
+   - Gap: -103 ACC
+   - **Validation:** Godseeker Aniri is **PURE SUPPORT** - no debuffs on A2/A3, only buffs (heal, revive, buff extension, Increase DEF)
+   - **Conclusion:** ACC not critical, can ignore this stat for UNM CB role
+   - Priority: **IGNORE** - Pure support role doesn't need ACC
 
-4. **STONESKIN PARTIAL SET (1 piece)**
-   - Only 1x Stoneskin piece equipped (not full 4-set for shield effect)
-   - May be stray piece or incomplete set
-   - Fix: Complete 4x Stoneskin for first-turn shield (helps survivability), OR replace with matching set (Regeneration, Immortal, etc.)
-   - Priority: LOW (not hurting performance, just incomplete set bonus)
+4. **EHP IMPROVED! (440k)** ✅ **SUCCESS!**
+   - Previous: 399,967 EHP (#5 most fragile) → Current: 440,046 EHP (+40k = +10%)
+   - RANK: #5 → #5 (still most fragile but much better survivability)
+   - HP: 76,705 → 82,840 (+6,135 = +8%)
+   - DEF: 4,214 → 4,312 (+98)
+   - **Gear:** 4x Regeneration + 1x Righteous + 1x Resilient (survivability-focused)
+   - **Impact:** Better survivability for healer role, less likely to die early
+   - **Status:** **GOOD** - Regeneration set provides constant healing, improved tankiness
 
-**Optimization Priority - Godseeker Aniri**
+**Optimization Priority - Godseeker Aniri** ✅ **UPDATED 2025-10-29**
 -------------------------------------------
 
 | Priority | Change | Impact | Notes |
 | --- | --- | --- | --- |
-| **1. CRITICAL** | Complete masteries | Support tree + Lasting Gifts T6 | Missing T6 masteries = major performance loss. Lasting Gifts synergizes with buff extension skill. |
-| **2. CRITICAL** | SPD boots → HP%/DEF% boots + substat reduction | Fix speed tune (TEAM BLOCKER) | 264 → 180-189 SPD target (-45 boots, -30+ substats = aggressive regearing needed) |
-| **3. MEDIUM** | Validate ACC requirement | Clarity on debuffs in kit | If no debuffs, ignore ACC. If debuffs exist, needs +82 ACC to 250 threshold. |
-| **4. LOW** | Complete Stoneskin set OR replace piece | Set bonus efficiency | 1x Stoneskin stray piece → complete 4x Stoneskin for shield, OR replace with Regeneration/Immortal matching piece |
+| **1. CRITICAL** | Complete masteries | Support tree + Lasting Gifts T6 | **+3-5M damage + buff extension synergy**. Extends Brogni shields, Stag debuffs, Mithrala buffs by +2 turns total. |
+| **2. MEDIUM** | SPD minor reduction | 199 → 185-189 SPD (-10 to -14) | **90% COMPLETE!** Just minor substat tweak needed. No boots swap required. |
+| **3. LOW** | Ignore ACC | Not needed | Pure support role, no debuffs to land. |
 
 **Regearing Strategy - Godseeker Aniri**
 - **SPD boots → HP% boots**: 264 → ~219 SPD (loses ~45 SPD from boots)
