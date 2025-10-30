@@ -9,7 +9,7 @@
   - SPD: 210 → **171** ✅ (PERFECT for 1:1 tune stun target!)
   - DEF: 4,520 → **4,887** (+367, excellent for survivability)
   - HP: 57,756 → **60,443** (+2,687, tank improvement)
-  - C.RATE: 57% → **33%** ❌ (NEXT PRIORITY: Replace gloves with C.RATE%)
+  - C.RATE: 57% → **33%** (acceptable, C.RATE not critical for Warmaster procs)
   - ACC: 249 → **201** ⚠️ (Below 250 threshold, may need Mithrala +80 ACC lead)
   - **SPEED TUNE STATUS**: 1/5 champions at target (171 SPD) ✅
   - **NEXT CHAMPION**: Stag Knight (222 → 180-189 SPD needed)
@@ -23,14 +23,14 @@
 
 | Priority | Champion | Fix | Impact | Difficulty |
 |----------|----------|-----|--------|------------|
-| **1** | **Geomancer** | C.RATE gloves (33% → 100%) | **+10-15M** | ⭐ EASY (5 min) |
-| **2** | **Brogni** | C.RATE gloves (26% → 85%) | **+8-12M** | ⭐ EASY (5 min) |
-| **3** | **Godseeker Aniri** | Complete masteries (Support + Lasting Gifts T6) | **+3-5M + turns** | ⭐⭐ MEDIUM (30 min + scrolls) |
+| **1** | **Godseeker Aniri** | Complete masteries (Support + Lasting Gifts T6) | **+3-5M + turns** | ⭐⭐ MEDIUM (30 min + scrolls) |
+| **2** | **Brogni** | ACC chest+banner (116 → 250+ ACC) | **+5-8M** (HP Burn landing) | ⭐⭐ MEDIUM (find Perception pieces) |
+| **3** | **All Champions** | Complete speed tune (see detailed plan) | **+8-12M** (optimal rotation) | ⭐⭐⭐ HARD (1-2 hours regearing) |
 
-**Total Quick Win Impact**: +21-32M damage = **44M → 65-76M** ✅ **(EXCEEDS 60M GOAL!)**
+**Total Quick Win Impact**: +16-25M damage = **44M → 60-69M** ✅ **(ACHIEVES 60M GOAL!)**
 
 **✅ GEOMANCER SPEED TUNE COMPLETE**: 171 SPD (was 210) - Ready for 1:1 stun target role!  
-**⚠️ GEOMANCER C.RATE**: Dropped to 33% (was 57%) during regear - **URGENT** gloves fix needed!
+**⚠️ CRITICAL NOTE**: C.RATE is NOT needed for Warmaster/Giant Slayer masteries (proc on any hit based on % chance, not crits)!
 
 **After these 3 fixes, TEST before continuing!** Run 3 battles, measure damage increase.
 
@@ -160,23 +160,27 @@
 ### **Gear Optimization Strategy (Based on Availability)**
 
 **IMMEDIATE FIXES (High Availability, Easy Swaps):**
-1. **C.RATE Gloves** (Perception/Righteous/Swift Parry sets):
-   - Geomancer: 33% → 100% (Perception C.RATE gloves + Deadly Precision = +72%)
-   - Brogni: 26% → 85%+ (Righteous C.RATE gloves + Deadly Precision = +64%)
-   - Stag Knight: 39% → 90%+ (Swift Parry C.RATE gloves + Deadly Precision = +56%)
-
-2. **ACC Chest/Banner** (Perception sets):
+1. **ACC Chest/Banner** (Perception sets - HIGHEST PRIORITY):
    - Brogni: 116 ACC → 250+ (Perception chest +60 ACC + banner +60 ACC = +120 ACC minimum)
    - Geomancer: 201 ACC → 251+ (Perception banner +50 ACC if Mithrala replaced)
+   - **Impact**: +5-8M damage from better HP Burn/Decrease DEF landing rates
 
-3. **SPD Boots Swaps** (Use existing HP%/DEF% boots from abundant sets):
+2. **SPD Boots Optimization** (Use existing HP%/DEF% boots from abundant sets):
    - Stag Knight: SPD → DEF% boots (219 → 174-179 SPD, use Bolster/Protection DEF% boots)
-   - Mithrala: Decision pending (keep 251 SPD for Arena OR regear for CB)
+   - Brogni: 192 SPD → 185-189 (minor SPD substat reduction, keep SPD boots)
+   - Godseeker Aniri: 199 SPD → 185-189 (minor SPD substat reduction, keep SPD boots)
+   - **Impact**: +8-12M damage from optimal buff/debuff rotation timing
+
+3. **C.RATE Optimization** (OPTIONAL, lower priority than ACC/SPD):
+   - Geomancer: 33% → 50-70% (C.RATE gloves OR substats, helps base damage only)
+   - Brogni: 26% → 50-70% (C.RATE gloves OR substats, helps base damage only)
+   - Stag Knight: 39% already acceptable (63% after regear)
+   - **Impact**: +2-4M damage from better base skill crit damage (NOT Warmaster/Giant Slayer!)
 
 **MEDIUM-TERM BUILDS (1-2 weeks, use Medium Availability sets):**
 1. **Rector Drath CB Build** (if Path 2B chosen):
    - 4x Lifesteal + 2x Speed (use existing Lifesteal set)
-   - Target: 180-186 SPD, 60-70k HP, 4-5k DEF, 70%+ C.RATE, 250+ ACC
+   - Target: 180-186 SPD, 60-70k HP, 4-5k DEF, 250+ ACC (PRIORITY), 50-70% C.RATE (optional)
    - Masteries: Warmaster T6, Support tree (300 gems + scrolls)
 
 2. **Godseeker Aniri Optimization**:
@@ -186,13 +190,14 @@
 
 **LONG-TERM OPTIMIZATIONS (Resource-Limited):**
 1. **Gear Ascension Priority** (2-4 star max):
-   - Focus on main stat pieces (C.RATE gloves, ACC chest/banner, HP%/DEF% boots)
+   - Focus on main stat pieces (ACC chest/banner FIRST, HP%/DEF% boots, SPD boots)
+   - C.RATE gloves lower priority (doesn't affect Warmaster/Giant Slayer procs)
    - Don't waste resources on substat optimization (can't reach 5-6 star anyway)
 
 2. **Mastery Reset Priority** (300 gems each):
    - **#1:** Godseeker Aniri (Support + Lasting Gifts T6 = +3-5M damage + buff synergy)
-   - **#2:** Geomancer (if current Warmaster not optimized)
-   - **#3:** Rector Drath (if building for CB, full fresh masteries)
+   - **#2:** Rector Drath (if building for CB, full fresh masteries for Warmaster T6)
+   - **#3:** Geomancer (only if current Warmaster T6 missing or Defense tree incomplete)
 
 3. **Spider Farm Priority** (for ACC accessories):
    - Current Spider Hard 6 mythics sufficient for 250+ ACC targets
@@ -202,13 +207,13 @@
 
 | Champion | Current Sets | Recommended Sets | Priority Changes |
 |----------|-------------|------------------|------------------|
-| **Geomancer** | 3x Feral, 2x Resilience, 1x Protection ✅ | KEEP ✅ | Just swap to C.RATE gloves (Perception) |
+| **Geomancer** | 3x Feral, 2x Resilience, 1x Protection ✅ | KEEP ✅ | Add ACC banner (Perception) if Mithrala replaced |
 | **Stag Knight** | 2x Feral, 2x Perception, 1x Protection, 1x Righteous ✅ | KEEP ✅ | Swap SPD→DEF% boots (Protection/Bolster) |
-| **Brogni** | 2x Protection + mixed ✅ | KEEP ✅ | Add C.RATE gloves (Righteous) + ACC chest+banner (Perception) |
+| **Brogni** | 2x Protection + mixed ✅ | KEEP ✅ | Add ACC chest+banner (Perception) - HIGHEST PRIORITY |
 | **Mithrala** | 6x Perception, 1x Pinpoint ✅ | KEEP ✅ (if Arena priority) | OR 4x Lifesteal + 2x Speed (if Path 2A full CB) |
 | **Godseeker Aniri** | 4x Regeneration, 1x Righteous, 1x Resilient ✅ | KEEP ✅ | Minor SPD reduction (-10 to -14 via substats) |
 
-**Key Takeaway:** Current gear sets are mostly OPTIMAL based on availability! Just need **targeted swaps** (C.RATE gloves, ACC chest/banner, SPD boots) rather than full regearsing.
+**Key Takeaway:** Current gear sets are mostly OPTIMAL based on availability! Just need **targeted swaps** (ACC chest/banner PRIORITY, SPD boots optimization, C.RATE gloves optional) rather than full regearing.
 
 ---
 
@@ -232,13 +237,16 @@
    - Turn meter desync breaking rotations
    - **Mithrala Issue**: 240-260 SPD is MASSIVE OVERKILL for CB → should drop to 180-190 SPD for more HP%/DEF% substats
    
-2. **Geomancer C.RATE 57%**: Needs 100% for Warmaster T6 (costing ~40% damage = 5-8M per run)
-   - **Fix**: Change gloves to C.RATE main stat (57% → 100%+ with Deadly Precision mastery)
-   - Add notes for each champion as relevant
+2. **Godseeker Aniri Masteries Incomplete**: Missing Lasting Gifts T6 (Support tree)
+   - **Impact**: +3-5M damage from buff extension synergy (extends Brogni shields, Decrease DEF/ATK, Increase DEF)
+   - **Fix**: Reset masteries for Support tree + Lasting Gifts T6 (300 gems + scrolls)
    
-3. **Geomancer SPD 210**: Too fast for 1:1 tune (target 171-189 SPD), breaking buff/shield sync
-   - **Fix**: Remove Feral set (4-piece gives +12% SPD), replace with Lifesteal/Savage
-   - **Target**: 171 SPD exactly (stun target candidate - low base HP, good DEF/HP)
+3. **Brogni ACC 116**: Too low for consistent HP Burn landing (target 250+ ACC for 95%+ landing rate)
+   - **Impact**: +5-8M damage from better HP Burn uptime
+   - **Fix**: ACC chest+banner (Perception sets, +120 ACC minimum)
+   
+4. **Geomancer SPD 171 ✅ COMPLETE**: Speed tune aligned for stun target!
+   - **Status**: Fixed 2025-10-29 (was 210 SPD, now 171 SPD perfect for 1:1 tune)
 
 ---
 
@@ -250,74 +258,73 @@
 
 ---
 
-### **🎯 GEOMANCER - HP Burn DPS** (Current: 57% C.RATE, 210 SPD)
-**Impact**: +5-8M damage from C.RATE fix alone
+### **🎯 GEOMANCER - HP Burn DPS** (Current: 33% C.RATE, 171 SPD ✅)
+**Status**: Speed tune COMPLETE! ACC borderline (201, target 250+)
 
-**Step 1 - C.RATE FIX (URGENT)** ⚡ **+5-8M damage**
-- **Action**: Replace gloves with C.RATE% main stat gloves
-- **Result**: 57% → 100%+ C.RATE (with Deadly Precision +5%)
-- **Why**: Currently missing ~40% Warmaster procs = 5-8M damage loss per run
-- **Difficulty**: ⭐ EASY (single gear swap, 5 minutes)
+**Step 1 - SPEED TUNE ✅ COMPLETE** 🎯 **Enables team speed tune**
+- **Status**: DONE 2025-10-29 (171 SPD perfect for 1:1 stun target!)
+- **Result**: 210 SPD → **171 SPD** (PERFECT for 1:1 tune stun target role)
+- **Gear**: 3x Feral + 2x Resilience + 1x Protection ✅
 
-**Step 2 - SPEED TUNE FIX (URGENT)** 🎯 **Enables team speed tune**
-- **Action**: Remove 4x Feral set → Replace with Lifesteal or Savage sets
-- **Result**: 210 SPD → ~171-175 SPD (target 171 SPD for stun target role)
-- **Why**: Too fast for 1:1 tune, Feral set gives unwanted +12% SPD
-- **Difficulty**: ⭐⭐ MEDIUM (4-piece set swap, may need SPD substat adjustments)
+**Step 2 - ACC FIX (HIGH PRIORITY if Mithrala replaced)** � **+3-5M damage**
+- **Action**: Add ACC banner (Perception +50-60 ACC) if team loses Mithrala +80 ACC lead
+- **Result**: 201 ACC → 251+ ACC (Decrease DEF lands 95%+ instead of ~70%)
+- **Why**: If Rector Drath replaces Mithrala, team loses +80 ACC aura, Geomancer ACC becomes critical
+- **Difficulty**: ⭐⭐ MEDIUM (banner swap + Perception set)
 
-**Step 3 - OPTIMIZE C.DMG (MEDIUM PRIORITY)** 📈 **+2-3M damage**
-- **Action**: Upgrade C.DMG on gear substats or chest (current 139% → target 200%+)
-- **Result**: Higher Warmaster proc damage
-- **Why**: After C.RATE fix (100%), C.DMG becomes damage multiplier
-- **Difficulty**: ⭐⭐ MEDIUM (requires good gear with C.DMG substats)
-
----
-
-### **🎯 BROGNI - Shield/HP Burn Specialist** (Current: 26% C.RATE, 225 SPD)
-**Impact**: +8-12M damage from C.RATE fix (Giant Slayer passive)
-
-**Step 1 - C.RATE FIX (URGENT)** ⚡ **+8-12M damage**
-- **Action**: Replace gloves with C.RATE% main stat gloves
-- **Result**: 26% → 80%+ C.RATE (with Deadly Precision +5% = 85%+)
-- **Why**: Giant Slayer passive only proccing 26% currently, should be 85%+ (massive damage gain)
-- **Difficulty**: ⭐ EASY (single gear swap, 5 minutes)
-
-**Step 2 - SPEED TUNE FIX (URGENT)** 🎯 **Enables shield timing**
-- **Action**: Replace SPD boots with DEF% boots
-- **Result**: 225 SPD → ~180-183 SPD (target 183 SPD mid-range)
-- **Why**: Too fast breaking shield timing, DEF% boots synergize with 5k DEF + shield scaling
-- **Difficulty**: ⭐ EASY (single boot swap, may already hit target)
-
-**Step 3 - ACC FIX (HIGH PRIORITY)** 🎲 **+2-4M damage**
-- **Action**: Add ACC via chest (ACC% main) OR banner (ACC) OR add 2x Perception sets
-- **Result**: 145 ACC → 250+ ACC (HP Burn lands consistently)
-- **Why**: HP Burn failing to land ~30-40% of time, reducing damage contribution
-- **Difficulty**: ⭐⭐ MEDIUM (chest/banner swap OR set addition, Gilded Dragonstone relic helps offset gap)
+**Step 3 - C.RATE OPTIMIZATION (OPTIONAL)** 📈 **+2-3M base damage**
+- **Action**: Increase C.RATE via gloves or substats (current 33% → target 50-70%)
+- **Result**: Better base skill crit damage (NOTE: Does NOT affect Warmaster procs!)
+- **Why**: Warmaster procs 60% of the time regardless of crit. C.RATE only improves base attack damage.
+- **Difficulty**: ⭐⭐ MEDIUM (C.RATE gloves available in Perception)
 
 ---
 
-### **🎯 STAG KNIGHT - Decrease DEF/ATK** (Current: 63% C.RATE, 222 SPD)
-**Impact**: Speed tune alignment + moderate C.RATE improvement
+### **🎯 BROGNI - Shield/HP Burn Specialist** (Current: 26% C.RATE, 192 SPD)
+**Status**: ACC TOO LOW (116, target 250+), SPD almost tuned (192 vs 185-189 target)
 
-**Step 1 - SPEED TUNE FIX (URGENT)** 🎯 **Enables debuff timing**
+**Step 1 - ACC FIX (HIGHEST PRIORITY)** ⚡ **+5-8M damage**
+- **Action**: Add ACC chest+banner (Perception sets, +120 ACC minimum)
+- **Result**: 116 ACC → 250+ ACC (HP Burn lands 95%+ instead of ~45%)
+- **Why**: HP Burn is Brogni's PRIMARY damage contribution. Low ACC = massive damage loss.
+- **Difficulty**: ⭐⭐ MEDIUM (chest+banner swap, Perception sets available)
+
+**Step 2 - SPEED TUNE FIX (HIGH PRIORITY)** 🎯 **+3-5M from optimal rotation**
+- **Action**: Reduce SPD via substats (remove SPD rolls, add HP%/DEF% instead)
+- **Result**: 192 SPD → 185-189 SPD (target mid-range for shield timing)
+- **Why**: Slightly too fast, breaking optimal shield rotation timing
+- **Difficulty**: ⭐⭐ MEDIUM (substat optimization, may happen automatically with ACC chest/banner swap)
+
+**Step 3 - C.RATE OPTIMIZATION (OPTIONAL)** 📈 **+2-3M base damage**
+- **Action**: Increase C.RATE via gloves or substats (current 26% → target 50-70%)
+- **Result**: Better base skill crit damage (NOTE: Does NOT affect Giant Slayer procs!)
+- **Why**: Giant Slayer procs 30% per hit regardless of crit. C.RATE only improves base attack damage.
+- **Difficulty**: ⭐⭐ MEDIUM (C.RATE gloves available in Righteous, but ACC takes priority)
+
+---
+
+### **🎯 STAG KNIGHT - Decrease DEF/ATK** (Current: 39% C.RATE, 219 SPD)
+**Status**: Excellent stats (310 ACC, 67k HP, 4.6k DEF)! Just needs speed tune fix.
+
+**Step 1 - SPEED TUNE FIX (HIGHEST PRIORITY)** 🎯 **+5-8M from optimal rotation**
 - **Action**: Replace SPD boots with DEF%/HP% boots
-- **Result**: 222 SPD → ~177-180 SPD (target 180 SPD)
-- **Why**: Too fast for 1:1 tune, breaking Decrease DEF/ATK rotation timing
+- **Result**: 219 SPD → ~174-179 SPD (target 180 SPD for mid-range)
+- **Why**: Too fast for 1:1 tune, breaking Decrease DEF/ATK rotation timing (critical debuff!)
 - **Difficulty**: ⭐ EASY (single boot swap, likely achieves target immediately)
 
-**Step 2 - CONFIRM GEAR SETS (LOW PRIORITY)** 🔍 **Clarity**
-- **Action**: Identify gear sets equipped (unclear from screenshot)
-- **Result**: Visibility into stat sources, optimize set bonuses if needed
-- **Why**: Can't optimize without knowing current sets (may have SPD set to remove)
-- **Difficulty**: ⭐ TRIVIAL (just check gear screen, no changes yet)
+**Step 2 - WAND OF SUBMISSION RELIC (MEDIUM PRIORITY)** �️ **Stun protection**
+- **Action**: Move Wand of Submission from available pool to Stag Knight
+- **Result**: 25% chance to reflect stun back to CB (safety net for critical debuffer)
+- **Why**: Stag Knight is MOST CRITICAL champion (Decrease DEF 60% = 1.73× team damage multiplier). If he gets stunned, team damage drops massively.
+- **Difficulty**: ⭐ EASY (relic swap, no gear changes needed)
 
-**Step 3 - C.RATE OPTIMIZATION (OPTIONAL)** 📈 **+1-2M damage**
-- **Action**: Increase C.RATE via gloves or substats (current 63% → target 70%+)
-- **Result**: Better Warmaster proc consistency
-- **Why**: Support role (not primary DPS), lower priority than Geomancer/Brogni
+**Step 3 - C.RATE OPTIMIZATION (LOWEST PRIORITY)** 📈 **+1-2M base damage**
+- **Action**: Increase C.RATE via gloves or substats (current 39% → target 50-70%)
+- **Result**: Better base skill crit damage (NOTE: Does NOT affect Warmaster procs!)
+- **Why**: Support role (not primary DPS). Warmaster procs 60% of time regardless of crit.
 - **Difficulty**: ⭐⭐ MEDIUM (optional, only if not breaking other teams)
 
-**Note**: Stag Knight already excellent (310 ACC, 67k HP, 4.6k DEF) - speed tune is main fix needed
+**Note**: Stag Knight already excellent (310 ACC perfect, high survivability) - speed tune is main fix needed!
 
 ---
 
@@ -346,26 +353,29 @@
 
 ---
 
-### **🎯 GODSEEKER ANIRI - Heal/Revive/Extend** (Current: 35% C.RATE, 264 SPD)
-**Impact**: +3-5M damage + 5-10 turns survival from masteries
+### **🎯 GODSEEKER ANIRI - Heal/Revive/Extend** (Current: 35% C.RATE, 199 SPD)
+**Status**: Masteries INCOMPLETE (missing Lasting Gifts T6 - CRITICAL!), SPD almost tuned
 
-**Step 1 - COMPLETE MASTERIES (CRITICAL)** ⚡ **+3-5M + 5-10 turns**
-- **Action**: Add Support tree + Lasting Gifts T6 (extends buff duration +1 turn)
-- **Result**: Buff extension applies to Brogni shields, Stag debuffs, Mithrala buffs (massive team benefit)
-- **Why**: Missing T6 masteries = incomplete champion, Lasting Gifts synergizes with buff extend skill
-- **Difficulty**: ⭐⭐ MEDIUM (800 scrolls required, 30 minutes to assign)
+**Step 1 - COMPLETE MASTERIES (HIGHEST TEAM PRIORITY!)** ⚡ **+3-5M + 5-10 turns**
+- **Action**: Reset masteries for Support tree + Lasting Gifts T6 (extends buff duration +1 turn)
+- **Result**: Buff extension applies to Brogni shields, Stag debuffs, Increase DEF (MASSIVE team benefit)
+- **Why**: Missing T6 masteries = incomplete champion. Lasting Gifts synergizes with A3 buff extend skill (double extension = permanent buff uptime!)
+- **Cost**: 300 gems + scrolls (800 total)
+- **Difficulty**: ⭐⭐ MEDIUM (30 minutes to reset + assign, ~1 week gem gathering)
 
-**Step 2 - SPEED TUNE FIX (HIGH PRIORITY)** 🎯 **Enables buff timing**
-- **Action**: Replace SPD boots with HP% boots + regear 2-3 pieces with lower SPD substats
-- **Result**: 264 SPD → ~189 SPD (target 189 SPD fastest in team)
-- **Why**: Worst speed blocker (-75 SPD gap), breaking buff extension timing
-- **Difficulty**: ⭐⭐⭐⭐ VERY HARD (boots + aggressive substat reduction via regearing)
+**Step 2 - SPEED TUNE FIX (HIGH PRIORITY)** 🎯 **+3-5M from optimal rotation**
+- **Action**: Reduce SPD via substats (remove SPD rolls, add HP%/DEF% instead)
+- **Result**: 199 SPD → 185-189 SPD (target mid-range for buff timing)
+- **Why**: Slightly too fast, breaking optimal buff extension rotation timing
+- **Difficulty**: ⭐⭐ MEDIUM (substat optimization via regearing 1-2 pieces)
 
 **Step 3 - VALIDATE ACC REQUIREMENT (CONDITIONAL)** 🔍 **Clarity**
 - **Action**: Check if Godseeker Aniri kit has debuffs (heal/revive/extend suggests no debuffs)
 - **Result**: If no debuffs, ignore 168 ACC (not needed). If debuffs exist, add +82 ACC to 250
 - **Why**: Don't waste stats on ACC if champion doesn't place debuffs
 - **Difficulty**: ⭐ TRIVIAL (just validate kit, no gear changes unless debuffs confirmed)
+
+**Note**: C.RATE 35% is acceptable - does NOT affect healing/buff strength. C.RATE only improves base attack damage (minor impact for support role).
 
 ---
 
@@ -374,24 +384,25 @@
 ### **Phase 1: IMMEDIATE WINS** (1-2 hours) ⚡ **+16-25M damage**
 Do these 3 fixes FIRST - easiest and highest impact:
 
-1. **Geomancer**: C.RATE gloves (57% → 100%) → **+5-8M damage**
-2. **Brogni**: C.RATE gloves (26% → 85%) → **+8-12M damage**
-3. **Godseeker Aniri**: Complete masteries (Support tree + Lasting Gifts T6) → **+3-5M + survival**
+1. **Godseeker Aniri**: Complete masteries (Support tree + Lasting Gifts T6) → **+3-5M + survival**
+2. **Brogni**: ACC chest+banner (116 → 250+ ACC) → **+5-8M damage** (HP Burn landing)
+3. **Complete speed tune**: See Phase 2 below → **+8-12M damage** (optimal rotation)
 
-**Expected Result After Phase 1**: 44M → **60-69M damage** ✅ (EXCEEDS 50M GOAL!)
+**Expected Result After Phase 1**: 44M → **60-69M damage** ✅ (EXCEEDS 60M GOAL!)
 
 **Test After Phase 1**: Run 3 battles, measure damage increase, validate improvement before continuing
 
 ---
 
-### **Phase 2: SPEED TUNE FOUNDATION** (2-4 hours) 🎯 **+5-10M damage + turn survival**
-After validating Phase 1 gains, implement speed tune:
+### **Phase 2: SPEED TUNE IMPLEMENTATION** (2-4 hours) 🎯 **+8-12M damage + survival**
+After validating Aniri masteries + Brogni ACC gains, complete speed tune:
 
-4. **Geomancer**: Remove 4x Feral set → Lifesteal/Savage (210 → 171 SPD)
-5. **Stag Knight**: SPD boots → DEF%/HP% boots (222 → 180 SPD)
-6. **Brogni**: SPD boots → DEF% boots (225 → 183 SPD)
+4. **Geomancer**: ✅ COMPLETE (171 SPD perfect!)
+5. **Stag Knight**: SPD boots → DEF%/HP% boots (219 → 174-179 SPD) → **+3-5M** (optimal Decrease DEF timing)
+6. **Brogni**: Reduce SPD via substats (192 → 185-189 SPD) → **+2-3M** (optimal shield timing)
+7. **Godseeker Aniri**: Reduce SPD via substats (199 → 185-189 SPD) → **+3-4M** (optimal buff extension)
 
-**Expected Result After Phase 2**: 60-69M → **65-75M damage** + 30-45 turns → **50+ turns** ✅
+**Expected Result After Phase 2**: 60-69M → **68-81M damage** + 30-45 turns → **50+ turns** ✅
 
 **Test After Phase 2**: Run 5 battles, verify turn order consistency, validate buff/shield timing
 
@@ -399,15 +410,14 @@ After validating Phase 1 gains, implement speed tune:
 
 ### **Phase 3: FINAL OPTIMIZATIONS** (depends on Option A/B decision)
 
-**Option A** (Optimize Mithrala, breaks Arena): **+0-5M** additional damage
-7. Mithrala: Remove Feral + SPD boots (245 → 186 SPD)
-8. Godseeker Aniri: Aggressive SPD reduction (264 → 189 SPD)
-9. Brogni: ACC fix (145 → 250+ ACC)
+**Option A** (Optimize Mithrala, breaks Arena): **+2-5M** additional damage
+8. Mithrala: Remove Feral + SPD boots (251 → 186 SPD)
+9. C.RATE optimization (OPTIONAL): Geomancer/Brogni/Stag 50-70% C.RATE for base damage → **+2-4M total**
 
-**Option B** (Rector Drath swap, preserves Arena): **-5M** vs Option A, but Arena intact
-7. Build Rector Drath for CB (fresh 186 SPD build)
-8. Godseeker Aniri: Aggressive SPD reduction (264 → 189 SPD)
-9. Brogni: ACC fix (145 → 250+ ACC)
+**Option B** (Rector Drath swap, preserves Arena): **+14-33M** vs current Mithrala
+8. Build Rector Drath for CB (fresh 180-186 SPD build, Block Debuffs stun immunity)
+9. Team ACC fixes: Brogni +134 ACC (already in Phase 1), Geomancer +50 ACC banner
+10. C.RATE optimization (OPTIONAL): Geomancer/Brogni/Stag 50-70% C.RATE for base damage → **+2-4M total**
 
 ---
 
@@ -416,8 +426,8 @@ After validating Phase 1 gains, implement speed tune:
 | Phase | Actions | Damage | Turns | Time Investment |
 |-------|---------|--------|-------|-----------------|
 | **Baseline** | Current setup (tested 2025-10-28) | 44M ✅ | 30-45 | N/A |
-| **After Phase 1** | C.RATE fixes + masteries | **60-69M** | 30-45 | 1-2 hours |
-| **After Phase 2** | Speed tune foundation | **65-75M** | **50+** | +2-4 hours |
+| **After Phase 1** | Aniri masteries + Brogni ACC + speed tune | **60-69M** | **50+** | 1-2 hours |
+| **After Phase 2** | Complete speed tune all champions | **68-81M** | **50+** | +2-4 hours |
 | **After Phase 3 (A)** | Full optimization + Mithrala | **70-75M** | **50+** | +2-4 hours |
 | **After Phase 3 (B)** | Rector Drath swap | **65-70M** | **50+** | +2-4 hours |
 
