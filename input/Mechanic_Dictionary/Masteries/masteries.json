@@ -181,12 +181,13 @@
           "tier": 6,
           "tree": "offense",
           "recommended_for": ["clan_boss", "dungeon_bosses", "hydra", "doom_tower"],
-          "notes": "PRIMARY T6 mastery for 1-2 hit champions (vs Giant Slayer for multi-hit)",
+          "notes": "PRIMARY T6 mastery for 1-2 hit champions (vs Giant Slayer for multi-hit). Procs on any hit regardless of crit (60% chance per skill activation).",
           "proc_rate": 0.60,
           "damage_formula": {
             "base": "10% of target MAX HP",
             "boss": "4% of target MAX HP (3% for Clan Boss specifically)",
-            "requires_crit": true
+            "requires_crit": false,
+            "proc_mechanic": "60% chance per skill activation, regardless of hit type (crit or non-crit)"
           }
         },
         {
@@ -205,13 +206,14 @@
           "tier": 6,
           "tree": "offense",
           "recommended_for": ["clan_boss_multi_hit", "dungeon_bosses", "coldheart"],
-          "notes": "PRIMARY T6 mastery for 3+ hit champions (vs Warmaster for 1-2 hit)",
+          "notes": "PRIMARY T6 mastery for 3+ hit champions (vs Warmaster for 1-2 hit). Procs on any hit regardless of crit (30% chance per hit).",
           "proc_rate": 0.30,
           "damage_formula": {
             "base": "7.5% of target MAX HP",
             "boss": "3% of target MAX HP",
-            "requires_crit": true,
-            "multi_hit": "Can proc on EACH hit (major advantage over Warmaster)"
+            "requires_crit": false,
+            "multi_hit": "Can proc on EACH hit (major advantage over Warmaster), regardless of hit type (crit or non-crit)",
+            "proc_mechanic": "30% chance per individual hit in multi-hit skills"
           }
         },
         {

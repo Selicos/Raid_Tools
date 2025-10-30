@@ -4,20 +4,20 @@
   "description": "Stat priority rankings for different content types and champion roles. Defines which stats to prioritize when gearing champions for optimal performance. Priorities vary significantly by content (CB vs Arena vs Dungeons) and by role (DPS vs Support vs Tank).",
   
   "clan_boss_priorities": {
-    "universal_priority": "ACC > DEF > HP > SPD > C.RATE > C.DMG > RES",
+    "universal_priority": "ACC > DEF > HP > SPD > C.DMG > C.RATE > RES",
     "explanation": {
-      "acc": "HIGHEST PRIORITY. ACC 350-390 REQUIRED for UNM Clan Boss (boss RES 350). Debuffs (Decrease DEF, Decrease ATK, HP Burn, Poison) CRITICAL for damage and survivability. Missing debuffs = team wipe or low damage.",
-      "def": "SECOND PRIORITY. DEF 3000-4000 optimal for survivability (EHP formula: EHP = HP × (1 + DEF/1000)). DEF more efficient than HP for EHP. Benefits from Increase DEF 60% buff (massive EHP increase 47%).",
-      "hp": "THIRD PRIORITY. HP 50k-80k optimal for CB. Balance with DEF for maximum EHP. Too high HP without DEF = inefficient (DEF multiplies HP effectiveness).",
+      "acc": "HIGHEST PRIORITY. ACC 250+ REQUIRED for UNM Clan Boss (boss RES 300, need ACC 250+ for 95%+ debuff landing). Debuffs (Decrease DEF, Decrease ATK, HP Burn, Poison) CRITICAL for damage and survivability. Missing debuffs = team wipe or low damage.",
+      "def": "SECOND PRIORITY. DEF 3000-5000 optimal for survivability (EHP formula: EHP = HP × (1 + DEF/1000)). DEF more efficient than HP for EHP. Benefits from Increase DEF 60% buff (massive EHP increase).",
+      "hp": "THIRD PRIORITY. HP 50k-90k optimal for CB. Balance with DEF for maximum EHP. Too high HP without DEF = inefficient (DEF multiplies HP effectiveness).",
       "spd": "FOURTH PRIORITY. SPD 171-189 REQUIRED for 1:1 speed tune (champion takes 1 turn per CB turn). MUST use SPD boots (cannot use HP%/DEF% boots despite EHP increase). Below 171 = CB takes extra turns (team wipes). Above 189 = champion takes extra turns (buff/debuff desync).",
-      "c_rate": "FIFTH PRIORITY. C.RATE 70-100% REQUIRED for damage dealers with Warmaster/Giant Slayer (masteries proc on crit only). C.RATE 100% optimal (no RNG, consistent damage). Lower priority than ACC/DEF/HP/SPD (survivability and debuff landing more important).",
-      "c_dmg": "SIXTH PRIORITY. C.DMG 150-250% increases damage from crits. ONLY valuable if C.RATE 70%+ (otherwise crits too rare). Lower priority than C.RATE (100% C.RATE with 150% C.DMG better than 70% C.RATE with 250% C.DMG for consistency).",
-      "res": "LOWEST PRIORITY for CB. RES 350-400 can reduce debuff landing from CB, but boss ACC too high (debuffs still land frequently). BETTER to bring cleanser (Mausoleum Mage, Brogni) than stack RES. RES only valuable for avoiding stun (but designated stun target strategy better)."
+      "c_dmg": "FIFTH PRIORITY. C.DMG 150-250% increases damage from critical hits. Boosts base skill damage output when crits occur. Warmaster/Giant Slayer do NOT require C.DMG (proc damage is flat % of boss MAX HP).",
+      "c_rate": "SIXTH PRIORITY. C.RATE 70-100% increases frequency of critical hits. NOTE: Warmaster/Giant Slayer masteries do NOT require crits (proc on any hit based on % chance). C.RATE only affects base skill damage multiplier (1.5x non-crit → 2.0-2.5x crit with C.DMG). Lower priority than ACC/DEF/HP/SPD.",
+      "res": "LOWEST PRIORITY for CB. CB Stun cannot be resisted but other debuffs can be resisted (Decrease DEF, etc.). Requires 350-400 RES, massive stat investment. BETTER to bring cleanser (Rector Drath, Brogni) or Block Debuffs (Rector Drath, Brogni) than stack RES. Designated stun target strategy (slowest champion with high EHP) more effective than high RES."
     },
     "role_specific": {
-      "dps": "ACC > C.RATE > C.DMG > DEF > HP > SPD > RES. Damage dealers MUST have ACC 350-390 (Decrease DEF required for team damage), C.RATE 70-100% (Warmaster/Giant Slayer proc), C.DMG 150-250% (maximize crit damage).",
-      "support": "ACC > SPD > DEF > HP > C.RATE > C.DMG > RES. Supports prioritize ACC 350-390 (debuff landing), SPD 171-189 (speed tune), survivability (DEF/HP for buffs uptime).",
-      "tank": "DEF > HP > ACC > SPD > RES > C.RATE > C.DMG. Tanks prioritize survivability (DEF 4000+, HP 80k+, high EHP), ACC 350-390 if applying debuffs, SPD 171-189 (speed tune, designated stun target should be SLOWEST 171 SPD)."
+      "dps": "ACC > DEF > HP > SPD > C.DMG > C.RATE > RES. Damage dealers MUST have ACC 250+ (Decrease DEF required for team damage), survivability (DEF/HP for long runs), then optimize crit stats for base skill damage.",
+      "support": "ACC > SPD > DEF > HP > C.RATE > C.DMG > RES. Supports prioritize ACC 250+ (debuff/buff landing), SPD 171-189 (speed tune), survivability (DEF/HP for buff uptime).",
+      "tank": "DEF > HP > ACC > SPD > RES > C.DMG > C.RATE. Tanks prioritize survivability (DEF 4000+, HP 80k+, high EHP), ACC 250+ if applying debuffs, SPD 171-189 (designated stun target should be SLOWEST 171 SPD)."
     }
   },
 
@@ -52,16 +52,16 @@
       "res": "LOWEST PRIORITY for dungeons. RES 150-250 can reduce boss debuff landing, but BETTER to bring cleanser (Mithrala, Mausoleum Mage) than stack RES."
     },
     "dungeon_specific": {
-      "dragon": "ACC > SPD > C.RATE > C.DMG > HP > DEF > RES. Poison damage ignores DEF (based on MAX HP). Prioritize HP over DEF. Cleanse CRITICAL (remove poison from waves/boss).",
-      "spider": "ACC > DEF > HP > SPD > C.RATE > C.DMG > RES. Spider waves high damage = prioritize DEF/HP for survivability. HP Burn strategy (Geomancer, Mordecai) = ACC CRITICAL. Cleanse CRITICAL (remove poison/HP Burn from team).",
-      "fire_knight": "ACC > SPD > C.RATE > C.DMG > DEF > HP > RES. FK shield requires multi-hit skills (high hit count = faster shield break). SPD CRITICAL (more turns = more shield hits). Decrease DEF CRITICAL (damage after shield breaks).",
-      "ice_golem": "ACC > C.RATE > C.DMG > DEF > HP > SPD > RES. Ice Golem reflects damage = minimize AOE skills (single-target damage safer). High C.RATE/C.DMG for boss burst damage after minions dead."
+      "dragon": "ACC > SPD > DEF > HP > C.DMG > C.RATE > RES. Poison damage ignores DEF (based on MAX HP). Prioritize HP over DEF. Cleanse CRITICAL (remove poison from waves/boss).",
+      "spider": "ACC > DEF > HP > SPD > C.DMG > C.RATE > RES. Spider waves high damage = prioritize DEF/HP for survivability. HP Burn strategy (Geomancer, Mordecai) = ACC CRITICAL. Cleanse CRITICAL (remove poison/HP Burn from team).",
+      "fire_knight": "ACC > SPD > C.DMG > C.RATE > DEF > HP > RES. FK shield requires multi-hit skills (high hit count = faster shield break). SPD CRITICAL (more turns = more shield hits). Decrease DEF CRITICAL (damage after shield breaks).",
+      "ice_golem": "ACC > DEF > HP > C.DMG > C.RATE > SPD > RES. Ice Golem reflects damage = minimize AOE skills (single-target damage safer). High C.DMG for boss burst damage after minions dead."
     }
   },
 
   "faction_wars_priorities": {
-    "universal_priority": "ACC > DEF > HP > SPD > C.RATE > C.DMG > RES",
-    "explanation": "FW similar to CB priorities (survivability CRITICAL, no retries if team wipes). ACC 250-350 for debuffs, DEF 3000-4000 for survivability, HP 50k-80k for EHP, SPD 160-200 (no strict speed tune), C.RATE 70-100% for damage, C.DMG 150-250%, RES 150-250 (lower priority, bring cleanser instead).",
+    "universal_priority": "ACC > DEF > HP > SPD > C.DMG > C.RATE > RES",
+    "explanation": "FW similar to CB priorities (survivability CRITICAL, no retries if team wipes). ACC 250-350 for debuffs, DEF 3000-4000 for survivability, HP 50k-80k for EHP, SPD 160-200 (no strict speed tune), C.DMG 150-250% for damage, C.RATE 70-100% for crit frequency (Warmaster/Giant Slayer do NOT require crits), RES 150-250 (lower priority, bring cleanser instead).",
     "progression_notes": "Normal FW: Lower stat requirements (ACC 200+, DEF 2500+, HP 40k+). Hard FW: Higher stat requirements (ACC 300+, DEF 3500+, HP 60k+). FW21 Hard bosses hit HARD = high EHP CRITICAL (350k+ EHP recommended)."
   },
 
@@ -79,7 +79,7 @@
       "fw": "160-200 SPD (no strict tune, moderate speed sufficient)"
     },
     "crit_rate": {
-      "damage_dealers": "70-100% C.RATE (Warmaster/Giant Slayer proc on crit)",
+      "damage_dealers": "70-100% C.RATE optimal for base skill damage (increases crit frequency). NOTE: Warmaster/Giant Slayer do NOT require crits (proc on any hit based on % chance).",
       "supports": "30-50% C.RATE (not critical, but helpful for damage contribution)",
       "tanks": "0-30% C.RATE (not needed, focus survivability)"
     },
@@ -108,8 +108,8 @@
   "common_mistakes": [
     {
       "mistake": "Ignoring ACC for damage dealers in CB",
-      "explanation": "Damage dealer with 100% C.RATE, 250% C.DMG, but 150 ACC. Decrease DEF lands only 30% of the time (boss RES 350, ACC 150 = 20% landing chance + 3% min chance = 23% total, WITH Master Hexer 50% increased duration when lands = 30% average uptime). Team damage drops by 35% (Decrease DEF 60% = 1.73× damage multiplier, 30% uptime = 1.73^0.3 = 1.19× average, vs 1.73^1.0 = 1.73× with 100% uptime).",
-      "solution": "ACC 350-390 HIGHEST PRIORITY for all champions applying debuffs (Decrease DEF, Decrease ATK, HP Burn, Poison). Use ACC chest if needed. Sacrifice C.DMG for ACC if necessary."
+      "explanation": "Damage dealer with 100% C.RATE, 250% C.DMG, but 150 ACC. Decrease DEF lands only 30% of the time (boss RES 300, ACC 150 = low landing chance). Team damage drops significantly (Decrease DEF 60% = 1.73× damage multiplier lost).",
+      "solution": "ACC 250+ HIGHEST PRIORITY for all champions applying debuffs (Decrease DEF, Decrease ATK, HP Burn, Poison). Use ACC chest if needed. Sacrifice C.DMG for ACC if necessary."
     },
     {
       "mistake": "Prioritizing HP over DEF for CB survivability",
@@ -128,8 +128,8 @@
     },
     {
       "mistake": "Not reaching ACC thresholds (using ACC 200 for UNM CB)",
-      "explanation": "Champion with ACC 200 vs UNM CB (boss RES 350). Debuff landing chance: 200 - 350 = -150, capped at 0% base chance + 3% minimum = 3% landing chance. Decrease DEF lands 3% of the time = effectively never lands = team damage drops 42% (1.73× multiplier lost).",
-      "solution": "ACC thresholds are HARD REQUIREMENTS. UNM CB requires ACC 350-390 (no compromise). Arena Gold 3+ requires ACC 250-350. Dungeons Stage 25 requires ACC 250-350. Use ACC chest + ACC substats to reach threshold."
+      "explanation": "Champion with ACC 200 vs UNM CB (boss RES 300). Debuff landing chance significantly reduced. Decrease DEF lands inconsistently = team damage drops significantly.",
+      "solution": "ACC thresholds are IMPORTANT TARGETS. UNM CB benefits from ACC 250-350. Arena Gold 3+ requires ACC 250-350. Dungeons Stage 25 requires ACC 250-350. Use ACC chest + ACC substats to reach threshold."
     }
   ],
 
@@ -140,5 +140,5 @@
     "In-game testing (ACC landing rates, SPD turn order, EHP survivability)"
   ],
 
-  "notes": "Stat priorities vary SIGNIFICANTLY by content. CB prioritizes ACC > DEF > HP > SPD (survivability + debuff landing). Arena prioritizes SPD > ACC > RES (speed race + CC landing/resistance). Dungeons prioritize ACC > SPD > C.RATE (debuff landing + fast clear times). FW similar to CB (survivability CRITICAL). ACC thresholds are HARD REQUIREMENTS (UNM CB 350-390 ACC, Arena 250-350 ACC, Dungeons 250-350 ACC). SPD 171-189 REQUIRED for CB 1:1 speed tune (MUST use SPD boots). DEF more efficient than HP for EHP (balance for maximum survivability). C.RATE 70-100% REQUIRED for damage dealers with Warmaster/Giant Slayer. Recalculate priorities after every gear change or content switch."
+  "notes": "Stat priorities vary SIGNIFICANTLY by content. CB prioritizes ACC > DEF > HP > SPD (survivability + debuff landing). Arena prioritizes SPD > ACC > RES (speed race + CC landing/resistance). Dungeons prioritize ACC > SPD > DEF (debuff landing + fast clear times + survivability). FW similar to CB (survivability CRITICAL). ACC 250-350 recommended for UNM CB/Arena/Dungeons (higher ACC = better debuff landing). SPD 171-189 REQUIRED for CB 1:1 speed tune (MUST use SPD boots). DEF more efficient than HP for EHP (balance for maximum survivability). C.RATE 70-100% helpful for base skill damage, but Warmaster/Giant Slayer do NOT require crits (proc on any hit based on % chance). Recalculate priorities after every gear change or content switch."
 }
