@@ -2038,33 +2038,29 @@ Based on screenshot analysis:
 
 **Strategy:** Keep Mithrala for Arena, build Rector Drath fresh for CB cleanse/heal/revive role
 
-**Rector Drath Build Plan:**
-- **Role:** Cleanse, Heal, Revive, Block Debuffs (CB specialist, no Arena conflict)
-- **Target Stats:**
-  - **SPD: 180-186** (second-fastest after Stag Knight 189, before mid-pack)
-  - **HP: 60k-70k** (survivability)
-  - **DEF: 4k-5k** (survivability)
-  - **ACC: 200-250** (Block Debuffs is buff not debuff, so lower ACC acceptable)
-  - **C.RATE: 70%+** (Warmaster procs for damage contribution)
-  - **RES: 150+** (debuff resistance for safety)
+**📖 FULL BUILD GUIDE:** See [Rector Drath - ALTERNATE BUILD (Path 2B)](#rector-drath---alternate-build-path-2b-mithrala-replacement-) section below for comprehensive build plan!
 
-**Gear Sets:**
-- **4x Lifesteal** (heal on damage = sustain)
-- **2x Speed** (hit 180-186 SPD target)
-- **Boots:** SPD (required for 180-186 target)
-- **Chest:** HP% or DEF%
-- **Gloves:** C.RATE%
-- **Banner:** HP or DEF
-- **Ring:** HP or DEF
-- **Amulet:** HP or DEF
+**Quick Summary:**
+- **Current:** Rector Drath used in dungeons/tag arena, 2x Bolster + 2x Righteous + SPD boots
+- **Masteries:** Support tree Lasting Gifts T6 ✅ already complete! (extends Block Debuffs 2→3 turns)
+- **Blessing:** Miracle Heal 5★ ✅ perfect for CB!
+- **Build Time:** 2-3 weeks (1-2 weeks if using current gear + just mastery reset for Warmaster T6)
 
-**Masteries:**
-- **Offense:** Warmaster T6 (A1 single-hit = 60% proc chance)
-- **Defense:** Fearsome Presence or Wisdom of Battle T6
-- **Support:** Lasting Gifts T6 (extends buff duration +1 turn = Block Debuffs uptime boost)
+**Target Stats for CB:**
+- **SPD: 180-186** (swap SPD boots → HP%/DEF% boots)
+- **HP: 65k-75k** (current gear likely close)
+- **DEF: 4k-5k** (Bolster sets help)
+- **ACC: 200-250** (ACC banner, lower than usual since Block Debuffs is buff not debuff)
+- **C.RATE: 70%+** (C.RATE gloves + Righteous sets + Deadly Precision)
+- **RES: 150+** (likely already good)
 
-**Blessing:**
-- **Cruelty** or **Blessings of Renewal** (heal on turn)
+**Key Changes Needed:**
+1. **Swap SPD boots → HP%/DEF% boots** (drops SPD to 180-186 target)
+2. **Reset masteries for Warmaster T6** (300 gems = ~1 week gathering) - Offense tree for damage
+3. **Keep Lasting Gifts T6** ✅ (already complete, extends Block Debuffs!)
+4. **Add C.RATE gloves** (hit 70%+ for Warmaster procs)
+5. **Add ACC banner** (hit 200-250 ACC for safe Block Debuffs)
+6. **Fix team ACC** (Brogni +134 ACC via chest+banner, Geomancer +50 ACC via banner)
 
 **Team Comparison:**
 
@@ -2402,7 +2398,264 @@ Based on screenshot analysis:
 
 ---
 
-## **CHAMPION INTAKE COMPLETE (5/5)** ✅
+### **Rector Drath - ALTERNATE BUILD (Path 2B: Mithrala Replacement)** 🆕 **ADDED 2025-10-29**
+
+**Role**: Cleanse, Heal, Revive, Block Debuffs (CB specialist replacing Mithrala to preserve Arena team)
+
+**Current Stats (Dungeon/Arena Build)** 📊 **FROM USER**
+-----------------
+
+| Stat | Value | Notes |
+| --- | --- | --- |
+| **HP** | ??? | (Need from screenshot - likely 60-70k based on gear) |
+| **ATK** | ??? | Low (not damage dealer) |
+| **DEF** | ??? | (Need from screenshot - likely 3-4k) |
+| **SPD** | ??? | **SPD BOOTS** (will swap to HP%/DEF% for CB) |
+| **C.RATE** | ??? | (Need from screenshot) |
+| **C.DMG** | ??? | (Need from screenshot) |
+| **RES** | ??? | (Need from screenshot) |
+| **ACC** | ??? | (Need from screenshot) |
+
+**Current Gear Sets** ✅ **FROM USER**
+-------------
+- **2x Bolster** (+1.5k HP per buff on ally) - Good for CB survivability
+- **2x Righteous** (+15% C.RATE) - Helpful for Warmaster procs
+- **SPD Boots** - WILL SWAP to HP%/DEF% for CB speed tune
+- **Other Gear**: HP% focus where possible ✅
+
+**Current Masteries** ✅ **FROM SCREENSHOT ANALYSIS**
+-------------
+
+**Defense Tree (COMPLETE):**
+- Tough Skin (DEF +5%)
+- Blastproof (HP +5%)
+- Rejuvenation (Heal +5%)
+- Shadow Heal (Heal on receiving crit)
+- Delay Death (Heal when below 40% HP)
+- **Retribution T5** (Counterattack on crit received)
+- **T6 NOT SELECTED** (missing Fearsome Presence, Wisdom of Battle, or Warmaster of Wrath)
+
+**Support Tree (COMPLETE WITH LASTING GIFTS T6!):**
+- Healing Savior (Heal +5%)
+- Rapid Response (Turn meter +3%)
+- Lore of Steel (Set bonuses +15%)
+- Cycle of Magic (Cooldown -5% on A2/A3)
+- **Lasting Gifts T6** ✅ **CRITICAL!** (Extends buff duration +1 turn = Block Debuffs 2→3 turns!)
+- **Evil Eye T6** ✅ (Turn meter -3% when placing debuffs)
+
+**Offense Tree:**
+- **NOT BUILT** - Missing Warmaster T6 (critical for CB damage)
+
+**MASTERY STATUS:** ⚠️ **NEEDS RESET** - Missing Offense tree Warmaster T6 for CB damage
+
+**Current Blessing** ✅ **FROM USER**
+------------
+- **Miracle Heal 5★** ✅ **PERFECT FOR CB!**
+  - Boss Heal restores destroyed MAX HP 25% more effective
+  - DEF increases 1% per crit received (up to 10%)
+  - **Analysis:** KEEP THIS! Synergizes with revive passive + DEF stacking under boss hits
+
+**Current Relic**
+---------
+- **Unknown** (likely dungeon-focused, can swap for CB)
+
+---
+
+### **CB OPTIMIZATION PLAN: Rector Drath (Path 2B Build)**
+
+**Goal:** Replace Mithrala for CB while preserving Mithrala's Arena viability (251 SPD)
+
+**Target Stats for UNM CB:**
+
+| Stat | Current | CB Target | Gap | Fix |
+| --- | --- | --- | --- | --- |
+| **SPD** | ??? (SPD boots) | **180-186** | -?? | Swap SPD→HP%/DEF% boots (-45 SPD) |
+| **HP** | ??? | **65k-75k** | +?? | Prioritize HP% chest/boots if not DEF% |
+| **DEF** | ??? | **4k-5k** | +?? | DEF% substats, Bolster sets help |
+| **ACC** | ??? | **200-250** | +?? | ACC banner + substats (Block Debuffs is buff not debuff, lower ACC ok) |
+| **C.RATE** | ??? | **70%+** | +?? | C.RATE gloves (Warmaster procs) |
+| **RES** | ??? | **150+** | Good | Maintain for debuff resistance |
+
+**Recommended Gear Sets for CB:**
+
+**OPTION A: Lifesteal Focus (RECOMMENDED based on availability)**
+- **4x Lifesteal** (30% damage as heal = sustain) ✅ **YOU HAVE MEDIUM AVAILABILITY**
+- **2x Speed** (12% SPD = helps hit 180-186 target) ✅ **YOU HAVE MEDIUM AVAILABILITY**
+- **Boots:** HP% or DEF% (NOT SPD for CB)
+- **Chest:** HP% or DEF%
+- **Gloves:** C.RATE%
+- **Banner:** ACC or HP
+- **Ring:** HP or DEF
+- **Amulet:** HP or DEF
+
+**OPTION B: Current Gear Modified (EASIER, use what you have)**
+- **2x Bolster** (keep current, +1.5k HP per buff synergizes with team buffs) ✅
+- **2x Righteous** (keep current, +15% C.RATE helps Warmaster) ✅
+- **2x Immortal** (+7.5% HP for survivability) ✅ **YOU HAVE MEDIUM AVAILABILITY**
+  - OR **2x Protection** (+15% DEF) ✅ **YOU HAVE MEDIUM AVAILABILITY**
+- **Boots:** Swap SPD → HP% or DEF% ✅ **CRITICAL CHANGE**
+- **Chest:** HP% or DEF% (current likely good)
+- **Gloves:** C.RATE% (if not already)
+- **Banner:** ACC (hit 200-250 target)
+
+**Gear Priority:** If you have good Lifesteal sets, use Option A. Otherwise Option B (modify current gear) is faster and sufficient!
+
+**Masteries Reset Plan** (300 gems cost = ~1 week gathering):
+
+**NEW BUILD: Offense + Support + Defense**
+
+**Offense Tree (PRIMARY for damage):**
+- Deadly Precision (C.RATE +5%)
+- Keen Strike (C.DMG +10%)
+- Single Out (dmg +10% vs 1 enemy)
+- Bring it Down (dmg +6% vs enemy >50% HP)
+- Methodical (dmg +5%)
+- **Warmaster T6** ✅ **CRITICAL!** (A1 single-hit = 60% proc chance, 10% enemy MAX HP damage)
+
+**Support Tree (KEEP EXISTING):**
+- Healing Savior, Rapid Response, Lore of Steel, Cycle of Magic
+- **Lasting Gifts T6** ✅ **KEEP!** (Extends Block Debuffs 2→3 turns = stun immunity uptime!)
+- Evil Eye T6 ✅ (Keep)
+
+**Defense Tree (PARTIAL):**
+- Tough Skin, Blastproof, Rejuvenation (keep for survivability)
+- Drop: Shadow Heal, Delay Death, Retribution (free points for Offense tree)
+
+**Mastery Reset Cost:** 300 gems (~1 week gathering) - **HIGH PRIORITY** for Warmaster T6
+
+**Blessing:** **KEEP Miracle Heal 5★** ✅ (perfect for revive passive synergy)
+
+**Relic Recommendation:**
+- **Wand of Submission** (25% stun reflect) - if available and not on Stag Knight
+- **Demonic Effigy** (turn meter +10% on ally death) - synergizes with revive passive
+- **Gilded Dragonstone** (if you have spare) - helps debuff landing
+
+---
+
+### **Rector Drath vs Mithrala Comparison (CB Performance)**
+
+| Aspect | Mithrala (Current Arena Build) | Rector Drath (Fresh CB Build) |
+|--------|-------------------------------|-------------------------------|
+| **Cleanse** | ✅ Full cleanse A3 (3-turn CD) | ✅ Full cleanse A3 (4-turn CD booked) |
+| **Heal** | ❌ None (relies on others) | ✅ Strong heal A2 (3-turn CD, 18% MAX HP) |
+| **Revive** | ❌ None | ✅ Revive passive (30% chance on ally death) |
+| **Block Debuffs** | ❌ None | ✅ **Block Debuffs A3 (2 turns → 3 turns with Lasting Gifts T6!)** = **STUN IMMUNITY** 🏆 |
+| **Buffs** | ✅ Inc ATK/DEF/SPD/C.RATE (variety) | ⚠️ Only Increase DEF (less variety) |
+| **Aura** | ✅ **+80 ACC (MASSIVE)** | ⚠️ +25% HP in all battles (good but not ACC) |
+| **SPD** | ❌ 251 (62 too fast, breaks tune) | ✅ 180-186 (PERFECT tune) |
+| **ACC** | ❌ 691 (massive overkill, wasted stats) | ✅ 200-250 (optimized) |
+| **Damage** | ~2-3M (Flawless Execution, low C.RATE) | ~6-8M (Warmaster, 70%+ C.RATE) ✅ **BETTER** |
+| **Arena Conflict** | ❌ Breaks Arena if regeared for CB | ✅ **No conflict (dedicated CB build)** ✅ |
+| **Build Time** | Already built | 2-3 weeks (level 60, gear, masteries 300 gems) |
+
+**CRITICAL TRADE-OFF: Lose +80 ACC Aura**
+
+**Team ACC Adjustments Required:**
+
+| Champion | Current ACC | With Mithrala +80 | Without Mithrala | Fix Needed |
+|----------|-------------|-------------------|------------------|------------|
+| **Geomancer** | 201 | 281 ✅ | 201 ❌ | +50 ACC (banner or substats) |
+| **Stag Knight** | 253 | 333 ✅ | 253 ✅ | None (already safe) |
+| **Brogni** | 116 | 196 ⚠️ | 116 ❌ | +134 ACC (chest +60, banner +60) **URGENT** |
+| **Godseeker Aniri** | 147 | 227 | 147 ✅ | None (no debuffs, pure support) |
+| **Rector Drath** | ??? | N/A | 200-250 ✅ | ACC banner (Block Debuffs is buff) |
+
+**ACC Fix Summary if Rector Drath Replaces Mithrala:**
+1. **Brogni:** +134 ACC (ACC chest + banner) = **MAJOR REGEAR**
+2. **Geomancer:** +50 ACC (ACC banner or substats) = **MINOR FIX**
+3. **Total:** 2 champions need ACC fixes (3-5 pieces total)
+
+**Damage Impact Analysis:**
+
+**LOSE from Mithrala:**
+- Increase ATK 50% buff: ~5-8M team damage (if not overlapping with Brogni A3 Inc ATK)
+- Flawless Execution damage: ~2-3M
+
+**GAIN from Rector Drath:**
+- Warmaster procs: ~6-8M personal damage ✅
+- Block Debuffs = stun immunity: +10-20 extra turns = +10-20M team damage ✅
+- Stronger heals: +5-10 extra turns survival = +5-10M team damage ✅
+
+**Net Damage:** **+14-33M** (Block Debuffs stun immunity is MASSIVE for long runs!)
+
+**Survivability Impact:**
+
+**LOSE from Mithrala:**
+- Strengthen 25% (damage reduction)
+- Shields ~14k per ally
+
+**GAIN from Rector Drath:**
+- **Block Debuffs 2-3 turns = STUN IMMUNITY** (can cycle 100% uptime with 4-turn CD!) 🏆
+- Revive passive 30% chance (safety net)
+- Stronger heals 18% MAX HP A2 (vs Godseeker 18% MAX HP)
+- Increase DEF 60% A2 (vs Mithrala 60% A3, similar)
+
+**Net Survivability:** ✅ **MUCH BETTER** (Block Debuffs prevents stun = team doesn't lose critical buffers/debuffers!)
+
+---
+
+### **Rector Drath Build Timeline (Path 2B Implementation)**
+
+**PHASE 1: Preparation (1-2 days)**
+1. ✅ Champion already owned and used in dungeons
+2. ✅ Masteries partially complete (Support tree Lasting Gifts T6!)
+3. ✅ Blessing Miracle Heal 5★ perfect for CB
+4. ⚠️ Need mastery reset (300 gems, ~1 week gathering) for Offense tree Warmaster T6
+
+**PHASE 2: Gear Farming & Regearing (1-2 weeks)**
+1. Farm Dragon 25 for 4x Lifesteal sets (if using Option A)
+   - OR use existing Bolster/Righteous/Immortal/Protection sets (Option B - faster!)
+2. Swap SPD boots → HP%/DEF% boots (drops SPD to ~180-186 range target)
+3. Add C.RATE gloves (hit 70%+ with Righteous sets + Deadly Precision)
+4. Add ACC banner (hit 200-250 ACC target)
+5. Optimize HP/DEF substats (target 65-75k HP, 4-5k DEF)
+
+**PHASE 3: Mastery Reset & Final Tuning (1-3 days)**
+1. Reset masteries (300 gems)
+2. Build Offense tree → Warmaster T6
+3. Keep Support tree → Lasting Gifts T6
+4. Keep partial Defense tree (Tough Skin, Blastproof, Rejuvenation)
+5. Test speed tune (should hit 180-186 SPD after boots swap)
+
+**PHASE 4: Team ACC Adjustments (2-4 days)**
+1. Fix Brogni ACC: 116 → 250+ (ACC chest + banner, use Perception sets from HIGH availability)
+2. Fix Geomancer ACC: 201 → 251+ (ACC banner or substats)
+3. Test debuff landing rates (should hit 95%+ with 250 ACC)
+
+**TOTAL BUILD TIME:** **2-3 weeks** (1 week mastery gem gathering + 1-2 weeks gear farming/regearing + 2-4 days team adjustments)
+
+**ALTERNATIVE FAST TRACK (Option B - Use Current Gear):**
+- Skip Dragon farming, modify current 2x Bolster + 2x Righteous + 2x Immortal/Protection
+- Just swap SPD boots → HP% boots
+- Reset masteries for Warmaster T6 (300 gems)
+- Fix team ACC (Brogni/Geomancer)
+- **TOTAL TIME:** **1-2 weeks** (mostly waiting for mastery gems + team ACC fixes)
+
+---
+
+### **Rector Drath: RECOMMENDATION SUMMARY**
+
+**✅ RECOMMENDED if:**
+1. You want to preserve Mithrala Arena team (251 SPD, Wukong/Mythrala/Loki synergy)
+2. You can wait 2-3 weeks for build (OR 1-2 weeks using current gear fast track)
+3. You can regear Brogni + Geomancer for +ACC (compensate for lost +80 aura)
+4. You value **Block Debuffs stun immunity** (enables 60+ turn survival = 70-80M damage potential!)
+
+**❌ NOT RECOMMENDED if:**
+1. You need immediate damage boost (<1 week timeline)
+2. You can't afford 300 gems mastery reset (~1 week gathering)
+3. You don't want to regear Brogni ACC (major effort: chest + banner swap)
+4. You prefer keeping Mithrala for CB (simpler but lower damage ceiling)
+
+**DAMAGE POTENTIAL:**
+- **With Rector Drath:** 60-70M (Block Debuffs enables long runs, Warmaster adds damage)
+- **With Mithrala (current):** 50-55M (split build, speed tune broken, shorter runs)
+
+**KEY ADVANTAGE:** **Block Debuffs = STUN IMMUNITY** (no more losing Stag Knight Decrease DEF or Brogni shields to random stun!)
+
+---
+
+## **CHAMPION INTAKE COMPLETE (5/5 + 1 ALTERNATE)** ✅
 
 All 5 champions documented. Ready for speed tune analysis, stat gaps analysis, and recommendations.
 
