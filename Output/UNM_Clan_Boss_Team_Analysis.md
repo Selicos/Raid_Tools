@@ -99,6 +99,119 @@
 
 ---
 
+## Gear & Resource Availability ✅ **ADDED 2025-10-29**
+
+### **Available Relics (Key for UNM CB)**
+
+| Relic | Effect | UNM CB Application | Current User |
+|-------|--------|-------------------|--------------|
+| **Demonic Effigy** | Turn meter +10% when ally dies | Revival synergy (Godseeker Aniri passive, safety net) | **Godseeker Aniri** ✅ |
+| **Wand of Submission** | 25% chance to reflect stun debuff | **CRITICAL FOR CB!** Stun protection for key champions | **AVAILABLE** 🎯 |
+
+**Priority Relic Assignment:**
+- **Wand of Submission** → **Stag Knight** (Decrease DEF/ATK = most critical debuffer, 25% stun reflect = safety net)
+  - OR → **Brogni** (Shield/HP Burn specialist, high value target)
+  - Current: Brogni has Gilded Dragonstone (-5% RES for HP Burn, less critical than stun protection)
+- **Demonic Effigy** → Keep on Godseeker Aniri ✅ (revive synergy perfect)
+
+### **Available Gear Sets (Quantity & Quality)**
+
+**HIGH AVAILABILITY** (lots of optimized pieces, easy to build):
+- **Perception** (4-set: +40 ACC) - ABUNDANT ✅
+- **Resilience** (2-set: +10% RES) - ABUNDANT ✅
+- **Bolster** (4-set: +1.5k HP per buff on ally) - ABUNDANT ✅
+- **Feral** (2-set: +15% SPD) - ABUNDANT ✅
+
+**MEDIUM AVAILABILITY** (decent number, can build 1-2 champions):
+- **Relentless** (4-set: 18% chance extra turn) - NOT RECOMMENDED for CB (breaks speed tune)
+- **Cruel** (2-set: +15% C.DMG, ignore 5% DEF) - Good for damage dealers
+- **Immortal** (2-set: +7.5% HP) - Good for tanks
+- **Regeneration** (4-set: +15% HP per turn) - Good for healers/supports
+- **Speed** (2-set: +12% SPD) - Useful for speed tune adjustments
+- **Lifesteal** (4-set: +30% damage as heal) - **CRITICAL for most CB teams** ✅
+- **Swift Parry** (4-set: +15% C.RATE, 4% damage reflect) - Good for crit champions
+- **Protection** (2-set: +15% DEF) - Good for tanks
+- **Stone Skin** (4-set: Shield 20% HP first turn) - Good for early survivability
+- **Defiant** (2-set: +10% RES, +5% C.RATE per debuff max 25%) - Situational
+- **Righteous** (2-set: +15% C.RATE) - Good for crit champions
+- **Supersonic** (2-set: +10 SPD flat) - Minor speed tune adjustment
+- **Merciless** (2-set: +15% C.DMG, +3% C.RATE) - Good for damage dealers
+
+**LOW AVAILABILITY** (maybe 1 full set, not optimized):
+- Most other sets available but not well-rolled or incomplete
+
+### **Dungeon/Resource Constraints**
+
+**Spider (ACC Accessories):**
+- **Easy:** Farmable ✅
+- **Hard:** Up to Stage 6 (Mythic accessories) ✅
+- **Limitation:** Can't farm Spider Hard 10+ for high-tier mythics yet
+
+**Gear Ascension:**
+- **Max Level:** 2-4 stars (Forge/Glyphs)
+- **Limitation:** Can't push to 5-6 star ascension yet (high-level dungeons/resources not accessible)
+- **Impact:** Can improve gear but not maximize (missing 10-20% potential stats from max ascension)
+
+**Mastery Resets:**
+- **Cost:** 300 gems per champion
+- **Availability:** ~1 week of gathering per reset
+- **Impact:** Can change masteries as needed, but resource-limited (prioritize high-impact resets)
+
+### **Gear Optimization Strategy (Based on Availability)**
+
+**IMMEDIATE FIXES (High Availability, Easy Swaps):**
+1. **C.RATE Gloves** (Perception/Righteous/Swift Parry sets):
+   - Geomancer: 33% → 100% (Perception C.RATE gloves + Deadly Precision = +72%)
+   - Brogni: 26% → 85%+ (Righteous C.RATE gloves + Deadly Precision = +64%)
+   - Stag Knight: 39% → 90%+ (Swift Parry C.RATE gloves + Deadly Precision = +56%)
+
+2. **ACC Chest/Banner** (Perception sets):
+   - Brogni: 116 ACC → 250+ (Perception chest +60 ACC + banner +60 ACC = +120 ACC minimum)
+   - Geomancer: 201 ACC → 251+ (Perception banner +50 ACC if Mithrala replaced)
+
+3. **SPD Boots Swaps** (Use existing HP%/DEF% boots from abundant sets):
+   - Stag Knight: SPD → DEF% boots (219 → 174-179 SPD, use Bolster/Protection DEF% boots)
+   - Mithrala: Decision pending (keep 251 SPD for Arena OR regear for CB)
+
+**MEDIUM-TERM BUILDS (1-2 weeks, use Medium Availability sets):**
+1. **Rector Drath CB Build** (if Path 2B chosen):
+   - 4x Lifesteal + 2x Speed (use existing Lifesteal set)
+   - Target: 180-186 SPD, 60-70k HP, 4-5k DEF, 70%+ C.RATE, 250+ ACC
+   - Masteries: Warmaster T6, Support tree (300 gems + scrolls)
+
+2. **Godseeker Aniri Optimization**:
+   - Current: 4x Regeneration ✅ (keep, synergizes with healer role)
+   - Add: 2x Immortal (if have good HP%/DEF% pieces) for more survivability
+   - OR: Keep 1x Righteous + 1x Resilient mix (current setup fine)
+
+**LONG-TERM OPTIMIZATIONS (Resource-Limited):**
+1. **Gear Ascension Priority** (2-4 star max):
+   - Focus on main stat pieces (C.RATE gloves, ACC chest/banner, HP%/DEF% boots)
+   - Don't waste resources on substat optimization (can't reach 5-6 star anyway)
+
+2. **Mastery Reset Priority** (300 gems each):
+   - **#1:** Godseeker Aniri (Support + Lasting Gifts T6 = +3-5M damage + buff synergy)
+   - **#2:** Geomancer (if current Warmaster not optimized)
+   - **#3:** Rector Drath (if building for CB, full fresh masteries)
+
+3. **Spider Farm Priority** (for ACC accessories):
+   - Current Spider Hard 6 mythics sufficient for 250+ ACC targets
+   - Don't over-farm Spider for marginal upgrades (focus on other content first)
+
+### **Gear Set Recommendations by Champion (Based on Availability)**
+
+| Champion | Current Sets | Recommended Sets | Priority Changes |
+|----------|-------------|------------------|------------------|
+| **Geomancer** | 3x Feral, 2x Resilience, 1x Protection ✅ | KEEP ✅ | Just swap to C.RATE gloves (Perception) |
+| **Stag Knight** | 2x Feral, 2x Perception, 1x Protection, 1x Righteous ✅ | KEEP ✅ | Swap SPD→DEF% boots (Protection/Bolster) |
+| **Brogni** | 2x Protection + mixed ✅ | KEEP ✅ | Add C.RATE gloves (Righteous) + ACC chest+banner (Perception) |
+| **Mithrala** | 6x Perception, 1x Pinpoint ✅ | KEEP ✅ (if Arena priority) | OR 4x Lifesteal + 2x Speed (if Path 2A full CB) |
+| **Godseeker Aniri** | 4x Regeneration, 1x Righteous, 1x Resilient ✅ | KEEP ✅ | Minor SPD reduction (-10 to -14 via substats) |
+
+**Key Takeaway:** Current gear sets are mostly OPTIMAL based on availability! Just need **targeted swaps** (C.RATE gloves, ACC chest/banner, SPD boots) rather than full regearsing.
+
+---
+
 ## Current Team Performance
  - **VALIDATED 2025-10-28**: 44M damage confirmed in test run with current stats
 
