@@ -404,11 +404,10 @@ End template
 
 | Phase | Actions | Manual Damage | Auto Damage | Turns | Time Investment |
 |-------|---------|---------------|-------------|-------|-----------------|
-| **Baseline** | Current setup (tested 2025-10-28) | 44M ✅ | ~30M | 30-45 | N/A |
+| **Baseline** | Current setup (tested 2025-10-28) | 60M | ~44-50M | 30-45 | N/A |
 | **After Phase 1** | 
 | **After Phase 2** | 
-| **After Phase 3 (A)** | TBD | | | | |
-| **After Phase 3 (B)** | TBD | | | | |
+| **After Phase 3** | 
 
 **V1.1 Goals**: 80M+ manual, 50M+ auto  
 **Achievement**: 
@@ -563,17 +562,6 @@ These are generic guidelines, not specific
 - DEF% boots reduce HP (79,988 → 67,990), reducing shields (24k → 20.4k)
 - **Trade-off:** 
 - **RECOMMENDATION:** 
-
----
-
-## **PROJECTED FINAL PERFORMANCE**
-
-| Phase | Actions | Manual Damage | Auto Damage | Turns | Time Investment |
-|-------|---------|---------------|-------------|-------|-----------------|
-| **Baseline** | Current setup (tested 2025-10-28) | 44M ✅ | ~30M | 30-45 | N/A |
-| **After Phase 1** |
-| **After Phase 2** | 
-| **After Phase 3** |  
 
 ---
 
