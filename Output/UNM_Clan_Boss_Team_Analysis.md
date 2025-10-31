@@ -788,7 +788,8 @@ Before implementing recommended fixes:
 
 **Related Project Files**:
 - `.github/copilot-instructions.md` (project standards, Section 10: Team Creation)
-- `input/Champion_Dictionary/Champion_stats.md` (owned champions reference and base state information)
 - `input/Mechanic_Dictionary/` (dir holding game mechanics information, equations, and more. Review in depth if information is not found in this analysis.)
+- `input/Champion_Dictionary/Champion_stats.md` (owned champions reference and base state information)
+- `input/Champion_Dictionary/Completed/` (dir of completed champion dictionary entries, in json, with skill/etc reference and base state information)
 
 ---
