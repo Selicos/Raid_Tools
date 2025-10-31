@@ -1,5 +1,56 @@
 # UNM Clan Boss Team Analysis
 
+# Table of Contents
+
+1. [UNM Boss Stats Reference (Canonical)](#unm-boss-stats-reference-canonical)
+2. [Critical Mechanics Reference](#critical-mechanics-reference)
+    - [First Turn Speed](#first-turn-speed)
+    - [Stun Mechanic](#stun-mechanic)
+    - [Immunity List](#immunity-list)
+    - [Gathering Fury Passive](#gathering-fury-passive)
+    - [Poison & HP Burn Caps](#poison--hp-burn-caps)
+    - [Warmaster & Giant Slayer Masteries](#warmaster--giant-slayer-masteries)
+3. [Project Goals](#project-goals)
+4. [Gear & Resource Availability](#gear--resource-availability)
+    - [Available Gear Sets](#available-gear-sets)
+    - [Gear Optimization Strategy](#gear-optimization-strategy)
+    - [Gear Set Recommendations by Champion](#gear-set-recommendations-by-champion)
+5. [Current Team Performance (Baseline)](#current-team-performance-baseline)
+6. [Champion Optimization Templates](#champion-optimization-templates)
+    - [Geomancer](#geomancer)
+    - [Brogni](#brogni)
+    - [Stag Knight](#stag-knight)
+    - [Mithrala](#mithrala)
+    - [Godseeker Aniri](#godseeker-aniri)
+7. [Implementation Priority Order](#implementation-priority-order)
+    - [Phase 1: Immediate Wins](#phase-1-immediate-wins)
+    - [Phase 2: Intermediate Optimizations](#phase-2-intermediate-optimizations)
+    - [Phase 3: Final Optimizations](#phase-3-final-optimizations)
+8. [Projected Final Performance](#projected-final-performance)
+9. [Team Stat Reference](#team-stat-reference)
+10. [UNM Clan Boss Mechanics Reference](#unm-clan-boss-mechanics-reference)
+    - [Speed Tune Options](#speed-tune-options)
+    - [Champion Stat Goals](#champion-stat-goals)
+    - [Boss Mechanics](#boss-mechanics)
+    - [Affinity Risks](#affinity-risks)
+11. [Survivability & Stat Safety Analysis](#survivability--stat-safety-analysis)
+    - [Effective HP Calculation](#effective-hp-calculation)
+    - [Current Team Effective HP Table](#current-team-effective-hp-table)
+    - [HP vs DEF% Boots Trade-Off Analysis](#hp-vs-def-boots-trade-off-analysis)
+    - [Boot Swap Recommendations](#boot-swap-recommendations)
+12. [Working Section (Data Collection Flow)](#working-section-data-collection-flow)
+    - [Data Needed per Champion](#data-needed-per-champion)
+    - [Processing Workflow](#processing-workflow)
+    - [Expected Analysis Output](#expected-analysis-output)
+13. [Validation & Documentation Standards](#validation--documentation-standards)
+    - [Sources Cited](#sources-cited)
+    - [Confidence Level](#confidence-level)
+    - [Assumptions & Uncertainties](#assumptions--uncertainties)
+    - [Testing & Validation Requirements](#testing--validation-requirements)
+    - [Simulation Notes](#simulation-notes)
+14. [Update Notes & Version History](#update-notes--version-history)
+15. [File Metadata](#file-metadata)
+
 **Date**: 2025-10-29  
 **Version**: 1.1 (Mechanics-Corrected + Goal Update)  
 **Status**: READY FOR IMPLEMENTATION ✅  
@@ -95,20 +146,20 @@ TO BE UPDATED AFTER DRAFT IS READY
 
 1. **Manual Damage Target**: 44M current → **80M+ per key** (2-key UNM = 160M total)
    - **Rationale**: 2-key UNM gives max rewards (sacred shards, books, etc.)
-   - **Achievability**: Current team has all components (HP Burn, Decrease DEF/ATK, shields, cleanse, buff extend)
-   - **Path**: Phase 1 (+16-25M) + Phase 2 (+8-12M) + Phase 3 optimizations = 68-81M baseline, manual micro +10-15M = **78-96M potential**
+   - **Achievability**: 
+   - **Path**: 
 
 2. **Auto Damage Target**: **50M+ per key** (easy 2-key completion with safety margin)
    - **Rationale**: Auto runs for daily farming without manual babysitting
    - **Achievability**: With proper speed tune (171-189 SPD), AI should maintain buff/debuff rotation
-   - **Path**: Phase 1-2 optimizations = 68-81M manual → Auto efficiency ~65-75% = **44-61M auto** ✅
+   - **Path**: Phase 1-2 optimizations = 68-81M manual → Auto efficiency ~65-75% 
 
 3. **Survival Target**: 30-45 turns current → **50+ turns consistent** (both manual and auto)
    - **Rationale**: More turns = more damage, better reward chance
    - **Path**: Speed tune + EHP improvements (+705k team EHP from regearing) = 50-55 turns realistic
 
 4. **Speed Tune**: Implement 1:1 tune (171-189 SPD) for buff/shield sync
-   - **Status**: 1/5 complete (Geomancer 171 SPD ✅), 2/5 almost (Brogni 192, Aniri 199), 2/5 need work (Stag 219, Mithrala 251)
+   - **Status**: 
 
 5. **Automation**: Prioritize AUTO-friendly after manual max damage validated
    - **AI Quirks**: Document any manual-only strategies (skill priority, turn targeting)
@@ -116,24 +167,11 @@ TO BE UPDATED AFTER DRAFT IS READY
 
 6. **Roster Constraint**: Use only owned champions (Champion_stats.md owned>0)
    - **Current Team**: Geomancer, Stag Knight, Brogni, Mithrala, Godseeker Aniri (all owned)
-   - **Alternate Option**: Rector Drath (owned) for Path 2B if Mithrala Arena conflict unacceptable
+   - **Alternate Option**: Rector Drath (owned) or others.
 
 ---
 
 ## Gear & Resource Availability
-
-### **Available Relics (Key for UNM CB)**
-
-| Relic | Effect | UNM CB Application | Current User |
-|-------|--------|-------------------|--------------|
-| **Demonic Effigy** | Turn meter +10% when ally dies | Revival synergy (Godseeker Aniri passive, safety net) | **Godseeker Aniri** ✅ |
-| **Wand of Submission** | 25% chance to reflect stun debuff | **CRITICAL FOR CB!** Stun protection for key champions | **AVAILABLE** 🎯 |
-
-**Priority Relic Assignment:**
-- **Wand of Submission** → **Stag Knight** (Decrease DEF/ATK = most critical debuffer, 25% stun reflect = safety net)
-  - OR → **Brogni** (Shield/HP Burn specialist, high value target)
-  - Current: Brogni has Gilded Dragonstone (-5% RES for HP Burn, less critical than stun protection)
-- **Demonic Effigy** → Keep on Godseeker Aniri ✅ (revive synergy perfect)
 
 ### **Available Gear Sets (Quantity & Quality)**
 
@@ -161,31 +199,7 @@ TO BE UPDATED AFTER DRAFT IS READY
 **LOW AVAILABILITY** (maybe 1 full set, not optimized):
 - Most other sets available but not well-rolled or incomplete
 
-### **Dungeon/Resource Constraints**
-
-**Spider (Accessories):**
-- **Easy:** Farmable ✅
-- **Hard:** Up to Stage 6 (Mythic accessories) ✅
-- **Limitation:** Can't farm Spider Hard 10+ for high-tier mythics yet.
-
-**Dungeon Bosses (Artifacts):**
-- **Easy:** Farmable ✅
-- **Hard:** Up to Stage 6 (Mythic accessories) ✅
-- **Limitation:** Can't farm Spider Hard 10+ for high-tier mythics yet.
-
-**Sand Devil, Phantom Shogun (ACC Accessories):**
-- **Easy:** Farmable to lvl 16 of 25.
-- **Limitation:** Can't reliably farm past 15.
-
-**Gear Ascension:**
-- **Max Level:** 2-4 stars (Forge/Glyphs)
-- **Limitation:** Can't push to 5-6 star ascension yet (high-level dungeons/resources not accessible)
-- **Impact:** Can improve gear but not maximize (missing 10-20% potential stats from max ascension)
-
-**Mastery Resets:**
-- **Cost:** 300 gems per champion
-- **Availability:** ~1 week of gathering per reset
-- **Impact:** Can change masteries as needed, but resource-limited (prioritize high-impact resets)
+---
 
 ### **Gear Optimization Strategy (Based on Availability)**
 - Maintain this section as issues are identified, remediated, and updated through the analysis process.
@@ -492,7 +506,7 @@ These are generic guidelines, not specific
 | | | | | | |
 | | | | | | |
 
-**Key Changes from last calculations (2025-10-29):**
+**Key Changes from last calculations:**
 
 **BROGNI:** 
   - **RANK:** 
@@ -556,10 +570,6 @@ These are generic guidelines, not specific
 **Boot Swap Recommendations (Phase 2 Optimization):**
 
 **Total Team EHP Gain:** 
-
-**Brogni Special Case:**
-- Brogni shields scale with MAX HP (24k shields at 80k HP)
-- DEF% boots reduce HP (79,988 → 67,990), reducing shields (24k → 20.4k)
 - **Trade-off:** 
 - **RECOMMENDATION:** 
 

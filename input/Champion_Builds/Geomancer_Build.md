@@ -67,11 +67,8 @@
 #### 6. Masteries
 | Tier | Offense Masteries     | Defense Masteries          | Support Masteries       |
 |------|-----------------------|----------------------------|-------------------------|
-| 1 | | | |
-
-- Delete unused masteries
-- Empty tree is not used (only 2 trees can be selected)
-- Can select 1 from each used tree in the first tier, 3 of any in tiers 2-5, then a single tier 6 mastery.
+| 1 | | | | 
+| 2 | 
 
 #### 7. Skill Cooldowns (Assume Fully booked)
 - **A1:**  
