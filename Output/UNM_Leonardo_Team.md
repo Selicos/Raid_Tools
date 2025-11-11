@@ -12,45 +12,42 @@
 
 ## Table of Contents
 
-1. [Overview](#Overview)
-2. [Quick Start](#quick-start)
+1. [Overview](#overview)
+2. [Setup Checklist](#setup-checklist)
 3. [Speed Tune Requirements](#speed-tune-requirements)
 4. [Stat Goals by Champion](#stat-goals-by-champion)
-5. [Manual Rotation (4-Turn Pattern)](#manual-rotation-4-turn-pattern)
+5. [Manual Rotation](#manual-rotation)
 6. [Auto Mode Setup](#auto-mode-setup)
-7. [Team Variants](#team-variants)
-8. [Affinity Considerations](#affinity-considerations)
-9. [Troubleshooting](#troubleshooting)
-10. [Alternative Champions](#alternative-champions)
-11. [Ideal Pulls](#ideal-pulls)
+7. [Troubleshooting](#troubleshooting)
+8. [Optimization](#optimization)
+   - [Team Variants](#team-variants)
+   - [Alternative Champions](#alternative-champions)
+   - [Ideal Pulls](#ideal-pulls)
+   - [Affinity Considerations](#affinity-considerations)
 
 
 ---
 
 ## 1. Overview
 
-### **⚠️ CRITICAL: NO SPEED LEAD CHAMPIONS!**
+### **CRITICAL: NO SPEED LEAD CHAMPIONS**
 
 This team requires **263-280 TRUE SPEED** (without speed lead bonus).
 
-❌ **DO NOT USE:** High Khatun, Arbiter (arena only!), Lyssandra, Seeker, Duchess  
-✅ **CORRECT TEAM:** Leonardo / Godseeker / Michelangelo / Brogni / Geomancer (NONE have speed leads)
+**DO NOT USE:** High Khatun, Arbiter (arena only!), Lyssandra, Seeker, Duchess  
+**CORRECT TEAM:** Leonardo / Godseeker / Michelangelo / Brogni / Geomancer (NONE have speed leads)
 
 ---
 
-### **Speed Tune Requirements (2:1 Ratio)**
+### **Team Composition**
 
-| Champion | Target SPD | Turn Order | Role |
-|----------|------------|------------|------|
-| **Godseeker Aniri** | **277** | 1st (fastest) | Buff Extension |
-| **Underpriest Brogni** | **274** | 2nd | Block Debuffs |
-| **Michelangelo** | **270** | 3rd | Join Attack DPS |
-| **Leonardo** | **267** | 4th | Unkillable Tank |
-| **Geomancer** | **263** | 5th (slowest) | Weaken/HP Burn + **Stun Target** |
-
-**Formula:** ALL champions MUST be 263-280 SPD (Boss SPD 170 × 1.55 = 263 min, × 1.65 = 280 max)
-
-**Turn Order:** Godseeker (fastest) → Brogni → Michelangelo → Leonardo → Geomancer (slowest - stun target)
+| Champion | Role | Why Essential |
+|----------|------|---------------|
+| **Leonardo** | Unkillable Provider | A2: Unkillable (2 turns) + Counterattack (2 turns) |
+| **Godseeker Aniri** | Buff Extension | A2: Extends ALL buffs +1 turn (Leonardo 2→3 turns) |
+| **Michelangelo** | Join Attack DPS | Passive: Joins Leonardo attacks for doubled damage |
+| **Underpriest Brogni** | Block Debuffs | A3: Covers Leonardo gap turn (Turn 4, 8, 12...) |
+| **Geomancer** (flex) | Weaken + HP Burn | A3: ×1.25 damage multiplier + stun target (slowest) |
 
 ---
 
@@ -85,9 +82,9 @@ This team requires **263-280 TRUE SPEED** (without speed lead bonus).
 
 ---
 
-### **4-Turn Rotation Pattern**
+### **How It Works (4-Turn Cycle)**
 
-**Turn 1-3:** Leonardo Unkillable ACTIVE (3 turns with Godseeker extension)
+**Turns 1-3:** Leonardo Unkillable ACTIVE (3 turns with Godseeker extension)
 - Leonardo counterattacks: 4 hits per boss turn
 - Michelangelo joins: ~2-4 hits per boss turn
 - Total: ~16-20 hits per boss turn
@@ -95,33 +92,9 @@ This team requires **263-280 TRUE SPEED** (without speed lead bonus).
 **Turn 4:** Leonardo OFF (gap turn) → Brogni Block Debuffs covers
 
 **Critical Timing:**
-1. **Round 1:** Leonardo A2 (Unkillable) → **Round 2:** Godseeker A2 (extend to 3 turns)
-2. **Round 7:** Leonardo A2 (refresh) + Brogni A3 (Block Debuffs) → **Round 8:** Godseeker A2 (extend)
-3. **Repeat** every 4 boss turns
-
----
-
-### **Stat Priorities**
-
-| Champion | Priority 1 | Priority 2 | Priority 3 |
-|----------|-----------|-----------|-----------|
-| **Leonardo** | SPD 267 (5/5) | DEF 3,500 (5/5) | C.RATE 100% (5/5) |
-| **Godseeker** | SPD 277 (5/5) | DEF 4,500 (5/5) | HP 60k (4/5) |
-| **Michelangelo** | SPD 270 (5/5) | ATK 4k (5/5) | C.RATE 100% (5/5) |
-| **Brogni** | SPD 274 (5/5) | HP 60k (5/5) | ACC 250 (3/5) |
-| **Geomancer** | SPD 263 (5/5) | ACC 250 (5/5) | C.RATE 100% (5/5) |
-
----
-
-### **Common Mistakes**
-
-❌ Speed lead in team (shows 310+ SPD = WRONG!)  
-❌ Godseeker A2 too early (Unkillable only 2 turns instead of 3)  
-❌ Brogni A3 mistimed (Decrease SPD lands during gap)  
-❌ Leonardo DEF <3,500 (dies during gap)  
-❌ No books on Leonardo (A2 MUST be 3-turn CD! 5→3 with 7 Legendary books)  
-❌ No books on Godseeker (A2 MUST be 3-turn CD! 4→3 with full Epic books)  
-❌ Geomancer NOT slowest (should be 263 SPD for stun target)
+- **Round 1:** Leonardo A2 (Unkillable) → **Round 2:** Godseeker A2 (extend to 3 turns)
+- **Round 7:** Leonardo A2 (refresh) + Brogni A3 (Block Debuffs) → **Round 8:** Godseeker A2 (extend)
+- **Repeat** every 4 boss turns
 
 ---
 
@@ -135,53 +108,65 @@ This team requires **263-280 TRUE SPEED** (without speed lead bonus).
 
 ---
 
-## 2. Quick Start
+## 2. Setup Checklist
 
-### **Core Team (Fixed 4 Champions)**
+### **Build Requirements**
 
-| Champion | Role | Importance |
-|----------|------|------------|
-| **Leonardo** | Unkillable/Tank/DPS | 5/5 (A2: Unkillable + Counterattack + Ally Protection) |
-| **Godseeker Aniri** | Buff Extension | 5/5 (A2: Extends ALL buffs +1 turn → Leonardo 2→3 turn Unkillable) |
-| **Michelangelo** | Join Attack DPS | 5/5 (Passive: Joins Leonardo attacks for doubled damage) |
-| **Underpriest Brogni** | Block Debuffs/Shield | 5/5 (A3: Covers Leonardo gap turn with Block Debuffs) |
+**ALL Champions:**
+- [ ] **SPD 263-280** (true speed, NO speed lead)
+- [ ] **100% C.RATE** (Leonardo, Michelangelo, Geomancer for Warmaster/Giant Slayer procs)
+- [ ] **Warmaster or Giant Slayer mastery** completed
 
-**Flex Slot (5th Champion):**
+**Leonardo (Priority: CRITICAL):**
+- [ ] **7 Legendary books** (A2 5→3 turn CD = MANDATORY)
+- [ ] **DEF 3,500+** (damage scaling + tank role)
+- [ ] **SPD 267** (264-270 acceptable)
+- [ ] Gear: Speed (4pc) + Immortal (2pc) OR Speed + DEF
 
-| Champion | Damage Type | Expected Damage | Owned | Importance |
-|----------|-------------|-----------------|-------|------------|
-| **Geomancer** | Weaken + HP Burn | 60-80M | ✅ YES | 4/5 (Best owned option, stun target) |
-| **Stag Knight** | Decrease DEF 60% | 70-90M | ❌ NO | 5/5 (Best if owned) |
-| **Mithrala** | Cleanse + Shield | 40-60M (auto) | ✅ YES | 3/5 (Auto safety) |
+**Godseeker Aniri (Priority: CRITICAL):**
+- [ ] **Full Epic books** (A2 4→3 turn CD = MANDATORY)
+- [ ] **DEF 4,500+** (takes Ally Protection damage)
+- [ ] **HP 60,000+** (A2 heal scaling)
+- [ ] **SPD 277** (274-280 acceptable, FASTEST)
+
+**Underpriest Brogni (Priority: CRITICAL):**
+- [ ] **Full Legendary books** (A3 5→3 turn CD = MANDATORY)
+- [ ] **HP 60,000+** (shield scales 30% MAX HP)
+- [ ] **SPD 274** (270-277 acceptable)
+
+**Michelangelo (Priority: HIGH):**
+- [ ] **ATK 4,000+** (join attack damage + shield scaling)
+- [ ] **ACC 200+** (A2 Decrease DEF + Stun needs to land)
+- [ ] **SPD 270** (267-274 acceptable)
+- [ ] Full Legendary books recommended (A2 CD reduction)
+
+**Geomancer (Priority: HIGH):**
+- [ ] **ACC 250+** (Weaken MUST land)
+- [ ] **SPD 263** (263-266 acceptable, SLOWEST for stun target)
+- [ ] **DEF 2,500+** (stun target survivability)
+- [ ] Full Legendary books recommended (A3 5→3 turn CD)
 
 ---
 
-### **Critical Requirements**
+### **Common Mistakes**
 
-✅ **ALL 5 champions need 263-280 SPD** (NO speed lead - true speed only)  
-✅ **Leonardo needs 7 Legendary books** (A2 5→3 turn CD = MANDATORY for 4-turn cycle)  
-✅ **Godseeker needs full Epic books** (A2 4→3 turn CD = MANDATORY for extension timing)  
-✅ **Block Debuffs must cover Leonardo gap turn** (Brogni A3 timing critical)  
-✅ **Stun target = Geomancer (slowest SPD)** - Block Debuffs should prevent stuns, but Geo is tankiest  
-⚠️ **NO cleanse in core team** - If Decrease SPD lands during gap = restart run
+**Speed Tune Errors:**
+- Speed lead in team (shows 310+ SPD in battle = WRONG!)
+- ONE champion at 262 or 281 SPD (breaks entire tune)
+- Forgetting Geomancer must be SLOWEST (263 SPD)
 
-**Note on Stun Target:** Geomancer should be slowest champion (263 SPD) to take stuns. He's naturally tanky and his HP Burn passive reflects damage when taking hits. Block Debuffs prevents stuns until turn 50, but if speed tune desyncs, Geomancer survives best.
+**Booking Errors:**
+- Leonardo A2 not fully booked (5→4 or 5→5 = tune breaks!)
+- Godseeker A2 not fully booked (4→5 = extension timing fails)
+- Brogni A3 not fully booked (5→4 or 5→5 = gap coverage fails)
 
----
+**Rotation Errors:**
+- Godseeker A2 too early (Unkillable only 2 turns instead of 3)
+- Brogni A3 mistimed (Decrease SPD lands during gap = run fails)
 
-## **Expected Damage**
-
-| Team Variant | Manual | Auto | Notes |
-|--------------|--------|------|-------|
-| **Leonardo/Godseeker/Mickey/Brogni/Geomancer** | 60-80M | 40-60M | Best owned option |
-| **Leonardo/Godseeker/Mickey/Brogni/Stag** | 70-90M | N/A | If acquire Stag Knight |
-| **Leonardo/Mithrala/Mickey/Brogni/Geomancer** | 45-65M | 40-60M | Auto-safe (cleanse) |
-
-**Why Lower Than Expected?**
-- Leonardo A1 counterattack: 4 hits per boss turn (2 hits base × repeated = 4 total)
-- Michelangelo joins: Adds ~8-12 hits per rotation (A1 2-hit joins)
-- Total hits: ~16-20 per boss turn (vs 40 in original incorrect calculation)
-- Warmaster procs: 60% chance per crit = realistic damage 60-80M manual
+**Build Errors:**
+- Leonardo DEF <3,500 (dies during gap turn)
+- Geomancer ACC <250 (Weaken gets resisted = damage loss)
 
 ---
 
@@ -194,10 +179,58 @@ This team requires **263-280 TRUE SPEED** (without speed lead bonus).
 - Boss UNM SPD: 170 (after turn 1)
 - **Required:** ALL 5 champions 263-280 SPD (true speed, NO speed lead)
 
-**Formula (UNM-Specific):**
+**Formula:**
 ```
 Minimum SPD = Boss SPD × 1.55 = 170 × 1.55 = 263.5 SPD
 Maximum SPD = Boss SPD × 1.65 = 170 × 1.65 = 280.5 SPD
+Safe Range = 263-280 SPD (17 SPD window)
+```
+
+**CRITICAL:** If ONE champion is 262 or 281 SPD, the tune breaks!
+
+---
+
+### **Speed Tune Table**
+
+| Champion | Target SPD | Acceptable Range | Turn Order | Status |
+|----------|------------|------------------|------------|--------|
+| **Godseeker Aniri** | 277 | 274-280 | 1st (fastest) | READY |
+| **Underpriest Brogni** | 274 | 270-277 | 2nd | READY |
+| **Michelangelo** | 270 | 267-274 | 3rd | NEEDS +25 SPD |
+| **Leonardo** | 267 | 264-270 | 4th | NEEDS FULL BUILD |
+| **Geomancer** | 263 | 263-266 | 5th (slowest) | NEEDS +39 SPD |
+
+**Turn Order:** Godseeker → Brogni → Michelangelo → Leonardo → Geomancer
+
+**Notes:**
+- Godseeker & Brogni: Already tuned
+- Michelangelo: Needs +25 SPD regear (base 99 → 270 target)
+- Leonardo: Needs full build + Warmaster mastery (base 101 → 267 target)
+- Geomancer: SLOWEST for stun target (base 94 → 263 target, needs +39 SPD regear)
+
+---
+
+### **Why This Speed Range Matters**
+
+- **Below 263 SPD:** Boss laps you → speed tune breaks after ~10 turns → run fails
+- **Above 280 SPD:** Cooldowns misalign → awkward rotation (still works, less optimal)
+- **NO SPEED LEAD:** Using Arbiter/HK/etc = wasted flex slot (30-50M damage loss!)
+
+**Arbiter's 19% speed aura is ARENA ONLY** (does NOT work in Clan Boss)
+
+---
+
+### **How to Reach 263-280 SPD**
+
+- **SPD Boots (6-star):** +50 SPD (MANDATORY)
+- **Speed Set (4pc):** +12% base SPD (MANDATORY)
+- **Substats:** ~18 SPD per piece average (6 gear pieces)
+
+**Example (Leonardo base SPD 101):** 101 + 50 (boots) + 12 (set) + 100 (substats) = 263 SPD
+
+---
+
+## 4. Stat Goals by Champion
 Safe Range = 263-280 SPD (17 SPD window)
 ```
 
@@ -373,7 +406,7 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 
 ---
 
-## 5. Manual Rotation (4-Turn Pattern)
+## 5. Manual Rotation
 
 ### **The 4-Turn Cycle**
 
@@ -383,7 +416,7 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 
 ---
 
-### **First Cycle (Boss Turns 1-4)**
+### **Detailed Rotation (Boss Turns 1-4)**
 
 **Boss Turn 1 (Rounds 1-2):**
 - R1: **Godseeker A1/A3** → **Brogni A3** (Block Debuffs) → **Geo A3** (Weaken/HP Burn) → **Mickey A1** → **Leonardo A2** (Unkillable!)
@@ -398,7 +431,7 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 - Michelangelo joins: ~2-4 hits per boss turn
 - Damage: ~2.5-3M per turn
 
-**Boss Turn 4 (Rounds 7-8):** 💀 **GAP TURN**
+**Boss Turn 4 (Rounds 7-8): GAP TURN**
 - R7: **Godseeker A2** → **Brogni A3** (Block Debuffs!) → All others A1 → **Leonardo A2** (refresh!)
 - R8: **Godseeker A2** (extend!) → All others A1
 - Damage: ~2.5-3M
@@ -422,6 +455,8 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 - HP Burn damage varies by boss MAX HP
 - Weak affinity hits reduce damage 30%
 - Geomancer Weaken may get resisted occasionally
+
+**Realistic:** 60-80M manual accounting for all factors
 
 ---
 
@@ -452,90 +487,13 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 - **GAIN:** Cleanse safety + auto reliability
 
 **Expected Performance:**
-- **Auto Damage:** 75-95M per key
+- **Auto Damage:** 40-60M per key
 - **Success Rate:** 90-95% (vs 70-80% with Godseeker)
 - **Setup:** All 5 champions 263-280 SPD, press AUTO, walk away
 
 ---
 
-## 7. Team Variants
-
-### **VARIANT 1: Geomancer (Best Owned)**
-
-| Champion | SPD | Role | Importance |
-|----------|-----|------|------------|
-| Leonardo | 267 | Unkillable/Tank | 5/5 |
-| Godseeker | 277 | Buff Extension | 5/5 |
-| Michelangelo | 270 | Join Attack DPS | 5/5 |
-| Brogni | 274 | Block Debuffs | 5/5 |
-| **Geomancer** | 263 | Weaken + HP Burn + Stun Target | 4/5 |
-
-**Expected Damage:** 60-80M (manual), 40-60M (auto)  
-**Strengths:** ×1.25 Weaken multiplier + HP Burn reflect + -15% boss damage reduction + tanky stun target  
-**Weaknesses:** Geomancer needs regear (+39 SPD from base 94)
-
----
-
-### **VARIANT 2: Stag Knight (If Owned)**
-
-| Champion | SPD | Role | Importance |
-|----------|-----|------|------------|
-| Leonardo | 267 | Unkillable/Tank | 5/5 |
-| Godseeker | 277 | Buff Extension | 5/5 |
-| Michelangelo | 270 | Join Attack DPS | 5/5 |
-| Brogni | 274 | Block Debuffs | 5/5 |
-| **Stag Knight** | 263 | Decrease DEF 60% + Stun Target | 5/5 |
-
-**Expected Damage:** 70-90M (manual)  
-**Strengths:** ×1.6 Decrease DEF multiplier (better than Weaken) + fast base SPD (107) easier to tune  
-**Weaknesses:** Stag Knight not owned (need to acquire), less tanky than Geomancer for stun target
-
----
-
-### **VARIANT 3: Mithrala (Auto-Safe)**
-
-| Champion | SPD | Role | Importance |
-|----------|-----|------|------------|
-| Leonardo | 267 | Unkillable/Tank | 5/5 |
-| **Mithrala** | 277 | Cleanse + Shield | 4/5 |
-| Michelangelo | 270 | Join Attack DPS | 5/5 |
-| Brogni | 274 | Block Debuffs | 5/5 |
-| Geomancer | 263 | Weaken + HP Burn + Stun Target | 4/5 |
-
-**Expected Damage:** 45-65M (manual), 40-60M (auto)  
-**Strengths:** Cleanse recovers from Decrease SPD, 90-95% auto success rate  
-**Weaknesses:** NO Buff Extension (Leonardo only 50% Unkillable uptime = 2 turns vs 3)
-
----
-
-## 8. Affinity Considerations
-
-### **Damage by Affinity**
-
-| Affinity | Expected Damage | Best Team | Notes |
-|----------|----------------|-----------|-------|
-| **Void** | 60-80M | Geomancer variant | No affinity issues, highest consistency |
-| **Spirit** | 70-90M | Geomancer variant | Leonardo strong (+15% damage, Void vs Spirit) |
-| **Force** | 45-60M | Alternate needed | Leonardo weak (-30% damage, Void vs Force) ⚠️ |
-| **Magic** | 55-75M | Geomancer variant | Brogni weak (-30% shield scaling, Force vs Magic) |
-
----
-
-### **Affinity Replacements (Owned Champions Only)**
-
-**Force Boss (Leonardo Void = Weak):**
-- **Issue:** Leonardo -30% damage (Void weak to Force)
-- **Ideal replacement:** Roshcard the Tower (Force, Block Damage) - 264-270 SPD (replaces Leonardo as Unkillable provider)
-
-**Magic Boss (Brogni Force = Weak):**
-- **Issue:** Brogni shield reduced by weak hits (Force weak to Magic)
-- **Solution 1:** Increase Brogni HP to 70k+ (compensate for reduced shield)
-- **Solution 2:** Mithrala (Magic) replaces Brogni, but loses Block Debuffs
-- **Ideal replacement:** Warlord (Void, Block Damage 3 turns) - 263-280 SPD
-
----
-
-## 9. Troubleshooting
+## 7. Troubleshooting
 
 ### **Problem 1: Leonardo Unkillable Expires Early**
 
@@ -592,9 +550,61 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 
 ---
 
-## 10. Alternative Champions
+## 8. Optimization
 
-### **Owned Alternatives with Clan Boss Viability**
+### **Team Variants**
+
+#### **VARIANT 1: Geomancer (Best Owned)**
+
+| Champion | SPD | Role | Importance |
+|----------|-----|------|------------|
+| Leonardo | 267 | Unkillable/Tank | 5/5 |
+| Godseeker | 277 | Buff Extension | 5/5 |
+| Michelangelo | 270 | Join Attack DPS | 5/5 |
+| Brogni | 274 | Block Debuffs | 5/5 |
+| **Geomancer** | 263 | Weaken + HP Burn + Stun Target | 4/5 |
+
+**Expected Damage:** 60-80M (manual), 40-60M (auto)  
+**Strengths:** ×1.25 Weaken multiplier + HP Burn reflect + -15% boss damage reduction + tanky stun target  
+**Weaknesses:** Geomancer needs regear (+39 SPD from base 94)
+
+---
+
+#### **VARIANT 2: Stag Knight (If Owned)**
+
+| Champion | SPD | Role | Importance |
+|----------|-----|------|------------|
+| Leonardo | 267 | Unkillable/Tank | 5/5 |
+| Godseeker | 277 | Buff Extension | 5/5 |
+| Michelangelo | 270 | Join Attack DPS | 5/5 |
+| Brogni | 274 | Block Debuffs | 5/5 |
+| **Stag Knight** | 263 | Decrease DEF 60% + Stun Target | 5/5 |
+
+**Expected Damage:** 70-90M (manual)  
+**Strengths:** ×1.6 Decrease DEF multiplier (better than Weaken) + fast base SPD (107) easier to tune  
+**Weaknesses:** Stag Knight not owned (need to acquire), less tanky than Geomancer for stun target
+
+---
+
+#### **VARIANT 3: Mithrala (Auto-Safe)**
+
+| Champion | SPD | Role | Importance |
+|----------|-----|------|------------|
+| Leonardo | 267 | Unkillable/Tank | 5/5 |
+| **Mithrala** | 277 | Cleanse + Shield | 4/5 |
+| Michelangelo | 270 | Join Attack DPS | 5/5 |
+| Brogni | 274 | Block Debuffs | 5/5 |
+| Geomancer | 263 | Weaken + HP Burn + Stun Target | 4/5 |
+
+**Expected Damage:** 45-65M (manual), 40-60M (auto)  
+**Strengths:** Cleanse recovers from Decrease SPD, 90-95% auto success rate  
+**Weaknesses:** NO Buff Extension (Leonardo only 50% Unkillable uptime = 2 turns vs 3)
+
+---
+
+### **Alternative Champions**
+
+**Owned Alternatives with Clan Boss Viability:**
 
 | Champion | Role | Expected Damage | Importance | Why Use? |
 |----------|------|-----------------|------------|----------|
@@ -606,7 +616,7 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 
 ---
 
-## 11. Ideal Pulls
+### **Ideal Pulls**
 
 | Champion | Role | How to Get | Why Pull? | Speed Needed |
 |----------|------|------------|-----------|--------------|
@@ -615,6 +625,33 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 | **Warlord** | Block Damage | Void Shards | 100% damage immunity (3 turns Block Damage) | 263-280 |
 | **Roshcard the Tower** | Block Damage | Ancient/Sacred | Unkillable alternative (Force affinity, replaces Leonardo) | 264-270 |
 | **Turvold** | DEF Nuker | Ancient/Sacred | 30-50M solo damage (DEF scaling nuke) | 263-280 |
+
+---
+
+### **Affinity Considerations**
+
+**Damage by Affinity:**
+
+| Affinity | Expected Damage | Best Team | Notes |
+|----------|----------------|-----------|-------|
+| **Void** | 60-80M | Geomancer variant | No affinity issues, highest consistency |
+| **Spirit** | 70-90M | Geomancer variant | Leonardo strong (+15% damage, Void vs Spirit) |
+| **Force** | 45-60M | Alternate needed | Leonardo weak (-30% damage, Void vs Force) ⚠️ |
+| **Magic** | 55-75M | Geomancer variant | Brogni weak (-30% shield scaling, Force vs Magic) |
+
+---
+
+### **Affinity Replacements (Owned Champions Only)**
+
+**Force Boss (Leonardo Void = Weak):**
+- **Issue:** Leonardo -30% damage (Void weak to Force)
+- **Ideal replacement:** Roshcard the Tower (Force, Block Damage) - 264-270 SPD (replaces Leonardo as Unkillable provider)
+
+**Magic Boss (Brogni Force = Weak):**
+- **Issue:** Brogni shield reduced by weak hits (Force weak to Magic)
+- **Solution 1:** Increase Brogni HP to 70k+ (compensate for reduced shield)
+- **Solution 2:** Mithrala (Magic) replaces Brogni, but loses Block Debuffs
+- **Ideal replacement:** Warlord (Void, Block Damage 3 turns) - 263-280 SPD
 
 ---
 
