@@ -30,14 +30,14 @@
 
   ## ⚡ Critical Mechanics Reference
 
-  ## Clan Boiss First turn
+  ## Clan Boss First turn
   - On the first turn, the UNM clan boss has 190 speed. For all other turns speed is 170. 
   - Speed tune should target 170, though going ahead of 190 may be preferred.
 
   ### Clan Boss Stun Mechanic
   - **Frequency**: Every 3 turns
   - **Target**: Slowest champion (should be 191 SPD with high EHP)
-  - **Resistable**: NO - 100% land rate regardless of RES stat
+  - **NOT Resistable**: 100% land rate regardless of RES stat
   - **Strategy**: Designated stun target (Geomancer at 191 SPD) absorbs all stuns
 
   ### Clan Boss Immunity List (passive)
