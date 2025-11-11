@@ -6,7 +6,7 @@
 **Team Philosophy:** Leonardo Unkillable core with Godseeker buff extension  
 **Manual Target:** 60-80M+ damage per key  
 **Auto Target:** 40-60M damage per key (AI limitations)  
-**Speed Tune:** 2:1 ratio (263-280 SPD ALL champions, NO speed lead)
+**Speed Tune:** 3:2 ratio (263-280 SPD ALL champions, NO speed lead)
 
 ---
 
@@ -53,32 +53,15 @@ This team requires **263-280 TRUE SPEED** (without speed lead bonus).
 
 ### **Core Mechanics**
 
-**Leonardo (Unkillable Provider)**
-- **A2 (Shell Yeah!):** Places Unkillable (2 turns) + Counterattack (2 turns) + Ally Protection (50%) + Inc DEF (60%)
-- **A1 (Counterattack):** 4 total hits (2 base hits × repeated = 4 hits per boss turn)
-- **Passive:** Joins other Turtle attacks (synergy with Michelangelo)
-- **Books CRITICAL:** A2 cooldown 5→**3 turns** (enables 4-turn rotation)
+**Leonardo (Unkillable Provider):** A2 Unkillable (2 turns) + Counterattack (2 turns) + Ally Protection (50%) + Inc DEF (60%) | A1 counterattack = 4 total hits | Books: A2 5→3 CD (CRITICAL)
 
-**Godseeker Aniri (Buff Extension)**
-- **A2 (Quest for Meaning):** AOE damage + heal + **EXTENDS ALL BUFFS +1 TURN** (Leonardo Unkillable 2→3 turns!)
-- **Books CRITICAL:** A2 cooldown 4→**3 turns** (timing alignment)
-- **NO C.RATE BUFF** (was incorrectly stated in old guides)
+**Godseeker Aniri (Buff Extension):** A2 extends ALL buffs +1 turn (Leonardo 2→3 turns) | NO C.RATE BUFF | Books: A2 4→3 CD (CRITICAL)
 
-**Michelangelo (Join Attack DPS)**
-- **A1:** 2 hits + places Inc ATK on self if crit
-- **Passive:** Joins other Turtle attacks (adds ~2-4 hits per boss turn when Leonardo counterattacks)
-- **Mastery:** Giant Slayer (A1 is 2-hit multi-hit)
+**Michelangelo (Join Attack DPS):** A1 2 hits | Passive joins Turtle attacks (~2-4 hits per boss turn) | Mastery: Giant Slayer
 
-**Underpriest Brogni (Block Debuffs)**
-- **A3:** Block Debuffs (2 turns) + Inc ATK (50%) + Shield (30% MAX HP)
-- **Covers Leonardo gap turn** (Turn 4, 8, 12... when Unkillable expires)
-- **Books CRITICAL:** A3 cooldown 5→**3 turns**
+**Underpriest Brogni (Block Debuffs):** A3 Block Debuffs (2 turns) + Shield (30% MAX HP) | Covers Leonardo gap turn (Turn 4, 8, 12...) | Books: A3 5→3 CD (CRITICAL)
 
-**Geomancer (Damage Multiplier + Stun Target)**
-- **A3:** AOE + HP Burn (3 turns) + Weaken (25%, 3 turns) = ×1.25 damage multiplier
-- **Passive:** Reflects 30% damage as HP Burn + -15% boss damage taken
-- **Slowest SPD (263)** = takes stuns (tanky HP pool + passive benefits from hits)
-- **ACC 250+ CRITICAL** for Weaken to land
+**Geomancer (Damage Multiplier + Stun Target):** A3 Weaken (25%) + HP Burn = ×1.25 multiplier | Passive reflects 30% damage | Slowest SPD (263) = stun target | ACC 250+ CRITICAL
 
 ---
 
@@ -172,21 +155,27 @@ This team requires **263-280 TRUE SPEED** (without speed lead bonus).
 
 ## 3. Speed Tune Requirements
 
-### **2:1 Speed Tune (UNM Clan Boss)**
+### **3:2 Speed Tune (UNM Clan Boss)**
 
-**What is 2:1?**
-- Your champions take **2 turns** for every **1 boss turn**
+**What is 3:2?**
+- Your champions take **3 turns** for every **2 boss turns**
 - Boss UNM SPD: 170 (after turn 1)
 - **Required:** ALL 5 champions 263-280 SPD (true speed, NO speed lead)
 
 **Formula:**
 ```
-Minimum SPD = Boss SPD × 1.55 = 170 × 1.55 = 263.5 SPD
-Maximum SPD = Boss SPD × 1.65 = 170 × 1.65 = 280.5 SPD
+Minimum SPD = Boss SPD × 1.5 = 170 × 1.5 = 255 SPD
+Optimal Range = Boss SPD × 1.55-1.65 = 263-280 SPD
 Safe Range = 263-280 SPD (17 SPD window)
+
+Speed Ratio Math:
+263 SPD / 170 boss SPD = 1.547 ratio = 3:2 tune ✅
+280 SPD / 170 boss SPD = 1.647 ratio = 3:2 tune ✅
+
+True 2:1 would require 340+ SPD (ratio ≥ 2.0) - not achievable with current gear
 ```
 
-**CRITICAL:** If ONE champion is 262 or 281 SPD, the tune breaks!
+**CRITICAL:** If ONE champion is below 263 or above 280 SPD, the tune breaks!
 
 ---
 
@@ -201,12 +190,6 @@ Safe Range = 263-280 SPD (17 SPD window)
 | **Geomancer** | 263 | 263-266 | 5th (slowest) | NEEDS +39 SPD |
 
 **Turn Order:** Godseeker → Brogni → Michelangelo → Leonardo → Geomancer
-
-**Notes:**
-- Godseeker & Brogni: Already tuned
-- Michelangelo: Needs +25 SPD regear (base 99 → 270 target)
-- Leonardo: Needs full build + Warmaster mastery (base 101 → 267 target)
-- Geomancer: SLOWEST for stun target (base 94 → 263 target, needs +39 SPD regear)
 
 ---
 
@@ -285,6 +268,8 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 
 ## 4. Stat Goals by Champion
 
+---
+
 ### **LEONARDO**
 **Base Stats:** HP 16,845 / ATK 782 / DEF 1,619 / SPD 101  
 **Skills:** See [Leonardo.json](../input/Champion_Dictionary/Complete/Leonardo.json)
@@ -307,7 +292,6 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 - Warmaster mastery (5/5 - MANDATORY, DEF scaling damage)
 - 7 Legendary books (5/5 - A2 5→3 turn CD CRITICAL for 4-turn rotation)
 - Gear: Speed (4pc) + Immortal (2pc) OR Speed + DEF
-- **Stalwart explanation:** Can use Stalwart set if taking massive AOE damage (reduces AOE by 25%), but loses DEF bonuses
 
 ---
 
@@ -401,8 +385,6 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 - Giant Slayer + Master Hexer masteries (5/5 - Master Hexer extends debuffs, A1 is 2-hit)
 - Full Legendary books (5/5 - A3 5→3 turn CD for Weaken uptime)
 - Gear: Speed (4pc) + Perception (2pc) OR Speed + Accuracy
-- **Perception/Accuracy explanation:** Geomancer needs 250+ ACC for Weaken to land consistently. Perception gives ACC + SPD, Accuracy set gives more ACC but no SPD. Choose based on substat rolls.
-- **Why slowest?** Geomancer is stun target - naturally tanky HP pool + passive reflects damage = benefits from taking hits
 
 ---
 
@@ -475,21 +457,15 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 
 **Team:** Leonardo + **MITHRALA** + Michelangelo + Brogni + Geomancer
 
-**Why Mithrala?**
-- ✅ A3 **CLEANSE** (recovers if Decrease SPD lands)
-- ✅ A3 Shield 30% MAX HP + Strengthen (survivability)
+**Why Mithrala:**
+- ✅ A3 CLEANSE (recovers from Decrease SPD) + Shield 30% MAX HP + Strengthen
 - ✅ A2 Hex + Increase DEF/ATK (auto-friendly)
 - ✅ AI uses skills correctly
-- ❌ NO Buff Extension (Leonardo only 2-turn Unkillable = 50% uptime)
+- ❌ NO Buff Extension (Leonardo 2-turn Unkillable = 50% uptime)
 
-**Trade-off:**
-- **LOSE:** Godseeker buff extension (75% → 50% Unkillable uptime)
-- **GAIN:** Cleanse safety + auto reliability
+**Trade-off:** LOSE Godseeker buff extension (75% → 50% uptime) | GAIN Cleanse safety + auto reliability
 
-**Expected Performance:**
-- **Auto Damage:** 40-60M per key
-- **Success Rate:** 90-95% (vs 70-80% with Godseeker)
-- **Setup:** All 5 champions 263-280 SPD, press AUTO, walk away
+**Expected Performance:** 40-60M auto damage | 90-95% success rate | All 5 champions 263-280 SPD
 
 ---
 
@@ -652,71 +628,6 @@ Use an aura with other benefits (ACC, DEF) if available. Core 4 champions have N
 - **Solution 1:** Increase Brogni HP to 70k+ (compensate for reduced shield)
 - **Solution 2:** Mithrala (Magic) replaces Brogni, but loses Block Debuffs
 - **Ideal replacement:** Warlord (Void, Block Damage 3 turns) - 263-280 SPD
-
----
-
-**END OF GUIDE - Version 2.1 CORRECTED**
-
----
-
-## 12. Quick Reference Card
-
-### **Speed Tune Table**
-
-| Champion | Target SPD | Acceptable Range | Turn Order |
-|----------|------------|------------------|------------|
-| Godseeker Aniri | 277 | 274-280 | 1st (fastest) |
-| Underpriest Brogni | 274 | 270-277 | 2nd |
-| Michelangelo | 270 | 267-274 | 3rd |
-| Leonardo | 267 | 264-270 | 4th |
-| Geomancer | 263 | 263-266 | 5th (slowest - stun target) |
-
-**Turn Order:** Godseeker → Brogni → Michelangelo → Leonardo → Geomancer
-
----
-
-### **Manual Rotation (4-Turn Cycle)**
-
-**Round 1:** **Godseeker A1/A3** → **Brogni A3** → **Geo A3** → Mickey A1 → **Leonardo A2** (Unkillable!)  
-**Round 2:** **Godseeker A2** ⭐⭐⭐ (Buff Extension +1 turn!)  
-**Round 7:** **Brogni A3** ⭐⭐⭐ (Cover gap!)  
-**Round 7:** **Leonardo A2** (refresh!)  
-**Round 8:** **Godseeker A2** (extend again!)  
-**Repeat**
-
----
-
-### **Stat Priority Quick Reference**
-
-| Champion | Priority 1 | Priority 2 | Priority 3 |
-|----------|-----------|-----------|-----------|
-| **Leonardo** | SPD 267 (5/5) | DEF 3,500 (5/5) | C.RATE 100% (5/5) |
-| **Godseeker** | SPD 277 (5/5) | DEF 4,500 (5/5) | HP 60k (4/5) |
-| **Michelangelo** | SPD 270 (5/5) | ATK 4k (5/5) | C.RATE 100% (5/5) |
-| **Brogni** | SPD 274 (5/5) | HP 60k (5/5) | ACC 250 (3/5) |
-| **Geomancer** | SPD 263 (5/5) | ACC 250 (5/5) | C.RATE 100% (5/5) |
-
----
-
-### **Common Mistakes**
-
-❌ Speed lead in team (shows 310+ SPD = WRONG!)  
-❌ Godseeker A2 too early (Unkillable only 2 turns instead of 3)  
-❌ Brogni A3 mistimed (Decrease SPD lands during gap)  
-❌ Leonardo DEF <3,500 (dies during gap)  
-❌ No books on Leonardo (A2 MUST be 3-turn CD! 5→3 with 7 Legendary books)  
-❌ No books on Godseeker (A2 MUST be 3-turn CD! 4→3 with full Epic books)  
-❌ Geomancer NOT slowest (should be 263 SPD for stun target)
-
----
-
-### **Expected Damage Summary**
-
-| Team | Manual | Auto | Notes |
-|------|--------|------|-------|
-| **Geomancer (owned)** | 60-80M | 40-60M | Best owned option, Geo stun target |
-| **Stag Knight (if owned)** | 70-90M | N/A | Best overall, need to acquire |
-| **Mithrala (auto-safe)** | 45-65M | 40-60M | Cleanse safety, 90% success rate |
 
 ---
 
