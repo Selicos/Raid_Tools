@@ -11,18 +11,47 @@
 
 # Table of Contents
 
-- [UNM Boss Stats Reference](#unm-boss-stats-reference-canonical)
-- [Critical Mechanics Reference](#critical-mechanics-reference)
-- [Speed Tune Concepts](#speed-tune-concepts)
-- [Stat Requirements Framework](#stat-requirements-framework)
-- [Team Archetypes & Composition Theory](#team-archetypes--composition-theory)
-- [Damage Calculation Framework](#damage-calculation-framework)
-- [Gear & Mastery Optimization](#gear--mastery-optimization)
-- [Validation & Sources](#validation--sources)
+- [UNM Clan Boss - Central Reference Guide](#unm-clan-boss---central-reference-guide)
+- [Table of Contents](#table-of-contents)
+  - [1. UNM Boss Stats Reference (CANONICAL)](#1-unm-boss-stats-reference-canonical)
+  - [2. Critical Mechanics Reference](#2-critical-mechanics-reference)
+    - [Clan Boss First Turn](#clan-boss-first-turn)
+    - [Clan Boss Stun Mechanic](#clan-boss-stun-mechanic)
+    - [Clan Boss Immunity List (Passive)](#clan-boss-immunity-list-passive)
+    - [Clan Boss Attack Pattern \& AOE Rotation](#clan-boss-attack-pattern--aoe-rotation)
+    - [Clan Boss 'Gathering Fury' Passive](#clan-boss-gathering-fury-passive)
+    - [Poison \& HP Burn Caps](#poison--hp-burn-caps)
+    - [Warmaster \& Giant Slayer Masteries](#warmaster--giant-slayer-masteries)
+  - [3. Speed Tune Concepts](#3-speed-tune-concepts)
+    - [What is 3:2 Speed Tune?](#what-is-32-speed-tune)
+    - [3:2 Requirements (CRITICAL)](#32-requirements-critical)
+    - [Buff/Debuff Duration with 3:2 Tune (CRITICAL)](#buffdebuff-duration-with-32-tune-critical)
+    - [Other Speed Tune Options](#other-speed-tune-options)
+  - [4. Stat Requirements Framework](#4-stat-requirements-framework)
+    - [Priority by Role](#priority-by-role)
+    - [Stat Breakpoints](#stat-breakpoints)
+  - [5. Team Archetypes \& Composition Theory](#5-team-archetypes--composition-theory)
+    - [Core Team Roles](#core-team-roles)
+    - [Team Archetype Families](#team-archetype-families)
+  - [6. Damage Calculation Framework](#6-damage-calculation-framework)
+    - [Speed Tune Compatibility Matrix](#speed-tune-compatibility-matrix)
+    - [Affinity Strategy](#affinity-strategy)
+  - [7. Gear \& Mastery Optimization](#7-gear--mastery-optimization)
+    - [Gear Set Priorities](#gear-set-priorities)
+    - [Mastery Optimization](#mastery-optimization)
+  - [8. Blessings for Clan Boss](#8-blessings-for-clan-boss)
+  - [9. Great Hall Stat Bonuses](#9-great-hall-stat-bonuses)
+  - [10. Cheese Strategies (Owned Champions)](#10-cheese-strategies-owned-champions)
+  - [11. Common Mistakes \& Troubleshooting](#11-common-mistakes--troubleshooting)
+    - ["Why Did My Team Wipe?" Flowchart](#why-did-my-team-wipe-flowchart)
+    - ["Speed Tune Broke" Troubleshooting](#speed-tune-broke-troubleshooting)
+    - ["Not Enough Damage" Diagnosis](#not-enough-damage-diagnosis)
+  - [12. Validation \& Sources](#12-validation--sources)
+  - [13. Related Documentation](#13-related-documentation)
 
 ---
 
-## UNM Boss Stats Reference (CANONICAL)
+## 1. UNM Boss Stats Reference (CANONICAL)
 
 | Stat | Value | Impact on Team Building |
 |------|-------|------------------------|
@@ -43,7 +72,7 @@
 
 ---
 
-## Critical Mechanics Reference
+## 2. Critical Mechanics Reference
 
 ### Clan Boss First Turn
 - Turn 1: Boss has **190 speed**
@@ -52,19 +81,44 @@
 - Turn ratio: Champion_SPD / Boss_SPD ≥ 1.5 for 3:2
 
 ### Clan Boss Stun Mechanic
-- **Frequency**: Every 3 turns
+- **Frequency**: Every 3 turns (turns 3, 6, 9, 12...)
 - **Target**: Slowest champion
 - **Resistable**: NO - 100% land rate regardless of RES stat
+- **Damage Formula**: Stun damage scales inversely with DEF (higher DEF = lower damage)
+  - 3k DEF: ~15-20k damage per stun
+  - 4k DEF: ~10-12k damage per stun
+  - 4.5k+ DEF: ~8-10k damage per stun (recommended minimum)
 - **3:2 Strategy**: Slowest champion (263 SPD minimum) absorbs all stuns. Use high EHP or Block Debuffs/Unkillable.
 
 ### Clan Boss Immunity List (Passive)
 Immune to:
 - Stun, Freeze, Sleep
-- Decrease Speed, Provoke
+- **Decrease Speed** (boss cannot be slowed, but YOUR team can get Dec SPD debuff - breaks tune!)
+- Provoke
 - Block Active Skills, Lock Passive Skills
 - Fear/True Fear, Petrification, Berserk
 - Enfeeble, Nullify
 - Max HP Destruction, Turn Meter Reduction, HP Exchange
+
+**⚠️ CRITICAL WARNING - Decrease Speed Debuff:**
+- Boss is IMMUNE to Dec SPD (cannot slow boss)
+- Boss CAN apply Dec SPD to YOUR team (A2 AOE attack)
+- If YOUR champions get Dec SPD, they drop below 263 SPD → **breaks 3:2 tune**
+- **Solution:** Block Debuffs (prevent), Cleanse (remove), or high RES (resist)
+
+### Clan Boss Attack Pattern & AOE Rotation
+
+**Boss Skill Rotation (Repeats):**
+- **A1 (Single Target):** Decreases ATK, Decreases DEF (if no Dec DEF on boss)
+- **A2 (AOE):** Random debuffs (Dec SPD, Poison), higher damage than A1
+- **AOE Timing:** Turns 3, 7, 11, 15, 19, 23... (every 4 turns after turn 3)
+- **Stun Timing:** Turns 3, 6, 9, 12, 15... (every 3 turns, targets slowest champion)
+
+**Key Implications:**
+- **Turn 3:** First AOE + First Stun (spike damage, use shields/Block Debuffs)
+- **Turn 7:** Second AOE (higher damage, ensure sustain is active)
+- **Turn 11:** Third AOE (damage increases, Dec ATK/shields critical)
+- **Turn 15+:** Damage escalates each turn (Gathering Fury activates)
 
 ### Clan Boss 'Gathering Fury' Passive
 - **Turn 10+**: Damage increases each turn
@@ -86,7 +140,7 @@ Immune to:
 
 ---
 
-## Speed Tune Concepts
+## 3. Speed Tune Concepts
 
 ### What is 3:2 Speed Tune?
 
@@ -182,7 +236,7 @@ Immune to:
 
 ---
 
-## Stat Requirements Framework
+## 4. Stat Requirements Framework
 
 ### Priority by Role
 
@@ -222,7 +276,7 @@ Immune to:
 
 ---
 
-## Team Archetypes & Composition Theory
+## 5. Team Archetypes & Composition Theory
 
 ### Core Team Roles
 
@@ -243,6 +297,12 @@ Every successful UNM Clan Boss team requires coverage across these five core rol
   - Direct damage (A1/A2/A3 with high crit/crit dmg)
 - **Optimal:** HP Burn + Warmaster = ~14M baseline before direct damage
 - **Alternate:** Poison teams can reach 25-30M but require multiple poisoners
+
+**Damage Amplifiers (Stack Multiplicatively):**
+- **Decrease DEF 60%:** 2.5× damage multiplier (MANDATORY)
+- **Weaken 25%:** 1.25× damage multiplier (highly recommended)
+- **Dec DEF + Weaken Combined:** 2.5 × 1.25 = **3.125× total damage amp**
+- **Champions with Weaken:** Geomancer (passive), Ninja (A3), Fayne, Kreela
 
 **3. Survivability (MANDATORY)**
 - **Options (pick 2-3):**
@@ -341,15 +401,17 @@ Every successful UNM Clan Boss team requires coverage across these five core rol
 
 ---
 
-## Damage Calculation Framework
+## 6. Damage Calculation Framework
 
 **Baseline 3:2 Tanky Killable (50 turns):**
 - HP Burn: 75k × 2 ticks/turn × 50 turns = 7.5M
 - Warmaster (5 champs): 5 × 60% proc × 75k × 3 skills/turn × 50 turns = 6.75M
 - Dec DEF amp (2.5×): Direct damage increased
-- Weaken amp (1.25×): All damage increased
+- **Weaken amp (1.25×): All damage increased**
+- **Dec DEF + Weaken combined: 3.125× total damage amp** (vs 2.5× Dec DEF alone)
 - Reflect damage: ~10% boss damage reflected = 3-5M
 - **Total: 40-70M** (varies by stats, affinity, RNG)
+- **With Weaken: 50-85M** (25% damage increase)
 
 **Peak Unkillable (50 turns before Turn 50 limit):**
 - HP Burn: 7.5M (same)
@@ -406,7 +468,7 @@ Every successful UNM Clan Boss team requires coverage across these five core rol
 
 ---
 
-## Gear & Mastery Optimization
+## 7. Gear & Mastery Optimization
 
 ### Gear Set Priorities
 
@@ -419,6 +481,12 @@ Every successful UNM Clan Boss team requires coverage across these five core rol
 - Speed + Perception + Immortal (most common)
 - Speed + Perception + Lifesteal (for damage dealers)
 - Speed + Shield + Immortal (for ultra-tanky setups)
+
+**Lifesteal Set Efficiency (Simple Guide):**
+- **When Lifesteal is sufficient:** High ATK/DEF champions (3k+ ATK or DEF) with Warmaster/Giant Slayer
+- **Lifesteal healing:** ~10-15% of damage dealt (scales with mastery procs)
+- **Best on:** Damage dealers with high stats and frequent attacks
+- **Skip if:** You have strong healers (Rector Drath, Bad-el-Kazar) or Immortal sets
 
 **Unkillable:**
 - Speed + Perception + Savage (ignore DEF for damage)
@@ -455,7 +523,137 @@ Every successful UNM Clan Boss team requires coverage across these five core rol
 
 ---
 
-## Validation & Sources
+## 8. Blessings for Clan Boss
+
+**Best Blessings by Role:**
+
+| Role | Best Blessing | Why |
+|------|---------------|-----|
+| **Damage Dealer** | Cruelty, Lethal Dose | +C.DMG or +damage vs bosses |
+| **HP Burn Specialist** | Brimstone | +HP Burn damage (increases 75k cap) |
+| **Debuffer** | Polymorph, Crushing Rend | +ACC or debuff chance |
+| **Support/Healer** | Fortitude, Soul Reap | +HP/DEF or sustain |
+| **Tank/Stun Target** | Stoneskin, Bulwark | +survivability |
+
+**Priority:** Blessings are endgame optimization. Focus on gear/masteries first.
+
+---
+
+## 9. Great Hall Stat Bonuses
+
+**Priority Stats for Clan Boss:**
+
+1. **Accuracy (+100 at max):** Critical for debuffers - reduces gear ACC requirements
+2. **Speed (+15% at max):** Helps hit 263-280 SPD for 3:2 tune
+3. **Defense (+25% at max):** Survivability, stun damage mitigation
+4. **HP (+25% at max):** Survivability baseline
+5. **C.RATE/C.DMG:** Damage dealers only (lower priority)
+
+**Impact on Gearing:**
+- Max ACC Great Hall = need 150-180 ACC from gear (vs 250-280 without)
+- Max SPD Great Hall = ~10-15 SPD reduction in gear requirements
+- Focus ACC + SPD first, then DEF/HP for all factions
+
+---
+
+## 10. Cheese Strategies (Owned Champions)
+
+**Available Cheese Champions (from your roster):**
+
+**1. Leonardo - Unkillable/Counterattack Cheese**
+- **Mechanic:** 3-turn Unkillable (75% uptime with Godseeker extension)
+- **Setup:** Leonardo + Michelangelo + 3 DPS, 263-280 SPD 3:2 tune
+- **Cheese Factor:** Counterattack doubles turn frequency, unkillable prevents damage
+- **Damage Potential:** 70-95M (50-turn limit)
+
+**2. Geomancer - Reflect Damage Cheese**
+- **Mechanic:** Passive reflects 75% of damage taken to ALL enemies (AOE reflect)
+- **Setup:** High DEF (5k+), HP Burn on self, let boss attack
+- **Cheese Factor:** Boss kills itself with its own damage
+- **Damage Potential:** 5-10M from reflect alone (bonus damage)
+
+**3. Rector Drath - Revive Loop Cheese**
+- **Mechanic:** A3 revives with 60% TM + Perfect Veil (3 turns)
+- **Setup:** High RES (300+), revive fallen DPS mid-fight
+- **Cheese Factor:** Team never dies (revive loop sustain)
+- **Damage Potential:** Extends run 10-20+ turns
+
+**4. Wythir the Crowned - Block Damage Cheese** (if owned - verify)
+- **Mechanic:** Passive Block Damage on champions <50% HP
+- **Setup:** Let team drop to 50% HP, Block Damage triggers
+- **Cheese Factor:** Damage immunity without unkillable champion
+- **Damage Potential:** Depends on team comp
+
+**Note:** Check `input/Champion_Dictionary/Complete/` for detailed champion mechanics verification.
+
+---
+
+## 11. Common Mistakes & Troubleshooting
+
+### "Why Did My Team Wipe?" Flowchart
+
+**Check in order:**
+
+1. **Speed Tune Broke?**
+   - ❌ Champion got Decrease Speed debuff → drops below 263 SPD
+   - ❌ Turn Meter manipulation (Arbiter, Apothecary) → breaks rotation
+   - ✅ **Fix:** Block Debuffs, cleanse Dec SPD, avoid TM boost champions
+
+2. **Debuff Overload?**
+   - ❌ Team has Dec ATK, Dec SPD, Poison (no cleanse) → damage escalates
+   - ✅ **Fix:** Block Debuffs, cleanse, or high RES (250+)
+
+3. **Not Enough Healing?**
+   - ❌ Boss damage > team healing → slow death
+   - ✅ **Fix:** Add shields, heals, Lifesteal sets, or Immortal gear
+
+4. **Stun Target Died?**
+   - ❌ Slowest champion has <4k DEF or <50k HP → dies to stun
+   - ✅ **Fix:** Boost DEF to 4.5k+, HP to 55k+, or use Block Damage/Unkillable
+
+5. **Affinity Penalty?**
+   - ❌ Weak affinity on Dec DEF champion → debuffs miss → damage drops
+   - ✅ **Fix:** Swap to neutral/strong affinity champion
+
+### "Speed Tune Broke" Troubleshooting
+
+**Symptoms:** Boss takes extra turns, rotation desynchronized, team wiped
+
+**Causes:**
+1. **Dec SPD debuff landed** → cleanse immediately or wipe incoming
+2. **TM boost used** (Arbiter, Apothecary, Deacon) → never use TM manipulation
+3. **Relentless set proc** → random extra turn breaks rotation
+4. **Champion died and revived** → revive resets turn order (may break tune)
+
+**Solutions:**
+- Use Block Debuffs or cleanse for Dec SPD
+- Never use champions with TM boost/manipulation
+- Never use Relentless sets in 3:2 tune
+- Avoid deaths (if revive is needed, tune may break)
+
+### "Not Enough Damage" Diagnosis
+
+**Check in order:**
+
+1. **Dec DEF uptime?** → If <90%, damage is 2.5× lower
+2. **Weaken uptime?** → If missing, damage is 1.25× lower (25% loss)
+3. **HP Burn uptime?** → If <90%, lose ~7M damage
+4. **Warmaster procs?** → Check mastery selections (WM vs GS)
+5. **Affinity penalties?** → Weak affinity = -20% damage
+6. **C.RATE too low?** → <100% C.RATE = inconsistent damage
+7. **Not enough turns?** → Team dying before turn 50 = lost damage
+
+**Solutions:**
+- Ensure Dec DEF + Weaken 90%+ uptime
+- Verify HP Burn champion has 250+ ACC
+- Check mastery paths (Warmaster for 1-2 hit A1s, Giant Slayer for 3+ hit A1s)
+- Avoid weak affinity on damage dealers
+- Boost C.RATE to 100% on all DPS
+- Improve survivability (shields, heals, Block Debuffs)
+
+---
+
+## 12. Validation & Sources
 
 **Data Sources:**
 - RaidHQ (boss mechanics, damage caps)
@@ -474,7 +672,7 @@ Every successful UNM Clan Boss team requires coverage across these five core rol
 
 ---
 
-## Related Documentation
+## 13. Related Documentation
 
 - **Current Team Analysis:** `Output/UNM CB Guide update.md` (specific champion builds, current performance)
 - **Champion Details:** `input/Champion_Dictionary/Complete/` (individual champion JSON entries)
