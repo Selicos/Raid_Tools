@@ -1,113 +1,11 @@
-# UNM Clan Boss Team Analysis - 3:2 Speed Tune ✅
+# Info
 
-**Date**: 2025-11-10 (CORRECTED v3.3)  
-**Version**: 3.3 - SPEED TUNE CORRECTIONS: 2:1 → 3:2 + Buff Uptime Mechanics  
-**Status**: CORRECTED - Speed Tune Math, Buff Durations, Damage Projections Validated  
-**Target Speed Tune**: 3:2 (263-280 SPD, ratio 1.547-1.647)  
-**Goals**: 
-- **Current**: 29-30M damage per key (realistic with 3:2 tune, ~27 boss turns)
-- **Auto**: 27-29M damage per key (full auto viable, ~5-10% loss)
-- **Survival**: 25-35 boss turns consistent (~40 champion turns with 3:2)
-- **Future (Leonardo team)**: 50-85M damage per key (1-2 key UNM potential) ? **CORRECTED**
+This document should be a reference for UNM Demon lord clan boss fights. It contains detailed boss info, mechanics, turn and speed info, champion details, and more. 
 
----
+# Table of Contents
 
-## ⚠️ CRITICAL CORRECTION NOTICES
-
-### **v3.3 CORRECTIONS (2025-11-10): SPEED TUNE MISLABELING & BUFF MECHANICS**
-
-**PREVIOUS ERRORS:**
-- ❌ Entire document labeled as **"2:1 speed tune"** throughout
-- ❌ Claimed "2 champion turns per 1 boss turn" (incorrect ratio)
-- ❌ Stated "Brogni Block Debuffs 100% uptime" with 3-turn CD, 2-turn duration
-- ❌ Stated "Stag Knight Decrease DEF 100% uptime" with 3-turn CD, 2-turn duration
-- ❌ Did not explain buff/debuff timing mechanics with 3:2 tune
-
-**CORRECTED REALITY:**
-- ✅ **Actual speed tune: 3:2** (3 champion turns per 2 boss turns)
-- ✅ **Speed ratio math**: 263-280 SPD / 170 boss SPD = 1.547-1.647 ratio
-- ✅ **True 2:1 would require**: 340+ SPD (ratio ≥ 2.0) - not achievable with current gear
-- ✅ **Brogni Block Debuffs uptime**: 66.7% (2 turns on, 1 turn gap)
-- ✅ **Stag Knight Decrease DEF/ATK uptime**: 66.7% (2 turns on, 1 turn gap)
-- ✅ **Leonardo Unkillable uptime**: 75% with Godseeker extension (3 turns on, 1 turn gap)
-
-**WHY THIS MATTERS:**
-- **Buff mechanics**: With 3:2 tune, any skill with "3-turn CD, 2-turn duration" has gap turns
-- **Gap coverage**: Mithrala A3 cleanse CRITICAL to cover Brogni Block Debuffs gaps
-- **Turn calculations**: 50 boss turns = 75 champion turns (each champion gets 75 actions)
-- **Damage expectations**: Warmaster procs, HP Burn activations all scale with champion turns
-
-**IMPACT:**
-- **All "2:1" labels corrected to "3:2"** throughout both UNM guides
-- **Added comprehensive Buff/Debuff Duration section** explaining turn timing
-- **Updated damage calculations** with explicit 3:2 turn math notes
-- **Current team damage realistic**: ~29-30M per key (was ~36-55M in previous estimates)
-
----
-
-### **v3.2 CORRECTIONS (2025-11-10): LEONARDO COUNTERATTACK & NINJA MECHANICS**
-
-**PREVIOUS ERRORS:**
-- ? Leonardo counterattack stated as **4 hits** (should be 4 total: 2 hits + 2 repeat)
-- ? Michelangelo join attack stated as **4 hits** (should be 2 hits - his A1)
-- ? Total counterattack damage: **8 hits per counter** (should be 6: Leo 4 + Mickey 2)
-- ? Boss Turn 1 damage: **40 counterattack hits** (should be 30 hits)
-- ? Ninja A1 called **"Hailburn"** and stated as **"3-hit"** (should be "Shatterbolt", single hit)
-- ? Ninja skills A1/A2/A3 names and mechanics ALL INCORRECT
-- ? Ninja passive stated as **"cooldown reset"** (does not exist - actual: Escalation ATK/C.DMG scaling)
-- ? Ninja Giant Slayer stated as **90% proc** (should be 30% - A1 is single hit)
-- ? Expected Leonardo team damage: **60-100M** (should be 50-85M)
-
-**CORRECTED REALITY:**
-- ? **Leonardo A1**: 2 hits (4 total on counterattack with repeat mechanic)
-- ? **Michelangelo join**: 2 hits (his A1)
-- ? **Total per counterattack**: 6 hits (Leo 4 + Mickey 2)
-- ? **Boss Turn 1 counterattacks**: 5 counters � 6 hits = **30 hits** (not 40)
-- ? **Boss Turn 1 HP Burn damage**: 30 � 2 � 60k = **3.6M** (not 4.8M)
-- ? **Ninja A1**: Shatterbolt (single hit, 45% Dec DEF, TM fill vs Boss)
-- ? **Ninja A2**: Hailburn (3 random hits, 75% HP Burn, **HP Burn activation vs Boss**)
-- ? **Ninja A3**: Cyan Slash (AOE Freeze, vs Boss: ignore 50% DEF + reduce A2 CD)
-- ? **Ninja Passive**: Escalation (ATK/C.DMG scaling vs bosses, NO cooldown reset)
-- ? **Ninja Giant Slayer**: 30% proc per A1 (single hit, not multi-hit)
-- ? **Expected Leonardo team damage**: **50-85M** (15-20% reduction from v3.1)
-
-**IMPACT:**
-- **Damage projections reduced by ~15-20%** (all counterattack calculations corrected)
-- **Ninja mechanics completely reworked** (skill names, hit counts, proc rates all fixed)
-- **Leonardo team is still ENDGAME** (50-85M is 1-2 key UNM with optimized builds)
-
----
-
-### **v3.1 CORRECTIONS (2025-11-08): RECTOR DRATH KIT**
-
-**PREVIOUS ERROR:**
-- ? This document originally stated **Rector Drath provides Block Debuffs via A3**
-- ? Claimed "100% Block Debuffs uptime from Rector A3"
-- ? Recommended Rector for "Block Debuffs reliability"
-
-**CORRECTED REALITY:**
-- ? **Rector A3 = Revive + 60% TM fill + Perfect Veil (3 turns)** - NOT Block Debuffs!
-- ? **ONLY guaranteed Block Debuffs source: Brogni A3** (3-turn CD, 2-turn duration = 100% uptime)
-- ? **Feral 4pc on Brogni/Ninja:** 50% chance (unreliable backup only)
-- ? **Mithrala A3 cleanse is CRITICAL** - only recovery if Decrease SPD lands
-
-**IMPACT:**
-- **Team Option 1 risk level:** Originally stated as "SAFE" ? Actually "MEDIUM-HIGH" (relies on Brogni A3 cycling)
-- **Rector vs Godseeker comparison:** BOTH teams have SAME Block Debuffs coverage (Brogni A3 only)
-- **Speed tune stability:** More fragile than originally claimed (Mithrala cleanse mandatory if Brogni A3 fails)
-
-**For detailed champion kit verification, see:** `Output/UNM_Champion_Skills_Review.md`
-
----
-
-## Table of Contents
-
-- [UNM Clan Boss Team Analysis - 3:2 Speed Tune ✅](#unm-clan-boss-team-analysis---32-speed-tune-)
-  - [⚠️ CRITICAL CORRECTION NOTICES](#️-critical-correction-notices)
-    - [**v3.3 CORRECTIONS (2025-11-10): SPEED TUNE MISLABELING \& BUFF MECHANICS**](#v33-corrections-2025-11-10-speed-tune-mislabeling--buff-mechanics)
-    - [**v3.2 CORRECTIONS (2025-11-10): LEONARDO COUNTERATTACK \& NINJA MECHANICS**](#v32-corrections-2025-11-10-leonardo-counterattack--ninja-mechanics)
-    - [**v3.1 CORRECTIONS (2025-11-08): RECTOR DRATH KIT**](#v31-corrections-2025-11-08-rector-drath-kit)
-  - [Table of Contents](#table-of-contents)
+- [Info](#info)
+- [Table of Contents](#table-of-contents)
   - [UNM Boss Stats Reference (CANONICAL)](#unm-boss-stats-reference-canonical)
   - [Critical Mechanics Reference](#critical-mechanics-reference)
     - [Clan Boss First Turn](#clan-boss-first-turn)
@@ -139,10 +37,34 @@
     - [**?? BAD-EL-KAZAR - Sustain/Poison Specialist** ??? **HIGH PRIORITY (ALTERNATE)**](#-bad-el-kazar---sustainpoison-specialist--high-priority-alternate)
     - [**?? GEOMANCER - HP Burn Reflect/Passive Damage** ??? **HIGH PRIORITY (ALTERNATE)**](#-geomancer---hp-burn-reflectpassive-damage--high-priority-alternate)
     - [**?? TAYREL - Decrease DEF/ATK Alternative** ?? **(NOT OWNED)**](#-tayrel---decrease-defatk-alternative--not-owned)
-  - [?? RECOMMENDED 3:2 TEAM COMPOSITION \& SPEED TUNE](#-recommended-32-team-composition--speed-tune)
-    - [**TEAM OPTION 1: CORE DAMAGE \& SUSTAIN (IMMEDIATE DEPLOYMENT)** ? **RECOMMENDED** ? **CORRECTED**](#team-option-1-core-damage--sustain-immediate-deployment--recommended--corrected)
+  - [🛡️ TANKY KILLABLE TEAM - CONSOLIDATED GUIDE](#️-tanky-killable-team---consolidated-guide)
+    - [**TEAM COMPOSITION - CURRENT ACTIVE ROSTER**](#team-composition---current-active-roster)
+    - [**SPEED TUNE - 3:2 CONFIGURATION**](#speed-tune---32-configuration)
+    - [**CORE MECHANICS COVERAGE**](#core-mechanics-coverage)
+    - [**CURRENT STATS SNAPSHOT**](#current-stats-snapshot)
+      - [**Godseeker Aniri**](#godseeker-aniri)
+      - [**Underpriest Brogni**](#underpriest-brogni)
+      - [**Stag Knight**](#stag-knight)
+      - [**Mithrala Lifebane**](#mithrala-lifebane)
+      - [**Geomancer**](#geomancer)
+    - [**DAMAGE BREAKDOWN - CURRENT PERFORMANCE**](#damage-breakdown---current-performance)
+    - [**AFFINITY MATCHUP ANALYSIS**](#affinity-matchup-analysis)
+    - [**OPTIMIZATION PATH: 40-55M → 72M+**](#optimization-path-40-55m--72m)
+      - [**Phase 1: CRITICAL Stat Fixes (Immediate - 1 hour)**](#phase-1-critical-stat-fixes-immediate---1-hour)
+      - [**Phase 2: Regear Mithrala (Medium Effort - 2-3 hours)**](#phase-2-regear-mithrala-medium-effort---2-3-hours)
+      - [**Phase 3: Wait for Void Boss (Zero Effort - Patience)**](#phase-3-wait-for-void-boss-zero-effort---patience)
+    - [**SKILL ROTATION GUIDE**](#skill-rotation-guide)
+      - [**Turn 1 Priority (Manual Start Recommended):**](#turn-1-priority-manual-start-recommended)
+      - [**Turns 2-5 (Establishing Rhythm):**](#turns-2-5-establishing-rhythm)
+      - [**Auto-Battle AI Notes:**](#auto-battle-ai-notes)
+    - [**UPGRADE PATH \& FUTURE IMPROVEMENTS**](#upgrade-path--future-improvements)
+      - [**Short-Term (Next 1-2 Weeks):**](#short-term-next-1-2-weeks)
+      - [**Medium-Term (Next 1-2 Months):**](#medium-term-next-1-2-months)
+      - [**Long-Term (3+ Months - Future Team):**](#long-term-3-months---future-team)
+    - [**TROUBLESHOOTING**](#troubleshooting)
+    - [**SUMMARY - TANKY KILLABLE TEAM**](#summary---tanky-killable-team)
   - [Champion Synergy Analysis](#champion-synergy-analysis)
-    - [Core Mechanics Coverage](#core-mechanics-coverage)
+    - [Core Mechanics Coverage](#core-mechanics-coverage-1)
     - [Champion Stats Summary Table](#champion-stats-summary-table)
   - [3:2 Team Composition Analysis](#32-team-composition-analysis)
   - [Implementation Roadmap](#implementation-roadmap)
@@ -178,11 +100,11 @@
     - [Confidence Level](#confidence-level)
     - [Testing \& Validation Requirements](#testing--validation-requirements)
   - [Update Notes \& Version History](#update-notes--version-history)
-    - [Version 3.0 - 3:2 Speed Tune Reset (2025-11-07)](#version-30---32-speed-tune-reset-2025-11-07)
-  - [**MAJOR CLEANUP:**](#major-cleanup)
-    - [Version 2.0 - Complete Alternate Champions \& Poison Team Strategy (2025-11-02)](#version-20---complete-alternate-champions--poison-team-strategy-2025-11-02)
-    - [Version 1.1 - Goal Update \& Boss Stats Correction (2025-10-30)](#version-11---goal-update--boss-stats-correction-2025-10-30)
-    - [Version 1.0 - Initial Setup (2025-10-27)](#version-10---initial-setup-2025-10-27)
+- [UNM Clan Boss Team Analysis - "Tanky Killable" 3:2 Speed Tune ✅](#unm-clan-boss-team-analysis---tanky-killable-32-speed-tune-)
+  - [⚠️ CRITICAL CORRECTION NOTICES](#️-critical-correction-notices)
+    - [**v3.3 CORRECTIONS (2025-11-10): SPEED TUNE MISLABELING \& BUFF MECHANICS**](#v33-corrections-2025-11-10-speed-tune-mislabeling--buff-mechanics)
+    - [**v3.2 CORRECTIONS (2025-11-10): LEONARDO COUNTERATTACK \& NINJA MECHANICS**](#v32-corrections-2025-11-10-leonardo-counterattack--ninja-mechanics)
+    - [**v3.1 CORRECTIONS (2025-11-08): RECTOR DRATH KIT**](#v31-corrections-2025-11-08-rector-drath-kit)
   - [File Metadata](#file-metadata)
 
 **NOTE:** For complete details on all 11 champions, see `UNM_Champion_Details.md`
@@ -1192,46 +1114,282 @@ Immune to (Debuffs and effects):
 
 ---
 
-## ?? RECOMMENDED 3:2 TEAM COMPOSITION & SPEED TUNE
+## 🛡️ TANKY KILLABLE TEAM - CONSOLIDATED GUIDE
 
-### **TEAM OPTION 1: CORE DAMAGE & SUSTAIN (IMMEDIATE DEPLOYMENT)** ? **RECOMMENDED** ? **CORRECTED**
+### **TEAM COMPOSITION - CURRENT ACTIVE ROSTER**
 
-**Team Roster:**
-1. **Brogni** (SPD 274) - Shield/Reflect/Block Debuffs (A3 ONLY guaranteed source)
-2. **Stag Knight** (SPD 272) - Decrease DEF/ATK
-3. **Mithrala** (SPD 272) - DEF Support/Cleanser/Debuff Immunity  
-4. **Rector Drath** (SPD 277) - Revive/Perfect Veil/Passive Healing
-5. **Ninja** (SPD 261?263+) - HP Burn Activation
+| Champion | Role | SPD | Primary Mechanics | Status |
+|----------|------|-----|-------------------|--------|
+| **Godseeker Aniri** | Buff Extension / Revive / Healer | 277 | A2 extends all buffs +1 turn, A3 team revive | ✅ READY |
+| **Underpriest Brogni** | Shield / Block Debuffs / Reflect | 274 | A3 Block Debuffs 2 turns (3-turn CD), passive reflects 25% damage | ✅ READY |
+| **Stag Knight** | Decrease DEF/ATK Specialist | 273 | A2 AOE Dec DEF 60% + Dec ATK 50% (2 turns, 3-turn CD) | ✅ READY |
+| **Mithrala Lifebane** | DEF Support / Cleanser / Shield | 272 | A3 cleanse all debuffs + shields 30% MAX HP, DEF-scaling damage | ✅ READY |
+| **Geomancer** | HP Burn / Stun Target / Reflect | 267 | A3 HP Burn + Weaken, passive reflects 30% damage, SLOWEST = stun target | ✅ READY |
 
-**Why This Team:** ? **CORRECTED**
-- ? **All SPD requirements met** (Ninja needs +2 SPD only)
-- ? **No gear conflicts** (Rector keeps Bolster, Godseeker benched)
-- ? **Complete debuff coverage:** HP Burn, Decrease DEF/ATK, Weaken optional
-- ? **Triple sustain:** Brogni Regeneration (14.5k heal/turn), Rector passive healing (10% HP/turn for Veiled allies), Mithrala shields
-- ? **Block Debuffs:** Brogni A3 ONLY (3-turn CD, 2-turn duration = 100% uptime), Feral 4pc backup (50% unreliable)
-- ? **Cleanse safety:** Mithrala A3 CRITICAL (only recovery if Decrease SPD lands)
-- ? **Revive safety net:** Rector A3 (60% HP + 60% TM + Perfect Veil 3 turns)
-- ? **All champions READY NOW**
+---
 
-**Speed Tune:**
-| Champion | Current SPD | Status | Action |
-|----------|-------------|--------|--------|
-| Rector Drath | 277 | ? Perfect | None |
-| Brogni | 274 | ? Perfect | None |
-| Stag Knight | 272 | ? Perfect | None |
-| Mithrala | 272 | ? Perfect | None |
-| Ninja | 261 | ?? +2 SPD | Single substat roll |
+### **SPEED TUNE - 3:2 CONFIGURATION**
 
-**Turn Order:**  
-Rector (277) ? Brogni (274) ? Stag (272) ? Mithrala (272) ? Ninja (263)
+**Turn Order:** Aniri (277) → Brogni (274) → Stag (273) → Mithrala (272) → Geomancer (267)
 
-**Damage Estimate:** 25-40M per key  
-**Survival:** 30-50 turns
+**3:2 Speed Math:**
+- Boss SPD: 170 (post-turn 1)
+- Champion SPD Range: 267-277
+- Ratio: 267/170 = 1.57, 277/170 = 1.63
+- **Result: 3 champion turns per 2 boss turns** ✅
 
-**Immediate Actions:**
-1. ?? **Ninja +2 SPD** (30 min fix)
-2. ?? **Rector Respec Warmaster T6** (400 gems)
-3. ?? **Test 3:2 tune** (5 battles)
+**Why This Turn Order:**
+1. **Aniri first (277)** - Extends buffs before they expire (critical for Brogni Block Debuffs)
+2. **Brogni second (274)** - Applies Block Debuffs + shields early in rotation
+3. **Stag third (273)** - Decrease DEF/ATK lands before main DPS
+4. **Mithrala fourth (272)** - Cleanses any debuffs that slipped through gaps
+5. **Geomancer last (267)** - SLOWEST = absorbs all boss stuns, HP Burn ticks regardless
+
+**Speed Tune Stability:** ✅ **PERFECT** - All champions in 263-280 range, 10 SPD spread is safe
+
+---
+
+### **CORE MECHANICS COVERAGE**
+
+| Mechanic | Champion(s) | Uptime | Notes |
+|----------|-------------|--------|-------|
+| **Block Debuffs** | Brogni A3 | 66.7% | 2 turns on, 1 turn gap (3-turn CD, 2-turn duration) |
+| **Cleanse** | Mithrala A3 | On-demand | CRITICAL for gap turns when Block Debuffs expires |
+| **Decrease DEF 60%** | Stag Knight A2 | 66.7% | 2 turns on, 1 turn gap (3-turn CD, 2-turn duration) |
+| **Decrease ATK 50%** | Stag Knight A2 | 66.7% | Same as Dec DEF, reduces boss damage significantly |
+| **HP Burn** | Geomancer A3 | 95%+ | Applied turn 1, refreshed as needed (boss immune = breaks) |
+| **Weaken 25%** | Geomancer A3 | 95%+ | Team damage multiplier (1.25x) when active |
+| **Shields** | Brogni A3, Mithrala A3 | High | Brogni 30% MAX HP (unremovable), Mithrala 30% MAX HP |
+| **Reflect Damage** | Brogni Passive, Geomancer Passive | Permanent | Brogni 25% (when shielded), Geo 30% (always) |
+| **Buff Extension** | Aniri A2 | 75% | Extends ALL buffs +1 turn (4-turn CD booked → 3-turn CD) |
+| **Revive** | Aniri A3 | On-demand | Team revive 30% HP + Inc DEF 60% (6-turn CD booked → 5-turn) |
+| **Healing** | Brogni Regen, Aniri Bolster | Passive | Brogni 14,575 HP/turn, Aniri 7,360 HP/turn |
+| **Stun Absorption** | Geomancer (slowest) | 100% | Takes all stuns, high EHP (70k HP + 4k DEF) survives easily |
+
+**Gap Turn Coverage Strategy:**
+- **Brogni Block Debuffs expires every 3rd turn** → Gap turn vulnerable to Decrease SPD
+- **Mithrala A3 cleanse** → Must be ready for gap turns (manual timing or trust AI)
+- **Aniri A2 extension** → Can extend Brogni Block Debuffs 2 turns → 3 turns (reduces gaps)
+
+---
+
+### **CURRENT STATS SNAPSHOT**
+
+#### **Godseeker Aniri**
+- **HP:** 73,597 | **DEF:** 4,827 (5,310 stacked with gemstone) | **SPD:** 277 ✅
+- **C.RATE:** 59% | **C.DMG:** 94% | **RES:** 94 | **ACC:** 135
+- **Sets:** Bolster x4 (7,360 HP/turn heal), Perception x2
+- **Masteries:** Warmaster T6 ✅ (incomplete support tree)
+- **Role:** Buff extension (A2 every 3 turns), team revive safety net
+
+#### **Underpriest Brogni**
+- **HP:** 97,165 | **DEF:** 3,980 | **SPD:** 274 ✅
+- **C.RATE:** 31% | **C.DMG:** 86% | **RES:** 160 | **ACC:** 186
+- **Sets:** Regeneration x4 (14,575 HP/turn heal), Feral x2
+- **Masteries:** Warmaster T6 ✅
+- **Role:** Block Debuffs (A3 every 3 turns), shields, reflect damage
+- **Key Stat:** 97k HP = 30% MAX HP shields = **29,150 HP shields** on all allies
+
+#### **Stag Knight**
+- **HP:** 80,594 | **DEF:** 4,402 (5,282 stacked with relic+gemstone) | **SPD:** 273 ✅
+- **C.RATE:** 37% | **C.DMG:** 109% | **RES:** 75 | **ACC:** 313 ✅
+- **Sets:** Feral x2, Perception x2, Resilient x2
+- **Masteries:** Warmaster T6 ✅
+- **Role:** Decrease DEF/ATK (A2 every 3 turns), extreme tankiness
+- **Key Stat:** 313 ACC = reliable debuff landing vs 300 RES boss
+
+#### **Mithrala Lifebane**
+- **HP:** 68,804 | **DEF:** 4,212 | **SPD:** 272 ✅
+- **C.RATE:** 30% | **C.DMG:** 94% | **RES:** 91 (709 effective with passive) | **ACC:** 618 (OVERKILL)
+- **Sets:** Perception x6 (368 wasted ACC!)
+- **Masteries:** Warmaster T6 ✅
+- **Role:** Cleanse (A3 on-demand), shields, DEF-scaling damage, Poison
+- **Key Stat:** Passive RES = RES + ACC → 91 + 618 = **709 effective RES** (debuff immune!)
+- **Optimization:** Regear Perception → Regeneration x4 + DEF% x2 (only need 250 ACC)
+
+#### **Geomancer**
+- **HP:** ~70k+ | **DEF:** ~4k+ | **SPD:** 267 ✅
+- **C.RATE:** Unknown | **C.DMG:** Unknown | **ACC:** Unknown
+- **Sets:** Unknown (needs verification)
+- **Masteries:** Warmaster T6 assumed
+- **Role:** HP Burn + Weaken (main damage source), stun target (slowest)
+- **CRITICAL STATS NEEDED:** ACC 250+ (HP Burn landing), C.DMG 200+ (damage scaling)
+
+---
+
+### **DAMAGE BREAKDOWN - CURRENT PERFORMANCE**
+
+**Verified Results:**
+- **Baseline:** 40-55M damage per key (auto, Spirit/Force/Magic affinity)
+- **Best Run:** 68M damage (Spirit boss, optimal RNG, good affinity)
+- **Target:** 72M+ (unlock auto-battle feature)
+
+**Damage Sources (Estimated per 40-turn run):**
+
+| Source | Damage per Turn | Total (40 turns) | % of Total | Notes |
+|--------|-----------------|------------------|-----------|-------|
+| **HP Burn (Geomancer)** | 75k × 2 hits = 150k | 6.0M | ~40% | Boss attacks 5x per turn, HP Burn ticks 2x per attack |
+| **Warmaster Procs (All 5)** | 75k × 12 procs = 900k | 36.0M | ~35% | 60% proc rate × 5 champions × 3 turns/champion = 9 expected procs/boss turn |
+| **Weaken Multiplier (Geo)** | +25% to all damage | Embedded | ~15% | 1.25x damage when Weaken active (95% uptime) |
+| **Reflect Damage** | Brogni 25% + Geo 30% | 2-3M | ~5% | Boss deals ~40k per hit × 5 hits = 200k, reflects ~55k per turn |
+| **Base Champion Damage** | Skills A1/A2/A3 hits | 3-5M | ~5% | ATK/DEF scaling hits (low contribution vs Warmaster) |
+
+**Total Expected:** ~47-50M (average), 60-68M (good RNG + affinity), 72M+ (Void boss + optimization)
+
+**RNG Variance Factors:**
+- Warmaster procs: 60% chance = ±10-15% swing per run
+- HP Burn landing: 95%+ with 250 ACC (if Geo ACC is low, massive damage loss)
+- Affinity bonus/penalty: ±5-10% based on boss rotation
+- Survival turns: 30 turns vs 40 turns = 25% damage difference
+
+---
+
+### **AFFINITY MATCHUP ANALYSIS**
+
+| Boss Affinity | Expected Damage | Champions Affected | Notes |
+|---------------|-----------------|---------------------|-------|
+| **Spirit** 🟢 | 60-68M | Geo (Force) weak -10%, Brogni (Magic) strong +10% | Best verified: 68M |
+| **Force** 🟡 | 55-62M | Brogni weak -10%, Stag (Spirit) strong +10% | Neutral overall |
+| **Magic** 🟡 | 52-60M | Stag weak -10%, Geo strong +10% | Neutral overall |
+| **Void** ⭐ | **65-76M** | All neutral (Aniri/Mithrala always neutral) | **BEST - Target this for 72M unlock** |
+
+**Affinity Effects:**
+- Weak affinity: -15% damage dealt, +15% glancing blows (reduced Warmaster procs)
+- Strong affinity: +15% damage dealt, +15% crit chance
+- Void: Always neutral, most consistent results
+
+---
+
+### **OPTIMIZATION PATH: 40-55M → 72M+**
+
+#### **Phase 1: CRITICAL Stat Fixes (Immediate - 1 hour)**
+
+**1. Verify Geomancer Stats (HIGHEST PRIORITY):**
+- ✅ **ACC:** Must be 250+ (HP Burn landing is 40% of damage)
+  - If below 250: Swap chest/banner to ACC%, lose HP/DEF if necessary
+- ✅ **C.DMG:** Target 200%+ (base hit damage + HP Burn initial damage scales)
+  - Swap amulet to C.DMG% if needed
+- 🟡 **C.RATE:** Nice to have 70%+, but NOT required for Warmaster procs
+  - Only affects base skill damage (minor impact)
+
+**Expected Gain:** +5-8M damage (if ACC was low)
+
+**2. Boost Brogni Damage Stats (MEDIUM PRIORITY):**
+- 🟡 **ATK:** 2,470 → 3,000+ (A2 shield scaling = "30% of damage dealt")
+  - Swap chest DEF% → ATK% (lose 400 DEF, but 97k HP compensates)
+- 🟡 **C.DMG:** 86% → 150%+ (reflect damage scales with crits)
+  - Swap amulet HP → C.DMG% (lose 20k HP, still 77k+ remaining)
+
+**Expected Gain:** +2-4M damage (stronger shields + reflects)
+
+#### **Phase 2: Regear Mithrala (Medium Effort - 2-3 hours)**
+
+**Current Problem:** Perception x6 = 618 ACC (368 wasted! Only need 250 for UNM)
+
+**Recommended Change:**
+- **Remove:** Perception x6
+- **Add:** Regeneration x4 + DEF% x2
+- **Result:** 
+  - ACC: 618 → 250 (still sufficient)
+  - Heal: 0 → 10,321 HP/turn (15% MAX HP)
+  - DEF: 4,212 → 5,000+ (better DEF-scaling damage)
+
+**Expected Gain:** +3-5M damage (more turns survived = more Warmaster procs)
+
+#### **Phase 3: Wait for Void Boss (Zero Effort - Patience)**
+
+**When:** Check daily reset for boss affinity rotation
+**Why:** All champions neutral = +5-8M vs weak affinity matchups
+**Expected:** 68M (Spirit) → 72-76M (Void) with same gear
+
+---
+
+### **SKILL ROTATION GUIDE**
+
+#### **Turn 1 Priority (Manual Start Recommended):**
+1. **Geomancer A3** - HP Burn + Weaken (MUST land for full damage)
+2. **Stag Knight A2** - Decrease DEF 60% + ATK 50% (team damage + survivability)
+3. **Brogni A3** - Block Debuffs + shields 30% MAX HP (unremovable)
+4. **Mithrala A2** - Increase DEF/ATK buffs + Hex (save A3 for cleanse)
+5. **Aniri A1** - Heal + self Continuous Heal (save A2 for buff extension)
+
+#### **Turns 2-5 (Establishing Rhythm):**
+- **Aniri:** Use A2 on Turn 3-4 to extend Brogni Block Debuffs (2 turns → 3 turns)
+- **Brogni:** Spam A1 (builds shields, reflects damage), use A2 if shields drop
+- **Stag:** Spam A1, use A2 when available (every 3 turns)
+- **Mithrala:** Spam A1 (Poison damage), use A3 if debuffs land during gap turns
+- **Geomancer:** Spam A1 (triggers HP Burn), refresh A3 when HP Burn expires
+
+#### **Auto-Battle AI Notes:**
+- ✅ **Aniri AI:** Good (uses A2 buff extension intelligently)
+- ✅ **Brogni AI:** Excellent (prioritizes A3, uses A1 correctly)
+- ✅ **Stag AI:** Excellent (uses A2 on cooldown)
+- ✅ **Mithrala AI:** Good (uses A3 when debuffs present)
+- ✅ **Geomancer AI:** Excellent (one of best AIs in game, uses A3 optimally)
+
+**Auto Success Rate:** 90%+ (team is extremely auto-friendly)
+
+---
+
+### **UPGRADE PATH & FUTURE IMPROVEMENTS**
+
+#### **Short-Term (Next 1-2 Weeks):**
+1. ✅ Verify/fix Geomancer ACC + C.DMG
+2. 🟡 Boost Brogni ATK/C.DMG (if gear available)
+3. 🟡 Run on Void boss rotation (72M unlock attempt)
+
+#### **Medium-Term (Next 1-2 Months):**
+1. Regear Mithrala: Perception → Regeneration + DEF%
+2. Complete Aniri support masteries (Healing Savior, Lore of Steel, Lasting Gifts)
+3. Farm better gear: High SPD + C.DMG substats for all champions
+
+#### **Long-Term (3+ Months - Future Team):**
+- **Transition to Leonardo Unkillable Team** (50-85M potential)
+  - Requires: Leonardo (7 Legendary books), Michelangelo (+21 SPD regear)
+  - Team: Leonardo / Aniri / Michelangelo / Brogni / Geomancer
+  - See separate guide: `Output/UNM_Leonardo_Team.md`
+
+---
+
+### **TROUBLESHOOTING**
+
+**Problem:** Damage below 40M
+- ✅ Check Geomancer ACC (must be 250+)
+- ✅ Verify all champions have Warmaster T6
+- ✅ Confirm HP Burn uptime 95%+ (check battle log)
+- ✅ Ensure Decrease DEF landing consistently (Stag 313 ACC is good)
+
+**Problem:** Team dying before turn 30
+- ✅ Check Brogni A3 cycling every 3 turns (Block Debuffs uptime)
+- ✅ Verify Mithrala A3 cleanses gap turns (manual timing may be needed)
+- ✅ Ensure Geomancer is slowest (absorbs all stuns)
+- ✅ Check heal/turn: Brogni 14,575 + Aniri 7,360 = 21,935 HP/turn team heal
+
+**Problem:** Inconsistent runs (30M-60M variance)
+- ✅ RNG variance is normal (Warmaster procs ±15%)
+- ✅ Affinity matters (Spirit 68M, Magic 52M = huge swing)
+- ✅ Run 5 keys, average middle 3 results for true baseline
+
+---
+
+### **SUMMARY - TANKY KILLABLE TEAM**
+
+**Strengths:**
+- ✅ Extremely tanky (90%+ auto success rate)
+- ✅ High sustain (21,935 HP/turn passive healing)
+- ✅ Perfect 3:2 speed tune (267-277 SPD, tight 10 SPD spread)
+- ✅ Auto-friendly (excellent champion AIs across the board)
+- ✅ Verified 68M ceiling on Spirit boss (72M+ on Void feasible)
+
+**Weaknesses:**
+- ❌ Geomancer stats unknown (potential 5-8M damage loss if ACC/C.DMG low)
+- ❌ Mithrala gear inefficient (368 wasted ACC)
+- ❌ Brogni damage stats low (31% C.RATE, 2,470 ATK, 86% C.DMG)
+- ❌ No unkillable cheese (survives ~40 turns max before boss Turn 50 ignore mechanic)
+
+**Current Performance:** 40-55M baseline, 68M peak, 72M+ target (achievable with Void boss + stat fixes)
+
+**Next Steps:** Verify Geomancer stats → Fix ACC/C.DMG if needed → Wait for Void boss rotation → 72M unlock achieved ✅
 
 ---
 
@@ -2054,22 +2212,108 @@ All analysis validated against:
 
 ## Update Notes & Version History
 
-### Version 3.0 - 3:2 Speed Tune Reset (2025-11-07)
-**MAJOR CLEANUP:**
+# UNM Clan Boss Team Analysis - "Tanky Killable" 3:2 Speed Tune ✅
+
+**Date**: 2025-11-16 (UPDATED v4.0)  
+**Version**: 4.0 - TANKY KILLABLE TEAM CONSOLIDATION  
+**Status**: ACTIVE - Current team composition, speeds, and optimization path  
+**Team Name**: **"Tanky Killable"** - High sustain, safe auto, NO unkillable cheese  
+**Target Speed Tune**: 3:2 (263-280 SPD, ratio 1.547-1.647)  
+
+**Performance Goals**: 
+- **Current Baseline**: 40-55M damage per key (auto, Spirit/Force/Magic affinity)
+- **Best Run**: 68M damage (Spirit boss, optimal RNG)
+- **Target**: 72M+ (unlock auto-battle) - requires Void boss + stat optimization
+- **Auto-Friendly**: 90%+ success rate, full auto viable
+- **Survival**: 30-40+ boss turns consistent
+
 ---
 
-### Version 2.0 - Complete Alternate Champions & Poison Team Strategy (2025-11-02)
-**ARCHIVED** - See `UNM_Clan_Boss_Team_Analysis_1-1_Archive_2025-11-07.md`
+## ⚠️ CRITICAL CORRECTION NOTICES
+
+### **v3.3 CORRECTIONS (2025-11-10): SPEED TUNE MISLABELING & BUFF MECHANICS**
+
+**PREVIOUS ERRORS:**
+- ❌ Entire document labeled as **"2:1 speed tune"** throughout
+- ❌ Claimed "2 champion turns per 1 boss turn" (incorrect ratio)
+- ❌ Stated "Brogni Block Debuffs 100% uptime" with 3-turn CD, 2-turn duration
+- ❌ Stated "Stag Knight Decrease DEF 100% uptime" with 3-turn CD, 2-turn duration
+- ❌ Did not explain buff/debuff timing mechanics with 3:2 tune
+
+**CORRECTED REALITY:**
+- ✅ **Actual speed tune: 3:2** (3 champion turns per 2 boss turns)
+- ✅ **Speed ratio math**: 263-280 SPD / 170 boss SPD = 1.547-1.647 ratio
+- ✅ **True 2:1 would require**: 340+ SPD (ratio ≥ 2.0) - not achievable with current gear
+- ✅ **Brogni Block Debuffs uptime**: 66.7% (2 turns on, 1 turn gap)
+- ✅ **Stag Knight Decrease DEF/ATK uptime**: 66.7% (2 turns on, 1 turn gap)
+- ✅ **Leonardo Unkillable uptime**: 75% with Godseeker extension (3 turns on, 1 turn gap)
+
+**WHY THIS MATTERS:**
+- **Buff mechanics**: With 3:2 tune, any skill with "3-turn CD, 2-turn duration" has gap turns
+- **Gap coverage**: Mithrala A3 cleanse CRITICAL to cover Brogni Block Debuffs gaps
+- **Turn calculations**: 50 boss turns = 75 champion turns (each champion gets 75 actions)
+- **Damage expectations**: Warmaster procs, HP Burn activations all scale with champion turns
+
+**IMPACT:**
+- **All "2:1" labels corrected to "3:2"** throughout both UNM guides
+- **Added comprehensive Buff/Debuff Duration section** explaining turn timing
+- **Updated damage calculations** with explicit 3:2 turn math notes
+- **Current team damage realistic**: ~29-30M per key (was ~36-55M in previous estimates)
 
 ---
 
-### Version 1.1 - Goal Update & Boss Stats Correction (2025-10-30)
-**ARCHIVED** - See `UNM_Clan_Boss_Team_Analysis_1-1_Archive_2025-11-07.md`
+### **v3.2 CORRECTIONS (2025-11-10): LEONARDO COUNTERATTACK & NINJA MECHANICS**
+
+**PREVIOUS ERRORS:**
+- ? Leonardo counterattack stated as **4 hits** (should be 4 total: 2 hits + 2 repeat)
+- ? Michelangelo join attack stated as **4 hits** (should be 2 hits - his A1)
+- ? Total counterattack damage: **8 hits per counter** (should be 6: Leo 4 + Mickey 2)
+- ? Boss Turn 1 damage: **40 counterattack hits** (should be 30 hits)
+- ? Ninja A1 called **"Hailburn"** and stated as **"3-hit"** (should be "Shatterbolt", single hit)
+- ? Ninja skills A1/A2/A3 names and mechanics ALL INCORRECT
+- ? Ninja passive stated as **"cooldown reset"** (does not exist - actual: Escalation ATK/C.DMG scaling)
+- ? Ninja Giant Slayer stated as **90% proc** (should be 30% - A1 is single hit)
+- ? Expected Leonardo team damage: **60-100M** (should be 50-85M)
+
+**CORRECTED REALITY:**
+- ? **Leonardo A1**: 2 hits (4 total on counterattack with repeat mechanic)
+- ? **Michelangelo join**: 2 hits (his A1)
+- ? **Total per counterattack**: 6 hits (Leo 4 + Mickey 2)
+- ? **Boss Turn 1 counterattacks**: 5 counters � 6 hits = **30 hits** (not 40)
+- ? **Boss Turn 1 HP Burn damage**: 30 � 2 � 60k = **3.6M** (not 4.8M)
+- ? **Ninja A1**: Shatterbolt (single hit, 45% Dec DEF, TM fill vs Boss)
+- ? **Ninja A2**: Hailburn (3 random hits, 75% HP Burn, **HP Burn activation vs Boss**)
+- ? **Ninja A3**: Cyan Slash (AOE Freeze, vs Boss: ignore 50% DEF + reduce A2 CD)
+- ? **Ninja Passive**: Escalation (ATK/C.DMG scaling vs bosses, NO cooldown reset)
+- ? **Ninja Giant Slayer**: 30% proc per A1 (single hit, not multi-hit)
+- ? **Expected Leonardo team damage**: **50-85M** (15-20% reduction from v3.1)
+
+**IMPACT:**
+- **Damage projections reduced by ~15-20%** (all counterattack calculations corrected)
+- **Ninja mechanics completely reworked** (skill names, hit counts, proc rates all fixed)
+- **Leonardo team is still ENDGAME** (50-85M is 1-2 key UNM with optimized builds)
 
 ---
 
-### Version 1.0 - Initial Setup (2025-10-27)
-**ARCHIVED** - See `UNM_Clan_Boss_Team_Analysis_1-1_Archive_2025-11-07.md`
+### **v3.1 CORRECTIONS (2025-11-08): RECTOR DRATH KIT**
+
+**PREVIOUS ERROR:**
+- ? This document originally stated **Rector Drath provides Block Debuffs via A3**
+- ? Claimed "100% Block Debuffs uptime from Rector A3"
+- ? Recommended Rector for "Block Debuffs reliability"
+
+**CORRECTED REALITY:**
+- ? **Rector A3 = Revive + 60% TM fill + Perfect Veil (3 turns)** - NOT Block Debuffs!
+- ? **ONLY guaranteed Block Debuffs source: Brogni A3** (3-turn CD, 2-turn duration = 100% uptime)
+- ? **Feral 4pc on Brogni/Ninja:** 50% chance (unreliable backup only)
+- ? **Mithrala A3 cleanse is CRITICAL** - only recovery if Decrease SPD lands
+
+**IMPACT:**
+- **Team Option 1 risk level:** Originally stated as "SAFE" ? Actually "MEDIUM-HIGH" (relies on Brogni A3 cycling)
+- **Rector vs Godseeker comparison:** BOTH teams have SAME Block Debuffs coverage (Brogni A3 only)
+- **Speed tune stability:** More fragile than originally claimed (Mithrala cleanse mandatory if Brogni A3 fails)
+
+**For detailed champion kit verification, see:** `Output/UNM_Champion_Skills_Review.md`
 
 ---
 
