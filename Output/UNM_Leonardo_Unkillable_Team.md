@@ -1,186 +1,419 @@
-# UNM Clan Boss - Leonardo Unkillable Team Guide
+# UNM Clan Boss - Leonardo Unkillable Team
 
 **Date**: 2025-11-16  
-**Version**: 3.0 - Streamlined & Updated  
-**Status**: FUTURE BUILD - Requires Leonardo Books + Champion Regearing  
-**Current Performance**: N/A (not yet built)  
-**Target**: 70-95M (manual), 50-70M (auto with Mithrala variant)
+**Version**: 3.0 - Streamlined Structure  
+**Status**: FUTURE BUILD (requires 7 Legendary books on Leonardo)  
+**Performance Target**: 70-95M (manual), 50-70M (auto)  
+**Speed Tune**: 3:2 (263-280 SPD)
 
-**Related Guides:**
-- **UNM Mechanics Reference:** `UNM_Clan_Boss_Team_Analysis.md` (boss mechanics, speed tuning, stat requirements)
-- **Current Team:** `UNM CB Guide update.md` (active Tanky Killable 3:2 team)
+**Related Documentation:**
+- **Reference Guide:** `UNM_Clan_Boss_Team_Analysis.md` (mechanics, speed tuning, troubleshooting)
+- **Current Team:** `UNM CB Guide update.md` (Tanky Killable 3:2)
 
 ---
 
 ## Table of Contents
 
-1. [Team Concept & Philosophy](#1-team-concept--philosophy)
-2. [Core vs Current Team Comparison](#2-core-vs-current-team-comparison)
-3. [Leonardo Team Roster](#3-leonardo-team-roster)
-4. [Speed Tune Requirements](#4-speed-tune-requirements)
-5. [The 4-Turn Rotation](#5-the-4-turn-rotation)
-6. [Champion Build Requirements](#6-champion-build-requirements)
-7. [Manual Rotation Guide](#7-manual-rotation-guide)
-8. [Auto Mode: Mithrala Variant](#8-auto-mode-mithrala-variant)
-9. [Build Timeline & Resource Requirements](#9-build-timeline--resource-requirements)
-10. [Troubleshooting](#10-troubleshooting)
+- [UNM Clan Boss - Leonardo Unkillable Team](#unm-clan-boss---leonardo-unkillable-team)
+  - [Table of Contents](#table-of-contents)
+  - [1. Team Overview](#1-team-overview)
+    - [1.1 Team Philosophy \& Comparison](#11-team-philosophy--comparison)
+    - [1.2 Speed Tune \& Roster](#12-speed-tune--roster)
+    - [1.3 Core Mechanics \& Rotation](#13-core-mechanics--rotation)
+    - [1.4 Damage Projections](#14-damage-projections)
+  - [2. Champion Builds (Verified Stats)](#2-champion-builds-verified-stats)
+  - [3. Usage Guide](#3-usage-guide)
+    - [3.1 Manual Rotation (4-Turn Cycle)](#31-manual-rotation-4-turn-cycle)
+    - [3.2 Auto Mode Setup](#32-auto-mode-setup)
+    - [3.3 Critical Timing Notes](#33-critical-timing-notes)
+  - [4. Alternate Champions \& Variants](#4-alternate-champions--variants)
+    - [4.1 Auto-Safe Variant (Mithrala)](#41-auto-safe-variant-mithrala)
+    - [4.2 Affinity Replacements](#42-affinity-replacements)
+  - [5. Build Timeline \& Resource Requirements](#5-build-timeline--resource-requirements)
+  - [6. Quick Reference Tables](#6-quick-reference-tables)
+    - [6.1 Team Snapshot](#61-team-snapshot)
+    - [6.2 Speed Tune Quick Check](#62-speed-tune-quick-check)
+    - [6.3 Build Checklist](#63-build-checklist)
+    - [6.4 Troubleshooting Quick Reference](#64-troubleshooting-quick-reference)
+    - [Godseeker Aniri (CRITICAL - Buff Extension)](#godseeker-aniri-critical---buff-extension)
+    - [Michelangelo (HIGH - Join Attack DPS)](#michelangelo-high---join-attack-dps)
+    - [Underpriest Brogni (CRITICAL - Gap Coverage)](#underpriest-brogni-critical---gap-coverage)
+    - [Geomancer (HIGH - Damage Multiplier + Stun Target)](#geomancer-high---damage-multiplier--stun-target)
+  - [7. Manual Rotation Guide](#7-manual-rotation-guide)
+    - [Turn-by-Turn Execution (First 4 Boss Turns)](#turn-by-turn-execution-first-4-boss-turns)
+    - [Critical Manual Timing](#critical-manual-timing)
+  - [8. Auto Mode: Mithrala Variant](#8-auto-mode-mithrala-variant)
+    - [Why Swap Godseeker for Mithrala?](#why-swap-godseeker-for-mithrala)
+    - [Auto Team Composition](#auto-team-composition)
+  - [9. Build Timeline \& Resource Requirements](#9-build-timeline--resource-requirements)
+    - [Phase 1: Book Farming (Months 1-3)](#phase-1-book-farming-months-1-3)
+    - [Phase 2: Regearing (Weeks 1-2)](#phase-2-regearing-weeks-1-2)
+    - [Phase 3: Mastery Completion (Weeks 1-2)](#phase-3-mastery-completion-weeks-1-2)
+    - [Total Timeline: 3-4 Months](#total-timeline-3-4-months)
+  - [10. Troubleshooting](#10-troubleshooting)
+    - [Problem 1: Leonardo Unkillable Only 2 Turns](#problem-1-leonardo-unkillable-only-2-turns)
+    - [Problem 2: Speed Tune Breaking](#problem-2-speed-tune-breaking)
+    - [Problem 3: Low Damage (30-40M instead of 70M+)](#problem-3-low-damage-30-40m-instead-of-70m)
+    - [Problem 4: Team Dies During Gap Turn](#problem-4-team-dies-during-gap-turn)
+    - [Problem 5: Run Ends at Turn 50](#problem-5-run-ends-at-turn-50)
+  - [Quick Reference: Build Checklist](#quick-reference-build-checklist)
 
 ---
 
-## 1. Team Concept & Philosophy
+## 1. Team Overview
 
-**Core Mechanic:** Leonardo's A2 provides Unkillable (2 turns) + Counterattack + Ally Protection + Inc DEF. Godseeker Aniri extends all buffs +1 turn (2→3 turns), creating 75% Unkillable uptime in a 4-turn cycle.
+### 1.1 Team Philosophy & Comparison
 
-**Why Leonardo > Tanky Killable:**
-- **Damage Ceiling:** 70-95M vs 40-55M (75% increase)
-- **Counterattack Multiplier:** Boss attacks trigger 4-hit Leonardo A1 + Michelangelo joins (6-8 hits per boss turn)
-- **Turn 50 Limit:** Unkillable ignores damage until turn 50 (Gathering Fury pierces after)
-- **Glass Cannon Builds:** Unkillable protection allows 100% C.RATE, 250%+ C.DMG focus (no survivability needed)
+**Core Mechanic:** Leonardo A2 (Unkillable 2 turns + Counterattack) extended by Godseeker A2 (+1 turn) = 3-turn Unkillable (75% uptime in 4-turn cycle).
 
-**Why NOT Leonardo (Current State):**
-- ❌ Requires 7 Legendary books on Leonardo (A2 5→3 turn CD is MANDATORY)
-- ❌ Requires full Epic books on Godseeker Aniri (A2 4→3 turn CD is MANDATORY)
-- ❌ Requires Michelangelo regear (+25 SPD from 245→270)
-- ❌ Requires Geomancer regear (+39 SPD from 224→263)
-- ❌ Manual-dependent (Godseeker AI terrible, needs Mithrala swap for auto)
-- ❌ Turn 50 hard limit (Tanky Killable can survive 60-80 turns with proper sustain)
+**vs Tanky Killable Team:**
 
-**Verdict:** Build AFTER securing 1-key reliability with Tanky Killable team (72M+ goal achieved first).
+| Aspect | Tanky Killable | Leonardo Unkillable |
+|--------|----------------|---------------------|
+| **Damage** | 40-55M (68M peak) | 70-95M manual, 50-70M auto |
+| **Books** | Brogni only | 3 Legendaries (Leo, Mickey, Geo) |
+| **Turn Limit** | 60-80 turns | 50 turns (hard cap) |
+| **Auto Viable** | ✅ 90% | ⚠️ 60% (needs Mithrala) |
+| **Affinity** | Safe all bosses | ⚠️ Weak on Force |
+| **Difficulty** | Medium | High |
+| **Investment** | Low | Very High (20+ Legendary books) |
 
----
+**When to Build:**
+1. ✅ Tanky Killable hitting 72M+ (1-key secured)
+2. ✅ Leonardo fully booked (7 books)
+3. ✅ Godseeker fully booked (Epic)
+4. ✅ Mickey & Geo regeared to 263-280 SPD
 
-## 2. Core vs Current Team Comparison
+**Why Leonardo > Tanky:**
+- Counterattack: 4-hit Leonardo A1 + Mickey joins (6-8 hits per boss turn)
+- Glass cannon builds: Unkillable allows 100% C.RATE, 250%+ C.DMG focus
+- Damage ceiling: 75% increase vs Tanky Killable
 
-| Aspect | Tanky Killable (Current) | Leonardo Unkillable (Future) |
-|--------|--------------------------|------------------------------|
-| **Damage Range** | 40-55M baseline, 68M peak | 70-95M manual, 50-70M auto |
-| **Speed Tune** | 3:2 (267-277 SPD) | 3:2 (263-280 SPD) |
-| **Champions** | Aniri, Brogni, Stag, Mithrala, Geomancer | Leonardo, Godseeker, Mickey, Brogni, Geo |
-| **Books Required** | Partial (Brogni only) | Full books on 3 Legendaries |
-| **Turn Limit** | 60-80 turns (sustainable) | 50 turns (Unkillable expires) |
-| **Auto Viable** | ✅ 90% success | ⚠️ 60% (needs Mithrala swap) |
-| **Affinity Safe** | ✅ All Void/Spirit/Magic | ⚠️ Weak on Force boss (Leonardo Void) |
-| **Build Difficulty** | Medium | High |
-| **Resource Investment** | Low | Very High |
-
-**When to Transition:**
-1. ✅ Tanky Killable hitting 72M+ consistently (1-key secured)
-2. ✅ Leonardo fully booked (7 Legendary books acquired)
-3. ✅ Godseeker fully booked (Epic books)
-4. ✅ Michelangelo & Geomancer regeared to 263-280 SPD
-5. ✅ All champions have Warmaster/Giant Slayer completed
+**Why NOT Leonardo (current):**
+- ❌ 7 Legendary books on Leonardo (A2 5→3 CD MANDATORY)
+- ❌ Mickey +25 SPD, Geo +39 SPD regear needed
+- ❌ Manual-dependent (Godseeker AI terrible)
+- ❌ Turn 50 hard limit (Tanky can survive 60-80 turns)
 
 ---
 
-## 3. Leonardo Team Roster
+### 1.2 Speed Tune & Roster
 
-### Manual Team (Max Damage)
+**Speed Tune:** 3:2 (263-280 SPD, NO speed lead)  
+**Boss SPD:** 170 (post-turn 1)  
+**Reference:** See `UNM_Clan_Boss_Team_Analysis.md` Section 3 for 3:2 mechanics
 
-| Champion | SPD | Role | Why Essential |
-|----------|-----|------|---------------|
-| **Leonardo** | 267 | Unkillable/Counterattack/Tank | A2: 3-turn Unkillable (with Godseeker) + 4-hit counterattacks |
-| **Godseeker Aniri** | 277 | Buff Extension | A2: Extends Leonardo 2→3 turns (75% uptime) |
-| **Michelangelo** | 270 | Join Attack DPS | Passive: Joins Leonardo attacks (doubles damage) |
-| **Underpriest Brogni** | 274 | Block Debuffs/Shield | A3: Covers gap turn (4th turn) + shields |
-| **Geomancer** | 263 | Weaken/HP Burn/Stun Target | A3: 1.25× damage amp + reflect damage |
+**Manual Team (Max Damage):**
 
-**Expected Damage:** 70-95M (manual, optimal rotation)
+| Champion | SPD | Role | Current | Needs |
+|----------|-----|------|---------|-------|
+| **Godseeker Aniri** | 277 | Buff Extension | ✅ READY | - |
+| **Underpriest Brogni** | 274 | Block Debuffs/Shield | ✅ READY | - |
+| **Michelangelo** | 270 | Join Attack DPS | 245 SPD | +25 SPD |
+| **Leonardo** | 267 | Unkillable/Tank | Not built | Full build |
+| **Geomancer** | 263 | Weaken/HP Burn/Stun | 224 SPD | +39 SPD |
 
----
-
-### Auto Team (Reliability Focus)
-
-| Champion | SPD | Role | Why Swap |
-|----------|-----|------|----------|
-| Leonardo | 267 | Unkillable/Counterattack/Tank | Same |
-| **Mithrala** | 277 | Cleanse/Shield | Godseeker AI terrible, Mithrala auto-safe |
-| Michelangelo | 270 | Join Attack DPS | Same |
-| Brogni | 274 | Block Debuffs/Shield | Same |
-| Geomancer | 263 | Weaken/HP Burn/Stun Target | Same |
-
-**Expected Damage:** 50-70M (auto, 90% success rate)
-
-**Trade-off:** Lose Godseeker buff extension (75%→50% Unkillable uptime), gain cleanse safety + auto reliability.
+**Auto Team (Reliability):**
+- Replace **Godseeker** → **Mithrala** (SPD 277)
+- Keep all others same
+- Trade-off: -20-25M damage, +30% success rate
 
 ---
 
-## 4. Speed Tune Requirements
+### 1.3 Core Mechanics & Rotation
 
-**Speed Tune Type:** 3:2 (263-280 SPD, NO speed lead)
+**4-Turn Cycle:**
 
-**⚠️ CRITICAL:** This team requires **TRUE SPEED** 263-280 (without aura). Do NOT use speed lead champions (High Khatun, Arbiter, etc.) - wastes damage slot.
+| Boss Turns | Leonardo Status | Coverage | Hits per Turn |
+|------------|----------------|----------|---------------|
+| **1-3** | ✅ Unkillable (3 turns w/ Godseeker) | Counterattack active | 6-8 hits |
+| **4** | ❌ Gap turn | Brogni Block Debuffs | Normal rotation |
 
-### Speed Tune Table
+**Key Skills:**
+- **Leonardo A2:** Unkillable (2 turns) + Counterattack + Ally Protection + Inc DEF (5→3 CD w/ books)
+- **Godseeker A2:** Extends ALL buffs +1 turn (4→3 CD w/ books)
+- **Brogni A3:** Block Debuffs (2 turns) + Shield 30% MAX HP (5→3 CD w/ books)
+- **Geomancer A3:** Weaken 25% + HP Burn (5→3 CD w/ books)
+- **Mickey Passive:** Joins all Turtle attacks (Leonardo/Donatello/Mickey/Raphael)
 
-| Champion | Target SPD | Range | Turn Order | Current Status |
-|----------|------------|-------|------------|----------------|
-| **Godseeker Aniri** | 277 | 274-280 | 1st (fastest) | ✅ READY (currently 277) |
-| **Underpriest Brogni** | 274 | 270-277 | 2nd | ✅ READY (currently 274) |
-| **Michelangelo** | 270 | 267-274 | 3rd | ❌ NEEDS +25 SPD (currently 245) |
-| **Leonardo** | 267 | 264-270 | 4th | ❌ NEEDS FULL BUILD |
-| **Geomancer** | 263 | 263-266 | 5th (slowest - stun target) | ❌ NEEDS +39 SPD (currently 224) |
-
-**Why Geomancer Slowest:** Stun target every 3 turns. Geomancer has high DEF + HP Burn reflect passive, best suited for absorbing stuns.
-
-**Reference:** See `UNM_Clan_Boss_Team_Analysis.md` Section 3 for detailed 3:2 speed tune mechanics.
-
----
-
-## 5. The 4-Turn Rotation
-
-**Core Cycle:** Leonardo Unkillable active for 3 turns (with Godseeker extension), gap turn covered by Brogni Block Debuffs.
-
-### Rotation Overview
-
-**Boss Turns 1-3:** Leonardo Unkillable ACTIVE (3 turns with Godseeker extension)
-- Leonardo counterattacks: 4 hits per boss turn (A1 2-hit, repeats on counterattack)
-- Michelangelo joins: ~2-4 hits per boss turn
-- Total: ~6-8 hits per boss turn × 3 turns = ~18-24 hits
-
-**Boss Turn 4:** Leonardo Unkillable OFF (gap turn)
-- Brogni Block Debuffs covers this turn
-- Leonardo A2 refreshes (3-turn CD)
-- Godseeker A2 ready to extend next cycle
-
-**Cycle Repeats:** 50 boss turns = 12.5 cycles
+**Rotation Pattern:**
+1. **Round 1:** Leonardo A2 → Brogni A3 → Geo A3 → Others A1
+2. **Round 2:** Godseeker A2 (extend!) → All A1
+3. **Rounds 3-6:** All A1 (Leonardo Unkillable active)
+4. **Round 7:** Leonardo A2 (refresh) → Brogni A3 (gap coverage) → All A1
+5. **Round 8:** Godseeker A2 (extend!) → All A1
+6. **Repeat** for 50 turns (12.5 cycles)
 
 ---
 
-### Critical Timing (4-Turn Pattern)
+### 1.4 Damage Projections
 
-**Turn 1 (Rounds 1-2):**
-- **Round 1:** Leonardo A2 (Unkillable!) → Brogni A3 (Block Debuffs) → Geo A3 (Weaken/HP Burn) → Others A1
-- **Round 2:** Godseeker A2 (extend Unkillable 2→3 turns!) → All others A1
+**Manual Team (Godseeker):**
+- Baseline: 70-80M (neutral affinity, optimal rotation)
+- Peak: 85-95M (Void boss, perfect RNG)
+- Low: 60-70M (weak affinity or rotation errors)
 
-**Turns 2-3 (Rounds 3-6):**
-- All A1 spam (Leonardo Unkillable still active)
-- Counterattacks continue
-
-**Turn 4 (Rounds 7-8): GAP TURN**
-- **Round 7:** Leonardo A2 (refresh!) → Brogni A3 (Block Debuffs covers gap) → All others A1
-- **Round 8:** Godseeker A2 (extend!) → All others A1
-
-**Repeat for ~12-13 cycles**
+**Auto Team (Mithrala):**
+- Baseline: 50-60M (Leonardo 50% Unkillable uptime)
+- Peak: 65-70M (Void boss, good RNG)
+- Success Rate: 90-95% (cleanse safety)
 
 ---
 
-### Buff Duration Breakdown
+## 2. Champion Builds (Verified Stats)
 
-**With Godseeker Extension:**
-- Leonardo Unkillable: 2 turns → **3 turns** (75% uptime)
-- Brogni Block Debuffs: 2 turns (66.7% uptime on its own)
-- **Combined:** 95%+ debuff protection (gap turn overlap)
+| Champion | SPD | HP | DEF | ATK | C.RATE | C.DMG | ACC | Books | Mastery | Priority |
+|----------|-----|----|----|-----|--------|-------|-----|-------|---------|----------|
+| **Leonardo** | 267 | 50k | **3,500** | - | 100% | 200% | 100 | 7 Leg (A2 5→3) | Warmaster | 5/5 |
+| **Godseeker** | 277 | 60k | **4,500** | - | 70% | - | 150 | Full Epic (A2 4→3) | Warmaster | 5/5 |
+| **Michelangelo** | 270 | - | - | **4,000** | 100% | 200% | 200 | Full Leg | Giant Slayer | 5/5 |
+| **Brogni** | 274 | **60k** | 3,500 | - | - | - | 250 | Full Leg (A3 5→3) | Warmaster | 5/5 |
+| **Geomancer** | 263 | 40k | 2,500 | - | 100% | - | **250** | Full Leg (A3 5→3) | Giant Slayer | 5/5 |
 
-**Without Godseeker (Mithrala variant):**
-- Leonardo Unkillable: 2 turns (50% uptime)
-- Brogni Block Debuffs: 2 turns (66.7% uptime)
-- **Trade-off:** Lower damage, but cleanse recovers from Decrease Speed if debuffs land
+**Critical Stats (Bold):**
+- **Leonardo:** DEF 3,500+ (damage scaling + tank role)
+- **Godseeker:** DEF 4,500+ (takes Ally Protection damage)
+- **Michelangelo:** ATK 4,000+ (join attack damage)
+- **Brogni:** HP 60k+ (shield scaling 30% MAX HP)
+- **Geomancer:** ACC 250+ (Weaken MUST land)
+
+**Key Skills:**
+- **Leonardo A1:** 2-hit DEF scaling, repeats on counter (4 total hits)
+- **Leonardo A2:** Unkillable 2 turns + Counterattack + Ally Prot + Inc DEF (5→3 CD)
+- **Godseeker A2:** Extends ALL buffs +1 turn, heals 15% MAX HP (4→3 CD)
+- **Mickey Passive:** Joins Turtle attacks + shield 300% ATK when hit
+- **Brogni A3:** Block Debuffs 2 turns + Shield 30% MAX HP (5→3 CD)
+- **Geo A3:** Weaken 25% + HP Burn 3 turns (5→3 CD)
+- **Geo Passive:** Reflects 30% damage as HP Burn, -15% boss damage
+
+**Gear Priority:**
+- **All:** Speed boots (6★), Speed set (4pc)
+- **Leonardo:** Speed + Immortal/DEF
+- **Godseeker:** Speed + Immortal
+- **Mickey:** Speed + Cruel/Savage (Ignore DEF)
+- **Brogni:** Speed + Immortal
+- **Geo:** Speed + Perception/Accuracy
+
+**Current Status:**
+- ✅ Godseeker: READY (SPD 277, fully booked)
+- ✅ Brogni: READY (SPD 274, fully booked)
+- ❌ Leonardo: NOT BUILT (needs 7 Legendary books, 267 SPD, 3,500 DEF)
+- ❌ Mickey: NEEDS +25 SPD (currently 245 SPD)
+- ❌ Geo: NEEDS +39 SPD (currently 224 SPD)
 
 ---
 
-## 6. Champion Build Requirements
+## 3. Usage Guide
 
-### Leonardo (CRITICAL - Core Mechanic)
+### 3.1 Manual Rotation (4-Turn Cycle)
+
+**Critical Manual Timing:**
+
+| Round | Leonardo | Godseeker | Brogni | Geo | Others |
+|-------|----------|-----------|--------|-----|--------|
+| **1** | **A2** (Unkillable!) | A1/A3 | **A3** (Block Debuffs) | **A3** (Weaken) | A1 |
+| **2** | A1 | **A2** (EXTEND!) | A1 | A1 | A1 |
+| **3-6** | A1 | A1 | A1 | A1 | A1 |
+| **7** | **A2** (Refresh) | A1 | **A3** (Gap cover) | A1/A3 | A1 |
+| **8** | A1 | **A2** (EXTEND!) | A1 | A1 | A1 |
+
+**DO:**
+- ✅ Godseeker A2 on Rounds 2, 8, 14, 20... (immediately after Leonardo A2)
+- ✅ Leonardo A2 on Rounds 1, 7, 13, 19... (every 4 rounds)
+- ✅ Brogni A3 on Rounds 1, 7, 13, 19... (gap turn coverage)
+- ✅ Geo A3 on Round 1, then every 3 turns (maintain Weaken uptime)
+
+**DON'T:**
+- ❌ Use Godseeker A2 before Leonardo A2 (wastes extension)
+- ❌ Miss Brogni A3 on gap turn (Decrease Speed breaks tune)
+- ❌ Let Geomancer Weaken drop (25% damage loss)
+
+**Damage per Turn:** ~2.5-3M (counterattacks + HP Burn + Warmaster/GS procs)  
+**Total 50 Turns:** ~125-150M potential → Realistic 70-95M (RNG, affinity, rotation errors)
+
+---
+
+### 3.2 Auto Mode Setup
+
+**Problem:** Godseeker AI uses A2 at wrong times (50% Unkillable uptime instead of 75%)
+
+**Solution:** Replace Godseeker → Mithrala (SPD 277)
+
+**Auto Team Changes:**
+
+| Swap | From | To | Impact |
+|------|------|-----|--------|
+| Buff Extension | Godseeker | Mithrala | -25% Unkillable uptime (75%→50%) |
+| Survivability | Revive | Cleanse + Shield | +30% success rate (recovers from Dec SPD) |
+| Damage | 70-95M | 50-70M | -20-25M damage |
+
+**Auto Performance:**
+- Expected: 50-70M damage
+- Success Rate: 90-95%
+- Turn Survival: 50 turns consistent
+
+---
+
+### 3.3 Critical Timing Notes
+
+**Buff Extension Timing:**
+- Godseeker A2 MUST be used Round 2, 8, 14, 20... (immediately after Leonardo A2)
+- If used wrong: Leonardo Unkillable only 2 turns (gap turn wipe)
+
+**Gap Turn Coverage:**
+- Boss Turn 4, 8, 12... = Leonardo Unkillable OFF
+- Brogni A3 Block Debuffs MUST cover these turns
+- If missed: Decrease Speed lands → speed tune breaks → wipe
+
+**Weaken Uptime:**
+- Geomancer A3 every 3 turns (Rounds 1, 4, 7, 10...)
+- If missed: 25% damage loss (Weaken 1.25× multiplier)
+
+---
+
+## 4. Alternate Champions & Variants
+
+### 4.1 Auto-Safe Variant (Mithrala)
+
+**Team:** Leonardo + **Mithrala** + Michelangelo + Brogni + Geomancer
+
+**Why Mithrala:**
+- ✅ A3 Cleanse (recovers from Decrease Speed)
+- ✅ A3 Shield 30% MAX HP + Strengthen
+- ✅ AI uses skills correctly (auto-friendly)
+- ❌ NO Buff Extension (Leonardo 2-turn Unkillable = 50% uptime)
+
+**Build:** SPD 277, DEF 4,000+, ACC 250+, HP 50k+
+
+**Performance:**
+- Damage: 50-70M (auto, 90% success)
+- vs Manual: -20-25M damage, +30% reliability
+
+---
+
+### 4.2 Affinity Replacements
+
+**Force Boss (Leonardo Void = Weak):**
+- **Problem:** Leonardo -30% damage (Void weak to Force)
+- **Solution:** Wait for Void/Spirit/Magic rotation OR
+- **Replace:** Roshcard the Tower (Force, Block Damage 3 turns) if owned
+  - SPD: 264-270 (replaces Leonardo as Unkillable provider)
+
+**Magic Boss (Brogni Force = Weak):**
+- **Problem:** Brogni shield reduced (Force weak to Magic)
+- **Solution:** Increase Brogni HP to 70k+ (compensate) OR
+- **Replace:** Warlord (Void, Block Damage 3 turns) if owned
+
+**Affinity Performance:**
+
+| Boss Affinity | Expected Damage | Notes |
+|---------------|-----------------|-------|
+| **Void** | 85-95M | Best (all neutral) |
+| **Spirit** | 80-90M | Leonardo strong (+30%) |
+| **Force** | 50-65M | Leonardo weak (-30%) ⚠️ |
+| **Magic** | 70-85M | Brogni weak (shield -20%) |
+
+---
+
+## 5. Build Timeline & Resource Requirements
+
+**Phase 1: Book Farming (Months 1-3)**
+
+| Champion | Books Needed | Priority | Timeline |
+|----------|--------------|----------|----------|
+| **Leonardo** | 7 Legendary (A2 5→3) | 5/5 CRITICAL | 2-3 months |
+| **Godseeker** | Full Epic | ✅ DONE | - |
+| **Michelangelo** | Full Legendary | 4/5 Recommended | 1-2 months |
+| **Geomancer** | Full Legendary (A3 5→3) | 4/5 Recommended | 1-2 months |
+
+**Phase 2: Regearing (Weeks 1-2)**
+
+| Champion | Current SPD | Target SPD | Change Needed |
+|----------|-------------|------------|---------------|
+| Michelangelo | 245 | 270 | +25 SPD (Speed boots + set) |
+| Geomancer | 224 | 263 | +39 SPD (Speed boots + set + subs) |
+| Leonardo | 0 | 267 | Full build (Speed + DEF) |
+
+**Phase 3: Masteries (Weeks 1-2)**
+
+- Leonardo: Warmaster (DEF scaling)
+- Michelangelo: Giant Slayer (A1 2-hit)
+- Geomancer: Giant Slayer (A1 2-hit)
+
+**Total Timeline:** 3-4 months  
+**Resource Cost:**
+- Books: 20-22 Legendary total
+- Energy: 5,000-10,000 (gear + masteries)
+- Silver: 50-100M (gear upgrades)
+
+**Milestones:**
+- **Month 1-2:** Farm Leonardo books (highest priority)
+- **Month 2-3:** Farm Mickey + Geo books
+- **Month 3:** Regear all champions to 263-280 SPD
+- **Month 4:** Mastery completion + testing
+
+---
+
+## 6. Quick Reference Tables
+
+### 6.1 Team Snapshot
+
+| Metric | Manual (Godseeker) | Auto (Mithrala) |
+|--------|-------------------|-----------------|
+| **Damage** | 70-95M | 50-70M |
+| **Unkillable Uptime** | 75% (3/4 turns) | 50% (2/4 turns) |
+| **Success Rate** | 60% (AI issues) | 90-95% |
+| **Turn Limit** | 50 (hard cap) | 50 (hard cap) |
+| **Affinity Safe** | Void/Spirit/Magic | All (cleanse safety) |
+
+---
+
+### 6.2 Speed Tune Quick Check
+
+**All Champions: 263-280 SPD (NO speed lead)**
+
+| Champion | Target | Status | Needs |
+|----------|--------|--------|-------|
+| Godseeker | 277 | ✅ READY | - |
+| Brogni | 274 | ✅ READY | - |
+| Mickey | 270 | ❌ 245 SPD | +25 SPD |
+| Leonardo | 267 | ❌ Not built | Full build |
+| Geo | 263 | ❌ 224 SPD | +39 SPD |
+
+**Turn Order:** Godseeker (fastest) → Brogni → Mickey → Leonardo → Geo (slowest, stun target)
+
+---
+
+### 6.3 Build Checklist
+
+**BEFORE STARTING:**
+- [ ] Tanky Killable hitting 72M+ (1-key secured)
+- [ ] Leonardo: 7 Legendary books acquired
+- [ ] Leonardo: 267 SPD, 3,500 DEF, 100% C.RATE, Warmaster
+- [ ] Godseeker: Fully booked ✅ (already complete)
+- [ ] Michelangelo: 270 SPD (+25 from current), 100% C.RATE, Giant Slayer
+- [ ] Geomancer: 263 SPD (+39 from current), 250 ACC, 100% C.RATE, Giant Slayer
+- [ ] Brogni: Fully booked ✅ (already complete)
+- [ ] 3-5 test runs completed (manual rotation verified)
+- [ ] Mithrala variant tested (if auto needed)
+
+---
+
+### 6.4 Troubleshooting Quick Reference
+
+| Problem | Symptoms | Fix |
+|---------|----------|-----|
+| **Unkillable Only 2 Turns** | Leonardo shows 2 turns vs 3 | Godseeker A2 Round 2/8/14 (after Leo A2) |
+| **Speed Tune Breaking** | Boss laps team after ~10 turns | Verify 263-280 SPD, remove speed leads |
+| **Low Damage (30-40M)** | Half expected damage | Geo ACC 250+, 100% C.RATE all DPS, check affinity |
+| **Team Dies Gap Turn** | Wipe on Turn 4/8/12 | Brogni A3 on gap turns, Leo DEF 3,500+ |
+| **Run Ends Turn 50** | Sudden wipe at turn 50 | EXPECTED (Gathering Fury), accept limit |
+
+---
+
+**Verdict:** Build Leonardo team AFTER Tanky Killable hits 72M+ (1-key secured). Requires 3-4 months book farming + regearing. Manual-dependent for max damage (70-95M), auto variant (Mithrala) provides 50-70M reliable damage.
+
+**END OF GUIDE - Version 3.0**
 
 **Base Stats:** HP 16,845 / DEF 1,619 / SPD 101  
 **Skills:** A1 (2-hit DEF scaling, repeats on counter = 4 hits), A2 (Unkillable 2 turns + Counterattack + Ally Protection + Inc DEF, 5→3 turn CD with books)
