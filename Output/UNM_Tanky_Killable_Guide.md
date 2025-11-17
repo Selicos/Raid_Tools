@@ -23,12 +23,10 @@
       - [**Option B: Aniri → Rector Drath**](#option-b-aniri--rector-drath)
       - [**Option C: Mithrala → Bad-el-Kazar**](#option-c-mithrala--bad-el-kazar)
     - [2.2 Specialist Options (Multi-Champion Swaps)](#22-specialist-options-multi-champion-swaps)
-      - [**Mausoleum Mage**](#mausoleum-mage)
       - [**Skullcrusher**](#skullcrusher)
       - [**Jareg**](#jareg)
     - [2.3 Mythic Considerations](#23-mythic-considerations)
       - [**Embrys the Anomaly (Mythic)**](#embrys-the-anomaly-mythic)
-      - [**Tagoar (Ogryn Legendary)**](#tagoar-ogryn-legendary)
   - [3. Alternate Team Compositions](#3-alternate-team-compositions)
     - [3.1 Team A: Ninja Replacement (NOT RECOMMENDED)](#31-team-a-ninja-replacement-not-recommended)
     - [3.2 Team B: Rector + Dec ATK Focus](#32-team-b-rector--dec-atk-focus)
@@ -46,7 +44,7 @@
       - [**Underpriest Brogni (Defense/Support - No T6 Offense)**](#underpriest-brogni-defensesupport---no-t6-offense)
       - [**Stag Knight (Offense/Defense - Warmaster Build)**](#stag-knight-offensedefense---warmaster-build)
       - [**Mithrala (Offense/Support - Warmaster Build)**](#mithrala-offensesupport---warmaster-build)
-      - [**Geomancer (Offense/Support - Giant Slayer Build)**](#geomancer-offensesupport---giant-slayer-build)
+      - [**Geomancer (Offense/Support - Warmaster Build)**](#geomancer-offensesupport---warmaster-build)
     - [5.2. Masteries: Critical Notes](#52-masteries-critical-notes)
     - [5.3. Blessings Recommendations](#53-blessings-recommendations)
       - [**Priority 1: Geomancer - Brimstone (HIGHEST IMPACT)**](#priority-1-geomancer---brimstone-highest-impact)
@@ -281,19 +279,6 @@
 
 ### 2.2 Specialist Options (Multi-Champion Swaps)
 
-#### **Mausoleum Mage**
-
-| Role | Key Mechanics | Value for CB |
-|------|---------------|--------------|
-| **Block Debuffs** | A3 (3-turn CD, 2-turn duration) | Duplicates Brogni A3 |
-| **Inc SPD** | A2 (30%, 2 turns) | ❌ **BREAKS 3:2 SPEED TUNE** |
-| **Cleanse** | A3 (full cleanse) | Duplicates Mithrala A3 |
-| **Buff Extension** | Passive (+1 turn random) | Inferior to Aniri A2 (targeted) |
-
-**Verdict:** ❌ Not viable (Inc SPD breaks speed tune, all utility duplicated)
-
----
-
 #### **Skullcrusher**
 
 | Role | Key Mechanics | Value for CB |
@@ -349,22 +334,6 @@
 | **Form Cycling** | Every 3 turns | ⚠️ Unpredictable |
 
 **Verdict:** ❌ Not viable (speed tune conflict, insane gear requirements)
-
----
-
-#### **Tagoar (Ogryn Legendary)**
-
-| Role | Key Mechanics | Value for CB |
-|------|---------------|--------------|
-| **Shields** | A2 (all allies, 30% MAX HP) | Synergy with Brogni |
-| **Inc DEF** | A1 (60%, 1 ally, lowest HP) | Low uptime |
-| **Revive** | A3 (single ally, 50% HP) | Inferior to Aniri team revive |
-| **Passive** | Dec damage taken 15% | Modest mitigation |
-| **SPD** | Unknown | ⚠️ **Inc SPD may break tune** |
-
-**Concern:** If Tagoar has Inc SPD in kit (passive or blessing), breaks 3:2 tune
-
-**Verdict:** ⚠️ Needs full build + testing (not priority with current roster)
 
 ---
 
@@ -652,7 +621,12 @@
 
 ### 5.1. Masteries: Clan Boss Optimized
 
-> **IMPORTANT:** Each champion uses **2 of 3 mastery trees** (Offense/Defense/Support). You select **1 Tier 6 capstone** per champion. Warmaster/Giant Slayer **do NOT require crits** - they proc regardless of C.RATE.
+> **IMPORTANT:** Each champion uses **2 of 3 mastery trees** (Offense/Defense/Support). Each tier requires specific selections:
+> - **Tier 1:** 1 choice from 2 options (tree-specific)
+> - **Tiers 2-5:** Up to 3 choices from 3-4 available options per tier
+> - **Tier 6:** 1 capstone choice from 4 options (tree-specific)
+> 
+> Warmaster/Giant Slayer **do NOT require crits** - they proc regardless of C.RATE.
 
 ---
 
@@ -662,18 +636,18 @@
 **Build Focus:** Survivability, buff extension, resist stun
 
 **Defense Tree:**
-- **Tier 1:** Tough Skin (+75 DEF)
-- **Tier 2:** Blastproof (-5% AoE damage), Rejuvenation (+5% healing received)
-- **Tier 3:** Resurgent (50% remove debuff on heavy hit), Delay Death (stacking damage reduction)
-- **Tier 4:** Solidarity (+5 ally RES per buff placed)
-- **Tier 5:** Cycle of Revenge (50% +15% TM when ally crit)
-- **Tier 6:** **Unshakeable (+50 RES)** - prevents stun disruption
+- **Tier 1 (1 choice):** Tough Skin (+75 DEF) ✅ *[alt: Defiant (+10 RES)]*
+- **Tier 2 (2 choices):** Blastproof (-5% AoE damage) ✅, Rejuvenation (+5% healing/shield received) ✅ *[alt: Mighty Endurance (-10% dmg when CC'd), Improved Parry (-8% dmg from crits)]*
+- **Tier 3 (2 choices):** Resurgent (50% remove debuff on 25%+ HP loss) ✅, Delay Death (-0.75% dmg per hit, stacks to -6% per enemy) ✅ *[alts: Shadow Heal (6% heal when enemy heals), Bloodthirst (10% heal on kill), Wisdom of Battle (30% Block Debuffs after CC expires)]*
+- **Tier 4 (1 choice):** Solidarity (+5 ally RES per buff placed) ✅ *[alts: Harvest Despair (60% Leech when placing CC), Stubbornness (+10 RES per debuff, max +30)]*
+- **Tier 5 (1 choice):** Cycle of Revenge (50% +15% TM when ally crit) ✅ *[alts: Selfless Defender (-20% dmg to ally from first hit), Retribution (50% counter on 25%+ HP loss), Deterrence (20% counter when ally CC'd)]*
+- **Tier 6 (1 choice):** **Unshakeable (+50 RES)** ✅ - prevents stun disruption *[alts: Iron Skin (+200 DEF), Bulwark (-5% team dmg, self takes it), Fearsome Presence (+5% CC chance)]*
 
 **Support Tree:**
-- **Tier 1:** Steadfast (+810 HP)
-- **Tier 2:** Lay on Hands (+5% heal value cast)
-- **Tier 3:** Healing Savior (+10% heal/shield if target <40% HP)
-- **Tier 4:** Lasting Gifts (30% extend buffs +1 turn) - **KEY MASTERY**
+- **Tier 1 (1 choice):** Steadfast (+810 HP) ✅ *[alt: Pinpoint Accuracy (+10 ACC)]*
+- **Tier 2 (1 choice):** Lay on Hands (+5% heal value cast) ✅ *[alts: Shieldbearer (+5% shield value), Exalt in Death (10% heal on first kill), Charged Focus (+20 ACC when no CDs)]*
+- **Tier 3 (1 choice):** Healing Savior (+10% heal/shield if target <40% HP) ✅ *[alts: Rapid Response (30% +10% TM when buff expires - AVOID for speed tune), Swarm Smiter (+4 ACC per enemy), Arcane Celerity (30% +10% TM when debuff expires - AVOID)]*
+- **Tier 4 (1 choice):** Lasting Gifts (30% extend buffs +1 turn) ✅ - **KEY MASTERY** *[alts: Merciful Aid (+15% heal/shield on CC'd ally), Cycle of Magic (5% CD reduction per turn), Lore of Steel (+15% set bonuses), Evil Eye (TM reduction on A1)]*
 
 **Why No Warmaster?**
 - Aniri's role is pure support (heals, shields, buffs)
@@ -689,18 +663,18 @@
 **Build Focus:** Shield spam, ally protection, survivability
 
 **Defense Tree:**
-- **Tier 1:** Tough Skin (+75 DEF)
-- **Tier 2:** Blastproof (-5% AoE damage), Rejuvenation (+5% healing/shield received)
-- **Tier 3:** Resurgent (50% remove debuff), Delay Death (stacking reduction)
-- **Tier 4:** Solidarity (+5 ally RES per buff)
-- **Tier 5:** Cycle of Revenge (50% +15% TM on ally crit)
-- **Tier 6:** **Unshakeable (+50 RES)** - prevents stun disruption
+- **Tier 1 (1 choice):** Tough Skin (+75 DEF) ✅ *[alt: Defiant (+10 RES)]*
+- **Tier 2 (2 choices):** Blastproof (-5% AoE damage) ✅, Rejuvenation (+5% healing/shield received) ✅ *[alts: Mighty Endurance (-10% dmg when CC'd), Improved Parry (-8% dmg from crits)]*
+- **Tier 3 (2 choices):** Resurgent (50% remove debuff on 25%+ HP loss) ✅, Delay Death (-0.75% dmg per hit, stacks to -6% per enemy) ✅ *[alts: Shadow Heal (6% heal when enemy heals), Bloodthirst (10% heal on kill), Wisdom of Battle (30% Block Debuffs after CC)]*
+- **Tier 4 (1 choice):** Solidarity (+5 ally RES per buff placed) ✅ *[alts: Harvest Despair (60% Leech when placing CC), Stubbornness (+10 RES per debuff, max +30)]*
+- **Tier 5 (1 choice):** Cycle of Revenge (50% +15% TM when ally crit) ✅ *[alts: Selfless Defender (-20% dmg to ally from first hit), Retribution (50% counter on 25%+ HP loss), Deterrence (20% counter when ally CC'd)]*
+- **Tier 6 (1 choice):** **Unshakeable (+50 RES)** ✅ - prevents stun disruption *[alts: Iron Skin (+200 DEF), Bulwark (-5% team dmg, self takes it), Fearsome Presence (+5% CC chance)]*
 
 **Support Tree:**
-- **Tier 1:** Steadfast (+810 HP)
-- **Tier 2:** Shieldbearer (+5% shield value cast), Lay on Hands (+5% heal value)
-- **Tier 3:** Healing Savior (+10% heal/shield if target <40% HP)
-- **Tier 4:** Lore of Steel (+15% set bonuses - boosts Immortal/Stoneskin sets), Lasting Gifts (30% extend buffs)
+- **Tier 1 (1 choice):** Steadfast (+810 HP) ✅ *[alt: Pinpoint Accuracy (+10 ACC)]*
+- **Tier 2 (2 choices):** Shieldbearer (+5% shield value cast) ✅, Lay on Hands (+5% heal value) ✅ *[alts: Exalt in Death (10% heal on first kill), Charged Focus (+20 ACC when no CDs)]*
+- **Tier 3 (1 choice):** Healing Savior (+10% heal/shield if target <40% HP) ✅ *[alts: Rapid Response (30% +10% TM when buff expires - AVOID), Swarm Smiter (+4 ACC per enemy), Arcane Celerity (AVOID for speed tune)]*
+- **Tier 4 (2 choices):** Lore of Steel (+15% set bonuses - boosts Immortal/Stoneskin) ✅, Lasting Gifts (30% extend buffs) ✅ *[alts: Merciful Aid (+15% heal/shield on CC'd ally), Cycle of Magic (5% CD reduction), Evil Eye (TM reduction on A1)]*
 
 **Why No Warmaster?**
 - Brogni's A1 damage is minimal (~6-10k per hit)
@@ -716,22 +690,25 @@
 **Build Focus:** Debuff uptime, Warmaster damage, survivability
 
 **Offense Tree:**
-- **Tier 1:** Deadly Precision (+5% C.RATE)
-- **Tier 2:** Keen Strike (+10% C.DMG)
-- **Tier 3:** Single Out (+8% damage to targets <40% HP)
-- **Tier 4:** Bring It Down (+6% damage vs higher Max HP targets)
-- **Tier 5:** Methodical (+2% A1 damage per use, max +10%)
-- **Tier 6:** **Warmaster (60% proc, 75k damage)** - **PRIMARY DAMAGE SOURCE**
+- **Tier 1 (1 choice):** Deadly Precision (+5% C.RATE) ✅ *[alt: Blade Disciple (+75 ATK)]*
+- **Tier 2 (1 choice):** Keen Strike (+10% C.DMG) ✅ *[alts: Heart of Glory (+5% dmg at full HP), Shield Breaker (+25% dmg to shields), Grim Resolve (+5% dmg at ≤50% HP)]*
+- **Tier 3 (1 choice):** Single Out (+8% damage to targets <40% HP) ✅ *[alts: Life Drinker (5% heal when ≤50% HP), Whirlwind of Death (+6 SPD per kill - AVOID for speed tune), Ruthless Ambush (+8% dmg on first hit)]*
+- **Tier 4 (1 choice):** Bring It Down (+6% damage vs higher Max HP targets) ✅ *[alts: Wrath of the Slain (+5% dmg per dead ally), Cycle of Violence (30% CD reduction on 30%+ HP hit), Opportunist (+12% dmg to CC'd targets)]*
+- **Tier 5 (1 choice):** Methodical (+2% A1 damage per use, max +10%) ✅ *[alts: Kill Streak (+6% dmg per kill in Arena), Blood Shield (15% HP shield on kill), Stoked to Fury (+4% dmg per debuff on self)]*
+- **Tier 6 (1 choice):** **Warmaster (60% proc, 75k damage)** ✅ - **PRIMARY DAMAGE SOURCE** *[alts: Helmsmasher (50% ignore 25% DEF), Giant Slayer (30% per hit, 75k), Flawless Execution (+20% C.DMG)]*
 
 **Defense Tree:**
-- **Tier 1:** Tough Skin (+75 DEF)
-- **Tier 2:** Blastproof (-5% AoE damage)
-- **Tier 3:** Resurgent (50% remove debuff), Delay Death (stacking reduction)
-- **Tier 4:** (Optional filler if needed)
+- **Tier 1 (1 choice):** Tough Skin (+75 DEF) ✅ *[alt: Defiant (+10 RES)]*
+- **Tier 2 (1 choice):** Blastproof (-5% AoE damage) ✅ *[alts: Rejuvenation (+5% heal/shield received), Mighty Endurance (-10% dmg when CC'd), Improved Parry (-8% dmg from crits)]*
+- **Tier 3 (2 choices):** Resurgent (50% remove debuff on 25%+ HP loss) ✅, Delay Death (-0.75% dmg per hit, stacks) ✅ *[alts: Shadow Heal (6% heal when enemy heals), Bloodthirst (10% heal on kill), Wisdom of Battle (30% Block Debuffs after CC)]*
 
-**Support Alternative (if dropping Defense):**
-- **Tier 5 Support:** Master Hexer (30% extend debuffs) - extends Dec DEF 60%, Weaken 25%, Dec ATK 50%
-- **Tier 6 Support:** Eagle Eye (+50 ACC) - ensures debuff landing
+**Support Alternative (if dropping Defense for more debuff utility):**
+- **Tier 1:** Pinpoint Accuracy (+10 ACC) *[alt: Steadfast (+810 HP)]*
+- **Tier 2:** Charged Focus (+20 ACC when no CDs) *[alts: Lay on Hands, Shieldbearer, Exalt in Death]*
+- **Tier 3:** Swarm Smiter (+4 ACC per enemy) *[alts: Healing Savior, Rapid Response (AVOID), Arcane Celerity (AVOID)]*
+- **Tier 4:** Lore of Steel (+15% set bonuses) *[alts: Merciful Aid, Cycle of Magic, Lasting Gifts, Evil Eye]*
+- **Tier 5:** Master Hexer (30% extend debuffs) - extends Dec DEF 60%, Weaken 25%, Dec ATK 50% *[alts: Lasting Gifts, Spirit Haste (AVOID), Sniper (+5% debuff chance)]*
+- **Tier 6:** Eagle Eye (+50 ACC) - ensures debuff landing *[alts: Elixir of Life (+3k HP), Timely Intervention (+20% TM at ally <25% HP), Oppressor (+2.5% TM per debuff)]*
 
 **Damage Output:**
 - **Warmaster:** 60% × 75k × ~38 A1s = **1.71M damage** over 50 turns
@@ -747,19 +724,19 @@
 **Build Focus:** Warmaster damage, debuff extension, ACC boost
 
 **Offense Tree:**
-- **Tier 1:** Deadly Precision (+5% C.RATE)
-- **Tier 2:** Keen Strike (+10% C.DMG), Heart of Glory (+5% damage at full HP)
-- **Tier 3:** Single Out (+8% damage <40% HP)
-- **Tier 4:** Bring It Down (+6% damage vs higher Max HP)
-- **Tier 5:** Methodical (+2% A1 damage per use, max +10%)
-- **Tier 6:** **Warmaster (60% proc, 75k damage)** - **PRIMARY DAMAGE SOURCE**
+- **Tier 1 (1 choice):** Deadly Precision (+5% C.RATE) ✅ *[alt: Blade Disciple (+75 ATK)]*
+- **Tier 2 (2 choices):** Keen Strike (+10% C.DMG) ✅, Heart of Glory (+5% damage at full HP) ✅ *[alts: Shield Breaker (+25% dmg to shields), Grim Resolve (+5% dmg at ≤50% HP)]*
+- **Tier 3 (1 choice):** Single Out (+8% damage <40% HP) ✅ *[alts: Life Drinker (5% heal when ≤50% HP), Whirlwind of Death (AVOID - speed tune), Ruthless Ambush (+8% first hit)]*
+- **Tier 4 (1 choice):** Bring It Down (+6% damage vs higher Max HP) ✅ *[alts: Wrath of the Slain (+5% dmg per dead ally), Cycle of Violence (30% CD reduction), Opportunist (+12% dmg to CC'd)]*
+- **Tier 5 (1 choice):** Methodical (+2% A1 damage per use, max +10%) ✅ *[alts: Kill Streak (+6% dmg per kill), Blood Shield (15% shield on kill), Stoked to Fury (+4% dmg per debuff on self)]*
+- **Tier 6 (1 choice):** **Warmaster (60% proc, 75k damage)** ✅ - **PRIMARY DAMAGE SOURCE** *[alts: Helmsmasher (50% ignore 25% DEF), Giant Slayer (30% per hit), Flawless Execution (+20% C.DMG)]*
 
 **Support Tree:**
-- **Tier 1:** Pinpoint Accuracy (+10 ACC)
-- **Tier 2:** Charged Focus (+20 ACC when no cooldowns)
-- **Tier 3:** Swarm Smiter (+4 ACC per enemy alive)
-- **Tier 4:** Lore of Steel (+15% set bonuses - boosts Speed/Perception sets)
-- **Tier 5:** Master Hexer (30% extend debuffs) - **KEY MASTERY** - extends Weaken, HP Burn
+- **Tier 1 (1 choice):** Pinpoint Accuracy (+10 ACC) ✅ *[alt: Steadfast (+810 HP)]*
+- **Tier 2 (1 choice):** Charged Focus (+20 ACC when no cooldowns) ✅ *[alts: Lay on Hands (+5% heal), Shieldbearer (+5% shield), Exalt in Death (10% heal on kill)]*
+- **Tier 3 (1 choice):** Swarm Smiter (+4 ACC per enemy alive) ✅ *[alts: Healing Savior (+10% heal/shield <40% HP), Rapid Response (AVOID - speed tune), Arcane Celerity (AVOID)]*
+- **Tier 4 (1 choice):** Lore of Steel (+15% set bonuses - boosts Speed/Perception sets) ✅ *[alts: Merciful Aid (+15% heal/shield on CC'd), Cycle of Magic (5% CD reduction), Lasting Gifts (30% extend buffs), Evil Eye (TM reduction)]*
+- **Tier 5 (1 choice):** Master Hexer (30% extend debuffs) ✅ - **KEY MASTERY** - extends Weaken, HP Burn *[alts: Lasting Gifts (30% extend buffs), Spirit Haste (AVOID - speed tune), Sniper (+5% debuff chance)]*
 
 **Damage Output:**
 - **Warmaster:** 60% × 75k × ~38 A1s = **1.71M damage** over 50 turns
@@ -769,37 +746,40 @@
 
 ---
 
-#### **Geomancer (Offense/Support - Giant Slayer Build)**
+#### **Geomancer (Offense/Support - Warmaster Build)**
 
 **Tree Selection:** Offense (Primary) + Support (Secondary)  
-**Build Focus:** Giant Slayer (3-hit A1), HP Burn extension, reflect damage
+**Build Focus:** Warmaster, HP Burn extension, reflect damage
 
 **Offense Tree:**
-- **Tier 1:** Deadly Precision (+5% C.RATE)
-- **Tier 2:** Keen Strike (+10% C.DMG)
-- **Tier 3:** Single Out (+8% damage <40% HP)
-- **Tier 4:** Bring It Down (+6% damage vs higher Max HP)
-- **Tier 5:** Methodical (+2% A1 damage per use, max +10%)
-- **Tier 6:** **Giant Slayer (30% per hit, 75k cap)** - **BEST FOR 3-HIT A1**
+- **Tier 1 (1 choice):** Deadly Precision (+5% C.RATE) ✅ *[alt: Blade Disciple (+75 ATK)]*
+- **Tier 2 (1 choice):** Keen Strike (+10% C.DMG) ✅ *[alts: Heart of Glory (+5% dmg at full HP), Shield Breaker (+25% dmg to shields), Grim Resolve (+5% dmg at ≤50% HP)]*
+- **Tier 3 (1 choice):** Single Out (+8% damage <40% HP) ✅ *[alts: Life Drinker (5% heal when ≤50% HP), Whirlwind of Death (AVOID - speed tune), Ruthless Ambush (+8% first hit)]*
+- **Tier 4 (1 choice):** Bring It Down (+6% damage vs higher Max HP) ✅ *[alts: Wrath of the Slain (+5% dmg per dead ally), Cycle of Violence (30% CD reduction), Opportunist (+12% dmg to CC'd)]*
+- **Tier 5 (1 choice):** Methodical (+2% A1 damage per use, max +10%) ✅ *[alts: Kill Streak (+6% dmg per kill), Blood Shield (15% shield on kill), Stoked to Fury (+4% dmg per debuff on self)]*
+- **Tier 6 (1 choice):** **Warmaster (60% proc, 75k damage)** ✅ - **PROCS OFF HP BURN PASSIVE** *[alts: Helmsmasher (50% ignore 25% DEF), Giant Slayer (30% per hit, 75k), Flawless Execution (+20% C.DMG)]*
 
 **Support Tree:**
-- **Tier 1:** Pinpoint Accuracy (+10 ACC)
-- **Tier 2:** Charged Focus (+20 ACC when no cooldowns)
-- **Tier 3:** Swarm Smiter (+4 ACC per enemy)
-- **Tier 4:** Lore of Steel (+15% set bonuses)
-- **Tier 5:** **Master Hexer (30% extend debuffs)** - **CRITICAL** - extends HP Burn from A2 passive
+- **Tier 1 (1 choice):** Pinpoint Accuracy (+10 ACC) ✅ *[alt: Steadfast (+810 HP)]*
+- **Tier 2 (1 choice):** Charged Focus (+20 ACC when no cooldowns) ✅ *[alts: Lay on Hands (+5% heal), Shieldbearer (+5% shield), Exalt in Death (10% heal on kill)]*
+- **Tier 3 (1 choice):** Swarm Smiter (+4 ACC per enemy) ✅ *[alts: Healing Savior (+10% heal/shield <40% HP), Rapid Response (AVOID - speed tune), Arcane Celerity (AVOID)]*
+- **Tier 4 (1 choice):** Lore of Steel (+15% set bonuses) ✅ *[alts: Merciful Aid (+15% heal/shield on CC'd), Cycle of Magic (5% CD reduction), Lasting Gifts (30% extend buffs), Evil Eye (TM reduction)]*
+- **Tier 5 (1 choice):** **Master Hexer (30% extend debuffs)** ✅ - **CRITICAL** - extends HP Burn from A2 passive *[alts: Lasting Gifts (30% extend buffs), Spirit Haste (AVOID - speed tune), Sniper (+5% debuff chance)]*
 
-**Why Giant Slayer > Warmaster?**
-- **Geomancer A1:** 3-hit attack
-- **Giant Slayer proc rate:** 1-(0.7³) = **65.7% chance per A1**
-- **Expected damage:** 65.7% × 75k × ~38 A1s = **1.87M damage** (vs Warmaster 1.71M)
-- **+9% more damage** than Warmaster
+**Why Warmaster > Giant Slayer?**
+- **Geomancer Passive:** Reflects 30% of damage taken as HP Burn damage
+- **Warmaster procs off HP Burn reflect damage** - gives additional proc opportunities beyond A1 hits
+- **Boss hits Geomancer ~50 times** over 50 turns (stun target + AOE damage)
+- **Estimated additional procs:** 50 boss hits × 60% Warmaster rate = **30 extra procs** = +2.25M damage
+- **Total Warmaster damage:** 1.71M (A1) + 2.25M (passive) = **~4M damage**
+- **Giant Slayer alternative:** 1.87M (A1 only) - no passive interaction
 
 **Damage Output:**
-- **Giant Slayer:** 65.7% × 75k × ~38 A1s = **1.87M damage** over 50 turns
-- **Methodical stacking:** +10% A1 damage = +187k
-- **Single Out (turns 31-50):** +8% damage = +150k
-- **Total Giant Slayer contribution:** ~2.2M damage
+- **Warmaster A1 procs:** 60% × 75k × ~38 A1s = **1.71M damage**
+- **Warmaster HP Burn procs:** 60% × 75k × ~50 boss hits = **2.25M damage**
+- **Methodical stacking:** +10% A1 damage = +171k
+- **Single Out (turns 31-50):** +8% damage = +137k
+- **Total Warmaster contribution:** ~4.2M damage (vs Giant Slayer ~2.2M)
 
 ---
 
@@ -807,23 +787,23 @@
 
 **Warmaster vs Giant Slayer Math:**
 
-| Champion | A1 Hits | Best Mastery | Proc Rate | Expected Damage/A1 | Total (50 turns) |
-|----------|---------|--------------|-----------|-------------------|------------------|
-| Aniri | 1 | Warmaster | 60% | 45k | 1.71M (not used) |
-| Brogni | 1 | Warmaster | 60% | 45k | 1.71M (not used) |
-| Stag Knight | 1 | Warmaster | 60% | 45k | 1.71M |
-| Mithrala | 1 | Warmaster | 60% | 45k | 1.71M |
-| Geomancer | 3 | Giant Slayer | 65.7% | 49.3k | 1.87M |
+| Champion | A1 Hits | Best Mastery | Proc Rate | Expected Damage/A1 | Total (50 turns) | Notes |
+|----------|---------|--------------|-----------|-------------------|------------------|-------|
+| Aniri | 1 | Warmaster | 60% | 45k | 1.71M (not used) | Support role |
+| Brogni | 1 | Warmaster | 60% | 45k | 1.71M (not used) | Support role |
+| Stag Knight | 1 | Warmaster | 60% | 45k | 1.71M | Standard WM |
+| Mithrala | 1 | Warmaster | 60% | 45k | 1.71M | Standard WM |
+| Geomancer | 3 | **Warmaster** | 60% | 45k | **~4.2M** | **Procs off HP Burn passive!** |
 
 **Formula:**
 - **Warmaster:** 60% flat rate regardless of hits
 - **Giant Slayer:** 1-(0.7^hits) = proc rate per skill
   - 1-hit: 30% (worse than WM)
   - 2-hit: 51% (worse than WM)
-  - 3-hit: 65.7% (BETTER than WM)
+  - 3-hit: 65.7% (better on A1, but WM wins with passive)
   - 4-hit: 76% (much better than WM)
 
-**Key Takeaway:** Giant Slayer only worth it for **3+ hit A1s**.
+**Key Takeaway:** Giant Slayer worth it for **3+ hit A1s** UNLESS champion has **damage-dealing passive** that procs Warmaster (e.g., Geomancer HP Burn reflect).
 
 ---
 
@@ -901,7 +881,7 @@
 
 **High Priority (Do First):**
 1. ✅ **Verify speed tune** - Run DeadwoodJedi calculator, confirm 263-280 SPD on all champions
-2. ✅ **Geomancer Giant Slayer** - Confirm T6 Offense mastery (NOT Warmaster)
+2. ✅ **Geomancer Warmaster** - Confirm T6 Offense mastery (Warmaster procs off HP Burn passive for ~4M damage vs Giant Slayer ~2M)
 3. ✅ **Aniri/Brogni Lasting Gifts** - Confirm T4 Support mastery (extends buffs +1 turn)
 4. ⚠️ **Geomancer HP to 60k+** - Swap DEF% gloves for HP% or upgrade gear (currently 55k)
 5. ⚠️ **Mithrala ACC reduction** - Reallocate 352 ACC to other stats (C.DMG, HP, DEF)
@@ -1008,11 +988,12 @@
 | **Underpriest Brogni** | Defense | Support | Unshakeable (+50 RES) | Lasting Gifts (T4 Support), Lore of Steel (T4 Support) |
 | **Stag Knight** | Offense | Defense | **Warmaster** (60% proc) | Methodical (T5 Off), Master Hexer (T5 Sup - optional) |
 | **Mithrala** | Offense | Support | **Warmaster** (60% proc) | Methodical (T5 Off), Master Hexer (T5 Sup) |
-| **Geomancer** | Offense | Support | **Giant Slayer** (65.7% proc) | Methodical (T5 Off), Master Hexer (T5 Sup) |
+| **Geomancer** | Offense | Support | **Warmaster** (60% proc) | Methodical (T5 Off), Master Hexer (T5 Sup) - **Procs off HP Burn passive!** |
 
 **Warmaster vs Giant Slayer Quick Rule:**
 - **1-2 hit A1:** Always Warmaster (60% proc, 45k avg damage)
-- **3+ hit A1:** Always Giant Slayer (65.7%+ proc, 49k+ avg damage)
+- **3+ hit A1:** Giant Slayer (65.7%+ proc, 49k+ avg damage) UNLESS champion has damage-dealing passive
+- **Geomancer exception:** Warmaster procs off HP Burn reflect passive (~4M damage vs Giant Slayer ~2M)
 
 **Never Take (Speed Tune Killers):**
 - ❌ Rapid Response (Support T3) - +10% TM when buff expires
