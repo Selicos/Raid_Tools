@@ -57,6 +57,10 @@
     - [Problem 4: Team Dies During Gap Turn](#problem-4-team-dies-during-gap-turn)
     - [Problem 5: Run Ends at Turn 50](#problem-5-run-ends-at-turn-50)
   - [Quick Reference: Build Checklist](#quick-reference-build-checklist)
+  - [Champions with Decrease Attack, Decrease Defense, or Increase Defense (≤3 Turn Cooldown)](#champions-with-decrease-attack-decrease-defense-or-increase-defense-3-turn-cooldown)
+    - [**DECREASE ATTACK** (17 Champions)](#decrease-attack-17-champions)
+    - [**DECREASE DEFENSE** (15 Champions)](#decrease-defense-15-champions)
+    - [**INCREASE DEFENSE** (6 Champions)](#increase-defense-6-champions)
 
 ---
 
@@ -760,3 +764,82 @@
 2. Farm Leonardo books (7 Legendary - highest priority)
 3. Regear Michelangelo + Geomancer when books complete
 4. Test manual rotation once all requirements met
+
+---
+
+**Other info for buffs required to replace Mithrala and/or Stag Knight**
+
+  Mithrala: 
+  - Inc Def Buff (A2, 3CD), plus Inc Atk (both 2 turns)
+  - ex: Leonardo who brings other bonuses
+  - 
+  Stag Knight:
+  - Dec Def and Dec Att (A2, 3CD), but low rates to land at 95% and 75% respectively. Failure to land Dec Att could end the run.
+  - ex: Rector Drath has Dec Att on A1, better uptime plus revive/heal role
+
+
+## Champions with Decrease Attack, Decrease Defense, or Increase Defense (≤3 Turn Cooldown)
+
+### **DECREASE ATTACK** (17 Champions)
+
+| Champion | Skill | Cooldown |
+|----------|-------|----------|
+| Artak | Dogs Of War | 3 turns |
+| Black Knight | Foul Play | 3 turns |
+| **Broadmaw** | Bone Hammer | **A1** |
+| Chronicler Adelyn | Writ of Sleep | 3 turns |
+| Dark Kael | Binding Darkness | 3 turns |
+| Dhukk the Pierced | Lunatic Outburst | 3 turns |
+| Drexthar Bloodtwin | Burning Lash | 3 turns |
+| Embrys the Anomaly | Voidstare | 3 turns |
+| Fayne | Flower's Tears | 3 turns |
+| Hotatsu | Rushing Death | 3 turns |
+| **Jareg** | Rending Claws | **A1** |
+| Kantra the Cyclone | Chaos Tempest | 3 turns |
+| Lord Champfort | Earthshaker | 3 turns |
+| **Rector Drath** | Scepter of Authority | **A1** |
+| Stag Knight | Huntmaster | 3 turns |
+| Venomage | Neurotoxin | 3 turns |
+| Vogoth | Wave of Revulsion | 3 turns |
+
+### **DECREASE DEFENSE** (15 Champions)
+
+| Champion | Skill | Cooldown |
+|----------|-------|----------|
+| **Astralon** | Hellbinder | **A1** |
+| **Dark Athel** | Profane Glaive | **A1** |
+| Deacon Armstrong | Sweeping Retribution | 3 turns |
+| Dhukk the Pierced | Lunatic Outburst | 3 turns |
+| **Ghostborn** | Energy Bolt | **A1** |
+| **Gretel Hagbane** | Evil Undone | **A1** |
+| **Lord Champfort** | Annihilating Hit | **A1** |
+| Michelangelo | Express Delivery! | 3 turns |
+| **Ninja** | Shatterbolt | **A1** |
+| **Rathalos Blademaster** | Spirit Thrust | **A1** |
+| Rhazin Scarhide | Shear | 3 turns |
+| **Robar** | Wild Swing | **A1** |
+| Stag Knight | Huntmaster | 3 turns |
+| **Uugo** | Maelstrom Wrack | **A1** |
+| Venomage | Neurotoxin | 3 turns |
+
+### **INCREASE DEFENSE** (6 Champions)
+
+| Champion | Skill | Cooldown |
+|----------|-------|----------|
+| Astralon | Divine Immanence | 3 turns |
+| Hotatsu | Oni Icon | 3 turns |
+| Leonardo | Shell Yeah! | 3 turns |
+| Mausoleum Mage | Might of Undeath | 3 turns |
+| Mithrala Lifebane | Sigil of Toxic Glory | 3 turns |
+| **Tagoar** | Da Magic Stick | **A1** |
+
+---
+
+**KEY NOTES:**
+- **Bold champions** have the debuff/buff on their A1 (available every turn)
+- **Dual-purpose champions:**
+  - **Dhukk the Pierced**: Has BOTH Decrease ATK AND Decrease DEF on same skill (Lunatic Outburst, 3-turn CD)
+  - **Stag Knight**: Has BOTH Decrease ATK AND Decrease DEF on same skill (Huntmaster, 3-turn CD)
+  - **Venomage**: Has BOTH Decrease ATK AND Decrease DEF on same skill (Neurotoxin, 3-turn CD)
+
+**Total: 38 champion-skill combinations across 35 unique champions**
