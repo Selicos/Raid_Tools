@@ -1,0 +1,277 @@
+{
+  "name": "Narma the Returned",
+  "rarity": "Legendary",
+  "affinity": "Magic",
+  "faction": "Knights Revenant",
+  "role": "Support",
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "9/10",
+    "dungeons": "8/10",
+    "doom_tower": "8/10",
+    "arena": "6/10",
+    "faction_wars": "9/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 19815,
+        "ATK": 1002,
+        "DEF": 1255,
+        "SPD": 100,
+        "C.RATE": 15,
+        "C.DMG": 50,
+        "RES": 30,
+        "ACC": 20
+      },
+      "skills": [
+        {
+          "name": "Hell Crescent",
+          "type": "A1",
+          "description": "Attacks 1 enemy. Has a 50% chance of increasing the duration of 3 random debuffs on the target by 1 turn.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 5.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "5x ATK multiplier"
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 50.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "extends 3 random debuffs by 1 turn",
+              "notes": "50% chance to extend 3 random debuffs. Fully booked: 60% chance. Requires Master Hexer to extend Poison Sensitivity from 2→3 turns."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Debuff Extension", "Single Target"],
+          "book_value": "High - increases debuff extension chance from 50% to 60% (+20% relative increase)",
+          "notes": "Passive debuff extension tool. Critical for maintaining Poison Sensitivity uptime with Master Hexer mastery. Books add 10% extension chance over 4 levels."
+        },
+        {
+          "name": "Weirding Dance",
+          "type": "A2",
+          "description": "Attacks 1 enemy. Places a 50% [Decrease ATK] debuff and a [Leech] debuff on all enemies for 3 turns. Also heals all allies by 25% of this Champion's MAX HP. The heal increases by 2% for each [Poison] debuff on the target.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 6.5,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "6.5x ATK multiplier"
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 50.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "3",
+              "notes": "100% chance (fully booked) to place 50% Decrease ATK on all enemies for 3 turns"
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 100.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "3",
+              "notes": "100% chance (fully booked) to place Leech on all enemies for 3 turns. Post-buff addition - AOE sustain mechanic."
+            },
+            {
+              "type": "heal",
+              "stat": "MAX HP",
+              "value": 25.0,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "NA",
+              "notes": "Base 25% MAX HP AOE heal (increased from 15% pre-buff). +2% per Poison debuff on target (max +20% if 10 poisons = 45% total heal). Scales with Narma's MAX HP."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": ["AOE Decrease ATK", "AOE Leech", "AOE Heal", "Poison Synergy"],
+          "book_value": "Critical - reduces cooldown from 5→3 turns AND increases debuff chance from 75% to 100%. Essential for consistent Dec ATK uptime.",
+          "notes": "Post-buff: Now places AOE Leech (massive sustain boost for CB/DT) and increased heal from 15%→25%. Heal scales up to 45% MAX HP with 10 Poison debuffs on target. 3-turn CD when booked makes this a core support skill. Pairs with A3 Poison stacking for maximum heal value."
+        },
+        {
+          "name": "Toxin Trance",
+          "type": "A3",
+          "description": "Attacks 1 enemy. Places three 5% [Poison] debuffs and a 25% [Poison Sensitivity] debuff on the target for 2 turns. If the target has 3 or more debuffs, instantly activates all [Poison] debuffs on the target.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "ATK",
+              "value": 7.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "7x ATK multiplier"
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 100.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2",
+              "notes": "100% chance (fully booked) to place 3x 5% Poison debuffs for 2 turns. Post-buff: Now places Poison AND Poison Sensitivity simultaneously (was OR)."
+            },
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 100.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2",
+              "notes": "100% chance (fully booked) to place 25% Poison Sensitivity for 2 turns. Post-buff: Guaranteed simultaneous placement with Poison. Extendable to 3 turns with Master Hexer + A1 debuff extension."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 100.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "instant",
+              "notes": "Conditional instant Poison activation: If target has 3+ debuffs, instantly activates all Poison debuffs (deals all remaining Poison damage immediately). Post-buff addition - massive burst damage potential."
+            }
+          ],
+          "cooldown_booked": 4,
+          "mechanics_tags": ["Poison", "Poison Sensitivity", "Instant Activate", "Conditional Burst"],
+          "book_value": "Critical - reduces cooldown from 6→4 turns AND increases debuff chance from 75% to 100%. Essential for consistent Poison + Poison Sensitivity uptime.",
+          "notes": "Post-buff MAJOR CHANGES: (1) Now places Poison AND Poison Sensitivity simultaneously (was either/or), (2) Added instant Poison activation if target has 3+ debuffs (massive burst potential), (3) Poison Sensitivity extendable to 3 turns with Master Hexer + A1. Combos: Use after Dec DEF/Weaken/Dec ATK applied (3 debuffs) for instant Poison proc. With 10 Poisons on CB: 50% boss MAX HP instant damage (10x 5% base x 1.33 Poison Sensitivity = 66.5% total, capped at 50%)."
+        },
+        {
+          "name": "Caustic Rebuttal [P]",
+          "type": "Passive",
+          "description": "Whenever an enemy attacks this Champion with a basic skill, has a 25% chance of placing a 5% [Poison] debuff on the attacker for 2 turns. This chance increases to 50% if the attacker is under a [Decrease ATK] debuff. Decreases the damage this Champion receives by 5% for each [Poison] debuff on the attacker. The damage decrease cannot exceed 25%.",
+          "effects": [
+            {
+              "type": "debuff",
+              "stat": "NA",
+              "value": 25.0,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "2",
+              "notes": "25% chance to place 5% Poison on attackers using basic skills (A1). Increases to 50% chance if attacker has Decrease ATK debuff. Synergizes with A2 AOE Dec ATK."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 5.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "passive",
+              "notes": "Passive damage reduction: 5% per Poison debuff on attacker, max 25% (requires 5+ Poisons on enemy). Stacks with other damage reduction sources. Provides survivability scaling with Poison count."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": ["Passive Poison", "Damage Reduction", "Conditional Scaling", "Counterattack Synergy"],
+          "book_value": "NA - Passive skill, no books required",
+          "notes": "NEW POST-BUFF PASSIVE. Dual purpose: (1) Places Poison on attackers (25%/50% chance), higher proc rate when A2 Dec ATK is active, (2) Reduces incoming damage by 5% per Poison on attacker (max 25%). Synergizes with Skullcrusher counterattack teams (more A1 attacks = more Poison procs). Provides passive survivability against multi-hit enemies or CB. Max 25% damage reduction requires 5+ Poisons on enemy (achievable with A3 + passive procs + allies)."
+        }
+      ],
+      "aura": "Increases Ally ACC in Dungeons by 80",
+      "comments": "Post-buff (Nov 2025): Narma received MAJOR improvements across all skills. Now provides AOE Leech, enhanced healing (25% vs 15%), simultaneous Poison + Poison Sensitivity placement, instant Poison activation conditional, and new passive with Poison placement + damage reduction. Significantly improved CB/DT viability."
+    }
+  ],
+  "mechanics_tags": [
+    "Poison",
+    "Poison Sensitivity",
+    "Decrease ATK",
+    "Leech",
+    "Heal",
+    "Debuff Extension",
+    "Instant Activate",
+    "Damage Reduction",
+    "Passive Poison",
+    "AOE Support",
+    "Conditional Burst"
+  ],
+  "stat_priorities": [
+    "250+ ACC (Poison/Debuff landing)",
+    "267+ SPD (3:2 speed tune for CB)",
+    "100% C.RATE (Warmaster procs)",
+    "HP% (scales 25% AOE heal on A2)",
+    "DEF%/HP% (survivability)"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "267+ SPD (3:2 tune), 250+ ACC, 100% C.RATE, 3000+ DEF, 35000+ HP. Prioritize ACC for 100% Poison/Poison Sensitivity landing, SPD for speed tune, then C.RATE for Warmaster damage.",
+    "dungeons": "220+ SPD, 250+ ACC, HP%/DEF% for survivability. Lower speed requirement than CB but maintain high ACC for debuff reliability.",
+    "doom_tower": "220+ SPD, 250+ ACC, HP%/DEF%, RES for boss stages. Leech + passive damage reduction provide excellent sustain for Hard DT bosses.",
+    "arena": "180+ SPD (turn 2 support), 250+ ACC, HP%/DEF%, RES. Limited Arena value - primarily used as turn 2 sustain in tanky comps.",
+    "faction_wars": "200+ SPD, 220+ ACC, HP%/DEF%. Excellent Faction Wars champion with AOE Dec ATK, Leech, and healing. Lower ACC requirement due to lower enemy resistance."
+  },
+  "recommended_gear": [
+    "Speed + Accuracy (primary for CB/DT - guarantees 250+ ACC with accuracy chest)",
+    "Speed + Lifesteal (alternative for CB sustain, requires ACC banner + gloves)",
+    "Speed + Immortal (DT Hard - stacks with Leech and passive damage reduction)",
+    "Relentless (experimental - chance for extra turns to spam A2/A3 faster)"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Offense Tree: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, Warmaster (CRITICAL - 60% proc rate for damage)",
+      "Support Tree: Pinpoint Accuracy, Charged Focus, Swarm Smiter, MASTER HEXER (CRITICAL - extends Poison Sensitivity from 2→3 turns), Lore of Steel, Cycle of Magic, Lasting Gifts",
+      "MUST HAVE: Warmaster (damage) + Master Hexer (extends Poison Sensitivity to match CB rotation)"
+    ],
+    "dungeons": [
+      "Support Tree: Master Hexer, Pinpoint Accuracy, Lore of Steel",
+      "Offense Tree: Warmaster for damage"
+    ],
+    "doom_tower": [
+      "Support Tree: Master Hexer, Pinpoint Accuracy, Evil Eye (Poison damage boost)",
+      "Defense Tree: Improved Parry, Bloodthirst (synergizes with Leech)"
+    ],
+    "faction_wars": [
+      "Support Tree: Master Hexer, Pinpoint Accuracy",
+      "Offense Tree: Warmaster"
+    ],
+    "general": [
+      "CRITICAL MASTERIES: (1) Master Hexer - extends Poison Sensitivity from 2→3 turns (mandatory for CB), (2) Warmaster - 60% proc rate for damage contribution"
+    ]
+  },
+  "blessings": [
+    "Brimstone (Clan Boss/DT - increases Poison damage by 30%, massive boost to poison-focused kit)",
+    "Crushing Rend (CB/DT - Max HP damage scaling, synergizes with Poison + instant activate)",
+    "Cruelty (Arena/DT - buff spread for Leech/Dec ATK extension to allies)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Good AI behavior. Prioritizes A3 (Poison + Poison Sensitivity) when available, then A2 (Dec ATK + Leech + Heal), then A1. No known AI targeting or skill priority issues on auto."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Poison Cheese + Leech Sustain",
+    "cheese_mechanic_info": "Post-buff: Narma is now viable for poison cheese teams due to simultaneous Poison + Poison Sensitivity placement (A3), AOE Leech sustain (A2), instant Poison activation conditional (A3 if 3+ debuffs), and passive damage reduction (5% per Poison, max 25%). Combos: (1) Poison Cheese - pair with Frozen Banshee/other poison champions for 10-debuff cap, Poison Sensitivity boosts all poison damage by 33%, instant activation if 3+ debuffs on target. (2) Leech Sustain - A2 AOE Leech + 25-45% heal provides survivability without Lifesteal gear. (3) Skullcrusher Synergy - counterattack increases A1 frequency = more debuff extensions + passive Poison procs (50% chance with Dec ATK active). Projected CB UNM: 65-80M with Brogni/Aniri/Stag Knight or Hotatsu/Narma composition."
+  },
+  "mechanics_advisory": "POST-BUFF GAME-CHANGER: Narma transformed from niche Poison champion to elite CB/DT support. Key mechanics: (1) POISON SENSITIVITY - 25% debuff for 2 turns (extendable to 3 with Master Hexer + A1), boosts all Poison damage by 33%. (2) INSTANT ACTIVATION - A3 instantly activates all Poisons if target has 3+ debuffs (combo with Dec DEF/Weaken/Dec ATK for massive burst). (3) AOE LEECH - A2 now provides team-wide sustain, reduces/eliminates Lifesteal gear requirement. (4) ENHANCED HEALING - 25% base (was 15%), scales to 45% with 10 Poisons on target. (5) PASSIVE DAMAGE REDUCTION - 5% per Poison on attacker (max 25%), provides scaling survivability. (6) DEBUFF EXTENSION - A1 extends 3 random debuffs by 1 turn (critical for maintaining Poison Sensitivity uptime). SYNERGIES: Frozen Banshee (Poison stacking), Hotatsu (Inc DEF 3-turn CD), Brogni (shields + Poison Sensitivity extension via Ally Protection), Skullcrusher (counterattack = more A1s = more extensions + passive Poison procs), Geomancer (HP Burn + Poison dual damage). PRIORITY CONTENT: CB UNM (9/10), DT Hard (8/10), Faction Wars (9/10). BUILD REQUIREMENTS: Fully booked (critical for 100% debuff chance + cooldown reduction), 250+ ACC, 267+ SPD (3:2 tune), Master Hexer mastery (extends Poison Sensitivity).",
+  "validation_metadata": {
+    "stat_confidence": 100.0,
+    "data_sources": "ayumilove_ocr+ayumilove+hellhades",
+    "source_priority": {
+      "stats": "ayumilove_ocr",
+      "skills": "ayumilove",
+      "info": "hellhades"
+    },
+    "ocr_notes": "Post-buff update (Nov 2025): All skill data from user-provided buff image (not in allowed schema values, using ayumilove as placeholder). Stats confirmed from previous scraper run (SPD 100, HP 19815, ATK 1002, DEF 1255). Major changes: A1 50% base (was 40%), A2 added AOE Leech + 25% heal (was 15%), A3 simultaneous Poison+Poison Sensitivity (was OR) + instant activate conditional, NEW Passive Caustic Rebuttal (Poison on attackers + damage reduction)."
+  },
+  "citations": [
+    "User-provided buff image (Nov 2025) - post-buff skill descriptions",
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-narma-the-returned-skill-mastery-equip-guide/ (accessed 2025-11-18)",
+    "HellHades: https://hellhades.com/champions/narma-the-returned/ (accessed 2025-11-18)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "MAJOR BUFF (Nov 2025): Narma received comprehensive improvements making her elite CB/DT support. Now provides: AOE Leech (A2), enhanced healing 25% vs 15% (A2), simultaneous Poison + Poison Sensitivity placement (A3), instant Poison activation if 3+ debuffs on target (A3), new passive with Poison placement on attackers + damage reduction. Meta rating upgraded from 6/10 CB to 9/10 CB. Now competes with Frozen Banshee for poison cheese teams while providing additional Dec ATK + Leech + healing utility. Fully booked + Master Hexer mastery mandatory for optimal performance.",
+  "update_notes": {
+    "last_updated": "2025-11-18",
+    "last_patch": "Nov 2025 buff - comprehensive skill improvements across A1/A2/A3 + new passive. A1: 50% base debuff extension (was 40%). A2: Added AOE Leech + increased heal to 25% (was 15%). A3: Now places Poison AND Poison Sensitivity simultaneously (was OR) + instant Poison activation conditional. NEW Passive: Caustic Rebuttal - 25%/50% Poison on attackers + 5% damage reduction per Poison (max 25%). Overall impact: Transformed from niche Poison champion to elite CB/DT support with 9/10 CB rating."
+  }
+}

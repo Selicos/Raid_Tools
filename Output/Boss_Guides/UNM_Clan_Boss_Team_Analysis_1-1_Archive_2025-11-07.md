@@ -2,82 +2,148 @@
 
 ## Table of Contents
 
-1. [UNM Boss Stats Reference (CANONICAL)](#unm-boss-stats-reference-canonical)
-2. [Critical Mechanics Reference](#-critical-mechanics-reference)
-    - [Clan Boss First Turn](#clan-boss-first-turn)
+- [UNM Clan Boss Team Analysis](#unm-clan-boss-team-analysis)
+  - [Table of Contents](#table-of-contents)
+  - [UNM Boss Stats Reference (CANONICAL)](#unm-boss-stats-reference-canonical)
+  - [⚡ Critical Mechanics Reference](#-critical-mechanics-reference)
+  - [Clan Boss First turn](#clan-boss-first-turn)
     - [Clan Boss Stun Mechanic](#clan-boss-stun-mechanic)
-    - [Clan Boss Immunity List](#clan-boss-immunity-list-passive)
-    - [Clan Boss Gathering Fury Passive](#clan-boss-gathering-fury-passive)
-    - [Poison & HP Burn Caps](#poison--hp-burn-caps)
+    - [Clan Boss Immunity List (passive)](#clan-boss-immunity-list-passive)
+    - [Clan Boss 'Gathering Fury' Passive](#clan-boss-gathering-fury-passive)
+    - [Poison \& HP Burn Caps](#poison--hp-burn-caps)
     - [Boss HP-based Damage Caps](#boss-hp-based-damage-caps)
-    - [Warmaster & Giant Slayer Masteries](#warmaster--giant-slayer-masteries)
-3. [Project Goals](#project-goals)
-4. [Gear & Resource Availability](#gear--resource-availability)
-    - [Available Gear Sets (Quantity & Quality)](#available-gear-sets-quantity--quality)
-    - [Gear Optimization Strategy](#gear-optimization-strategy-based-on-availability)
-    - [Gear Set Recommendations by Champion](#gear-set-recommendations-by-champion-based-on-availability)
-5. [Current Team Performance (Baseline)](#current-team-performance-baseline)
-6. [Champion Optimization Templates](#-new-champion-template-do-not-change)
-    - [Geomancer - HP Burn DPS](#-geomancer---hp-burn-dps)
-    - [Brogni - Shield/HP Burn Specialist](#-brogni---shieldhp-burn-specialist)
-    - [Stag Knight - Dec Def/Attack](#-stag-knight---dec-defattack)
-    - [Mithrala - Cleanse/Buff/Lead](#-mithrala---cleansebufflead)
-    - [Godseeker Aniri - Heal/Revive/Buff Extend](#-godseeker-aniri---healrevivebuff-extend)
-7. [Alternate Champion Options](#alternate-champion-options)
-    - [Alternate 1: Fayne - Weaken/Poison Specialist](#-alternate-1-fayne---weakenpoison-specialist-pending-full-build)
-    - [Alternate 2: Bad-el-Kazar - Sustain/Poison](#-alternate-2-bad-el-kazar---sustainpoison-specialist)
-    - [Alternate 3: Skullcrusher - Counterattack](#-alternate-3-skullcrusher---counterattack-enabler)
-    - [Alternate 4: Frozen Banshee - Budget Poison](#-alternate-4-frozen-banshee---budget-poison-specialist)
-    - [Alternate 5: Tayrel - Decrease DEF/ATK](#-alternate-5-tayrel---decrease-defattk-specialist-pending-json)
-    - [Alternate 6: Venomage - Poison/Ally Protection](#-alternate-6-venomage---poisondecrease-defally-protection-specialist)
-    - [Alternate 7: Rector Drath - Block Debuffs/Revive](#-alternate-7-rector-drath---revivecleanseblock-debuffs-specialist)
-    - [Alternate 8: Ninja - HP Burn Activation](#-alternate-8-ninja---hp-burn-activation-specialist)
-    - [Alternate 9: Deacon Armstrong - TM Control](#-alternate-9-deacon-armstrong---tm-controldecrease-defleech-specialist)
-    - [Alternate 10: Arbiter - TM Boost/Revive](#-alternate-10-arbiter---revivetm-boostspeed-lead-specialist)
-    - [Alternate 11: Dark Kael - Poison Extension](#-alternate-11-dark-kael---poisonpoison-sensitivitydebuff-extension-specialist)
-    - [Alternate 12: Mausoleum Mage - Block Debuffs](#-alternate-12-mausoleum-mage---cleanseblock-debuffsspeed-buff-specialist)
-    - [Alternate 13: Tagoar - Shield/Buff Extension](#-alternate-13-tagoar---shieldhealbuff-extension-specialist)
-    - [Alternate 14: Warchief - Brogni Synergy](#-alternate-14-warchief---shieldheaidef-scaling-specialist--high-synergy-with-brogni)
-    - [Alternate 15: Norog - Stun Immune Target](#-alternate-15-norog---stun-targetstun-immune-specialist--best-stun-target)
-    - [Updated Alternate Champion Priority Ranking](#updated-alternate-champion-priority-ranking)
-8. [Poison-Focused Team Composition](#-poison-focused-team-composition)
-    - [Core Poison Team](#core-poison-team-recommended-build)
-    - [Poison Damage Mechanics](#poison-damage-mechanics-understanding-the-math)
-    - [Speed Tune Explanation](#speed-tune-explanation-11-tune-no-stun-target)
-    - [Alternate Poison Compositions](#alternate-poison-compositions)
-    - [Gear Requirements](#gear-requirements-critical-stats-for-poison-team)
-    - [Masteries for Poison Team](#masteries-for-poison-team-critical-paths)
-    - [Blessings for Poison Team](#blessings-for-poison-team)
-    - [Investment Timeline](#investment-timeline-poison-team)
-9. [Implementation Priority Order](#implementation-priority-order)
-    - [Phase 1: Immediate Wins](#phase-1-immediate-wins-10-17-days-low-investment-10-15-damage)
-    - [Phase 2A: Counterattack Build](#option-a-skullcrusher-counterattack-build--highest-damage-potential)
-    - [Phase 2B: Poison Extension Build](#option-b-poison-extension-build-dark-kael--frozen-banshee--easier-safer)
-    - [Phase 3A: Complete Counterattack](#option-a-complete-counterattack-comp-4-6-weeks)
-    - [Phase 3B: Complete Poison Team](#option-b-complete-poison-team-6-10-weeks)
-10. [Projected Final Performance](#projected-final-performance)
-11. [Affinity Rotation Strategy](#affinity-rotation-strategy)
-12. [Team Stat Reference](#team-stat-reference)
-13. [UNM Clan Boss Mechanics Reference](#unm-clan-boss-mechanics-reference)
+    - [Warmaster \& Giant Slayer Masteries](#warmaster--giant-slayer-masteries)
+  - [Project Goals](#project-goals)
+    - [**Primary Goals (Updated 2025-10-29 for Version 1.1)**](#primary-goals-updated-2025-10-29-for-version-11)
+  - [Gear \& Resource Availability](#gear--resource-availability)
+    - [**Available Gear Sets (Quantity \& Quality)**](#available-gear-sets-quantity--quality)
+    - [**Gear Optimization Strategy (Based on Availability)**](#gear-optimization-strategy-based-on-availability)
+    - [**Gear Set Recommendations by Champion (Based on Availability)**](#gear-set-recommendations-by-champion-based-on-availability)
+    - [**Gear Farming Roadmap (Dungeon Priorities by Phase)**](#gear-farming-roadmap-dungeon-priorities-by-phase)
+      - [**Phase 1 Priority: Dragon 25** (Weeks 1-2)](#phase-1-priority-dragon-25-weeks-1-2)
+      - [**Phase 2 Priority: Spider 25** (Weeks 2-4)](#phase-2-priority-spider-25-weeks-2-4)
+      - [**Phase 3 Priority: Fire Knight 25** (Weeks 4-6)](#phase-3-priority-fire-knight-25-weeks-4-6)
+      - [**Phase 4 Priority: Ice Golem 25** (Weeks 6-8, Optional)](#phase-4-priority-ice-golem-25-weeks-6-8-optional)
+      - [**ROI Analysis by Gear Set**](#roi-analysis-by-gear-set)
+      - [**Farming Efficiency Tips**](#farming-efficiency-tips)
+  - [Current Team Performance, baseline](#current-team-performance-baseline)
+    - [**🎯 NEW CHAMPION TEMPLATE, DO NOT CHANGE**](#-new-champion-template-do-not-change)
+    - [**🎯 GEOMANCER - HP Burn DPS**](#-geomancer---hp-burn-dps)
+    - [**🎯 BROGNI - Shield/HP Burn Specialist**](#-brogni---shieldhp-burn-specialist)
+    - [**🎯 STAG KNIGHT - Dec Def/Attack**](#-stag-knight---dec-defattack)
+    - [**🎯 MITHRALA - Cleanse/Buff/Lead**](#-mithrala---cleansebufflead)
+    - [**🎯 GODSEEKER ANIRI - Heal/Revive/Buff Extend**](#-godseeker-aniri---healrevivebuff-extend)
+  - [**ALTERNATE CHAMPION OPTIONS**](#alternate-champion-options)
+    - [**Overview**](#overview)
+    - [**Alternate Champions Auto AI Behavior Summary**](#alternate-champions-auto-ai-behavior-summary)
+    - [**🎯 ALTERNATE 1: FAYNE - Decrease DEF/Weaken Specialist**](#-alternate-1-fayne---decrease-defweaken-specialist)
+    - [**🎯 ALTERNATE 1: FAYNE - Decrease DEF/Weaken Specialist**](#-alternate-1-fayne---decrease-defweaken-specialist-1)
+      - [**📋 FAYNE UNM BUILD GUIDE (FULL REBUILD FROM LEVEL 50)**](#-fayne-unm-build-guide-full-rebuild-from-level-50)
+    - [**🎯 ALTERNATE 2: BAD-EL-KAZAR - Sustain/Poison Specialist**](#-alternate-2-bad-el-kazar---sustainpoison-specialist)
+      - [**📋 BAD-EL-KAZAR UNM BUILD GUIDE**](#-bad-el-kazar-unm-build-guide)
+    - [**🎯 ALTERNATE 3: SKULLCRUSHER - Counterattack Specialist**](#-alternate-3-skullcrusher---counterattack-specialist)
+      - [**📋 SKULLCRUSHER UNM BUILD GUIDE**](#-skullcrusher-unm-build-guide)
+    - [**🎯 ALTERNATE 4: FROZEN BANSHEE - Poison Specialist**](#-alternate-4-frozen-banshee---poison-specialist)
+      - [**📋 FROZEN BANSHEE UNM BUILD GUIDE (REBUILD FROM LEVEL 50)**](#-frozen-banshee-unm-build-guide-rebuild-from-level-50)
+    - [**🎯 ALTERNATE 5: TAYREL - Decrease DEF/ATK Specialist (PENDING JSON)**](#-alternate-5-tayrel---decrease-defatk-specialist-pending-json)
+    - [**🎯 ALTERNATE 6: VENOMAGE - Poison/Decrease DEF/Ally Protection Specialist**](#-alternate-6-venomage---poisondecrease-defally-protection-specialist)
+    - [**🎯 ALTERNATE 7: RECTOR DRATH - Revive/Cleanse/Block Debuffs Specialist**](#-alternate-7-rector-drath---revivecleanseblock-debuffs-specialist)
+    - [**🎯 ALTERNATE 8: NINJA - HP Burn Activation Specialist** ⭐⭐ **HIGH PRIORITY**](#-alternate-8-ninja---hp-burn-activation-specialist--high-priority)
+    - [**🎯 ALTERNATE 9: DEACON ARMSTRONG - TM Control/Decrease DEF/Leech Specialist**](#-alternate-9-deacon-armstrong---tm-controldecrease-defleech-specialist)
+    - [**🎯 ALTERNATE 10: ARBITER - Revive/TM Boost/Speed Lead Specialist**](#-alternate-10-arbiter---revivetm-boostspeed-lead-specialist)
+    - [**🎯 ALTERNATE 11: DARK KAEL - Poison/Poison Sensitivity/Debuff Extension Specialist**](#-alternate-11-dark-kael---poisonpoison-sensitivitydebuff-extension-specialist)
+    - [**🎯 ALTERNATE 12: MAUSOLEUM MAGE - Cleanse/Block Debuffs/Speed Buff Specialist**](#-alternate-12-mausoleum-mage---cleanseblock-debuffsspeed-buff-specialist)
+    - [**🎯 ALTERNATE 13: TAGOAR - Shield/Heal/Buff Extension Specialist**](#-alternate-13-tagoar---shieldhealbuff-extension-specialist)
+    - [**🎯 ALTERNATE 14: WARCHIEF - Shield/Heal/DEF Scaling Specialist** ⭐ **HIGH SYNERGY WITH BROGNI**](#-alternate-14-warchief---shieldhealdef-scaling-specialist--high-synergy-with-brogni)
+    - [**🎯 ALTERNATE 16: LEONARDO - Unkillable/Counterattack/DEF Scaling Specialist | TMNT SYNERGY**](#-alternate-16-leonardo---unkillablecounterattackdef-scaling-specialist--tmnt-synergy)
+      - [**Why Leonardo is EXCEPTIONAL for UNM Clan Boss:**](#why-leonardo-is-exceptional-for-unm-clan-boss)
+      - [**Leonardo UNM Clan Boss Build Plan:**](#leonardo-unm-clan-boss-build-plan)
+      - [**Swap Scenarios:**](#swap-scenarios)
+      - [**Damage Projection:**](#damage-projection)
+      - [**Investment Requirements:**](#investment-requirements)
+      - [**Actionable Advice:**](#actionable-advice)
+    - [**🎯 ALTERNATE 17: MICHELANGELO - Debuffer/Ally Join Attack Specialist | TMNT SYNERGY**](#-alternate-17-michelangelo---debufferally-join-attack-specialist--tmnt-synergy)
+      - [**Why Michelangelo is VIABLE for UNM Clan Boss (with Leonardo):**](#why-michelangelo-is-viable-for-unm-clan-boss-with-leonardo)
+      - [**Michelangelo UNM Clan Boss Build Plan (if pursuing TMNT duo):**](#michelangelo-unm-clan-boss-build-plan-if-pursuing-tmnt-duo)
+      - [**Swap Scenarios (Michelangelo + Leonardo TMNT Duo):**](#swap-scenarios-michelangelo--leonardo-tmnt-duo)
+      - [**Damage Projection (Michelangelo in TMNT duo):**](#damage-projection-michelangelo-in-tmnt-duo)
+      - [**Investment Requirements:**](#investment-requirements-1)
+      - [**Actionable Advice:**](#actionable-advice-1)
+    - [**🎯 TMNT UNITY TEAM COMPOSITION - Leonardo + Michelangelo Unkillable Synergy**](#-tmnt-unity-team-composition---leonardo--michelangelo-unkillable-synergy)
+      - [**Team Archetype**: Unkillable + Counterattack + Unity Ally Join Attack](#team-archetype-unkillable--counterattack--unity-ally-join-attack)
+      - [**Recommended Team Composition:**](#recommended-team-composition)
+      - [**Speed Tune (1:1 Ratio, 171-191 SPD):**](#speed-tune-11-ratio-171-191-spd)
+      - [**Gear Requirements:**](#gear-requirements)
+      - [**Masteries:**](#masteries)
+      - [**Investment Timeline:**](#investment-timeline)
+      - [**Projected Performance:**](#projected-performance)
+      - [**Pros \& Cons:**](#pros--cons)
+      - [**Critical Decision Points:**](#critical-decision-points)
+      - [**Actionable Advice (TMNT Duo Path):**](#actionable-advice-tmnt-duo-path)
+    - [**🎯 USER-PREFERRED CORE TEAM - Brogni + Ninja + Leonardo + Rector + Flex**](#-user-preferred-core-team---brogni--ninja--leonardo--rector--flex)
+      - [**🔥 RECOMMENDED TEAM COMPOSITION:**](#-recommended-team-composition)
+      - [**🤔 SLOT 5 DECISION: Michelangelo vs. Stag Knight vs. Other Options**](#-slot-5-decision-michelangelo-vs-stag-knight-vs-other-options)
+      - [**🏆 RECOMMENDED PATH: Michelangelo for Maximum Damage**](#-recommended-path-michelangelo-for-maximum-damage)
+      - [**⚡ SPEED TUNE (1:1 Ratio, 171-191 SPD):**](#-speed-tune-11-ratio-171-191-spd)
+      - [**🎯 ACTIONABLE NEXT STEPS:**](#-actionable-next-steps)
+      - [**💰 INVESTMENT SUMMARY:**](#-investment-summary)
+      - [**🔥 FINAL RECOMMENDATION:**](#-final-recommendation)
+  - [**UPDATED ALTERNATE CHAMPION PRIORITY RANKING**](#updated-alternate-champion-priority-ranking)
+  - [**🧪 POISON-FOCUSED TEAM COMPOSITION** ⭐ **NEW STRATEGY**](#-poison-focused-team-composition--new-strategy)
+    - [**Core Poison Team (Recommended Build)**](#core-poison-team-recommended-build)
+    - [**Poison Damage Mechanics (Understanding the Math)**](#poison-damage-mechanics-understanding-the-math)
+    - [**Speed Tune Explanation (1:1 Tune, No Stun Target)**](#speed-tune-explanation-11-tune-no-stun-target)
+    - [**Alternate Poison Compositions**](#alternate-poison-compositions)
+      - [**Option A: ULTRA-SUSTAIN POISON TEAM** (70-85M potential)](#option-a-ultra-sustain-poison-team-70-85m-potential)
+      - [**Option B: BUDGET POISON TEAM** (50-65M potential)](#option-b-budget-poison-team-50-65m-potential)
+    - [**Gear Requirements (Critical Stats for Poison Team)**](#gear-requirements-critical-stats-for-poison-team)
+    - [**Masteries for Poison Team (Critical Paths)**](#masteries-for-poison-team-critical-paths)
+    - [**Blessings for Poison Team**](#blessings-for-poison-team)
+    - [**Damage Projection (Poison Team)**](#damage-projection-poison-team)
+    - [**Investment Timeline (Poison Team)**](#investment-timeline-poison-team)
+    - [**Poison Team vs Current Team (Comparison)**](#poison-team-vs-current-team-comparison)
+  - [**IMPLEMENTATION PRIORITY ORDER**](#implementation-priority-order)
+    - [**Phase 1: IMMEDIATE WINS** (10-17 days, LOW investment, +10-15% damage)](#phase-1-immediate-wins-10-17-days-low-investment-10-15-damage)
+    - [**Phase 2: MEDIUM INVESTMENTS** (2-4 weeks, +20-40% damage)](#phase-2-medium-investments-2-4-weeks-20-40-damage)
+      - [**Option A: Skullcrusher Counterattack Build** ⭐ **HIGHEST DAMAGE POTENTIAL**](#option-a-skullcrusher-counterattack-build--highest-damage-potential)
+      - [**Option B: Poison Extension Build (Dark Kael + Frozen Banshee)** ⭐ **EASIER, SAFER**](#option-b-poison-extension-build-dark-kael--frozen-banshee--easier-safer)
+    - [**Phase 3: FINAL OPTIMIZATIONS** (6-10 weeks, +30-50% damage, 80M+ goal)](#phase-3-final-optimizations-6-10-weeks-30-50-damage-80m-goal)
+      - [**Option A: Complete Counterattack Comp** (4-6 weeks)](#option-a-complete-counterattack-comp-4-6-weeks)
+      - [**Option B: Complete Poison Team** (6-10 weeks)](#option-b-complete-poison-team-6-10-weeks)
+  - [**PROJECTED FINAL PERFORMANCE**](#projected-final-performance)
+  - [**AFFINITY ROTATION STRATEGY**](#affinity-rotation-strategy)
+    - [**Current Team Affinity Breakdown**](#current-team-affinity-breakdown)
+    - [**Weekly Team Adjustments**](#weekly-team-adjustments)
+      - [**Force Week** (Current Team OPTIMAL)](#force-week-current-team-optimal)
+      - [**Spirit Week** (Fayne Risk)](#spirit-week-fayne-risk)
+      - [**Magic Week** (Geomancer/Brogni/Godseeker Risk)](#magic-week-geomancerbrognigodseeker-risk)
+      - [**Void Week** (All Neutral)](#void-week-all-neutral)
+    - [**Affinity Priority Ranking**](#affinity-priority-ranking)
+    - [**Implementation Timeline**](#implementation-timeline)
+  - [Team Stat Reference](#team-stat-reference)
+  - [UNM Clan Boss Mechanics Reference](#unm-clan-boss-mechanics-reference)
     - [Speed Tune Options](#speed-tune-options)
     - [Champion Stat Goals (UNM)](#champion-stat-goals-unm)
     - [Boss Mechanics](#boss-mechanics)
     - [Affinity Risks](#affinity-risks)
-14. [Survivability & Stat Safety Analysis](#survivability--stat-safety-analysis)
+  - [Survivability \& Stat Safety Analysis](#survivability--stat-safety-analysis)
     - [Effective HP Calculation](#effective-hp-calculation)
-    - [Current Team Effective HP Table](#current-team-effective-hp-table--updated-2025-11-02)
+    - [Current Team Effective HP Table ✅ **UPDATED 2025-11-02**](#current-team-effective-hp-table--updated-2025-11-02)
     - [HP vs DEF% Boots Trade-Off Analysis](#hp-vs-def-boots-trade-off-analysis)
-15. [Working Section - Data Collection Flow](#working)
-    - [Data Collection Flow](#data-collection-flow)
-    - [Expected Analysis Output](#expected-analysis-output-after-data-received)
-16. [Validation & Documentation Standards](#validation--documentation-standards)
-    - [Sources Cited](#sources-cited)
-    - [Confidence Level](#confidence-level)
-    - [Assumptions & Uncertainties](#assumptions--uncertainties)
-    - [Testing & Validation Requirements](#testing--validation-requirements)
-    - [Simulation Notes](#simulation-notes)
-17. [Update Notes & Version History](#update-notes--version-history)
-18. [File Metadata](#file-metadata)
+  - [**WORKING**](#working)
+    - [**Data Collection Flow**](#data-collection-flow)
+    - [**Expected Analysis Output** (After data received)](#expected-analysis-output-after-data-received)
+  - [**Validation \& Documentation Standards**](#validation--documentation-standards)
+    - [**Sources Cited**](#sources-cited)
+    - [**Confidence Level**](#confidence-level)
+    - [**Assumptions \& Uncertainties**](#assumptions--uncertainties)
+    - [**Testing \& Validation Requirements**](#testing--validation-requirements)
+    - [**Simulation Notes**](#simulation-notes)
+  - [**Update Notes \& Version History**](#update-notes--version-history)
+    - [**Version 2.0 - Complete Alternate Champions \& Poison Team Strategy** (2025-11-02)](#version-20---complete-alternate-champions--poison-team-strategy-2025-11-02)
+    - [**Version 1.1 - Goal Update \& Boss Stats Correction** (2025-10-30)](#version-11---goal-update--boss-stats-correction-2025-10-30)
+    - [**Version 1.0 - Initial Setup** (2025-10-27)](#version-10---initial-setup-2025-10-27)
+  - [**FILE METADATA**](#file-metadata)
 
 ---
 
@@ -2874,7 +2940,8 @@ Target Build:
 
 ### **🎯 ALTERNATE 14: WARCHIEF - Shield/Heal/DEF Scaling Specialist** ⭐ **HIGH SYNERGY WITH BROGNI**
 **Role:** Shield + Heal + Provoke + DEF Scaling  
-**Why Consider:** **Perfect Brogni synergy** - Shield on A2 (stacks with Brogni), Heal on A3, DEF-scaling damage, Force affinity strong. Provoke useless vs UNM but heal/shield carry.
+**Why Consider:** **Perfect Brogni synergy** - Shield on A2 (stacks with Brogni), Heal on A3, DEF-scaling damage, Force affinity strong. Provoke useless vs UNM but heal/shield carry. Passive also heals those unde a sheild by 25
+% of damsage recieved to shield, on top of Brogni's passive.
 
 **Base Stats:** HP 18,990 | ATK 848 | DEF 1,465 | SPD 102 | Force affinity (**STRONG** vs UNM Force = weak hits = -15% damage taken)
 
@@ -2918,12 +2985,865 @@ Target Build:
 
 ---
 
+### **🎯 ALTERNATE 16: LEONARDO - Unkillable/Counterattack/DEF Scaling Specialist | TMNT SYNERGY**
+
+**Champion:** Leonardo (Shadowkin, Void, Legendary, Defense)  
+**Owned:** ✅ YES (1 copy) - **BRAND NEW TMNT EVENT CHAMPION (October 2025)**  
+**Current Build Status:** ❌ NOT YET BUILT (freshly scraped, 2025-11-06)  
+**Champion Dictionary:** ✅ COMPLETED (`input/Champion_Dictionary/Complete/Leonardo.json`)
+
+**Meta Ratings (from dictionary):**
+- Clan Boss: **10/10** ⭐⭐⭐⭐⭐ **PREMIUM CB CHAMPION**
+- Dungeons: 9/10
+- Doom Tower: 9/10
+- Arena: 9/10
+- Faction Wars: 9/10
+
+---
+
+#### **Why Leonardo is EXCEPTIONAL for UNM Clan Boss:**
+
+**CRITICAL MECHANICS:**
+
+1. **Unkillable Buff on 3-turn Cooldown (A2 "Shell Yeah!")**
+   - **GAME-CHANGER**: Self-unkillable for 2 turns, 3-turn CD when fully booked
+   - **Enables SAFE cheese comp**: Leonardo can cycle Unkillable indefinitely (191 SPD speed tune)
+   - **Stacks with Counterattack**: A2 also places Counterattack on self for 2 turns
+   - **Team protection**: Places 60% Inc DEF + 50% Ally Protection on all allies
+
+2. **DEF-Scaling Damage (A1 1.7x DEF, A3 3.4x DEF)**
+   - **Tank + Nuker**: Can build full DEF% gear and still deal massive damage
+   - **Synergy with current team**: Brogni (DEF-scaling), Warchief (DEF-scaling) - all benefit from Inc DEF buff
+   - **Void affinity**: SAFE on all CB affinities (never weak hits)
+
+3. **Unity Passive - Ally Join Attack (Passive "Hero in a Half Shell")**
+   - **MASSIVE with Michelangelo**: Every time Michelangelo attacks, Leonardo joins
+   - **Michelangelo A1 = 2 hits**: Leonardo joins 2× per Michangelo turn
+   - **Damage multiplication**: In a TMNT team, Leonardo attacks 3-5× more often than normal
+   - **Stoneskin proc**: When HP drops below 50%, gains Stoneskin for 1 turn (extra survivability)
+
+4. **33% DEF Aura (All Battles)**
+   - **Universal aura**: Benefits entire team (Brogni, Warchief, Leonardo all DEF-scaling)
+   - **Stacks with Inc DEF**: 60% Inc DEF + 33% aura = massive DEF boost
+
+**Current Stats:** NOT YET BUILT  
+**Target Stats for UNM (Speed Tune 171-191 SPD):**
+- **DEF**: 3000-3500+ (primary damage stat + survivability)
+- **HP**: 40k-50k+ (secondary survivability)
+- **SPD**: 171-191 (1:1 tune, potentially slowest for stun target if using Unkillable rotation)
+- **C.RATE**: 100% (crit capped for Warmaster procs)
+- **C.DMG**: 200-250%
+- **ACC**: 200-250 (optional - no debuffs in kit, but helps with potential support role)
+- **RES**: 220+ (optional - resist CB Dec SPD debuff)
+
+**Recommended Gear:**
+- **Primary**: Lifesteal (4pc) + Speed (2pc) OR Stalwart (4pc) + Immortal (2pc)
+- **Stats Priority**: DEF% > C.RATE > C.DMG > SPD > HP% > ACC
+- **Artifacts**:
+  - Chest: DEF%
+  - Gloves: C.RATE (until capped) or DEF%
+  - Boots: SPD (to hit 171-191 tune)
+  - Ring: DEF
+  - Amulet: C.DMG
+  - Banner: DEF
+
+**Recommended Masteries (from Leonardo dictionary):**
+- **Offense**: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, Kill Streak, Helmsmasher (T6)
+- **Defense**: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution
+
+**Recommended Blessings:**
+- **Best**: Crushing Rend (damage scales with max DEF)
+- **Alternative**: Brimstone (poison for extra CB damage)
+
+**Skills Analysis:**
+
+**A1 - New York Slice** (1.7 DEF multiplier, 2 hits)
+- Attacks 1 enemy 2 times
+- **When counterattacking**: Repeats attack on random enemy (4 total hits!)
+- Ignores 3% DEF per buff on Leonardo (max 15% at 5 buffs)
+- **Synergy with A2**: With Unkillable + Counterattack + Inc DEF + Ally Protection = 4 buffs = 12% DEF ignore
+- **Book value**: +20% damage (Medium priority - A2/A3 books more important)
+
+**A2 - Shell Yeah!** (3-turn CD when booked) ⭐ **CORNERSTONE SKILL**
+- **60% Inc DEF** on all allies for 2 turns
+- **50% Ally Protection** on all allies except Leonardo for 2 turns
+- **Unkillable** on Leonardo for 2 turns
+- **Counterattack** on Leonardo for 2 turns
+- **Cooldown**: 5 turns base → **3 turns fully booked** ⭐ **MUST BOOK**
+- **Book value**: **HIGHEST PRIORITY** - enables 3-turn Unkillable cycle
+
+**A3 - Turtles Together** (3.4 DEF multiplier, AOE) 
+- AOE attack, 3.4 DEF scaling
+- **Damage scales by 5% per buff** on all allies and enemies
+  - With full team buffs (10+ buffs): +50% damage!
+- **Buff strip**: Removes ALL buffs from enemies if attack kills (cannot be resisted)
+- **Unity bonuses** (with other Turtles):
+  - 1 Turtle: Ignore 15% DEF per Turtle (not counting Leonardo)
+    - **With Michelangelo**: 15% DEF ignore
+  - 2 Turtles: Damage scales with missing HP (clutch mechanic)
+  - 3 Turtles: Auto-activates when ally drops below 50% HP
+- **Cooldown**: 4 turns base → **3 turns fully booked**
+- **Book value**: **HIGH PRIORITY** - +30% damage + -1 CD
+
+**Passive - Hero in a Half Shell** ⭐ **TMNT SYNERGY**
+- **Stoneskin proc**: When HP drops below 50%, gains Stoneskin for 1 turn
+- **Ally Join Attack**: Joins whenever Leonardo, Donatello, Michelangelo, or Raphael attacks
+  - **WITH MICHELANGELO**: Leonardo joins every Michelangelo attack
+  - **Michelangelo A1 = 2 hits**: Leonardo attacks 2× extra per Michelangelo turn
+  - **Damage multiplication**: Can add 20-30% extra damage in TMNT teams
+
+---
+
+#### **Leonardo UNM Clan Boss Build Plan:**
+
+**Status**: ❌ NOT YET BUILT (Leonardo freshly added 2025-11-06)
+
+**Step 1 - SPEED TUNE** 🎯 **Enables 3-turn Unkillable cycle**
+- **Action**: Build to 171-191 SPD (1:1 tune) OR 191 SPD (slowest stun target)
+- **Result**: Leonardo A2 cycles every 3 turns = Unkillable + Counterattack uptime
+- **Gear**: Speed boots or heavy SPD substats
+- **Difficulty**: ⭐⭐ MEDIUM (requires SPD substat farming)
+
+**Step 2 - BOOK A2 AND A3** 🎯 **+40M+ damage potential**
+- **Action**: Fully book A2 (5→3 CD) and A3 (4→3 CD, +30% damage)
+- **Result**: 3-turn Unkillable cycle enables SAFE sustained damage
+- **Why**: Without books, A2 = 5-turn CD (Unkillable gaps = team deaths)
+- **Difficulty**: ⭐⭐⭐⭐⭐ **CRITICAL** - Legendary books (9 total, scarce resource)
+- **Timeline**: 2-3 months of book accumulation OR immediate if books available
+
+**Step 3 - DEF% STACKING + CRIT CAP** 🎯 **+30M+ base damage**
+- **Action**: Build 3000-3500+ DEF, 100% C.RATE, 200+ C.DMG
+- **Result**: DEF-scaling damage + Warmaster procs = massive sustained DPS
+- **Why**: DEF scales both survivability AND damage (A1 1.7x, A3 3.4x DEF)
+- **Difficulty**: ⭐⭐⭐ MEDIUM (Lifesteal + Speed gear farming)
+
+**Step 4 - MASTERIES** 🎯 **+15-20M damage (Warmaster procs)**
+- **Action**: Farm Helmsmasher (T6 Offense) + Defense tree (Retribution)
+- **Result**: 60% proc chance on skills for 75k bonus damage
+- **Difficulty**: ⭐⭐ MEDIUM (800 gems OR 2-3 days Minotaur farming)
+
+**Note**: Leonardo is **PREMIUM** for UNM but requires **FULL INVESTMENT** (books, masteries, 60, gear). If books available, this is a **GAME-CHANGING** champion. Pair with Michelangelo for Unity synergy.
+
+---
+
+#### **Swap Scenarios:**
+
+**Option A: Leonardo Replaces Godseeker Aniri (Unkillable Sustain)**
+- **Team**: Geomancer, Brogni, Stag Knight, Mithrala, **Leonardo**
+- **Pros**:
+  - Leonardo Unkillable = eliminates need for healer/reviver
+  - DEF-scaling damage adds 30-40M (Godseeker adds ~15M)
+  - Void affinity (vs Godseeker Spirit = weak on Force CB)
+  - Ally Protection + Inc DEF = team survives longer
+  - Counterattack damage (A1 repeat hits)
+- **Cons**:
+  - Loses Godseeker buff extension (Brogni shields shorter duration)
+  - Loses revive safety net
+  - Requires FULL books (9 Legendary books)
+- **Projected Damage**: **53M → 75-85M** (Leonardo adds 30-40M DPS + Unkillable survivability)
+
+**Option B: Leonardo + Michelangelo TMNT Duo (Unity Synergy)**
+- **Team**: Leonardo, Michelangelo, Brogni, Stag Knight, [Flex: Godseeker/Mithrala/Warchief]
+- **Pros**:
+  - **Unity Ally Join Attack**: Leonardo joins every Michelangelo attack (2× damage from Leonardo)
+  - **Michelangelo A1 = 2 hits**: Leonardo attacks extra 2× per Michelangelo turn
+  - **Michelangelo debuffs**: Dec DEF 60% + Dec ATK 50% + Leech = team sustain
+  - **15% DEF ignore**: Leonardo A3 with 1 Turtle ally (Michelangelo)
+  - Both DEF-scaling (Leonardo) + ATK-scaling (Michelangelo) = balanced damage
+  - **Void + Spirit**: Leonardo Void (safe all affinities), Michelangelo Spirit (weak Magic only)
+- **Cons**:
+  - Michelangelo NOT optimized for CB (built for Arena currently)
+  - Requires rebuilding Michelangelo for CB (SPD tune, ACC 250+, Lifesteal gear)
+  - Two Legendary book requirements (Leonardo 9, Michelangelo 10)
+- **Projected Damage**: **53M → 90-110M** (Leonardo 40M + Michelangelo 25M + Unity synergy 20-30M + Ally Join 15-20M)
+
+**Option C: Leonardo + Warchief + Brogni (Triple DEF-Scaling)**
+- **Team**: Leonardo (lead), Brogni, Warchief, Stag Knight, [Flex: Godseeker/Mithrala/Bad-el]
+- **Pros**:
+  - **33% DEF aura** (Leonardo) benefits Brogni, Warchief, Leonardo
+  - **Triple DEF-scaling damage**: Leonardo (3.4x), Brogni (3.5x), Warchief (4.5x)
+  - **Stacked shields**: Leonardo Ally Protection 50% + Brogni 60% HP shield + Warchief 25% HP shield = 135% HP protection
+  - **Inc DEF synergy**: Leonardo A2 60% Inc DEF = all 3 DEF champions hit harder
+  - All tanky (3000+ DEF) = survives 50+ turns
+- **Cons**:
+  - Warchief NOT built yet (needs 60, books, gear)
+  - Three DEF champions = may lack debuff coverage (needs Stag Knight Dec DEF mandatory)
+- **Projected Damage**: **53M → 85-100M** (Triple DEF-scaling + stacked survivability = 50+ turns)
+
+**RECOMMENDATION**: **Start with Option A** (Leonardo replaces Godseeker) to test Unkillable cycle. If successful, **THEN consider Option B** (Leonardo + Michelangelo TMNT duo) for maximum damage potential. Option C requires building Warchief from scratch (longer timeline).
+
+---
+
+#### **Damage Projection:**
+
+**Solo Leonardo (replaces Godseeker Aniri):**
+- **Current Baseline**: 53M (Geomancer 20M, Brogni 15M, Stag 8M, Mithrala 5M, Godseeker 5M)
+- **Leonardo Contribution**:
+  - A1 counterattack: 1.7 DEF × 2 hits × 50 turns × 60% Warmaster = ~15M
+  - A3 nuke: 3.4 DEF × 16-20 uses × +50% buff scaling = ~20M
+  - Survivability boost (Unkillable + Ally Protection): +5-10 extra turns = +10M team damage
+- **Projected Total**: **75-85M** (53M baseline - 5M Godseeker + 30-40M Leonardo)
+
+**Leonardo + Michelangelo TMNT Duo:**
+- **Leonardo Contribution**: 40M (as above, with Unity bonuses)
+- **Michelangelo Contribution**:
+  - A1 double-hit: 2.0 ATK × 2 × 50 turns = ~15M
+  - A2 Dec DEF nuke: 6.0 ATK × 16 uses = ~8M
+  - A3 AOE Dec ATK: 5.0 ATK × 12 uses = ~7M (not AOE in CB, single-target)
+  - Leech sustain: Team survives +10 turns = +10M team damage
+- **Unity Ally Join Attack**:
+  - Leonardo joins Michelangelo A1: 1.7 DEF × 2 hits × 50 Michelangelo turns = ~15-20M **EXTRA**
+- **Projected Total**: **90-110M** (Leonardo 40M + Michelangelo 25M + Unity 20-30M + synergy bonuses 15M)
+
+---
+
+#### **Investment Requirements:**
+
+**Immediate (Week 1):**
+- ❌ NOT STARTED - Leonardo currently level 1, ungeared
+- **Time**: 3-5 days (level 60, ascend 6★, farm basic Lifesteal + Speed gear)
+
+**Short-Term (Weeks 2-4):**
+- **Books**: 9 Legendary books (CRITICAL - A2 and A3 must be fully booked)
+  - Book priority: A2 first (5→3 CD), then A3 (4→3 CD + damage), A1 last
+- **Masteries**: Helmsmasher (Offense T6) + Defense tree
+  - **Time**: 800 gems instant OR 2-3 days Minotaur 15 farming (1800 total scrolls)
+- **Gear**: Lifesteal 4pc + Speed 2pc (3000+ DEF, 100% C.RATE, 171-191 SPD)
+  - **Farm**: Dragon 25 (Lifesteal + Speed sets)
+  - **Time**: 1-2 weeks optimized farming
+
+**Long-Term (Weeks 4-8, if pursuing TMNT duo):**
+- **Michelangelo rebuild**: Currently Arena build (ATK-focused, high SPD)
+  - **Target stats**: 3000+ ATK, 250+ ACC, 171-189 SPD, 100% C.RATE, Lifesteal 4pc
+  - **Books**: 10 Legendary books (already partially booked for Arena - check current state)
+  - **Masteries**: Giant Slayer (Offense T6) - 30% proc per hit (A1 2-hit = 60% proc chance)
+  - **Time**: 2-3 weeks regearing + booking
+
+---
+
+#### **Actionable Advice:**
+
+**IMMEDIATE NEXT STEPS:**
+1. **Level Leonardo to 60** (3-5 days, use XP boosts + Campaign farming)
+2. **Ascend to 6★** (farm potions from Keeps, ~1-2 days)
+3. **Check book availability**: Do you have 9+ Legendary books saved?
+   - **IF YES**: Fully book Leonardo (A2 and A3 priority) → Build for UNM
+   - **IF NO**: Put on hold until books accumulate (2-3 months)
+4. **Farm basic Lifesteal + Speed gear** (Dragon 25, target 3000+ DEF, 171-191 SPD, 100% C.RATE)
+5. **Test in UNM** (vs current team): Leonardo vs Godseeker Aniri damage comparison
+
+**LONG-TERM (if successful):**
+6. **Consider TMNT duo**: Rebuild Michelangelo for CB (Lifesteal, ACC 250+, SPD tune)
+7. **Test Unity synergy**: Measure damage increase from Ally Join Attack
+8. **Optimize**: Fine-tune SPD (191 slowest for stun target OR 171-189 for 1:1 tune)
+
+**CAUTION**: Leonardo is **PREMIUM** but requires **HEAVY INVESTMENT** (9 Legendary books). Only build if books available OR willing to wait 2-3 months for accumulation. If books available NOW, **Leonardo is GAME-CHANGING** for UNM.
+
+---
+
+### **🎯 ALTERNATE 17: MICHELANGELO - Debuffer/Ally Join Attack Specialist | TMNT SYNERGY**
+
+**Champion:** Michelangelo (Banner Lords, Spirit, Legendary, Attack)  
+**Owned:** ✅ YES (1 copy) - **BUILT FOR ARENA** (current state)  
+**Current Build Status:** ⚠️ **ARENA BUILD** (not optimized for Clan Boss)  
+**Champion Dictionary:** ✅ COMPLETED (`input/Champion_Dictionary/Complete/Michelangelo.json`)
+
+**Meta Ratings (from dictionary):**
+- Clan Boss: 7/10 (decent, not premium)
+- Dungeons: 9/10
+- Doom Tower: 9/10
+- Arena: **9/10** ⭐ **CURRENT ROLE**
+- Faction Wars: 9/10
+
+---
+
+#### **Why Michelangelo is VIABLE for UNM Clan Boss (with Leonardo):**
+
+**CRITICAL MECHANICS:**
+
+1. **Ally Join Attack Passive (Passive "Party Dude")**
+   - **Triggers Leonardo**: Every time Michelangelo attacks, Leonardo joins
+   - **A1 = 2 hits**: Leonardo attacks 2× extra per Michelangelo turn
+   - **Damage multiplication**: Massive damage boost for Leonardo
+
+2. **Debuff Kit (Dec DEF 60%, Dec ATK 50%, Leech)**
+   - **A2**: Dec DEF 60% + Debuff Spread (single-target → all enemies, wasted in CB)
+   - **A3**: Dec ATK 50% + Leech (team sustain)
+   - **Ignore 25% RES on crit**: High debuff land rate with 100% C.RATE
+
+3. **Self-Buff (Inc ATK 50% on A1 crit)**
+   - **A1**: 2-hit attack, places Inc ATK on self for 2 turns if either hit crits
+   - **Damage boost**: +50% ATK for sustained damage
+
+4. **70 ACC Aura (All Battles)**
+   - **Useful**: Helps team hit 250+ ACC for debuffs
+   - **Not ideal**: Mithrala +80 ACC aura better (already in team)
+
+**Current Stats:** **ARENA BUILD** (assumed high SPD, ATK-focused, possibly low ACC for CB)  
+**Target Stats for UNM (if rebuilding for CB):**
+- **ATK**: 3000-4000+ (primary damage stat)
+- **HP**: 35k-45k+ (survivability)
+- **SPD**: 171-189 (1:1 tune, NOT fastest - want Leonardo faster for Unkillable cycle)
+- **C.RATE**: 100% (crit capped for Ignore RES mechanic + Warmaster procs)
+- **C.DMG**: 200-250%
+- **ACC**: 250+ (Dec DEF, Dec ATK, Leech must land)
+- **RES**: 220+ (optional - resist CB Dec SPD debuff)
+
+**Recommended Gear (for CB, NOT current Arena build):**
+- **Primary**: Lifesteal (4pc) + Perception (2pc) OR Speed (2pc)
+- **Stats Priority**: ATK% > C.RATE > C.DMG > SPD > ACC > HP%
+- **Artifacts**:
+  - Chest: ATK%
+  - Gloves: C.RATE (until capped) or ATK%
+  - Boots: SPD (to hit 171-189 tune)
+  - Ring: ATK
+  - Amulet: C.DMG
+  - Banner: ACC (to hit 250+)
+
+**Recommended Masteries:**
+- **Offense**: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, Giant Slayer (T6) - 30% proc per hit, A1 = 2 hits = 60% proc chance
+- **Support/Defense**: Cycle of Magic, Lasting Gifts, Delay Death
+
+**Recommended Blessings:**
+- **Best**: Cruelty (extra damage on crits)
+- **Alternative**: Brimstone (poison for extra CB damage)
+
+**Skills Analysis:**
+
+**A1 - Boo-Yah!** (2.0 ATK multiplier, 2 hits)
+- Attacks 1 enemy 2 times
+- **Inc ATK 50%** on self for 2 turns if either hit crits
+- **Synergy with Leonardo**: Leonardo joins for 2× extra attacks per Michelangelo turn
+- **Book value**: +20% damage
+
+**A2 - Express Delivery!** (6.0 ATK multiplier, Dec DEF + Stun + Debuff Spread)
+- **Dec DEF 60%** + Stun for 1 turn (Stun wasted on CB - immune)
+- **Debuff Spread**: Takes all debuffs from target and places on all enemies (wasted in CB - single target)
+- **Ignore 25% RES on crit**: High land rate for Dec DEF
+- **Cooldown**: 4 turns base → **3 turns fully booked**
+- **Book value**: **HIGH PRIORITY** - +25% debuff chance + -1 CD
+
+**A3 - Shell Cyclone** (5.0 ATK multiplier, AOE Dec ATK + Leech)
+- **Dec ATK 50%** + Leech for 2 turns (wasted AOE in CB - single target)
+- **Taunt** on self for 2 turns (helps with Passive evade synergy)
+- **Ignore 25% RES on crit**: High land rate
+- **Cooldown**: 5 turns base → **4 turns fully booked**
+- **Book value**: **HIGH PRIORITY** - +25% debuff chance + -1 CD
+
+**Passive - Party Dude** (Ally Join Attack + Evade + Shield)
+- **Evade**: 15% chance (30% under Taunt) - minor survivability
+- **Ally Join Attack**: Joins when Leonardo, Donatello, Michelangelo, or Raphael attacks
+  - **Michelangelo joins Leonardo attacks** = extra damage
+- **Shield**: 300% ATK shield on self when hit (1-turn CD)
+  - **With 4k ATK**: 12k shield per hit = solid survivability
+
+---
+
+#### **Michelangelo UNM Clan Boss Build Plan (if pursuing TMNT duo):**
+
+**Status**: ⚠️ **ARENA BUILD** (requires full rebuild for CB)
+
+**Step 1 - REGEAR FROM ARENA TO CB** 🎯 **Enables CB viability**
+- **Action**: Swap Arena gear → Lifesteal 4pc + Perception 2pc
+- **Current**: Likely Speed + Savage/Cruel sets (high SPD, ATK, low ACC)
+- **Target**: 171-189 SPD, 250+ ACC, 3000+ ATK, 100% C.RATE, Lifesteal sustain
+- **Result**: Can land debuffs + survive CB damage
+- **Gear**: Farm Dragon 25 (Lifesteal) + Spider 25 (Perception)
+- **Difficulty**: ⭐⭐⭐ MEDIUM-HIGH (requires full regear, may break Arena build)
+
+**Step 2 - BOOK A2 AND A3** 🎯 **+15-20M damage potential**
+- **Action**: Check current book state (may already be partially booked for Arena)
+- **Target**: A2 (4→3 CD) and A3 (5→4 CD), both +25% debuff chance
+- **Result**: Dec DEF/ATK uptime, higher damage output
+- **Difficulty**: ⭐⭐⭐⭐ HIGH - Legendary books (10 total, may already have some)
+- **Timeline**: If not booked, 2-3 months accumulation
+
+**Step 3 - MASTERIES** 🎯 **+10-15M damage (Giant Slayer procs)**
+- **Action**: Farm Giant Slayer (T6 Offense) - 30% proc per hit, A1 = 2 hits = 60% proc
+- **Current**: May already have Helmsmasher from Arena build (less optimal for multi-hit)
+- **Result**: 60% proc rate on A1 for 75k bonus damage
+- **Difficulty**: ⭐⭐ MEDIUM (100 gems respec OR already has masteries)
+
+**Note**: Rebuilding Michelangelo for CB **BREAKS ARENA BUILD**. Only do this if committed to TMNT duo strategy OR have duplicate Michelangelo builds (requires 2nd set of gear).
+
+---
+
+#### **Swap Scenarios (Michelangelo + Leonardo TMNT Duo):**
+
+**Team Composition**: Leonardo, Michelangelo, Brogni, Stag Knight, [Flex: Godseeker/Mithrala/Bad-el]
+
+**Pros**:
+- **Unity Ally Join Attack**: Leonardo joins every Michelangelo attack (2× damage)
+- **Michelangelo debuffs**: Dec DEF 60% + Dec ATK 50% + Leech = team sustain
+- **15% DEF ignore**: Leonardo A3 with 1 Turtle ally
+- **Dual debuff coverage**: Stag Knight + Michelangelo = Dec DEF/ATK redundancy
+- **Michelangelo shield passive**: 300% ATK shield on hit = self-sustain
+- **Synergy bonuses**: Both DEF/ATK scaling = balanced damage types
+
+**Cons**:
+- **Michelangelo NOT optimized for CB**: Requires full rebuild (Lifesteal, ACC 250+, SPD tune)
+- **Breaks Arena build**: Regearing for CB = lose Arena performance (unless duplicate build)
+- **Two Legendary book requirements**: Leonardo 9 + Michelangelo 10 (if not already booked)
+- **Debuff overlap**: Dec DEF/ATK already covered by Stag Knight (some redundancy)
+- **Lower damage ceiling than dedicated CB champions**: Michelangelo 7/10 CB rating vs Geomancer 9/10
+
+**Projected Damage**: **90-110M** (see Leonardo section above)
+
+---
+
+#### **Damage Projection (Michelangelo in TMNT duo):**
+
+- **A1 double-hit**: 2.0 ATK × 2 × 50 turns × 60% Giant Slayer = ~15M
+- **A2 Dec DEF nuke**: 6.0 ATK × 16 uses × 75k Warmaster cap = ~8M
+- **A3 AOE Dec ATK**: 5.0 ATK × 12 uses (wasted AOE in CB) = ~7M
+- **Leech sustain**: Team survives +10 turns = +10M team damage
+- **Total Contribution**: **~25M** (before Unity synergy)
+
+**WITH Leonardo Unity Synergy:**
+- **Michelangelo joins Leonardo attacks**: Minor (Leonardo attacks less often than Michelangelo)
+- **Leonardo joins Michelangelo attacks**: **MAJOR** - 1.7 DEF × 2 hits × 50 Michelangelo turns = ~15-20M **EXTRA** for Leonardo
+
+**Combined TMNT Duo Total**: **90-110M** (Leonardo 40M + Michelangelo 25M + Unity 20-30M + synergy 15M)
+
+---
+
+#### **Investment Requirements:**
+
+**Immediate (Week 1):**
+- **Status check**: What is Michelangelo's current Arena build? (stats, gear sets, books)
+- **Decision point**: Commit to CB rebuild OR keep Arena build
+
+**Short-Term (Weeks 2-4, if rebuilding):**
+- **Regear**: Farm Lifesteal 4pc + Perception 2pc (Dragon 25 + Spider 25)
+  - **Time**: 1-2 weeks optimized farming
+- **Books**: Check current book state, fill remaining for A2/A3
+  - **If not booked**: 10 Legendary books total (2-3 months accumulation)
+- **SPD tune**: Adjust to 171-189 SPD (slower than Leonardo for Unkillable priority)
+
+**Long-Term (Weeks 4-8):**
+- **Masteries**: Giant Slayer (if not already Helmsmasher)
+  - **Time**: 100 gems respec OR 2-3 days Minotaur farming
+- **Test & optimize**: Run 5+ UNM battles, measure damage vs current team
+
+---
+
+#### **Actionable Advice:**
+
+**CRITICAL QUESTION**: **What is Michelangelo's current Arena build?**
+1. Check current stats (SPD, ATK, ACC, gear sets, books)
+2. Determine if books already invested for Arena (A2/A3 booked?)
+3. Decide: **Keep Arena build** OR **Rebuild for CB TMNT duo**
+
+**IF PURSUING TMNT DUO:**
+1. **Regear Michelangelo** for CB (Lifesteal + Perception, 171-189 SPD, 250+ ACC)
+2. **Build Leonardo first** (see Leonardo section) - validate Unkillable cycle works
+3. **Add Michelangelo AFTER** Leonardo proven successful
+4. **Test Unity synergy**: Measure damage increase from Ally Join Attack
+5. **Optimize team comp**: Leonardo + Michelangelo + Brogni + Stag Knight + [Flex]
+
+**IF KEEPING ARENA BUILD:**
+- **DON'T rebuild Michelangelo** for CB - not worth breaking Arena performance
+- **Focus on Leonardo solo** (replaces Godseeker Aniri) for 75-85M damage
+- **Consider other alternates**: Skullcrusher, Ninja, Bad-el for CB optimization
+
+**RECOMMENDATION**: **TEST LEONARDO SOLO FIRST** (replaces Godseeker). If damage is good (75-85M), **THEN consider** rebuilding Michelangelo for TMNT duo (90-110M potential). Don't rebuild Michelangelo until Leonardo proven successful.
+
+---
+
+### **🎯 TMNT UNITY TEAM COMPOSITION - Leonardo + Michelangelo Unkillable Synergy**
+
+#### **Team Archetype**: Unkillable + Counterattack + Unity Ally Join Attack
+
+**Core Concept**: Leonardo provides Unkillable + Counterattack on 3-turn cycle, Michelangelo triggers Leonardo's Ally Join Attack passive for massive damage multiplication.
+
+---
+
+#### **Recommended Team Composition:**
+
+**OPTION A: TMNT Duo + Current Core (Balanced)**
+| Slot | Champion | Role | Key Mechanic | SPD | Notes |
+|------|----------|------|--------------|-----|-------|
+| 1 | **Leonardo** (lead) | Unkillable + Counterattack + DEF DPS | Unkillable 3-turn cycle, 33% DEF aura | 191 | Slowest (stun target), DEF aura benefits Brogni |
+| 2 | **Michelangelo** | Debuffer + ATK DPS | Dec DEF 60%, Dec ATK 50%, Leech, Ally Join triggers Leonardo | 180-189 | Fast enough to apply debuffs early, slower than Leonardo for Unkillable priority |
+| 3 | **Underpriest Brogni** | Shield + HP Burn | 60% HP shield, HP Burn, DEF-scaling | 175-180 | Benefits from Leonardo DEF aura |
+| 4 | **Stag Knight** | Dec DEF/ATK backup | Dec DEF 60%, Dec ATK 50%, backup debuffs | 175-180 | Debuff redundancy with Michelangelo (safety) |
+| 5 | **Godseeker Aniri** OR **Bad-el-Kazar** | Sustain + Buff Extension OR Poison | Buff extension (Godseeker) OR Continuous Heal + Poison (Bad-el) | 171-175 | Sustain role, slowest DPS |
+
+**Projected Damage**: **90-110M**
+- Leonardo: 40M (DEF-scaling + Unkillable survivability + Unity joins)
+- Michelangelo: 25M (ATK-scaling + debuffs)
+- Brogni: 15M (HP Burn + shields)
+- Stag Knight: 10M (debuffs + damage)
+- Godseeker/Bad-el: 10-15M (sustain + buff extension/poison)
+- **Unity synergy**: +15-20M (Leonardo joins Michelangelo attacks)
+
+---
+
+**OPTION B: TMNT Duo + DEF-Scaling Focus (Triple DEF)**
+| Slot | Champion | Role | Key Mechanic | SPD | Notes |
+|------|----------|------|--------------|-----|-------|
+| 1 | **Leonardo** (lead) | Unkillable + Counterattack + DEF DPS | Unkillable 3-turn cycle, 33% DEF aura | 191 | Slowest (stun target), DEF aura benefits all DEF champions |
+| 2 | **Michelangelo** | Debuffer + ATK DPS | Dec DEF 60%, Dec ATK 50%, Leech | 180-189 | Debuff coverage |
+| 3 | **Underpriest Brogni** | Shield + HP Burn | 60% HP shield, HP Burn, DEF-scaling (3.5x DEF) | 175-180 | DEF aura benefit |
+| 4 | **Warchief** | Shield + DEF DPS | 25% HP shield, DEF-scaling (4.5x DEF) | 175-180 | DEF aura benefit, highest DEF multiplier |
+| 5 | **Bad-el-Kazar** OR **Mithrala** | Sustain + Poison OR Cleanse + Buffs | Continuous Heal + Leech + Poison OR Cleanse + Ally Protection | 171-175 | Sustain role |
+
+**Projected Damage**: **95-115M**
+- Leonardo: 45M (DEF-scaling + Unkillable + Unity + DEF aura boost)
+- Michelangelo: 25M (ATK-scaling + debuffs)
+- Brogni: 20M (HP Burn + DEF-scaling + DEF aura boost)
+- Warchief: 20M (DEF-scaling 4.5x + DEF aura boost)
+- Bad-el/Mithrala: 10-15M (sustain)
+- **Unity synergy**: +15-20M
+
+---
+
+#### **Speed Tune (1:1 Ratio, 171-191 SPD):**
+
+**Target SPD Ranges:**
+- **Leonardo**: 191 SPD (slowest, stun target) OR 171-180 (if using different stun target)
+- **Michelangelo**: 180-189 SPD (fast enough for early debuffs, slower than Leonardo for Unkillable cycle priority)
+- **Brogni**: 175-180 SPD
+- **Warchief/Stag Knight**: 175-180 SPD
+- **Godseeker/Bad-el/Mithrala**: 171-175 SPD
+
+**Why this tune:**
+- **Leonardo 191 SPD**: Slowest champion = absorbs all stuns (Unkillable means stuns don't matter)
+- **1:1 ratio**: All champions take 1 turn per boss turn (171-189 SPD range)
+- **No gaps**: Boss speed 170 (190 turn 1) = team speed 171+ always faster
+
+---
+
+#### **Gear Requirements:**
+
+**Leonardo (PRIMARY INVESTMENT):**
+- **Sets**: Lifesteal 4pc + Speed 2pc OR Stalwart 4pc + Immortal 2pc
+- **Stats**: 3000-3500 DEF, 100% C.RATE, 200+ C.DMG, 191 SPD, 40k+ HP
+- **Priority**: DEF% > C.RATE > C.DMG > SPD > HP%
+
+**Michelangelo (SECONDARY INVESTMENT, if rebuilding):**
+- **Sets**: Lifesteal 4pc + Perception 2pc
+- **Stats**: 3000-4000 ATK, 100% C.RATE, 200+ C.DMG, 250+ ACC, 180-189 SPD
+- **Priority**: ATK% > C.RATE > ACC > C.DMG > SPD
+
+**Brogni (EXISTING, minor tweaks):**
+- **Current**: Bolster 4pc + Immortal 2pc → **Swap to Stalwart 4pc + Immortal 2pc**
+- **Stats**: Add +105 ACC (145 → 250), fix C.RATE (26% → 100%), maintain 2665 DEF
+- **Benefit**: 30% AOE damage reduction (Stalwart) = +10-15 extra turns
+
+**Warchief (IF Option B, needs full build):**
+- **Sets**: Lifesteal 4pc + Protection 2pc
+- **Stats**: 3500+ DEF, 100% C.RATE, 200+ C.DMG, 175-180 SPD, 50k+ HP
+
+---
+
+#### **Masteries:**
+
+**Leonardo**: Helmsmasher (Offense T6) + Defense tree (Retribution)  
+**Michelangelo**: Giant Slayer (Offense T6) - 30% proc per hit, A1 2-hit = 60% proc rate  
+**Brogni**: Warmaster (Offense T6) + Defense tree  
+**Warchief**: Warmaster (Offense T6) + Defense tree  
+**Godseeker/Bad-el/Mithrala**: Support/Defense trees (Cycle of Magic, Lasting Gifts)
+
+---
+
+#### **Investment Timeline:**
+
+**Phase 1 (Weeks 1-2): Leonardo Solo Build**
+- Level Leonardo to 60, ascend 6★
+- Farm Lifesteal + Speed gear (3000 DEF, 191 SPD, 100% C.RATE)
+- **Book Leonardo A2 and A3** (9 Legendary books - CRITICAL)
+- Farm Helmsmasher masteries (800 gems OR 2-3 days Minotaur)
+- **TEST**: Leonardo replaces Godseeker Aniri → Measure damage (target 75-85M)
+
+**Phase 2 (Weeks 3-4, if Phase 1 successful): Add Michelangelo**
+- Regear Michelangelo for CB (Lifesteal + Perception, 250+ ACC, 180-189 SPD)
+- Book Michelangelo A2 and A3 (if not already booked for Arena)
+- Farm/Respec masteries (Giant Slayer)
+- **TEST**: Leonardo + Michelangelo duo → Measure Unity synergy (target 90-110M)
+
+**Phase 3 (Weeks 5-8, if pursuing Option B): Add Warchief**
+- Build Warchief from scratch (level 60, gear, books, masteries)
+- **TEST**: Triple DEF-scaling comp (target 95-115M)
+
+---
+
+#### **Projected Performance:**
+
+**Baseline (Current Team):** 53M damage, 35-45 turns
+
+**Phase 1 (Leonardo Solo):** 75-85M damage, 45-50 turns
+- **Improvement**: +22-32M damage (+41-60%), +5-10 turns
+
+**Phase 2 (Leonardo + Michelangelo TMNT Duo):** 90-110M damage, 50+ turns
+- **Improvement**: +37-57M damage (+70-108%), +10-15 turns
+- **ACHIEVEMENT**: **2-KEY UNM UNLOCKED** (50M+ per key)
+
+**Phase 3 (Triple DEF-Scaling):** 95-115M damage, 50-55 turns
+- **Improvement**: +42-62M damage (+79-117%), +10-15 turns
+- **ACHIEVEMENT**: **APPROACHING 1-KEY UNM** (70M threshold)
+
+---
+
+#### **Pros & Cons:**
+
+**PROS:**
+- ✅ **Unkillable cheese**: Leonardo 3-turn Unkillable cycle = SAFE sustained damage
+- ✅ **Unity synergy**: Leonardo Ally Join Attack = 15-20M extra damage
+- ✅ **Void + Spirit**: Safe on Force/Magic/Void CB, weak Spirit on Magic only
+- ✅ **DEF-scaling focus**: Leonardo + Brogni + Warchief all benefit from 33% DEF aura
+- ✅ **Debuff coverage**: Michelangelo Dec DEF/ATK + Stag Knight backup = 100% uptime
+- ✅ **Self-sustaining**: Michelangelo Leech + Leonardo Unkillable + shields = no healer needed
+- ✅ **Scalable**: Can start with Leonardo solo, add Michelangelo later if successful
+
+**CONS:**
+- ❌ **MASSIVE book requirement**: Leonardo 9 Legendary books
+- ❌ **Breaks Michelangelo Arena build**: Regearing for CB = lose Arena performance
+- ❌ **Risk**: Leonardo needs FULL books (A2 especially) - without books, Unkillable gaps = team deaths
+- ❌ **Michelangelo suboptimal**: 7/10 CB rating (lower than dedicated CB champions like Geomancer 9/10)
+
+---
+
+#### **Critical Decision Points:**
+
+**QUESTION 1**: **Do you have 9+ Legendary books available NOW?**
+- **IF YES**: Build Leonardo immediately (Phase 1)
+- **IF NO**: Put Leonardo on hold until books accumulate (2-3 months), focus on other alternates (Skullcrusher, Ninja, Bad-el)
+
+**QUESTION 2**: **What is Michelangelo's current Arena build?**
+- **IF already booked for Arena**: Check if A2/A3 fully booked → Easier to rebuild for CB
+- **IF not booked**: Requires 10 more Legendary books (total 19 for TMNT duo)
+
+**QUESTION 3**: **Are you willing to break Michelangelo's Arena build for CB?**
+- **IF YES**: Proceed with Phase 2 (TMNT duo)
+- **IF NO**: Keep Michelangelo for Arena, focus on Leonardo solo (Phase 1 only)
+
+---
+
+#### **Actionable Advice (TMNT Duo Path):**
+
+**IMMEDIATE:**
+1. **Check book availability**: Count Legendary books in inventory
+2. **Check Michelangelo current state**: Stats, gear sets, book status
+3. **Decide commit level**: Leonardo solo OR Leonardo + Michelangelo duo
+
+**SHORT-TERM (if committing to Leonardo):**
+4. **Build Leonardo** (Phase 1, Weeks 1-2)
+5. **Test Leonardo solo** vs Godseeker Aniri → Measure damage improvement
+6. **IF successful (75-85M)**: Proceed to Phase 2 (Michelangelo rebuild)
+
+**LONG-TERM (if Phase 1 successful):**
+7. **Rebuild Michelangelo** for CB (Lifesteal, ACC 250+, SPD tune)
+8. **Test TMNT duo** → Measure Unity synergy damage
+9. **Optimize**: Fine-tune SPD, gear, masteries for 90-110M target
+
+**CAUTION:** This is a **HIGH-RISK, HIGH-REWARD** path. Success requires **19 Legendary books** (Leonardo 9 + Michelangelo 10) and **breaks Michelangelo Arena build**. Only pursue if:
+- ✅ Books available NOW (or willing to wait months)
+- ✅ Willing to sacrifice Michelangelo Arena performance
+- ✅ Committed to 4-8 week timeline
+
+**ALTERNATIVE:** If book-constrained, focus on **Skullcrusher** (Rare books only, Counterattack) or **Bad-el-Kazar** (low-investment, +13M damage) for faster ROI.
+
+---
+
+### **🎯 USER-PREFERRED CORE TEAM - Brogni + Ninja + Leonardo + Rector + Flex**
+
+**User Priority**: "Keep Brogni, Ninja, Leonardo, Rector, and then fill in what else is needed."
+
+**Analysis**: This is an **EXCELLENT foundation** combining Unkillable protection (Leonardo), HP Burn activation (Ninja), Shield/HP Burn (Brogni), and Block Debuffs/Revive (Rector). The challenge: **Ninja vs. Michelangelo** for the 5th slot.
+
+---
+
+#### **🔥 RECOMMENDED TEAM COMPOSITION:**
+
+| Slot | Champion | Role | Key Mechanic | SPD | Notes |
+|------|----------|------|--------------|-----|-------|
+| 1 | **Leonardo** (lead) | Unkillable + Counterattack + DEF DPS | Unkillable 3-turn cycle, 33% DEF aura, Counterattack | 191 | Slowest (stun target), provides safety + damage |
+| 2 | **Ninja** ⭐ | HP Burn Activation + Nuker | A3 detonates Brogni HP Burn (75k instant) + places own HP Burn | 185-189 | **PRIMARY DAMAGE DEALER** (40-50M projected) |
+| 3 | **Underpriest Brogni** | Shield + HP Burn | 60% HP shield, HP Burn, DEF-scaling | 180 | Shield spam + HP Burn for Ninja |
+| 4 | **Rector Drath** | Block Debuffs + Revive + Cleanse | Block Debuffs 2 turns, Cleanse, Revive 50% HP | 175-180 | Keeps team clean, safety net |
+| 5 | **Michelangelo** 🐢 OR **Stag Knight** | Debuffer + Unity DPS OR Dec DEF/ATK | **Mich**: Dec DEF/ATK, Leech, Unity (triggers Leonardo joins) <br> **Stag**: Dec DEF/ATK 60%, backup debuffs | 171-175 | **See comparison below** |
+
+---
+
+#### **🤔 SLOT 5 DECISION: Michelangelo vs. Stag Knight vs. Other Options**
+
+**OPTION A: Michelangelo (TMNT Unity Synergy)** ⭐⭐⭐ **HIGHEST DAMAGE POTENTIAL**
+
+**Pros:**
+- ✅ **Unity Ally Join Attack**: Leonardo joins EVERY Michelangelo attack (2-hit A1 = +2 Leonardo hits per turn = +15-20M damage)
+- ✅ **Dec DEF 60% + Dec ATK 50%**: Full debuff coverage (Stag backup not needed)
+- ✅ **Leech**: Team sustain (less reliant on Rector heals)
+- ✅ **Fully booked + Giant Slayer + all masteries**: READY NOW (no additional investment)
+- ✅ **Spirit affinity**: Strong vs Force CB (same as Brogni)
+
+**Cons:**
+- ❌ **Requires rebuild from Arena**: Current Arena build uses different gear priorities (ATK/C.DMG/SPD for burst vs. sustained ACC/SPD for CB)
+- ❌ **70 ACC aura wasted**: Not needed in this comp (Rector provides cleanse/Block Debuffs)
+- ❌ **10 Legendary books already used**: No refund, but books not wasted (still fully functional)
+
+**Damage Projection**: **95-115M**
+- Leonardo: 45M (Unkillable DEF-scaling + Unity joins from Michelangelo)
+- Ninja: 45M (HP Burn activation + detonation)
+- Brogni: 15M (HP Burn + shields)
+- Rector: 5M (support role)
+- Michelangelo: 20M (debuffs + ATK-scaling + triggers Leonardo joins)
+- **Unity synergy**: +15-20M (Leonardo joins Michelangelo 2-hit A1 every turn)
+
+---
+
+**OPTION B: Stag Knight (Current Roster, No Investment)** ⭐⭐ **SAFE, LOW-INVESTMENT**
+
+**Pros:**
+- ✅ **Dec DEF 60% + Dec ATK 50%**: Full debuff coverage (backup for Michelangelo if used elsewhere)
+- ✅ **Force affinity**: Strong vs Spirit CB (balanced with Spirit Brogni/Mich/Rector)
+- ✅ **Already built for CB**: Current setup works (minimal changes)
+- ✅ **No Arena rebuild required**: Keep Michelangelo for Arena
+
+**Cons:**
+- ❌ **No Unity synergy**: Doesn't trigger Leonardo Ally Join Attack (lose +15-20M damage)
+- ❌ **Lower damage output**: Stag is primarily utility, not a damage dealer
+
+**Damage Projection**: **80-95M**
+- Leonardo: 40M (Unkillable DEF-scaling, no Unity bonus)
+- Ninja: 45M (HP Burn activation + detonation)
+- Brogni: 15M (HP Burn + shields)
+- Rector: 5M (support role)
+- Stag Knight: 10M (debuffs + moderate damage)
+
+---
+
+**OPTION C: Geomancer (Current Roster, Swap Back)** ⭐ **BUDGET OPTION**
+
+**Pros:**
+- ✅ **Passive HP Burn**: Reflects damage back to boss (proven 15-20M damage in current comp)
+- ✅ **Already built**: Current setup works, no changes needed
+- ✅ **Synergizes with Brogni**: Both apply HP Burn (2x coverage)
+
+**Cons:**
+- ❌ **No Unity synergy**: Doesn't trigger Leonardo Ally Join Attack
+- ❌ **Passive requires Geomancer's HP Burn active**: Less reliable than Ninja activation
+- ❌ **Lower ceiling**: Loses Ninja's HP Burn detonation (75k instant damage)
+
+**Damage Projection**: **75-90M**
+- Leonardo: 40M (Unkillable DEF-scaling)
+- Geomancer: 25M (passive HP Burn reflection)
+- Brogni: 15M (HP Burn + shields)
+- Rector: 5M (support role)
+- 5th slot (flex): 10-15M
+
+---
+
+#### **🏆 RECOMMENDED PATH: Michelangelo for Maximum Damage**
+
+**Why Michelangelo wins:**
+1. **Unity Ally Join Attack** = +15-20M damage (Leonardo joins EVERY Michelangelo attack)
+2. **Fully booked + masteries** = READY NOW (no book investment needed)
+3. **Dec DEF/ATK + Leech** = Full debuff coverage + team sustain
+4. **95-115M projected** vs. 80-95M (Stag) or 75-90M (Geomancer)
+
+**What you sacrifice:**
+- ❌ Michelangelo Arena build (need to rebuild for CB: ATK→ACC priority, burst→sustain gear)
+- ⚠️ Current Arena performance drops (lose nuker/debuffer, need alternate Arena team)
+
+**Rebuild Requirements for Michelangelo (CB):**
+- **Gear**: Swap Arena sets (Savage/Lethal?) → **Lifesteal 4pc + Perception 2pc**
+- **Stats**: 3000-4000 ATK, 100% C.RATE, **250+ ACC** (critical for Dec DEF/ATK), 200+ C.DMG, 171-175 SPD
+- **Priority**: ATK% > C.RATE > **ACC** > C.DMG > SPD (ACC is new priority vs. Arena)
+- **Masteries**: Keep Giant Slayer + Eagle Eye (already correct for CB)
+- **Time**: 1-2 weeks gear farming (Dragon 25, keep ACC chest/banner)
+
+---
+
+#### **⚡ SPEED TUNE (1:1 Ratio, 171-191 SPD):**
+
+**Target SPD Ranges:**
+- **Leonardo**: 191 SPD (slowest, stun target)
+- **Ninja**: 185-189 SPD (fast enough for early HP Burn)
+- **Brogni**: 180 SPD
+- **Rector**: 175-180 SPD
+- **Michelangelo/Stag/Geo**: 171-175 SPD (slowest DPS)
+
+**Why this tune:**
+- **Leonardo 191 SPD**: Absorbs all stuns (Unkillable = immune), slowest = always targeted
+- **Ninja fast**: Early HP Burn application + detonation for maximum damage
+- **Rector mid**: Block Debuffs before boss AOE stun (turn 7+)
+- **1:1 ratio**: All champions take 1 turn per boss turn (no speed gaps)
+
+---
+
+#### **🎯 ACTIONABLE NEXT STEPS:**
+
+**IMMEDIATE (This Week):**
+1. ✅ **Check Leonardo book availability**: Do you have 9 Legendary books? (CRITICAL for A2 3-turn Unkillable)
+2. ⚠️ **Decision**: Michelangelo (95-115M, breaks Arena) vs. Stag Knight (80-95M, keeps Arena intact)
+3. ✅ **Level Leonardo to 60** (3-5 days with XP boosts)
+
+**IF choosing Michelangelo (95-115M path):**
+4. **Rebuild Michelangelo gear** (1-2 weeks Dragon 25 farming):
+   - Farm **Lifesteal 4pc + Perception 2pc**
+   - Target: **250+ ACC** (ACC chest + ACC banner + Perception set)
+   - Maintain: 3000+ ATK, 100% C.RATE, 200+ C.DMG
+5. **Speed tune entire team** (171-191 SPD range, use optimizer)
+6. **Book Leonardo A2 and A3** (9 Legendary books - no flexibility)
+7. **Farm Leonardo masteries** (Helmsmasher T6, 800 gems OR 2-3 days Minotaur)
+
+**IF choosing Stag Knight (80-95M path):**
+4. **Minor Stag tweaks** (if needed): Confirm 250+ ACC, 175-180 SPD
+5. **Book Leonardo A2 and A3** (9 Legendary books)
+6. **Farm Leonardo masteries** (Helmsmasher T6)
+7. **Keep Michelangelo for Arena** (no changes)
+
+**TEST (Week 3-4):**
+8. **Run UNM CB test** (5 keys minimum for average damage)
+9. **Measure damage**: Target **95-115M** (Michelangelo) or **80-95M** (Stag)
+10. **Compare vs. current 53M baseline**: Should see **+42M** (Mich) or **+27M** (Stag)
+
+---
+
+#### **💰 INVESTMENT SUMMARY:**
+
+**Michelangelo Path (95-115M):**
+- **Books**: 9 Legendary (Leonardo only - Michelangelo already booked) ✅
+- **Gems**: 800 (Leonardo masteries) OR skip if farming Minotaur
+- **Time**: 3-4 weeks (Leonardo build 2 weeks + Michelangelo rebuild 1-2 weeks)
+- **Gear farming**: Heavy (Lifesteal + Perception sets for Michelangelo)
+- **Risk**: Breaks Arena team (need alternate Arena strategy)
+
+**Stag Knight Path (80-95M):**
+- **Books**: 9 Legendary (Leonardo only) ✅
+- **Gems**: 800 (Leonardo masteries) OR skip if farming Minotaur
+- **Time**: 2-3 weeks (Leonardo build only)
+- **Gear farming**: Moderate (Leonardo Lifesteal + Speed)
+- **Risk**: None (keeps current roster intact)
+
+---
+
+#### **🔥 FINAL RECOMMENDATION:**
+
+**Use Michelangelo (95-115M path)** because:
+1. ✅ **Already fully booked + masteries** (10 Legendary books already invested - don't waste them)
+2. ✅ **Unity synergy is massive** (+15-20M damage from Leonardo Ally Join Attack)
+3. ✅ **Michelangelo Arena build can be replaced** (you have Wukong, Mythrala, Loki, Ninja for Arena)
+4. ✅ **Clan Boss is Priority 1** (UNM rewards > Arena Gold 3 rewards)
+5. ✅ **95-115M = 2-key UNM** (vs. current 3-key @ 53M)
+
+**Sacrifice is worth it:** Lose Michelangelo Arena nuker, gain **+42M CB damage** (53M → 95M minimum) and potential **2-key UNM chest** (160M weekly vs. 106M weekly = **+54M rewards per week**).
+
+**IF you want to keep Arena intact:** Use Stag Knight (80-95M), accept lower damage ceiling, but still gain **+27M** over baseline.
+
+---
+
 ## **UPDATED ALTERNATE CHAMPION PRIORITY RANKING**
+
+**⚠️ CRITICAL NOTE:** Leonardo + Michelangelo TMNT duo is a **HIGH-RISK, HIGH-REWARD** strategy requiring **19 Legendary books total** (Leonardo 9 + Michelangelo 10). Only pursue if books available NOW or willing to wait 2-3 months.
 
 | Priority | Champion | Role | Key Mechanic | Damage Projection | Difficulty | Investment Timeline |
 |----------|----------|------|--------------|------------------|------------|---------------------|
-| **#1**   | **Skullcrusher** ⭐⭐ | Counterattack enabler | Counterattack buff = TRIPLE damage output | **53M → 80-95M** | MEDIUM (books, masteries, 60) | 2-4 weeks |
-| **#2**   | **Ninja** ⭐⭐ | HP Burn activation | HP Burn activation 75k × 5-8 turns = MASSIVE damage (replaces Geomancer) | **50-60M** | HIGH (Legendary books, glass cannon) | 3-5 weeks |
+| **#1A**  | **Leonardo** ⭐⭐⭐ **NEW** (IF books available) | Unkillable + Counterattack + DEF DPS | **UNKILLABLE 3-turn cycle** + Counterattack + Ally Protection + 33% DEF aura | **53M → 75-85M** (solo) OR **90-110M** (with Michelangelo) | **VERY HIGH** (9 Legendary books MANDATORY) | 2-4 weeks (solo) OR 4-8 weeks (TMNT duo) |
+| **#1B**  | **Skullcrusher** ⭐⭐ (IF book-constrained) | Counterattack enabler | Counterattack buff = TRIPLE damage output | **53M → 80-95M** | MEDIUM (Rare books, masteries, 60) | 2-4 weeks |
+| **#2**   | **Michelangelo** ⭐ **NEW** (requires Leonardo) | Debuffer + ATK DPS + Ally Join | Dec DEF 60% + Dec ATK 50% + Leech + **Triggers Leonardo Ally Join** | **+25M** (requires Leonardo) | **EXTREMELY HIGH** (10 Legendary books, rebuild from Arena) | 2-4 weeks (after Leonardo) |
+| **#3**   | **Ninja** ⭐⭐ | HP Burn activation | HP Burn activation 75k × 5-8 turns = MASSIVE damage (replaces Geomancer) | **50-60M** | HIGH (Legendary books, glass cannon) | 3-5 weeks |
 | **#3**   | **Bad-el-Kazar** | Sustain + poison | Continuous Heal + Leech + Poison = team survives 20+ turns longer | **53M → 61-66M** | LOW (tune fix, 50 Acc) | 10-14 days |
 | **#4**   | **Fayne** | Damage amplification | Weaken 25% + Decrease DEF 60% = DOUBLE damage | **53M → 64-69M** | **VERY HIGH** (dies turn 30-40 without DEF) | 2-4 weeks (unusable at 50) |
 | **#5**   | **Deacon Armstrong** | TM boost + Decrease DEF | TM Fill 30% + Leech + Force affinity STRONG | **40-48M** | MEDIUM (Epic books, ACC 250+) | 2-3 weeks |
@@ -2938,7 +3858,12 @@ Target Build:
 | **#14**  | **Tayrel** | Decrease DEF sidegrade | Decrease DEF 60% + Decrease ATK 50% (A3 wasted vs CB) | **53M → 56-58M** | LOW (already 50, books optional) | 1-2 weeks |
 
 **Key Insights:**
-- **Skullcrusher counterattack comp** = HIGHEST damage potential (near-doubles damage output 80-95M)
+- **Leonardo UNKILLABLE CHEESE** ⭐⭐⭐ **GAME-CHANGER IF BOOKS AVAILABLE** = 3-turn Unkillable cycle + Counterattack + 33% DEF aura + Void affinity = **75-85M solo OR 90-110M with Michelangelo TMNT duo**
+  - **CRITICAL**: Requires **9 Legendary books (Leonardo) + 10 Legendary books (Michelangelo) = 19 total** for TMNT duo
+  - **SOLO Leonardo** (75-85M) is **MORE EFFICIENT** than TMNT duo if book-constrained (9 vs 19 books for only +20M damage)
+  - **VOID AFFINITY** = safe on all CB affinities (never weak, never strong)
+  - See **Alternate 16 (Leonardo)**, **Alternate 17 (Michelangelo)**, and **TMNT Unity Team Composition** sections above for complete build plans
+- **Skullcrusher counterattack comp** = HIGHEST damage potential WITHOUT Legendary books (near-doubles damage output 80-95M, uses Rare books)
 - **Ninja HP Burn activation** = REPLACES GEOMANCER (Geomancer passive requires his HP Burn active, Ninja detonates Brogni's HP Burn for 75k × 5-8 turns)
 - **Bad-el-Kazar** = BEST sustain (Continuous Heal + Leech = team survives 20+ extra turns)
 - **Fayne** = BEST damage amp (Weaken 25% stacks with Decrease DEF 60% = DOUBLE damage, but dies turn 30-40)

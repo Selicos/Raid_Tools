@@ -18,7 +18,7 @@
 		{
 			"label": "Add Champion to Dictionary",
 			"type": "shell",
-			"command": ".\\.venv\\Scripts\\python.exe Tools/champion_scraper/champion_scraper.py --champion ${input:ChampName} --rarity ${input:Rarity}",
+			"command": ".\\.venv\\Scripts\\python.exe Tools/champion_scraper/champion_scraper.py \"${input:ChampName}\" --owned 1",
 			"group": {
 				"kind": "build",
 				"isDefault": true
@@ -75,8 +75,8 @@
 		{
 			"id": "ChampName",
 			"type": "promptString",
-			"description": "Enter the champion name",
-			"default": "Brogni"
+			"description": "Champion name (exact spelling)",
+			"default": ""
 		},
 		{
 			"id": "Rarity",

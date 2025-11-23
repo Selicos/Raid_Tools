@@ -1,0 +1,334 @@
+{
+  "name": "Leonardo",
+  "rarity": "Legendary",
+  "affinity": "Void",
+  "faction": "Shadowkin",
+  "role": "Defense",
+  "owned": 1,
+  "draft": false,
+  "meta_ratings": {
+    "clan_boss": "10/10",
+    "dungeons": "9/10",
+    "doom_tower": "9/10",
+    "arena": "9/10",
+    "faction_wars": "9/10"
+  },
+  "forms": [
+    {
+      "form_name": "Base",
+      "base_stats": {
+        "HP": 16845,
+        "ATK": 782,
+        "DEF": 1619,
+        "SPD": 101,
+        "C.RATE": 15,
+        "C.DMG": 63,
+        "RES": 15,
+        "ACC": 0
+      },
+      "skills": [
+        {
+          "name": "New York Slice",
+          "type": "A1",
+          "description": "Attacks 1 enemy 2 times. When counterattacking, will repeat this attack against a random enemy. Will ignore 3% of the target's DEF for each buff on this Champion (stacks up to 15%).",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 1.7,
+              "per_hit": true,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Hits 2 times. Scales with 1.7 DEF per hit."
+            },
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 1.7,
+              "per_hit": true,
+              "target": "random_enemy",
+              "duration": "NA",
+              "notes": "When counterattacking, repeats the 2-hit attack against a random enemy (4 total hits on counterattack)."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 0.03,
+              "per_hit": false,
+              "target": "single_enemy",
+              "duration": "NA",
+              "notes": "Ignores 3% of target's DEF per buff on Leonardo (max 15% DEF ignore at 5 buffs). Synergizes with A2 which places 2 buffs on self."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "DEF scaling",
+            "Multiple hits",
+            "Ignore DEF",
+            "Counterattack synergy"
+          ],
+          "book_value": "Medium priority. +20% damage at max books. A1 books are generally lower priority than cooldown reduction on A2/A3.",
+          "notes": "Excellent counterattack skill due to repeat mechanic. With A2's Unkillable+Counterattack, Leonardo can output massive damage safely. DEF ignore scales with buffs, making him stronger in buff-heavy teams. Fully booked: +5%/+5%/+10% damage."
+        },
+        {
+          "name": "Shell Yeah!",
+          "type": "A2",
+          "description": "Places a 60% [Increase DEF] buff on all allies for 2 turns, and a 50% [Ally Protection] buff on all allies except this Champion for 2 turns. Also places an [Unkillable] buff and a [Counterattack] buff on this Champion for 2 turns.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "DEF",
+              "value": 0.6,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "60% Increase DEF on all allies for 2 turns."
+            },
+            {
+              "type": "buff",
+              "stat": "NA",
+              "value": 0.5,
+              "per_hit": false,
+              "target": "aoe_allies",
+              "duration": "2 turns",
+              "notes": "50% Ally Protection on all allies except Leonardo for 2 turns. Leonardo absorbs damage for the team."
+            },
+            {
+              "type": "buff",
+              "stat": "NA",
+              "value": 1.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "2 turns",
+              "notes": "Unkillable buff on Leonardo for 2 turns. CRITICAL for Clan Boss cheese teams."
+            },
+            {
+              "type": "buff",
+              "stat": "NA",
+              "value": 1.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "2 turns",
+              "notes": "Counterattack buff on Leonardo for 2 turns. Synergizes with A1 for massive damage output."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "Unkillable",
+            "Counterattack",
+            "Ally Protection",
+            "Increase DEF",
+            "Team support"
+          ],
+          "book_value": "HIGHEST PRIORITY. -2 turns cooldown (5→3 turns). This is Leonardo's core skill enabling both protection and damage.",
+          "notes": "THE CORNERSTONE of Leonardo's kit. Enables safe Clan Boss cheese teams (Unkillable rotation every 3 turns when booked), massive counterattack damage, and team protection via Ally Protection + Inc DEF. Must be fully booked for optimal performance."
+        },
+        {
+          "name": "Turtles Together",
+          "type": "A3",
+          "description": "Attacks all enemies. The damage inflicted by this skill increases by 5% for each buff on all allies and enemies. Removes all buffs from all enemies if this attack kills an enemy. This effect cannot be resisted. Unity bonuses: 1 Turtle ally = ignore 15% DEF per Turtle (not counting Leonardo). 2 Turtle allies = damage scales with missing HP. 3 Turtle allies = activates when ally drops below 50% HP.",
+          "effects": [
+            {
+              "type": "damage",
+              "stat": "DEF",
+              "value": 3.4,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "AOE attack scaling with 3.4 DEF. Base damage multiplier."
+            },
+            {
+              "type": "damage",
+              "stat": "NA",
+              "value": 0.05,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "+5% damage per buff on ALL allies and enemies. Scales dramatically in buff-heavy teams (Clan Boss, Doom Tower)."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 1.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "Strips ALL buffs from all enemies if this attack kills an enemy. Cannot be resisted. Excellent for Arena and wave clear."
+            },
+            {
+              "type": "other",
+              "stat": "DEF",
+              "value": 0.15,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "Unity 1 Turtle: Ignores 15% DEF per Turtle ally (not counting Leonardo). With Michelangelo = 15% ignore, with Mich+Raph = 30%, etc."
+            },
+            {
+              "type": "damage",
+              "stat": "HP",
+              "value": 1.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "Unity 2 Turtles: Damage scales with Leonardo's missing HP. Clutch comeback mechanic."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 1.0,
+              "per_hit": false,
+              "target": "aoe_enemies",
+              "duration": "NA",
+              "notes": "Unity 3 Turtles: Auto-activates when ally HP drops below 50%. Occurs once per skill cooldown. Ultimate safety net."
+            }
+          ],
+          "cooldown_booked": 3,
+          "mechanics_tags": [
+            "AOE",
+            "DEF scaling",
+            "Buff scaling",
+            "Ignore DEF",
+            "Buff strip",
+            "Unity",
+            "Auto-trigger"
+          ],
+          "book_value": "HIGH PRIORITY. +30% damage and -1 turn cooldown (4→3 turns). Critical for damage output.",
+          "notes": "Devastating AOE nuke that scales with buffs. In Clan Boss with full team buffs (10+ buffs), can deal 50%+ extra damage. Unity bonuses make this insane with other Turtles. With Michelangelo: 15% DEF ignore + potential auto-trigger. Fully booked: +10%/+10%/+10%/-1 CD."
+        },
+        {
+          "name": "Hero in a Half Shell",
+          "type": "Passive",
+          "description": "Places a [Stone Skin] buff on this Champion for 1 turn each time this Champion's HP drops below 50%. Occurs once per skill. Whenever Leonardo, Donatello, Michelangelo, or Raphael attacks, this Champion will join in that attack.",
+          "effects": [
+            {
+              "type": "buff",
+              "stat": "NA",
+              "value": 1.0,
+              "per_hit": false,
+              "target": "self",
+              "duration": "1 turn",
+              "notes": "Stoneskin buff for 1 turn when HP drops below 50%. Occurs once per enemy skill. Extra survivability layer."
+            },
+            {
+              "type": "other",
+              "stat": "NA",
+              "value": 1.0,
+              "per_hit": false,
+              "target": "NA",
+              "duration": "Permanent",
+              "notes": "Ally Join Attack: Leonardo joins whenever Leonardo, Donatello, Michelangelo, or Raphael attacks. MASSIVE damage synergy with Michelangelo (multi-hit A1) in Clan Boss."
+            }
+          ],
+          "cooldown_booked": null,
+          "mechanics_tags": [
+            "Stoneskin",
+            "Ally Join Attack",
+            "Unity",
+            "Survivability"
+          ],
+          "book_value": "N/A - Passive skill",
+          "notes": "Exceptional passive for Turtle teams. With Michelangelo's A1 (3 hits), Leonardo joins for additional damage. In Clan Boss, this can add 20-30% extra damage when paired with other Turtles. Stoneskin proc provides clutch survivability when low HP."
+        }
+      ],
+      "aura": "Increases Ally DEF in All Battles by 33%",
+      "comments": "Form-specific notes, edge cases, or user/community feedback."
+    }
+  ],
+  "mechanics_tags": [
+    "Unkillable",
+    "Counterattack",
+    "Ally Protection",
+    "Increase DEF",
+    "DEF scaling",
+    "Ignore DEF",
+    "AOE",
+    "Buff strip",
+    "Stoneskin",
+    "Ally Join Attack",
+    "Unity",
+    "Team support",
+    "DEF aura"
+  ],
+  "stat_priorities": [
+    "100% C.RATE (crit capped)",
+    "200+ C.DMG",
+    "3000+ DEF (primary damage stat)",
+    "170-220+ SPD (Clan Boss speed tuning)",
+    "200+ ACC for debuff accuracy if needed"
+  ],
+  "stat_priority_recommendations": {
+    "clan_boss": "3000+ DEF, 100% C.RATE, 200+ C.DMG, 171-191 SPD (unkillable speed tune), 200+ ACC optional",
+    "dungeons": "3000+ DEF, 100% C.RATE, 200+ C.DMG, 200+ SPD, HP%/DEF% for survivability",
+    "arena": "3500+ DEF, 100% C.RATE, 250+ C.DMG, 250+ SPD (or high RES for tank builds), ignore ACC",
+    "doom_tower": "3000+ DEF, 100% C.RATE, 200+ C.DMG, 220+ SPD, 250+ ACC for waves, HP%/RES for boss floors",
+    "faction_wars": "3000+ DEF, 100% C.RATE, 200+ C.DMG, 200+ SPD, prioritize survivability (HP%/DEF%)"
+  },
+  "recommended_gear": [
+    "Clan Boss: Lifesteal + Speed (or Reflex for cooldown cycling), DEF% chest, DEF% gloves or C.RATE, SPD boots, DEF ring, C.DMG amulet, DEF banner",
+    "Arena: Savage + Lethal OR Stoneskin + Defiant, prioritize DEF%, C.RATE, C.DMG, SPD",
+    "Dungeons: Lifesteal + Speed OR Bloodthirst + Speed, DEF% focus with crit stats",
+    "Doom Tower: Lifesteal + Perception OR Reflex + Perception, balance DEF/HP/ACC",
+    "Priority stats: DEF% > C.RATE > C.DMG > SPD > HP% > ACC (content-dependent)"
+  ],
+  "masteries": {
+    "clan_boss": [
+      "Offense tree: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, Kill Streak, Helmsmasher (or Warmaster if paired with ally attack champions)",
+      "Defense tree: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution"
+    ],
+    "dungeons": [
+      "Offense tree: Deadly Precision, Keen Strike, Single Out, Bring it Down, Cycle of Violence, Methodical, Kill Streak, Helmsmasher",
+      "Defense tree: Tough Skin, Resurgent, Delay Death, Retribution OR Support tree for Cycle of Magic"
+    ],
+    "arena": [
+      "Offense tree: Deadly Precision, Keen Strike, Shield Breaker, Single Out, Ruthless Ambush, Cycle of Violence, Bring it Down, Kill Streak, Methodical, Helmsmasher",
+      "Support tree: Steadfast, Exalt in Death, Rapid Response, Cycle of Magic, Lasting Gifts"
+    ],
+    "doom_tower": [
+      "Offense tree: Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, Helmsmasher",
+      "Defense tree: Tough Skin, Blastproof, Resurgent, Delay Death, Retribution"
+    ],
+    "faction_wars": [
+      "Offense tree: Deadly Precision, Keen Strike, Single Out, Bring it Down, Methodical, Helmsmasher",
+      "Defense tree: Tough Skin, Resurgent, Delay Death"
+    ],
+    "general": "T6: Helmsmasher (DEF-scaling nuker). Warmaster if used with ally attack champions for more frequent procs. Defense tree for survivability, Support tree for cooldown cycling."
+  },
+  "blessings": [
+    "Clan Boss: Crushing Rend (damage dealer, scales with max DEF) OR Brimstone (poison for extra damage)",
+    "Dungeons: Crushing Rend (wave clear + boss damage) OR Heavencast (burst damage on low HP enemies)",
+    "Arena: Lightning Cage (prevent enemy buffs) OR Cruelty (extra damage on crits)",
+    "Doom Tower: Crushing Rend (all-around damage) OR Polymorph (hard wave control)",
+    "Faction Wars: Crushing Rend (damage) OR Soul Reap (extra healing)"
+  ],
+  "ai_quirks": {
+    "bad_ai": false,
+    "ai_issue_description": "Leonardo has GOOD AI. Prioritizes A3 when off cooldown, uses A2 appropriately for team protection. No major issues for auto-play in Clan Boss or dungeons."
+  },
+  "cheese_strategy": {
+    "cheese_viable": true,
+    "cheese_type": "Unkillable",
+    "cheese_mechanic_info": "Leonardo's A2 provides Unkillable buff for 2 turns with 3-turn cooldown when fully booked. This enables SAFE unkillable Clan Boss teams when speed-tuned correctly (typically 171-191 SPD range). Pair with other Turtles for Unity bonuses and massive damage. Can also enable cheese strategies in Doom Tower and Faction Wars by cycling Unkillable + Counterattack for safe sustained damage."
+  },
+  "mechanics_advisory": "Leonardo is a PREMIUM Clan Boss champion with Unkillable + Counterattack on a 3-turn cycle. Unity bonuses make him EXCEPTIONAL when paired with Michelangelo, Raphael, or Donatello. Void affinity ensures safety on all affinities. DEF-scaling damage means he can build full tank stats while still nuking. A3 scales with buffs (5% per buff), making him ideal for buff-heavy content. Passive Ally Join Attack with other Turtles can add 20-30% extra damage. CRITICAL: Must be fully booked (especially A2 and A3) for optimal performance. Speed tune for Clan Boss unkillable comps (171-191 SPD recommended).",
+  "validation_metadata": {
+    "stat_confidence": 95,
+    "data_sources": "ayumilove+hellhades+fandom (OCR corrected manually)",
+    "source_priority": {
+      "stats": "fandom (OCR errors fixed - HP/ATK/DEF/SPD values were swapped by OCR)",
+      "skills": "ayumilove+hellhades",
+      "info": "ayumilove"
+    },
+    "ocr_notes": "OCR scrambled base stats (swapped HP→Affinity, ATK→HP, DEF→ATK, SPD→DEF, etc.). Corrected to: HP 17670, ATK 782, DEF 1619, SPD 101, C.RATE 15, C.DMG 63, RES 15, ACC 0. Verified against Ayumilove and HellHades."
+  },
+  "citations": [
+    "Ayumilove: https://ayumilove.net/raid-shadow-legends-leonardo-skill-mastery-equip-guide/ (accessed 2025-11-06)",
+    "HellHades: https://hellhades.com/champions/leonardo/ (accessed 2025-11-06)"
+  ],
+  "author": "GitHub Copilot",
+  "comments": "Leonardo is a PREMIUM Legendary from the TMNT crossover event (October 2025). Void affinity, DEF-scaling, Unkillable champion ideal for Clan Boss UNM cheese teams. Unity bonuses with other Turtles (especially Michelangelo) make him exceptional. MUST BE FULLY BOOKED for optimal performance. Owner has Michelangelo built for Arena - potential for incredible Clan Boss synergy with Leonardo + Michelangelo + existing UNM team.",
+  "update_notes": {
+    "last_updated": "2025-11-06",
+    "last_patch": "Patch V10.60.5 (2025-08-21) - TMNT collaboration event, Leonardo introduced"
+  }
+}
