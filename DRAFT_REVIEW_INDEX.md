@@ -23,43 +23,73 @@
 **Issue:** These champions have `draft: true` and are not in Complete/ folder  
 **Action Required:** Review, validate, set `draft: false`, move to Complete/
 
-### A. High Priority - Low Stat Confidence (<50)
+### ALL 18 CHAMPIONS: SCRAPER DRAFTS - NEED FULL COMPLETION WORKFLOW
 
-| Champion | Draft | Stat Confidence | Issue | Priority |
-|----------|-------|-----------------|-------|----------|
-| **He-Man** | scrape failed | 0 | Scrape failed, needs manual stats | 🔴 HIGH |
-| **Leminisi_the_Gold-Wing** | scrape failed | 0 | Scrape failed, needs manual stats | 🔴 HIGH |
-| **Ugir_the_Wyrm_Eater** | scrape failed | 0 | Scrape failed, needs manual stats | 🔴 HIGH |
-| **Paragon** | true | 0 | No stat validation | 🔴 HIGH |
-| **Rian_the_Conjurer** | true | 0 | No stat validation | 🔴 HIGH |
-| **Runekeeper_Dazdurk** | true | 0 | No stat validation | 🔴 HIGH |
-| **Taurus** | true | 0 | No stat validation | 🔴 HIGH |
-| **Visix_the_Unbowed** | true | 0 | No stat validation | 🔴 HIGH |
-| **Taya** | true | 25 | Very low stat confidence | 🟡 MEDIUM |
+**CRITICAL DISCOVERY:** All 18 champions in root directory are **SCRAPER DRAFTS ONLY**. They have:
+- ✅ Base stats populated (varying confidence levels)
+- ✅ Skill names and descriptions scraped from sources
+- ❌ **Template placeholders in skill effects arrays** (not populated with actual effects)
+- ❌ **Meta ratings still "X/10"** (not evaluated)
+- ❌ **Empty A4/A5 skill slots** (need removal)
+- ❌ **No comprehensive sections** (gear, masteries, blessings, strategies likely template text)
+
+**NONE are ready for promotion to Complete/.** All require **full Section 7 workflow completion**:
+1. Fix/validate stats (per stat confidence level)
+2. Remove empty skill slots (A4/A5)
+3. Populate all skill effects arrays with comprehensive data
+4. Add meta ratings for all content types
+5. Add gear/masteries/blessings recommendations
+6. Add strategies and mechanics tags
+7. Validate JSON schema
+8. Set draft: false
+9. Move to Complete/
+
+---
+
+### Completion Priority by Stat Status
+
+#### Group A: Stats Ready - Need Comprehensive Content (11 champions)
+
+| Champion | Stat Confidence | Stats Status | Action Required | Est. Time |
+|----------|-----------------|--------------|-----------------|-----------|
+| **Queen_Eva** | 100 | ✅ Validated | Full Section 7 workflow | ~25-30 min |
+| **Duedan_the_Runic** | 87.5 | ✅ Good | Full Section 7 workflow | ~25-30 min |
+| **Norog** | 87.5 | ✅ Good | Full Section 7 workflow | ~25-30 min |
+| **Quargan_the_Crowned** | 87.5 | ✅ Good | Full Section 7 workflow | ~25-30 min |
+| **Skeletor** | 87.5 | ✅ Good | Full Section 7 workflow | ~25-30 min |
+| **Ultimate_Galek** | 87.5 | ✅ Good | Full Section 7 workflow | ~25-30 min |
+| **Vergumkaar** | 87.5 | ✅ Good | Full Section 7 workflow | ~25-30 min |
+| **Vrask** | 87.5 | ✅ Good | Full Section 7 workflow | ~25-30 min |
+| **White_Dryad_Nia** | 87.5 | ✅ Good | Full Section 7 workflow | ~25-30 min |
+| **He-Man** | 0 → 100 | ✅ User screenshot provided | Update stats, then full workflow | ~30-35 min |
+| **Leminisi_the_Gold-Wing** | 0 → 100 | ✅ User screenshot provided | Update stats, then full workflow | ~30-35 min |
+
+**Total: ~5.5 hours for Group A**
+
+#### Group B: Stats Need Validation - Then Comprehensive Content (6 champions)
+
+| Champion | Stat Confidence | Stats Status | Action Required | Est. Time |
+|----------|-----------------|--------------|-----------------|-----------|
+| **Paragon** | 0 | ❌ Needs validation | Validate stats from sources, then full workflow | ~35-40 min |
+| **Rian_the_Conjurer** | 0 | ❌ Needs validation | Validate stats from sources, then full workflow | ~35-40 min |
+| **Runekeeper_Dazdurk** | 0 | ❌ Needs validation | Validate stats from sources, then full workflow | ~35-40 min |
+| **Taurus** | 0 | ❌ Needs validation | Validate stats from sources, then full workflow | ~35-40 min |
+| **Visix_the_Unbowed** | 0 | ❌ Needs validation | Validate stats from sources, then full workflow | ~35-40 min |
+| **Taya** | 25 | ⚠️ Low confidence | Validate stats from sources, then full workflow | ~35-40 min |
+
+**Total: ~3.5-4 hours for Group B**
+
+#### Group C: Ignored Per User Request (1 champion)
+
+| Champion | Stat Confidence | Stats Status | Action Required |
+|----------|-----------------|--------------|-----------------|
+| **Ugir_the_Wyrm_Eater** | 0 | ⏸️ Ignored | User requested skip |
 
 **Notes:**
-- **Scrape failed** champions need stats from user screenshot or authoritative source
-- **0 stat confidence** may have placeholder stats from template, needs validation
-- All have gear/masteries/skills populated, only stats need verification
-
-### B. Medium Priority - High Stat Confidence (87.5-100)
-
-| Champion | Draft | Stat Confidence | Action Required | Priority |
-|----------|-------|-----------------|-----------------|----------|
-| **Queen_Eva** | true | 100 | Review, set draft: false, move to Complete/ | 🟢 READY |
-| **Duedan_the_Runic** | true | 87.5 | Review, set draft: false, move to Complete/ | 🟢 READY |
-| **Norog** | true | 87.5 | Review, set draft: false, move to Complete/ | 🟢 READY |
-| **Quargan_the_Crowned** | true | 87.5 | Review, set draft: false, move to Complete/ | 🟢 READY |
-| **Skeletor** | true | 87.5 | Review, set draft: false, move to Complete/ | 🟢 READY |
-| **Ultimate_Galek** | true | 87.5 | Review, set draft: false, move to Complete/ | 🟢 READY |
-| **Vergumkaar** | true | 87.5 | Review, set draft: false, move to Complete/ | 🟢 READY |
-| **Vrask** | true | 87.5 | Review, set draft: false, move to Complete/ | 🟢 READY |
-| **White_Dryad_Nia** | true | 87.5 | Review, set draft: false, move to Complete/ | 🟢 READY |
-
-**Notes:**
-- All have comprehensive sections populated (gear, masteries, skills with effects)
-- Stats validated to 87.5% or higher confidence
-- Ready for final review and promotion to Complete/
+- **Group A** champions can start Section 7 workflow immediately
+- **Group B** champions need stats from Ayumilove/HellHades before starting workflow
+- **He-Man & Leminisi** have user screenshots - update stats first, then proceed as Group A
+- All time estimates based on optimized Section 7 workflow (~25 operations, ~2-3 min per champion for data gathering + 20-25 min for comprehensive content)
 
 ---
 
@@ -111,53 +141,45 @@
 
 ## 5. Recommended Completion Order
 
-### Phase 1: Quick Wins (9 champions, ~15 minutes)
-**Champions with 87.5-100% stat confidence, comprehensive sections complete**
+### Immediate Next Steps
 
-1. Queen_Eva (100% confidence)
-2. Duedan_the_Runic (87.5%)
-3. Norog (87.5%)
-4. Quargan_the_Crowned (87.5%)
-5. Skeletor (87.5%)
-6. Ultimate_Galek (87.5%)
-7. Vergumkaar (87.5%)
-8. Vrask (87.5%)
-9. White_Dryad_Nia (87.5%)
+**User has provided screenshots for:**
+1. **He-Man** - Update stats from screenshot, then start Section 7 workflow
+2. **Leminisi_the_Gold-Wing** - Update stats from screenshot, then start Section 7 workflow
 
-**Action:** Review each file, validate JSON, set `draft: false`, move to Complete/
+**Recommended approach:**
+1. Update He-Man & Leminisi stats from screenshots (~5 min)
+2. Pick ONE champion from Group A to complete first (test full workflow) (~25-30 min)
+3. After successful completion, batch process remaining Group A champions
+4. Move to Group B after Group A complete
 
-### Phase 2: Draft Flag Cleanup (2 champions, ~2 minutes)
-**Champions in Complete/ folder with draft flag still set**
+### Full Completion Phases
 
-1. Uugo
-2. Apothecary
+**Phase 1: Update Screenshot Stats (2 champions, ~5 minutes)**
+1. He-Man (update from user screenshot)
+2. Leminisi_the_Gold-Wing (update from user screenshot)
 
-**Action:** Set `draft: false` in both files
+**Phase 2: Test Full Workflow (1 champion, ~30 minutes)**
+- Pick ONE Group A champion (recommend Queen_Eva - 100% stat confidence)
+- Complete full Section 7 workflow start-to-finish
+- Validate process works correctly
+- Document any issues or refinements needed
 
-### Phase 3: Stat Validation Required (6 champions, ~30-60 minutes)
-**Champions with 0% or low stat confidence, needs manual stat collection**
+**Phase 3: Batch Group A (10 champions, ~4-5 hours)**
+- Process all Group A champions using validated workflow
+- Can parallelize data gathering (Ayumilove + HellHades fetches)
+- Batch commit every 3-5 champions
 
-1. Paragon (0% confidence)
-2. Rian_the_Conjurer (0%)
-3. Runekeeper_Dazdurk (0%)
-4. Taurus (0%)
-5. Visix_the_Unbowed (0%)
-6. Taya (25%)
+**Phase 4: Group B Stat Validation (6 champions, ~1 hour)**
+- Research and validate stats from Ayumilove/HellHades
+- Update stat_confidence to 90+
+- Prepare for Section 7 workflow
 
-**Action:** Validate stats from authoritative sources or user screenshots, update stat_confidence, review, set `draft: false`, move to Complete/
+**Phase 5: Batch Group B (6 champions, ~3-4 hours)**
+- Process all Group B champions using validated workflow
+- Batch commit every 3-5 champions
 
-### Phase 4: Scrape Failed Recovery (3 champions, ~45-90 minutes)
-**Champions where scraper failed, needs manual stats collection**
-
-1. He-Man
-2. Leminisi_the_Gold-Wing
-3. Ugir_the_Wyrm_Eater
-
-**Action:** Follow File Corruption Recovery Process (Section 7 of copilot-instructions.md):
-- Delete corrupted/failed JSON
-- Re-run scraper: `python Tools/champion_scraper/champion_scraper.py "Champion Name" --owned 1`
-- If scraper fails again, manually populate stats from Ayumilove/HellHades
-- Complete comprehensive sections, validate, set `draft: false`, move to Complete/
+**Total Time Estimate: ~9-11 hours** (can be spread across multiple sessions)
 
 ---
 
