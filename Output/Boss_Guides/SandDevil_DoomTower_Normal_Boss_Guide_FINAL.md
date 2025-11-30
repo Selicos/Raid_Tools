@@ -1600,45 +1600,32 @@ This section lists **non-owned champions** that would significantly improve team
 
 ### 8.2. Masteries Priorities
 
-#### **Offense Tree (Damage Dealers Only)**
-- **Key Masteries:** Warmaster or Helmsmasher (Tier 6, burst damage on A3/A1)
-- **CRITICAL: 100% C.RATE required for full Warmaster proc rate** (masteries only proc on critical hits - effective proc rate = C.RATE × base proc rate)
-- **Who Needs:** Elenaril (A3 Poison explode), Coldheart (A3 30% MAX HP nuke), Dhukk (high damage output)
-- **Why:** Warmaster/Helmsmasher adds 60% chance for extra damage proc on A1/A3, boosting burst potential during Slumber state
-- **Note:** Most champions prioritize Defense + Support trees for survivability over Offense tree
+**Role-Based Mastery Recommendations:**
 
-#### **Defense Tree (All Champions)**
-- **Key Masteries:** 
-  - Tough Skin (3/3) - Reduces damage taken by 7.5%
-  - Blastproof (3/3) - Reduces AoE damage by 10%
-  - Rejuvenation (3/3) - Heals 3% MAX HP per turn
-  - Shadow Heal (1/1) - Heals 8% MAX HP when HP drops below 50%
-  - Delay Death (1/1) - Prevents fatal damage once per battle (5-turn cooldown)
-  - Retribution (1/1) - Fills Turn Meter by 5% when attacked
-  - Bloodthirst (3/3) - Heals 10% MAX HP after killing an enemy (useful for trash waves)
-  - Harvest Despair (3/3) - Heals 10% MAX HP after using an ability on an enemy with Decrease SPD debuff
-- **Who Needs:** All champions (Defense tree is universal for survivability)
-- **Cost:** 800 gems OR farm Minotaur (per champion for minimum survivability, varies by masteries selected)
+- **Sleep Debuffers (Gretel, Criodan, Nogdar, Vogoth):** Evil Eye + Master Hexer (Defense + Support)
+  - **Path:** Defense tree → survivability masteries → Support tree → Evil Eye + Master Hexer
+  - **Why:** Evil Eye ensures 100% weak affinity debuff success, Master Hexer extends Sleep 2→3 turns
+  - **Critical:** Required for reliable Sleep application on unfavorable affinities
 
-#### **Support Tree (All Champions Except Pure Damage Dealers)**
-- **Key Masteries:**
-  - Pinpoint Accuracy (3/3) - Increases ACC by 10
-  - Charged Focus (3/3) - Increases ACC by 20 when HP is above 50%
-  - Rapid Response (3/3) - Increases SPD by 3 when HP is above 50%
-  - Lore of Steel (3/3) - Increases set bonuses by 15%
-  - Cycle of Magic (3/3) - Reduces skill cooldowns by 5% when using an ability
-  - **Evil Eye (1/1)** - Increases weak hit chance to 100% (instead of 75%) when applying debuffs - **CRITICAL for Sleep/Poison/HP Burn debuffers**
-  - Master Hexer (3/3) - Extends debuff duration by 25% (e.g., 2-turn Poison becomes 2.5 turns, rounded to 3 turns)
-  - Lasting Gifts (3/3) - Extends buff duration by 25% (e.g., 2-turn Continuous Heal becomes 2.5 turns, rounded to 3 turns)
-- **Who Needs:** All Sleep debuffers (Gretel, Criodan, Nogdar, Vogoth), all healers (Godseeker, Scyl, Bad-el, Rector), all Poison/HP Burn dealers (Frozen Banshee, Elenaril, Drexthar, Geomancer)
-- **Cost:** 800 gems OR farm Minotaur (per champion, varies by specific mastery selection)
+- **Healers (Godseeker, Scyl, Bad-el, Rector):** Lasting Gifts (Defense + Support)
+  - **Path:** Defense tree → survivability → Support tree → Lasting Gifts
+  - **Why:** Extends Continuous Heal and shields by +1 turn (critical for surviving A3 nukes)
 
-**Recommended Mastery Distribution:**
-- **Sleep Debuffers:** Defense + Support trees (Evil Eye + Master Hexer critical)
-- **Healers:** Defense + Support trees (Lasting Gifts extends buffs)
-- **MAX HP Damage Dealers (Poison/HP Burn):** Defense + Support trees (Evil Eye + Master Hexer critical)
-- **Burst Damage Dealers (Elenaril/Coldheart):** Offense (Warmaster/Helmsmasher) + Defense + Support trees
-- **Tanks:** Defense + Support trees (maximum survivability)
+- **MAX HP Damage (Poison/HP Burn: Frozen Banshee, Elenaril, Drexthar, Geomancer):** Master Hexer (Defense + Support)
+  - **Path:** Defense tree → Support tree → Master Hexer
+  - **Why:** Extends Poison/HP Burn 2→3 turns for sustained damage during boss Slumber cycles
+
+- **Burst Damage (Elenaril A3, Coldheart A3):** Warmaster or Helmsmasher (Offense + Defense)
+  - **Path:** Offense tree → Warmaster/Helmsmasher → Defense tree → survivability
+  - **Why:** 60% chance for MAX HP damage proc on A1/A3 (requires 100% C.RATE for full effectiveness)
+  - **Note:** Lower priority than survivability for most Sand Devil teams
+
+- **Tanks:** Defense tree full (Defense + Support)
+  - **Path:** Defense tree → all survivability masteries → Support tree for ACC/SPD
+  - **Why:** Maximum damage reduction and healing for taking boss A3 nukes
+
+- **Cost:** 800 gems OR farm Minotaur's Labyrinth (per champion)
+- **Full Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
 
 ### 8.3. Stat Priorities Summary
 

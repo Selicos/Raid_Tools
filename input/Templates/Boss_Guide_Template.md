@@ -71,7 +71,11 @@ note: use simulation data for each team generated and update this section when a
 
 **Gear:** [Recommended sets and stat priorities]
 
-**Masteries:** [Key masteries for each role]
+**Masteries:** Reference canonical mastery guide for role-specific recommendations:
+- **[Role 1]:** [Primary T6] + [Secondary Tree] → [Brief why, e.g., "Warmaster for MAX HP damage"]
+- **[Role 2]:** [Primary T6] + [Secondary Tree] → [Brief why, e.g., "Master Hexer extends debuffs"]
+- **Cost:** 800 gems OR farm Minotaur's Labyrinth
+- **Full Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
 
 **Manual/Auto:** [Manual/auto advice, skill order, special notes]
 
@@ -88,7 +92,9 @@ note: use simulation data for each team generated and update this section when a
 - Use the format above like:
   - **Speed Tuning:** [Speed ranges for each champion]
   - **Gear:** [Recommended sets and stat priorities]
-  - **Masteries:** [Key masteries for each role]
+  - **Masteries:** Role-based mastery recommendations with canonical reference
+    - [Role]: [Primary T6] + [Secondary Tree] → [Brief why]
+    - Full details: [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
   - **Manual/Auto:** [Manual/auto advice, skill order, special notes]
   - **Strengths:** [List]
   - **Weaknesses:** [List]
@@ -118,7 +124,8 @@ note: use simulation data for each team generated and update this section when a
 ---
 
 ## 7. General Notes
-- [Advice on gear, masteries, stat priorities, manual/auto play, etc.]
+- [Advice on gear, stat priorities, manual/auto play, etc.]
+- **Masteries:** For all mastery builds referenced in team sections, see [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md) for complete tier progressions, alternatives, and detailed descriptions.
 
 ## 8. Actionable Notes & Upgrade Advice
 - [Upgrade priorities, champion substitutions, progression tips.]

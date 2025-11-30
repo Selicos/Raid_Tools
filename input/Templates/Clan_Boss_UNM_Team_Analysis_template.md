@@ -75,10 +75,11 @@
   - **Warmaster/Giant Slayer**: 75k per 'hit' cap for bonus damage At UNM. This means that the mastery that triggers more often is ideal.
 
   ### Warmaster & Giant Slayer Masteries
-  - **Warmaster**: 60% proc chance per skill activation (not per hit), regardless of crit. See mastery table for damage.
-  - **Giant Slayer**: 30% proc chance per hit, regardless of crit See mastery table for damage
-  - **Damage Cap**: Both types of bonus damage are capped at 75k per activation. Prefer the mastery that gets more possible activations per boss turn. 
-  - **Other Masteries:** late game, other top tier masteries may be more effective for damage based on the champion, gear, role, build, and team.
+  - **Warmaster**: 60% proc chance per skill activation (not per hit), regardless of crit
+  - **Giant Slayer**: 30% proc chance per hit, regardless of crit
+  - **Damage Cap**: Both types of bonus damage are capped at 75k per activation. Prefer the mastery that gets more possible activations per boss turn
+  - **Other Masteries**: Late game, other top tier masteries may be more effective for damage based on the champion, gear, role, build, and team
+  - **Full Details**: See [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md) for complete mastery tables, tier progressions, and damage calculations
 
 
   ---
@@ -183,9 +184,10 @@ TO BE UPDATED AFTER DRAFT IS READY
 - **Impact:** Can improve gear but not maximize (missing 10-20% potential stats from max ascension)
 
 **Mastery Resets:**
-- **Cost:** 300 gems per champion
+- **Cost:** First reset FREE, subsequent resets 150 gems per champion
 - **Availability:** ~1 week of gathering per reset
 - **Impact:** Can change masteries as needed, but resource-limited (prioritize high-impact resets)
+- **Reference**: See [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md) for all mastery builds and optimization strategies
 
 ### **Gear Optimization Strategy (Based on Availability)**
 - Maintain this section as issues are identified, remediated, and updated through the analysis process.

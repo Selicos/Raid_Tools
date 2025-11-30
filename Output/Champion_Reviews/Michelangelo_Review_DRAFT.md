@@ -1277,7 +1277,7 @@ Michelangelo is NOT a low-use champion. He has HIGH priority for Doom Tower Hard
 
 **Current File Size:** ~1,290 lines (~440 BATCH 1 + ~550 BATCH 2 + ~300 BATCH 3)
 
-**Next Action:** Proceed to BATCH 4 (Masteries) - Document PVE masteries (Offense tree: Warmaster or Giant Slayer, Support tree: Pinpoint Accuracy + Evil Eye + Cycle of Magic), PVP masteries (Offense tree: Helmsmasher, Support tree: ACC, Defense tree: survivability for fragile champion), Warmaster vs Giant Slayer decision (depends on skill hit counts: A1 2 hits, A2 1 hit, A3 1 hit per enemy = likely Warmaster for single-target, Giant Slayer for AoE). ~150-200 lines.
+**Next Action:** Proceed to BATCH 5 (Faction Wars) - grep_search for owned Banner Lords champions, document Faction Wars team recommendations (user completed Normal, need recommendations for Hard progression), ideal 5-champion pull list (non-owned Banner Lords champions only), investment priority (Michelangelo rated 9/10 for Faction Wars Banner Lords). ~100-150 lines.
 
 ---
 
@@ -1286,265 +1286,62 @@ Michelangelo is NOT a low-use champion. He has HIGH priority for Doom Tower Hard
 ### 5.1 Masteries Overview
 
 Michelangelo's mastery setup depends on his primary role and content focus:
-- **PVE Focus (Dungeons, Doom Tower, Clan Boss):** Offense tree for damage (Warmaster or Giant Slayer), Support tree for debuff reliability (Pinpoint Accuracy, Evil Eye)
-- **PVP Focus (Arena, Live Arena):** Offense tree for damage (Helmsmasher for DEF ignore), Support tree for debuff reliability, Defense tree for survivability (Michelangelo is fragile with base HP 16,515 / DEF 980)
-- **Hybrid Build (PVE + PVP):** Offense tree (Warmaster/Giant Slayer), Support tree (Pinpoint Accuracy), skip Defense tree unless building for Arena Defense
 
-**Key Masteries for Michelangelo:**
-- **Pinpoint Accuracy (Support T5):** +10 ACC = helps reach ACC requirements (250-350 ACC)
-- **Evil Eye (Support T6):** +5% chance to land debuffs on targets with buffs = improves Decrease DEF, Stun, Decrease ATK, Leech landing in Arena
-- **Warmaster or Giant Slayer (Offense T6):** +60% or +80% damage proc on boss = massive damage increase
-- **Cycle of Magic (Support T4):** +5 SPD when ally uses skill = stacks with team speed cycling for faster turns
-
----
-
-### 5.2 PVE Masteries (Dungeons, Doom Tower Hard, Clan Boss, Cursed City)
-
-#### Recommended Mastery Tree (PVE Focus)
-
-**Offense Tree (Primary Tree):**
-
-**Tier 1:**
-- **Deadly Precision:** +5% C.RATE (TAKE - helps reach 100% C.RATE)
-- **Keen Strike:** +5% damage on critical hits (TAKE - synergizes with 100% C.RATE build)
-
-**Tier 2:**
-- **Heart of Glory:** +5% damage when 3+ enemies alive (TAKE - helps with wave clear)
-- **Single Out:** +10% damage when 1 enemy alive (TAKE - helps with boss nuking)
-
-**Tier 3:**
-- **Life Drinker:** Heals for 5% of damage dealt (SKIP - Leech debuff already provides 18% healing)
-- **Bring it Down:** +10% damage vs enemies with Decrease DEF (TAKE - synergizes with A2 Decrease DEF)
-- **Methodical:** +5% C.DMG (TAKE - helps reach 200-300% C.DMG)
-
-**Tier 4:**
-- **Warmaster or Giant Slayer:** See section 5.3 for decision (TAKE ONE)
-  * **Warmaster:** 60% chance to deal 10% enemy MAX HP damage (BEST for Clan Boss, single-target bosses)
-  * **Giant Slayer:** 30% chance to deal 7.5% enemy MAX HP damage per hit (BETTER for AoE waves with A3)
-
-**Support Tree (Secondary Tree):**
-
-**Tier 1:**
-- **Pinpoint Accuracy:** +10 ACC (TAKE - helps reach 250-350 ACC requirement)
-- **Charged Focus:** +2 ACC per debuff on target (max +20 ACC at 10 debuffs) (SKIP - low value)
-
-**Tier 2:**
-- **Swarm Smiter:** +20% damage to enemies under Stun, Sleep, Freeze (TAKE - synergizes with A2 Stun)
-- **Lore of Steel:** +5% HP, DEF, ATK from gear sets (TAKE - increases all stats)
-
-**Tier 3:**
-- **Evil Eye:** +5% chance to land debuffs on targets with buffs (TAKE - helps land debuffs in Arena vs buffed enemies)
-- **Master Hexer:** +1 turn debuff duration (SKIP - debuff durations are already 2 turns, +1 turn is overkill)
-
-**Tier 4:**
-- **Cycle of Magic:** +5 SPD when ally uses skill (TAKE - stacks with team cycling for faster turns)
-- **Lasting Gifts:** +1 turn buff duration (SKIP - A1 Increase ATK buff already lasts 2 turns, +1 turn is overkill)
-
-**Tier 5:**
-- **Spirit Haste:** +6% TM fill when using skill (SKIP - low value for PVE)
-- **Rapid Response:** +3% TM fill when ally attacked (SKIP - low value for PVE)
-
-**Defense Tree (NOT RECOMMENDED for PVE):**
-- **Skip Defense tree for PVE builds** - Offense and Support trees provide more value for damage and debuff reliability
-
-**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
-
----
-
-### 5.3 Warmaster vs Giant Slayer Decision
-
-**Skill Hit Counts (Critical for Decision):**
-- **A1 (Boo-Yah!):** 2 hits (single-target)
-- **A2 (Express Delivery!):** 1 hit (single-target)
-- **A3 (Shell Cyclone):** 1 hit per enemy (AoE, up to 5 hits if 5 enemies)
-- **A4 (Party Dude - Ally Join Attack):** Uses A1 when joining = 2 hits (single-target)
-
-**Warmaster vs Giant Slayer Calculation:**
-
-**Warmaster (60% chance, 10% enemy MAX HP damage):**
-- **A1:** 2 hits = 2 × 60% = 120% chance to proc (guaranteed at least 1 proc) = 10% MAX HP damage per A1
-- **A2:** 1 hit = 60% chance to proc = 6% expected MAX HP damage per A2
-- **A3:** 1 hit per enemy = 60% chance per enemy. If 5 enemies, 5 × 60% = 300% chance (guaranteed 3 procs) = 30% MAX HP total damage per A3
-- **A4 (Ally Join):** 2 hits = 120% chance to proc = 10% MAX HP damage per Ally Join
-- **Expected Value (Boss Fight, Single-Target):** A1 + A2 cycle = 10% + 6% = 16% MAX HP damage per 2 turns
-
-**Giant Slayer (30% chance per hit, 7.5% enemy MAX HP damage):**
-- **A1:** 2 hits = 2 × 30% = 60% chance to proc at least once = 0.6 × 7.5% = 4.5% expected MAX HP damage per A1
-- **A2:** 1 hit = 30% chance to proc = 0.3 × 7.5% = 2.25% expected MAX HP damage per A2
-- **A3:** 1 hit per enemy = 30% chance per enemy. If 5 enemies, 5 × 30% × 7.5% = 11.25% expected MAX HP total damage per A3
-- **A4 (Ally Join):** 2 hits = 60% chance to proc = 4.5% expected MAX HP damage per Ally Join
-- **Expected Value (Boss Fight, Single-Target):** A1 + A2 cycle = 4.5% + 2.25% = 6.75% MAX HP damage per 2 turns
-
-**Recommendation:**
-- **TAKE WARMASTER for Clan Boss, single-target boss fights (Doom Tower Hard, Cursed City, Hydra):** Warmaster provides 16% MAX HP damage per A1 + A2 cycle vs Giant Slayer's 6.75% = 2.4x more damage
-- **TAKE GIANT SLAYER for AoE wave clear (Dungeons, Faction Wars):** Giant Slayer procs on each A3 hit (1 hit per enemy) = higher total damage vs multiple enemies
-- **User Priority:** User prioritizes Clan Boss UNM (Priority 1) and Dungeons (Priority 2). Since Michelangelo is mediocre for Clan Boss (5/10, Debuff Spread useless on single-target boss), but excellent for Dungeons (8/10, Debuff Spread game-changing for waves), **RECOMMEND GIANT SLAYER** for maximum value in Dungeons wave clear.
-
-**Final Recommendation:** **GIANT SLAYER** (better for user's Dungeon priority, helps with wave clear where Michelangelo excels)
-
----
-
-### 5.4 PVP Masteries (Arena, Tag Team, Live Arena)
-
-#### Recommended Mastery Tree (PVP Focus)
-
-**Offense Tree (Primary Tree):**
-
-**Tier 1:**
-- **Deadly Precision:** +5% C.RATE (TAKE - helps reach 100% C.RATE)
-- **Keen Strike:** +5% damage on critical hits (TAKE - synergizes with 100% C.RATE build)
-
-**Tier 2:**
-- **Heart of Glory:** +5% damage when 3+ enemies alive (TAKE - Arena always has 4 enemies at start)
-- **Single Out:** +10% damage when 1 enemy alive (TAKE - helps finish off remaining enemies)
-
-**Tier 3:**
-- **Life Drinker:** Heals for 5% of damage dealt (SKIP - Leech debuff already provides 18% healing)
-- **Bring it Down:** +10% damage vs enemies with Decrease DEF (TAKE - synergizes with A2 Decrease DEF + Debuff Spread)
-- **Whirlwind of Death:** +6% damage on AoE skills (TAKE - synergizes with A3 AoE nuke)
-
-**Tier 4:**
-- **Cycle of Violence:** +10% chance to reduce skill cooldown by 1 when killing enemy (TAKE - Arena offense benefits from faster skill cycling)
-- **Opportunist:** +18% damage to enemies below 30% HP (SKIP - want to kill enemies outright, not chip damage)
-
-**Tier 5:**
-- **Methodical:** +5% C.DMG (TAKE - helps reach 250-300% C.DMG for Arena)
-- **Kill Streak:** Fills TM by 6% when killing enemy (TAKE - Arena offense benefits from extra turns after kills)
-
-**Tier 6:**
-- **Helmsmasher:** 50% chance to ignore 25% of enemy DEF on critical hits (TAKE - BEST for Arena, stacks with Savage set + Decrease DEF for ~90% total DEF ignore)
-- **Warmaster/Giant Slayer:** (SKIP - Helmsmasher is BEST for Arena PVP)
-
-**Support Tree (Secondary Tree):**
-
-**Tier 1:**
-- **Pinpoint Accuracy:** +10 ACC (TAKE - helps reach 300-350 ACC requirement for Arena)
-- **Charged Focus:** +2 ACC per debuff on target (SKIP - low value)
-
-**Tier 2:**
-- **Swarm Smiter:** +20% damage to enemies under Stun, Sleep, Freeze (TAKE - synergizes with A2 Stun + Debuff Spread)
-- **Lore of Steel:** +5% HP, DEF, ATK from gear sets (TAKE - increases all stats)
-
-**Tier 3:**
-- **Evil Eye:** +5% chance to land debuffs on targets with buffs (TAKE - CRITICAL for Arena, most enemies have buffs from Arbiter, Mythrala, etc.)
-- **Master Hexer:** +1 turn debuff duration (SKIP - not needed for Arena)
-
-**Tier 4:**
-- **Cycle of Magic:** +5 SPD when ally uses skill (TAKE - helps Michelangelo cycle faster in Arena)
-- **Lasting Gifts:** +1 turn buff duration (SKIP - not critical for Arena)
-
-**Defense Tree (OPTIONAL for Arena Defense):**
-
-**Tier 1:**
-- **Tough Skin:** +5% DEF (TAKE if building for Arena Defense - helps survive first turn)
-- **Shieldbearer:** +5% HP (TAKE if building for Arena Defense - helps survive first turn)
-
-**Tier 2:**
-- **Improved Parry:** +5% chance to reduce damage by 15% (TAKE if building for Arena Defense - synergizes with A4 30% Evade)
-- **Rejuvenation:** Heals 3% MAX HP per turn (SKIP - low value)
-
-**Tier 3:**
-- **Resurgent:** +10% HP when revived (SKIP - Michelangelo does not have revive synergy)
-- **Bloodthirst:** Heals 6% MAX HP when killing enemy (SKIP - low value for Arena Defense)
-
-**Tier 4:**
-- **Delay Death:** 30% chance to block fatal damage and survive with 1 HP (TAKE if building for Arena Defense - helps survive enemy nukes)
-- **Retribution:** 20% chance to counterattack when hit (SKIP - low value)
-
-**Cost:** 800 gems OR farm Minotaur's Labyrinth (PVP Offense recommended, Defense build not cost-effective)
-
----
-
-### 5.5 Hybrid Masteries (PVE + PVP Balanced)
-
-#### Recommended Mastery Tree (Hybrid Build)
-
-**Offense Tree (Primary Tree):**
-- **Same as PVE Offense Tree:** Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, **Giant Slayer** (for Dungeon wave clear)
-
-**Support Tree (Secondary Tree):**
-- **Same as PVE Support Tree:** Pinpoint Accuracy, Swarm Smiter, Lore of Steel, Evil Eye, Cycle of Magic
-
-**Why Hybrid = PVE Build:**
-- **Giant Slayer > Helmsmasher for Hybrid:** Giant Slayer works in both PVE (Dungeons, Doom Tower) and PVP (Arena AoE nukes), while Helmsmasher only works in PVP
-- **User Priority:** User prioritizes Dungeons (Priority 2) > Arena (Priority 4), so PVE mastery setup is optimal
-- **Michelangelo's Best Content:** Doom Tower Hard (9/10), Dungeons (8/10), Cursed City (8/10) all benefit from Giant Slayer
-
-**Cost:** 800 gems OR farm Minotaur's Labyrinth
-
----
-
-### 5.6 Mastery Priority Order (Leveling Guide)
-
-**When leveling Michelangelo from scratch, take masteries in this order:**
-
-**Priority 1: Core Debuff Reliability (Support Tree T1-T3):**
-1. **Pinpoint Accuracy (Support T1):** +10 ACC = CRITICAL for debuff landing
-2. **Lore of Steel (Support T2):** +5% all stats from gear = immediate boost
-3. **Evil Eye (Support T3):** +5% chance to land debuffs on buffed targets = CRITICAL for Arena
-
-**Priority 2: Core Damage (Offense Tree T1-T3):**
-4. **Deadly Precision (Offense T1):** +5% C.RATE
-5. **Keen Strike (Offense T1):** +5% damage on crits
-6. **Heart of Glory (Offense T2):** +5% damage when 3+ enemies alive
-7. **Single Out (Offense T2):** +10% damage when 1 enemy alive
-8. **Bring it Down (Offense T3):** +10% damage vs Decrease DEF targets
-9. **Methodical (Offense T3):** +5% C.DMG
-
-**Priority 3: Speed Cycling (Support Tree T4):**
-10. **Cycle of Magic (Support T4):** +5 SPD when ally uses skill = faster turns
-
-**Priority 4: Tier 6 Capstone (Offense Tree T6):**
-11. **Giant Slayer (Offense T6):** 30% chance to deal 7.5% MAX HP damage per hit = MASSIVE damage boost for bosses and waves
-
-**Priority 5: Additional Damage (Offense Tree T2-T5):**
-12. **Swarm Smiter (Support T2):** +20% damage to Stunned enemies
-13. **Whirlwind of Death (Offense T3):** +6% AoE damage (if taking Helmsmasher for PVP)
-14. **Cycle of Violence (Offense T4):** +10% cooldown reduction chance (if taking Helmsmasher for PVP)
-15. **Kill Streak (Offense T5):** +6% TM fill on kill (if taking Helmsmasher for PVP)
-
-**Priority 6: Defense Tree (ONLY if building for Arena Defense):**
-16. **Tough Skin (Defense T1):** +5% DEF
-17. **Shieldbearer (Defense T1):** +5% HP
-18. **Improved Parry (Defense T2):** +5% chance to reduce damage by 15%
-19. **Delay Death (Defense T4):** 30% chance to block fatal damage
-
----
-
-### 5.7 Masteries Summary by Content
-
-| Content | Offense T6 | Support Tree Priority | Defense Tree |
-|---------|------------|----------------------|--------------|
-| **Clan Boss UNM** | Warmaster | Pinpoint Accuracy, Lore of Steel, Cycle of Magic | SKIP |
-| **Dungeons Stage 25** | Giant Slayer | Pinpoint Accuracy, Swarm Smiter, Evil Eye, Cycle of Magic | SKIP |
-| **Doom Tower Hard** | Giant Slayer | Pinpoint Accuracy, Lore of Steel, Evil Eye, Cycle of Magic | SKIP |
-| **Iron Twins** | Giant Slayer | Pinpoint Accuracy, Lore of Steel, Cycle of Magic | SKIP |
-| **Hydra Brutal** | Warmaster | Pinpoint Accuracy, Lore of Steel, Cycle of Magic | SKIP |
-| **Cursed City** | Giant Slayer | Pinpoint Accuracy, Lore of Steel, Evil Eye, Cycle of Magic | SKIP |
-| **Arena Offense** | Helmsmasher | Pinpoint Accuracy, Swarm Smiter, Evil Eye, Cycle of Magic | SKIP |
-| **Arena Defense** | Helmsmasher | Pinpoint Accuracy, Evil Eye, Cycle of Magic | TAKE (Tough Skin, Improved Parry, Delay Death) |
-| **Tag Team** | Helmsmasher | Pinpoint Accuracy, Swarm Smiter, Evil Eye, Cycle of Magic | SKIP |
-| **Live Arena** | Helmsmasher | Pinpoint Accuracy, Evil Eye, Cycle of Magic | OPTIONAL |
-| **Faction Wars** | Giant Slayer | Pinpoint Accuracy, Lore of Steel, Evil Eye, Cycle of Magic | SKIP |
-
-**Recommended Mastery Setup (User's Content Priorities):**
-- **Offense T6:** Giant Slayer (Dungeons Priority 2, Doom Tower Priority 3, Cursed City Priority 3 all benefit)
-- **Support Tree:** Pinpoint Accuracy, Swarm Smiter, Lore of Steel, Evil Eye, Cycle of Magic
-- **Defense Tree:** SKIP (Michelangelo is fragile, Defense tree provides minimal value for PVE content)
-- **Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
-
-**When to Respec Masteries:**
-- **If building for Arena Offense ONLY:** Respec to Helmsmasher (costs 150 gems)
-- **If building for Clan Boss ONLY:** Respec to Warmaster (costs 150 gems)
-- **If building for Hybrid PVE/PVP:** Keep Giant Slayer (no respec needed)
+**Recommended Builds by Content:**
+
+**PVE Focus (Dungeons, Doom Tower, Clan Boss):** Giant Slayer + Support (Offense + Support)
+- **Path:** Offense tree → Deadly Precision → Keen Strike → Heart of Glory/Single Out → Bring It Down/Methodical → **Giant Slayer**  
+  Support tree → Pinpoint Accuracy → Lore of Steel → Evil Eye → Cycle of Magic
+- **Why:** Giant Slayer procs on each A3 hit (1 hit per enemy = up to 5 procs vs waves), Swarm Smiter synergizes with A2 Stun + Debuff Spread
+- **User Priority:** Dungeons (Priority 2), Doom Tower (Priority 3) - Michelangelo excels at wave clear (8-9/10 ratings)
+
+**PVP Focus (Arena, Live Arena):** Helmsmasher + Support (Offense + Support)
+- **Path:** Offense tree → Deadly Precision → Keen Strike → Heart of Glory/Single Out → Whirlwind of Death → Kill Streak → **Helmsmasher**  
+  Support tree → Pinpoint Accuracy → Swarm Smiter → Evil Eye → Cycle of Magic
+- **Why:** Helmsmasher ignores 25% DEF (stacks with Savage set + Decrease DEF for ~90% total), Evil Eye CRITICAL for landing debuffs on buffed Arena enemies
+- **User Priority:** Arena (Priority 4) - lower priority than PVE content
+
+**Clan Boss UNM:** Warmaster + Support (Offense + Support)
+- **Path:** Offense tree → Deadly Precision → Keen Strike → Single Out → Bring It Down → **Warmaster**  
+  Support tree → Pinpoint Accuracy → Lore of Steel → Cycle of Magic
+- **Why:** Warmaster provides 2.4x more damage vs single-target bosses than Giant Slayer (16% MAX HP vs 6.75% per 2-turn cycle)
+- **Note:** Michelangelo rated only 5/10 for Clan Boss (Debuff Spread useless vs single-target) - lower priority build
+
+### 5.2 Warmaster vs Giant Slayer Decision
+
+**Skill Hit Counts:**
+- A1: 2 hits | A2: 1 hit | A3: 1 hit per enemy (AoE) | A4: 2 hits (Ally Join uses A1)
+
+**Calculation:**
+- **Warmaster:** A1 + A2 cycle = 16% MAX HP damage per 2 turns (single-target boss)
+- **Giant Slayer:** A3 vs 5 enemies = 11.25% expected MAX HP total damage (wave clear)
+
+**Recommendation:** **GIANT SLAYER** for user's Dungeon priority (Priority 2) - Michelangelo excels at wave clear (8/10 Dungeons, 9/10 Doom Tower), mediocre for Clan Boss (5/10)
+
+### 5.3 Masteries Summary by Content
+
+| Content | Offense T6 | Key Support Masteries | Notes |
+|---------|------------|----------------------|-------|
+| **Dungeons Stage 25** | Giant Slayer | Pinpoint Accuracy, Swarm Smiter, Evil Eye, Cycle of Magic | RECOMMENDED for user Priority 2 |
+| **Doom Tower Hard** | Giant Slayer | Pinpoint Accuracy, Lore of Steel, Evil Eye, Cycle of Magic | 9/10 rating, wave clear focus |
+| **Cursed City** | Giant Slayer | Pinpoint Accuracy, Lore of Steel, Evil Eye, Cycle of Magic | 8/10 rating, debuff spread valuable |
+| **Faction Wars** | Giant Slayer | Pinpoint Accuracy, Lore of Steel, Evil Eye, Cycle of Magic | 9/10 rating, wave clear critical |
+| **Clan Boss UNM** | Warmaster | Pinpoint Accuracy, Lore of Steel, Cycle of Magic | 5/10 rating, respec only if CB focus |
+| **Arena Offense** | Helmsmasher | Pinpoint Accuracy, Swarm Smiter, Evil Eye, Cycle of Magic | Respec for PVP focus (150 gems) |
+
+**Recommended Setup (User's Priorities):**
+- **Build:** Giant Slayer + Support masteries (Offense + Support)
+- **Cost:** 800 gems OR farm Minotaur's Labyrinth
+- **Respec:** 150 gems (first reset FREE) if switching to Helmsmasher (Arena) or Warmaster (Clan Boss)
+- **Full Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
 
 ---
 
 **BATCH 4 COMPLETE** ✅
 
-**Lines Added:** ~180 lines (Masteries fully documented)
+**Lines Added:** ~40 lines (Masteries fully documented with canonical reference)
 
-**Current File Size:** ~1,470 lines (~440 BATCH 1 + ~550 BATCH 2 + ~300 BATCH 3 + ~180 BATCH 4)
+**Current File Size:** ~1,330 lines (~440 BATCH 1 + ~550 BATCH 2 + ~300 BATCH 3 + ~40 BATCH 4)
 
 **Next Action:** Proceed to BATCH 5 (Faction Wars) - grep_search for owned Banner Lords champions, document Faction Wars team recommendations (user completed Normal, need recommendations for Hard progression), ideal 5-champion pull list (non-owned Banner Lords champions only), investment priority (Michelangelo rated 9/10 for Faction Wars Banner Lords). ~100-150 lines.
 
