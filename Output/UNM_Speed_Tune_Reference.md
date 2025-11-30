@@ -155,8 +155,8 @@ Endgame only - requires exceptional gear (20+ SPD per piece)
 
 ### Cons
 - ❌ **REQUIRES specific champion** (Skullcrusher, Valkyrie, etc.)
-- ❌ Skullcrusher needs 14 Legendary books (expensive)
-- ❌ AI issues (Counterattack must be timed properly)
+- ❌ Skullcrusher needs many epic books (expensive)
+- ❌ AI issues (Counterattack must be timed or manual, or extended)
 - ❌ Decrease SPD still risky
 
 ### Example Team

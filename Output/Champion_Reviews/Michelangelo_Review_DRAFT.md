@@ -1302,7 +1302,7 @@ Michelangelo's mastery setup depends on his primary role and content focus:
 
 #### Recommended Mastery Tree (PVE Focus)
 
-**Offense Tree (Primary Tree - 55 scrolls):**
+**Offense Tree (Primary Tree):**
 
 **Tier 1:**
 - **Deadly Precision:** +5% C.RATE (TAKE - helps reach 100% C.RATE)
@@ -1322,7 +1322,7 @@ Michelangelo's mastery setup depends on his primary role and content focus:
   * **Warmaster:** 60% chance to deal 10% enemy MAX HP damage (BEST for Clan Boss, single-target bosses)
   * **Giant Slayer:** 30% chance to deal 7.5% enemy MAX HP damage per hit (BETTER for AoE waves with A3)
 
-**Support Tree (Secondary Tree - 55 scrolls):**
+**Support Tree (Secondary Tree):**
 
 **Tier 1:**
 - **Pinpoint Accuracy:** +10 ACC (TAKE - helps reach 250-350 ACC requirement)
@@ -1347,7 +1347,7 @@ Michelangelo's mastery setup depends on his primary role and content focus:
 **Defense Tree (NOT RECOMMENDED for PVE):**
 - **Skip Defense tree for PVE builds** - Offense and Support trees provide more value for damage and debuff reliability
 
-**Total Scrolls Required:** 110 scrolls (55 Offense + 55 Support) = ~170 red scrolls to fully unlock
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 
 ---
 
@@ -1388,7 +1388,7 @@ Michelangelo's mastery setup depends on his primary role and content focus:
 
 #### Recommended Mastery Tree (PVP Focus)
 
-**Offense Tree (Primary Tree - 55 scrolls):**
+**Offense Tree (Primary Tree):**
 
 **Tier 1:**
 - **Deadly Precision:** +5% C.RATE (TAKE - helps reach 100% C.RATE)
@@ -1415,7 +1415,7 @@ Michelangelo's mastery setup depends on his primary role and content focus:
 - **Helmsmasher:** 50% chance to ignore 25% of enemy DEF on critical hits (TAKE - BEST for Arena, stacks with Savage set + Decrease DEF for ~90% total DEF ignore)
 - **Warmaster/Giant Slayer:** (SKIP - Helmsmasher is BEST for Arena PVP)
 
-**Support Tree (Secondary Tree - 55 scrolls):**
+**Support Tree (Secondary Tree):**
 
 **Tier 1:**
 - **Pinpoint Accuracy:** +10 ACC (TAKE - helps reach 300-350 ACC requirement for Arena)
@@ -1451,9 +1451,7 @@ Michelangelo's mastery setup depends on his primary role and content focus:
 - **Delay Death:** 30% chance to block fatal damage and survive with 1 HP (TAKE if building for Arena Defense - helps survive enemy nukes)
 - **Retribution:** 20% chance to counterattack when hit (SKIP - low value)
 
-**Total Scrolls Required:**
-- **PVP Offense Build (Offense + Support):** 110 scrolls = ~170 red scrolls
-- **PVP Defense Build (Offense + Support + Defense):** 165 scrolls = ~255 red scrolls (NOT RECOMMENDED - too expensive for Michelangelo's low Arena Defense priority)
+**Cost:** 800 gems OR farm Minotaur's Labyrinth (PVP Offense recommended, Defense build not cost-effective)
 
 ---
 
@@ -1461,10 +1459,10 @@ Michelangelo's mastery setup depends on his primary role and content focus:
 
 #### Recommended Mastery Tree (Hybrid Build)
 
-**Offense Tree (Primary Tree - 55 scrolls):**
+**Offense Tree (Primary Tree):**
 - **Same as PVE Offense Tree:** Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Methodical, **Giant Slayer** (for Dungeon wave clear)
 
-**Support Tree (Secondary Tree - 55 scrolls):**
+**Support Tree (Secondary Tree):**
 - **Same as PVE Support Tree:** Pinpoint Accuracy, Swarm Smiter, Lore of Steel, Evil Eye, Cycle of Magic
 
 **Why Hybrid = PVE Build:**
@@ -1472,7 +1470,7 @@ Michelangelo's mastery setup depends on his primary role and content focus:
 - **User Priority:** User prioritizes Dungeons (Priority 2) > Arena (Priority 4), so PVE mastery setup is optimal
 - **Michelangelo's Best Content:** Doom Tower Hard (9/10), Dungeons (8/10), Cursed City (8/10) all benefit from Giant Slayer
 
-**Total Scrolls Required:** 110 scrolls = ~170 red scrolls
+**Cost:** 800 gems OR farm Minotaur's Labyrinth
 
 ---
 
@@ -1533,7 +1531,7 @@ Michelangelo's mastery setup depends on his primary role and content focus:
 - **Offense T6:** Giant Slayer (Dungeons Priority 2, Doom Tower Priority 3, Cursed City Priority 3 all benefit)
 - **Support Tree:** Pinpoint Accuracy, Swarm Smiter, Lore of Steel, Evil Eye, Cycle of Magic
 - **Defense Tree:** SKIP (Michelangelo is fragile, Defense tree provides minimal value for PVE content)
-- **Total Scrolls:** 110 scrolls = ~170 red scrolls
+- **Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 
 **When to Respec Masteries:**
 - **If building for Arena Offense ONLY:** Respec to Helmsmasher (costs 150 gems)
@@ -2169,9 +2167,9 @@ Michelangelo's mastery setup depends on his primary role and content focus:
 1. **6-Star Michelangelo:** CRITICAL (base HP 16,515 → ~23,000 at 6-star)
 2. **Book A2 to Level 4 (3 books):** CRITICAL (100% Decrease DEF + Stun, cooldown 4→3 turns)
 3. **Book A3 to Level 4 (3 books):** CRITICAL (100% Decrease ATK + Leech, cooldown 5→4 turns)
-4. **Giant Slayer Masteries (110 scrolls):** CRITICAL (30% proc on A3 AoE hits)
+4. **Giant Slayer Masteries:** CRITICAL (30% proc on A3 AoE hits)
 
-**Expected Cost:** 6 legendary books, 110 mastery scrolls (~170 red scrolls)
+**Expected Cost:** 6 legendary books, 800 gems for masteries OR farm Minotaur's Labyrinth
 
 **Expected Impact:** Michelangelo becomes viable for Doom Tower Hard, Dungeons, Faction Wars
 
@@ -2193,7 +2191,7 @@ Michelangelo's mastery setup depends on his primary role and content focus:
 2. **Defense tree masteries for Arena Defense:** OPTIONAL (only if building for Arena Defense)
 3. **Respec to Helmsmasher for Arena Offense:** OPTIONAL (costs 150 gems, only if Arena is priority)
 
-**Expected Cost:** 4 legendary books, 55 mastery scrolls, 150 gems
+**Expected Cost:** 4 legendary books, 150 gems for respec (if needed)
 
 **Expected Impact:** Minor damage increase, Arena viability improvement
 
@@ -3019,10 +3017,10 @@ If Fatal substats are poor, use **Savage (4-piece) + Perception (2-piece):**
 - **If Michelangelo is secondary champion:** STOP after A2 Level 4 + A3 Level 4 (6 books total)
 - **If Michelangelo is primary damage dealer:** Consider full booking (10 books) for maximum damage
 
-**Masteries (Red Scrolls):**
+**Masteries:**
 - **Priority:** CRITICAL for Doom Tower Hard, Dungeons, Faction Wars
 - **Recommended Setup:** Giant Slayer (Offense T6) + Support Tree (Pinpoint Accuracy, Swarm Smiter, Lore of Steel, Evil Eye, Cycle of Magic)
-- **Total Scrolls Required:** 110 scrolls = ~170 red scrolls (or 800 gems to buy scrolls)
+- **Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 - **When:** After 6-star + books, before attempting Doom Tower Hard or Dungeons Stage 25 speed farming
 
 **Gear Priorities by Content:**

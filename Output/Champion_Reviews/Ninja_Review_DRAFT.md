@@ -602,10 +602,7 @@ Warmaster and Giant Slayer masteries **ONLY proc on critical hits**:
 - At 70% C.RATE, you lose 30% of expected mastery damage
 - **Recommendation:** Prioritize 100% C.RATE via Gloves (C.RATE main stat) + substats before other offensive stats (C.DMG, ATK)
 
-**Tier 1-3 Total:** 10 points  
-**Tier 4-5 Total:** 9 points  
-**Tier 6 Total:** 1 point  
-**Offense Tree Total:** 20 points
+**Offense Tree:** T1-T6 complete path to Warmaster
 
 ---
 
@@ -630,9 +627,7 @@ Warmaster and Giant Slayer masteries **ONLY proc on critical hits**:
 - **Master Hexer** (3/3): Increases debuff duration by 1 turn (10% chance per debuff) → Extends HP Burn, Decrease DEF, Freeze
 - **Sniper (ALTERNATIVE)** (3/3): Increases ACC by 50% when attacking Boss → Helps reach 250+ ACC (less critical if ACC is sufficient from gear)
 
-**Tier 1-3 Total:** 9 points  
-**Tier 4-6 Total:** 9 points  
-**Support Tree Total:** 18 points
+**Support Tree:** T1-T6 complete path for ACC and utility
 
 ---
 
@@ -644,12 +639,11 @@ Warmaster and Giant Slayer masteries **ONLY proc on critical hits**:
 **Tier 2:**
 - **Blastproof** (3/3): -8% AOE damage taken → Survivability vs Clan Boss AOE attacks
 
-**Tier 1-2 Total:** 6 points  
-**Defense Tree Total:** 6 points
+**Defense Tree:** T1-T2 for survivability only
 
 ---
 
-**Total Masteries:** 44 points (20 Offense + 18 Support + 6 Defense)
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 
 ---
 
@@ -690,7 +684,7 @@ Warmaster and Giant Slayer masteries **ONLY proc on critical hits**:
 **Tier 6:**
 - **Helmsmasher** (1/1): Ignore 25% DEF + ignore 5% DEF per debuff on target → Good for Arena nuking
 
-**Offense Tree Total:** 20 points
+**Offense Tree:** T1-T6 complete
 
 ---
 
@@ -714,14 +708,14 @@ Warmaster and Giant Slayer masteries **ONLY proc on critical hits**:
 **Tier 6:**
 - **Oppurtunist** (3/3): +12% damage to enemies under Freeze, Sleep, Stun, etc. → Synergizes with Ninja's A3 Freeze
 
-**Support Tree Total:** 18 points
+**Support Tree:** T1-T6 complete
 
 ---
 
 **Defense Tree:**
-- Same as Clan Boss UNM (6 points)
+- Same as Clan Boss UNM (T1-T2 only)
 
-**Total Masteries:** 44 points (20 Offense + 18 Support + 6 Defense)
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 
 ---
 

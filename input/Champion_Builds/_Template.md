@@ -74,11 +74,12 @@
 | 5    |                       |                            |                         |
 | 6    |                       |                            |                         |
 
-**Notes:**
-- Delete unused mastery trees (empty columns)
-- Only 2 trees can be selected per champion
-- Can select 1 from each used tree in tier 1, up to 3 total per tier in tiers 2-5, then 1 tier 6 mastery
-- Reference `input/Mechanic_Dictionary/Masteries/Masteries.md` for mastery names and effects
+**Mastery Rules:**
+- Select 2 of 3 trees (Offense/Defense/Support) - delete unused column
+- T1: 1 per tree used | T2-T5: Up to 3 total per tier | T6: 1 capstone
+- Masteries must connect vertically (path-based from previous tier)
+- Cost: 800 gems OR farm Minotaur | Reset: 1st free, then 150 gems
+- Reference: `input/Mechanic_Dictionary/Masteries/Masteries.md`
 
 #### 7. Skill Cooldowns (Assume Fully booked)
 - **A1:**  

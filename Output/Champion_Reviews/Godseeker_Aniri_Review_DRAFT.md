@@ -1090,7 +1090,7 @@
 
 ### PVE Mastery Build Summary (Recommended)
 
-**Total Scrolls Required:** ~170 red scrolls
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 
 **Path:**
 1. Support Tree → T6 (Full)
@@ -1139,7 +1139,7 @@
 
 ### PVP Mastery Build Summary (Arena Defense Focus)
 
-**Total Scrolls Required:** ~150 red scrolls
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 
 **Path:**
 1. Defense Tree → T6 (Full)
@@ -1594,7 +1594,7 @@
 
 **Total Investment:**
 - **Epic Books:** 8 minimum (A2: 5 books, A3/A4: 3 books), 11 optimal (full A1 booking)
-- **Masteries:** ~170 red scrolls (Support + Defense trees)
+- **Masteries:** 800 gems for instant unlock OR farm Minotaur's Labyrinth (Support + Defense trees)
 - **Gear:** Speed + Defense OR Immortal + Regeneration (160-180 SPD, 45k-70k HP, 2.2k-3.5k DEF)
 - **Level:** 60 + Full Ascension (6-star)
 
@@ -1843,7 +1843,7 @@ All champion data for Godseeker Aniri has been cross-validated using multiple au
 
 **✅ Section 8: Investment Recommendations**
 - [x] Investment priority tiers (CRITICAL, HIGH, MEDIUM, LOW)
-- [x] Total investment requirements (8 epic books minimum, ~170 red scrolls, gear, level 60, ascension)
+- [x] Total investment requirements (8 epic books minimum, 800 gems for masteries OR farm Minotaur, gear, level 60, ascension)
 - [x] Expected ROI by content (Faction Wars 70-80% Stage 21 success rate, etc.)
 
 **✅ Section 9: Current Build Input Section**

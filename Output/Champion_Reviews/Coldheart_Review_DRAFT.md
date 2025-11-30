@@ -504,9 +504,9 @@ Crit = 505,100 x 3.0 = 1,515,300 damage per hit
 
 ### Mastery Build Option 1: Flawless Execution (Dungeons/Doom Tower Hard Focus) ⭐ RECOMMENDED
 
-**Offense Tree (70 scrolls → Tier 6 Flawless Execution):**
+**Offense Tree (Path to Tier 6 Flawless Execution):**
 
-**Tier 1 (3 scrolls):**
+**Tier 1:**
 - **Deadly Precision (3/3):** +5% Crit Rate
 
 **Tier 2 (6 scrolls):**
@@ -531,15 +531,15 @@ Crit = 505,100 x 3.0 = 1,515,300 damage per hit
 - **Ruthless Ambush (3/3):** +30% Crit Damage to enemies with full HP
 - **Cycle of Magic (3/3):** 30% chance to reset random skill cooldown when placing debuff
 
-**Tier 6 (22 scrolls):**
+**Tier 6:**
 - **Flawless Execution (1/1):** +20% Crit Damage in Dungeons, Faction Wars, and Doom Tower
 
-**Support Tree (60 scrolls → Tier 4):**
+**Support Tree (Path to Tier 4):**
 
-**Tier 1 (3 scrolls):**
+**Tier 1:**
 - **Pinpoint Accuracy (3/3):** +10 Accuracy
 
-**Tier 2 (6 scrolls):**
+**Tier 2:**
 - **Charged Focus (3/3):** +20 Accuracy
 - **Exalt in Death (3/3):** +6 Speed when enemy killed
 
@@ -548,13 +548,13 @@ Crit = 505,100 x 3.0 = 1,515,300 damage per hit
 - **Rapid Response (3/3):** +6% Turn Meter when ally receives damage
 - **Delay Death (3/3):** +3% DEF and HP
 
-**Tier 4 (12 scrolls):**
+**Tier 4:**
 - **Swarm Smiter (3/3):** +20% damage to targets with 2+ debuffs
 - **Evil Eye (3/3):** 12% chance to extend debuffs by 1 turn when attacking
 - **Spirit Haste (3/3):** +6% Turn Meter when placing debuff
 - **Lasting Gifts (3/3):** 12% chance to extend buffs by 1 turn when attacking
 
-**Total Scrolls Required:** 130 (70 Offense + 60 Support)
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 
 **Why Flawless Execution:**
 - **+20% Crit Damage in Dungeons/Faction Wars/Doom Tower** → Coldheart's A3 Heartseeker deals 20% more damage in all primary content
@@ -571,17 +571,17 @@ Crit = 505,100 x 3.0 = 1,515,300 damage per hit
 
 ### Mastery Build Option 2: Giant Slayer (Clan Boss UNM Focus) ⚠️ CONDITIONAL
 
-**Offense Tree (70 scrolls → Tier 6 Giant Slayer):**
+**Offense Tree (Path to Tier 6 Giant Slayer):**
 
 **Tier 1-5:** Same as Flawless Execution build above (substitute Flawless Execution path with Giant Slayer path)
 
-**Tier 6 (22 scrolls):**
+**Tier 6:**
 - **Giant Slayer (1/1):** 30% chance to deal 7.5% Enemy MAX HP damage when attacking (50% chance on bosses)
 
-**Support Tree (60 scrolls → Tier 4):**
+**Support Tree (Path to Tier 4):**
 - Same as Flawless Execution build above
 
-**Total Scrolls Required:** 130 (70 Offense + 60 Support)
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 
 **Why Giant Slayer:**
 - **30% proc chance per hit (50% on bosses)** → Coldheart's A1 (4 hits) has ~93.75% chance to proc at least 1 Giant Slayer
@@ -938,14 +938,14 @@ Crit = 505,100 x 3.0 = 1,515,300 damage per hit
 - **Level 60:** MANDATORY (low base HP/DEF → needs 6-star for survivability)
 - **Full Ascension (6-star):** MANDATORY (stat bonuses critical)
 - **Books:** A3 Heartseeker CRITICAL (4 Epic Books, cooldown reduction 5 turns → 4 turns)
-- **Masteries:** Flawless Execution MANDATORY (130 scrolls, +20% Crit Damage in Dungeons/FW/DT)
+- **Masteries:** Flawless Execution MANDATORY (800 gems OR farm Minotaur, +20% Crit Damage in Dungeons/FW/DT)
 - **Gear:** 70% Crit Rate, 200% Crit Damage, 200 ACC, 180 SPD MINIMUM
 
 **Full Investment for Optimal Performance:**
 - **Level 60:** ✅ MANDATORY
 - **Full Ascension (6-star):** ✅ MANDATORY
 - **Books:** A3 + A1 (8 Epic Books total, skip A2)
-- **Masteries:** Flawless Execution (130 scrolls)
+- **Masteries:** Flawless Execution (800 gems OR farm Minotaur)
 - **Gear:** 70% Crit Rate, 250% Crit Damage, 225 ACC, 220 SPD, 35k HP, 2.5k DEF
 
 **Partial Investment Guidance:**

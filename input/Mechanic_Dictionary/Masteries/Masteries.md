@@ -1,3 +1,34 @@
+# RAID Shadow Legends - Mastery System
+
+## How Masteries Work
+
+### Basic Rules
+- **Tree Selection:** Each champion can use 2 of 3 mastery trees (Offense, Defense, Support)
+- **Tiers:** Each tree has 6 tiers (T1 → T6)
+- **Selection Limits:**
+  - **T1:** Select 1 mastery per tree used (max 2 total)
+  - **T2-T5:** Select up to 3 masteries total per tier (can be from either tree)
+  - **T6:** Select 1 capstone mastery (from either tree)
+- **Path Connection:** You can only select masteries connected to a mastery you selected in the previous tier (vertical branching paths)
+- **Tier Unlock:** To unlock the next tier, you need at least 1 mastery selected in the current tier
+
+### Obtaining Masteries
+- **Farm:** Minotaur's Labyrinth dungeon (drops mastery scrolls)
+- **Purchase:** 800 gems for instant full mastery unlock (all tiers)
+- **Reset:** 
+  - First reset: FREE (one-time only)
+  - Subsequent resets: Small gem cost (150 gems)
+
+### Important Notes
+- ❌ No "point system" - masteries are selected directly, not purchased with points
+- ✅ Warmaster/Giant Slayer do NOT require critical hits to proc
+- ✅ All masteries apply to Clan Boss (no content restrictions)
+- ⚠️ Some masteries break speed tunes (Rapid Response, Arcane Celerity, Whirlwind of Death, Spirit Haste, Oppressor)
+
+---
+
+## Mastery Tables by Tree
+
 | Offense Masteries Table |                                                                                                                                                       |                                                                                                                                                                                                                                                                                                 |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Tier 1 - Offense        |                                                                                                                                                       |                                                                                                                                                                                                                                                                                                 |

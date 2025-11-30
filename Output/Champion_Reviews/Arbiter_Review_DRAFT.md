@@ -1012,10 +1012,10 @@ Arbiter has **two distinct mastery builds** depending on content focus:
 
 | Tree | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Tier 5 | Tier 6 |
 |------|--------|--------|--------|--------|--------|--------|
-| **Offense** | Deadly Precision (3) | Keen Strike (3) | Shield Breaker (3) | Life Drinker (3) | Bring it Down (3) | **Warmaster (1)** |
-| **Support** | Pinpoint Accuracy (3) | Exalt in Death (3) | Rapid Response (3) | Lore of Steel (3) | Evil Eye (3) | Spirit Haste (3) |
+| **Offense** | Deadly Precision | Keen Strike | Shield Breaker | Life Drinker | Bring it Down | **Warmaster** |
+| **Support** | Pinpoint Accuracy | Exalt in Death | Rapid Response | Lore of Steel | Evil Eye | Spirit Haste |
 
-**Total Points:** 15 Offense + 15 Support = 30 mastery points (full build)
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth | **Reset:** 1st free, then 150 gems
 
 ---
 
@@ -1114,10 +1114,10 @@ Arbiter has **two distinct mastery builds** depending on content focus:
 
 | Tree | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Tier 5 | Tier 6 |
 |------|--------|--------|--------|--------|--------|--------|
-| **Defense** | Defiant (3) | Improved Parry (3) | Rejuvenation (3) | Shadow Heal (3) | Delay Death (3) | Cycle of Revenge (1) |
-| **Support** | Pinpoint Accuracy (3) | Exalt in Death (3) | Rapid Response (3) | Lore of Steel (3) | Evil Eye (3) | Spirit Haste (3) |
+| **Defense** | Defiant | Improved Parry | Rejuvenation | Shadow Heal | Delay Death | Cycle of Revenge |
+| **Support** | Pinpoint Accuracy | Exalt in Death | Rapid Response | Lore of Steel | Evil Eye | Spirit Haste |
 
-**Total Points:** 15 Defense + 15 Support = 30 mastery points (full build)
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth | **Reset:** 1st free, then 150 gems
 
 ---
 
@@ -1535,8 +1535,8 @@ Arbiter has **two distinct mastery builds** depending on content focus:
 
 **Priority 3: Masteries**
 - **CRITICAL: Full Masteries (30 points)**
-  * **PVP Build (Arena, Faction Wars):** Defense (Tier 1-6) + Support (Tier 1-6) = 15 + 15 = 30 points
-  * **PVE Build (Clan Boss, Dungeons):** Offense (Tier 1-6) + Support (Tier 1-6) = 15 + 15 = 30 points
+  * **PVP Build (Arena, Faction Wars):** Defense (Tier 1-6) + Support (Tier 1-6)
+  * **PVE Build (Clan Boss, Dungeons):** Offense (Tier 1-6) + Support (Tier 1-6)
   * **User Priority:** Build PVP masteries FIRST (Arena focus), re-spec to PVE later if using Arbiter for Clan Boss
 - **Cost:** 800 Gems per full mastery scroll OR farm Minotaur 15 (12-15 hours of farming per champion)
 - **Recommendation:** Use Gems (800 Gems) to save time, OR farm Minotaur 15 during Double XP events

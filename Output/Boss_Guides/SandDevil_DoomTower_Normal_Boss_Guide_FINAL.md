@@ -502,34 +502,34 @@ This section provides a quick reference for all recommended teams, sorted by cle
 #### 4.5. Masteries
 
 **Gretel Hagbane (Sleep Debuffer):**
-- **Offense Tree (0 scrolls):** None
-- **Defense Tree (40 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution
-- **Support Tree (90 scrolls):** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), Lasting Gifts (3/3), **Evil Eye** (key for landing Sleep), Master Hexer (3/3)
-- **Total:** 130 scrolls (Support tree focus for accuracy + debuff duration)
+- **Offense Tree:** None
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution
+- **Support Tree:** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), Lasting Gifts (3/3), **Evil Eye** (key for landing Sleep), Master Hexer (3/3)
+- **Cost:** 800 gems OR farm Minotaur (Support tree focus for accuracy + debuff duration)
 
 **Godseeker Aniri (Primary Healer/Reviver):**
-- **Offense Tree (0 scrolls):** None
-- **Defense Tree (55 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair
-- **Support Tree (75 scrolls):** Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel, Cycle of Magic, Lasting Gifts, **Lasting Gifts** (extends buffs like Continuous Heal)
-- **Total:** 130 scrolls (Defense + Support hybrid for survivability + healing)
+- **Offense Tree:** None
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair
+- **Support Tree:** Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel, Cycle of Magic, Lasting Gifts, **Lasting Gifts** (extends buffs like Continuous Heal)
+- **Cost:** 800 gems OR farm Minotaur (Defense + Support hybrid for survivability + healing)
 
 **Elenaril (Burst Damage Dealer):**
-- **Offense Tree (100 scrolls):** Deadly Precision, Keen Strike, Heart of Glory, Single Out, Life Drinker, Bring It Down, Methodical, **Warmaster** or Helmsmasher (burst damage on Poison explode)
-- **Defense Tree (15 scrolls):** Tough Skin, Blastproof
-- **Support Tree (15 scrolls):** Pinpoint Accuracy, Charged Focus
-- **Total:** 130 scrolls (Offense tree focus for burst damage on A3 Poison explode)
+- **Offense Tree:** Deadly Precision, Keen Strike, Heart of Glory, Single Out, Life Drinker, Bring It Down, Methodical, **Warmaster** or Helmsmasher (burst damage on Poison explode)
+- **Defense Tree:** Tough Skin, Blastproof
+- **Support Tree:** Pinpoint Accuracy, Charged Focus
+- **Cost:** 800 gems OR farm Minotaur (Offense tree focus for burst damage on A3 Poison explode)
 
 **Deacon Armstrong (Debuffer):**
-- **Offense Tree (0 scrolls):** None
-- **Defense Tree (40 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution
-- **Support Tree (90 scrolls):** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), **Evil Eye** (key for landing Dec DEF), Master Hexer (3/3)
-- **Total:** 130 scrolls (Support tree focus for accuracy + debuff reliability)
+- **Offense Tree:** None
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution
+- **Support Tree:** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), **Evil Eye** (key for landing Dec DEF), Master Hexer (3/3)
+- **Cost:** 800 gems OR farm Minotaur (Support tree focus for accuracy + debuff reliability)
 
 **Scyl of the Drakes (Secondary Support):**
-- **Offense Tree (0 scrolls):** None
-- **Defense Tree (55 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair
-- **Support Tree (75 scrolls):** Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel, Cycle of Magic, Lasting Gifts, **Lasting Gifts** (extends buffs)
-- **Total:** 130 scrolls (Defense + Support hybrid for survivability + CC)
+- **Offense Tree:** None
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair
+- **Support Tree:** Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel, Cycle of Magic, Lasting Gifts, **Lasting Gifts** (extends buffs)
+- **Cost:** 800 gems OR farm Minotaur (Defense + Support hybrid for survivability + CC)
 
 #### 4.6. Manual/Auto Play
 
@@ -792,26 +792,26 @@ Affinity Safety/Risk:
 #### 4.5. Masteries
 
 **Criodan the Blue (AoE Sleep Debuffer):**
-- **Support Tree Focus (90 scrolls):** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), **Evil Eye** (key for AoE Sleep), Master Hexer (3/3)
-- **Defense Tree (40 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution
-- **Total:** 130 scrolls
+- **Support Tree Focus:** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), **Evil Eye** (key for AoE Sleep), Master Hexer (3/3)
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution
+- **Cost:** 800 gems OR farm Minotaur
 
 **Godseeker Aniri (Primary Healer/Reviver):**
-- **Defense + Support Hybrid (130 scrolls):** Same as Team 1 (survivability + healing focus)
+- **Defense + Support Hybrid:** Same as Team 1 (survivability + healing focus)
 
 **Drexthar Bloodtwin (HP Burn Sustained Damage):**
-- **Offense Tree (50 scrolls):** Deadly Precision, Keen Strike, Heart of Glory, Single Out, Life Drinker
-- **Defense Tree (65 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair, **Fearsome Presence** (HP Burn synergy)
-- **Support Tree (15 scrolls):** Pinpoint Accuracy, Charged Focus
-- **Total:** 130 scrolls (Defense focus for survivability, Offense for damage)
+- **Offense Tree:** Deadly Precision, Keen Strike, Heart of Glory, Single Out, Life Drinker
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair, **Fearsome Presence** (HP Burn synergy)
+- **Support Tree:** Pinpoint Accuracy, Charged Focus
+- **Cost:** 800 gems OR farm Minotaur (Defense focus for survivability, Offense for damage)
 
 **Stag Knight (Debuffer + SPD Booster):**
-- **Support Tree Focus (90 scrolls):** Same as Deacon in Team 1 (accuracy + debuff reliability)
-- **Defense Tree (40 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution
-- **Total:** 130 scrolls
+- **Support Tree Focus:** Same as Deacon in Team 1 (accuracy + debuff reliability)
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution
+- **Cost:** 800 gems OR farm Minotaur
 
 **Rector Drath (Cleanser + Secondary Healer):**
-- **Defense + Support Hybrid (130 scrolls):** Same as Godseeker (survivability + healing focus)
+- **Defense + Support Hybrid:** Same as Godseeker (survivability + healing focus)
 
 #### 4.6. Manual/Auto Play
 
@@ -1084,34 +1084,34 @@ Affinity Safety/Risk:
 #### 3.6. Masteries
 
 **Geomancer (Passive MAX HP Damage Dealer):**
-- **Offense Tree (0 scrolls):** None
-- **Defense Tree (55 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair
-- **Support Tree (75 scrolls):** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), Lasting Gifts (3/3), **Lasting Gifts** (extends buffs)
-- **Total:** 130 scrolls (Defense + Support hybrid for survivability + accuracy)
+- **Offense Tree:** None
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair
+- **Support Tree:** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), Lasting Gifts (3/3), **Lasting Gifts** (extends buffs)
+- **Cost:** 800 gems OR farm Minotaur (Defense + Support hybrid for survivability + accuracy)
 
 **Bad-el-Kazar (Healer + Cleanser + Poison):**
-- **Offense Tree (0 scrolls):** None
-- **Defense Tree (55 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair
-- **Support Tree (75 scrolls):** Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel, Cycle of Magic, Lasting Gifts, **Lasting Gifts** (extends buffs + continuous heal)
-- **Total:** 130 scrolls (Defense + Support hybrid for survivability + healing)
+- **Offense Tree:** None
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair
+- **Support Tree:** Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel, Cycle of Magic, Lasting Gifts, **Lasting Gifts** (extends buffs + continuous heal)
+- **Cost:** 800 gems OR farm Minotaur (Defense + Support hybrid for survivability + healing)
 
 **Godseeker Aniri (Healer + Reviver):**
-- **Offense Tree (0 scrolls):** None
-- **Defense Tree (55 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair
-- **Support Tree (75 scrolls):** Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel, Cycle of Magic, Lasting Gifts, **Lasting Gifts** (extends buffs)
-- **Total:** 130 scrolls (Defense + Support hybrid for survivability + healing)
+- **Offense Tree:** None
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair
+- **Support Tree:** Pinpoint Accuracy, Charged Focus, Rapid Response, Lore of Steel, Cycle of Magic, Lasting Gifts, **Lasting Gifts** (extends buffs)
+- **Cost:** 800 gems OR farm Minotaur (Defense + Support hybrid for survivability + healing)
 
 **Frozen Banshee (Poison Damage Dealer):**
-- **Offense Tree (0 scrolls):** None
-- **Defense Tree (40 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution
-- **Support Tree (90 scrolls):** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), **Evil Eye** (key for landing Poisons), Master Hexer (3/3 - extends debuff duration)
-- **Total:** 130 scrolls (Support tree focus for Poison reliability + duration)
+- **Offense Tree:** None
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution
+- **Support Tree:** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), **Evil Eye** (key for landing Poisons), Master Hexer (3/3 - extends debuff duration)
+- **Cost:** 800 gems OR farm Minotaur (Support tree focus for Poison reliability + duration)
 
 **Vogoth (Tank + Passive Sleep):**
-- **Offense Tree (0 scrolls):** None
-- **Defense Tree (75 scrolls):** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair, Deterrence, Fearsome Presence
-- **Support Tree (55 scrolls):** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), **Evil Eye** (key for landing passive Sleep)
-- **Total:** 130 scrolls (Defense tree focus for tanking + Support for Sleep accuracy)
+- **Offense Tree:** None
+- **Defense Tree:** Tough Skin, Blastproof, Rejuvenation, Shadow Heal, Delay Death, Retribution, Bloodthirst, Harvest Despair, Deterrence, Fearsome Presence
+- **Support Tree:** Pinpoint Accuracy (3/3), Charged Focus (3/3), Rapid Response (3/3), Lore of Steel (3/3), Cycle of Magic (3/3), **Evil Eye** (key for landing passive Sleep)
+- **Cost:** 800 gems OR farm Minotaur (Defense tree focus for tanking + Support for Sleep accuracy)
 
 #### 3.7. Manual/Auto Play
 
@@ -1618,7 +1618,7 @@ This section lists **non-owned champions** that would significantly improve team
   - Bloodthirst (3/3) - Heals 10% MAX HP after killing an enemy (useful for trash waves)
   - Harvest Despair (3/3) - Heals 10% MAX HP after using an ability on an enemy with Decrease SPD debuff
 - **Who Needs:** All champions (Defense tree is universal for survivability)
-- **Total Scrolls:** 40-75 scrolls (40 for minimum survivability, 75 for maximum)
+- **Cost:** 800 gems OR farm Minotaur (per champion for minimum survivability, varies by masteries selected)
 
 #### **Support Tree (All Champions Except Pure Damage Dealers)**
 - **Key Masteries:**
@@ -1631,14 +1631,14 @@ This section lists **non-owned champions** that would significantly improve team
   - Master Hexer (3/3) - Extends debuff duration by 25% (e.g., 2-turn Poison becomes 2.5 turns, rounded to 3 turns)
   - Lasting Gifts (3/3) - Extends buff duration by 25% (e.g., 2-turn Continuous Heal becomes 2.5 turns, rounded to 3 turns)
 - **Who Needs:** All Sleep debuffers (Gretel, Criodan, Nogdar, Vogoth), all healers (Godseeker, Scyl, Bad-el, Rector), all Poison/HP Burn dealers (Frozen Banshee, Elenaril, Drexthar, Geomancer)
-- **Total Scrolls:** 55-90 scrolls (55 for minimum utility, 90 for maximum)
+- **Cost:** 800 gems OR farm Minotaur (per champion, varies by specific mastery selection)
 
 **Recommended Mastery Distribution:**
-- **Sleep Debuffers:** 40 Defense + 90 Support (Evil Eye + Master Hexer critical)
-- **Healers:** 55 Defense + 75 Support (Lasting Gifts extends buffs)
-- **MAX HP Damage Dealers (Poison/HP Burn):** 40 Defense + 90 Support (Evil Eye + Master Hexer critical)
-- **Burst Damage Dealers (Elenaril/Coldheart):** 100 Offense (Warmaster/Helmsmasher) + 15 Defense + 15 Support
-- **Tanks:** 75 Defense + 55 Support (maximum survivability)
+- **Sleep Debuffers:** Defense + Support trees (Evil Eye + Master Hexer critical)
+- **Healers:** Defense + Support trees (Lasting Gifts extends buffs)
+- **MAX HP Damage Dealers (Poison/HP Burn):** Defense + Support trees (Evil Eye + Master Hexer critical)
+- **Burst Damage Dealers (Elenaril/Coldheart):** Offense (Warmaster/Helmsmasher) + Defense + Support trees
+- **Tanks:** Defense + Support trees (maximum survivability)
 
 ### 8.3. Stat Priorities Summary
 
@@ -1740,28 +1740,28 @@ This section lists **non-owned champions** that would significantly improve team
 - **Goal:** Learn boss mechanics, secure first clears
 - **Team:** Any team with Sleep + Heal + MAX HP damage (e.g., Criodan + Godseeker + Frozen Banshee + 2 supports)
 - **Gear:** 200+ SPD, 200+ ACC, 35k+ HP, 2k+ DEF (minimum)
-- **Masteries:** Defense tree (40 scrolls) + Support tree (55 scrolls) minimum
+- **Masteries:** 800 gems OR farm Minotaur (Defense + Support trees minimum)
 - **Success Rate:** 70-80% (lower gear requirements compensate for lower boss damage/stats)
 
 #### **Stages 11-15 (Intermediate)**
 - **Goal:** Increase clear speed, optimize team composition
 - **Team:** Team 3 (Auto-Friendly MAX HP Sustained) or Team 7 (Duo Core + Support)
 - **Gear:** 220+ SPD, 250+ ACC, 40k+ HP, 2.5k+ DEF
-- **Masteries:** Defense tree (55 scrolls) + Support tree (75 scrolls), Evil Eye + Master Hexer on debuffers
+- **Masteries:** 800 gems OR farm Minotaur (Defense + Support trees, Evil Eye + Master Hexer on debuffers)
 - **Success Rate:** 85-90% (optimized gear + masteries improve reliability)
 
 #### **Stages 16-20 (Advanced, Survivability Blocker)**
 - **Goal:** Survive boss 75% damage reduction + high damage output, secure Level 16 (Void affinity)
 - **Team:** Team 1 (Void-Safe Sleep + Poison Burst) or Team 4 (Triple Revive Survivability)
 - **Gear:** 230+ SPD, 250+ ACC, 50k+ HP, 3k+ DEF, 100+ Resist
-- **Masteries:** Defense tree (55 scrolls) + Support tree (90 scrolls), all key masteries (Evil Eye, Master Hexer, Lasting Gifts)
+- **Masteries:** 800 gems OR farm Minotaur (Defense + Support trees, all key masteries: Evil Eye, Master Hexer, Lasting Gifts)
 - **Success Rate:** 90-95% (high gear + Void affinity champions ensure reliability)
 
 #### **Stages 21-25 (Expert)**
 - **Goal:** Push to Stage 25 for maximum rewards (Superior Oil, Chaos Dust)
 - **Team:** Team 1 (Void-Safe Sleep + Poison Burst) with maximum gear optimization
 - **Gear:** 240+ SPD, 250+ ACC, 60k+ HP, 3.5k+ DEF, 150+ Resist
-- **Masteries:** Defense tree (75 scrolls) + Support tree (90 scrolls), all key masteries maxed
+- **Masteries:** 800 gems OR farm Minotaur (Defense + Support trees fully optimized, all key masteries maxed)
 - **Success Rate:** 85-90% (higher boss damage requires maximum gear + team optimization)
 
 ### 9.3. Common Pitfalls & How to Avoid

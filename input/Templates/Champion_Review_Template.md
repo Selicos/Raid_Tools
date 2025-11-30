@@ -284,40 +284,20 @@
 
 ## 5. Masteries
 
-### Clan Boss UNM
+**Build:** [Primary T6 Mastery] + [Secondary Tree Focus] ([Tree Names])
+- **Path:** [Tier progression with → arrows, bold T6 capstone, e.g., "Deadly Precision → Keen Strike → Single Out → Bring It Down → **Warmaster**"]
+- **Why:** [1-2 sentence explanation of key masteries and their benefit, e.g., "Warmaster (4% MAX HP damage vs bosses) + Pinpoint Accuracy (+10 ACC for debuff reliability)"]
+- **Cost:** 800 gems OR farm Minotaur's Labyrinth
+- **Full Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
 
-**Offense Tree (Priority):**
-- **T1:** Deadly Precision
-- **T2:** Keen Strike
-- **T3:** [Single Out or Grim Resolve]
-- **T4:** [Life Drinker or Bring it Down]
-- **T5:** [Methodical or Warmaster]
-- **T6:** **Warmaster** (or Giant Slayer for multi-hit A1)
+**Alternative Builds (if applicable):**
+- **[Alternative 1 Name]:** [Brief description and when to use, e.g., "Giant Slayer instead of Warmaster for multi-hit A1 (4+ hits)"]
+- **[Alternative 2 Name]:** [Brief description and when to use, e.g., "Defense tree for tank builds in Doom Tower Hard"]
 
-**Defense Tree:**
-- **T1:** Tough Skin
-- **T2:** [Blastproof if AoE damage]
-- **T3:** [Delay Death or Improved Parry]
-
-**Support Tree:**
-- **T1:** [Pinpoint Accuracy if debuffer]
-- **T2:** [Charged Focus if accuracy needed]
-- **T3:** [Lore of Steel or Swarm Smiter]
-
-**Key Masteries Explanation:**
-- **Warmaster:** [Explain why this is optimal, e.g., "Best for single-target damage in Clan Boss, scales with max HP"]
-- **Giant Slayer:** [If applicable, e.g., "Better for champions with multi-hit A1 (4+ hits)"]
-
-### Dungeons (Dragon, Spider, Fire Knight, Ice Golem)
-
-**Offense Tree (Priority):**
-- [Same as Clan Boss or note differences]
-
-**Defense Tree:**
-- [Minimal investment unless tank role]
-
-**Support Tree:**
-- [Accuracy tree if debuffer, Speed tree if support]
+**Content-Specific Notes:**
+- **Clan Boss UNM:** [Any speed tune warnings or specific mastery requirements, e.g., "Avoid Rapid Response/Arcane Celerity if using Counterattack team"]
+- **Arena:** [If different build needed, e.g., "Helmsmasher instead of Warmaster for DEF ignore vs high-DEF teams"]
+- **Dungeons:** [If different focus, e.g., "Support tree for debuff reliability in wave clear"]
 
 **Key Differences from Clan Boss:**
 [1-2 sentences on mastery adjustments for dungeons]

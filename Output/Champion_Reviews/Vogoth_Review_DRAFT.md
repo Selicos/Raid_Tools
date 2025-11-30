@@ -493,7 +493,7 @@
 5. **Life Drinker** (Tier 4 Offense) - Self-healing for sustain
 6. **Lore of Steel** (Tier 5 Support) - +5% stats from gear sets
 
-**Long-Term Priority (Final 70 Scrolls):**
+**Long-Term Priority:**
 7. Complete Offense tree (Deadly Precision, Keen Strike, Heart of Glory, Single Out, Bring it Down, Kill Streak)
 8. Complete Support tree (Swarm Smiter, Evil Eye, Sniper)
 9. Optional: Defense tree for Doom Tower Hard Bommal (Tough Skin, Blastproof, Resurgent, Shadow Heal, Delay Death, Deterrence/Bloodthirst)
@@ -698,9 +698,9 @@
 - **Cost:** 14 Epic books (6 A1, 7 A2, 1 Passive 2)
 - **Status:** ❌ NOT DONE (user's Vogoth: A1 1/6, A2 1/7, Passive 2 1/4)
 
-**5. Select Masteries (130 scrolls) (PRIORITY 5)**
+**5. Select Masteries (PRIORITY 5)**
 - **Why:** Giant Slayer (Clan Boss damage), Master Hexer (debuff extension synergy)
-- **Cost:** 130 Minotaur scrolls OR 800 gems (NOT recommended, farm Minotaur 15)
+- **Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 - **Status:** ❌ NOT DONE (no masteries visible in user screenshot)
 
 **6. Increase DEF to 2k+ (PRIORITY 6)**
@@ -801,9 +801,9 @@
 - **Timeline:** 2-4 weeks (depends on book availability)
 
 **5. Select Masteries (PRIORITY 5)**
-- **Current:** None (0/130 scrolls)
-- **Target:** Giant Slayer + Master Hexer (130 scrolls)
-- **Gap:** 130 scrolls
+- **Current:** None
+- **Target:** Giant Slayer + Master Hexer
+- **Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 - **Action:** Farm Minotaur 15 with Vogoth (gains scrolls while leveling)
 - **Timeline:** 1-2 weeks (with energy refills)
 

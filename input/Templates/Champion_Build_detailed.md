@@ -74,9 +74,12 @@
 | 5    | Methodical, Blood Shield, Kill Streak, Stoked to Fury, Flawless Execution, Giant Slayer, Warmaster | Bulwark, Unshakeable, Last Stand, Selfless Defender, Retribution, Deterrence        | Evil Eye, Spirit Haste, Lasting Gifts, Merciful Aid, Cycle of Magic, Lore of Steel         |
 | 6    | Warmaster, Giant Slayer                                                            | Bulwark, Unshakeable                                                              | Lasting Gifts, Elixir of Life                                                      |
 
-- Delete unused masteries
-- Empty tree is not used (only 2 trees can be selected)
-- Can select 1 from each used tree in the first tier, 3 of any in tiers 2-5, then a single tier 6 mastery.
+**Mastery Rules:**
+- Select 2 of 3 trees (Offense/Defense/Support) - delete unused column
+- T1: 1 per tree used | T2-T5: Up to 3 total per tier | T6: 1 capstone
+- Masteries must connect vertically (path-based from previous tier)
+- Cost: 800 gems OR farm Minotaur | Reset: 1st free, then 150 gems
+- Reference: `input/Mechanic_Dictionary/Masteries/Masteries.md`
 
 #### 7. Skill Cooldowns (Assume Fully booked)
 - **A1:**  

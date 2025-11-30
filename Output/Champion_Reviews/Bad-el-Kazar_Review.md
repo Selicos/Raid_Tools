@@ -170,7 +170,7 @@
 
 ### **PVE General (Arena, Dungeons, Doom Tower, Faction Wars)**
 
-**Offense Tree (55 scrolls):**
+**Offense Tree:**
 - T1: Deadly Precision (3/3)
 - T2: Keen Strike (3/3)
 - T3: Heart of Glory (3/3)
@@ -179,7 +179,7 @@
 - T5: Methodical (3/3)
 - T6: **Warmaster** (1/1) ⭐ **REQUIRED**
 
-**Support Tree (75 scrolls):**
+**Support Tree:**
 - T1: Pinpoint Accuracy (3/3)
 - T2: Exalt in Death (3/3)
 - T3: Rapid Response (3/3)
@@ -189,7 +189,7 @@
 - T5: Lasting Gifts (3/3)
 - T6: Master Hexer (3/3)
 
-**Total:** 130 scrolls
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 
 **Why this build:**
 - **Warmaster:** Required for Clan Boss damage (procs on A1 every turn)
@@ -198,7 +198,7 @@
 
 ### **Clan Boss Counterattack Setup (Alternative Build)**
 
-**Offense Tree (55 scrolls):**
+**Offense Tree:**
 - T1: Deadly Precision (3/3)
 - T2: Keen Strike (3/3)
 - T3: Single Out (3/3)
@@ -207,7 +207,7 @@
 - T5: Methodical (3/3)
 - T6: **Warmaster** (1/1)
 
-**Defense Tree (75 scrolls):**
+**Defense Tree:**
 - T1: Tough Skin (3/3)
 - T2: Blastproof (3/3)
 - T3: Rejuvenation (3/3)
@@ -217,7 +217,7 @@
 - T6: Retribution (3/3)
 - T6: Deterrence (3/3)
 
-**Total:** 130 scrolls
+**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
 
 **⚠️ CRITICAL:** If speed-tuned with Counterattack team (Skullcrusher), **DO NOT take Rapid Response or Arcane Celerity** (breaks speed tune) - Use Swarm Smiter instead
 
@@ -227,7 +227,7 @@
 - **Life Drinker:** Extra healing when hitting Clan Boss (stacks with A1 heal)
 
 ### **User's Current Status:**
-- ⏳ **Masteries:** All scrolls obtained (130 scrolls ready), NOT YET SELECTED
+- ⏳ **Masteries:** 800 gems available OR can farm Minotaur's Labyrinth, NOT YET SELECTED
 - ✅ **Recommendation:** Use **PVE General build** (Offense + Support) for solo Dragon 25 + Doom Tower + Faction Wars versatility
 
 ---
@@ -394,7 +394,7 @@ Bad-el is **UNIQUE** in your roster - Only champion combining:
 
 ### **When to Stop Investment:**
 - ✅ **6-star:** YES (required for solo farming + Clan Boss UNM survivability)
-- ✅ **Full masteries:** YES (Warmaster required for Clan Boss damage) - **USER STATUS: Scrolls ready, not yet selected**
+- ✅ **Full masteries:** YES (Warmaster required for Clan Boss damage) - **USER STATUS: Can unlock with 800 gems OR farm Minotaur, not yet selected**
 - ✅ **Books:** YES (A2 fully booked = CRITICAL, A1 optional but recommended) - **USER STATUS: Fully booked**
 - ⏳ **Gear:** Farm until 260+ SPD, 250+ ACC, 60k+ HP, 3.5k+ DEF (solo Dragon 25 threshold) - **USER STATUS: 262 SPD ✅, 263 ACC ✅, 72k HP ✅, 3.1k DEF ✅**
 
@@ -408,7 +408,7 @@ Bad-el is **UNIQUE** in your roster - Only champion combining:
 ### **User's Build Status:**
 - **Level:** 60 (6★ ascended, fully built)
 - **Books:** ✅ FULLY BOOKED (All skills maxed)
-- **Masteries:** ⏳ All scrolls obtained (130 ready), NOT YET SELECTED
+- **Masteries:** ⏳ 800 gems available OR can farm Minotaur's Labyrinth, NOT YET SELECTED
 - **Gear Sets:** 2x Immortal, 2x Perception, 1x Fury, 3x Protection
 
 ### **Current Stats (Updated October 19, 2025):**

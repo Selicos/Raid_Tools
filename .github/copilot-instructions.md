@@ -287,6 +287,36 @@ All major entry types and templates are stored in standardized directories for a
 - **Don't ignore edge cases** - document unusual scenarios
 - **Don't skip the questionnaire** - comprehensive initialization prevents issues
 
+### Mastery Documentation Policy (CRITICAL)
+
+**Single Source of Truth:** All mastery information is centralized in:
+- `input/Mechanic_Dictionary/Masteries/Masteries.md` (human-readable reference)
+- `input/Mechanic_Dictionary/Masteries/masteries.json` (machine-readable data)
+- `input/Mechanic_Dictionary/Masteries/MASTERY_REFERENCE_GUIDE.md` (documentation standards)
+
+**✅ DO:**
+- Reference mastery files using links: `[Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)`
+- Use simplified mastery format: **Path** + **Why** + **Cost** + **Link to details**
+- Example:
+  ```markdown
+  **Masteries:** Warmaster + Master Hexer (Offense + Support)
+  - **Path:** Deadly Precision → Keen Strike → Single Out → Bring It Down → **Warmaster**
+  - **Why:** 4% MAX HP damage vs bosses + extend Poison 2→3 turns
+  - **Cost:** 800 gems OR farm Minotaur's Labyrinth
+  - **Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
+  ```
+
+**❌ DON'T:**
+- Duplicate full mastery tier tables in champion reviews or boss guides
+- Copy-paste mastery descriptions from Masteries.md (link instead)
+- Create new mastery reference files (use canonical files only)
+
+**Benefits:**
+- Reduces champion reviews by ~50-100 lines each
+- Reduces boss guides by ~200-300 lines each
+- Single point of update when game changes masteries
+- Consistent mastery recommendations across all documentation
+
 ---
 
 ## 3. Project Purpose and Scope
@@ -1135,6 +1165,8 @@ Maintain a clear, chronological record of all major changes, updates, and versio
 
 | Date       | Author           | Description                                      | Sections/Files                |
 |------------|------------------|--------------------------------------------------|-------------------------------|
+| 2025-11-30 | GitHub Copilot   | **MASTERY DOCUMENTATION CONSOLIDATION**: Created canonical mastery reference system to eliminate 2,000-5,000 lines of duplicate content across repo. Added MASTERY_REFERENCE_GUIDE.md with documentation standards, simplified templates, and migration plan. Updated copilot-instructions.md Section 2 with Mastery Documentation Policy requiring all docs to reference Masteries.md/masteries.json instead of duplicating mastery tables. Benefits: 50-100 lines saved per champion review, 200-300 lines saved per boss guide, single source of truth for mastery updates, consistent recommendations. | Section 2 (Mastery Documentation Policy), MASTERY_REFERENCE_GUIDE.md, copilot-instructions.md |
+| 2025-11-30 | GitHub Copilot   | **MASTERY TERMINOLOGY CORRECTIONS COMPLETE**: Updated 12 files to remove incorrect "point system" and "scroll allocation" terminology (55/70/110/130/170 scrolls). Replaced with "800 gems OR farm Minotaur's Labyrinth" standard text. Affected files: Masteries.md (core docs), 2 templates, UNM guide, 7 champion reviews (Arbiter, Ninja, Coldheart, Michelangelo, Godseeker Aniri, Vogoth, Bad-el-Kazar), SandDevil boss guide. All mastery documentation now accurately reflects game mechanics (tier selection rules, path connections, no point system). | Section 2, Masteries.md, Champion Reviews, Boss Guides, Templates |
 | 2025-10-27 | GitHub Copilot   | **REAL EXECUTION VALIDATION**: Completed Rathalos Blademaster entry (Monster Hunter Legendary, LIMITED AVAILABILITY, boss killer specialist) using fully optimized workflow. **RESULT: 12 operations** (vs 11 simulated, 9% variance). Real execution breakdown: (1) parallel fetch, (2) A1 skill, (3) A3 skill, (4) Passive skill, (5) remove empty slots, (6) validate skills, (7) template reference, (8) batch comprehensive, (9) fix bracket error, (10) remove duplicate, (11) meta_ratings + draft:false, (12) final validation. **70% improvement validated** (12 ops vs 42 for Mausoleum Mage). Updated Step 6: moved stats table sync to end of session/batch (adds unnecessary operation per champion). Updated Completion Checklist: removed step 9 table sync, added Table Sync Workflow section. Updated efficiency metrics: ~11-12 operations per champion (70% reduction), real execution validated. | Section 7 (Champion Workflow, Step 6, Completion Checklist, Efficiency Metrics), Rathalos_Blademaster.json, copilot-instructions.md |
 | 2025-10-27 | GitHub Copilot   | **CRITICAL EFFICIENCY UPDATE**: Section 7 updated with 3 major improvements after Mausoleum Mage analysis: (1) ATOMIC OPERATIONS PRINCIPLE - separate skill population from skill removal (saves 4 ops/champion), (2) PRE-BATCH TEMPLATE REFERENCE - Step 4.5 added to prevent object/array bracket errors (saves 2-3 ops/champion), (3) DO NOT OVER-INVESTIGATE validation errors - trust validator line numbers, fix immediately (saves 4 ops/champion). Updated efficiency target: ~40+ operations → ~20-22 operations (45-50% reduction). Added 3 new common mistakes. Validated with Mausoleum Mage completion (Undead Hordes Epic Support, 9/10 Arena, CB stun blocker, Seer synergy). | Section 7 (Champion Workflow), copilot-instructions.md |
 | 2025-10-27 | GitHub Copilot   | Completed Mausoleum Mage entry (Undead Hordes Epic Force Support, CB stun blocker Block Debuffs 3-turn rotation, Seer synergy 3 buffs, full cleanse + heal). Community-rated far higher than official scores (HellHades 5/5 Arena/Hydra). Demonstrated workflow issues that led to efficiency analysis: A3 string replacement failed 3x (combining operations), object/array bracket confusion (stat_priority_recommendations), over-investigation debugging (5 ops instead of 1). Total: 42 operations vs target 20-22. Analysis led to critical workflow improvements. | Mausoleum_Mage.json |

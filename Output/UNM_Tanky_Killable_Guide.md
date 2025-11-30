@@ -621,10 +621,13 @@
 
 ### 5.1. Masteries: Clan Boss Optimized
 
-> **IMPORTANT:** Each champion uses **2 of 3 mastery trees** (Offense/Defense/Support). Each tier requires specific selections:
-> - **Tier 1:** 1 choice from 2 options (tree-specific)
-> - **Tiers 2-5:** Up to 3 choices from 3-4 available options per tier
-> - **Tier 6:** 1 capstone choice from 4 options (tree-specific)
+> **IMPORTANT:** Each champion uses **2 of 3 mastery trees** (Offense/Defense/Support).
+> - **Tier 1:** Select 1 mastery per tree used (max 2 total)
+> - **Tiers 2-5:** Select up to 3 masteries total per tier (from any combination of your 2 trees)
+> - **Tier 6:** Select 1 capstone mastery (from either tree)
+> - **Path Connection:** Masteries must connect vertically to a mastery selected in the previous tier
+> - **Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
+> - **Reset:** First reset FREE, subsequent resets 150 gems
 > 
 > Warmaster/Giant Slayer **do NOT require crits** - they proc regardless of C.RATE.
 
