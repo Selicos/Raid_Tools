@@ -1159,7 +1159,11 @@ Maintain a clear, chronological record of all major changes, updates, and versio
 - Date (YYYY-MM-DD)
 - Author
 - Description of change (what was added, removed, or updated)
-- Affected sections/files
+- **Format Standard**: Single-line summary per entry
+  - Keep entries concise (1-2 sentences maximum)
+  - Include key metrics when relevant (files affected, lines changed, etc.)
+  - Use consistent format: "Action: Brief description with specific details"
+  - Example: "Mastery consolidation complete: 12 files consolidated (~916 lines reduced), canonical reference system established"
 
 ### Example Change Log
 
