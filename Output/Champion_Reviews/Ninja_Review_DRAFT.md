@@ -560,183 +560,33 @@ Ninja does NOT have a Speed lead aura. For Arena, pair with:
 
 ## 5. Masteries
 
-### Clan Boss UNM Masteries (PRIMARY)
+### Content-Specific Mastery Recommendations
 
-**Offense Tree (LEFT):**
+**Clan Boss UNM / Dungeons / Doom Tower (PRIMARY):** Warmaster + Master Hexer (Offense + Support)
+- **Path:** Offense tree → Deadly Precision → Keen Strike → Heart of Glory/Single Out → Life Drinker/Bring It Down → Methodical → **Warmaster**  
+  Support tree → Pinpoint Accuracy → Charged Focus → Swarm Smiter → Evil Eye → Lore of Steel → **Master Hexer**  
+  Defense tree → Tough Skin → Blastproof (survivability)
+- **Why:** Warmaster adds 7.2% MAX HP damage on A2 (3 hits = 60% proc guaranteed), Master Hexer extends HP Burn 3→4 turns, Swarm Smiter synergizes with Decrease DEF + HP Burn
+- **CRITICAL:** **100% C.RATE required** for full Warmaster proc rate (85% C.RATE = 15% damage loss, 70% C.RATE = 30% damage loss)
 
-**Tier 1:**
-- **Deadly Precision** (4/4): +8% C.RATE → Helps reach 100% C.RATE
+**Warmaster vs Giant Slayer:**
+- **Warmaster:** A2 (3 hits) = 7.2% MAX HP expected damage (60% flat proc rate)
+- **Giant Slayer:** A2 (3 hits) = 3.6% MAX HP expected damage (65.7% chance of ≥1 proc = 0.9 expected procs)
+- **Verdict:** Warmaster superior for ALL skills (A1: 2.4% vs 1.2%, A2: 7.2% vs 3.6%, A3: 2.4% vs 1.2%)
 
-**Tier 2:**
-- **Keen Strike** (3/3): +10% damage to enemies with debuffs → Synergizes with Decrease DEF, HP Burn
+**Arena (ALTERNATIVE):** Helmsmasher + Opportunist (Offense + Support)
+- **Path:** Offense tree → Deadly Precision → Keen Strike → Single Out → Cycle of Violence → Methodical → **Helmsmasher**  
+  Support tree → Pinpoint Accuracy → Charged Focus → Swarm Smiter → Evil Eye → Lore of Steel → **Opportunist**  
+  Defense tree → Tough Skin → Blastproof
+- **Why:** Helmsmasher ignores 25% DEF + 5% per debuff (stacks with Savage set for ~90% total DEF ignore), Opportunist adds +12% damage to Frozen enemies (synergizes with A3)
+- **When to use:** Arena nuke builds only (not recommended for PVE)
 
-**Tier 3:**
-- **Heart of Glory** (3/3): +20% damage when HP > 60% → High uptime in Clan Boss
+**Master Hexer vs Sniper:**
+- **Master Hexer (RECOMMENDED):** Extends HP Burn 3→4 turns (10% chance per debuff) = more HP Burn activations
+- **Sniper:** +50% ACC vs bosses (only useful if ACC <250 from gear)
 
-**Tier 4:**
-- **Life Drinker** (3/3): Heal for 10% of damage dealt → Slight sustain (less critical if using Lifesteal set)
-- **Single Out** (3/3): +15% damage to single-target enemies → Excellent for Clan Boss (Boss is always alone)
-
-**Tier 5:**
-- **Bring it Down** (3/3): +20% damage to enemies with 50%+ HP → High uptime in Clan Boss
-
-**Tier 6:**
-- **Warmaster (RECOMMENDED)** (1/1): 60% chance to deal 10% Enemy MAX HP damage (4% vs Clan Boss) → **BEST choice for Ninja** (A2 activates HP Burns, Warmaster adds extra MAX HP damage)
-  * **Expected damage per skill:** A1 (1 hit): 2.4% MAX HP, A2 (3 hits): 7.2% MAX HP, A3 (1 hit): 2.4% MAX HP
-- **Giant Slayer (ALTERNATIVE)** (1/1): 30% chance to deal 7.5% Enemy MAX HP damage (4% vs Clan Boss) on each hit of multi-hit skills
-  * **A2 (3 hits) probability:** 65.7% chance of at least 1 proc (NOT 90% - calculated as 1 - (0.70)³ = 0.657), or 0.9 expected procs per A2 use
-  * **Expected damage per skill:** A1 (1 hit): 1.2% MAX HP, A2 (3 hits): 3.6% MAX HP, A3 (1 hit): 1.2% MAX HP
-  * **Verdict:** Warmaster is superior for ALL of Ninja's skills (A1: 2.4% > 1.2%, A2: 7.2% > 3.6%, A3: 2.4% > 1.2%)
-
-**CRITICAL: Warmaster/Giant Slayer C.RATE Dependency**
-
-Warmaster and Giant Slayer masteries **ONLY proc on critical hits**:
-- **Effective Proc Rate = C.RATE × Base Proc Rate**
-- **Warmaster:** 60% base → 60% at 100% C.RATE, 51% at 85% C.RATE (15% damage loss)
-- **Giant Slayer:** 30% base → 30% at 100% C.RATE, 25.5% at 85% C.RATE (15% damage loss)
-
-**Why 100% C.RATE is CRITICAL for Ninja:**
-- At 85% C.RATE (current build), you lose 15% of expected mastery damage:
-  * Warmaster A2: 7.2% → 6.12% MAX HP (15% loss)
-  * Giant Slayer A2: 3.6% → 3.06% MAX HP (15% loss)
-- At 70% C.RATE, you lose 30% of expected mastery damage
-- **Recommendation:** Prioritize 100% C.RATE via Gloves (C.RATE main stat) + substats before other offensive stats (C.DMG, ATK)
-
-**Offense Tree:** T1-T6 complete path to Warmaster
-
----
-
-**Support Tree (MIDDLE):**
-
-**Tier 1:**
-- **Pinpoint Accuracy** (3/3): +30 ACC → Helps reach 250+ ACC for Clan Boss
-
-**Tier 2:**
-- **Charged Focus** (3/3): +30 ACC → Helps reach 250+ ACC for Clan Boss
-
-**Tier 3:**
-- **Swarm Smiter** (3/3): +20% damage to enemies under debuffs → Synergizes with Decrease DEF, HP Burn
-
-**Tier 4:**
-- **Evil Eye** (3/3): Increases debuff duration by 1 turn (25% chance) → Extends HP Burn from 3 turns to 4 turns
-
-**Tier 5:**
-- **Lore of Steel** (3/3): +15% artifact set bonuses → Boosts Lifesteal/Savage/Lethal set effectiveness
-
-**Tier 6:**
-- **Master Hexer** (3/3): Increases debuff duration by 1 turn (10% chance per debuff) → Extends HP Burn, Decrease DEF, Freeze
-- **Sniper (ALTERNATIVE)** (3/3): Increases ACC by 50% when attacking Boss → Helps reach 250+ ACC (less critical if ACC is sufficient from gear)
-
-**Support Tree:** T1-T6 complete path for ACC and utility
-
----
-
-**Defense Tree (RIGHT):**
-
-**Tier 1:**
-- **Tough Skin** (3/3): +10% DEF → Survivability
-
-**Tier 2:**
-- **Blastproof** (3/3): -8% AOE damage taken → Survivability vs Clan Boss AOE attacks
-
-**Defense Tree:** T1-T2 for survivability only
-
----
-
-**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
-
----
-
-### Dungeons Masteries (ALTERNATIVE - All-Rounder)
-
-**Offense Tree:**
-- Same as Clan Boss UNM (20 points)
-
-**Support Tree:**
-- Same as Clan Boss UNM (18 points)
-
-**Defense Tree:**
-- Same as Clan Boss UNM (6 points)
-
-**Note:** The Clan Boss UNM masteries work well for Dungeons, Doom Tower, and most PVE content. No separate mastery build required.
-
----
-
-### Arena Masteries (ALTERNATIVE - Nuker/Control)
-
-**Offense Tree:**
-
-**Tier 1:**
-- **Deadly Precision** (4/4): +8% C.RATE
-
-**Tier 2:**
-- **Keen Strike** (3/3): +10% damage to enemies with debuffs
-
-**Tier 3:**
-- **Single Out** (3/3): +15% damage to single-target enemies → Good for Arena nuking
-
-**Tier 4:**
-- **Cycle of Violence** (3/3): 30% chance to reduce cooldowns by 1 turn when killing enemy → Faster A2/A3 cycling
-
-**Tier 5:**
-- **Methodical** (3/3): +10% damage on default attack (A1) → Increases A1 damage
-
-**Tier 6:**
-- **Helmsmasher** (1/1): Ignore 25% DEF + ignore 5% DEF per debuff on target → Good for Arena nuking
-
-**Offense Tree:** T1-T6 complete
-
----
-
-**Support Tree:**
-
-**Tier 1:**
-- **Pinpoint Accuracy** (3/3): +30 ACC
-
-**Tier 2:**
-- **Charged Focus** (3/3): +30 ACC
-
-**Tier 3:**
-- **Swarm Smiter** (3/3): +20% damage to enemies under debuffs
-
-**Tier 4:**
-- **Evil Eye** (3/3): Increases debuff duration by 1 turn (25% chance)
-
-**Tier 5:**
-- **Lore of Steel** (3/3): +15% artifact set bonuses
-
-**Tier 6:**
-- **Oppurtunist** (3/3): +12% damage to enemies under Freeze, Sleep, Stun, etc. → Synergizes with Ninja's A3 Freeze
-
-**Support Tree:** T1-T6 complete
-
----
-
-**Defense Tree:**
-- Same as Clan Boss UNM (T1-T2 only)
-
-**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
-
----
-
-### Key Mastery Notes
-
-1. **Warmaster vs Giant Slayer:**
-   - **Warmaster (RECOMMENDED):** 60% chance to deal 10% Enemy MAX HP damage (4% vs Clan Boss)
-     * Expected damage: A1 (1 hit) = 2.4% MAX HP, A2 (3 hits) = 7.2% MAX HP, A3 (1 hit) = 2.4% MAX HP
-   - **Giant Slayer:** 30% chance to deal 7.5% Enemy MAX HP damage (4% vs Clan Boss) per hit of multi-hit skills
-     * A2 (3 hits): 65.7% chance of at least 1 proc (calculated as 1 - (0.70)³), or 0.9 expected procs per use
-     * Expected damage: A1 (1 hit) = 1.2% MAX HP, A2 (3 hits) = 3.6% MAX HP, A3 (1 hit) = 1.2% MAX HP
-   - **Verdict:** Warmaster is superior for Ninja (better for ALL skills: A1 [2.4% > 1.2%], A2 [7.2% > 3.6%], A3 [2.4% > 1.2%])
-
-2. **Master Hexer vs Sniper:**
-   - **Master Hexer (RECOMMENDED):** Extends HP Burn from 3 turns to 4 turns (10% chance per debuff) → More HP Burn activations per fight
-   - **Sniper:** +50% ACC when attacking Boss → Helps reach 250+ ACC (only useful if ACC is low from gear)
-   - **Verdict:** Master Hexer is superior if ACC is sufficient (250+), Sniper is useful for early-game players with low ACC
-
-3. **Opportunist (Arena only):**
-   - +12% damage to enemies under Freeze, Sleep, Stun, etc. → Synergizes with Ninja's A3 Freeze
-   - **Only take for Arena builds** (not useful for Clan Boss/Dungeons)
+**Cost:** 800 gems OR farm Minotaur's Labyrinth  
+**Full Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
 
 ---
 
