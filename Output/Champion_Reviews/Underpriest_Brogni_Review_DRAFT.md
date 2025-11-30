@@ -278,58 +278,58 @@
 
 ## 5. Masteries
 
-### PVE (Clan Boss, Dungeons, Doom Tower)
+### PVE Masteries (Clan Boss, Dungeons, Doom Tower)
 
-**Offense Tree:**
-- Deadly Precision, Keen Strike
-- Single Out, Life Drinker
-- Bring it Down
-- Wrath of the Slain (optional, for damage)
-- Methodical
-- **GIANT SLAYER** (T6 - CRITICAL for Clan Boss)
+**Build:** Giant Slayer + Lasting Gifts (Offense + Support)
 
-**CRITICAL: Warmaster/Giant Slayer C.RATE Dependency**
+**Path:**
+- Offense Tree → T6: Deadly Precision → Keen Strike → Single Out → Bring it Down → Methodical → **Giant Slayer** (30% proc for multi-hit A1)
+- Support Tree → T6: Steadfast → Lay on Hands → Shieldbearer (boost Shield capacity) → Healing Savior → Merciful Aid → **Lasting Gifts** (extend buff duration including Shield)
 
-Warmaster and Giant Slayer masteries **ONLY proc on critical hits**:
-- **Effective Proc Rate = C.RATE × Base Proc Rate**
-- **Warmaster:** 60% base → 60% at 100% C.RATE, 51% at 85% C.RATE (15% damage loss)
-- **Giant Slayer:** 30% base → 30% at 100% C.RATE, 25.5% at 85% C.RATE (15% damage loss)
+**Why:**
+- **Giant Slayer:** Better than Warmaster for Brogni's multi-hit A1 (more proc chances per turn)
+- **Lasting Gifts:** Extends Shield duration from A3 (critical for Clan Boss/boss sustain)
+- **Shieldbearer:** Increases Shield capacity (more HP absorbed, better team protection)
+- **Rapid Response:** Extra healing when ally drops below 50% HP (emergency sustain)
+- **Lore of Steel:** +5% stats from gear sets (amplifies HP/DEF for tankiness)
 
-**Why this matters for Brogni:**
-- Brogni is a SUPPORT champion (not damage dealer), so C.RATE is LOW PRIORITY
-- Giant Slayer procs will be infrequent without C.RATE investment
-- **Recommendation:** Accept lower mastery damage in exchange for maximizing HP/DEF/ACC/SPD
-- If you have excess C.RATE substats, it will boost Giant Slayer damage slightly, but don't sacrifice core stats for it
+**CRITICAL C.RATE WARNING:** Giant Slayer procs only on critical hits (30% base × C.RATE). Brogni is SUPPORT (not damage dealer), so C.RATE is low priority. Accept lower mastery damage to maximize HP/DEF/ACC/SPD. If excess C.RATE substats available, will boost Giant Slayer damage slightly, but don't sacrifice core stats.
 
-**Support Tree:**
-- Steadfast
-- Lay on Hands
-- Shieldbearer (boosts Shield capacity)
-- Rapid Response (extra healing when ally drops below 50% HP)
-- Healing Savior
-- Lore of Steel (boosts Set bonuses)
-- Merciful Aid
-- Lasting Gifts (extends buff duration, including Shield)
+**Cost:** 800 gems OR farm Minotaur's Labyrinth
 
-### PVP (Arena)
+**Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
 
-**Defense Tree:**
-- Defiant, Rejuvenation
-- Shadow Heal
-- Solidarity (share debuffs with allies)
-- Delay Death (survive fatal hit once per battle)
-- Cycle of Revenge
-- Retribution (counterattack when hit)
-- Unshakeable (immunity to Stun/Freeze/Sleep for 1 turn after debuff removed)
+---
 
-**Support Tree:**
-- Steadfast
-- Lay on Hands
-- Shieldbearer
-- Healing Savior
-- Rapid Response
-- Merciful Aid
-- Lasting Gifts
+### PVP Masteries (Arena, Tag Team)
+
+**Build:** Unshakeable + Lasting Gifts (Defense + Support)
+
+**Path:**
+- Defense Tree → T6: Defiant → Rejuvenation → Shadow Heal → Delay Death (resist fatal damage) → Cycle of Revenge → Retribution (counterattack) → **Unshakeable** (immune to Stun/Freeze/Sleep for 1 turn after debuff removed)
+- Support Tree → T6: Steadfast → Lay on Hands → Shieldbearer → Healing Savior → Merciful Aid → **Lasting Gifts**
+
+**Why:**
+- **Unshakeable:** Immunity to Stun/Freeze/Sleep after debuff removed (critical for Arena Defense sustain)
+- **Lasting Gifts:** Extends Shield/Block Debuffs duration (longer team protection)
+- **Delay Death:** Resist fatal damage (survive burst nukes in Arena)
+- **Cycle of Revenge:** Cooldown reduction when ally dies (faster A3 Shield recovery)
+- **Retribution:** Counterattack when hit (extra damage/HP Burn procs on Arena Defense)
+
+**Cost:** 800 gems OR farm Minotaur's Labyrinth
+
+**Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
+
+---
+
+### Mastery Build Comparison
+
+| Build | Primary Tree | Key Masteries | Best Content | Notes |
+|-------|--------------|---------------|--------------|-------|
+| **PVE Support** | Offense + Support | Giant Slayer, Lasting Gifts (extend Shield), Shieldbearer | Clan Boss UNM, Dungeons, Doom Tower Hard | C.RATE low priority (support role) |
+| **PVP Tank** | Defense + Support | Unshakeable (debuff immunity), Lasting Gifts, Delay Death | Arena Defense, Tag Team Defense | Sustain focus, counterattack synergy |
+
+**Giant Slayer vs Warmaster:** Giant Slayer recommended (Brogni has multi-hit A1). Both require C.RATE to proc, but Brogni builds HP/DEF/ACC/SPD (not C.RATE), so mastery damage will be lower than dedicated damage dealers.
 
 ---
 
