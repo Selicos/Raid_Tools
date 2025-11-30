@@ -328,49 +328,54 @@
 
 ## 5. Masteries
 
-### PVE (Doom Tower, Dungeons)
+### PVE Masteries (Doom Tower, Dungeons)
 
-**Offense Tree (Base Form):**
-- Deadly Precision, Keen Strike
-- Heart of Glory
-- Single Out
-- Bring it Down
-- Methodical
-- **Helmsmasher** (T6 - Ignore DEF for Base Form A3)
+**Build:** Helmsmasher (Offense + Support)
 
-**Offense Tree (Alternate Form):**
-- Deadly Precision, Keen Strike
-- Heart of Glory
-- Single Out, Life Drinker
-- Bring it Down
-- Cycle of Violence
-- Methodical
-- **Helmsmasher** (T6 - stacks with A3 Ignore DEF)
+**Path:**
+- Offense Tree → T6: Deadly Precision → Keen Strike → Single Out → Bring it Down → Methodical → **Helmsmasher** (Ignore DEF synergy)
+- Support Tree → T4: Tough Skin → Blastproof → Delay Death (resist fatal damage)
 
-**Support Tree:**
-- Tough Skin, Blastproof
-- Resurgent
-- Delay Death
-- Retribution
+**Why:**
+- **Helmsmasher:** Stacks with A3 Ignore DEF mechanic (both forms) for massive damage amplification
+- **Base Form:** Helmsmasher + A3 Ignore DEF = double penetration vs high-DEF targets
+- **Alternate Form:** Helmsmasher stacks with built-in A3 Ignore DEF for nuking
+- **Delay Death:** Resist fatal damage (emergency survival for mythic)
 
-### PVP (Arena)
+**Cost:** 800 gems OR farm Minotaur's Labyrinth
 
-**Offense Tree:**
-- Deadly Precision, Keen Strike
-- Heart of Glory
-- Single Out
-- Whirlwind of Death
-- Bring it Down
-- Cycle of Violence
-- Methodical
-- Kill Streak
-- **Helmsmasher** (T6)
+**Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
 
-**Support Tree:**
-- Tough Skin, Blastproof
-- Resurgent
-- Delay Death
-- Retribution
+---
+
+### PVP Masteries (Arena, Live Arena)
+
+**Build:** Helmsmasher + Kill Streak (Offense + Support)
+
+**Path:**
+- Offense Tree → T6: Deadly Precision → Keen Strike → Single Out → Whirlwind of Death → Bring it Down → Cycle of Violence → Methodical → Kill Streak → **Helmsmasher**
+- Support Tree → T4: Tough Skin → Blastproof → Delay Death
+
+**Why:**
+- **Helmsmasher:** Ignore DEF synergy with A3 (both forms) for Arena nuking
+- **Kill Streak:** Extra turn on kill (chain kills in Arena with True Fear + nukes)
+- **Cycle of Violence:** Cooldown reduction on kill (faster True Fear/HP Swap rotation)
+- **Whirlwind of Death:** +6% damage for each dead enemy (snowball damage in Arena)
+
+**Cost:** 800 gems OR farm Minotaur's Labyrinth
+
+**Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
+
+---
+
+### Mastery Build Comparison
+
+| Build | Primary Tree | Key Masteries | Best Content | Notes |
+|-------|--------------|---------------|--------------|-------|
+| **PVE** | Offense + Support | Helmsmasher (Ignore DEF synergy), Delay Death | Doom Tower Hard, Dungeons Stage 25 | Works for both Base and Alternate forms |
+| **PVP** | Offense + Support | Helmsmasher, Kill Streak (extra turn), Cycle of Violence (cooldown reduction) | Arena, Live Arena | Chain kills with True Fear + nukes |
+
+**NOTE:** Embrys the Anomaly has 2 forms (Base vs Alternate) but mastery builds are identical for both (Helmsmasher synergy critical for both form A3s).
 
 ---
 
