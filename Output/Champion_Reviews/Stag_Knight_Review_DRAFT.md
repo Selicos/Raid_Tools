@@ -464,36 +464,33 @@
 
 ## 5. Masteries
 
-### 5.1. Recommended Mastery Tree (Clan Boss + Dungeons)
+### PVE Masteries (Clan Boss, Dungeons, Doom Tower)
 
-**Offense Tree (Tier 1-6):**
-1. **Deadly Precision** (Tier 1) - +5% C.RATE
-2. **Keen Strike** (Tier 1) - +10% damage on enemies under 50% HP
-3. **Shield Breaker** (Tier 2) - +18% damage vs enemies with Shield buff
-4. **Life Drinker** (Tier 2) - +8% damage, +4% Lifesteal
-5. **Bring it Down** (Tier 3) - +30% C.DMG vs enemies under 50% HP
-6. **Methodical** (Tier 3) - +5% C.RATE
-7. **Warmaster** (Tier 6) - **CRITICAL** - 60% chance to deal 10% enemy MAX HP damage (capped at 75k Brutal CB, 100k NM CB, 150k UNM CB)
+**Build:** Warmaster + Sniper (Offense + Support)
 
-**Support Tree (Tier 1-4):**
-1. **Pinpoint Accuracy** (Tier 1) - +10 ACC
-2. **Charged Focus** (Tier 1) - +20 ACC
-3. **Arcane Celerity** (Tier 2) - 3% TM boost per debuff on enemy (helpful for speed tuning)
-4. **Swarm Smiter** (Tier 2) - +10% damage vs enemies under 3+ debuffs
-5. **Evil Eye** (Tier 3) - +5% chance to apply debuff (stacks with Sniper)
-6. **Lore of Steel** (Tier 3) - +5% set bonus effects
-7. **Master Hexer** (Tier 4) - +1 turn debuff duration (NOT RECOMMENDED - messes with speed tuning)
-8. **Sniper** (Tier 4) - **CRITICAL** - +5% chance to apply debuff (100% A2 + 5% = still 100%, but helps A1 Dec SPD)
+**Path:**
+- Offense Tree → T6: Deadly Precision → Keen Strike → Life Drinker → Bring it Down → Methodical → **Warmaster** (60% chance for 10% enemy MAX HP damage)
+- Support Tree → T4: Pinpoint Accuracy → Charged Focus (+20 ACC) → Swarm Smiter → Evil Eye → **Sniper** (+5% debuff chance)
 
-**Why Warmaster over Giant Slayer:**
-- **A1 hits twice:** Warmaster has 40% chance per hit (once max per skill) = 64% chance to proc on A1
-- **Clan Boss damage:** Warmaster deals 10% enemy MAX HP = 100-150k damage per proc on UNM
-- **Total damage:** With Warmaster, Stag Knight deals 3-5M damage per Clan Boss UNM key (excellent for Support role)
+**Why:**
+- **Warmaster:** 64% chance to proc on A1 (dual-hit) = 100-150k damage/proc on UNM Clan Boss (3-5M damage/key total for support role!)
+- **Sniper:** Improves A1 Dec SPD from 79.75% → 82.5% overall chance (A2 already 100% when booked, Sniper helps A1 only)
+- **Charged Focus:** +20 ACC to reach 250+ ACC for 100% debuff reliability on Clan Boss/bosses
+- **Swarm Smiter:** +10% damage vs enemies with 3+ debuffs (synergy with Dec DEF/ATK/SPD stacking)
 
-**Why Sniper Mastery:**
-- **A2 is already 100% when booked:** Sniper doesn't improve A2 (100% + 5% = still 100%)
-- **A1 Dec SPD:** Sniper improves A1 from 50% → 55% chance per hit (79.75% → 82.5% overall)
-- **Worth it:** Small improvement, but every bit helps for boss control
+**Warmaster vs Giant Slayer:** Warmaster better for Stag Knight's dual-hit A1 (64% proc chance vs 51% for Giant Slayer). Total damage: 3-5M per UNM key (excellent for support role).
+
+**Cost:** 800 gems OR farm Minotaur's Labyrinth
+
+**Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
+
+---
+
+### Mastery Build Notes
+
+**Why NOT Master Hexer:** Extends debuff duration +1 turn, which MESSES UP Clan Boss speed tuning (debuffs expire at wrong time, breaks rotation). Skip entirely for Clan Boss teams.
+
+**Why Sniper is valuable:** A2 Dec DEF + Dec ATK is already 100% when booked (Sniper doesn't improve). BUT A1 Dec SPD is only 50% per hit → 79.75% overall. Sniper improves to 55% per hit → 82.5% overall (small but helpful for boss control).
 
 ---
 
