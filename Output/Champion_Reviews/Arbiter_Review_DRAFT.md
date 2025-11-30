@@ -940,216 +940,36 @@ Arbiter is **BEST-IN-CLASS support** for High Elves Faction Wars in owned roster
 
 Arbiter has **two distinct mastery builds** depending on content focus:
 
-1. **PVE Build (Clan Boss, Dungeons, Doom Tower):** Offense + Support (Warmaster for damage contribution)
-2. **PVP Build (Arena, Faction Wars):** Defense + Support (tankiness + TM manipulation)
+**PVE Build (Clan Boss, Dungeons, Doom Tower):** Warmaster (Offense + Support)
+- **Path:** Offense tree → Deadly Precision → Keen Strike → Shield Breaker → Life Drinker → Bring It Down → **Warmaster**  
+  Support tree → Pinpoint Accuracy → Exalt in Death → Rapid Response → Lore of Steel → Evil Eye → Spirit Haste
+- **Why:** Warmaster adds 4.8% Clan Boss MAX HP per A1 (2 hits × 60% proc), Spirit Haste gives +15% SPD for 2 turns after A3 (more TM boosts)
+- **CRITICAL:** **100% C.RATE required** for full Warmaster proc rate (85% C.RATE = 15% damage loss, 70% C.RATE = 30% damage loss)
+- **Gear Requirements:** C.RATE Gloves (+50-60%) + Deadly Precision (+15%) + substats (+20-25%) = 85-100% C.RATE
 
----
+**PVP Build (Arena, Faction Wars):** Cycle of Revenge (Defense + Support)  
+- **Path:** Defense tree → Defiant → Improved Parry → Rejuvenation → Shadow Heal → Delay Death → **Cycle of Revenge**  
+  Support tree → Pinpoint Accuracy → Exalt in Death → Rapid Response → Lore of Steel → Evil Eye → Spirit Haste
+- **Why:** Improved Parry (-30% C.DMG taken), Delay Death (-30% damage from hits >25% MAX HP), Cycle of Revenge (+15% TM when crit)
+- **CRITICAL for Void affinity:** All enemies can crit on Arbiter (no weak hits) = Improved Parry + Delay Death essential for surviving nukes
+- **No C.RATE needed:** Skip 100% C.RATE requirement, use HP%/DEF% Gloves for survivability
 
-### PVE Masteries (Clan Boss, Dungeons, Doom Tower)
+**Warmaster vs Giant Slayer:**
+- **Arbiter A1:** 2 hits = 1.2 expected Warmaster procs (60% × 2 × 100% C.RATE) vs 0.51 Giant Slayer procs
+- **Recommendation:** Warmaster > Giant Slayer for Clan Boss (2.4x more procs)
 
-**Tree Distribution:** Offense (Tier 1-6) + Support (Tier 1-6)
+**Mastery Build Comparison:**
 
-#### Offense Tree (Tier 1-6)
+| Build | Trees | Tier 6 | Best For | C.RATE Required |
+|-------|-------|--------|----------|-----------------|
+| **PVE** | Offense + Support | Warmaster | Clan Boss, Dungeons, DT | **100%** |
+| **PVP** | Defense + Support | Cycle of Revenge | Arena, Faction Wars | No |
 
-**Tier 1:**
-- **Deadly Precision** (Rank 3): Increases C.RATE by 5%/10%/15%
-  * **CRITICAL for Warmaster build:** Helps reach 100% C.RATE (see C.RATE dependency note below)
+**User Priority:** Arena (Classic > Tag Team > Live) + High Elves Faction Wars  
+**Recommendation:** **PVP Build FIRST** (Defense + Support), re-spec to PVE only if using for Clan Boss
 
-**Tier 2:**
-- **Keen Strike** (Rank 3): Increases damage inflicted by 10%/20%/30% when attacking with full HP
-  * **High value:** Arbiter often starts battles at full HP (first turn TM boost)
-
-**Tier 3:**
-- **Shield Breaker** (Rank 3): Increases damage inflicted to enemies under Shield buffs by 12%/24%/36%
-  * **Useful:** Dragon 25 (Dragon shield), Ice Golem 25 (Golem shield), Doom Tower (Nether Spider shields)
-
-**Tier 4:**
-- **Life Drinker** (Rank 3): Heals 3%/6%/9% of damage inflicted
-  * **Useful for sustain:** Arbiter can self-heal during long battles (Doom Tower Hard, Clan Boss)
-
-**Tier 5:**
-- **Bring it Down** (Rank 3): Increases damage inflicted on targets with higher MAX HP than this Champion by 10%/20%/30%
-  * **High value:** Arbiter has low base HP (16,515) = almost ALL bosses have higher MAX HP (Dragon, Ice Golem, Clan Boss, Doom Tower bosses)
-
-**Tier 6:**
-- **Warmaster** (Rank 1): 60% chance to deal 10% Enemy MAX HP damage (4% vs Clan Boss cap) when attacking with skills that hit a single enemy
-  * **CRITICAL for Clan Boss UNM:** Warmaster procs on A1 (2 hits) = expected 1.2 procs per A1 at 100% C.RATE (see below)
-  * **REQUIRES 100% C.RATE** (see C.RATE dependency note below)
-
----
-
-#### Support Tree (Tier 1-6)
-
-**Tier 1:**
-- **Pinpoint Accuracy** (Rank 3): Increases Accuracy by 10/20/30
-  * **CRITICAL:** Helps Arbiter reach 200-250+ ACC for Dungeons 25 and Doom Tower Hard
-
-**Tier 2:**
-- **Exalt in Death** (Rank 3): Heals 4%/8%/12% of MAX HP when an ally is killed
-  * **Useful:** Arbiter heals when ally dies (pairs with A4 revive)
-
-**Tier 3:**
-- **Rapid Response** (Rank 3): Increases Turn Meter by 3%/6%/9% when a buff expires on this Champion
-  * **Useful:** Arbiter's A3 places Increase ATK on all allies (including self) for 2 turns = +9% TM when buff expires
-
-**Tier 4:**
-- **Lore of Steel** (Rank 3): Increases base stat bonuses from equipped artifacts by 5%/10%/15%
-  * **High value:** Increases Speed Set bonus from +12% → +13.8% BASE SPD (multiplicative with gear sets)
-  * **CRITICAL:** Lore of Steel applies to BASE SPEED bonuses from gear sets, NOT total speed
-  * Example: Arbiter (110 base SPD) + Speed Set (12%) = 123.2 SPD. With Lore of Steel: 110 × 1.138 = 125.18 SPD (+1.98 SPD gain from Lore of Steel BEFORE adding flat bonuses like boots/substats)
-
-**Tier 5:**
-- **Evil Eye** (Rank 3): Decreases enemy Turn Meter by 3%/6%/9% when placing a debuff on them
-  * **Useful:** Arbiter's A1 Weaken debuff triggers Evil Eye (reduces enemy TM by 9% per Weaken proc)
-
-**Tier 6:**
-- **Spirit Haste** (Rank 3): Increases Arbiter's Speed by 5%/10%/15% for 2 turns after using a skill that affects all allies
-  * **High value:** Arbiter's A3 (TM boost + Increase ATK) affects all allies → +15% SPD for 2 turns → Arbiter takes more turns faster
-
----
-
-### PVE Masteries Summary Table
-
-| Tree | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Tier 5 | Tier 6 |
-|------|--------|--------|--------|--------|--------|--------|
-| **Offense** | Deadly Precision | Keen Strike | Shield Breaker | Life Drinker | Bring it Down | **Warmaster** |
-| **Support** | Pinpoint Accuracy | Exalt in Death | Rapid Response | Lore of Steel | Evil Eye | Spirit Haste |
-
-**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth | **Reset:** 1st free, then 150 gems
-
----
-
-### CRITICAL: Warmaster/Giant Slayer C.RATE Dependency
-
-**Warmaster and Giant Slayer masteries ONLY proc on critical hits:**
-
-- **Effective Proc Rate = C.RATE × Base Proc Rate**
-- **Warmaster:** 60% base → 60% at 100% C.RATE, 51% at 85% C.RATE (15% damage loss)
-- **Giant Slayer:** 30% base → 30% at 100% C.RATE, 25.5% at 85% C.RATE (15% damage loss)
-
-**Why 100% C.RATE is CRITICAL for Arbiter (IF using Warmaster for Clan Boss):**
-- At 85% C.RATE (common build), you lose 15% of expected mastery damage:
-  * Warmaster A1 (2 hits): 7.2% → 6.12% MAX HP (15% loss)
-- At 70% C.RATE, you lose 30% of expected mastery damage
-- **Recommendation:** Prioritize 100% C.RATE via Gloves (C.RATE main stat) + substats before other offensive stats (C.DMG, ATK)
-
-**Arbiter-Specific Warmaster Analysis (A1: 2 hits):**
-
-**At 100% C.RATE:**
-- Expected Warmaster procs per A1: 2 hits × 0.60 (Warmaster) × 1.00 (C.RATE) = 1.2 expected procs
-- Expected damage per A1: 1.2 procs × 4% MAX HP (Clan Boss cap) = 4.8% Clan Boss MAX HP per A1
-- Example (UNM Clan Boss 280M HP): 4.8% × 280,000,000 = 13,440,000 damage per A1
-
-**At 85% C.RATE:**
-- Expected Warmaster procs per A1: 2 hits × 0.60 × 0.85 = 1.02 expected procs
-- Expected damage per A1: 1.02 procs × 4% MAX HP = 4.08% Clan Boss MAX HP per A1
-- Example (UNM Clan Boss 280M HP): 4.08% × 280,000,000 = 11,424,000 damage per A1
-- **Damage Loss:** 13.44M - 11.42M = 2.016M damage per A1 (15% loss)
-
-**At 70% C.RATE:**
-- Expected Warmaster procs per A1: 2 hits × 0.60 × 0.70 = 0.84 expected procs
-- Expected damage per A1: 0.84 procs × 4% MAX HP = 3.36% Clan Boss MAX HP per A1
-- Example (UNM Clan Boss 280M HP): 3.36% × 280,000,000 = 9,408,000 damage per A1
-- **Damage Loss:** 13.44M - 9.41M = 4.032M damage per A1 (30% loss)
-
-**Conclusion:** Arbiter requires **100% C.RATE** for full Warmaster damage in Clan Boss UNM. Anything below 100% C.RATE results in 15-30% damage loss from Warmaster procs.
-
-**Gear Requirements for 100% C.RATE:**
-- **C.RATE Gloves (main stat):** +50-60% C.RATE
-- **Deadly Precision (Tier 1 Offense):** +15% C.RATE
-- **Substats (Weapon, Helmet, Shield, Chest, Boots, Ring, Amulet, Banner):** +20-25% C.RATE total
-- **Total:** 50-60% + 15% + 20-25% = 85-100% C.RATE
-
-**IF NOT Using Warmaster (Arena/Dungeons Support Build):**
-- **SKIP C.RATE** = no need for 100% C.RATE (Arbiter is support, not damage dealer)
-- Use HP%/DEF% Gloves instead of C.RATE Gloves for survivability
-
----
-
-### PVP Masteries (Arena, Faction Wars)
-
-**Tree Distribution:** Defense (Tier 1-6) + Support (Tier 1-6)
-
-#### Defense Tree (Tier 1-6)
-
-**Tier 1:**
-- **Defiant** (Rank 3): Increases DEF by 5%/10%/15% for each debuff on this Champion
-  * **High value:** Arena enemies apply debuffs (Decrease DEF, Stun, etc.) = Arbiter gains +15% DEF per debuff (stacks)
-
-**Tier 2:**
-- **Improved Parry** (Rank 3): Reduces Critical Damage taken by 10%/20%/30%
-  * **CRITICAL for Void affinity:** Arbiter is Void (all affinities can crit on her without weak hits) = Improved Parry reduces enemy nuke damage by 30%
-
-**Tier 3:**
-- **Rejuvenation** (Rank 3): Heals 3%/6%/9% of MAX HP each turn
-  * **Useful for sustain:** Arbiter heals 9% MAX HP per turn (helps survive long Arena battles)
-
-**Tier 4:**
-- **Shadow Heal** (Rank 3): Heals 4%/8%/12% of MAX HP when an ally is killed
-  * **Useful:** Arbiter heals when ally dies (pairs with A4 revive)
-
-**Tier 5:**
-- **Delay Death** (Rank 3): Reduces damage taken from a single hit by 10%/20%/30% if the damage exceeds 25% of MAX HP
-  * **CRITICAL for Arena:** Reduces enemy nuke damage by 30% (if damage > 25% MAX HP) = Arbiter survives Wukong/Trunda/Michelangelo nukes
-
-**Tier 6:**
-- **Cycle of Revenge** (Rank 1): Increases Turn Meter by 15% when hit by a critical hit
-  * **Useful for Void affinity:** Arbiter is Void (all enemies can crit) = +15% TM when crit → Arbiter takes turn faster after enemy nuke
-
----
-
-#### Support Tree (Tier 1-6)
-
-**Same as PVE Support Tree:**
-- **Tier 1:** Pinpoint Accuracy (3)
-- **Tier 2:** Exalt in Death (3)
-- **Tier 3:** Rapid Response (3)
-- **Tier 4:** Lore of Steel (3)
-- **Tier 5:** Evil Eye (3)
-- **Tier 6:** Spirit Haste (3)
-
----
-
-### PVP Masteries Summary Table
-
-| Tree | Tier 1 | Tier 2 | Tier 3 | Tier 4 | Tier 5 | Tier 6 |
-|------|--------|--------|--------|--------|--------|--------|
-| **Defense** | Defiant | Improved Parry | Rejuvenation | Shadow Heal | Delay Death | Cycle of Revenge |
-| **Support** | Pinpoint Accuracy | Exalt in Death | Rapid Response | Lore of Steel | Evil Eye | Spirit Haste |
-
-**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth | **Reset:** 1st free, then 150 gems
-
----
-
-### Mastery Build Comparison (PVE vs PVP)
-
-| Mastery Build | Offense Tree | Defense Tree | Support Tree | Tier 6 Keystone | Best For |
-|---------------|--------------|--------------|--------------|-----------------|----------|
-| **PVE Build** | ✅ (15 points) | ❌ | ✅ (15 points) | **Warmaster** | Clan Boss UNM, Dungeons 25, Doom Tower Hard |
-| **PVP Build** | ❌ | ✅ (15 points) | ✅ (15 points) | **Cycle of Revenge** | Arena (Classic, Tag Team, Live), Faction Wars |
-
-**Which Build Should You Use First?**
-- **User Priority:** Arena (Classic > Tag Team > Live) + High Elves Faction Wars
-- **Recommendation:** **PVP Build FIRST** (Defense + Support with Cycle of Revenge)
-- **Later:** Re-spec to PVE Build (Offense + Support with Warmaster) IF using Arbiter for Clan Boss UNM
-
----
-
-### Key Masteries to Prioritize
-
-**PVE Build (Offense + Support):**
-1. **Warmaster (Tier 6 Offense)** - CRITICAL for Clan Boss damage (requires 100% C.RATE)
-2. **Deadly Precision (Tier 1 Offense)** - +15% C.RATE (helps reach 100% C.RATE for Warmaster)
-3. **Pinpoint Accuracy (Tier 1 Support)** - +30 ACC (land Weaken + Decrease Buff Duration)
-4. **Spirit Haste (Tier 6 Support)** - +15% SPD after A3 (more turns = more damage)
-5. **Bring it Down (Tier 5 Offense)** - +30% damage vs high HP targets (all bosses)
-
-**PVP Build (Defense + Support):**
-1. **Cycle of Revenge (Tier 6 Defense)** - +15% TM when crit (Arbiter takes turn faster after enemy nuke)
-2. **Improved Parry (Tier 2 Defense)** - -30% C.DMG taken (Arbiter survives enemy nukes)
-3. **Delay Death (Tier 5 Defense)** - -30% damage from single hits > 25% MAX HP (survive big nukes)
-4. **Pinpoint Accuracy (Tier 1 Support)** - +30 ACC (land Weaken + Decrease Buff Duration)
-5. **Spirit Haste (Tier 6 Support)** - +15% SPD after A3 (more turns = more TM boosts)
+**Cost:** 800 gems OR farm Minotaur's Labyrinth | **Reset:** 1st FREE, then 150 gems  
+**Full Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
 
 ---
 
