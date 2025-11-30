@@ -1021,189 +1021,56 @@
 
 ## 5. Masteries
 
-### PVE Masteries (Clan Boss, Dungeons, Doom Tower, Faction Wars)
+### PVE Masteries (Support Build - RECOMMENDED)
 
-**Mastery Tree Priority: Support (Primary) → Defense (Secondary)**
-
----
-
-#### Support Tree (PRIMARY - Full T6)
-
-**Tier 1:**
-- **Deadly Precision** (3/3) - +5% C.RATE, +10% C.DMG (minor damage improvement for A1/A2, not critical)
-
-**Tier 2:**
-- **Keen Strike** (3/3) - +10% damage when enemy HP > 30% (minor damage improvement)
-- **Grim Resolve** (3/3) - +5% damage (minor improvement)
-
-**Tier 3:**
-- **Life Drinker** (3/3) - Heal 8% damage dealt (minor self-sustain, helpful but not critical)
-- **Bring It Down** (3/3) - +3% damage vs enemies with Decrease DEF (minor improvement)
-
-**Tier 4:**
-- **Methodical** (3/3) - +4% damage (minor improvement)
-- **Warmaster** (1/1) - **CRITICAL MASTERY** - 60% chance to deal 10% enemy MAX HP as damage on hit
-  * **REQUIRES 100% C.RATE** to proc consistently (Godseeker Aniri base 15% C.RATE, need 85% from gear/gloves/aura)
-  * **Best for:** Clan Boss UNM damage (Warmaster scales with enemy MAX HP = millions of damage per proc)
-  * **NOTE:** Only build C.RATE if using Godseeker Aniri for Clan Boss damage (NOT recommended for pure support role)
-  * **Alternative:** Skip Warmaster entirely if building pure support (no C.RATE investment)
-
-**Tier 5:**
-- **Pinpoint Accuracy** (3/3) - **CRITICAL MASTERY** - +10 ACC (helps reach 200+ ACC for A2 buff strip)
-- **Swarm Smiter** (3/3) - +6% damage vs enemies with debuffs (minor improvement)
-
-**Tier 6:**
-- **Evil Eye** (1/1) - **CRITICAL MASTERY** - Debuffs last 1 turn longer (increases A2 buff strip effectiveness)
-  * **SYNERGY:** A2 decreases enemy buff duration by 1 turn → Evil Eye increases debuff duration by 1 turn (net effect: debuffs last longer, buffs expire faster)
-
----
-
-#### Defense Tree (SECONDARY - Full T6)
-
-**Tier 1:**
-- **Tough Skin** (3/3) - +5% DEF (minor sustain improvement, scales A1/A2 damage)
-
-**Tier 2:**
-- **Blastproof** (3/3) - +8% HP (minor sustain improvement)
-- **Resurgent** (3/3) - +10% HP when HP drops below 40% (emergency sustain)
-
-**Tier 3:**
-- **Delay Death** (3/3) - **CRITICAL MASTERY** - +10% chance to resist fatal damage and survive with 1 HP
-  * **SYNERGY:** Works with A4 Revive on Death passive (if fatal damage resisted, no revive needed = save A4 cooldown)
-- **Retribution** (3/3) - 20% chance to counterattack when hit (minor extra A1 heals)
-
-**Tier 4:**
-- **Bloodthirst** (3/3) - Heal 10% MAX HP after killing enemy (minor sustain for waves)
-- **Deterrence** (3/3) - -5% damage taken from enemies with debuffs (minor sustain)
-
-**Tier 5:**
-- **Rejuvenation** (3/3) - **CRITICAL MASTERY** - Heal 6% MAX HP at end of each turn (stacks with Immortal/Regeneration gear)
-  * **SYNERGY:** Regeneration gear 15% + Immortal gear 3% + A4 passive +10% + Rejuvenation 6% = 24% MAX HP heal per turn (at 60k HP = 14,400 HP per turn!)
-- **Stubborness** (3/3) - +50 RES (helps reach 200+ RES for Sand Devil cheese)
-
-**Tier 6:**
-- **Cycle of Revenge** (1/1) - **CRITICAL MASTERY** - 30% chance to reduce cooldowns by 1 turn when ally killed
-  * **SYNERGY:** Allies die → Cycle of Revenge procs → A3 revive cooldown reduced (3 turns → 2 turns remaining)
-  * **Best for:** Faction Wars Stage 21 (allies may die to boss, faster A3 revive recovery)
-
----
-
-### PVE Mastery Build Summary (Recommended)
-
-**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
+**Build:** Evil Eye + Rejuvenation + Cycle of Revenge (Support + Defense)
 
 **Path:**
-1. Support Tree → T6 (Full)
-   - CRITICAL: Pinpoint Accuracy (+10 ACC), Evil Eye (debuffs last longer)
-   - OPTIONAL: Warmaster (ONLY if building C.RATE for Clan Boss damage, skip otherwise)
-2. Defense Tree → T6 (Full)
-   - CRITICAL: Delay Death (resist fatal damage), Rejuvenation (6% MAX HP heal per turn), Cycle of Revenge (cooldown reduction when ally dies)
+- Support Tree → T6: Deadly Precision → Keen Strike → Life Drinker → Methodical → Pinpoint Accuracy (+10 ACC for buff strip) → **Evil Eye** (debuffs last +1 turn)
+- Defense Tree → T6: Tough Skin → Blastproof → Delay Death (resist fatal damage) → Deterrence → Rejuvenation (6% MAX HP heal/turn) → **Cycle of Revenge** (reduce cooldowns when ally dies)
 
-**Best for:** Clan Boss, Dungeons, Doom Tower Hard, Faction Wars
+**Why:** 
+- **Evil Eye:** A2 buff strip synergy (debuffs last longer, buffs expire faster)
+- **Rejuvenation:** Stacks with Regeneration (15%) + Immortal (3%) + A4 passive (+10%) = 24% MAX HP heal/turn at 60k HP = 14,400 HP/turn!
+- **Cycle of Revenge:** Allies die → A3 revive cooldown reduced (critical for Faction Wars Stage 21)
+- **Delay Death:** Synergizes with A4 Revive on Death passive (resists fatal damage = saves A4 cooldown)
+- **NOTE:** Warmaster OPTIONAL (only if building 100% C.RATE for Clan Boss damage, NOT recommended for pure support)
 
----
+**Cost:** 800 gems OR farm Minotaur's Labyrinth
 
-### PVP Masteries (Arena, Tag Team, Live Arena)
-
-**Mastery Tree Priority: Defense (Primary) → Support (Secondary)**
-
----
-
-#### Defense Tree (PRIMARY - Full T6)
-
-**Focus: Resist Tank Build**
-
-**Tier 1-4:** Same as PVE build (Tough Skin, Blastproof, Resurgent, Delay Death, Bloodthirst, Deterrence)
-
-**Tier 5:**
-- **Rejuvenation** (3/3) - Heal 6% MAX HP per turn (sustain for Arena Defense stalling)
-- **Stubbornness** (3/3) - **CRITICAL MASTERY** - +50 RES (helps reach 250+ RES for resist tank)
-
-**Tier 6:**
-- **Cycle of Revenge** (1/1) - 30% chance to reduce cooldowns by 1 turn when ally killed (faster A3 revive in Arena Defense)
+**Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
 
 ---
 
-#### Support Tree (SECONDARY - Partial T5)
+### PVP Masteries (Resist Tank Build)
 
-**Tier 1-3:** Same as PVE build (minor damage improvements)
-
-**Tier 5:**
-- **Pinpoint Accuracy** (3/3) - +10 ACC (helpful for A2 buff strip, but NOT critical for resist tank build)
-- **Lore of Steel** (3/3) - **CRITICAL MASTERY** - +5% stats from gear sets (increases HP, DEF, RES from gear)
-
-**Tier 6:**
-- **SKIP Evil Eye** (not needed for Arena Defense, focus on sustain/resist)
-
----
-
-### PVP Mastery Build Summary (Arena Defense Focus)
-
-**Cost:** 800 gems for instant unlock OR farm Minotaur's Labyrinth
+**Build:** Stubbornness + Lore of Steel + Cycle of Revenge (Defense + Support)
 
 **Path:**
-1. Defense Tree → T6 (Full)
-   - CRITICAL: Stubbornness (+50 RES), Delay Death (resist fatal damage), Rejuvenation (6% MAX HP heal)
-2. Support Tree → T5 (Partial)
-   - CRITICAL: Lore of Steel (+5% stats from gear = more HP/DEF/RES)
-   - SKIP: Warmaster (not building C.RATE for PVP), Evil Eye (not needed for resist tank)
+- Defense Tree → T6: Tough Skin → Blastproof → Delay Death → Deterrence → Rejuvenation + **Stubbornness** (+50 RES) → **Cycle of Revenge**
+- Support Tree → T5: Deadly Precision → Keen Strike → Life Drinker → Methodical → **Lore of Steel** (+5% stats from gear sets)
 
-**Best for:** Arena Defense (resist tank stalling), Tag Team Defense
+**Why:**
+- **Stubbornness:** +50 RES to reach 250+ RES for resist tank Arena Defense
+- **Lore of Steel:** +5% HP/DEF/RES from gear sets (amplifies resist tank stats)
+- **Rejuvenation:** 6% MAX HP heal/turn for Arena Defense stalling
+- **Cycle of Revenge:** Faster A3 revive when allies die in Arena Defense
 
----
+**Cost:** 800 gems OR farm Minotaur's Labyrinth
 
-### Warmaster vs Giant Slayer (PVE Damage Build)
-
-**NOTE:** Only relevant if building Godseeker Aniri for Clan Boss UNM damage (NOT recommended for pure support role)
-
-**Warmaster (RECOMMENDED for Clan Boss UNM):**
-- **Proc Rate:** 60% chance per hit
-- **Damage:** 10% enemy MAX HP (at 200M Clan Boss HP = 20M damage per proc)
-- **REQUIRES:** 100% C.RATE to proc consistently (Godseeker Aniri base 15% C.RATE, need 85% from gear)
-- **Best for:** Single-target bosses (Clan Boss, Doom Tower Hard bosses)
-- **Expected damage:** 3-5M damage per Clan Boss UNM run (if 100% C.RATE achieved)
-
-**Giant Slayer (Alternative for Multi-Hit Content):**
-- **Proc Rate:** 30% chance per hit
-- **Damage:** 7.5% enemy MAX HP
-- **Best for:** Multi-hit champions (Godseeker Aniri is NOT multi-hit, only A1 single-hit, A2 AoE 1-hit per target)
-- **NOT RECOMMENDED:** Godseeker Aniri has no multi-hit skills, Warmaster is better
-
-**Recommendation:**
-- **Pure Support Build (RECOMMENDED):** Skip Warmaster/Giant Slayer entirely, stop Support tree at T5 (Pinpoint Accuracy)
-- **Clan Boss Damage Build (OPTIONAL):** Build 100% C.RATE, take Warmaster, expect 3-5M damage per run
-- **NEVER take Giant Slayer:** Godseeker Aniri has no multi-hit skills
+**Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
 
 ---
 
-### Mastery Priority by Content
+### Mastery Build Comparison
 
-**Clan Boss UNM (Buff Extension Focus):**
-- Support Tree: Pinpoint Accuracy (ACC for buff strip), Evil Eye (debuff duration)
-- Defense Tree: Delay Death (resist AOE stun), Rejuvenation (sustain)
-- OPTIONAL: Warmaster (ONLY if building C.RATE for damage)
+| Build | Primary Tree | Key Masteries | Best Content | Notes |
+|-------|--------------|---------------|--------------|-------|
+| **PVE Support** | Support + Defense | Evil Eye, Rejuvenation, Cycle of Revenge | Clan Boss, Dungeons, Doom Tower Hard, Faction Wars | Skip Warmaster unless building 100% C.RATE for damage |
+| **PVP Resist Tank** | Defense + Support | Stubbornness (+50 RES), Lore of Steel (+5% stats), Rejuvenation | Arena Defense, Tag Team Defense | Focus on sustain + RES, skip Warmaster/Evil Eye |
+| **PVE Damage (OPTIONAL)** | Support + Defense | Warmaster (requires 100% C.RATE), Pinpoint Accuracy | Clan Boss UNM (3-5M damage/run) | NOT recommended (pure support more valuable) |
 
-**Dungeons Stage 25 (Safe Farming):**
-- Support Tree: Pinpoint Accuracy (ACC for buff strip)
-- Defense Tree: Delay Death (resist boss mechanics), Rejuvenation (sustain), Cycle of Revenge (cooldown reduction if ally dies)
-
-**Doom Tower Hard (Long Boss Fights):**
-- Support Tree: Pinpoint Accuracy (ACC for buff strip), Evil Eye (debuff duration)
-- Defense Tree: Delay Death (resist boss mechanics), Rejuvenation (sustain), Cycle of Revenge (cooldown reduction if ally dies)
-
-**Faction Wars (Sacred Order Normal/Hard):**
-- Support Tree: Pinpoint Accuracy (ACC for buff strip)
-- Defense Tree: Delay Death (resist boss mechanics), Rejuvenation (sustain), Cycle of Revenge (cooldown reduction when ally dies = CRITICAL for Stage 21)
-
-**Arena Defense (Resist Tank Stalling):**
-- Defense Tree: Stubbornness (+50 RES), Delay Death (resist fatal damage), Rejuvenation (sustain)
-- Support Tree: Lore of Steel (+5% stats from gear)
-- SKIP: Warmaster, Evil Eye (not needed for resist tank)
-
-**Sand Devil Duo Cheese (Indefinite Survival):**
-- Defense Tree: Rejuvenation (6% MAX HP heal per turn), Delay Death (resist fatal damage)
-- Support Tree: SKIP Pinpoint Accuracy (not using buff strip in duo cheese)
-- SKIP: Warmaster (not building damage, pure sustain focus)
+**Warmaster vs Giant Slayer:** Skip Giant Slayer entirely (Godseeker Aniri has no multi-hit skills). Warmaster only viable if building 100% C.RATE for Clan Boss damage (not recommended for pure support role).
 
 ---
 
