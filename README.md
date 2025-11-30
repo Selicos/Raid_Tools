@@ -97,6 +97,33 @@ This is the canonical workflow for completing champion dictionary entries:
 
 > For the latest and most detailed instructions, always refer to `.github/copilot-instructions.md`.
 
+## Mastery Documentation
+
+**Single Source of Truth:** `input/Mechanic_Dictionary/Masteries/`
+
+All mastery information is centralized in canonical reference files:
+- **Masteries.md** - Human-readable mastery system documentation
+- **masteries.json** - Machine-readable structured data
+- **MASTERY_REFERENCE_GUIDE.md** - Documentation standards and templates
+
+**📌 CRITICAL:** Never duplicate mastery tier-by-tier tables in champion reviews or boss guides. Always use the simplified format: Build + Path + Why + Cost + Link to Masteries.md
+
+**Format:**
+```markdown
+**Build:** Warmaster + Master Hexer (Offense + Support)
+- **Path:** Deadly Precision → Keen Strike → ... → **Warmaster**
+- **Why:** [Key synergies and mechanics]
+- **Cost:** 800 gems OR farm Minotaur's Labyrinth
+- **Details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
+```
+
+**Benefits:**
+- 60-80% line reduction per champion review
+- Single point of update when game changes masteries
+- Consistent recommendations across all documentation
+
+> See `MASTERY_REFERENCE_GUIDE.md` for complete standards and templates
+
 ## Essential Commands
 
 - `make setup` — Set up environment (venv, requirements)

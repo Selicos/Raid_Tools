@@ -123,11 +123,29 @@ note: use simulation data for each team generated and update this section when a
 
 ---
 
-## 7. General Notes
+## 7. Mastery Recommendations by Role
+
+**All champions require masteries for end-game content.**
+
+**General Guidelines:**
+- **Damage Dealers:** Warmaster or Giant Slayer (T6 Offense) - Choose based on hit count
+- **Supports:** Master Hexer (T6 Support) for debuff extension
+- **Tanks:** Defense tree focus (Tough Skin, Blastproof, Delay Death)
+- **Healers:** Lasting Gifts (T5 Support) extends buff duration +25%
+
+**Cost:** 800 gems OR farm Minotaur's Labyrinth per champion
+
+**Complete mastery details:** [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md)
+
+**📌 NOTE:** Individual champion mastery recommendations are in their respective champion reviews. Link to champion reviews rather than duplicating mastery trees here.
+
+---
+
+## 8. General Notes
 - [Advice on gear, stat priorities, manual/auto play, etc.]
 - **Masteries:** For all mastery builds referenced in team sections, see [Masteries.md](../../input/Mechanic_Dictionary/Masteries/Masteries.md) for complete tier progressions, alternatives, and detailed descriptions.
 
-## 8. Actionable Notes & Upgrade Advice
+## 9. Actionable Notes & Upgrade Advice
 - [Upgrade priorities, champion substitutions, progression tips.]
 
 ## 9. Team Flexibility & Alternate Builds

@@ -284,6 +284,9 @@
 
 ## 5. Masteries
 
+> **📌 CANONICAL FORMAT:** Use simplified Build + Path + Why + Cost + Link format only. 
+> Never duplicate tier-by-tier mastery tables. See [MASTERY_REFERENCE_GUIDE.md](../../input/Mechanic_Dictionary/Masteries/MASTERY_REFERENCE_GUIDE.md)
+
 **Build:** [Primary T6 Mastery] + [Secondary Tree Focus] ([Tree Names])
 - **Path:** [Tier progression with → arrows, bold T6 capstone, e.g., "Deadly Precision → Keen Strike → Single Out → Bring It Down → **Warmaster**"]
 - **Why:** [1-2 sentence explanation of key masteries and their benefit, e.g., "Warmaster (4% MAX HP damage vs bosses) + Pinpoint Accuracy (+10 ACC for debuff reliability)"]
